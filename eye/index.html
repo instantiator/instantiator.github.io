@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset=utf-8>
+		<title>My first three.js app</title>
+		<style>
+			body { margin: 0; }
+			canvas { width: 100%; height: 100% }
+		</style>
+	</head>
+	<body>
+		<script src="js/three.js"></script>
+        <script src="js/loaders/DDSLoader.js"></script>
+		<script src="js/loaders/MTLLoader.js"></script>
+		<script src="js/loaders/OBJLoader.js"></script>
+		<script>
+
+            var renderer = new THREE.WebGLRenderer();
+            renderer.setSize( window.innerWidth, window.innerHeight );
+            renderer.setPixelRatio( window.devicePixelRatio );
+            document.body.appendChild( renderer.domElement );
+
+            // var geometry = new THREE.BoxGeometry( 1, 1, 1 );
+            // var material = new THREE.MeshBasicMaterial( { color: 0x00ff00 } );
+            // var cube = new THREE.Mesh( geometry, material );
+            // scene.add( cube );
+            // camera.position.z = 5;
+
+			var scene = new THREE.Scene();
+
+            camera = new THREE.PerspectiveCamera( 45, window.innerWidth / window.innerHeight, 1, 2000 );
+            camera.position.z = 10;
+
+            var ambientLight = new THREE.AmbientLight( 0xcccccc, 0.6 );
+            scene.add( ambientLight );
+            var pointLight = new THREE.PointLight( 0xffffff, 0.6 );
+            camera.add( pointLight );
+            scene.add( camera );
+
+            var onProgress = function ( xhr ) {
+                if ( xhr.lengthComputable ) {
+                    var percentComplete = xhr.loaded / xhr.total * 100;
+                    console.log( Math.round( percentComplete, 2 ) + '% downloaded' );
+                }
+            };
+            var onError = function ( xhr ) { };
+            THREE.Loader.Handlers.add( /\.dds$/i, new THREE.DDSLoader() );
+
+            var eyeball = null;
+            new THREE.MTLLoader()
+					.setPath( 'assets/eye/' )
+					.load( 'eyeball_mtl.mtl', function ( materials ) {
+						materials.preload();
+						new THREE.OBJLoader()
+							.setMaterials( materials )
+							.setPath( 'assets/eye/' )
+							.load( 'eyeball_obj.obj', function ( object ) {
+                                eyeball = object;
+								//object.position.y = - 95;
+								scene.add( object );
+							}, onProgress, onError );
+					}, onProgress, onError );
+
+            function animate() {
+                requestAnimationFrame( animate );
+                if (eyeball !== null) {
+                    eyeball.rotation.x += 0.01;
+                    eyeball.rotation.y += 0.01;
+                }
+                camera.lookAt( scene.position );
+                renderer.render( scene, camera );
+            }
+            animate();
+
+		</script>
+	</body>
+</html>
