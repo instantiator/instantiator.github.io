@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <title>Keeping jobs alive with caffeine | </title><meta name="Description" content=""><meta property="og:title" content="Keeping jobs alive with caffeine" />
+<meta property="og:description" content="My Mac likes to go to sleep to save power, and that means any long-running processes I have underway will be suspended when it does.
+Until recently, I had assumed my best option was to change the power settings. For tasks I want to keep alive, there&rsquo;s a better option - called caffeine, available on OS X and Linux.
+Just like time (a tool to tell you how long a task took to run), you can prefix a command with caffeine." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://instantiator.github.io/posts/caffeine/" />
+<meta property="article:published_time" content="2021-01-02T19:00:00+00:00" />
+<meta property="article:modified_time" content="2021-01-02T19:00:00+00:00" />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Keeping jobs alive with caffeine"/>
+<meta name="twitter:description" content="My Mac likes to go to sleep to save power, and that means any long-running processes I have underway will be suspended when it does.
+Until recently, I had assumed my best option was to change the power settings. For tasks I want to keep alive, there&rsquo;s a better option - called caffeine, available on OS X and Linux.
+Just like time (a tool to tell you how long a task took to run), you can prefix a command with caffeine."/>
+<meta name="application-name" content="Lewis Westbury">
+<meta name="apple-mobile-web-app-title" content="Lewis Westbury"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://instantiator.github.io/posts/caffeine/" /><link rel="prev" href="https://instantiator.github.io/posts/hello-world/" /><link rel="next" href="https://instantiator.github.io/posts/what-language/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "Keeping jobs alive with caffeine",
+        "inLanguage": "en-us",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/instantiator.github.io\/posts\/caffeine\/"
+        },"genre": "posts","keywords": "linux, os x, tool","wordCount":  128 ,
+        "url": "https:\/\/instantiator.github.io\/posts\/caffeine\/","datePublished": "2021-01-02T19:00:00+00:00","dateModified": "2021-01-02T19:00:00+00:00","publisher": {
+            "@type": "Organization",
+            "name": "Author"},"author": {
+                "@type": "Person",
+                "name": "Author"
+            },"description": ""
+    }
+    </script><script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [{
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https:\/\/instantiator.github.io"
+        },{
+            "@type": "ListItem",
+            "position": 2,
+            "name": "tools",
+            "item": "https://instantiator.github.io/categories/tools/"
+        },{
+                "@type": "ListItem",
+                "position": 3,
+                "name": "Keeping jobs alive with caffeine"
+            }]
+    }
+</script></head>
+    <body data-header-desktop="" data-header-mobile=""><script>(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : '' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="Lewis Westbury" class="header-logo">Lewis Westbury</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/posts/" title="See all posts"> Posts </a><a class="menu-item" href="/tags/" title="See all tags"> Tags </a><a class="menu-item" href="/categories/" title="See all categories"> Categories </a><span class="menu-item delimiter"></span><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                    <i class="fas fa-adjust fa-fw"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="Lewis Westbury" class="header-logo">Lewis Westbury</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><a class="menu-item" href="/posts/" title="See all posts">Posts</a><a class="menu-item" href="/tags/" title="See all tags">Tags</a><a class="menu-item" href="/categories/" title="See all categories">Categories</a><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                <i class="fas fa-adjust fa-fw"></i>
+            </a></div>
+    </div>
+</header><main class="main"><div class="container content-article"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">Contents</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single page-toc theme-classic"><div class="post-all-meta  padding-article ">
+                <div class="breadcrumbs">
+    <a href="/">Home </a>/ <a href="/categories/tools/">tools </a>/ <a href="/"> Keeping jobs alive with caffeine </a>
+</div>
+                    <h1 class="single-title animated flipInX">Keeping jobs alive with caffeine</h1><div class="post-meta">
+                        <div class="post-meta-line"><span class="post-category">
+                                <a href="/categories/tools/"><i class="far fa-folder fa-fw"></i>&nbsp;tools</a>
+                            </span>&nbsp;&nbsp;&nbsp;&nbsp;<i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time class="timeago" datetime="2021-01-02">2021-01-02</time>&nbsp;&nbsp;&nbsp;&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;128 words
+                            &nbsp;&nbsp;&nbsp;&nbsp;<i class="far fa-clock fa-fw"></i>&nbsp;One minute</div>
+                    </div>
+                </div><div class="post"><div class="details toc" id="toc-static"  data-kept="">
+                <div class="details-summary toc-title">
+                    <span>Contents</span>
+                    <span><i class="details-icon fas fa-angle-right"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents"></nav></div>
+            </div><div class="content" id="content" style="padding-top: 20px"><p>My Mac likes to go to sleep to save power, and that means any long-running processes
+I have underway will be suspended when it does.</p>
+<p>Until recently, I had assumed my best option was to change the power settings.
+For tasks I want to keep alive, there&rsquo;s a better option - called <code>caffeine</code>, available on OS X and Linux.</p>
+<p>Just like <code>time</code> (a tool to tell you how long a task took to run), you can prefix a command
+with <code>caffeine</code>. Its job is to keep the computer awake until the command exits.</p>
+<p>eg.</p>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">caffeine ./my-long-running-script.sh
+caffeine python ./my-long-running-script.py
+caffeine docker run &lt;image&gt;
+</code></pre></div><p>It&rsquo;s really that simple.</p>
+<p>Take a look at the manual pages for it on your system to see what other
+options there are: <code>man caffeine</code></p>
+</div><div class="post-info-share">
+    <span><a class="share-icon share-twitter" href="javascript:void(0);" title="Share on Twitter" data-sharer="twitter" data-url="https://instantiator.github.io/posts/caffeine/" data-title="Keeping jobs alive with caffeine" data-via="instantiator" data-hashtags="linux,os x,tool"><i class="fab fa-twitter fa-fw"></i></a><a class="share-icon share-facebook" href="javascript:void(0);" title="Share on Facebook" data-sharer="facebook" data-url="https://instantiator.github.io/posts/caffeine/" data-hashtag="linux"><i class="fab fa-facebook-square fa-fw"></i></a><a class="share-icon share-whatsapp" href="javascript:void(0);" title="Share on WhatsApp" data-sharer="whatsapp" data-url="https://instantiator.github.io/posts/caffeine/" data-title="Keeping jobs alive with caffeine" data-web><i class="fab fa-whatsapp fa-fw"></i></a><a class="share-icon share-evernote" href="javascript:void(0);" title="Share on Evernote" data-sharer="evernote" data-url="https://instantiator.github.io/posts/caffeine/" data-title="Keeping jobs alive with caffeine"><i class="fab fa-evernote fa-fw"></i></a></span>
+</div><div class="post-footer" id="post-footer"><div class="post-navigation"><div class="post-nav-box nav-box-prev">
+            <a class="nav-box" href="/posts/hello-world/"><span class="nav-icon"><svg aria-hidden="true" data-prefix="fas" data-icon="chevron-circle-left" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg=""><path fill="currentColor" d="M256 504C119 504 8 393 8 256S119 8 256 8s248 111 248 248-111 248-248 248zM142.1 273l135.5 135.5c9.4 9.4 24.6 9.4 33.9 0l17-17c9.4-9.4 9.4-24.6 0-33.9L226.9 256l101.6-101.6c9.4-9.4 9.4-24.6 0-33.9l-17-17c-9.4-9.4-24.6-9.4-33.9 0L142.1 239c-9.4 9.4-9.4 24.6 0 34z"></path></svg></span><div style="text-align: right;padding-left: 10px"><div class="nav-text-h">Next article</div><span class="nav-text">Hello, World!</span></div></a>
+        </div>
+        <div class="post-nav-box nav-box-next">
+            <a class="nav-box" href="/posts/what-language/"><div style="padding-right: 10px"><div class="nav-text-h">Next article</div><span class="nav-text">Choosing your first coding language</span></div><span class="nav-icon"><svg aria-hidden="true" data-prefix="fas" data-icon="chevron-circle-right" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg=""><path fill="currentColor" d="M256 8c137 0 248 111 248 248S393 504 256 504 8 393 8 256 119 8 256 8zm113.9 231L234.4 103.5c-9.4-9.4-24.6-9.4-33.9 0l-17 17c-9.4 9.4-9.4 24.6 0 33.9L285.1 256 183.5 357.6c-9.4 9.4-9.4 24.6 0 33.9l17 17c9.4 9.4 24.6 9.4 33.9 0L369.9 273c9.4-9.4 9.4-24.6 0-34z"></path></svg></span></a>
+        </div></div></div>
+</div>
+
+    </article><div class=" post-tags post-tags-toc "><a href="/tags/linux/" class="tag">linux</a><a href="/tags/os-x/" class="tag">os x</a><a href="/tags/tool/" class="tag">tool</a></div></div></main><footer class="footer">
+        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.79.1">Hugo</a> | Theme - <a href="https://github.com/upagge/uBlogger" target="_blank" rel="noopener noreffer" title="uBlogger 1.2.0"><i class="far fa-kiss-wink-heart fa-fw"></i> uBlogger</a>
+                </div><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span>2021</span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="Back to Top">
+                <i class="fas fa-arrow-up fa-fw"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="View Comments">
+                <i class="fas fa-comment fa-fw"></i>
+            </a>
+        </div><script src="/lib/smooth-scroll/smooth-scroll.min.js"></script><script src="/lib/lazysizes/lazysizes.min.js"></script><script src="/lib/clipboard/clipboard.min.js"></script><script src="/lib/sharer/sharer.min.js"></script><script>window.config={"code":{"copyTitle":"Copy to clipboard","maxShownLines":10}};</script><script src="/js/theme.min.js"></script><script src="/js/jquery-3.5.1.min.js"></script></body>
+</html>
