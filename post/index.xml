@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on Website of Jane Doe</title>
+    <link>https://instantiator.dev/post/</link>
+    <description>Recent content in Posts on Website of Jane Doe</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Tue, 20 Apr 2021 18:00:00 +0000</lastBuildDate><atom:link href="https://instantiator.dev/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Tutorial - Building an AWS Lambda in C#, part 6: Triggers</title>
+      <link>https://instantiator.dev/post/csharp-aws-lambda-tutorial-06/</link>
+      <pubDate>Tue, 20 Apr 2021 18:00:00 +0000</pubDate>
+      
+      <guid>https://instantiator.dev/post/csharp-aws-lambda-tutorial-06/</guid>
+      <description>Let&amp;rsquo;s build an AWS Lambda in C# In part 5, we amended our Lambda to be able to write the results it found to an object in an S3 bucket.</description>
+    </item>
+    
+    <item>
+      <title>Tutorial - Building an AWS Lambda in C#, part 5: S3</title>
+      <link>https://instantiator.dev/post/csharp-aws-lambda-tutorial-05/</link>
+      <pubDate>Mon, 19 Apr 2021 18:00:00 +0000</pubDate>
+      
+      <guid>https://instantiator.dev/post/csharp-aws-lambda-tutorial-05/</guid>
+      <description>Let&amp;rsquo;s build an AWS Lambda in C# Congratulations on your progress!</description>
+    </item>
+    
+    <item>
+      <title>Tutorial - Building an AWS Lambda in C#, part 4: Logs</title>
+      <link>https://instantiator.dev/post/csharp-aws-lambda-tutorial-04/</link>
+      <pubDate>Sun, 18 Apr 2021 18:00:00 +0000</pubDate>
+      
+      <guid>https://instantiator.dev/post/csharp-aws-lambda-tutorial-04/</guid>
+      <description>Let&amp;rsquo;s build an AWS Lambda in C# In part 3, we extended our Lambda to communicate with an API, using a secret key.</description>
+    </item>
+    
+    <item>
+      <title>Tutorial - Building an AWS Lambda in C#, part 2: Build, deploy and invoke</title>
+      <link>https://instantiator.dev/post/csharp-aws-lambda-tutorial-02/</link>
+      <pubDate>Fri, 16 Apr 2021 18:00:00 +0000</pubDate>
+      
+      <guid>https://instantiator.dev/post/csharp-aws-lambda-tutorial-02/</guid>
+      <description>Let&amp;rsquo;s build an AWS Lambda in C# In part 1, we set up the basic infrastructure to support a new Lambda function on AWS.</description>
+    </item>
+    
+    <item>
+      <title>Tutorial - Building an AWS Lambda in C#, part 1: AWS</title>
+      <link>https://instantiator.dev/post/csharp-aws-lambda-tutorial-01/</link>
+      <pubDate>Thu, 15 Apr 2021 18:00:00 +0000</pubDate>
+      
+      <guid>https://instantiator.dev/post/csharp-aws-lambda-tutorial-01/</guid>
+      <description>Let&amp;rsquo;s build an AWS Lambda in C# At first glance, Amazon Web Services (AWS) can seem impenetrably complex.</description>
+    </item>
+    
+    <item>
+      <title>Querying data files with terminal tools</title>
+      <link>https://instantiator.dev/post/q/</link>
+      <pubDate>Mon, 04 Jan 2021 17:30:00 +0000</pubDate>
+      
+      <guid>https://instantiator.dev/post/q/</guid>
+      <description>There are a many ways to peek inside a data file and reason about its contents.</description>
+    </item>
+    
+    <item>
+      <title>Choosing your first coding language</title>
+      <link>https://instantiator.dev/post/what-language/</link>
+      <pubDate>Sun, 03 Jan 2021 15:00:00 +0000</pubDate>
+      
+      <guid>https://instantiator.dev/post/what-language/</guid>
+      <description>Anyone can code. This is a short exploration of the choices for coding beginners out there.</description>
+    </item>
+    
+    <item>
+      <title>Keeping jobs alive with caffeine</title>
+      <link>https://instantiator.dev/post/caffeine/</link>
+      <pubDate>Sat, 02 Jan 2021 19:00:00 +0000</pubDate>
+      
+      <guid>https://instantiator.dev/post/caffeine/</guid>
+      <description>My Mac likes to go to sleep to save power, and that means any long-running processes I have underway will be suspended when it does.</description>
+    </item>
+    
+    <item>
+      <title>Hello, World!</title>
+      <link>https://instantiator.dev/post/hello-world/</link>
+      <pubDate>Fri, 01 Jan 2021 22:00:00 +0000</pubDate>
+      
+      <guid>https://instantiator.dev/post/hello-world/</guid>
+      <description>I learned to code on a computer called the BBC Micro, released by the BBC in 1981.</description>
+    </item>
+    
+  </channel>
+</rss>

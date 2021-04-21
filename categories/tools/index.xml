@@ -1,24 +1,29 @@
-<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
-    <channel>
-        <title>tools - Category - Lewis Westbury</title>
-        <link>https://instantiator.github.io/categories/tools/</link>
-        <description>tools - Category - Lewis Westbury</description>
-        <generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Mon, 04 Jan 2021 17:30:00 &#43;0000</lastBuildDate><atom:link href="https://instantiator.github.io/categories/tools/" rel="self" type="application/rss+xml" /><item>
-    <title>Querying data files with terminal tools</title>
-    <link>https://instantiator.github.io/posts/q/</link>
-    <pubDate>Mon, 04 Jan 2021 17:30:00 &#43;0000</pubDate>
-    <author>Author</author>
-    <guid>https://instantiator.github.io/posts/q/</guid>
-    <description><![CDATA[There are a many ways to peek inside a data file and reason about its contents. This post is about a triplet of simple, easily available tools that I&rsquo;ve found handy for searching and querying common data file formats. You might too&hellip;
-   format tool notes     CSV q Query CSV files with SQL-like SELECT statements.   JSON jq Look inside JSON files.   YAML yq Look inside YAML files.]]></description>
-</item><item>
-    <title>Keeping jobs alive with caffeine</title>
-    <link>https://instantiator.github.io/posts/caffeine/</link>
-    <pubDate>Sat, 02 Jan 2021 19:00:00 &#43;0000</pubDate>
-    <author>Author</author>
-    <guid>https://instantiator.github.io/posts/caffeine/</guid>
-    <description><![CDATA[My Mac likes to go to sleep to save power, and that means any long-running processes I have underway will be suspended when it does.
-Until recently, I had assumed my best option was to change the power settings. For tasks I want to keep alive, there&rsquo;s a better option - called caffeine, available on OS X and Linux.
-Just like time (a tool to tell you how long a task took to run), you can prefix a command with caffeine.]]></description>
-</item></channel>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>tools on Website of Jane Doe</title>
+    <link>https://instantiator.dev/categories/tools/</link>
+    <description>Recent content in tools on Website of Jane Doe</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Mon, 04 Jan 2021 17:30:00 +0000</lastBuildDate><atom:link href="https://instantiator.dev/categories/tools/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Querying data files with terminal tools</title>
+      <link>https://instantiator.dev/post/q/</link>
+      <pubDate>Mon, 04 Jan 2021 17:30:00 +0000</pubDate>
+      
+      <guid>https://instantiator.dev/post/q/</guid>
+      <description>There are a many ways to peek inside a data file and reason about its contents.</description>
+    </item>
+    
+    <item>
+      <title>Keeping jobs alive with caffeine</title>
+      <link>https://instantiator.dev/post/caffeine/</link>
+      <pubDate>Sat, 02 Jan 2021 19:00:00 +0000</pubDate>
+      
+      <guid>https://instantiator.dev/post/caffeine/</guid>
+      <description>My Mac likes to go to sleep to save power, and that means any long-running processes I have underway will be suspended when it does.</description>
+    </item>
+    
+  </channel>
 </rss>

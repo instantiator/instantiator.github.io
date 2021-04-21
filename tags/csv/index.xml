@@ -1,15 +1,20 @@
-<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
-    <channel>
-        <title>csv - Tag - Lewis Westbury</title>
-        <link>https://instantiator.github.io/tags/csv/</link>
-        <description>csv - Tag - Lewis Westbury</description>
-        <generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Mon, 04 Jan 2021 17:30:00 &#43;0000</lastBuildDate><atom:link href="https://instantiator.github.io/tags/csv/" rel="self" type="application/rss+xml" /><item>
-    <title>Querying data files with terminal tools</title>
-    <link>https://instantiator.github.io/posts/q/</link>
-    <pubDate>Mon, 04 Jan 2021 17:30:00 &#43;0000</pubDate>
-    <author>Author</author>
-    <guid>https://instantiator.github.io/posts/q/</guid>
-    <description><![CDATA[There are a many ways to peek inside a data file and reason about its contents. This post is about a triplet of simple, easily available tools that I&rsquo;ve found handy for searching and querying common data file formats. You might too&hellip;
-   format tool notes     CSV q Query CSV files with SQL-like SELECT statements.   JSON jq Look inside JSON files.   YAML yq Look inside YAML files.]]></description>
-</item></channel>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>csv on Website of Jane Doe</title>
+    <link>https://instantiator.dev/tags/csv/</link>
+    <description>Recent content in csv on Website of Jane Doe</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Mon, 04 Jan 2021 17:30:00 +0000</lastBuildDate><atom:link href="https://instantiator.dev/tags/csv/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Querying data files with terminal tools</title>
+      <link>https://instantiator.dev/post/q/</link>
+      <pubDate>Mon, 04 Jan 2021 17:30:00 +0000</pubDate>
+      
+      <guid>https://instantiator.dev/post/q/</guid>
+      <description>There are a many ways to peek inside a data file and reason about its contents.</description>
+    </item>
+    
+  </channel>
 </rss>

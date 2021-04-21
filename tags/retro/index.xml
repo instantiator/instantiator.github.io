@@ -1,16 +1,20 @@
-<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
-    <channel>
-        <title>retro - Tag - Lewis Westbury</title>
-        <link>https://instantiator.github.io/tags/retro/</link>
-        <description>retro - Tag - Lewis Westbury</description>
-        <generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Fri, 01 Jan 2021 22:00:00 &#43;0000</lastBuildDate><atom:link href="https://instantiator.github.io/tags/retro/" rel="self" type="application/rss+xml" /><item>
-    <title>Hello, World!</title>
-    <link>https://instantiator.github.io/posts/hello-world/</link>
-    <pubDate>Fri, 01 Jan 2021 22:00:00 &#43;0000</pubDate>
-    <author>Author</author>
-    <guid>https://instantiator.github.io/posts/hello-world/</guid>
-    <description><![CDATA[I learned to code on a computer called the BBC Micro, released by the BBC in 1981. I was also released in 1981, and I have a bit of a bond with these 8-bit wonders. Coding is a joyous experience, and anyone can learn to do it. This is a post about retro-coding, and my first written post for this blog.
-pic.twitter.com/y5zy1P2TAE
-&mdash; BBC Micro 🎄 Bot (@bbcmicrobot) March 1, 2020  Hello, World!]]></description>
-</item></channel>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>retro on Website of Jane Doe</title>
+    <link>https://instantiator.dev/tags/retro/</link>
+    <description>Recent content in retro on Website of Jane Doe</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Fri, 01 Jan 2021 22:00:00 +0000</lastBuildDate><atom:link href="https://instantiator.dev/tags/retro/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Hello, World!</title>
+      <link>https://instantiator.dev/post/hello-world/</link>
+      <pubDate>Fri, 01 Jan 2021 22:00:00 +0000</pubDate>
+      
+      <guid>https://instantiator.dev/post/hello-world/</guid>
+      <description>I learned to code on a computer called the BBC Micro, released by the BBC in 1981.</description>
+    </item>
+    
+  </channel>
 </rss>

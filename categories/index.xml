@@ -1,21 +1,38 @@
-<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
-    <channel>
-        <title>Categories - Category - Lewis Westbury</title>
-        <link>https://instantiator.github.io/categories/</link>
-        <description>Categories - Category - Lewis Westbury</description>
-        <generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Mon, 04 Jan 2021 17:30:00 &#43;0000</lastBuildDate><atom:link href="https://instantiator.github.io/categories/" rel="self" type="application/rss+xml" /><item>
-    <title>tools</title>
-    <link>https://instantiator.github.io/categories/tools/</link>
-    <pubDate>Mon, 04 Jan 2021 17:30:00 &#43;0000</pubDate>
-    <author>Author</author>
-    <guid>https://instantiator.github.io/categories/tools/</guid>
-    <description><![CDATA[]]></description>
-</item><item>
-    <title>coding</title>
-    <link>https://instantiator.github.io/categories/coding/</link>
-    <pubDate>Sun, 03 Jan 2021 15:00:00 &#43;0000</pubDate>
-    <author>Author</author>
-    <guid>https://instantiator.github.io/categories/coding/</guid>
-    <description><![CDATA[]]></description>
-</item></channel>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Categories on Website of Jane Doe</title>
+    <link>https://instantiator.dev/categories/</link>
+    <description>Recent content in Categories on Website of Jane Doe</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Tue, 20 Apr 2021 18:00:00 +0000</lastBuildDate><atom:link href="https://instantiator.dev/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>coding</title>
+      <link>https://instantiator.dev/categories/coding/</link>
+      <pubDate>Tue, 20 Apr 2021 18:00:00 +0000</pubDate>
+      
+      <guid>https://instantiator.dev/categories/coding/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>tutorial</title>
+      <link>https://instantiator.dev/categories/tutorial/</link>
+      <pubDate>Tue, 20 Apr 2021 18:00:00 +0000</pubDate>
+      
+      <guid>https://instantiator.dev/categories/tutorial/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>tools</title>
+      <link>https://instantiator.dev/categories/tools/</link>
+      <pubDate>Mon, 04 Jan 2021 17:30:00 +0000</pubDate>
+      
+      <guid>https://instantiator.dev/categories/tools/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
 </rss>

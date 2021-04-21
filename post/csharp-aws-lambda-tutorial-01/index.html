@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html  dir="ltr" lang="en" data-theme=""><head>
+    <title> Lewis Westbury | Tutorial - Building an AWS Lambda in C#, part 1: AWS </title>
+
+    
+    <meta charset="utf-8"><meta name="generator" content="Hugo 0.82.1" /><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+    <meta name="description" content="tech and public safety, articles and ideas">
+    
+    
+    
+    <link rel="stylesheet"
+        href="/css/style.min.7ec96a07e10b60a6997be730fc5d4d3467a225c68515a7df6ae17ac2500f828c.css"
+        integrity="sha256-fslqB&#43;ELYKaZe&#43;cw/F1NNGeiJcaFFaffauF6wlAPgow="
+        crossorigin="anonymous"
+        type="text/css">
+    
+    
+    <link rel="stylesheet"
+        href="/css/markupHighlight.min.f798cbda9aaa38f89eb38be6414bd082cfd71a6780375cbf67b6d2fb2b96491e.css"
+        integrity="sha256-95jL2pqqOPies4vmQUvQgs/XGmeAN1y/Z7bS&#43;yuWSR4="
+        crossorigin="anonymous"
+        type="text/css">
+    
+    <link rel="stylesheet" 
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" 
+    integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" 
+    crossorigin="anonymous" />
+
+    
+    <link rel="shortcut icon" href="/favicons/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicons/favicon-16x16.png">
+
+    <link rel="canonical" href="/post/csharp-aws-lambda-tutorial-01/">
+
+    
+    
+    
+    
+    <script type="text/javascript"
+            src="/js/anatole-header.min.0c05c0a90d28c968a1cad4fb31abd0b8e1264e788ccefed022ae1d3b6f627514.js"
+            integrity="sha256-DAXAqQ0oyWihytT7MavQuOEmTniMzv7QIq4dO29idRQ="
+            crossorigin="anonymous"></script>
+
+
+    
+        
+        
+        <script type="text/javascript"
+                src="/js/anatole-theme-switcher.min.7fd87181cdd7e8413aa64b6867bb32f3a8dc242e684fc7d5bbb9f600dbc2b6eb.js"
+                integrity="sha256-f9hxgc3X6EE6pktoZ7sy86jcJC5oT8fVu7n2ANvCtus="
+                crossorigin="anonymous"></script>
+    
+    <meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://instantiator.dev/images/site-feature-image.png"/>
+
+<meta name="twitter:title" content="Tutorial - Building an AWS Lambda in C#, part 1: AWS"/>
+<meta name="twitter:description" content="Let&rsquo;s build an AWS Lambda in C# At first glance, Amazon Web Services (AWS) can seem impenetrably complex."/>
+
+
+    
+
+</head>
+<body><div class="sidebar animated fadeInDown ">
+    <div class="logo-title">
+        <div class="title">
+            <img src="/lewis/profile.jpg" alt="profile picture">
+            <h3 title=""><a href="/">instantiator.dev</a></h3>
+            <div class="description">
+                <p>tech and public safety, articles and ideas</p>
+            </div>
+        </div>
+    </div>
+    <ul class="social-links">
+        
+            <li>
+                <a href="https://twitter.com/instantiator" rel="me" aria-label="Twitter">
+                    <i class="fab fa-twitter fa-2x" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+            <li>
+                <a href="https://github.com/instantiator" rel="me" aria-label="GitHub">
+                    <i class="fab fa-github fa-2x" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+            <li>
+                <a href="https://www.linkedin.com/in/lewiswestbury" rel="me" aria-label="Linkedin">
+                    <i class="fab fa-linkedin fa-2x" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+    </ul>
+    <div class="footer">
+        <div class="by_farbox">&copy; Lewis Westbury  2021 </div>
+    </div>
+</div>
+<div class="main">
+    <div class="page-top  animated fadeInDown ">
+    <a role="button" class="navbar-burger" data-target="navMenu" aria-label="menu" aria-expanded="false">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+    </a>
+    <ul class="nav" id="navMenu">
+        
+        
+            
+            <li><a 
+                   href="/"
+                        
+                   title="">Home</a></li>
+        
+            
+            <li><a 
+                   href="/post/"
+                        
+                   title="">Posts</a></li>
+        
+            
+            <li><a 
+                   href="/about/"
+                        
+                   title="">About</a></li>
+        
+        
+        
+            <li class="theme-switch-item">
+                <a class="theme-switch" title="Switch Theme">
+                    <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+    </ul>
+</div>
+
+    <div class="autopagerize_page_element">
+        <div class="content">
+    <div class="post  animated fadeInDown ">
+        <div class="post-content">
+            
+            <div class="post-title">
+                <h3>Tutorial - Building an AWS Lambda in C#, part 1: AWS</h3>
+                
+                    <div class="info">
+                        <em class="fas fa-calendar-day"></em>
+                        <span class="date"> 
+                                                2021-04-15
+                                           </span>
+                        <em class="fas fa-stopwatch"></em>
+                        <span class="reading-time">10-minute read</span>
+                    </div>
+                
+            </div>
+
+            <h1 id="lets-build-an-aws-lambda-in-c">Let&rsquo;s build an AWS Lambda in C#</h1>
+<p>At first glance, Amazon Web Services (AWS) can seem impenetrably complex. It&rsquo;s not so bad once you&rsquo;ve found your way around it&hellip;</p>
+<p><strong>A Lambda</strong> is a lightweight, short-lived, event-triggered process that can run reliably whenever it is needed. AWS Lambdas are perfect for small tasks.</p>
+<p><strong>C#</strong> is a language, with strong typing, for .NET Core. That&rsquo;s one of the runtimes that AWS Lambdas supports. The .NET framework also has some pretty good support for interacting with the AWS Lambda service, which will help us later on in this tutorial.</p>
+<p><strong>An S3 bucket</strong> is a simple file storage instance, where you (or your Lambda) can read and write objects (files).</p>
+<p><strong>In this tutorial,</strong> you&rsquo;ll learn to create a Lambda for yourself that runs on AWS, using C# and .NET tools. It&rsquo;ll use a secret API key to communicate with the <a href="https://openweathermap.org/api">OpenWeather API</a> to read some data, and then store what it learned in an S3 bucket.</p>
+<p>Don&rsquo;t worry if a lot of that sounds like technobabble. Together we&rsquo;ll build a simple Lambda, and hopefully demistify:</p>
+<ul>
+<li>AWS accounts</li>
+<li>Identity and Access Management (IAM)</li>
+<li>AWS Lambdas</li>
+<li>Ways to manage secret API keys</li>
+<li>AWS S3 buckets</li>
+<li>Permissions and polices in AWS</li>
+</ul>
+<h2 id="lambdas-in-the-wild">Lambdas in the wild</h2>
+<p><img src="/police-rewired/police-rewired-poster.png" alt="Police Rewired poster"></p>
+<p><a href="https://policerewired.org">Police Rewired</a> is an open community of technologists, focussed on solving problems in public safety and crime. Our online social footprint spans <a href="https://twitter.com/policerewired">Twitter</a>, <a href="https://www.facebook.com/police.rewired/">Facebook</a>, <a href="https://www.linkedin.com/company/police-rewired/">LinkedIn</a>, <a href="https://www.reddit.com/r/policerewired/">Reddit</a>, and our own Discord server (<a href="https://bit.ly/PoliceRewired-join-discord">invite</a>).</p>
+<p>Distributing news and material, for and about our community, on social media takes a lot of time - so I built a social library service that would do it for us.</p>
+<p><strong>The data source for the Police Rewired social library</strong> is a Google Sheet that contains a set of articles, bookmarks and links of interest to our community. The sheet is published as a CSV file at a known URL.</p>
+<p><strong>At the heart of the project is a Lambda</strong> that reads this CSV data, plans a set of posts, and then shares posts from that plan across all our social media, periodically, until it&rsquo;s time to plan again.</p>
+<ul>
+<li>Source code is available on GitHub: <a href="https://github.com/PoliceRewired/social-distributor">PoliceRewired/social-distributor</a></li>
+</ul>
+<h2 id="our-sample-code">Our sample code</h2>
+<p>This tutorial is going to build something with slightly fewer moving parts.</p>
+<ul>
+<li>Source code for the final project is available on GitHub: <a href="https://github.com/instantiator/sample-lambda-function">instantiator/sample-lambda-function</a></li>
+</ul>
+<h2 id="assumptions">Assumptions</h2>
+<p>This tutorial assumes you have knowledge of a few things:</p>
+<ul>
+<li><strong>C#</strong> - We&rsquo;ll use simple C# code to build our examples.</li>
+<li><strong>APIs</strong> - The tutorial refers to use of an API to retrieve some data.</li>
+<li><strong>Git</strong> - The tutorial refers to code repositories in a few places. You don&rsquo;t <em>need</em> this to complete the examples, but it&rsquo;ll help if you are familiar with some of the ideas.</li>
+</ul>
+<p><strong>A significant portion of this tutorial is not coding!</strong> That&rsquo;s because the supporting infrastructure is a really important part of building a reliable, public-facing service.</p>
+<p>Although this is a beginner&rsquo;s tutorial, we&rsquo;re going to cover all the concepts you need to know to build the supporting infrastructure for your service. That knowledge will help you to reason about much larger and more complex projects in the future.</p>
+<p>When we get to the coding part, if you&rsquo;re feeling confident, feel free to substitute your preferred language and toolchain.</p>
+<p><em>So, let&rsquo;s get started!</em></p>
+<h2 id="part-1-aws">Part 1: AWS</h2>
+<p>The Police Rewired social library runs as a Lambda in AWS, which makes it reliable and easy to manage.</p>
+<p>A Lambda is a small piece of code that can be triggered by an event, provided with a small input (such as a small piece of JSON), and responds with a small output.</p>
+<p>Lambdas are transient and aren&rsquo;t expected to run for long. (They have a maximum runtime of ~15 mins. By default they time out after 30 seconds.) They&rsquo;re perfect for a short process that makes a few posts to social media and then stops until it is called again.</p>
+<p>You could also use lambdas to represent many small tasks that can run sequentially or in parallel. For instance, to read items from a queue, or to store data from another service.</p>
+<p>Our Lambda stores its plan in AWS S3 (Simple Storage Service) - which is a simple way to store and retrieve files.</p>
+<p>Before we get to the code, it&rsquo;s helpful to understand a few things about how AWS and the services there fit together. Some services have some rather idiosyncratic names, and it can all seem a bit overwhelming at first.</p>
+<p>Some AWS services you may already have heard of:</p>
+<ul>
+<li><strong>EC2</strong> - for virtual machines to run your application on.</li>
+<li><strong>Fargate</strong> - an EC2 service to run applications in a managed environment.</li>
+<li><strong>EBS (Elastic Block Store)</strong> - virtual filing systems you can attach to Batch, Lambda, Fargate and EC2 instances.</li>
+<li><strong>Batch</strong> - for longer running, scheduled jobs.</li>
+<li><strong>SQS (Simple Queue Service)</strong> - manages queues of events to be delivered to other services (such as Lambdas).</li>
+<li><strong>RDS (the Relational Database Service)</strong> - managed instances of MySQL, PostgreSQL, MariaDB, Oracle BYOL, or SQL Server.</li>
+<li><strong>DynamoDB</strong> - a NoSQL database offering.</li>
+</ul>
+<p>Here are the services we&rsquo;ll be looking at for this project:</p>
+<ul>
+<li><strong>IAM (Identity and Access Management)</strong> - This is where you&rsquo;ll create and manage users, roles, profiles, and policies.</li>
+<li><strong>S3 (Simple Storage Service)</strong> - This is a filing system, where you can store and retrieve files (referred to as Objects) from different instances (referred to as Buckets).</li>
+<li><strong>Lambda</strong> - This is the service where you can define Lambdas, short pieces of code that are triggered by events.</li>
+<li><strong>CloudWatch</strong> - This contains a number of services including CloudWatch Logs (where your Lambda and other services can log to), and CloudWatch Events (now moved to Amazon EventBridge) which can be used to trigger your Lambda.</li>
+</ul>
+<h3 id="whats-free">What&rsquo;s free?</h3>
+<p>This tutorial shouldn&rsquo;t have a knock on effect on your wallet. What we&rsquo;re building is lightweight and ought to fit into the free tier at AWS. You can find out more about the free tier offerings, here:</p>
+<ul>
+<li><a href="https://aws.amazon.com/free/?all-free-tier">AWS free tier</a></li>
+</ul>
+<p>The two services we&rsquo;ll be using:</p>
+<table>
+<thead>
+<tr>
+<th>Service</th>
+<th>Free tier allowance</th>
+<th>Free tier duration</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Lambda</td>
+<td>1,000,000 free requests pcm; 3,200,000 secs compute time pcm.</td>
+<td>Indefinite</td>
+</tr>
+<tr>
+<td>S3</td>
+<td>5 GB storage; 20,000 get requests; 2,000 put requests.</td>
+<td>12 months</td>
+</tr>
+</tbody>
+</table>
+<h3 id="arns">ARNs</h3>
+<p>Everything you create and use on AWS has an <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">ARN</a> (Amazon Resource Name) which is a unique identity for the object. You can use an ARN to refer to things when you&rsquo;re granting permissions or passing information back and forth. They come in a few variant formats, and can be recognised by the prefix: <code>arn</code></p>
+<div class="highlight"><pre class="chroma"><code class="language-text" data-lang="text">arn:partition:service:region:account-id:resource-id
+arn:partition:service:region:account-id:resource-type/resource-id
+arn:partition:service:region:account-id:resource-type:resource-id
+</code></pre></div><h3 id="regions">Regions</h3>
+<p>AWS is divided into regions, and each region defines the geographical location where your data is stored and services run. They&rsquo;re isolated from each other, and so AWS can make guarantees about where your assets are stored.</p>
+<p>There are various reasons why you may wish to choose one region over another, and I recommend you <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-regions-availability-zones.html">read more about it</a> to make your decision.</p>
+<p>For the purposes of this tutorial, everything is conducted in region: <strong>eu-west-2</strong> (that&rsquo;s London, UK)</p>
+<h3 id="setting-up-your-account">Setting up your account</h3>
+<p><em>If you&rsquo;ve already set up a service in AWS before, you can probably skip this section. We&rsquo;ll cover the IAM work you need to do to set up some sensible users, roles, profiles, and policies for your new Lambda service.</em></p>
+<p><strong>You&rsquo;re going to be creating a few accounts, and ought to give them strong passwords. I&rsquo;d advise using a password manager to help you keep track of it all.</strong></p>
+<p>AWS provides infrastructure that can support projects far more complex than ours. To do so, it provides the IAM service, offering an elaborate system of users, roles and permissions.</p>
+<p>A quick summary of some of the key types we&rsquo;ll encounter in IAM:</p>
+<ul>
+<li><strong>An account</strong> represents your organisation</li>
+<li><strong>Accounts</strong> contain IAM users, groups, roles, policies, services</li>
+<li><strong>Users</strong> have <strong>policies</strong></li>
+<li><strong>Users</strong> belong to <strong>groups</strong></li>
+<li><strong>Groups</strong> also have <strong>policies</strong> that they apply to all their users</li>
+<li><strong>Users</strong> and some <strong>services</strong> can assume <strong>roles</strong></li>
+<li><strong>Roles</strong> have <strong>policies</strong></li>
+<li><strong>Policies</strong> grant <strong>permissions</strong></li>
+</ul>
+<p>When you create a new account on AWS, your credentials grant you access to the whole account as <strong>root</strong>. This is the most powerful level of access. You should give it a complex password, enable 2-factor authentication (2FA), and try to use it as little as possible.</p>
+<p>If you ever lose control of your root credentials, you&rsquo;ll need to recover access to the account - whereas, if you lose control of an IAM user, you can quickly disable it and create another. It&rsquo;s better to have some more limited IAM accounts that do regular work, so that if they&rsquo;re compromised they can only do a limited amount of harm.</p>
+<p>If you have more than one individual administrating your services, creating an IAM user for each will help you to audit their work, too.</p>
+<p>We&rsquo;ll create an IAM user with administrator permissions to work on your services.</p>
+<p>There are primarily 2 types of access a user can have in AWS:</p>
+<ul>
+<li><strong>Programmatic acccess</strong> (a script uses the AWS CLI, SDK, or some other means)</li>
+<li><strong>Console acccess</strong> (a person signs in through the AWS web console)</li>
+</ul>
+<p>We&rsquo;re following a simple model here, and your administrator is going to need both forms of access - so that you can make changes across your account in the console, but also use the CLI to update your Lambda.</p>
+<p>Here&rsquo;s a quick layout of the setup we&rsquo;re aiming for:</p>
+<ul>
+<li>Account: eg. <code>123456789012</code>
+<ul>
+<li>User: <code>sample-admin</code>
+<ul>
+<li>Access: <code>console</code> and <code>programmatic</code></li>
+<li>Group: <code>sample-org-admins</code>
+<ul>
+<li>Policy: <code>AdministratorAccess</code></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Role: <code>sample-lambda-role</code>
+<ul>
+<li>Policy: <code>AwsLambdaExecute</code></li>
+</ul>
+</li>
+<li>Lambda: <code>sample-lambda</code>
+<ul>
+<li>Execution role: <code>sample-lambda-role</code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>The role we&rsquo;ll create for the Lambda will allow it to access just the things it needs. In this way, it&rsquo;s not possible for a process to overstep its bounds. This is particularly helpful when you&rsquo;re building complex systems and need to reason about the privacy of your data.</p>
+<h4 id="creating-an-administrator-account">Creating an administrator account</h4>
+<p>The first thing you should do is create an IAM account with enough permissions to allow you to do work on AWS.</p>
+<ul>
+<li>Make your way to the <strong>IAM service</strong></li>
+<li>Choose <strong>Users</strong></li>
+<li>Tap <code>Add user</code></li>
+<li>Give your user a username, eg. <strong>sample-admin</strong> (or something more specific)</li>
+<li>Choose both: <strong>Console access</strong> and <strong>Programmatic access</strong></li>
+</ul>
+<p><img src="/csharp-aws-lambda-tutorial/001-add-user.png" alt="Adding a user"></p>
+<p>Next, you&rsquo;ll need to give the user a group. Remember, groups come with policies that define their permissions. In this case, the group we need is for administrator accounts, so you might want to create one called: <strong>sample-org-admins</strong></p>
+<p>AWS comes with a number of preconfigured policies, so find and attach the policy called: <strong>AdministratorAccess</strong></p>
+<p>Finally, AWS permits you add some tags to the things you create. These will make them easier to find by any metric you care to use. It&rsquo;s often helpful to tag things by project. It&rsquo;s optional and you can skip it if you prefer.</p>
+<p>Having created your new user, it&rsquo;s time to test it out.</p>
+<ul>
+<li>Visit the <strong>Users</strong> section of IAM again.</li>
+<li>You&rsquo;ll see that the new user is listed there, and clickable.</li>
+<li>Click to username to view details of the user.</li>
+<li>Open the <strong>Security credentials</strong> tab.</li>
+</ul>
+<p>You&rsquo;ll see a console sign-in link, like this:</p>
+<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">https://XXXXXXXXXXXX.signin.aws.amazon.com/console
+</code></pre></div><p>That 12-digit number on the beginning is the AWS account number. Bookmark that link so you can sign in as your IAM user any time you need.</p>
+<p>Now sign out, and give it a try.</p>
+<p><em>From now on, we&rsquo;ll assume that everything you do in the AWS console is done through your <strong>sample-admin</strong> account.</em></p>
+<h4 id="creating-a-role-for-your-lambda">Creating a role for your lambda</h4>
+<p>Back in the IAM console, it&rsquo;s time to create a role that your lambda can assume when it runs. This will define the permissions that your lambda has, and may also be referenced by other services (such as S3) when defining which roles may access private data stored there.</p>
+<ul>
+<li>Choose <strong>Roles</strong></li>
+<li>Tap <code>Create role</code></li>
+</ul>
+<p><img src="/csharp-aws-lambda-tutorial/002-create-role.png" alt="Creating a role"></p>
+<p>The role needs a trusted entity type to define what can assume the role.</p>
+<ul>
+<li>Choose <strong>AWS service</strong></li>
+<li>Choose <strong>Lambda</strong></li>
+</ul>
+<p>Next, we&rsquo;ll need to define permissions by selecting a policy. (You could select multiple policies, or create one.</p>
+<p><img src="/csharp-aws-lambda-tutorial/003-role-permissions.png" alt="Role permissions"></p>
+<p>An existing policy, <strong>AWSLambdaExecute</strong>, will do for our purposes. This grants your lambda permission to write to <strong>CloudWatch Logs</strong> (to log its output), and <strong>S3</strong> (to read and write Objects in Buckets).</p>
+<ul>
+<li>Search for and select: <strong>AWSLambdaExecute</strong></li>
+</ul>
+<p>As before you could add tags to your role.</p>
+<p>In review, you can now name the role.</p>
+<ul>
+<li>Name the role <strong>sample-lambda-role</strong></li>
+<li>Finish and create the role</li>
+</ul>
+<h4 id="conclusion">Conclusion</h4>
+<p>Congratulations! You&rsquo;ve set up the basic infrastructure to support a new Lambda function.</p>
+<p>In the next part, we&rsquo;ll build and test a Lambda that can run on your new infrastructure.</p>
+</div>
+        <div class="post-footer">
+            <div class="info">
+                <span class="separator"><a class="category" href="/categories/coding/">coding</a><a class="category" href="/categories/tutorial/">tutorial</a></span>
+                <span class="separator"><a class="tag" href="/tags/coding/">coding</a><a class="tag" href="/tags/c%23/">c#</a><a class="tag" href="/tags/%2enet/">.net</a><a class="tag" href="/tags/aws/">aws</a><a class="tag" href="/tags/lambda/">lambda</a></span>
+            </div>
+        </div>
+
+        
+    </div>
+
+
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript"
+        src="/js/medium-zoom.min.2d6fd0be87fa98f0c9b4dc2536b312bbca48757f584f6ea1f394abc9bcc38fbc.js"
+        integrity="sha256-LW/Qvof6mPDJtNwlNrMSu8pIdX9YT26h85SrybzDj7w="
+        crossorigin="anonymous"></script></body>
+
+</html>

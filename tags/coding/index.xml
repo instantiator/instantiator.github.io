@@ -1,25 +1,74 @@
-<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
-    <channel>
-        <title>coding - Tag - Lewis Westbury</title>
-        <link>https://instantiator.github.io/tags/coding/</link>
-        <description>coding - Tag - Lewis Westbury</description>
-        <generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Sun, 03 Jan 2021 15:00:00 &#43;0000</lastBuildDate><atom:link href="https://instantiator.github.io/tags/coding/" rel="self" type="application/rss+xml" /><item>
-    <title>Choosing your first coding language</title>
-    <link>https://instantiator.github.io/posts/what-language/</link>
-    <pubDate>Sun, 03 Jan 2021 15:00:00 &#43;0000</pubDate>
-    <author>Author</author>
-    <guid>https://instantiator.github.io/posts/what-language/</guid>
-    <description><![CDATA[Anyone can code. This is a short exploration of the choices for coding beginners out there.
-There&rsquo;s nothing unique about coders (other than choosing to code) and certainly no reason to believe that your gender, age, or any other characteristic is going to hold you back. Anyone who tells you differently is gatekeeping, and that&rsquo;s not kind. If you want to get started, read on&hellip;
-Chef Gusteau would like to remind you that coding is for everyone, and why wouldn&#39;t it be?]]></description>
-</item><item>
-    <title>Hello, World!</title>
-    <link>https://instantiator.github.io/posts/hello-world/</link>
-    <pubDate>Fri, 01 Jan 2021 22:00:00 &#43;0000</pubDate>
-    <author>Author</author>
-    <guid>https://instantiator.github.io/posts/hello-world/</guid>
-    <description><![CDATA[I learned to code on a computer called the BBC Micro, released by the BBC in 1981. I was also released in 1981, and I have a bit of a bond with these 8-bit wonders. Coding is a joyous experience, and anyone can learn to do it. This is a post about retro-coding, and my first written post for this blog.
-pic.twitter.com/y5zy1P2TAE
-&mdash; BBC Micro 🎄 Bot (@bbcmicrobot) March 1, 2020  Hello, World!]]></description>
-</item></channel>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>coding on Website of Jane Doe</title>
+    <link>https://instantiator.dev/tags/coding/</link>
+    <description>Recent content in coding on Website of Jane Doe</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Tue, 20 Apr 2021 18:00:00 +0000</lastBuildDate><atom:link href="https://instantiator.dev/tags/coding/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Tutorial - Building an AWS Lambda in C#, part 6: Triggers</title>
+      <link>https://instantiator.dev/post/csharp-aws-lambda-tutorial-06/</link>
+      <pubDate>Tue, 20 Apr 2021 18:00:00 +0000</pubDate>
+      
+      <guid>https://instantiator.dev/post/csharp-aws-lambda-tutorial-06/</guid>
+      <description>Let&amp;rsquo;s build an AWS Lambda in C# In part 5, we amended our Lambda to be able to write the results it found to an object in an S3 bucket.</description>
+    </item>
+    
+    <item>
+      <title>Tutorial - Building an AWS Lambda in C#, part 5: S3</title>
+      <link>https://instantiator.dev/post/csharp-aws-lambda-tutorial-05/</link>
+      <pubDate>Mon, 19 Apr 2021 18:00:00 +0000</pubDate>
+      
+      <guid>https://instantiator.dev/post/csharp-aws-lambda-tutorial-05/</guid>
+      <description>Let&amp;rsquo;s build an AWS Lambda in C# Congratulations on your progress!</description>
+    </item>
+    
+    <item>
+      <title>Tutorial - Building an AWS Lambda in C#, part 4: Logs</title>
+      <link>https://instantiator.dev/post/csharp-aws-lambda-tutorial-04/</link>
+      <pubDate>Sun, 18 Apr 2021 18:00:00 +0000</pubDate>
+      
+      <guid>https://instantiator.dev/post/csharp-aws-lambda-tutorial-04/</guid>
+      <description>Let&amp;rsquo;s build an AWS Lambda in C# In part 3, we extended our Lambda to communicate with an API, using a secret key.</description>
+    </item>
+    
+    <item>
+      <title>Tutorial - Building an AWS Lambda in C#, part 2: Build, deploy and invoke</title>
+      <link>https://instantiator.dev/post/csharp-aws-lambda-tutorial-02/</link>
+      <pubDate>Fri, 16 Apr 2021 18:00:00 +0000</pubDate>
+      
+      <guid>https://instantiator.dev/post/csharp-aws-lambda-tutorial-02/</guid>
+      <description>Let&amp;rsquo;s build an AWS Lambda in C# In part 1, we set up the basic infrastructure to support a new Lambda function on AWS.</description>
+    </item>
+    
+    <item>
+      <title>Tutorial - Building an AWS Lambda in C#, part 1: AWS</title>
+      <link>https://instantiator.dev/post/csharp-aws-lambda-tutorial-01/</link>
+      <pubDate>Thu, 15 Apr 2021 18:00:00 +0000</pubDate>
+      
+      <guid>https://instantiator.dev/post/csharp-aws-lambda-tutorial-01/</guid>
+      <description>Let&amp;rsquo;s build an AWS Lambda in C# At first glance, Amazon Web Services (AWS) can seem impenetrably complex.</description>
+    </item>
+    
+    <item>
+      <title>Choosing your first coding language</title>
+      <link>https://instantiator.dev/post/what-language/</link>
+      <pubDate>Sun, 03 Jan 2021 15:00:00 +0000</pubDate>
+      
+      <guid>https://instantiator.dev/post/what-language/</guid>
+      <description>Anyone can code. This is a short exploration of the choices for coding beginners out there.</description>
+    </item>
+    
+    <item>
+      <title>Hello, World!</title>
+      <link>https://instantiator.dev/post/hello-world/</link>
+      <pubDate>Fri, 01 Jan 2021 22:00:00 +0000</pubDate>
+      
+      <guid>https://instantiator.dev/post/hello-world/</guid>
+      <description>I learned to code on a computer called the BBC Micro, released by the BBC in 1981.</description>
+    </item>
+    
+  </channel>
 </rss>

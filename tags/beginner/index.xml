@@ -1,16 +1,20 @@
-<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
-    <channel>
-        <title>beginner - Tag - Lewis Westbury</title>
-        <link>https://instantiator.github.io/tags/beginner/</link>
-        <description>beginner - Tag - Lewis Westbury</description>
-        <generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Sun, 03 Jan 2021 15:00:00 &#43;0000</lastBuildDate><atom:link href="https://instantiator.github.io/tags/beginner/" rel="self" type="application/rss+xml" /><item>
-    <title>Choosing your first coding language</title>
-    <link>https://instantiator.github.io/posts/what-language/</link>
-    <pubDate>Sun, 03 Jan 2021 15:00:00 &#43;0000</pubDate>
-    <author>Author</author>
-    <guid>https://instantiator.github.io/posts/what-language/</guid>
-    <description><![CDATA[Anyone can code. This is a short exploration of the choices for coding beginners out there.
-There&rsquo;s nothing unique about coders (other than choosing to code) and certainly no reason to believe that your gender, age, or any other characteristic is going to hold you back. Anyone who tells you differently is gatekeeping, and that&rsquo;s not kind. If you want to get started, read on&hellip;
-Chef Gusteau would like to remind you that coding is for everyone, and why wouldn&#39;t it be?]]></description>
-</item></channel>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>beginner on Website of Jane Doe</title>
+    <link>https://instantiator.dev/tags/beginner/</link>
+    <description>Recent content in beginner on Website of Jane Doe</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 03 Jan 2021 15:00:00 +0000</lastBuildDate><atom:link href="https://instantiator.dev/tags/beginner/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Choosing your first coding language</title>
+      <link>https://instantiator.dev/post/what-language/</link>
+      <pubDate>Sun, 03 Jan 2021 15:00:00 +0000</pubDate>
+      
+      <guid>https://instantiator.dev/post/what-language/</guid>
+      <description>Anyone can code. This is a short exploration of the choices for coding beginners out there.</description>
+    </item>
+    
+  </channel>
 </rss>
