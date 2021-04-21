@@ -13,7 +13,7 @@
       <pubDate>Tue, 20 Apr 2021 18:00:00 +0000</pubDate>
       
       <guid>https://instantiator.dev/post/csharp-aws-lambda-tutorial-06/</guid>
-      <description>Let&amp;rsquo;s build an AWS Lambda in C# In part 5, we amended our Lambda to be able to write the results it found to an object in an S3 bucket.</description>
+      <description>In part 5, we amended our Lambda to write to an S3 bucket; and in this part, we&amp;rsquo;ll explore triggers to run it regularly.</description>
     </item>
     
     <item>
@@ -22,7 +22,7 @@
       <pubDate>Mon, 19 Apr 2021 18:00:00 +0000</pubDate>
       
       <guid>https://instantiator.dev/post/csharp-aws-lambda-tutorial-05/</guid>
-      <description>Let&amp;rsquo;s build an AWS Lambda in C# Congratulations on your progress!</description>
+      <description>In previous parts, we&amp;rsquo;ve built a Lambda that can query the OpenWeather API, using a secret key; and in this part we&amp;rsquo;ll extend it to write that data to S3.</description>
     </item>
     
     <item>
@@ -31,7 +31,7 @@
       <pubDate>Sun, 18 Apr 2021 18:00:00 +0000</pubDate>
       
       <guid>https://instantiator.dev/post/csharp-aws-lambda-tutorial-04/</guid>
-      <description>Let&amp;rsquo;s build an AWS Lambda in C# In part 3, we extended our Lambda to communicate with an API, using a secret key.</description>
+      <description>In part 3, we extended our Lambda to communicate with an API, using a secret key; and in this part, we&amp;rsquo;ll explore the logs created when the Lambda runs.</description>
     </item>
     
     <item>
@@ -40,7 +40,7 @@
       <pubDate>Fri, 16 Apr 2021 18:00:00 +0000</pubDate>
       
       <guid>https://instantiator.dev/post/csharp-aws-lambda-tutorial-02/</guid>
-      <description>Let&amp;rsquo;s build an AWS Lambda in C# In part 1, we set up the basic infrastructure to support a new Lambda function on AWS.</description>
+      <description>In part 1, we set up the basic infrastructure to support a new Lambda function on AWS; and n this part, we&amp;rsquo;ll build a Lambda function, deploy it to AWS, and invoke it with some input.</description>
     </item>
     
     <item>
@@ -49,7 +49,7 @@
       <pubDate>Thu, 15 Apr 2021 18:00:00 +0000</pubDate>
       
       <guid>https://instantiator.dev/post/csharp-aws-lambda-tutorial-01/</guid>
-      <description>Let&amp;rsquo;s build an AWS Lambda in C# At first glance, Amazon Web Services (AWS) can seem impenetrably complex.</description>
+      <description>At first glance, Amazon Web Services (AWS) can seem impenetrably complex.</description>
     </item>
     
   </channel>

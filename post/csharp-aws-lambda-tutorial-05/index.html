@@ -56,7 +56,7 @@
 <meta name="twitter:image" content="https://instantiator.dev/images/site-feature-image.png"/>
 
 <meta name="twitter:title" content="Tutorial - Building an AWS Lambda in C#, part 5: S3"/>
-<meta name="twitter:description" content="Let&rsquo;s build an AWS Lambda in C# Congratulations on your progress!"/>
+<meta name="twitter:description" content="In previous parts, we&rsquo;ve built a Lambda that can query the OpenWeather API, using a secret key; and in this part we&rsquo;ll extend it to write that data to S3."/>
 
 
     
@@ -155,9 +155,8 @@
                 
             </div>
 
-            <h1 id="lets-build-an-aws-lambda-in-c">Let&rsquo;s build an AWS Lambda in C#</h1>
-<p>Congratulations on your progress!</p>
-<p>Together, we&rsquo;ve built a Lambda that can query the OpenWeather API, using a secret key. It&rsquo;s time to do something with that data.</p>
+            <p>In previous parts, we&rsquo;ve built a Lambda that can query the OpenWeather API, using a secret key; and in this part we&rsquo;ll extend it to write that data to S3.</p>
+<h1 id="lets-build-an-aws-lambda-in-c">Let&rsquo;s build an AWS Lambda in C#</h1>
 <h2 id="part-5-writing-to-an-s3-object">Part 5: Writing to an S3 object</h2>
 <p>As an example, we&rsquo;ll write the data our Lambda retrieves into an object (ie. a file) in an S3 bucket, so it can be analysed later. We could just as easily store it in an RDS or DynamoDB database instance.</p>
 <h3 id="create-and-configure-an-s3-bucket">Create and configure an S3 bucket</h3>

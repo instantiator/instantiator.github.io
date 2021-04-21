@@ -56,7 +56,7 @@
 <meta name="twitter:image" content="https://instantiator.dev/images/site-feature-image.png"/>
 
 <meta name="twitter:title" content="Tutorial - Building an AWS Lambda in C#, part 6: Triggers"/>
-<meta name="twitter:description" content="Let&rsquo;s build an AWS Lambda in C# In part 5, we amended our Lambda to be able to write the results it found to an object in an S3 bucket."/>
+<meta name="twitter:description" content="In part 5, we amended our Lambda to write to an S3 bucket; and in this part, we&rsquo;ll explore triggers to run it regularly."/>
 
 
     
@@ -155,9 +155,8 @@
                 
             </div>
 
-            <h1 id="lets-build-an-aws-lambda-in-c">Let&rsquo;s build an AWS Lambda in C#</h1>
-<p>In part 5, we amended our Lambda to be able to write the results it found to an object in an S3 bucket.</p>
-<p>In this part, we&rsquo;ll explore triggers and arrange for our Lambda to run regularly.</p>
+            <p>In part 5, we amended our Lambda to write to an S3 bucket; and in this part, we&rsquo;ll explore triggers to run it regularly.</p>
+<h1 id="lets-build-an-aws-lambda-in-c">Let&rsquo;s build an AWS Lambda in C#</h1>
 <h2 id="part-6-scheduling-your-lambda">Part 6: Scheduling your Lambda</h2>
 <p>Most Lambdas aren&rsquo;t invoked the way we&rsquo;re testing ours&hellip; Instead, triggers cause them to run when certain events happen (perhaps a new file in an S3 bucket with data to work on, a timer, or some other input).</p>
 <p>The <strong>AWS EventBridge</strong> service can provide scheduled trigger events for a variety of services, including Lambdas.</p>
