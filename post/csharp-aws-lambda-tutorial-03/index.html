@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html  dir="ltr" lang="en" data-theme=""><head>
+    <title> Lewis Westbury | Tutorial - Building an AWS Lambda in C#, part 3: APIs and secrets </title>
+
+    
+    <meta charset="utf-8"><meta name="generator" content="Hugo 0.82.1" /><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+    <meta name="description" content="tech, volunteers, public safety, articles and ideas">
+    
+    
+    
+    <link rel="stylesheet"
+        href="/css/style.min.7ec96a07e10b60a6997be730fc5d4d3467a225c68515a7df6ae17ac2500f828c.css"
+        integrity="sha256-fslqB&#43;ELYKaZe&#43;cw/F1NNGeiJcaFFaffauF6wlAPgow="
+        crossorigin="anonymous"
+        type="text/css">
+    
+    
+    <link rel="stylesheet"
+        href="/css/markupHighlight.min.f798cbda9aaa38f89eb38be6414bd082cfd71a6780375cbf67b6d2fb2b96491e.css"
+        integrity="sha256-95jL2pqqOPies4vmQUvQgs/XGmeAN1y/Z7bS&#43;yuWSR4="
+        crossorigin="anonymous"
+        type="text/css">
+    
+    <link rel="stylesheet" 
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" 
+    integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" 
+    crossorigin="anonymous" />
+
+    
+    <link rel="shortcut icon" href="/favicons/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicons/favicon-16x16.png">
+
+    <link rel="canonical" href="/post/csharp-aws-lambda-tutorial-03/">
+
+    
+    
+    
+    
+    <script type="text/javascript"
+            src="/js/anatole-header.min.0c05c0a90d28c968a1cad4fb31abd0b8e1264e788ccefed022ae1d3b6f627514.js"
+            integrity="sha256-DAXAqQ0oyWihytT7MavQuOEmTniMzv7QIq4dO29idRQ="
+            crossorigin="anonymous"></script>
+
+
+    
+        
+        
+        <script type="text/javascript"
+                src="/js/anatole-theme-switcher.min.7fd87181cdd7e8413aa64b6867bb32f3a8dc242e684fc7d5bbb9f600dbc2b6eb.js"
+                integrity="sha256-f9hxgc3X6EE6pktoZ7sy86jcJC5oT8fVu7n2ANvCtus="
+                crossorigin="anonymous"></script>
+    
+    <meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://instantiator.dev/images/site-feature-image.png"/>
+
+<meta name="twitter:title" content="Tutorial - Building an AWS Lambda in C#, part 3: APIs and secrets"/>
+<meta name="twitter:description" content="In part 2, we build a Lambda function, deployed and invoked it; and in this part, we&rsquo;ll extend it to communicate with an API using a secret key."/>
+
+
+    
+
+</head>
+<body><div class="sidebar animated fadeInDown ">
+    <div class="logo-title">
+        <div class="title">
+            <img src="/lewis/profile.jpg" alt="profile picture">
+            <h3 title=""><a href="/">instantiator.dev</a></h3>
+            <div class="description">
+                <p>tech, volunteers, public safety, articles and ideas</p>
+            </div>
+        </div>
+    </div>
+    <ul class="social-links">
+        
+            <li>
+                <a href="https://twitter.com/instantiator" rel="me" aria-label="Twitter">
+                    <i class="fab fa-twitter fa-2x" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+            <li>
+                <a href="https://github.com/instantiator" rel="me" aria-label="GitHub">
+                    <i class="fab fa-github fa-2x" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+            <li>
+                <a href="https://www.linkedin.com/in/lewiswestbury" rel="me" aria-label="Linkedin">
+                    <i class="fab fa-linkedin fa-2x" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+    </ul>
+    <div class="footer">
+        <div class="by_farbox">&copy; Lewis Westbury  2021 </div>
+    </div>
+</div>
+<div class="main">
+    <div class="page-top  animated fadeInDown ">
+    <a role="button" class="navbar-burger" data-target="navMenu" aria-label="menu" aria-expanded="false">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+    </a>
+    <ul class="nav" id="navMenu">
+        
+        
+            
+            <li><a 
+                   href="/"
+                        
+                   title="">Home</a></li>
+        
+            
+            <li><a 
+                   href="/post/"
+                        
+                   title="">Posts</a></li>
+        
+            
+            <li><a 
+                   href="/about/"
+                        
+                   title="">About</a></li>
+        
+        
+        
+            <li class="theme-switch-item">
+                <a class="theme-switch" title="Switch Theme">
+                    <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+    </ul>
+</div>
+
+    <div class="autopagerize_page_element">
+        <div class="content">
+    <div class="post  animated fadeInDown ">
+        <div class="post-content">
+            
+            <div class="post-title">
+                <h3>Tutorial - Building an AWS Lambda in C#, part 3: APIs and secrets</h3>
+                
+                    <div class="info">
+                        <em class="fas fa-calendar-day"></em>
+                        <span class="date"> 
+                                                2021-04-17
+                                           </span>
+                        <em class="fas fa-stopwatch"></em>
+                        <span class="reading-time">6-minute read</span>
+                    </div>
+                
+            </div>
+
+            <p>In part 2, we build a Lambda function, deployed and invoked it; and in this part, we&rsquo;ll extend it to communicate with an API using a secret key.</p>
+<h1 id="lets-build-an-aws-lambda-in-c">Let&rsquo;s build an AWS Lambda in C#</h1>
+<h2 id="part-3-accessing-an-api-with-a-secret-api-key">Part 3: Accessing an API with a secret API key</h2>
+<p>Let&rsquo;s build something a little more sophisticated than the default &ldquo;string upper-casing&rdquo; function. Lambdas often need to work with information elsewhere - perhaps data that&rsquo;s accessible through an API.</p>
+<p>In this part, we&rsquo;ll modify our sample Lambda function to read some weather data from an API. We&rsquo;ll be using the FREE tier of the OpenWeather API, to read <a href="https://openweathermap.org/current">current weather data</a>.</p>
+<p>The OpenWeather API requires an API key. Helpfully, this allows us to illustrate ways you can manage secrets in your deployed services.</p>
+<h3 id="reading-weather-data">Reading weather data</h3>
+<p>Feel free to modify, skip, or just read this example if you&rsquo;d rather not sign up to OpenWeather. See: <a href="https://openweathermap.org/price">pricing details</a></p>
+<ul>
+<li>First, sign up to get an OpenWeather API key: <a href="https://openweathermap.org/price">https://openweathermap.org/price</a></li>
+</ul>
+<h4 id="secrets-as-environment-variables">Secrets as environment variables</h4>
+<p>You shouldn&rsquo;t include secrets, such as API keys, in source code that could ever appear in a public repository - as they could then be used without your consent. Including them alongside your code is generally a bit of a risk - and it&rsquo;s far easier to reason about them in isolation.</p>
+<p>AWS Lambda has some facilities that allow us to manage secrets, and to provide them to our code as environment variables. We can also provide those environment variables locally when testing.</p>
+<p>You can provide environment variables to the Lambda through the AWS web interface.</p>
+<blockquote>
+<p>NB. If you&rsquo;d rather do it from the command line, you can use the <code>--environment-variables</code> option to provide the various secrets when you deploy your lambda. Provide them as key/value pairs in this format: <code>&lt;key1&gt;=&lt;value1&gt;;&lt;key2&gt;=&lt;value2&gt;</code> etc.</p>
+</blockquote>
+<blockquote>
+<p>You could also add an <code>environment-variables</code> key in the <code>aws-lambda-tools-default.json</code> file inside your project, but be careful not to include your secrets in code you then share to a public repository!</p>
+</blockquote>
+<p>The sample project relies on manual (click-ops) configuration of the secrets through the AWS console, so that they don&rsquo;t have to be included in the deploy script or json configuration files.</p>
+<blockquote>
+<p>NB. You could also do something a little more advanced, like placing your secrets in the <strong>Parameter Store</strong> (found in the <strong>AWS Systems Manager</strong>). That&rsquo;s a little too complex for this example, and likely more useful for secrets that are regularly modified or those that might need to be shared between different services. For our purposes, environment variables provided by the Lambda service will do just fine.</p>
+</blockquote>
+<h4 id="adding-the-weather-api-key-as-a-secret">Adding the weather API key as a secret</h4>
+<ul>
+<li>Visit the <strong>Lambda service</strong> in the AWS console.</li>
+<li>Click into your <strong>SampleLambaFunction</strong> from the list of functions.</li>
+</ul>
+<p><img src="/csharp-aws-lambda-tutorial/005-lambda-listed.png" alt="Lambda list on AWS"></p>
+<ul>
+<li>Choose the <strong>Configuration</strong> tab</li>
+<li>Choose <strong>Environment variables</strong> from the configuration options</li>
+<li>Tap the <code>Edit</code> button to add some environment variables</li>
+<li>Tap <code>Add environment variable</code></li>
+<li>For key, put: <code>WEATHER_API_KEY</code></li>
+<li>For value, put the API key provided by the OpenWeather API</li>
+<li>Tap <code>Save</code></li>
+</ul>
+<p>The API key will now be available to your lambda, in the environment variable called <code>WEATHER_API_KEY</code>.</p>
+<h4 id="providing-the-weather-api-key-locally">Providing the weather API key locally</h4>
+<p>When testing your Lambda locally, you&rsquo;ll also need the environment variable set.</p>
+<p>If testing from your IDE, you&rsquo;ll need to create a <strong>Run Configuration</strong> in the settings for the <strong>SampleLambdaFunction.Tests</strong> project, and provide the <strong>Environment Variable</strong> <code>WEATHER_API_KEY</code> there.</p>
+<p><img src="/csharp-aws-lambda-tutorial/003.5-run-configuration.png" alt="Run configuration"></p>
+<p>If testing from the terminal, you&rsquo;ll need to ensure you&rsquo;ve exported the environment variable first:</p>
+<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">export WEATHER_API_KEY=&#39;the-weather-api-key-goes-here&#39;
+dotnet test
+</code></pre></div><h4 id="reading-the-weather-data">Reading the weather data</h4>
+<p>Let&rsquo;s modify the Lambda to read weather data. We&rsquo;ll configure the Lambda to accept a string as input, with the name of a city.</p>
+<blockquote>
+<p>NB. It is often dangerous to accept unconstrained strings as inputs, especially if you&rsquo;re going to copy them into URLs or database queries. <strong>Don&rsquo;t do this in production!</strong></p>
+</blockquote>
+<p>The URL of the weather API we&rsquo;re going to use is:</p>
+<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">https://api.openweathermap.org/data/2.5/weather?q={city name}&amp;appid={API key}
+</code></pre></div><p>First, we&rsquo;ll take a look at the output we get from this endpoint - with a simple update to our Lambda:</p>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="c1">/// &lt;summary&gt;
+</span><span class="c1">/// A simple function that accepts a city name, and queries weather data for that city.
+</span><span class="c1">/// &lt;/summary&gt;
+</span><span class="c1">/// &lt;param name=&#34;input&#34;&gt;a city name&lt;/param&gt;
+</span><span class="c1">/// &lt;param name=&#34;context&#34;&gt;&lt;/param&gt;
+</span><span class="c1">/// &lt;returns&gt;&lt;/returns&gt;
+</span><span class="c1"></span><span class="k">public</span> <span class="k">async</span> <span class="n">Task</span><span class="p">&lt;</span><span class="kt">string</span><span class="p">&gt;</span> <span class="n">FunctionHandler</span><span class="p">(</span><span class="kt">string</span> <span class="n">input</span><span class="p">,</span> <span class="n">ILambdaContext</span> <span class="n">context</span><span class="p">)</span>
+<span class="p">{</span>
+	<span class="n">context</span><span class="p">.</span><span class="n">Logger</span><span class="p">.</span><span class="n">LogLine</span><span class="p">(</span><span class="s">&#34;Querying OpenWeather for: &#34;</span> <span class="p">+</span> <span class="n">input</span><span class="p">);</span>
+	<span class="kt">var</span> <span class="n">weatherKey</span> <span class="p">=</span> <span class="n">Environment</span><span class="p">.</span><span class="n">GetEnvironmentVariable</span><span class="p">(</span><span class="s">&#34;WEATHER_API_KEY&#34;</span><span class="p">);</span>
+	
+	<span class="c1">// (!) Injecting strings into your query without checking them first is dangerous. Don&#39;t do it in production!
+</span><span class="c1"></span>	<span class="kt">var</span> <span class="n">query</span> <span class="p">=</span> <span class="s">$&#34;https://api.openweathermap.org/data/2.5/weather?q={input}&amp;appid={weatherKey}&#34;</span><span class="p">;</span>
+	<span class="k">using</span> <span class="p">(</span><span class="kt">var</span> <span class="n">http</span> <span class="p">=</span> <span class="k">new</span> <span class="n">HttpClient</span><span class="p">())</span>
+	<span class="p">{</span>
+		<span class="kt">var</span> <span class="n">output</span> <span class="p">=</span> <span class="k">await</span> <span class="n">http</span><span class="p">.</span><span class="n">GetStringAsync</span><span class="p">(</span><span class="n">query</span><span class="p">);</span>
+		<span class="k">return</span> <span class="n">output</span><span class="p">;</span>
+	<span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div><p>There are a few things to note, here:</p>
+<ul>
+<li>We&rsquo;re taking advantage of <code>async</code> operations in C#, and so the footprint of the <code>FunctionHandler</code> method has changed a little. It&rsquo;s marked <code>async</code> and returns a <code>Task&lt;string&gt;</code>. This will be recognised by AWS Lambda, called in an asynchronous context, and awaited. The result is that you&rsquo;ll still receive a <code>string</code> when you need it.</li>
+<li>As described, we expect the name of a city in the <code>input</code> parameter.</li>
+<li>The context parameter is now used to perform a little logging.</li>
+<li><code>Environment.GetEnvironmentVariable</code> should do as expected, and retrieve the API key we stored in the AWS console.</li>
+<li><code>HttpClient</code> is a simple way to make an HTTP GET request. It has various methods, including <code>GetAsync</code> which returns more information about the query and response. <code>GetStringAsync</code> is simpler and meets our needs.</li>
+<li>As you can see, the function should return the full response it received from the OpenWeather API.</li>
+</ul>
+<blockquote>
+<p>NB. <code>HttpClient</code> isn&rsquo;t the only way to make HTTP requests. If you&rsquo;re looking for a library to build queries that can map query content and responses between JSON and C# object classes, I highly recommend <a href="https://restsharp.dev/">RestSharp</a>. It&rsquo;s pleasant to use, and makes complex things simple.</p>
+</blockquote>
+<p>Before we can build the entire solution, note that the local test won&rsquo;t compile - as we&rsquo;ve changed the footprint of the <code>FunctionHandler</code> method. You can update that test quickly now with something that passes (although it&rsquo;s not hugely informative):</p>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public</span> <span class="k">class</span> <span class="nc">FunctionTest</span>
+<span class="p">{</span>
+<span class="na">	[Fact]</span>
+	<span class="k">public</span> <span class="k">async</span> <span class="n">Task</span> <span class="n">TestWeatherReturnsData</span><span class="p">()</span>
+	<span class="p">{</span>
+		<span class="kt">var</span> <span class="n">function</span> <span class="p">=</span> <span class="k">new</span> <span class="n">Function</span><span class="p">();</span>
+		<span class="kt">var</span> <span class="n">context</span> <span class="p">=</span> <span class="k">new</span> <span class="n">TestLambdaContext</span><span class="p">();</span>
+		<span class="kt">var</span> <span class="n">weather</span> <span class="p">=</span> <span class="k">await</span> <span class="n">function</span><span class="p">.</span><span class="n">FunctionHandler</span><span class="p">(</span><span class="s">&#34;London&#34;</span><span class="p">,</span> <span class="n">context</span><span class="p">);</span>
+		<span class="n">Assert</span><span class="p">.</span><span class="n">False</span><span class="p">(</span><span class="kt">string</span><span class="p">.</span><span class="n">IsNullOrWhiteSpace</span><span class="p">(</span><span class="n">weather</span><span class="p">));</span>
+	<span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div><p>With that in place, the test should build. Note that:</p>
+<ul>
+<li>The test also runs in an asynchronous context now and so, in turn, it can make an asynchronous call to the <code>FunctionHandler</code> method, and await its result.</li>
+</ul>
+<h4 id="test-the-lambda-again">Test the lambda again</h4>
+<p>Try it now, with:</p>
+<ul>
+<li><code>deploy.sh</code></li>
+<li><code>test-a-city.sh</code></li>
+</ul>
+<p>There are a couple of things to note from the output.</p>
+<ol>
+<li>Returned: a full JSON blob (although it has been escaped) with lots of current weather data for London, UK.</li>
+<li>You&rsquo;ll also see the logs, and your new log line appears there:
+<code>Querying OpenWeather for: London, UK</code></li>
+</ol>
+<h4 id="conclusion">Conclusion</h4>
+<p>Congratulations! You&rsquo;ve created a Lambda that can retrieve and return weather data from the weather API, using a secret key stored safely in AWS.</p>
+</div>
+        <div class="post-footer">
+            <div class="info">
+                <span class="separator"><a class="category" href="/categories/coding/">coding</a><a class="category" href="/categories/tutorial/">tutorial</a></span>
+                <span class="separator"><a class="tag" href="/tags/coding/">coding</a><a class="tag" href="/tags/c%23/">c#</a><a class="tag" href="/tags/%2enet/">.net</a><a class="tag" href="/tags/aws/">aws</a><a class="tag" href="/tags/lambda/">lambda</a></span>
+            </div>
+        </div>
+
+        
+    </div>
+
+
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript"
+        src="/js/medium-zoom.min.2d6fd0be87fa98f0c9b4dc2536b312bbca48757f584f6ea1f394abc9bcc38fbc.js"
+        integrity="sha256-LW/Qvof6mPDJtNwlNrMSu8pIdX9YT26h85SrybzDj7w="
+        crossorigin="anonymous"></script></body>
+
+</html>

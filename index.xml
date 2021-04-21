@@ -62,6 +62,15 @@
     </item>
     
     <item>
+      <title>Tutorial - Building an AWS Lambda in C#, part 3: APIs and secrets</title>
+      <link>https://instantiator.dev/post/csharp-aws-lambda-tutorial-03/</link>
+      <pubDate>Sat, 17 Apr 2021 18:00:00 +0000</pubDate>
+      
+      <guid>https://instantiator.dev/post/csharp-aws-lambda-tutorial-03/</guid>
+      <description>In part 2, we build a Lambda function, deployed and invoked it; and in this part, we&amp;rsquo;ll extend it to communicate with an API using a secret key.</description>
+    </item>
+    
+    <item>
       <title>Tutorial - Building an AWS Lambda in C#, part 2: Build, deploy and invoke</title>
       <link>https://instantiator.dev/post/csharp-aws-lambda-tutorial-02/</link>
       <pubDate>Fri, 16 Apr 2021 18:00:00 +0000</pubDate>
