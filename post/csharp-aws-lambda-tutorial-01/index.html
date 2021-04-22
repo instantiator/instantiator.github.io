@@ -164,7 +164,7 @@
                                                 2021-04-15
                                            </span>
                         <em class="fas fa-stopwatch"></em>
-                        <span class="reading-time">10-minute read</span>
+                        <span class="reading-time">11-minute read</span>
                     </div>
                 
             </div>
@@ -324,8 +324,16 @@ arn:partition:service:region:account-id:resource-type:resource-id
 </li>
 </ul>
 <p>The role we&rsquo;ll create for the Lambda will allow it to access just the things it needs. In this way, it&rsquo;s not possible for a process to overstep its bounds. This is particularly helpful when you&rsquo;re building complex systems and need to reason about the privacy of your data.</p>
+<h4 id="sign-up-to-aws">Sign up to AWS</h4>
+<p>If you haven&rsquo;t already, create yourself an account at AWS.</p>
+<p>Think of your account as an &lsquo;organisation&rsquo; - it can contain users and services.</p>
+<ul>
+<li>Visit: <a href="https://aws.amazon.com/free">https://aws.amazon.com/free</a></li>
+<li>Tap <code>Create a free account</code></li>
+</ul>
+<p>This will be your <strong>root</strong> account, and we&rsquo;ll try to use it directly as little as possible. It&rsquo;s much safer to create some IAM users inside it and use them for day to day administration&hellip;</p>
 <h4 id="creating-an-administrator-account">Creating an administrator account</h4>
-<p>The first thing you should do is create an IAM account with enough permissions to allow you to do work on AWS.</p>
+<p>The first thing you should do, once you&rsquo;ve signed up to AWS, is create an IAM account with enough permissions to allow you to do work on AWS without using your root account.</p>
 <ul>
 <li>Make your way to the <strong>IAM service</strong></li>
 <li>Choose <strong>Users</strong></li>
