@@ -218,7 +218,7 @@
             <span class="nt">&#34;Sid&#34;</span><span class="p">:</span> <span class="s2">&#34;statement-1&#34;</span><span class="p">,</span>
             <span class="nt">&#34;Effect&#34;</span><span class="p">:</span> <span class="s2">&#34;Allow&#34;</span><span class="p">,</span>
             <span class="nt">&#34;Principal&#34;</span><span class="p">:</span> <span class="p">{</span>
-                <span class="nt">&#34;AWS&#34;</span><span class="p">:</span> <span class="s2">&#34;arn:aws:iam::747647019788:role/sample-lambda-role&#34;</span>
+                <span class="nt">&#34;AWS&#34;</span><span class="p">:</span> <span class="s2">&#34;arn:aws:iam::&lt;YOUR ACCOUNT NUMBER&gt;:role/sample-lambda-role&#34;</span>
             <span class="p">},</span>
             <span class="nt">&#34;Action&#34;</span><span class="p">:</span> <span class="s2">&#34;s3:ListBucket&#34;</span><span class="p">,</span>
             <span class="nt">&#34;Resource&#34;</span><span class="p">:</span> <span class="s2">&#34;arn:aws:s3:::sample-lambda-storage&#34;</span>
@@ -227,7 +227,7 @@
             <span class="nt">&#34;Sid&#34;</span><span class="p">:</span> <span class="s2">&#34;statement-2&#34;</span><span class="p">,</span>
             <span class="nt">&#34;Effect&#34;</span><span class="p">:</span> <span class="s2">&#34;Allow&#34;</span><span class="p">,</span>
             <span class="nt">&#34;Principal&#34;</span><span class="p">:</span> <span class="p">{</span>
-                <span class="nt">&#34;AWS&#34;</span><span class="p">:</span> <span class="s2">&#34;arn:aws:iam::747647019788:role/sample-lambda-role&#34;</span>
+                <span class="nt">&#34;AWS&#34;</span><span class="p">:</span> <span class="s2">&#34;arn:aws:iam::&lt;YOUR ACCOUNT NUMBER&gt;:role/sample-lambda-role&#34;</span>
             <span class="p">},</span>
             <span class="nt">&#34;Action&#34;</span><span class="p">:</span> <span class="p">[</span>
                 <span class="s2">&#34;s3:GetObject&#34;</span><span class="p">,</span>
@@ -237,7 +237,10 @@
         <span class="p">}</span>
     <span class="p">]</span>
 <span class="p">}</span>
-</code></pre></div><p><img src="/csharp-aws-lambda-tutorial/013-s3-bucket-policy-set.png" alt="Bucket policy (set)"></p>
+</code></pre></div><ul>
+<li>Substitute <code>&lt;YOUR ACCOUNT NUMBER&gt;</code> with your numeric 12-digit AWS account number.</li>
+</ul>
+<p><img src="/csharp-aws-lambda-tutorial/013-s3-bucket-policy-set.png" alt="Bucket policy (set)"></p>
 <p>There are a few things to note about this policy:</p>
 <ul>
 <li>
