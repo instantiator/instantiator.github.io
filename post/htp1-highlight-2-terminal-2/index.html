@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html  dir="ltr" lang="en" data-theme=""><head>
+    <title> instantiator.dev | Hack Highlight #2: Terminal 2.0 </title>
+
+    
+    <meta charset="utf-8"><meta name="generator" content="Hugo 0.82.1" /><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+    <meta name="description" content="tech, volunteers, public safety, articles and ideas">
+    
+    
+    
+    <link rel="stylesheet"
+        href="/css/style.min.7ec96a07e10b60a6997be730fc5d4d3467a225c68515a7df6ae17ac2500f828c.css"
+        integrity="sha256-fslqB&#43;ELYKaZe&#43;cw/F1NNGeiJcaFFaffauF6wlAPgow="
+        crossorigin="anonymous"
+        type="text/css">
+    
+
+    
+    <link rel="stylesheet"
+        href="/css/additional-classes.min.1d76732c34340c3588f50dacb5d8ce67a8c9ad2bf0140c8eb825f3f4e3a071c4.css"
+        integrity="sha256-HXZzLDQ0DDWI9Q2stdjOZ6jJrSvwFAyOuCXz9OOgccQ="
+        crossorigin="anonymous"
+        type="text/css">
+
+    
+    <link rel="stylesheet"
+        href="/css/markupHighlight.min.f798cbda9aaa38f89eb38be6414bd082cfd71a6780375cbf67b6d2fb2b96491e.css"
+        integrity="sha256-95jL2pqqOPies4vmQUvQgs/XGmeAN1y/Z7bS&#43;yuWSR4="
+        crossorigin="anonymous"
+        type="text/css">
+    
+
+
+
+    <link rel="stylesheet" 
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" 
+    integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" 
+    crossorigin="anonymous" />
+
+    
+    <link rel="shortcut icon" href="/favicons/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicons/favicon-16x16.png">
+
+    <link rel="canonical" href="/post/htp1-highlight-2-terminal-2/">
+
+    
+    
+    
+    
+    <script type="text/javascript"
+            src="/js/anatole-header.min.0c05c0a90d28c968a1cad4fb31abd0b8e1264e788ccefed022ae1d3b6f627514.js"
+            integrity="sha256-DAXAqQ0oyWihytT7MavQuOEmTniMzv7QIq4dO29idRQ="
+            crossorigin="anonymous"></script>
+
+
+    
+        
+        
+        <script type="text/javascript"
+                src="/js/anatole-theme-switcher.min.7fd87181cdd7e8413aa64b6867bb32f3a8dc242e684fc7d5bbb9f600dbc2b6eb.js"
+                integrity="sha256-f9hxgc3X6EE6pktoZ7sy86jcJC5oT8fVu7n2ANvCtus="
+                crossorigin="anonymous"></script>
+    
+    <meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://instantiator.dev/lewis/default-image.png"/>
+
+<meta name="twitter:title" content="Hack Highlight #2: Terminal 2.0"/>
+<meta name="twitter:description" content="This is a necropost, resurrected from an old blog. To find out more about Hack the Police events, civic tech, and policing technology, visit: Police Rewired"/>
+
+
+    
+    <meta property="og:title" content="Hack Highlight #2: Terminal 2.0" />
+<meta property="og:description" content="This is a necropost, resurrected from an old blog. To find out more about Hack the Police events, civic tech, and policing technology, visit: Police Rewired" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://instantiator.dev/post/htp1-highlight-2-terminal-2/" /><meta property="og:image" content="https://instantiator.dev/lewis/default-image.png"/><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2013-05-29T00:00:00&#43;00:00" />
+<meta property="article:modified_time" content="2013-05-29T00:00:00&#43;00:00" /><meta property="og:site_name" content="instantiator.dev" />
+<meta property="og:see_also" content="https://instantiator.dev/post/htp1-highlight-4-how-did-we-do/" /><meta property="og:see_also" content="https://instantiator.dev/post/htp1-highlight-3-aroundmet/" /><meta property="og:see_also" content="https://instantiator.dev/post/htp1-highlight-1-secure-evidence-recorder/" /><meta property="og:see_also" content="https://instantiator.dev/post/we-hacked-the-police/" />
+
+
+
+</head>
+<body><div class="sidebar animated fadeInDown ">
+    <div class="logo-title">
+        <div class="title">
+            <img src="/lewis/profile.jpg" alt="profile picture">
+            <h3 title=""><a href="/">instantiator.dev</a></h3>
+            <div class="description">
+                <p>tech, volunteers, public safety, articles and ideas</p>
+            </div>
+        </div>
+    </div>
+    <ul class="social-links">
+        
+            <li>
+                <a href="https://twitter.com/instantiator" rel="me" aria-label="Twitter">
+                    <i class="fab fa-twitter fa-2x" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+            <li>
+                <a href="https://github.com/instantiator" rel="me" aria-label="GitHub">
+                    <i class="fab fa-github fa-2x" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+            <li>
+                <a href="https://www.linkedin.com/in/lewiswestbury" rel="me" aria-label="Linkedin">
+                    <i class="fab fa-linkedin fa-2x" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+            <li>
+                <a href="https://instantiator.dev/index.xml" rel="me" aria-label="RSS">
+                    <i class="fas fa-rss fa-2x" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+    </ul>
+    <div class="footer">
+        <div class="by_farbox">&copy; Lewis Westbury  2021 </div>
+    </div>
+</div>
+<div class="main">
+    <div class="page-top  animated fadeInDown ">
+    <a role="button" class="navbar-burger" data-target="navMenu" aria-label="menu" aria-expanded="false">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+    </a>
+    <ul class="nav" id="navMenu">
+        
+        
+            
+            <li><a 
+                   href="/"
+                        
+                   title="">Home</a></li>
+        
+            
+            <li><a 
+                   href="/post/"
+                        
+                   title="">Posts</a></li>
+        
+            
+            <li><a 
+                   href="/about/"
+                        
+                   title="">About</a></li>
+        
+        
+        
+            <li class="theme-switch-item">
+                <a class="theme-switch" title="Switch Theme">
+                    <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+    </ul>
+</div>
+
+    <div class="autopagerize_page_element">
+        <div class="content">
+    <div class="post  animated fadeInDown ">
+        <div class="post-content">
+            
+            <div class="post-title">
+                <h3>Hack Highlight #2: Terminal 2.0</h3>
+                
+                    <div class="info">
+                        <em class="fas fa-calendar-day"></em>
+                        <span class="date"> 
+                                                2013-05-29
+                                           </span>
+                        <em class="fas fa-stopwatch"></em>
+                        <span class="reading-time">5-minute read</span>
+                    </div>
+                
+            </div>
+
+            <p><em>This is a necropost, resurrected from an old blog. To find out more about Hack the Police events, civic tech, and policing technology, visit: <a href="https://policerewired.org">Police Rewired</a></em></p>
+<h1 id="mobile-data-terminal-20">Mobile Data Terminal 2.0</h1>
+<p>Haje brought his knowledge and skills as an entrepreneur, a software developer, a writer, and a special constable to Hack the Police - and produced something extraordinary.</p>
+<h2 id="what-problem-does-mdt-20-solve">What problem does MDT 2.0 solve?</h2>
+<p>Haje tackled the issue of Mobile Data Terminals - often referred to as MDT.</p>
+<p>These terminals are built into Police cars and offer a disappointingly &rsquo;90s experience.</p>
+<p>Police officers can use MDT to perform a small range of actions. They have access to some forms of police data from PNC (the Police National Computer) for running checks (ie. on IDs or car number plates), can receive jobs, and can type updates to their CAD (the emergency services' dispatching and incident management system).</p>
+<p>Of course, nothing is smooth, so the mapping system uses an arcane and counter-intuitive selection of swipes and taps to move around, and the maps themselves are cluttered and difficult to use. Perhaps my expectation of what a map should look like is a high bar, but a good map with high quality directions can shave minutes off the time an officer needs to get to a call - and that can saves lives.</p>
+<p>Haje&rsquo;s solution was to do away with the clunky PC built into each car - and to replace it with a mobile device: a tablet or phone would do. Having something truly mobile would free the officers up to take them to the scene of an incident, and free the force up to replace them quickly and easily. Forces are no longer tied to one provider and a single device - they can use what they need to get the job done to the best of their abilities. Modern tablets and phones are also a darn sight easier to charge from a car battery!</p>
+<p><img src="/necro-images/htp1-mdt2-1.jpeg" alt="MDT 2.0"></p>
+<p>What Haje built was a proof-of-concept app. It showed just what&rsquo;s possible, and how quick and easy it can be to perform important policing actions through good design, visual indicators, and taking advantage of technologies that are now well understood, such as OCR, to save time.</p>
+<h2 id="saving-money">Saving money</h2>
+<p>Haje also produced an analysis of the costs (as far as is possible). Even with conservative estimates, it&rsquo;s pretty clear that using established commercial devices is much cheaper than the bespoke (and disappointing) systems available today.</p>
+<p>In just 2 days, Haje showed just how many things you could do on a mobile device - and just how easy it would be to build something simple, useable, and smart.</p>
+<h2 id="think-like-a-start-up">Think like a start up!</h2>
+<p>There&rsquo;s plenty more to see at his blog - but something that really caught my attention was the emphasis that many different people at Hack the Police, including Haje, placed on changing the way policing think about technology.</p>
+<p>Unfortunately the thinking of the force&rsquo;s IT providers has always been to purchase a large system from a contractor and wash their hands of it - leaving behind a legacy of lengthy and expensive maintenance contracts - with minimal options for fixes and improvements.</p>
+<h2 id="skilled-staff">Skilled staff</h2>
+<p>Something I&rsquo;ll come back to again and again is the issue of unplanned work. Right now, across the police service, that&rsquo;s next to impossible for software development - and that leaves law enforcement in a dangerous position.</p>
+<p>Facing ever-more sophisticated gangs and crowds, the police service needs to adapt and to keep up with the changes in technology that keep handing advantages to suspects and trouble-makers - making it easy to commit offences and avoid detection. Often, protestors at large public order events have a better knowledge of the lay of the land than police officers both on the front lines and in command centres.</p>
+<h2 id="change-neednt-be-expensive">Change needn&rsquo;t be expensive</h2>
+<p>Not only is there no expertise available inside the organisation to help fix the issues, but there&rsquo;s a cost associated with every little fix - because all the work is contractually tied down. Those costs in turn mean that only the most urgent of fixes can be completed, and that all changes must proceed at a snail&rsquo;s pace to keep costs down.</p>
+<p>And that - hopefully - highlights the stalemate the police services have locked themselves into. Contracts negotiated in the past have surrendered the ability to adapt and change. A lack of skilled staff means that the only work that can be undertaken must be planned, justified, and pay the costs laid down by contractors - rather than the actual cost of the work. That may seem like a disparate view - but it&rsquo;s by focussing on the weaknesses of current contracts we can help to prevent those same mistakes being made again.</p>
+<p>In the meantime, the <a href="http://c-100.org">Commissioner&rsquo;s 100</a>, and those folks who believe change is possible, are pressing forward with proposals for new ways of working and building the case for far better uses of technology.</p>
+<p>Slowly, we&rsquo;re beginning to see results.</p>
+<p>It takes time to build understanding - but we&rsquo;re in this for the long run. If the police service is to be seen as a serious force for good in the 21st century, it&rsquo;s going to have to learn to do things properly.</p>
+<p><em>To find out more about Hack the Police events, civic tech, and policing technology, visit: <a href="https://policerewired.org">Police Rewired</a></em></p>
+</div>
+        <div class="post-footer">
+            <div class="info">
+                <span class="separator"><a class="category" href="/categories/necropost/">Necropost</a><a class="category" href="/categories/article/">Article</a></span>
+                <span class="separator"><a class="tag" href="/tags/necropost/">Necropost</a><a class="tag" href="/tags/policing/">policing</a><a class="tag" href="/tags/crime/">crime</a><a class="tag" href="/tags/technology/">technology</a><a class="tag" href="/tags/civic-tech/">civic tech</a><a class="tag" href="/tags/hack-the-police/">Hack the Police</a><a class="tag" href="/tags/metropolitan-police/">Metropolitan Police</a><a class="tag" href="/tags/hackathon/">hackathon</a><a class="tag" href="/tags/hack/">hack</a><a class="tag" href="/tags/terminal/">terminal</a><a class="tag" href="/tags/cad/">CAD</a><a class="tag" href="/tags/dispatch/">dispatch</a><a class="tag" href="/tags/mdt/">MDT</a><a class="tag" href="/tags/tablet/">tablet</a></span>
+                
+                  <p>
+                    See also:
+                    <ul><li><a href="https://instantiator.dev/post/htp1-highlight-4-how-did-we-do/">Hack Highlight #4: How did we do?</a></li><li><a href="https://instantiator.dev/post/htp1-highlight-3-aroundmet/">Hack Highlight #3: AroundMET</a></li><li><a href="https://instantiator.dev/post/htp1-highlight-1-secure-evidence-recorder/">Hack Highlight #1: Secure evidence recording</a></li><li><a href="https://instantiator.dev/post/we-hacked-the-police/">We hacked the Police!</a></li>
+                    </ul>
+                  </p>
+                
+
+            </div>
+        </div>
+
+        
+    </div>
+
+
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript"
+        src="/js/medium-zoom.min.2d6fd0be87fa98f0c9b4dc2536b312bbca48757f584f6ea1f394abc9bcc38fbc.js"
+        integrity="sha256-LW/Qvof6mPDJtNwlNrMSu8pIdX9YT26h85SrybzDj7w="
+        crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-SHE42ZWKEN"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-SHE42ZWKEN');
+</script></body>
+
+</html>

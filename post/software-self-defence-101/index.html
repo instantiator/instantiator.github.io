@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html  dir="ltr" lang="en" data-theme=""><head>
+    <title> instantiator.dev | Software Self Defence 101 </title>
+
+    
+    <meta charset="utf-8"><meta name="generator" content="Hugo 0.82.1" /><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+    <meta name="description" content="tech, volunteers, public safety, articles and ideas">
+    
+    
+    
+    <link rel="stylesheet"
+        href="/css/style.min.7ec96a07e10b60a6997be730fc5d4d3467a225c68515a7df6ae17ac2500f828c.css"
+        integrity="sha256-fslqB&#43;ELYKaZe&#43;cw/F1NNGeiJcaFFaffauF6wlAPgow="
+        crossorigin="anonymous"
+        type="text/css">
+    
+
+    
+    <link rel="stylesheet"
+        href="/css/additional-classes.min.1d76732c34340c3588f50dacb5d8ce67a8c9ad2bf0140c8eb825f3f4e3a071c4.css"
+        integrity="sha256-HXZzLDQ0DDWI9Q2stdjOZ6jJrSvwFAyOuCXz9OOgccQ="
+        crossorigin="anonymous"
+        type="text/css">
+
+    
+    <link rel="stylesheet"
+        href="/css/markupHighlight.min.f798cbda9aaa38f89eb38be6414bd082cfd71a6780375cbf67b6d2fb2b96491e.css"
+        integrity="sha256-95jL2pqqOPies4vmQUvQgs/XGmeAN1y/Z7bS&#43;yuWSR4="
+        crossorigin="anonymous"
+        type="text/css">
+    
+
+
+
+    <link rel="stylesheet" 
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" 
+    integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" 
+    crossorigin="anonymous" />
+
+    
+    <link rel="shortcut icon" href="/favicons/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicons/favicon-16x16.png">
+
+    <link rel="canonical" href="/post/software-self-defence-101/">
+
+    
+    
+    
+    
+    <script type="text/javascript"
+            src="/js/anatole-header.min.0c05c0a90d28c968a1cad4fb31abd0b8e1264e788ccefed022ae1d3b6f627514.js"
+            integrity="sha256-DAXAqQ0oyWihytT7MavQuOEmTniMzv7QIq4dO29idRQ="
+            crossorigin="anonymous"></script>
+
+
+    
+        
+        
+        <script type="text/javascript"
+                src="/js/anatole-theme-switcher.min.7fd87181cdd7e8413aa64b6867bb32f3a8dc242e684fc7d5bbb9f600dbc2b6eb.js"
+                integrity="sha256-f9hxgc3X6EE6pktoZ7sy86jcJC5oT8fVu7n2ANvCtus="
+                crossorigin="anonymous"></script>
+    
+    <meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://instantiator.dev/police-rewired/software-self-defence.png"/>
+
+<meta name="twitter:title" content="Software Self Defence 101"/>
+<meta name="twitter:description" content="Software Self-Defence 101 The first time I met Glyn Wintle, I embarrassed myself."/>
+
+
+    
+    <meta property="og:title" content="Software Self Defence 101" />
+<meta property="og:description" content="Software Self-Defence 101 The first time I met Glyn Wintle, I embarrassed myself." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://instantiator.dev/post/software-self-defence-101/" /><meta property="og:image" content="https://instantiator.dev/police-rewired/software-self-defence.png" /><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2018-04-12T00:00:00&#43;00:00" />
+<meta property="article:modified_time" content="2018-04-12T00:00:00&#43;00:00" /><meta property="og:site_name" content="instantiator.dev" />
+
+
+
+</head>
+<body><div class="sidebar animated fadeInDown ">
+    <div class="logo-title">
+        <div class="title">
+            <img src="/lewis/profile.jpg" alt="profile picture">
+            <h3 title=""><a href="/">instantiator.dev</a></h3>
+            <div class="description">
+                <p>tech, volunteers, public safety, articles and ideas</p>
+            </div>
+        </div>
+    </div>
+    <ul class="social-links">
+        
+            <li>
+                <a href="https://twitter.com/instantiator" rel="me" aria-label="Twitter">
+                    <i class="fab fa-twitter fa-2x" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+            <li>
+                <a href="https://github.com/instantiator" rel="me" aria-label="GitHub">
+                    <i class="fab fa-github fa-2x" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+            <li>
+                <a href="https://www.linkedin.com/in/lewiswestbury" rel="me" aria-label="Linkedin">
+                    <i class="fab fa-linkedin fa-2x" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+            <li>
+                <a href="https://instantiator.dev/index.xml" rel="me" aria-label="RSS">
+                    <i class="fas fa-rss fa-2x" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+    </ul>
+    <div class="footer">
+        <div class="by_farbox">&copy; Lewis Westbury  2021 </div>
+    </div>
+</div>
+<div class="main">
+    <div class="page-top  animated fadeInDown ">
+    <a role="button" class="navbar-burger" data-target="navMenu" aria-label="menu" aria-expanded="false">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+    </a>
+    <ul class="nav" id="navMenu">
+        
+        
+            
+            <li><a 
+                   href="/"
+                        
+                   title="">Home</a></li>
+        
+            
+            <li><a 
+                   href="/post/"
+                        
+                   title="">Posts</a></li>
+        
+            
+            <li><a 
+                   href="/about/"
+                        
+                   title="">About</a></li>
+        
+        
+        
+            <li class="theme-switch-item">
+                <a class="theme-switch" title="Switch Theme">
+                    <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+    </ul>
+</div>
+
+    <div class="autopagerize_page_element">
+        <div class="content">
+    <div class="post  animated fadeInDown ">
+        <div class="post-content">
+            
+            <div class="post-title">
+                <h3>Software Self Defence 101</h3>
+                
+                    <div class="info">
+                        <em class="fas fa-calendar-day"></em>
+                        <span class="date"> 
+                                                2018-04-12
+                                           </span>
+                        <em class="fas fa-stopwatch"></em>
+                        <span class="reading-time">3-minute read</span>
+                    </div>
+                
+            </div>
+
+            <h1 id="software-self-defence-101">Software Self-Defence 101</h1>
+<p>The first time I met Glyn Wintle, I embarrassed myself.</p>
+<p>I don’t remember exactly what I said, but it was one of those sentences that starts with “But surely…”</p>
+<p>Glyn was explaining (with glee, I might add!) how what sounded like a simple attack on a system could evade detection. It all seemed so straightforward to mitigate, but of course I was wrong to assume that meant the right protections were actually in place!</p>
+<p><img src="/memes/i-am-serious.jpeg" alt="I am serious, and don&rsquo;t call me Shirley"></p>
+<p><strong>Software and Systems Security</strong> is a field where your best assumptions can be turned on their head&hellip; It’s hard to do well, and nobody knows that better than the people who attack your systems. Glyn is a penetration tester, and one of the most competent people I know.</p>
+<p><strong>If</strong> you think someone won’t attack you because it might require a lot of effort, you may have underestimated how easily things can be automated.</p>
+<p><strong>If</strong> you think you’re not a target because you don’t stand out, you may have forgotten how quick and easy it is to find thousands of victims on the internet.</p>
+<p><strong>If</strong> you think it’s too expensive to attack you, think again about the potential returns, how many others could be vulnerable to the same attack, and the ways an attacker could use your own resources or people against you!</p>
+<p>Security is unlikely to stop growing in importance any time soon and, despite some misconceptions still floating around, it can’t exist in isolation. Too many projects in both government and industry treat “the security review” as an extra step, done once, which leads to a certification. Acting in this way creates risks for your project.</p>
+<h2 id="so-what-can-you-do-to-keep-your-users-and-data-safe">So what can you do to keep your users and data safe?</h2>
+<p>Secure coding should be integrated with development from the start of every piece of work, <em>and before</em> if there’s a commitment to a design.</p>
+<p>Instead of waiting for a security review, software developers should be considering how everything they compose could be attacked, and how to mitigate those new risks&hellip; from SQL injection attacks against sensitive databases, to attacks on unconstrained input fields.</p>
+<p>Give your developers goals around security that are measurable, to continuously minimise feedback on vulnerabilities in the project’s code base.</p>
+<p>All software has bugs and vulnerabilities, and you’ll never find them all — but by raising awareness of security throughout the development cycle, your software stands a chance of becoming a tough target.</p>
+<p><strong>Police Rewired are hosting Glyn Wintle’s talk “Software Self-Defence 101” at Newspeak House on Wednesday 18 April 2018.</strong></p>
+<p>Come and hear from an expert about how you can protect your users, and some spectacular bloopers you can avoid!</p>
+<p><em>If you’re a developer, designer, software architect, maker, and you’re ready to take the first step towards learning how to keep your users safe, this is for you!</em></p>
+<p><img src="/police-rewired/software-self-defence.png" alt="Software Self Defence 101"></p>
+</div>
+        <div class="post-footer">
+            <div class="info">
+                <span class="separator"><a class="category" href="/categories/talk/">Talk</a></span>
+                <span class="separator"><a class="tag" href="/tags/software-self-defence/">Software Self Defence</a><a class="tag" href="/tags/security/">security</a><a class="tag" href="/tags/infosec/">infosec</a><a class="tag" href="/tags/talk/">talk</a></span>
+                
+
+            </div>
+        </div>
+
+        
+    </div>
+
+
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript"
+        src="/js/medium-zoom.min.2d6fd0be87fa98f0c9b4dc2536b312bbca48757f584f6ea1f394abc9bcc38fbc.js"
+        integrity="sha256-LW/Qvof6mPDJtNwlNrMSu8pIdX9YT26h85SrybzDj7w="
+        crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-SHE42ZWKEN"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-SHE42ZWKEN');
+</script></body>
+
+</html>

@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html  dir="ltr" lang="en" data-theme=""><head>
+    <title> instantiator.dev | Hack Highlight #1: Secure evidence recording </title>
+
+    
+    <meta charset="utf-8"><meta name="generator" content="Hugo 0.82.1" /><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+    <meta name="description" content="tech, volunteers, public safety, articles and ideas">
+    
+    
+    
+    <link rel="stylesheet"
+        href="/css/style.min.7ec96a07e10b60a6997be730fc5d4d3467a225c68515a7df6ae17ac2500f828c.css"
+        integrity="sha256-fslqB&#43;ELYKaZe&#43;cw/F1NNGeiJcaFFaffauF6wlAPgow="
+        crossorigin="anonymous"
+        type="text/css">
+    
+
+    
+    <link rel="stylesheet"
+        href="/css/additional-classes.min.1d76732c34340c3588f50dacb5d8ce67a8c9ad2bf0140c8eb825f3f4e3a071c4.css"
+        integrity="sha256-HXZzLDQ0DDWI9Q2stdjOZ6jJrSvwFAyOuCXz9OOgccQ="
+        crossorigin="anonymous"
+        type="text/css">
+
+    
+    <link rel="stylesheet"
+        href="/css/markupHighlight.min.f798cbda9aaa38f89eb38be6414bd082cfd71a6780375cbf67b6d2fb2b96491e.css"
+        integrity="sha256-95jL2pqqOPies4vmQUvQgs/XGmeAN1y/Z7bS&#43;yuWSR4="
+        crossorigin="anonymous"
+        type="text/css">
+    
+
+
+
+    <link rel="stylesheet" 
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" 
+    integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" 
+    crossorigin="anonymous" />
+
+    
+    <link rel="shortcut icon" href="/favicons/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicons/favicon-16x16.png">
+
+    <link rel="canonical" href="/post/htp1-highlight-1-secure-evidence-recorder/">
+
+    
+    
+    
+    
+    <script type="text/javascript"
+            src="/js/anatole-header.min.0c05c0a90d28c968a1cad4fb31abd0b8e1264e788ccefed022ae1d3b6f627514.js"
+            integrity="sha256-DAXAqQ0oyWihytT7MavQuOEmTniMzv7QIq4dO29idRQ="
+            crossorigin="anonymous"></script>
+
+
+    
+        
+        
+        <script type="text/javascript"
+                src="/js/anatole-theme-switcher.min.7fd87181cdd7e8413aa64b6867bb32f3a8dc242e684fc7d5bbb9f600dbc2b6eb.js"
+                integrity="sha256-f9hxgc3X6EE6pktoZ7sy86jcJC5oT8fVu7n2ANvCtus="
+                crossorigin="anonymous"></script>
+    
+    <meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://instantiator.dev/lewis/default-image.png"/>
+
+<meta name="twitter:title" content="Hack Highlight #1: Secure evidence recording"/>
+<meta name="twitter:description" content="This is a necropost, resurrected from an old blog. To find out more about Hack the Police events, civic tech, and policing technology, visit: Police Rewired"/>
+
+
+    
+    <meta property="og:title" content="Hack Highlight #1: Secure evidence recording" />
+<meta property="og:description" content="This is a necropost, resurrected from an old blog. To find out more about Hack the Police events, civic tech, and policing technology, visit: Police Rewired" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://instantiator.dev/post/htp1-highlight-1-secure-evidence-recorder/" /><meta property="og:image" content="https://instantiator.dev/lewis/default-image.png"/><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2013-05-25T00:00:00&#43;00:00" />
+<meta property="article:modified_time" content="2013-05-25T00:00:00&#43;00:00" /><meta property="og:site_name" content="instantiator.dev" />
+<meta property="og:see_also" content="https://instantiator.dev/post/htp1-highlight-4-how-did-we-do/" /><meta property="og:see_also" content="https://instantiator.dev/post/htp1-highlight-3-aroundmet/" /><meta property="og:see_also" content="https://instantiator.dev/post/htp1-highlight-2-terminal-2/" /><meta property="og:see_also" content="https://instantiator.dev/post/we-hacked-the-police/" />
+
+
+
+</head>
+<body><div class="sidebar animated fadeInDown ">
+    <div class="logo-title">
+        <div class="title">
+            <img src="/lewis/profile.jpg" alt="profile picture">
+            <h3 title=""><a href="/">instantiator.dev</a></h3>
+            <div class="description">
+                <p>tech, volunteers, public safety, articles and ideas</p>
+            </div>
+        </div>
+    </div>
+    <ul class="social-links">
+        
+            <li>
+                <a href="https://twitter.com/instantiator" rel="me" aria-label="Twitter">
+                    <i class="fab fa-twitter fa-2x" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+            <li>
+                <a href="https://github.com/instantiator" rel="me" aria-label="GitHub">
+                    <i class="fab fa-github fa-2x" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+            <li>
+                <a href="https://www.linkedin.com/in/lewiswestbury" rel="me" aria-label="Linkedin">
+                    <i class="fab fa-linkedin fa-2x" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+            <li>
+                <a href="https://instantiator.dev/index.xml" rel="me" aria-label="RSS">
+                    <i class="fas fa-rss fa-2x" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+    </ul>
+    <div class="footer">
+        <div class="by_farbox">&copy; Lewis Westbury  2021 </div>
+    </div>
+</div>
+<div class="main">
+    <div class="page-top  animated fadeInDown ">
+    <a role="button" class="navbar-burger" data-target="navMenu" aria-label="menu" aria-expanded="false">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+    </a>
+    <ul class="nav" id="navMenu">
+        
+        
+            
+            <li><a 
+                   href="/"
+                        
+                   title="">Home</a></li>
+        
+            
+            <li><a 
+                   href="/post/"
+                        
+                   title="">Posts</a></li>
+        
+            
+            <li><a 
+                   href="/about/"
+                        
+                   title="">About</a></li>
+        
+        
+        
+            <li class="theme-switch-item">
+                <a class="theme-switch" title="Switch Theme">
+                    <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+    </ul>
+</div>
+
+    <div class="autopagerize_page_element">
+        <div class="content">
+    <div class="post  animated fadeInDown ">
+        <div class="post-content">
+            
+            <div class="post-title">
+                <h3>Hack Highlight #1: Secure evidence recording</h3>
+                
+                    <div class="info">
+                        <em class="fas fa-calendar-day"></em>
+                        <span class="date"> 
+                                                2013-05-25
+                                           </span>
+                        <em class="fas fa-stopwatch"></em>
+                        <span class="reading-time">4-minute read</span>
+                    </div>
+                
+            </div>
+
+            <p><em>This is a necropost, resurrected from an old blog. To find out more about Hack the Police events, civic tech, and policing technology, visit: <a href="https://policerewired.org">Police Rewired</a></em></p>
+<h1 id="securing-evidence">Securing evidence</h1>
+<p>This is the first in a series of blog posts where I&rsquo;ll be highlighting the hacks that came out of Hack the Police.</p>
+<p>Tim Perry came to the hack with an open mind. He asked many people about where the opportunities were to build an app that would have the best impact on crime fighting and victim care - and then settled down to assemble a <strong>Secure Evidence Recorder</strong>.</p>
+<p>Tim&rsquo;s app is a lightweight software alternative to taking paper notes, and waiting for a physical camera to arrive on scene to take photographs. It allows an officer to take their notes, photographs and video evidence with a mobile device - such as a smart-phone.</p>
+<p><figure class="inline-image">
+    <img src="/necro-images/htp1-secure-evidence-1.png"
+         alt="Secure evidence recorder screen 1" width="300px"/> 
+</figure>
+
+<figure class="inline-image">
+    <img src="/necro-images/htp1-secure-evidence-2.png"
+         alt="Secure evidence recorder screen 2" width="300px"/> 
+</figure>
+</p>
+<p>Some of the challenges of secure evidence recording are:</p>
+<ul>
+<li>Where do you store the data once it has been recorded?</li>
+<li>How do you show when and where that data was recorded?</li>
+<li>Does the data stay on the device?</li>
+<li>If so, will the device be seized as evidence?</li>
+<li>How do you make these actions quicker and easier than pen, paper, and physical camera?</li>
+</ul>
+<p>Tim&rsquo;s secure evidence recorder addresses many of these problems in a simple and elegant way. He stores the recorded data on a central server, and stamps the data with time and location information. This is then available to officers through a web-based interface back at the station where they can download and exhibit it however they need.</p>
+<p>It means the data does not need to stay on the device, and it means the data itself is evidentially sound - as it cannot have been tampered with by the officer after its creation.</p>
+<p>Tim spent the full weekend working on the app, and the result is something quick and easy to use. He demoed it to a room full of developers and police officers, who were all impressed by how swiftly he was able to take notes and store information using a mobile phone - including an audience photo. It was pretty clear how being able to take those photographs at the scene would save time and effort waiting for another officer to bring a camera down, and how easily his evidential notes could have been adapted to record a witness statement.</p>
+<p>Tim won <strong>Best in Show</strong> for his secure evidence recorder, and has made the code for his solution available on github:</p>
+<ul>
+<li><a href="https://github.com/pimterry/hackthepolice-2013">https://github.com/pimterry/hackthepolice-2013</a></li>
+</ul>
+<p>He&rsquo;s used HTML5 and Apache Cordova (also known as phonegap) to build the app which means it can be used across a range of devices.</p>
+<p><img src="/necro-images/htp1-tp-bhh.jpeg" alt="Tim receives his prize from Metropolitan Police Commissioner Sir Bernard Hogan-Howe"></p>
+<h2 id="so-what-next">So what next?</h2>
+<p>That&rsquo;s a difficult question to answer. No police force in the UK yet has the infrastructure to support even simple apps. One of the goals of Hack the Police for the <a href="http://c-100.org">Commissioner&rsquo;s 100</a> was to show just how quick, cheap and easy this is to do. We&rsquo;ve achieved that goal: and now we&rsquo;re working on proposals to help make the next steps happen.</p>
+<p>The capability to deliver an app is understood by software developers and technicians to be a trivial problem with 3 parts: place the server inside your secure network, secure the connection between device and network, and distribute the app.</p>
+<p>(There are, additionally, requirements for managing the data we record - some of which is personal and must be protected. For those interested, the government&rsquo;s newest procurement programme: <a href="http://gcloud.civilservice.gov.uk/">gCloud</a> provides an excellent summary of Impact Levels and the requirement to protect services and data.)</p>
+<p>App distribution can be handled through any existing private app store solution. The most challenging of those steps is the secure line between mobile device and network - but even that is well understood, and there exists excellent documentation and guidelines to allow this to be implemented very quickly by technical staff.</p>
+<p>However, to do this as a police force you need to overcome several challenges:</p>
+<ul>
+<li>Complex contracts which hinder innovation, requiring lengthy procurement processes and expensive consultancy periods - even when the solution is already known. This makes it very  difficult to use a current provider to do the work.</li>
+<li>The absence of staff who are able to perform unplanned technical work. This would render the entire project simple and affordable - but police forces have relied on 3rd-party contractors for a very long time, and as a result the skill base and knowledge required to take action for themselves has deteriorated to almost nothing.</li>
+</ul>
+<p>Of course, once the infrastructure is in place, this opens the gateway for all manner of affordable improvements from small enterprises who can have a great impact on the cost and quality of policing.</p>
+<p>Those are the issues we need to work around - and that&rsquo;s where we&rsquo;re working on creative solutions to help make these things happen - so we can help victims of crime the way we know we should.</p>
+<p><em>To find out more about Hack the Police events, civic tech, and policing technology, visit: <a href="https://policerewired.org">Police Rewired</a></em></p>
+</div>
+        <div class="post-footer">
+            <div class="info">
+                <span class="separator"><a class="category" href="/categories/necropost/">Necropost</a><a class="category" href="/categories/article/">Article</a></span>
+                <span class="separator"><a class="tag" href="/tags/necropost/">Necropost</a><a class="tag" href="/tags/policing/">policing</a><a class="tag" href="/tags/crime/">crime</a><a class="tag" href="/tags/technology/">technology</a><a class="tag" href="/tags/civic-tech/">civic tech</a><a class="tag" href="/tags/hack-the-police/">Hack the Police</a><a class="tag" href="/tags/metropolitan-police/">Metropolitan Police</a><a class="tag" href="/tags/evidence/">evidence</a><a class="tag" href="/tags/recording/">recording</a><a class="tag" href="/tags/hackathon/">hackathon</a><a class="tag" href="/tags/hack/">hack</a><a class="tag" href="/tags/app/">app</a><a class="tag" href="/tags/infrastructure/">infrastructure</a><a class="tag" href="/tags/photography/">photography</a></span>
+                
+                  <p>
+                    See also:
+                    <ul><li><a href="https://instantiator.dev/post/htp1-highlight-4-how-did-we-do/">Hack Highlight #4: How did we do?</a></li><li><a href="https://instantiator.dev/post/htp1-highlight-3-aroundmet/">Hack Highlight #3: AroundMET</a></li><li><a href="https://instantiator.dev/post/htp1-highlight-2-terminal-2/">Hack Highlight #2: Terminal 2.0</a></li><li><a href="https://instantiator.dev/post/we-hacked-the-police/">We hacked the Police!</a></li>
+                    </ul>
+                  </p>
+                
+
+            </div>
+        </div>
+
+        
+    </div>
+
+
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript"
+        src="/js/medium-zoom.min.2d6fd0be87fa98f0c9b4dc2536b312bbca48757f584f6ea1f394abc9bcc38fbc.js"
+        integrity="sha256-LW/Qvof6mPDJtNwlNrMSu8pIdX9YT26h85SrybzDj7w="
+        crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-SHE42ZWKEN"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-SHE42ZWKEN');
+</script></body>
+
+</html>

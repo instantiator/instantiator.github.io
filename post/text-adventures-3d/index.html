@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html  dir="ltr" lang="en" data-theme=""><head>
+    <title> instantiator.dev | Text adventures in 3D </title>
+
+    
+    <meta charset="utf-8"><meta name="generator" content="Hugo 0.82.1" /><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+    <meta name="description" content="tech, volunteers, public safety, articles and ideas">
+    
+    
+    
+    <link rel="stylesheet"
+        href="/css/style.min.7ec96a07e10b60a6997be730fc5d4d3467a225c68515a7df6ae17ac2500f828c.css"
+        integrity="sha256-fslqB&#43;ELYKaZe&#43;cw/F1NNGeiJcaFFaffauF6wlAPgow="
+        crossorigin="anonymous"
+        type="text/css">
+    
+
+    
+    <link rel="stylesheet"
+        href="/css/additional-classes.min.1d76732c34340c3588f50dacb5d8ce67a8c9ad2bf0140c8eb825f3f4e3a071c4.css"
+        integrity="sha256-HXZzLDQ0DDWI9Q2stdjOZ6jJrSvwFAyOuCXz9OOgccQ="
+        crossorigin="anonymous"
+        type="text/css">
+
+    
+    <link rel="stylesheet"
+        href="/css/markupHighlight.min.f798cbda9aaa38f89eb38be6414bd082cfd71a6780375cbf67b6d2fb2b96491e.css"
+        integrity="sha256-95jL2pqqOPies4vmQUvQgs/XGmeAN1y/Z7bS&#43;yuWSR4="
+        crossorigin="anonymous"
+        type="text/css">
+    
+
+
+
+    <link rel="stylesheet" 
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" 
+    integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" 
+    crossorigin="anonymous" />
+
+    
+    <link rel="shortcut icon" href="/favicons/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicons/favicon-16x16.png">
+
+    <link rel="canonical" href="/post/text-adventures-3d/">
+
+    
+    
+    
+    
+    <script type="text/javascript"
+            src="/js/anatole-header.min.0c05c0a90d28c968a1cad4fb31abd0b8e1264e788ccefed022ae1d3b6f627514.js"
+            integrity="sha256-DAXAqQ0oyWihytT7MavQuOEmTniMzv7QIq4dO29idRQ="
+            crossorigin="anonymous"></script>
+
+
+    
+        
+        
+        <script type="text/javascript"
+                src="/js/anatole-theme-switcher.min.7fd87181cdd7e8413aa64b6867bb32f3a8dc242e684fc7d5bbb9f600dbc2b6eb.js"
+                integrity="sha256-f9hxgc3X6EE6pktoZ7sy86jcJC5oT8fVu7n2ANvCtus="
+                crossorigin="anonymous"></script>
+    
+    <meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://instantiator.dev/lewis/default-image.png"/>
+
+<meta name="twitter:title" content="Text adventures in 3D"/>
+<meta name="twitter:description" content="This is a necropost, resurrected from an old blog.
+Educational games It&rsquo;s time to take a look at a project from almost a decade ago!"/>
+
+
+    
+    <meta property="og:title" content="Text adventures in 3D" />
+<meta property="og:description" content="This is a necropost, resurrected from an old blog.
+Educational games It&rsquo;s time to take a look at a project from almost a decade ago!" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://instantiator.dev/post/text-adventures-3d/" /><meta property="og:image" content="https://instantiator.dev/lewis/default-image.png"/><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2013-10-29T00:00:00&#43;00:00" />
+<meta property="article:modified_time" content="2013-10-29T00:00:00&#43;00:00" /><meta property="og:site_name" content="instantiator.dev" />
+
+
+
+</head>
+<body><div class="sidebar animated fadeInDown ">
+    <div class="logo-title">
+        <div class="title">
+            <img src="/lewis/profile.jpg" alt="profile picture">
+            <h3 title=""><a href="/">instantiator.dev</a></h3>
+            <div class="description">
+                <p>tech, volunteers, public safety, articles and ideas</p>
+            </div>
+        </div>
+    </div>
+    <ul class="social-links">
+        
+            <li>
+                <a href="https://twitter.com/instantiator" rel="me" aria-label="Twitter">
+                    <i class="fab fa-twitter fa-2x" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+            <li>
+                <a href="https://github.com/instantiator" rel="me" aria-label="GitHub">
+                    <i class="fab fa-github fa-2x" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+            <li>
+                <a href="https://www.linkedin.com/in/lewiswestbury" rel="me" aria-label="Linkedin">
+                    <i class="fab fa-linkedin fa-2x" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+            <li>
+                <a href="https://instantiator.dev/index.xml" rel="me" aria-label="RSS">
+                    <i class="fas fa-rss fa-2x" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+    </ul>
+    <div class="footer">
+        <div class="by_farbox">&copy; Lewis Westbury  2021 </div>
+    </div>
+</div>
+<div class="main">
+    <div class="page-top  animated fadeInDown ">
+    <a role="button" class="navbar-burger" data-target="navMenu" aria-label="menu" aria-expanded="false">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+    </a>
+    <ul class="nav" id="navMenu">
+        
+        
+            
+            <li><a 
+                   href="/"
+                        
+                   title="">Home</a></li>
+        
+            
+            <li><a 
+                   href="/post/"
+                        
+                   title="">Posts</a></li>
+        
+            
+            <li><a 
+                   href="/about/"
+                        
+                   title="">About</a></li>
+        
+        
+        
+            <li class="theme-switch-item">
+                <a class="theme-switch" title="Switch Theme">
+                    <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+    </ul>
+</div>
+
+    <div class="autopagerize_page_element">
+        <div class="content">
+    <div class="post  animated fadeInDown ">
+        <div class="post-content">
+            
+            <div class="post-title">
+                <h3>Text adventures in 3D</h3>
+                
+                    <div class="info">
+                        <em class="fas fa-calendar-day"></em>
+                        <span class="date"> 
+                                                2013-10-29
+                                           </span>
+                        <em class="fas fa-stopwatch"></em>
+                        <span class="reading-time">4-minute read</span>
+                    </div>
+                
+            </div>
+
+            <p><em>This is a necropost, resurrected from an old blog.</em></p>
+<h1 id="educational-games">Educational games</h1>
+<p>It&rsquo;s time to take a look at a project from almost a decade ago! Source code, screenshots, documentation and (old!) binaries are now available in the <a href="https://github.com/instantiator/openbook-v2">instantiator/openbook-v2</a> GitHub repository.</p>
+<p>It was 2005(-ish), I was fresh out of uni and I had my first job. It was a part-time job, so I had the time to dream of setting up a company to write and sell educational games. I was pretty enthused about the power of text adventures to drive up literacy and plenty of other problem-solving skills in kids - but it was clear to everyone who looked at any text adventure game that they were just visually very unappealing!</p>
+<h2 id="openbook-v1">OpenBook v1</h2>
+<p>To that end, I decided I would write a new interpreter, focussed entirely around the UI. Enter OpenBook! I wrote the first iteration in C to prove to myself it was possible.</p>
+<p><img src="/necro-images/openbook-v1.png" alt="Openbook v1"></p>
+<p>The results weren&rsquo;t awful, but I knew I wanted to do more with it.</p>
+<h2 id="inform">Inform</h2>
+<p>Inform is a virtual machine written for interaction fiction that dates back to 1976. Nowadays it has evolved to become <a href="http://inform7.com/">Inform 7</a> - a very sophisticated tool for creating games in almost natural language.</p>
+<p>There are many games available already for Inform and I was excited about ways to take that library and make it fun and easy for kids to play.</p>
+<p>There are also plenty of open source interpreters for Inform, and the one I selected is called Dumb Frotz: and it really was simple enough to integrate without too much hassle! (It needed some work to redirect the input and output, and later wrapping up so that it could interact properly with the C++ application, but broadly speaking it was the best candidate for inclusion.)</p>
+<h2 id="other-libraries">Other libraries</h2>
+<p>The other library I made plenty of use of was GLUT - a freely available and open source graphics library that made it possible to bring the books to life!</p>
+<p>I can&rsquo;t remember a lot about the project structure or internals other than that - but it seems I was pretty diligent about commenting my code, so there&rsquo;s plenty of clues as to what everything is for lurking in the source.</p>
+<h2 id="openbook-v2">OpenBook v2</h2>
+<p>As you can imagine, OpenBook v1 reached a level of complexity that meant it was time to rewrite in an object oriented language very quickly. I decided I was going to have to rewrite in C++.</p>
+<p>This time I carefully planned, bearing in mind all the things I wanted to improve about the project: adding smooth animations (the book opens onto the first page, and the pages turn as you progress, you can turn back the pages to view your history, open and close the book, and the letters gently fall onto the page), and the possibility of future enhancements and features.</p>
+<p><img src="/necro-images/openbook-v2.png" alt="Openbook v2"></p>
+<p>OpenBook v2 was actually nearly a viable product. I was pleased enough with it and still interested by the project (after having spent an age on it) that I could have completed it. And then&hellip; I got a <a href="https://www.softwire.com/">real full time job</a> that was actually able to pay the bills and I let that particular dream slide a bit&hellip;</p>
+<p>The finished product was going to be a suite that allowed teachers to set homeworks and challenges, that allowed students to record their transcripts for marking, and that gave awards with animations for achievements in the games.</p>
+<p>I&rsquo;ve released the source for the project, <a href="https://github.com/instantiator/openbook-v2/tree/master/docs/screenshots">screenshots</a>, <a href="https://github.com/instantiator/openbook-v2/tree/master/docs/tech-docs">documentation</a> and (old!) binaries at the <a href="https://github.com/instantiator/openbook-v2">instantiator/openbook-v2</a> GitHub repository because I think there&rsquo;s a lot of value, both in evaluating my mental processes at the time with the lens of hindsight, and because you never know it might inspire someone to take the dream to completion! (Actually, I&rsquo;d recommend starting over if you&rsquo;re going to do it!)</p>
+<p>I made some fascinating choices back then, such as the object hierarchy: Book, Line and Page all inherited from a class I decided to call Umbrella! It all made sense at the time I suppose. I left various TODOs for myself (using qq back then), including one that read: &ldquo;qq: Improve this.&rdquo;</p>
+<p>I&rsquo;ve also included in the repository a few stories that ought to work on the engine if you succeed in getting it running, including Quake.z5 - a spoof-of-genre text-adventure game of the popular 3D shoot-em-up Quake! Somehow, the idea of playing Quake as a text adventure in 3D appealed to my sense of humour at the time!</p>
+<p>If you want to see the project evolve over time, take a look in the <a href="https://github.com/instantiator/openbook-v2/tree/master/docs/screenshots">screenshots</a> folder - it seems I captured a fresh image at each milestone of development, starting at the point where I&rsquo;d succeeded in getting Frotz to do anything at all, and taking it all the way to the 3D animated goodness!</p>
+</div>
+        <div class="post-footer">
+            <div class="info">
+                <span class="separator"><a class="category" href="/categories/necropost/">Necropost</a><a class="category" href="/categories/article/">Article</a></span>
+                <span class="separator"><a class="tag" href="/tags/necropost/">Necropost</a><a class="tag" href="/tags/inform/">inform</a><a class="tag" href="/tags/3d/">3D</a><a class="tag" href="/tags/frotz/">Frotz</a><a class="tag" href="/tags/glut/">GLUT</a></span>
+                
+
+            </div>
+        </div>
+
+        
+    </div>
+
+
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript"
+        src="/js/medium-zoom.min.2d6fd0be87fa98f0c9b4dc2536b312bbca48757f584f6ea1f394abc9bcc38fbc.js"
+        integrity="sha256-LW/Qvof6mPDJtNwlNrMSu8pIdX9YT26h85SrybzDj7w="
+        crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-SHE42ZWKEN"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-SHE42ZWKEN');
+</script></body>
+
+</html>
