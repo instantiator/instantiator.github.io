@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html  dir="ltr" lang="en" data-theme=""><head>
+    <title> instantiator.dev | We&#39;re only human </title>
+
+    
+    <meta charset="utf-8"><meta name="generator" content="Hugo 0.82.1" /><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+    <meta name="description" content="tech, volunteers, public safety, articles and ideas">
+    
+    
+    
+    <link rel="stylesheet"
+        href="/css/style.min.7ec96a07e10b60a6997be730fc5d4d3467a225c68515a7df6ae17ac2500f828c.css"
+        integrity="sha256-fslqB&#43;ELYKaZe&#43;cw/F1NNGeiJcaFFaffauF6wlAPgow="
+        crossorigin="anonymous"
+        type="text/css">
+    
+
+    
+    <link rel="stylesheet"
+        href="/css/additional-classes.min.1d76732c34340c3588f50dacb5d8ce67a8c9ad2bf0140c8eb825f3f4e3a071c4.css"
+        integrity="sha256-HXZzLDQ0DDWI9Q2stdjOZ6jJrSvwFAyOuCXz9OOgccQ="
+        crossorigin="anonymous"
+        type="text/css">
+
+    
+    <link rel="stylesheet"
+        href="/css/markupHighlight.min.f798cbda9aaa38f89eb38be6414bd082cfd71a6780375cbf67b6d2fb2b96491e.css"
+        integrity="sha256-95jL2pqqOPies4vmQUvQgs/XGmeAN1y/Z7bS&#43;yuWSR4="
+        crossorigin="anonymous"
+        type="text/css">
+    
+
+
+
+    <link rel="stylesheet" 
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" 
+    integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" 
+    crossorigin="anonymous" />
+
+    
+    <link rel="shortcut icon" href="/favicons/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicons/favicon-16x16.png">
+
+    <link rel="canonical" href="/post/covid-volunteer-data/">
+
+    
+    
+    
+    
+    <script type="text/javascript"
+            src="/js/anatole-header.min.0c05c0a90d28c968a1cad4fb31abd0b8e1264e788ccefed022ae1d3b6f627514.js"
+            integrity="sha256-DAXAqQ0oyWihytT7MavQuOEmTniMzv7QIq4dO29idRQ="
+            crossorigin="anonymous"></script>
+
+
+    
+        
+        
+        <script type="text/javascript"
+                src="/js/anatole-theme-switcher.min.7fd87181cdd7e8413aa64b6867bb32f3a8dc242e684fc7d5bbb9f600dbc2b6eb.js"
+                integrity="sha256-f9hxgc3X6EE6pktoZ7sy86jcJC5oT8fVu7n2ANvCtus="
+                crossorigin="anonymous"></script>
+    
+    <meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://instantiator.dev/covid-19/covid-groups-map.png"/>
+
+<meta name="twitter:title" content="We&#39;re only human"/>
+<meta name="twitter:description" content="Cleaning up data from volunteer groups across the UK.
+We&rsquo;re only human In the previous post, we took a tour of the open data available that tells the story of volunteerism across the UK since the coronavirus crisis began."/>
+
+
+    
+    <meta property="og:title" content="We&#39;re only human" />
+<meta property="og:description" content="Cleaning up data from volunteer groups across the UK.
+We&rsquo;re only human In the previous post, we took a tour of the open data available that tells the story of volunteerism across the UK since the coronavirus crisis began." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://instantiator.dev/post/covid-volunteer-data/" /><meta property="og:image" content="https://instantiator.dev/covid-19/covid-groups-map.png" /><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2020-04-24T00:00:00&#43;00:00" />
+<meta property="article:modified_time" content="2020-04-24T00:00:00&#43;00:00" /><meta property="og:site_name" content="instantiator.dev" />
+<meta property="og:see_also" content="https://instantiator.dev/post/look-for-the-helpers/" />
+
+
+
+</head>
+<body><div class="sidebar animated fadeInDown ">
+    <div class="logo-title">
+        <div class="title">
+            <img src="/lewis/profile.jpg" alt="profile picture">
+            <h3 title=""><a href="/">instantiator.dev</a></h3>
+            <div class="description">
+                <p>tech, volunteers, public safety, articles and ideas</p>
+            </div>
+        </div>
+    </div>
+    <ul class="social-links">
+        
+            <li>
+                <a href="https://twitter.com/instantiator" rel="me" aria-label="Twitter">
+                    <i class="fab fa-twitter fa-2x" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+            <li>
+                <a href="https://github.com/instantiator" rel="me" aria-label="GitHub">
+                    <i class="fab fa-github fa-2x" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+            <li>
+                <a href="https://www.linkedin.com/in/lewiswestbury" rel="me" aria-label="Linkedin">
+                    <i class="fab fa-linkedin fa-2x" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+            <li>
+                <a href="https://instantiator.dev/index.xml" rel="me" aria-label="RSS">
+                    <i class="fas fa-rss fa-2x" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+    </ul>
+    <div class="footer">
+        <div class="by_farbox">&copy; Lewis Westbury  2021 </div>
+    </div>
+</div>
+<div class="main">
+    <div class="page-top  animated fadeInDown ">
+    <a role="button" class="navbar-burger" data-target="navMenu" aria-label="menu" aria-expanded="false">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+    </a>
+    <ul class="nav" id="navMenu">
+        
+        
+            
+            <li><a 
+                   href="/"
+                        
+                   title="">Home</a></li>
+        
+            
+            <li><a 
+                   href="/post/"
+                        
+                   title="">Posts</a></li>
+        
+            
+            <li><a 
+                   href="/about/"
+                        
+                   title="">About</a></li>
+        
+        
+        
+            <li class="theme-switch-item">
+                <a class="theme-switch" title="Switch Theme">
+                    <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+    </ul>
+</div>
+
+    <div class="autopagerize_page_element">
+        <div class="content">
+    <div class="post  animated fadeInDown ">
+        <div class="post-content">
+            
+            <div class="post-title">
+                <h3>We&#39;re only human</h3>
+                
+                    <div class="info">
+                        <em class="fas fa-calendar-day"></em>
+                        <span class="date"> 
+                                                2020-04-24
+                                           </span>
+                        <em class="fas fa-stopwatch"></em>
+                        <span class="reading-time">10-minute read</span>
+                    </div>
+                
+            </div>
+
+            <p>Cleaning up data from volunteer groups across the UK.</p>
+<h1 id="were-only-human">We&rsquo;re only human</h1>
+<p>In the previous post, we took a tour of the open data available that tells the story of volunteerism across the UK since the coronavirus crisis began.</p>
+<p>Since the beginning of the year, thousands of groups have registered, and an order of magnitude more individual volunteers have carried out acts of kindness for people in self-isolation.</p>
+<p><img src="/covid-19/covid-groups-map.png" alt="Covid groups map"></p>
+<p>Volunteers and organisers are, quite frankly, inspirational. Driven by any number of different value systems, they are helping people for little or no recognition or reward.</p>
+<p>Volunteers have provided all the data we’ve seen in the previous article and this, of course, comes with a degree of human error. Cleaning up the registered group information has been challenging for a number of reasons&hellip;</p>
+<p>The data we are looking at for this article is the combined and cleaned data set collated and shared through <a href="https://policerewired.org">Police Rewired</a>:</p>
+<ul>
+<li>🌐 <a href="https://www.policecoders.org/home/covid-19/communities">COVID-19 volunteers</a> (data set, available as GSheet or CSV)</li>
+</ul>
+<p>Interested folks have started creating new tools with the data already…</p>
+<ul>
+<li>📌 A map of the support groups was available through helpisavailable.org.uk (maintained by Police Rewired volunteers).</li>
+<li>📌 A map <a href="https://fryford.github.io/coronasupport/index.html">merging this source with data showing areas of deprivation</a> was created by <a href="https://twitter.com/fryford">Rob Fryford</a> (<a href="https://www.ons.gov.uk/">ONS</a>), to help guide volunteer and relief efforts.</li>
+<li>📌 <a href="https://localhelpers.org/">LocalHelpers</a> offered links to nearby volunteer groups when handling requests or offers of help.</li>
+<li>📌 The <a href="https://www.policerewired.org/home/covid-19/community-policing">Community Policing Dashboard</a> was a collaboration between staff and volunteers from ESRI UK and Police Rewired.</li>
+<li>📌 The COVID-19 combined volunteer groups data set was shared through ESRI’s <a href="https://www.esriuk.com/en-gb/content/living-atlas">Living Atlas</a>, making the information available for other services to build on.</li>
+</ul>
+<p>Let’s get started&hellip;</p>
+<h2 id="getting-into-the-data">Getting into the data</h2>
+<p>There were quite a few challenges in getting the data to a state where it’s useful, and I’ll talk about each in turn. I did most of the work using a google sheet and <a href="https://developers.google.com/apps-script">Google Apps Script</a> (javascript classes bound to Google Drive apps).</p>
+<p>If I were doing it all again, I’d work in Python and pandas. Python is easy to pick up, and <a href="https://policerewired.org/">Police Rewired</a> have documented and shared some good resources for learning it from the <a href="https://www.policerewired.org/home/nsa-python-study-group">NSA staff training course</a>.</p>
+<p>So where are the biggest issues?</p>
+<h3 id="dates-are-a-mess">Dates are a mess</h3>
+<p>Since the dawn of computing, times and dates have been recognised as a major pain-point for developers. There are many local preferences for writing dates. We see two formats used in the data from Covid Mutual Aid UK, both of which are problematic because many dates in either format could be interpreted ambiguously:</p>
+<ul>
+<li>📆 <code>dd/mm/yyyy</code> (as in the UK)</li>
+<li>📆 <code>mm/dd/yyyy</code> (as in the USA)</li>
+</ul>
+<p><a href="https://en.wikipedia.org/wiki/ISO_8601">ISO-8601</a> (the unabiguous <code>yyyy-mm-dd</code> date format) aims to undo a lot of this damage, but many systems today still revert to local, ambiguous or incompatible formats.</p>
+<p>Covid Mutual Aid UK initially started recording their dates in the UK format, however towards the end of March switched to the US format. Determining the date of this switch has been a key challenge in extracting meaning data for the registration graphs.</p>
+<p>It is possible to extract some meaningful information about the dates we have, using some quick logic and a couple of assumptions:</p>
+<ul>
+<li>Dates are provided in only UK or US format.</li>
+<li>Dates are recorded in a field called ‘Created’ suggesting that this is the time of registration. <em>Records can never be submitted with a future date.</em></li>
+<li>Dates are recorded one way before a certain date and another way afterwards. The registration system isn’t generating a mix of both.</li>
+</ul>
+<p>The process applied (and shown below) would not have been anywhere near as simple without the kind help of a good friend called Sam. The <em>no future dates</em> constraint is far more helpful than I had assumed!</p>
+<p><img src="/covid-19/date-reasoning.png" alt="Reasoning about dates"></p>
+<p>Having completed our initial round of interpretation, only a few hundred dates remain ambiguous. Good enough! We can now plot the unambiguous data we have…</p>
+<p><img src="/covid-19/unambiguous-date-formats.png" alt="Unambiguous date formats"></p>
+<p>NB. the spike in UK format dates on the right comes from local council hubs data imported on 10th April. Remove that, and it’s pretty clear that the switch-over to US date format happens around 28th March.</p>
+<p>This means we can interpret every date after the 28th as a US date, including the 4 days of ambiguous dates found in the first pass (1st to 4th April), giving us a near-complete set of unambiguous dates.</p>
+<h3 id="updates-and-duplicates-look-like-registrations">Updates and duplicates look like registrations</h3>
+<p>Entries in the Covid Mutual Aid UK data set are not all about new groups. Some are updates to previously entered records, and some are simply duplicates as different volunteers enter the same information.</p>
+<p>Detecting duplicates and updates isn’t trivial. A good approach is to identify a set of key values that define an entry. In our case, we can consider this triplet to represent a unique group:</p>
+<ol>
+<li>Location</li>
+<li>Group title</li>
+<li>URL</li>
+</ol>
+<p>Using our domain knowledge, we can say it’s safe to assume that any new entry with this triplet that already matches another in the data set is a duplicate.</p>
+<p>We can go further, applying what we know about groups, and say that any entry with 2 out of the 3 is probably an update:</p>
+<ul>
+<li>🔧 Any entry with matching location and title, but a different URL, have submitted a correction to their URL.</li>
+<li>🔧 Any entry with matching location and URL, but a different title, have submitted a correction to their title.</li>
+</ul>
+<p>Or another entry entirely:</p>
+<ul>
+<li>🔧 Any entry with matching title and URL, but a different location is another instance the same group operating in another area, so can be treated as a new entry.</li>
+</ul>
+<p>Using these rules we can compare new entries against the existing data set, and then determine whether they represent a new piece of information or an update to an old record.</p>
+<h3 id="addresses-vary-wildly-for-the-same-place">Addresses vary wildly for the same place</h3>
+<p>There are so many different ways to describe a location, and addresses are really only a very loosely defined way of doing it. So how can we spot when two people mean the same place, but have written it differently?</p>
+<blockquote>
+<p>📌 “100–104, The High Street, Townsville” and 📌 “The Old Post, High Street, Townsville” might not seem easily comparable. Now mix in some post codes, start to reorder parts of the address, remove the street name, and add a few typos…</p>
+</blockquote>
+<p>This is a huge problem, and not one easily solved by a lone data scientist with a spreadsheet. <em>(I guess I’m a data scientist now?)</em></p>
+<p>However, as the data is going to be plotted on a map, an answer presents itself. We will need to <a href="https://en.wikipedia.org/wiki/Geocoding">geocode</a> the provided address to get a latitude and longitude for each group.</p>
+<p>Geocoders (such as the Google Maps Geocoding API) must resolve addresses to points on a map every day, and as they do so they quantise their results to the positions of real buildings and landmarks. By first geocoding, and then comparing the resulting coordinates, we can pass the language problem over to an organisation with resources to resolve and match addresses in almost any form they are presented.</p>
+<h3 id="urls-are-not-very-easy-to-copy">URLs are not very easy to copy</h3>
+<p>It’s an assumption that instructions like “copy and paste the URL of your group here” are easy to follow. A significant number of records suffer from misunderstandings and do not resolve to valid URLs. Some came close, though…</p>
+<p>Helping get those nearly-correct URLs over the line was the subject of some effort. There are some easily recognised mistakes that can be automatically fixed:</p>
+<ul>
+<li>🔧 URLs starting with <code>http:/</code>, <code>http//</code>, <code>https:/</code>, <code>https//</code> can be easily amended to <code>http://</code> and <code>https://</code> (respectively).</li>
+<li>🔧 URLs that do not start with a protocol can be prefixed with <code>https://</code> (which works for nearly everything these days).</li>
+<li>🔧 URLs from the most common social media platforms are not case sensitive, so all URLs can be lower-cased for comparison.</li>
+</ul>
+<p>A high proportion of the results have been copied directly from the address bar of a browser. That’s really the simplest way, and it’s not reasonable to expect people to have a full understanding of what they’ve copied… As a result, nearly all URLs can have their query-string (that’s all the garbage you see past the ‘?’ in some links) removed. Most common social media platforms use restful URLs, and so the query-string is rarely important. (This helps with matching, too, as query-strings often vary, and so would prevent a duplicate URL from being spotted.)</p>
+<p>Some people don’t really understand what is being asked of them, and copy the wrong URL. Plenty of people copied the Covid-19 Mutual Aid UK website URL into their form, others facebook.com, and others had clearly submitted a search (complete with parameters) rather than a direct link.</p>
+<p>In each case, these can be detected and flagged as less-than-useful.</p>
+<p>Other links were broken in other ways that couldn’t be easily fixed. Every link in our data source was checked to see if it resolved to a web page of some sort. The ones that didn’t were then marked up as HTTP errors (with their error code).</p>
+<h3 id="are-all-the-links-really-for-volunteer-groups">Are all the links really for volunteer groups?</h3>
+<p>Having run these processes what we are left with is almost a clean data set. There are just a few other wrinkles to iron out, and for this we need to understand a little bit more about the data itself.</p>
+<p>In the previous post, we explored the URLs provided for each volunteer group — matching on aspects of them to determine which tools they represented.</p>
+<p><img src="/covid-19/group-organisation-tools.png" alt="Groups by tool"></p>
+<p>A group of links worth filtering through manually are the organisations that appear on facebook (perhaps churches, schools, community centres, etc.) — many of which will be legitimately taking part in local volunteering efforts.</p>
+<p>Some facebook links, however, may have been miscategorised or listed by opportunists hoping to raise the profile of their personal or business accounts.</p>
+<p>Facebook links have some clues that help us to identify whether they point to a group, and by and large the groups are likely to be appropriately listed.</p>
+<p>But what about individuals and organisations? After filtering these out for manual intervention, there were about 400 ambiguous links — and this is a manageable subset to explore by hand. I did it myself in an evening, examining and visiting links for signs that they are:</p>
+<ul>
+<li>Obviously a volunteer or support group (accepted).</li>
+<li>An individual account (warranting a little extra attention).</li>
+<li>An organisation (checked to ensure they’re involved in support).</li>
+</ul>
+<h2 id="so-ends-our-story">So ends our story</h2>
+<p>So that’s the story of the data and how it was cleaned.</p>
+<p>It’s been a really helpful exercise for me to learn about the data and develop some of these processes. I know I’ve been lucky: The data set is of the perfect size to learn from and reason about without overwhelming me. I was able to quickly identify many (although not all) of the edge cases where unusual links or data was being provided. For the fixes I couldn’t automate, it was possible to reduce the set to a manageable size and inspect the data manually.</p>
+<p>I hope it’s been useful and helpful for you too. 👍</p>
+<p>The data is available for you to play with, and I’d love to know if you build anything with it. I’m reachable on Twitter as <a href="https://twitter.com/instantiator">instantiator</a>.</p>
+<ul>
+<li>🌐 <a href="https://www.policecoders.org/home/covid-19/communities">COVID-19 volunteers</a> (data set, available as GSheet or CSV)</li>
+</ul>
+<h2 id="police-rewired">Police Rewired</h2>
+<p><a href="https://policerewired.org">Police Rewired</a> is a group for volunteer professionals, students, academics, developers, designers, and creative problem-solvers who want to develop tools and work on projects in public safety and crime.</p>
+<p>If you’d like to take part, or you’re already working on a voluntary project in public safety, we’d love to hear from you!</p>
+<p><img src="/police-rewired/police-rewired-poster.png" alt="Police Rewired poster"></p>
+</div>
+        <div class="post-footer">
+            <div class="info">
+                <span class="separator"><a class="category" href="/categories/article/">Article</a></span>
+                <span class="separator"><a class="tag" href="/tags/covid-19/">covid-19</a><a class="tag" href="/tags/volunteering/">volunteering</a><a class="tag" href="/tags/community/">community</a><a class="tag" href="/tags/aid/">aid</a><a class="tag" href="/tags/mutual-aid/">mutual aid</a><a class="tag" href="/tags/open-data/">open data</a><a class="tag" href="/tags/research/">research</a></span>
+                
+                  <p>
+                    See also:
+                    <ul><li><a href="https://instantiator.dev/post/look-for-the-helpers/">Look for the helpers</a></li>
+                    </ul>
+                  </p>
+                
+
+            </div>
+        </div>
+
+        
+    </div>
+
+
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript"
+        src="/js/medium-zoom.min.2d6fd0be87fa98f0c9b4dc2536b312bbca48757f584f6ea1f394abc9bcc38fbc.js"
+        integrity="sha256-LW/Qvof6mPDJtNwlNrMSu8pIdX9YT26h85SrybzDj7w="
+        crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-SHE42ZWKEN"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-SHE42ZWKEN');
+</script></body>
+
+</html>
