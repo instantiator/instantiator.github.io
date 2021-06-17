@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html  dir="ltr" lang="en" data-theme=""><head>
-    <title> instantiator.dev | Drive Stamper </title>
+    <title> instantiator.dev | A template thesis </title>
 
     
     <meta charset="utf-8"><meta name="generator" content="Hugo 0.83.1" /><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-    <meta name="description" content="tech, volunteers, public safety, articles and ideas">
+    <meta name="description" content="The things I&#39;ll do to avoid learning LaTeX...">
     
     
     
@@ -43,7 +43,7 @@
     <link rel="icon" type="image/png" sizes="32x32" href="/favicons/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/favicons/favicon-16x16.png">
 
-    <link rel="canonical" href="/post/np-drive-stamper/">
+    <link rel="canonical" href="/post/markdown-thesis-template/">
 
     
     
@@ -64,21 +64,19 @@
                 crossorigin="anonymous"></script>
     
     <meta name="twitter:card" content="summary_large_image"/>
-<meta name="twitter:image" content="https://instantiator.dev/lewis/default-image.png"/>
+<meta name="twitter:image" content="https://instantiator.dev/thesis/sample-cover-page.png"/>
 
-<meta name="twitter:title" content="Drive Stamper"/>
-<meta name="twitter:description" content="This is a necropost, resurrected from an old blog.
-Drive Stamper Drive Stamper is one of the first projects I released into the wild, and helped me to kick off my old blog in 2011."/>
+<meta name="twitter:title" content="A template thesis"/>
+<meta name="twitter:description" content="The things I&#39;ll do to avoid learning LaTeX..."/>
 
 
     
-    <meta property="og:title" content="Drive Stamper" />
-<meta property="og:description" content="This is a necropost, resurrected from an old blog.
-Drive Stamper Drive Stamper is one of the first projects I released into the wild, and helped me to kick off my old blog in 2011." />
+    <meta property="og:title" content="A template thesis" />
+<meta property="og:description" content="The things I&#39;ll do to avoid learning LaTeX..." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://instantiator.dev/post/np-drive-stamper/" /><meta property="og:image" content="https://instantiator.dev/lewis/default-image.png"/><meta property="article:section" content="post" />
-<meta property="article:published_time" content="2015-05-29T00:00:00&#43;00:00" />
-<meta property="article:modified_time" content="2015-05-29T00:00:00&#43;00:00" /><meta property="og:site_name" content="instantiator.dev" />
+<meta property="og:url" content="https://instantiator.dev/post/markdown-thesis-template/" /><meta property="og:image" content="https://instantiator.dev/thesis/sample-cover-page.png" /><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2021-06-17T00:00:00&#43;00:00" />
+<meta property="article:modified_time" content="2021-06-17T00:00:00&#43;00:00" /><meta property="og:site_name" content="instantiator.dev" />
 
 
 
@@ -169,35 +167,68 @@ Drive Stamper Drive Stamper is one of the first projects I released into the wil
         <div class="post-content">
             
             <div class="post-title">
-                <h3>Drive Stamper</h3>
+                <h3>A template thesis</h3>
                 
                     <div class="info">
                         <em class="fas fa-calendar-day"></em>
                         <span class="date"> 
-                                                2015-05-29
+                                                2021-06-17
                                            </span>
                         <em class="fas fa-stopwatch"></em>
-                        <span class="reading-time">One-minute read</span>
+                        <span class="reading-time">2-minute read</span>
                     </div>
                 
             </div>
 
-            <p><em>This is a necropost, resurrected from an old blog.</em></p>
-<h1 id="drive-stamper">Drive Stamper</h1>
-<p>Drive Stamper is one of the first projects I released into the wild, and helped me to kick off my old blog in 2011.</p>
-<p>It&rsquo;s a tool for small businesses to push files onto USB drives (or any other removable media for that matter) without the hassle of having to open up folders and drag files for every new pen drive they plug in.</p>
-<p><img src="/necro-images/drives1.png" alt="Drive Stamper"></p>
-<p>Drive Stamper can detect new drives as they are connected, and can automatically copy selected files to each new drive it finds.</p>
+            <blockquote>
+<p>The things I&rsquo;ll do to avoid learning LaTeX&hellip;</p>
+</blockquote>
+<p>I&rsquo;ve written a small tool and template to help you write papers in Markdown. The output is a PDF in the style of a LaTeX document.</p>
+<h1 id="a-template-thesis">A template thesis</h1>
+<p><a href="https://github.com/instantiator/markdown-thesis-builder">This is a template for building a thesis</a> PDF that&rsquo;s written in markdown, using features and styles from LaTeX. I&rsquo;m using it for my MSc thesis, and I&rsquo;ve spent a little time cleaning it up so it&rsquo;s easy to share and use.</p>
+<p><img src="/thesis/sample-cover-page.png" alt="sample cover page"></p>
+<p>Check out the <a href="https://github.com/instantiator/markdown-thesis-builder/releases/tag/1.0">sample document</a> in release 1.0.</p>
 <ul>
-<li>Download the installer for Windows machines: <a href="https://github.com/instantiator/drive-stamper/releases/tag/1.0">Release 1.0</a></li>
-<li>Read the instructions on GitHub: <a href="https://github.com/instantiator/drive-stamper/blob/master/README.md">README.md</a></li>
-<li>Browse or download the source code from GitHub: <a href="instantiator/drive-stamper">https://github.com/instantiator/drive-stamper</a></li>
+<li>Runs in a Docker container for portability.</li>
+<li>Allows you to write primarily in Markdown for simplicity.</li>
+</ul>
+<p>Markdown is easy to write, and will help you to write the bulk of your document. This project supports a few additional features you may also need:</p>
+<ul>
+<li>Includes support for a cover page (not numbered).</li>
+<li>Includes support for building a table of contents.</li>
+<li>Numbers the various main sections of the document.</li>
+<li>Includes support for LaTeX mathematics / formulae.</li>
+<li>Includes support for citations, and a BibTex bibliography.</li>
+</ul>
+<p>The whole document is built from source markdown files using a Docker container that contains everything it needs. The output is a PDF document.</p>
+<h2 id="how-to-use-it">How to use it</h2>
+<ul>
+<li>
+<p>Head over to the repository at: <a href="https://github.com/instantiator/markdown-thesis-builder">instantiator/markdown-thesis-builder</a></p>
+</li>
+<li>
+<p>Download or fork-and-download-or-clone the repository.</p>
+</li>
+<li>
+<p>Follow the instructions in <a href="https://github.com/instantiator/markdown-thesis-builder/blob/main/README.md">README.md</a> to install Docker (pretty much the only prerequisite).</p>
+</li>
+<li>
+<p>Modify the various markdown files in the <code>source/</code> directory to add content to your document.</p>
+</li>
+<li>
+<p>Run <code>build-project.sh</code> to build the whole document, eg.</p>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">./build-project.sh
+</code></pre></div></li>
+<li>
+<p>The final line of a successful build tells you where to find the output document:</p>
+<div class="highlight"><pre class="chroma"><code class="language-text" data-lang="text">Output document: source/build/Sample-Project_Your-Name.pdf
+</code></pre></div></li>
 </ul>
 </div>
         <div class="post-footer">
             <div class="info">
-                <span class="separator"><a class="category" href="/categories/necropost/">Necropost</a><a class="category" href="/categories/tool/">Tool</a></span>
-                <span class="separator"><a class="tag" href="/tags/necropost/">Necropost</a><a class="tag" href="/tags/tool/">tool</a><a class="tag" href="/tags/c%23/">C#</a><a class="tag" href="/tags/source/">Source</a></span>
+                <span class="separator"><a class="category" href="/categories/tool/">Tool</a></span>
+                <span class="separator"><a class="tag" href="/tags/research/">research</a><a class="tag" href="/tags/paper/">paper</a><a class="tag" href="/tags/thesis/">thesis</a><a class="tag" href="/tags/writeup/">writeup</a><a class="tag" href="/tags/masters/">masters</a><a class="tag" href="/tags/msc/">MSc</a><a class="tag" href="/tags/markdown/">markdown</a><a class="tag" href="/tags/latex/">LaTeX</a><a class="tag" href="/tags/"></a></span>
                 
 
             </div>

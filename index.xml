@@ -6,7 +6,17 @@
     <description>Recent content on instantiator.dev</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Fri, 21 May 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://instantiator.dev/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 17 Jun 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://instantiator.dev/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>A template thesis</title>
+      <link>https://instantiator.dev/post/markdown-thesis-template/</link>
+      <pubDate>Thu, 17 Jun 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://instantiator.dev/post/markdown-thesis-template/</guid>
+      <description>The things I&amp;rsquo;ll do to avoid learning LaTeX&amp;hellip;
+ I&amp;rsquo;ve written a small tool and template to help you write papers in Markdown.</description>
+    </item>
+    
     <item>
       <title>Dead Person Switches - with or without trust</title>
       <link>https://instantiator.dev/post/dead-mans-switches-appeal/</link>
