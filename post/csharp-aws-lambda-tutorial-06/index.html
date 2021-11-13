@@ -3,7 +3,7 @@
     <title> instantiator.dev | Building an AWS Lambda in C#, part 6: Triggers </title>
 
     
-    <meta charset="utf-8"><meta name="generator" content="Hugo 0.83.1" /><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+    <meta charset="utf-8"><meta name="generator" content="Hugo 0.88.1" /><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
     <meta name="description" content="tech, volunteers, public safety, articles and ideas">
     
     
@@ -75,8 +75,8 @@
 <meta property="og:description" content="In part 5, we amended our Lambda to write to an S3 bucket; and in this part, we&rsquo;ll explore triggers to run it regularly." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://instantiator.dev/post/csharp-aws-lambda-tutorial-06/" /><meta property="og:image" content="https://instantiator.dev/csharp-aws-lambda-tutorial/000-heading-img.png" /><meta property="article:section" content="post" />
-<meta property="article:published_time" content="2021-04-20T18:00:00&#43;00:00" />
-<meta property="article:modified_time" content="2021-04-20T18:00:00&#43;00:00" /><meta property="og:site_name" content="instantiator.dev" />
+<meta property="article:published_time" content="2021-04-20T18:00:00+00:00" />
+<meta property="article:modified_time" content="2021-04-20T18:00:00+00:00" /><meta property="og:site_name" content="instantiator.dev" />
 <meta property="og:see_also" content="https://instantiator.dev/post/csharp-aws-lambda-tutorial-05/" /><meta property="og:see_also" content="https://instantiator.dev/post/csharp-aws-lambda-tutorial-04/" /><meta property="og:see_also" content="https://instantiator.dev/post/csharp-aws-lambda-tutorial-03/" /><meta property="og:see_also" content="https://instantiator.dev/post/csharp-aws-lambda-tutorial-02/" /><meta property="og:see_also" content="https://instantiator.dev/post/csharp-aws-lambda-tutorial-01/" />
 
 
@@ -248,7 +248,7 @@
 <p>Cron expressions are pretty nuanced, and you can learn about their syntax in the <a href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/events/ScheduledEvents.html">Schedule Expressions for Rules</a> documentation.</p>
 </blockquote>
 <p>We&rsquo;re going to use one of the example cron strings:</p>
-<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">15 12 * * ? *
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">15 12 * * ? *
 </code></pre></div><p>This can be interpreted as a set of positional parameters:</p>
 <table>
 <thead>

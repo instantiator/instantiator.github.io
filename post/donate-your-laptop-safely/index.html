@@ -3,7 +3,7 @@
     <title> instantiator.dev | How to donate your laptop safely </title>
 
     
-    <meta charset="utf-8"><meta name="generator" content="Hugo 0.83.1" /><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+    <meta charset="utf-8"><meta name="generator" content="Hugo 0.88.1" /><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
     <meta name="description" content="tech, volunteers, public safety, articles and ideas">
     
     
@@ -75,8 +75,8 @@
 <meta property="og:description" content="A friend is helping out with a community project and asked for some laptops." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://instantiator.dev/post/donate-your-laptop-safely/" /><meta property="og:image" content="https://instantiator.dev/necro-images/donate-laptop-finished.jpeg" /><meta property="article:section" content="post" />
-<meta property="article:published_time" content="2020-02-01T00:00:00&#43;00:00" />
-<meta property="article:modified_time" content="2020-02-01T00:00:00&#43;00:00" /><meta property="og:site_name" content="instantiator.dev" />
+<meta property="article:published_time" content="2020-02-01T00:00:00+00:00" />
+<meta property="article:modified_time" content="2020-02-01T00:00:00+00:00" /><meta property="og:site_name" content="instantiator.dev" />
 
 
 
@@ -218,14 +218,14 @@ The Ubuntu CD image (ISO) works when run from a CD or a USB pen drive. These ins
 <p><img src="/necro-images/donate-laptop-wipe-1.jpeg" alt="terminal"></p>
 <h3 id="install-nwipe">Install nwipe</h3>
 <p>In the terminal, type the following commands to find and install nwipe — a tool for erasing disks securely:</p>
-<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">sudo add-apt-repository universe
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">sudo add-apt-repository universe
 sudo apt-get update
 sudo apt-get install nwipe
 </code></pre></div><p>NB. <code>sudo</code> is to ensure that you have full root (administration) privileges when you execute the commands that follow. You may be asked for your password.</p>
 <p><code>apt-get</code> is the package manager on Ubuntu — it is responsible for installing new software. These commands first make sure that a repository of software called universe is available to you. Then they make sure that Ubuntu has read that repository’s catalog, and then they install nwipe from that store.</p>
 <h3 id="use-nwipe-to-erase-the-disk">Use nwipe to erase the disk</h3>
 <p>To run nwipe, type:</p>
-<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">sudo nwipe
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">sudo nwipe
 </code></pre></div><p><code>nwipe</code>’s screen shows the devices that are available to be wiped, and allows you to select which you’d like to choose.</p>
 <p><img src="/necro-images/donate-laptop-wipe-2.jpeg" alt="nwipe"></p>
 <p>You can use the arrow keys to move up and down, and the space bar to select or deselect a disk.</p>

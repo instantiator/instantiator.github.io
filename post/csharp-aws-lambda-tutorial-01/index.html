@@ -3,7 +3,7 @@
     <title> instantiator.dev | Building an AWS Lambda in C#, part 1: AWS </title>
 
     
-    <meta charset="utf-8"><meta name="generator" content="Hugo 0.83.1" /><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+    <meta charset="utf-8"><meta name="generator" content="Hugo 0.88.1" /><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
     <meta name="description" content="tech, volunteers, public safety, articles and ideas">
     
     
@@ -75,8 +75,8 @@
 <meta property="og:description" content="At first glance, Amazon Web Services (AWS) can seem impenetrably complex, but it&rsquo;s not so bad once you&rsquo;ve found your way around it&hellip;" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://instantiator.dev/post/csharp-aws-lambda-tutorial-01/" /><meta property="og:image" content="https://instantiator.dev/csharp-aws-lambda-tutorial/000-heading-img.png" /><meta property="article:section" content="post" />
-<meta property="article:published_time" content="2021-04-15T18:00:00&#43;00:00" />
-<meta property="article:modified_time" content="2021-04-15T18:00:00&#43;00:00" /><meta property="og:site_name" content="instantiator.dev" />
+<meta property="article:published_time" content="2021-04-15T18:00:00+00:00" />
+<meta property="article:modified_time" content="2021-04-15T18:00:00+00:00" /><meta property="og:site_name" content="instantiator.dev" />
 <meta property="og:see_also" content="https://instantiator.dev/post/csharp-aws-lambda-tutorial-06/" /><meta property="og:see_also" content="https://instantiator.dev/post/csharp-aws-lambda-tutorial-05/" /><meta property="og:see_also" content="https://instantiator.dev/post/csharp-aws-lambda-tutorial-04/" /><meta property="og:see_also" content="https://instantiator.dev/post/csharp-aws-lambda-tutorial-03/" /><meta property="og:see_also" content="https://instantiator.dev/post/csharp-aws-lambda-tutorial-02/" />
 
 
@@ -278,7 +278,7 @@
 <h3 id="arns">ARNs</h3>
 <p>Everything you create and use on AWS has an <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">ARN</a> (Amazon Resource Name) which is a unique identity for the object. You can use an ARN to refer to things when you&rsquo;re granting permissions or passing information back and forth.</p>
 <p>ARNs come in a few variant formats, and can be recognised by the prefix: <code>arn</code></p>
-<div class="highlight"><pre class="chroma"><code class="language-text" data-lang="text">arn:partition:service:region:account-id:resource-id
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text">arn:partition:service:region:account-id:resource-id
 arn:partition:service:region:account-id:resource-type/resource-id
 arn:partition:service:region:account-id:resource-type:resource-id
 </code></pre></div><h3 id="regions">Regions</h3>
@@ -367,7 +367,7 @@ arn:partition:service:region:account-id:resource-type:resource-id
 <li>Open the <strong>Security credentials</strong> tab.</li>
 </ul>
 <p>You&rsquo;ll see a console sign-in link, like this:</p>
-<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">https://XXXXXXXXXXXX.signin.aws.amazon.com/console
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">https://XXXXXXXXXXXX.signin.aws.amazon.com/console
 </code></pre></div><p>That 12-digit number on the beginning is the AWS account number. Bookmark that link so you can sign in as your IAM user any time you need.</p>
 <p>Now sign out, and give it a try.</p>
 <p><em>From now on, we&rsquo;ll assume that everything you do in the AWS console is done through your <strong>sample-admin</strong> account.</em></p>
