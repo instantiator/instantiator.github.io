@@ -6,7 +6,16 @@
     <description>Recent content in Posts on instantiator.dev</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sat, 13 Nov 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://instantiator.dev/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 30 Nov 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://instantiator.dev/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Dead Person Switches - keeping secrets until after death</title>
+      <link>https://instantiator.dev/post/dead-person-switches/</link>
+      <pubDate>Tue, 30 Nov 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://instantiator.dev/post/dead-person-switches/</guid>
+      <description>More commonly known as a Dead Man&amp;rsquo;s Switch, a Dead Person Switch (DPS) is a system that can hold a secret on behalf of a person, and govern its release should they become unavailable.</description>
+    </item>
+    
     <item>
       <title>Rainbow paws</title>
       <link>https://instantiator.dev/post/rainbow-paws/</link>
@@ -26,7 +35,7 @@
     </item>
     
     <item>
-      <title>Dead Person Switches - with or without trust</title>
+      <title>Dead Person Switches - appeal for journalists</title>
       <link>https://instantiator.dev/post/dead-mans-switches-appeal/</link>
       <pubDate>Fri, 18 Jun 2021 00:00:00 +0000</pubDate>
       
