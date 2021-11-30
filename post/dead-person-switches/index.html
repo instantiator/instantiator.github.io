@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html  dir="ltr" lang="en" data-theme=""><head>
+    <title> instantiator.dev | Dead Person Switches - keeping secrets until after death </title>
+
+    
+    <meta charset="utf-8"><meta name="generator" content="Hugo 0.88.1" /><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+    <meta name="description" content="tech, volunteers, public safety, articles and ideas">
+    
+    
+    
+    <link rel="stylesheet"
+        href="/css/style.min.7ec96a07e10b60a6997be730fc5d4d3467a225c68515a7df6ae17ac2500f828c.css"
+        integrity="sha256-fslqB&#43;ELYKaZe&#43;cw/F1NNGeiJcaFFaffauF6wlAPgow="
+        crossorigin="anonymous"
+        type="text/css">
+    
+
+    
+    <link rel="stylesheet"
+        href="/css/additional-classes.min.1d76732c34340c3588f50dacb5d8ce67a8c9ad2bf0140c8eb825f3f4e3a071c4.css"
+        integrity="sha256-HXZzLDQ0DDWI9Q2stdjOZ6jJrSvwFAyOuCXz9OOgccQ="
+        crossorigin="anonymous"
+        type="text/css">
+
+    
+    <link rel="stylesheet"
+        href="/css/markupHighlight.min.f798cbda9aaa38f89eb38be6414bd082cfd71a6780375cbf67b6d2fb2b96491e.css"
+        integrity="sha256-95jL2pqqOPies4vmQUvQgs/XGmeAN1y/Z7bS&#43;yuWSR4="
+        crossorigin="anonymous"
+        type="text/css">
+    
+
+
+
+    <link rel="stylesheet" 
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" 
+    integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" 
+    crossorigin="anonymous" />
+
+    
+    <link rel="shortcut icon" href="/favicons/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicons/favicon-16x16.png">
+
+    <link rel="canonical" href="/post/dead-person-switches/">
+
+    
+    
+    
+    
+    <script type="text/javascript"
+            src="/js/anatole-header.min.0c05c0a90d28c968a1cad4fb31abd0b8e1264e788ccefed022ae1d3b6f627514.js"
+            integrity="sha256-DAXAqQ0oyWihytT7MavQuOEmTniMzv7QIq4dO29idRQ="
+            crossorigin="anonymous"></script>
+
+
+    
+        
+        
+        <script type="text/javascript"
+                src="/js/anatole-theme-switcher.min.7fd87181cdd7e8413aa64b6867bb32f3a8dc242e684fc7d5bbb9f600dbc2b6eb.js"
+                integrity="sha256-f9hxgc3X6EE6pktoZ7sy86jcJC5oT8fVu7n2ANvCtus="
+                crossorigin="anonymous"></script>
+    
+    <meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://instantiator.dev/dps/dps-threat-model-scoping.png"/>
+
+<meta name="twitter:title" content="Dead Person Switches - keeping secrets until after death"/>
+<meta name="twitter:description" content="More commonly known as a Dead Man&rsquo;s Switch, a Dead Person Switch (DPS) is a system that can hold a secret on behalf of a person, and govern its release should they become unavailable."/>
+
+
+    
+    <meta property="og:title" content="Dead Person Switches - keeping secrets until after death" />
+<meta property="og:description" content="More commonly known as a Dead Man&rsquo;s Switch, a Dead Person Switch (DPS) is a system that can hold a secret on behalf of a person, and govern its release should they become unavailable." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://instantiator.dev/post/dead-person-switches/" /><meta property="og:image" content="https://instantiator.dev/dps/dps-threat-model-scoping.png" /><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2021-11-30T00:00:00+00:00" />
+<meta property="article:modified_time" content="2021-11-30T00:00:00+00:00" /><meta property="og:site_name" content="instantiator.dev" />
+
+
+
+</head>
+<body><div class="sidebar animated fadeInDown ">
+    <div class="logo-title">
+        <div class="title">
+            <img src="/lewis/profile.jpg" alt="profile picture">
+            <h3 title=""><a href="/">instantiator.dev</a></h3>
+            <div class="description">
+                <p>tech, volunteers, public safety, articles and ideas</p>
+            </div>
+        </div>
+    </div>
+    <ul class="social-links">
+        
+            <li>
+                <a href="https://twitter.com/instantiator" rel="me" aria-label="Twitter">
+                    <i class="fab fa-twitter fa-2x" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+            <li>
+                <a href="https://github.com/instantiator" rel="me" aria-label="GitHub">
+                    <i class="fab fa-github fa-2x" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+            <li>
+                <a href="https://www.linkedin.com/in/lewiswestbury" rel="me" aria-label="Linkedin">
+                    <i class="fab fa-linkedin fa-2x" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+            <li>
+                <a href="https://instantiator.dev/index.xml" rel="me" aria-label="RSS">
+                    <i class="fas fa-rss fa-2x" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+    </ul>
+    <div class="footer">
+        <div class="by_farbox">&copy; Lewis Westbury  2021 </div>
+    </div>
+</div>
+<div class="main">
+    <div class="page-top  animated fadeInDown ">
+    <a role="button" class="navbar-burger" data-target="navMenu" aria-label="menu" aria-expanded="false">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+    </a>
+    <ul class="nav" id="navMenu">
+        
+        
+            
+            <li><a 
+                   href="/"
+                        
+                   title="">Home</a></li>
+        
+            
+            <li><a 
+                   href="/post/"
+                        
+                   title="">Posts</a></li>
+        
+            
+            <li><a 
+                   href="/about/"
+                        
+                   title="">About</a></li>
+        
+        
+        
+            <li class="theme-switch-item">
+                <a class="theme-switch" title="Switch Theme">
+                    <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+    </ul>
+</div>
+
+    <div class="autopagerize_page_element">
+        <div class="content">
+    <div class="post  animated fadeInDown ">
+        <div class="post-content">
+            
+            <div class="post-title">
+                <h3>Dead Person Switches - keeping secrets until after death</h3>
+                
+                    <div class="info">
+                        <em class="fas fa-calendar-day"></em>
+                        <span class="date"> 
+                                                2021-11-30
+                                           </span>
+                        <em class="fas fa-stopwatch"></em>
+                        <span class="reading-time">8-minute read</span>
+                    </div>
+                
+            </div>
+
+            <p><em>More commonly known as a Dead Man&rsquo;s Switch, a Dead Person Switch (DPS) is a system that can hold a secret on behalf of a person, and govern its release should they become unavailable.</em></p>
+<h1 id="dead-person-switches">Dead Person Switches</h1>
+<p>Use cases for a DPS system include final messages to loved ones, the distribution of assets after death, and the controlled release of a damaging secret to disincentivise an attack on the owner of a DPS (the <em>subject</em>).</p>
+<p>This was the subject of my MSc dissertation in Software &amp; Systems Security, which focuses on the needs of an investigative journalist. It&rsquo;s available to download here:</p>
+<ul>
+<li><a href="/dps/DPS-thesis-LGW.2021-09-01.with-appendices.pdf">Dead Person Switches - with or without trust</a></li>
+</ul>
+<p>Little formal work exists on the topic, although time-release cryptography (related) is an active field of research.</p>
+<h2 id="how-do-you-build-a-dps">How do you build a DPS?</h2>
+<p>A simple, very high level representation for a Dead Person Switch might look like this:</p>
+<p><img src="/dps/dps-threat-model-scoping.png" alt="High level diagram representing a DPS" title="High level diagram representing a DPS"></p>
+<p>This seems simple enough, but hides a number of underlying questions - particularly around how such a system can hope to keep the subject&rsquo;s secret safe&hellip;</p>
+<h3 id="a-cryptographic-conundrum">A cryptographic conundrum</h3>
+<p><em>Could you use encryption to protect the secret inside a DPS?</em></p>
+<p>At face value, a DPS seems to be in conflict with the classic idea of cryptography.</p>
+<p>Under ordinary circumstances, a user may encrypt a secret in such a way that they can decrypt it again with a secret key. That key is protected by the user until they need to perform the decryption.</p>
+<p>However, the DPS needs to be able to decrypt the secret when the user does <em>not</em> return (and then only under the right circumstances). For classic cryptography, this creates a problem: Where do you keep the key? If you stored it in the same service, then you might as well not encrypt the secret at all - it&rsquo;s recoverable by any attacker (including any insiders who operate your DPS). If elsewhere, how will you protect it there, and how will you trust the new service that stores it?</p>
+<p>A number of interesting solutions exist:</p>
+<ul>
+<li>You could store the key in another system.</li>
+<li>You could entrust a friend to keep the key secret until you die.</li>
+<li>You could <a href="https://en.wikipedia.org/wiki/Shamir%27s_Secret_Sharing">fragment your key</a> and entrust portions of it to a number of different friends.</li>
+</ul>
+<p>Each of these proposed solutions relies on a third party that could potentially be compromised, bribed, or legally required to release the key. At least distributing fragments of the key amongst friends could provide a little resilience&hellip;</p>
+<h2 id="my-contribution">My contribution</h2>
+<p>The work I completed for the dissertation is divided into 3 sections:</p>
+<ol>
+<li>I derived the requirements for a DPS through research, study and survey.</li>
+<li>I evaluated existing systems against these requirements.</li>
+<li>I researched contributing components, proposed and evaluated new alternate designs.</li>
+</ol>
+<h2 id="requirements">Requirements</h2>
+<p>Through desk research, study, and survey I derived the following requirements for a DPS:</p>
+<ul>
+<li><strong>Confidentiality</strong> - A DPS must keep a user&rsquo;s <strong>secret</strong> confidential until it determines it is appropriate to release the <strong>secret</strong>.</li>
+<li><strong>Awareness</strong> - A DPS must have a mechanism to check the <strong>subject&rsquo;s</strong> well-being, and a method to release the <strong>secret</strong> if the subject fails this test.</li>
+<li><strong>Timing</strong> - A DPS should not release the <strong>subject&rsquo;s</strong> <strong>secret</strong> early (ie. whilst they are still alive and well), late (ie. too long after the subject has become unresponsive), or never.</li>
+<li><strong>Resilience</strong> - A DPS must assume the existence of, and protect against, attempts by hostile <strong>threats</strong> to compromise the <strong>secret&rsquo;s</strong> <strong>confidentiality</strong> and <strong>integrity</strong>, and be resilient against attacks intended to compromise its <strong>availability</strong> (CIA properties).</li>
+<li><strong>Affordability</strong> - A DPS should use affordable technologies to provide its functionality, not relying on resources beyond the means of the target subject group.</li>
+<li><strong>Durability</strong> - A DPS should be expected to remain operational for a significant amount of time (eg. the lifetime of a <strong>subject</strong>), with continued maintenance (including security patches), support, or upgrade pathways if the technologies in use become obsolete.</li>
+<li><strong>Explainability</strong> - A DPS must be presentable as a model that the target subject group can understand and trust.</li>
+<li><strong>Visibility</strong> - A DPS must be able to present evidence that it is operational, to contribute to its deterrent effect.</li>
+</ul>
+<p>These then provided a framework for consistently evaluating the existing systems, and new designs.</p>
+<h2 id="proposed-designs">Proposed designs</h2>
+<p>Having explored a variety of options for the implementation of a DPS, I proposed and evaluated three potential designs:</p>
+<ol>
+<li>A classic micro-services architecture.</li>
+<li>A distributed application (dApp) built with a smart contract and secret contract.</li>
+<li>An application of witness encryption.</li>
+</ol>
+<h3 id="classic-design">Classic design</h3>
+<p>Designing a DPS using the principles of secure design gave me a strong baseline which I could then compare with existing systems, and the more exotic proposed designs. I presented a (fairly) simple microservice architecture design - clearly illustrating the various components, and easy to reason with.</p>
+<p><img src="/dps/microservices.png" alt="A classic microservice architecture design for a DPS" title="A classic microservice architecture design"></p>
+<p>This has all the strengths and weaknesses of current cloud services. It can be protected from outsiders through access control mechanisms, but has strong vulnerabilities to insiders (including staff at the cloud service provider), legal constraints, and denial of service attacks.</p>
+<h3 id="dapps">dApps</h3>
+<p>dApps show a lot of promise. Networks that can execute smart contracts (such as Ethereum) offer a number of guarantees around availability and reliability that are very important to a DPS. However, smart contracts alone are not enough - it&rsquo;s important to be able to store, protect, and retrieve secrets. Smart contracts cannot keep secrets, as they are execute in a VM that runs on any participating node in their network.</p>
+<p>Some solutions hide the subject&rsquo;s secret key in another service. This transfers the risk with the key, and relies on strong controls to protect the new service.</p>
+<p>A number of networks, such as the <a href="https://scrt.network/">SECRET</a> network, have formed in recent years that can support <em>secret contracts</em> - smart contracts that are able to protect their state and inputs from observation by the nodes that execute them. At current time, this is achievable through <a href="https://en.wikipedia.org/wiki/Trusted_execution_environment">Trusted Execution Environments</a> (TEE). Enclaves inside a CPU (such as Intel&rsquo;s <a href="https://en.wikipedia.org/wiki/Software_Guard_Extensions">SGX</a>) can protect the confidentiality of secrets, and prove the integrity of their results. Networks such as SECRET execute secret contracts in TEE enclaves on their nodes.</p>
+<p><img src="/dps/smart-and-secret-contract-flow.png" alt="Activation flow for a DPS composed of a smart contract and secret contract" title="Activation flow for a DPS composed of a smart contract and secret contract"></p>
+<p>A design that incorporates a smart contract and secret contract could prove a very promising solution.</p>
+<h3 id="witness-encryption">Witness encryption</h3>
+<p><a href="https://eprint.iacr.org/2013/258.pdf">Witness encryption</a> is a particularly interesting area of research - offering encryption schemes that do not rely on a given key to decrypt a secret. The provision of a <em>witness</em>, something that conforms to a set of rules (described by a mapping in an NP language), can be used in place of a key.</p>
+<p>The development of a witness-based DPS relies on a number of steps, and assumptions:</p>
+<ul>
+<li><a href="https://eprint.iacr.org/2015/482.pdf">It has been shown</a> that a valid blockchain could serve as a computational reference clock. (Most cryptocurrency blockchains grow at a steady rate, and valid chains are provable.)</li>
+<li>A valid blockchain of a given length, then, could serve as the witness for a time-lock encryption scheme - effectively making it near-impossible to decrypt a secret with a valid chain of a predetermined length. Effectively making it trivial to decrypt the same secret once a known amount of time has passed.</li>
+<li>Now suppose that we wish the chain to contain proof-of-life for the subject. They commit to transferring a small amount of currency between Wallet A and Wallet B (or back again) each day.
+<ul>
+<li><strong>If</strong> this activity on the currency blockchain can be considered a good proxy for aliveness and well-being, and</li>
+<li><strong>If</strong> an encryption scheme could require a valid chain of given length <em>that does not contain evidence of the subject&rsquo;s transaction</em> as a witness (and such conditions still lead to a valid witness),</li>
+<li><strong>Then</strong> the secret becomes near-impossible to decrypt until the subject is no longer showing signs of life, whereupon it becomes trivial to decrypt.</li>
+</ul>
+</li>
+</ul>
+<p><strong>This is a very exciting idea!</strong> A passive blob of data that can be distributed publicly protects your secret while you are alive, but becomes easy to decrypt after death. The caveat, of course, is that this is predicated on assumption and speculation. It may prove possible, but there may also be good reasons why such conditions do not lend themselves to witness encryption schemes.</p>
+<h2 id="conclusions">Conclusions</h2>
+<p>I was able to evaluate the existing systems and proposed designs against the requirements for a DPS, giving each a score per requirement. Here&rsquo;s a matrix of it for reference:</p>
+<p><img src="/dps/matrix.png" alt="A matrix showing 12 existing DPS solutions, and 3 proposed designs - each with their scores per requirement" title="Scores for all designs"></p>
+<p><strong>It&rsquo;s pretty clear that the existing systems each have strengths and weaknesses, and that none were consistently strong across the board.</strong></p>
+<p><strong>The proposed designs represent distinct approaches to the implementation of a DPS, and certainly seem to meet more of the requirements.</strong></p>
+<p>Of the proposed designs, I concluded that the <em>dApp</em> design is the strongest that can currently be implemented.</p>
+<p>The <em>witness encryption</em> design presents a strong hypothetical alternative, but does need some further research.</p>
+<p>The project opened up some rather interesting questions which might make good avenues for further research, and it&rsquo;s a topic I&rsquo;d be glad to stay connected with in future.</p>
+<p><strong>If you&rsquo;d like to know more, feel free to <a href="/dps/DPS-thesis-LGW.2021-09-01.with-appendices.pdf">give it a read</a> and reach out - I&rsquo;d be glad to chat about it.</strong></p>
+</div>
+        <div class="post-footer">
+            <div class="info">
+                <span class="separator"><a class="category" href="/categories/publication/">publication</a></span>
+                <span class="separator"><a class="tag" href="/tags/research/">Research</a><a class="tag" href="/tags/msc/">MSc</a><a class="tag" href="/tags/computerscience/">ComputerScience</a><a class="tag" href="/tags/journalism/">Journalism</a><a class="tag" href="/tags/academia/">Academia</a><a class="tag" href="/tags/investigativejournalism/">InvestigativeJournalism</a><a class="tag" href="/tags/dms/">DMS</a><a class="tag" href="/tags/deadmanswitch/">DeadManSwitch</a><a class="tag" href="/tags/dps/">DPS</a><a class="tag" href="/tags/deadpersonswitch/">DeadPersonSwitch</a><a class="tag" href="/tags/cryptography/">Cryptography</a><a class="tag" href="/tags/witnessencryption/">WitnessEncryption</a><a class="tag" href="/tags/timelockencryption/">TimeLockEncryption</a><a class="tag" href="/tags/smartcontract/">SmartContract</a><a class="tag" href="/tags/secretcontract/">SecretContract</a><a class="tag" href="/tags/secret/">Secret</a><a class="tag" href="/tags/ssss/">SSSS</a><a class="tag" href="/tags/trustnetworks/">TrustNetworks</a></span>
+                
+
+            </div>
+        </div>
+
+        
+    </div>
+
+
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript"
+        src="/js/medium-zoom.min.2d6fd0be87fa98f0c9b4dc2536b312bbca48757f584f6ea1f394abc9bcc38fbc.js"
+        integrity="sha256-LW/Qvof6mPDJtNwlNrMSu8pIdX9YT26h85SrybzDj7w="
+        crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-SHE42ZWKEN"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-SHE42ZWKEN');
+</script></body>
+
+</html>
