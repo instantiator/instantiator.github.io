@@ -6,7 +6,16 @@
     <description>Recent content on instantiator.dev</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 30 Nov 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://instantiator.dev/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 14 Dec 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://instantiator.dev/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Secrets With Friends</title>
+      <link>https://instantiator.dev/post/secrets-with-friends/</link>
+      <pubDate>Tue, 14 Dec 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://instantiator.dev/post/secrets-with-friends/</guid>
+      <description>It&amp;rsquo;s possible to share a secret amongst a group of people so that only some of them are needed to reconstruct it&amp;hellip;</description>
+    </item>
+    
     <item>
       <title>Dead Person Switches - secrets from beyond the grave</title>
       <link>https://instantiator.dev/post/dead-person-switch/</link>

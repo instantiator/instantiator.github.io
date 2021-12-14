@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html  dir="ltr" lang="en" data-theme=""><head>
+    <title> instantiator.dev | Secrets With Friends </title>
+
+    
+    <meta charset="utf-8"><meta name="generator" content="Hugo 0.88.1" /><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+    <meta name="description" content="tech, volunteers, public safety, articles and ideas">
+    
+    
+    
+    <link rel="stylesheet"
+        href="/css/style.min.7ec96a07e10b60a6997be730fc5d4d3467a225c68515a7df6ae17ac2500f828c.css"
+        integrity="sha256-fslqB&#43;ELYKaZe&#43;cw/F1NNGeiJcaFFaffauF6wlAPgow="
+        crossorigin="anonymous"
+        type="text/css">
+    
+
+    
+    <link rel="stylesheet"
+        href="/css/additional-classes.min.1d76732c34340c3588f50dacb5d8ce67a8c9ad2bf0140c8eb825f3f4e3a071c4.css"
+        integrity="sha256-HXZzLDQ0DDWI9Q2stdjOZ6jJrSvwFAyOuCXz9OOgccQ="
+        crossorigin="anonymous"
+        type="text/css">
+
+    
+    <link rel="stylesheet"
+        href="/css/markupHighlight.min.f798cbda9aaa38f89eb38be6414bd082cfd71a6780375cbf67b6d2fb2b96491e.css"
+        integrity="sha256-95jL2pqqOPies4vmQUvQgs/XGmeAN1y/Z7bS&#43;yuWSR4="
+        crossorigin="anonymous"
+        type="text/css">
+    
+
+
+
+    <link rel="stylesheet" 
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" 
+    integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" 
+    crossorigin="anonymous" />
+
+    
+    <link rel="shortcut icon" href="/favicons/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicons/favicon-16x16.png">
+
+    <link rel="canonical" href="/post/secrets-with-friends/">
+
+    
+    
+    
+    
+    <script type="text/javascript"
+            src="/js/anatole-header.min.0c05c0a90d28c968a1cad4fb31abd0b8e1264e788ccefed022ae1d3b6f627514.js"
+            integrity="sha256-DAXAqQ0oyWihytT7MavQuOEmTniMzv7QIq4dO29idRQ="
+            crossorigin="anonymous"></script>
+
+
+    
+        
+        
+        <script type="text/javascript"
+                src="/js/anatole-theme-switcher.min.7fd87181cdd7e8413aa64b6867bb32f3a8dc242e684fc7d5bbb9f600dbc2b6eb.js"
+                integrity="sha256-f9hxgc3X6EE6pktoZ7sy86jcJC5oT8fVu7n2ANvCtus="
+                crossorigin="anonymous"></script>
+    
+    <meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://instantiator.dev/dps/key-splitting.jpg"/>
+
+<meta name="twitter:title" content="Secrets With Friends"/>
+<meta name="twitter:description" content="It&rsquo;s possible to share a secret amongst a group of people so that only some of them are needed to reconstruct it&hellip;"/>
+
+
+    
+    <meta property="og:title" content="Secrets With Friends" />
+<meta property="og:description" content="It&rsquo;s possible to share a secret amongst a group of people so that only some of them are needed to reconstruct it&hellip;" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://instantiator.dev/post/secrets-with-friends/" /><meta property="og:image" content="https://instantiator.dev/dps/key-splitting.jpg" /><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2021-12-14T00:00:00+00:00" />
+<meta property="article:modified_time" content="2021-12-14T00:00:00+00:00" /><meta property="og:site_name" content="instantiator.dev" />
+
+
+
+</head>
+<body><div class="sidebar animated fadeInDown ">
+    <div class="logo-title">
+        <div class="title">
+            <img src="/lewis/profile.jpg" alt="profile picture">
+            <h3 title=""><a href="/">instantiator.dev</a></h3>
+            <div class="description">
+                <p>tech, volunteers, public safety, articles and ideas</p>
+            </div>
+        </div>
+    </div>
+    <ul class="social-links">
+        
+            <li>
+                <a href="https://twitter.com/instantiator" rel="me" aria-label="Twitter">
+                    <i class="fab fa-twitter fa-2x" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+            <li>
+                <a href="https://github.com/instantiator" rel="me" aria-label="GitHub">
+                    <i class="fab fa-github fa-2x" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+            <li>
+                <a href="https://www.linkedin.com/in/lewiswestbury" rel="me" aria-label="Linkedin">
+                    <i class="fab fa-linkedin fa-2x" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+            <li>
+                <a href="https://instantiator.dev/index.xml" rel="me" aria-label="RSS">
+                    <i class="fas fa-rss fa-2x" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+    </ul>
+    <div class="footer">
+        <div class="by_farbox">&copy; Lewis Westbury  2021 </div>
+    </div>
+</div>
+<div class="main">
+    <div class="page-top  animated fadeInDown ">
+    <a role="button" class="navbar-burger" data-target="navMenu" aria-label="menu" aria-expanded="false">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+    </a>
+    <ul class="nav" id="navMenu">
+        
+        
+            
+            <li><a 
+                   href="/"
+                        
+                   title="">Home</a></li>
+        
+            
+            <li><a 
+                   href="/post/"
+                        
+                   title="">Posts</a></li>
+        
+            
+            <li><a 
+                   href="/about/"
+                        
+                   title="">About</a></li>
+        
+        
+        
+            <li class="theme-switch-item">
+                <a class="theme-switch" title="Switch Theme">
+                    <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+    </ul>
+</div>
+
+    <div class="autopagerize_page_element">
+        <div class="content">
+    <div class="post  animated fadeInDown ">
+        <div class="post-content">
+            
+            <div class="post-title">
+                <h3>Secrets With Friends</h3>
+                
+                    <div class="info">
+                        <em class="fas fa-calendar-day"></em>
+                        <span class="date"> 
+                                                2021-12-14
+                                           </span>
+                        <em class="fas fa-stopwatch"></em>
+                        <span class="reading-time">3-minute read</span>
+                    </div>
+                
+            </div>
+
+            <p><em>It&rsquo;s possible to share a secret amongst a group of people so that only some of them are needed to reconstruct it&hellip;</em></p>
+<h1 id="secrets-with-friends">Secrets with Friends</h1>
+<blockquote>
+<p>Why would you even want to do that?</p>
+</blockquote>
+<p>There are plenty of use cases for splitting secrets amongst different parties - so that no individual can uncover it alone. <a href="https://instantiator.dev/post/dead-person-switch/">Dead Person Switches</a> (the topic of my dissertation) might use this technique, and could be applied to:</p>
+<ul>
+<li>Protecting a whistleblower&rsquo;s secret</li>
+<li>Passing control of inactive accounts after death</li>
+<li>Distribution of wealth after death</li>
+</ul>
+<p>More generally, it&rsquo;s desirable to be able to distribute fragments of a secret to an arbitrary number of people, and require that a subset of them be present to reconstruct it. This is known as a <code>K</code> of <code>N</code> distribution scheme.</p>
+<p><img src="/dps/key-splitting.png" alt="A key split amongst 3 people" title="A key split amongst 3 people"></p>
+<p>Using a <code>K</code> of <code>N</code> scheme allows us to prevent an individual from reconstructing the secret alone, but provides some resilience against a number of people being unable or unwilling to cooperate when it is time to uncover the secret.</p>
+<h2 id="shamirs-secret-sharing-scheme">Shamir&rsquo;s Secret Sharing Scheme</h2>
+<p>Shamir&rsquo;s Secret Sharing Scheme (SSSS) is a commonly used <code>K</code> of <code>N</code> threshold scheme. A secret can be divided into <code>N</code> fragments, of which only <code>K</code> are required to reconstruct it.</p>
+<p>In <a href="https://blog.lopp.net/fifteen-men-on-a-dead-man-s-switch/">15 Men on a Dead Man&rsquo;s Switch</a>, Jameson Lopp describes a method for encrypting and storing secrets, and distributing fragments of the decryption key to a number of trusted people, using SSSS to generate the fragments.</p>
+<p>A number of implementations of SSSS exist, including a unix tool which simplifies the process of dividing a secret into fragments. Jameson also suggests using a passphrase, and as the unix tool supports application of SSSS to secrets of up to 128 ASCII characters, this allows for the use of a <a href="https://xkcd.com/936/">strong passphrase</a>.</p>
+<p><img src="https://imgs.xkcd.com/comics/password_strength.png" alt="Password Strength, XKCD comic" title="Password Strength, XKCD comic"></p>
+<h2 id="how-to-use-ssss">How to use SSSS</h2>
+<p>You can install SSSS on your Mac using <a href="https://brew.sh/">homebrew</a>:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">brew install ssss
+</code></pre></div><p>In the example below, SSSS is being used to split a secret, <code>&quot;X marks the spot&quot;</code>, into 5 fragments:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">$ ssss-split -t <span class="m">3</span> -n <span class="m">5</span>
+Generating shares using a <span class="o">(</span>3,5<span class="o">)</span> scheme with dynamic security level.
+Enter the secret, at most <span class="m">128</span> ASCII characters: X marks the spot
+Using a <span class="m">128</span> bit security level.
+1-a07cfafadfb8c949e10043063dd77bf9
+2-c8aca4294241312eae985d2480ffa9f7
+3-b94432ce93edd7d2d360939fc0f4b641
+4-08426b9a2a8d5f0cde7c1b33734c35bc
+5-79aafd7dfb21b9f0a384d58833472a18
+</code></pre></div><p>The secret can then be reconstituted using only 3 of them:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">$ ssss-combine -t <span class="m">3</span>
+Enter <span class="m">3</span> shares separated by newlines:
+Share <span class="o">[</span>1/3<span class="o">]</span>: 3-b94432ce93edd7d2d360939fc0f4b641
+Share <span class="o">[</span>2/3<span class="o">]</span>: 5-79aafd7dfb21b9f0a384d58833472a18
+Share <span class="o">[</span>3/3<span class="o">]</span>: 1-a07cfafadfb8c949e10043063dd77bf9
+Resulting secret: X marks the spot
+</code></pre></div><p>In Jameson&rsquo;s example, the secret, which is fragmented using SSSS, is actually a key which can be used to decrypt something much larger.</p>
+<h2 id="how-does-it-work">How does it work?</h2>
+<p>SSSS relies on the notion that <code>K</code> points can define a polynomial curve of degree <code>K-1</code>.</p>
+<table>
+<thead>
+<tr>
+<th>Points</th>
+<th>Polynomial curve</th>
+<th>Polynomial degree</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>2</td>
+<td>Line</td>
+<td>1</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Parabola</td>
+<td>2</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Cubic curve</td>
+<td>3</td>
+</tr>
+</tbody>
+</table>
+<p><strong>If a specific polynomial curve is the secret,</strong> then a minimum of <code>K</code> points are required to reconstruct the original curve, and the degree of the polynomial defines <code>K</code>.</p>
+<p>For instance, here there are 2 parabolas (polynomials of degree 2), and given only 2 points it is not possible to distinguish them (or any other number of parabolas that pass through these points). However, by providing a third point, they can be disambiguated - and only 1 parabola will match a given set of 3 points.</p>
+<p><img src="/dps/ssss-parabolas.png" alt="Parabolas" title="Parabolas"></p>
+<p>A subject can select <code>N</code> points from the curve, and give those to <code>N</code> trusted contacts. <code>N</code> can be arbitrarily large, provided it is larger than <code>K</code>, and so <code>K</code> of the <code>N</code> distributed points can be used to reconstruct the curve.</p>
+</div>
+        <div class="post-footer">
+            <div class="info">
+                <span class="separator"><a class="category" href="/categories/article/">article</a></span>
+                <span class="separator"><a class="tag" href="/tags/cryptography/">Cryptography</a><a class="tag" href="/tags/fun/">Fun</a><a class="tag" href="/tags/secrets/">Secrets</a><a class="tag" href="/tags/sharing/">Sharing</a><a class="tag" href="/tags/trust/">Trust</a><a class="tag" href="/tags/ssss/">SSSS</a><a class="tag" href="/tags/polynomial/">Polynomial</a></span>
+                
+
+            </div>
+        </div>
+
+        
+    </div>
+
+
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript"
+        src="/js/medium-zoom.min.2d6fd0be87fa98f0c9b4dc2536b312bbca48757f584f6ea1f394abc9bcc38fbc.js"
+        integrity="sha256-LW/Qvof6mPDJtNwlNrMSu8pIdX9YT26h85SrybzDj7w="
+        crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-SHE42ZWKEN"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-SHE42ZWKEN');
+</script></body>
+
+</html>
