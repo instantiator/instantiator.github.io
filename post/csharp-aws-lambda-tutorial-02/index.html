@@ -3,7 +3,7 @@
     <title> instantiator.dev | Building an AWS Lambda in C#, part 2: Build, deploy and invoke </title>
 
     
-    <meta charset="utf-8"><meta name="generator" content="Hugo 0.92.1" /><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+    <meta charset="utf-8"><meta name="generator" content="Hugo 0.101.0" /><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
     <meta name="description" content="tech, volunteers, public safety, articles and ideas">
     
     
@@ -50,8 +50,8 @@
     
     
     <script type="text/javascript"
-            src="/js/anatole-header.min.0c05c0a90d28c968a1cad4fb31abd0b8e1264e788ccefed022ae1d3b6f627514.js"
-            integrity="sha256-DAXAqQ0oyWihytT7MavQuOEmTniMzv7QIq4dO29idRQ="
+            src="/js/anatole-header.min.df804b63b5bd8474ea0756ea874bc8f1e92552708cc6ea43aa0d76981dc419f9.js"
+            integrity="sha256-34BLY7W9hHTqB1bqh0vI8eklUnCMxupDqg12mB3EGfk="
             crossorigin="anonymous"></script>
 
 
@@ -59,8 +59,8 @@
         
         
         <script type="text/javascript"
-                src="/js/anatole-theme-switcher.min.7fd87181cdd7e8413aa64b6867bb32f3a8dc242e684fc7d5bbb9f600dbc2b6eb.js"
-                integrity="sha256-f9hxgc3X6EE6pktoZ7sy86jcJC5oT8fVu7n2ANvCtus="
+                src="/js/anatole-theme-switcher.min.ea8ebe268922ef9849261a1312cd65b640595e65251ce4c00534a176afd1ac0c.js"
+                integrity="sha256-6o6&#43;Joki75hJJhoTEs1ltkBZXmUlHOTABTShdq/RrAw="
                 crossorigin="anonymous"></script>
     
     <meta name="twitter:card" content="summary_large_image"/>
@@ -194,18 +194,18 @@
 <li>The <a href="https://docs.microsoft.com/en-us/dotnet/core/tools/">.NET CLI</a></li>
 </ul>
 <p>We&rsquo;ll work from a basic template for the .NET CLI, which you&rsquo;ll need to install:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">dotnet new -i Amazon.Lambda.Templates
-</code></pre></div><p>To push updates from your machine to the AWS Lambda service, you&rsquo;ll also need the Amazon Lambda tools for the .NET CLI:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">dotnet tool install -g Amazon.Lambda.Tools
-</code></pre></div><h3 id="prerequisite-tokens">Prerequisite tokens</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">dotnet new -i Amazon.Lambda.Templates
+</span></span></code></pre></div><p>To push updates from your machine to the AWS Lambda service, you&rsquo;ll also need the Amazon Lambda tools for the .NET CLI:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">dotnet tool install -g Amazon.Lambda.Tools
+</span></span></code></pre></div><h3 id="prerequisite-tokens">Prerequisite tokens</h3>
 <p>Your administrator account has an <strong>access key id</strong>, and a <strong>secret access key</strong>. You&rsquo;ll need both to set up an AWS profile locally, and you should be able to retrieve them from the IAM service in the AWS console.</p>
 <p>While you&rsquo;re in the console, note down the region you&rsquo;ve been working in, eg. <code>eu-west-2</code></p>
 <h3 id="creating-a-local-aws-profile">Creating a local AWS profile</h3>
 <p>A profile for the AWS CLI contains enough credentials and information to be able to perform actions on AWS on behalf of a particular IAM user.</p>
 <p>The AWS CLI offers an interactive way to configure a new profile. You can name the profile anything, but it&rsquo;s often helpful to name it after the user it represents, ie. <strong>sample-admin</strong></p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">aws configure --profile sample-admin
-</code></pre></div><p>Provide details as requested, including the <strong>access key id</strong>, <strong>secret access key</strong>, and <strong>region</strong> from above.</p>
-<p>If you' need to inspect your credentials, you&rsquo;ll find them in these files:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">aws configure --profile sample-admin
+</span></span></code></pre></div><p>Provide details as requested, including the <strong>access key id</strong>, <strong>secret access key</strong>, and <strong>region</strong> from above.</p>
+<p>If you&rsquo; need to inspect your credentials, you&rsquo;ll find them in these files:</p>
 <ul>
 <li><code>~/.aws/config</code></li>
 <li><code>~/.aws/credentials</code></li>
@@ -214,8 +214,8 @@
 <h3 id="create-a-lambda-solution-from-a-template">Create a Lambda solution from a template</h3>
 <p>Before jumping into your favourite IDE, we&rsquo;ll use the .NET CLI to create a project from the template we installed earlier.</p>
 <p>Create a new folder for the whole solution and, from there, run:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">dotnet new lambda.EmptyFunction --name SampleLambdaFunction
-</code></pre></div><p>In fact, this has created two projects: one for the lambda, and the other to test it.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">dotnet new lambda.EmptyFunction --name SampleLambdaFunction
+</span></span></code></pre></div><p>In fact, this has created two projects: one for the lambda, and the other to test it.</p>
 <blockquote>
 <p>You may wish to move the projects around into a structure that makes sense to you. Now is a good time for that. (I usually prefer to have all my projects in directories directly inside the main solution directory - but I&rsquo;ve accepted the <code>src/</code> and <code>test/</code> directories that the template provides this time.)</p>
 </blockquote>
@@ -226,8 +226,8 @@
 </ul>
 <h4 id="examine-the-template-lambda">Examine the template Lambda</h4>
 <p>Inside the <code>SampleLambdaFunction</code> project is a file called <code>Function.cs</code> - this contains the entry point for your Lambda:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public</span> <span class="kt">string</span> <span class="n">FunctionHandler</span><span class="p">(</span><span class="kt">string</span> <span class="n">input</span><span class="p">,</span> <span class="n">ILambdaContext</span> <span class="n">context</span><span class="p">)</span>
-</code></pre></div><p>As you can see, this method has 2 parameters:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-csharp" data-lang="csharp"><span class="line"><span class="cl"><span class="k">public</span> <span class="kt">string</span> <span class="n">FunctionHandler</span><span class="p">(</span><span class="kt">string</span> <span class="n">input</span><span class="p">,</span> <span class="n">ILambdaContext</span> <span class="n">context</span><span class="p">)</span>
+</span></span></code></pre></div><p>As you can see, this method has 2 parameters:</p>
 <ul>
 <li><code>input</code> - This is a string by default, but you could exchange it for any object.</li>
 <li><code>ILambdaContext</code> - This context object allows you to access information about the Lambda&rsquo;s environment, and also to write logs.</li>
@@ -235,34 +235,34 @@
 <p>The template Lambda accepts a string as input. If you need to, you can specify a regular class for your input. AWS  will accept JSON and deserialize it into an object for you.</p>
 <blockquote>
 <p>Note that C# serializes and deserializes objects using public properties, so if you&rsquo;re replacing that <code>string</code> with an object of your own, make sure the values you want to see mapped to and from JSON are public properties, ie.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public</span> <span class="kt">int</span> <span class="n">Number</span> <span class="p">{</span> <span class="k">get</span><span class="p">;</span> <span class="k">set</span><span class="p">;</span> <span class="p">}</span>
-</code></pre></div></blockquote>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-csharp" data-lang="csharp"><span class="line"><span class="cl"><span class="k">public</span> <span class="kt">int</span> <span class="n">Number</span> <span class="p">{</span> <span class="k">get</span><span class="p">;</span> <span class="k">set</span><span class="p">;</span> <span class="p">}</span>
+</span></span></code></pre></div></blockquote>
 <p>The template Lambda function returns an uppercased version of the string passed in.</p>
 <p>You could also adjust the return type of this function and return an object class. If you do, the AWS libraries will serialize it and return it as a JSON string.</p>
 <h3 id="deploy-and-test-the-template-lambda">Deploy and test the template Lambda</h3>
 <p>To deploy the Lambda using the CLI, we&rsquo;ll use the dotnet lambda tool that you installed earlier, from the terminal. First build, and then deploy the lambda.</p>
 <p>See <code>deploy.sh</code> (in the sample project), or use the invocation below:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">dotnet build
-<span class="nb">pushd</span> src/SampleLambdaFunction
-dotnet lambda deploy-function --profile sample-admin --region eu-west-2 SampleLambdaFunction --function-role sample-lambda-role
-<span class="nb">popd</span>
-</code></pre></div><p><em>You could also achieve this directly from Visual Studio with a little configuration. The sample Lambda project&rsquo;s <code>Readme.md</code> has some information about that.</em></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">dotnet build
+</span></span><span class="line"><span class="cl"><span class="nb">pushd</span> src/SampleLambdaFunction
+</span></span><span class="line"><span class="cl">dotnet lambda deploy-function --profile sample-admin --region eu-west-2 SampleLambdaFunction --function-role sample-lambda-role
+</span></span><span class="line"><span class="cl"><span class="nb">popd</span>
+</span></span></code></pre></div><p><em>You could also achieve this directly from Visual Studio with a little configuration. The sample Lambda project&rsquo;s <code>Readme.md</code> has some information about that.</em></p>
 <p>Having succesfully deployed it, you can test it with the dotnet lambda tool, too.</p>
 <p>See <code>test-a-string.sh</code> (in the sample project), or use the invocation below:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">dotnet lambda invoke-function SampleLambdaFunction --profile sample-admin --region eu-west-2 --payload <span class="s1">&#39;a rather lower-case string&#39;</span>
-</code></pre></div><blockquote>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">dotnet lambda invoke-function SampleLambdaFunction --profile sample-admin --region eu-west-2 --payload <span class="s1">&#39;a rather lower-case string&#39;</span>
+</span></span></code></pre></div><blockquote>
 <p>NB. There are plenty of ways to invoke a Lambda function. I&rsquo;d recommend reading a little more about how it&rsquo;s done at: <a href="https://docs.aws.amazon.com/lambda/latest/dg/lambda-invocation.html">Invoking functions</a></p>
 </blockquote>
 <p><img src="/csharp-aws-lambda-tutorial/006-test-a-string.png" alt="Testing the Lambda"></p>
 <p>In the output, you should see a response, with your input string upper-cased:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text">A RATHER LOWER-CASE STRING
-</code></pre></div><h4 id="conclusion">Conclusion</h4>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">A RATHER LOWER-CASE STRING
+</span></span></code></pre></div><h4 id="conclusion">Conclusion</h4>
 <p>Congratulations! You&rsquo;ve built a Lambda that runs on AWS infrastructure. You sent it a message, it did some work, and returned a response.</p>
 <p>In the next part, we&rsquo;ll enhance the Lambda to collect data from an API, and provide it with a secret API key to do so.</p>
 </div>
         <div class="post-footer">
             <div class="info">
-                <span class="separator"><a class="category" href="/categories/coding/">coding</a><a class="category" href="/categories/tutorial/">tutorial</a></span>
+                <span class="separator"><a class="category" href="/categories/tutorial/">tutorial</a></span>
                 <span class="separator"><a class="tag" href="/tags/coding/">coding</a><a class="tag" href="/tags/c%23/">c#</a><a class="tag" href="/tags/%2enet/">.net</a><a class="tag" href="/tags/aws/">aws</a><a class="tag" href="/tags/lambda/">lambda</a></span>
                 
                   <p>
@@ -284,8 +284,8 @@ dotnet lambda deploy-function --profile sample-admin --region eu-west-2 SampleLa
 </div>
 
 <script type="text/javascript"
-        src="/js/medium-zoom.min.2d6fd0be87fa98f0c9b4dc2536b312bbca48757f584f6ea1f394abc9bcc38fbc.js"
-        integrity="sha256-LW/Qvof6mPDJtNwlNrMSu8pIdX9YT26h85SrybzDj7w="
+        src="/js/medium-zoom.min.c5719dbaf0204e654acaebc2ae8b75cfadec34b88aeca3a0da573a3a7eccdc2a.js"
+        integrity="sha256-xXGduvAgTmVKyuvCrot1z63sNLiK7KOg2lc6On7M3Co="
         crossorigin="anonymous"></script>
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-SHE42ZWKEN"></script>
 <script>

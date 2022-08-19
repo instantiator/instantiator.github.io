@@ -3,7 +3,7 @@
     <title> instantiator.dev | Secrets With Friends </title>
 
     
-    <meta charset="utf-8"><meta name="generator" content="Hugo 0.92.1" /><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+    <meta charset="utf-8"><meta name="generator" content="Hugo 0.101.0" /><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
     <meta name="description" content="tech, volunteers, public safety, articles and ideas">
     
     
@@ -50,8 +50,8 @@
     
     
     <script type="text/javascript"
-            src="/js/anatole-header.min.0c05c0a90d28c968a1cad4fb31abd0b8e1264e788ccefed022ae1d3b6f627514.js"
-            integrity="sha256-DAXAqQ0oyWihytT7MavQuOEmTniMzv7QIq4dO29idRQ="
+            src="/js/anatole-header.min.df804b63b5bd8474ea0756ea874bc8f1e92552708cc6ea43aa0d76981dc419f9.js"
+            integrity="sha256-34BLY7W9hHTqB1bqh0vI8eklUnCMxupDqg12mB3EGfk="
             crossorigin="anonymous"></script>
 
 
@@ -59,8 +59,8 @@
         
         
         <script type="text/javascript"
-                src="/js/anatole-theme-switcher.min.7fd87181cdd7e8413aa64b6867bb32f3a8dc242e684fc7d5bbb9f600dbc2b6eb.js"
-                integrity="sha256-f9hxgc3X6EE6pktoZ7sy86jcJC5oT8fVu7n2ANvCtus="
+                src="/js/anatole-theme-switcher.min.ea8ebe268922ef9849261a1312cd65b640595e65251ce4c00534a176afd1ac0c.js"
+                integrity="sha256-6o6&#43;Joki75hJJhoTEs1ltkBZXmUlHOTABTShdq/RrAw="
                 crossorigin="anonymous"></script>
     
     <meta name="twitter:card" content="summary_large_image"/>
@@ -201,25 +201,25 @@
 <p><img src="https://imgs.xkcd.com/comics/password_strength.png" alt="Password Strength, XKCD comic" title="Password Strength, XKCD comic"></p>
 <h2 id="how-to-use-ssss">How to use SSSS</h2>
 <p>You can install SSSS on your Mac using <a href="https://brew.sh/">homebrew</a>:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">brew install ssss
-</code></pre></div><p>In the example below, SSSS is being used to split a secret, <code>&quot;X marks the spot&quot;</code>, into 5 fragments:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">$ ssss-split -t <span class="m">3</span> -n <span class="m">5</span>
-Generating shares using a <span class="o">(</span>3,5<span class="o">)</span> scheme with dynamic security level.
-Enter the secret, at most <span class="m">128</span> ASCII characters: X marks the spot
-Using a <span class="m">128</span> bit security level.
-1-a07cfafadfb8c949e10043063dd77bf9
-2-c8aca4294241312eae985d2480ffa9f7
-3-b94432ce93edd7d2d360939fc0f4b641
-4-08426b9a2a8d5f0cde7c1b33734c35bc
-5-79aafd7dfb21b9f0a384d58833472a18
-</code></pre></div><p>The secret can then be reconstituted using only 3 of them:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">$ ssss-combine -t <span class="m">3</span>
-Enter <span class="m">3</span> shares separated by newlines:
-Share <span class="o">[</span>1/3<span class="o">]</span>: 3-b94432ce93edd7d2d360939fc0f4b641
-Share <span class="o">[</span>2/3<span class="o">]</span>: 5-79aafd7dfb21b9f0a384d58833472a18
-Share <span class="o">[</span>3/3<span class="o">]</span>: 1-a07cfafadfb8c949e10043063dd77bf9
-Resulting secret: X marks the spot
-</code></pre></div><p>In Jameson&rsquo;s example, the secret, which is fragmented using SSSS, is actually a key which can be used to decrypt something much larger.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">brew install ssss
+</span></span></code></pre></div><p>In the example below, SSSS is being used to split a secret, <code>&quot;X marks the spot&quot;</code>, into 5 fragments:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ ssss-split -t <span class="m">3</span> -n <span class="m">5</span>
+</span></span><span class="line"><span class="cl">Generating shares using a <span class="o">(</span>3,5<span class="o">)</span> scheme with dynamic security level.
+</span></span><span class="line"><span class="cl">Enter the secret, at most <span class="m">128</span> ASCII characters: X marks the spot
+</span></span><span class="line"><span class="cl">Using a <span class="m">128</span> bit security level.
+</span></span><span class="line"><span class="cl">1-a07cfafadfb8c949e10043063dd77bf9
+</span></span><span class="line"><span class="cl">2-c8aca4294241312eae985d2480ffa9f7
+</span></span><span class="line"><span class="cl">3-b94432ce93edd7d2d360939fc0f4b641
+</span></span><span class="line"><span class="cl">4-08426b9a2a8d5f0cde7c1b33734c35bc
+</span></span><span class="line"><span class="cl">5-79aafd7dfb21b9f0a384d58833472a18
+</span></span></code></pre></div><p>The secret can then be reconstituted using only 3 of them:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ ssss-combine -t <span class="m">3</span>
+</span></span><span class="line"><span class="cl">Enter <span class="m">3</span> shares separated by newlines:
+</span></span><span class="line"><span class="cl">Share <span class="o">[</span>1/3<span class="o">]</span>: 3-b94432ce93edd7d2d360939fc0f4b641
+</span></span><span class="line"><span class="cl">Share <span class="o">[</span>2/3<span class="o">]</span>: 5-79aafd7dfb21b9f0a384d58833472a18
+</span></span><span class="line"><span class="cl">Share <span class="o">[</span>3/3<span class="o">]</span>: 1-a07cfafadfb8c949e10043063dd77bf9
+</span></span><span class="line"><span class="cl">Resulting secret: X marks the spot
+</span></span></code></pre></div><p>In Jameson&rsquo;s example, the secret, which is fragmented using SSSS, is actually a key which can be used to decrypt something much larger.</p>
 <h2 id="how-does-it-work">How does it work?</h2>
 <p>SSSS relies on the notion that <code>K</code> points can define a polynomial curve of degree <code>K-1</code>.</p>
 <table>
@@ -271,8 +271,8 @@ Resulting secret: X marks the spot
 </div>
 
 <script type="text/javascript"
-        src="/js/medium-zoom.min.2d6fd0be87fa98f0c9b4dc2536b312bbca48757f584f6ea1f394abc9bcc38fbc.js"
-        integrity="sha256-LW/Qvof6mPDJtNwlNrMSu8pIdX9YT26h85SrybzDj7w="
+        src="/js/medium-zoom.min.c5719dbaf0204e654acaebc2ae8b75cfadec34b88aeca3a0da573a3a7eccdc2a.js"
+        integrity="sha256-xXGduvAgTmVKyuvCrot1z63sNLiK7KOg2lc6On7M3Co="
         crossorigin="anonymous"></script>
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-SHE42ZWKEN"></script>
 <script>

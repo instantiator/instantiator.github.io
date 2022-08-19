@@ -3,7 +3,7 @@
     <title> instantiator.dev | Building an AWS Lambda in C#, part 5: S3 </title>
 
     
-    <meta charset="utf-8"><meta name="generator" content="Hugo 0.92.1" /><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+    <meta charset="utf-8"><meta name="generator" content="Hugo 0.101.0" /><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
     <meta name="description" content="tech, volunteers, public safety, articles and ideas">
     
     
@@ -50,8 +50,8 @@
     
     
     <script type="text/javascript"
-            src="/js/anatole-header.min.0c05c0a90d28c968a1cad4fb31abd0b8e1264e788ccefed022ae1d3b6f627514.js"
-            integrity="sha256-DAXAqQ0oyWihytT7MavQuOEmTniMzv7QIq4dO29idRQ="
+            src="/js/anatole-header.min.df804b63b5bd8474ea0756ea874bc8f1e92552708cc6ea43aa0d76981dc419f9.js"
+            integrity="sha256-34BLY7W9hHTqB1bqh0vI8eklUnCMxupDqg12mB3EGfk="
             crossorigin="anonymous"></script>
 
 
@@ -59,8 +59,8 @@
         
         
         <script type="text/javascript"
-                src="/js/anatole-theme-switcher.min.7fd87181cdd7e8413aa64b6867bb32f3a8dc242e684fc7d5bbb9f600dbc2b6eb.js"
-                integrity="sha256-f9hxgc3X6EE6pktoZ7sy86jcJC5oT8fVu7n2ANvCtus="
+                src="/js/anatole-theme-switcher.min.ea8ebe268922ef9849261a1312cd65b640595e65251ce4c00534a176afd1ac0c.js"
+                integrity="sha256-6o6&#43;Joki75hJJhoTEs1ltkBZXmUlHOTABTShdq/RrAw="
                 crossorigin="anonymous"></script>
     
     <meta name="twitter:card" content="summary_large_image"/>
@@ -221,34 +221,34 @@
 <li>Copy/paste the policy below into your bucket policy.</li>
 <li>Tap <code>Save changes</code> to set the new policy.</li>
 </ul>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="p">{</span>
-    <span class="nt">&#34;Version&#34;</span><span class="p">:</span> <span class="s2">&#34;2012-10-17&#34;</span><span class="p">,</span>
-    <span class="nt">&#34;Id&#34;</span><span class="p">:</span> <span class="s2">&#34;SampleLambdaStoragePolicy&#34;</span><span class="p">,</span>
-    <span class="nt">&#34;Statement&#34;</span><span class="p">:</span> <span class="p">[</span>
-        <span class="p">{</span>
-            <span class="nt">&#34;Sid&#34;</span><span class="p">:</span> <span class="s2">&#34;statement-1&#34;</span><span class="p">,</span>
-            <span class="nt">&#34;Effect&#34;</span><span class="p">:</span> <span class="s2">&#34;Allow&#34;</span><span class="p">,</span>
-            <span class="nt">&#34;Principal&#34;</span><span class="p">:</span> <span class="p">{</span>
-                <span class="nt">&#34;AWS&#34;</span><span class="p">:</span> <span class="s2">&#34;arn:aws:iam::&lt;YOUR ACCOUNT NUMBER&gt;:role/sample-lambda-role&#34;</span>
-            <span class="p">},</span>
-            <span class="nt">&#34;Action&#34;</span><span class="p">:</span> <span class="s2">&#34;s3:ListBucket&#34;</span><span class="p">,</span>
-            <span class="nt">&#34;Resource&#34;</span><span class="p">:</span> <span class="s2">&#34;arn:aws:s3:::sample-lambda-storage&#34;</span>
-        <span class="p">},</span>
-        <span class="p">{</span>
-            <span class="nt">&#34;Sid&#34;</span><span class="p">:</span> <span class="s2">&#34;statement-2&#34;</span><span class="p">,</span>
-            <span class="nt">&#34;Effect&#34;</span><span class="p">:</span> <span class="s2">&#34;Allow&#34;</span><span class="p">,</span>
-            <span class="nt">&#34;Principal&#34;</span><span class="p">:</span> <span class="p">{</span>
-                <span class="nt">&#34;AWS&#34;</span><span class="p">:</span> <span class="s2">&#34;arn:aws:iam::&lt;YOUR ACCOUNT NUMBER&gt;:role/sample-lambda-role&#34;</span>
-            <span class="p">},</span>
-            <span class="nt">&#34;Action&#34;</span><span class="p">:</span> <span class="p">[</span>
-                <span class="s2">&#34;s3:GetObject&#34;</span><span class="p">,</span>
-                <span class="s2">&#34;s3:PutObject&#34;</span>
-            <span class="p">],</span>
-            <span class="nt">&#34;Resource&#34;</span><span class="p">:</span> <span class="s2">&#34;arn:aws:s3:::sample-lambda-storage/*&#34;</span>
-        <span class="p">}</span>
-    <span class="p">]</span>
-<span class="p">}</span>
-</code></pre></div><ul>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&#34;Version&#34;</span><span class="p">:</span> <span class="s2">&#34;2012-10-17&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&#34;Id&#34;</span><span class="p">:</span> <span class="s2">&#34;SampleLambdaStoragePolicy&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&#34;Statement&#34;</span><span class="p">:</span> <span class="p">[</span>
+</span></span><span class="line"><span class="cl">        <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="nt">&#34;Sid&#34;</span><span class="p">:</span> <span class="s2">&#34;statement-1&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">            <span class="nt">&#34;Effect&#34;</span><span class="p">:</span> <span class="s2">&#34;Allow&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">            <span class="nt">&#34;Principal&#34;</span><span class="p">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">                <span class="nt">&#34;AWS&#34;</span><span class="p">:</span> <span class="s2">&#34;arn:aws:iam::&lt;YOUR ACCOUNT NUMBER&gt;:role/sample-lambda-role&#34;</span>
+</span></span><span class="line"><span class="cl">            <span class="p">},</span>
+</span></span><span class="line"><span class="cl">            <span class="nt">&#34;Action&#34;</span><span class="p">:</span> <span class="s2">&#34;s3:ListBucket&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">            <span class="nt">&#34;Resource&#34;</span><span class="p">:</span> <span class="s2">&#34;arn:aws:s3:::sample-lambda-storage&#34;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">},</span>
+</span></span><span class="line"><span class="cl">        <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="nt">&#34;Sid&#34;</span><span class="p">:</span> <span class="s2">&#34;statement-2&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">            <span class="nt">&#34;Effect&#34;</span><span class="p">:</span> <span class="s2">&#34;Allow&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">            <span class="nt">&#34;Principal&#34;</span><span class="p">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">                <span class="nt">&#34;AWS&#34;</span><span class="p">:</span> <span class="s2">&#34;arn:aws:iam::&lt;YOUR ACCOUNT NUMBER&gt;:role/sample-lambda-role&#34;</span>
+</span></span><span class="line"><span class="cl">            <span class="p">},</span>
+</span></span><span class="line"><span class="cl">            <span class="nt">&#34;Action&#34;</span><span class="p">:</span> <span class="p">[</span>
+</span></span><span class="line"><span class="cl">                <span class="s2">&#34;s3:GetObject&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">                <span class="s2">&#34;s3:PutObject&#34;</span>
+</span></span><span class="line"><span class="cl">            <span class="p">],</span>
+</span></span><span class="line"><span class="cl">            <span class="nt">&#34;Resource&#34;</span><span class="p">:</span> <span class="s2">&#34;arn:aws:s3:::sample-lambda-storage/*&#34;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="p">]</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><ul>
 <li>Substitute <code>&lt;YOUR ACCOUNT NUMBER&gt;</code> with your numeric 12-digit AWS account number.</li>
 </ul>
 <p><img src="/csharp-aws-lambda-tutorial/013-s3-bucket-policy-set.png" alt="Bucket policy (set)"></p>
@@ -295,30 +295,30 @@
 <p><img src="/csharp-aws-lambda-tutorial/014-add-aws-sdk-s3-nuget.png" alt="Adding the AWS SDK for S3 in Nuget"></p>
 <p>With this package, the Lambda will be able to perform <code>PutObject</code> and <code>GetObject</code> operations against your new S3 bucket.</p>
 <p>Now open up <code>Function.cs</code> and add a new method to your <code>Function</code> class:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">private</span> <span class="k">async</span> <span class="n">Task</span><span class="p">&lt;</span><span class="kt">bool</span><span class="p">&gt;</span> <span class="n">PutToS3Async</span><span class="p">(</span><span class="kt">string</span> <span class="n">bucket</span><span class="p">,</span> <span class="kt">string</span> <span class="n">key</span><span class="p">,</span> <span class="kt">string</span> <span class="n">content</span><span class="p">,</span> <span class="n">ILambdaContext</span> <span class="n">context</span><span class="p">)</span>
-<span class="p">{</span>
-	<span class="kt">var</span> <span class="n">request</span> <span class="p">=</span> <span class="k">new</span> <span class="n">PutObjectRequest</span>
-	<span class="p">{</span>
-		<span class="n">BucketName</span> <span class="p">=</span> <span class="n">bucket</span><span class="p">,</span>
-		<span class="n">Key</span> <span class="p">=</span> <span class="n">key</span><span class="p">,</span>
-		<span class="n">ContentBody</span> <span class="p">=</span> <span class="n">content</span>
-	<span class="p">};</span>
-
-	<span class="k">using</span> <span class="p">(</span><span class="kt">var</span> <span class="n">s3</span> <span class="p">=</span> <span class="k">new</span> <span class="n">AmazonS3Client</span><span class="p">(</span><span class="n">RegionEndpoint</span><span class="p">.</span><span class="n">EUWest2</span><span class="p">))</span>
-	<span class="p">{</span>
-		<span class="kt">var</span> <span class="n">response</span> <span class="p">=</span> <span class="k">await</span> <span class="n">s3</span><span class="p">.</span><span class="n">PutObjectAsync</span><span class="p">(</span><span class="n">request</span><span class="p">);</span>
-		<span class="k">if</span> <span class="p">(</span><span class="n">response</span><span class="p">.</span><span class="n">HttpStatusCode</span> <span class="p">==</span> <span class="n">HttpStatusCode</span><span class="p">.</span><span class="n">OK</span><span class="p">)</span>
-		<span class="p">{</span>
-			<span class="k">return</span> <span class="k">true</span><span class="p">;</span>
-		<span class="p">}</span>
-		<span class="k">else</span>
-		<span class="p">{</span>
-			<span class="n">context</span><span class="p">.</span><span class="n">Logger</span><span class="p">.</span><span class="n">Log</span><span class="p">(</span><span class="s">$&#34;{response.HttpStatusCode} encountered putting: {bucket}:{key}&#34;</span><span class="p">);</span>
-			<span class="k">return</span> <span class="k">false</span><span class="p">;</span>
-		<span class="p">}</span>
-	<span class="p">}</span>
-<span class="p">}</span>
-</code></pre></div><p>A few things to note about the new <code>PutToS3Async</code> method:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-csharp" data-lang="csharp"><span class="line"><span class="cl"><span class="k">private</span> <span class="k">async</span> <span class="n">Task</span><span class="p">&lt;</span><span class="kt">bool</span><span class="p">&gt;</span> <span class="n">PutToS3Async</span><span class="p">(</span><span class="kt">string</span> <span class="n">bucket</span><span class="p">,</span> <span class="kt">string</span> <span class="n">key</span><span class="p">,</span> <span class="kt">string</span> <span class="n">content</span><span class="p">,</span> <span class="n">ILambdaContext</span> <span class="n">context</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">	<span class="kt">var</span> <span class="n">request</span> <span class="p">=</span> <span class="k">new</span> <span class="n">PutObjectRequest</span>
+</span></span><span class="line"><span class="cl">	<span class="p">{</span>
+</span></span><span class="line"><span class="cl">		<span class="n">BucketName</span> <span class="p">=</span> <span class="n">bucket</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">		<span class="n">Key</span> <span class="p">=</span> <span class="n">key</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">		<span class="n">ContentBody</span> <span class="p">=</span> <span class="n">content</span>
+</span></span><span class="line"><span class="cl">	<span class="p">};</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">	<span class="k">using</span> <span class="p">(</span><span class="kt">var</span> <span class="n">s3</span> <span class="p">=</span> <span class="k">new</span> <span class="n">AmazonS3Client</span><span class="p">(</span><span class="n">RegionEndpoint</span><span class="p">.</span><span class="n">EUWest2</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">	<span class="p">{</span>
+</span></span><span class="line"><span class="cl">		<span class="kt">var</span> <span class="n">response</span> <span class="p">=</span> <span class="k">await</span> <span class="n">s3</span><span class="p">.</span><span class="n">PutObjectAsync</span><span class="p">(</span><span class="n">request</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">		<span class="k">if</span> <span class="p">(</span><span class="n">response</span><span class="p">.</span><span class="n">HttpStatusCode</span> <span class="p">==</span> <span class="n">HttpStatusCode</span><span class="p">.</span><span class="n">OK</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">		<span class="p">{</span>
+</span></span><span class="line"><span class="cl">			<span class="k">return</span> <span class="k">true</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">		<span class="p">}</span>
+</span></span><span class="line"><span class="cl">		<span class="k">else</span>
+</span></span><span class="line"><span class="cl">		<span class="p">{</span>
+</span></span><span class="line"><span class="cl">			<span class="n">context</span><span class="p">.</span><span class="n">Logger</span><span class="p">.</span><span class="n">Log</span><span class="p">(</span><span class="s">$&#34;{response.HttpStatusCode} encountered putting: {bucket}:{key}&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">			<span class="k">return</span> <span class="k">false</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">		<span class="p">}</span>
+</span></span><span class="line"><span class="cl">	<span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><p>A few things to note about the new <code>PutToS3Async</code> method:</p>
 <ul>
 <li>The method runs asychronously, as it makes asynchronous calls to S3.</li>
 <li>First it constructs a <code>PutObjectRequest</code>, called <code>request</code>, containing details of the bucket, key (filename), and content to write.</li>
@@ -327,26 +327,26 @@
 <li>It returns true if the response suggests it succeeded, and false otherwise.</li>
 </ul>
 <p>Now, it&rsquo;s time to add a few extra lines to the <code>FunctionHandler</code> method. Here&rsquo;s the full method, now:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public</span> <span class="k">async</span> <span class="n">Task</span><span class="p">&lt;</span><span class="kt">string</span><span class="p">&gt;</span> <span class="n">FunctionHandler</span><span class="p">(</span><span class="kt">string</span> <span class="n">input</span><span class="p">,</span> <span class="n">ILambdaContext</span> <span class="n">context</span><span class="p">)</span>
-<span class="p">{</span>
-	<span class="n">context</span><span class="p">.</span><span class="n">Logger</span><span class="p">.</span><span class="n">LogLine</span><span class="p">(</span><span class="s">&#34;Querying OpenWeather for: &#34;</span> <span class="p">+</span> <span class="n">input</span><span class="p">);</span>
-	<span class="kt">var</span> <span class="n">weatherKey</span> <span class="p">=</span> <span class="n">Environment</span><span class="p">.</span><span class="n">GetEnvironmentVariable</span><span class="p">(</span><span class="s">&#34;WEATHER_API_KEY&#34;</span><span class="p">);</span>
-
-	<span class="c1">// (!) Injecting strings into your query without checking them first is dangerous. Don&#39;t do it in production!
-</span><span class="c1"></span>	<span class="kt">var</span> <span class="n">query</span> <span class="p">=</span> <span class="s">$&#34;https://api.openweathermap.org/data/2.5/weather?q={input}&amp;appid={weatherKey}&#34;</span><span class="p">;</span>
-	<span class="k">using</span> <span class="p">(</span><span class="kt">var</span> <span class="n">http</span> <span class="p">=</span> <span class="k">new</span> <span class="n">HttpClient</span><span class="p">())</span>
-	<span class="p">{</span>
-		<span class="kt">var</span> <span class="n">output</span> <span class="p">=</span> <span class="k">await</span> <span class="n">http</span><span class="p">.</span><span class="n">GetStringAsync</span><span class="p">(</span><span class="n">query</span><span class="p">);</span>
-		<span class="kt">var</span> <span class="n">bucket</span> <span class="p">=</span> <span class="s">&#34;sample-lambda-storage&#34;</span><span class="p">;</span>
-		<span class="kt">var</span> <span class="n">key</span> <span class="p">=</span> <span class="s">$&#34;weather_{DateTime.Now.Ticks}.json&#34;</span><span class="p">;</span>
-		<span class="kt">var</span> <span class="n">stored</span> <span class="p">=</span> <span class="k">await</span> <span class="n">PutToS3Async</span><span class="p">(</span><span class="n">bucket</span><span class="p">,</span> <span class="n">key</span><span class="p">,</span> <span class="n">output</span><span class="p">,</span> <span class="n">context</span><span class="p">);</span>
-		<span class="kt">var</span> <span class="n">msg</span> <span class="p">=</span> <span class="n">stored</span>
-			<span class="p">?</span> <span class="s">$&#34;Successfully stored weather data: {bucket}:{key}&#34;</span>
-			<span class="p">:</span> <span class="s">$&#34;Failed to store weather data.&#34;</span><span class="p">;</span>
-		<span class="k">return</span> <span class="n">msg</span><span class="p">;</span>
-	<span class="p">}</span>
-<span class="p">}</span>
-</code></pre></div><p>The new lines in <code>FunctionHandler</code> allow it to make a call to PutS3Async with the data received from the weather API call, and this causes that data to be written to an object (file) there.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-csharp" data-lang="csharp"><span class="line"><span class="cl"><span class="k">public</span> <span class="k">async</span> <span class="n">Task</span><span class="p">&lt;</span><span class="kt">string</span><span class="p">&gt;</span> <span class="n">FunctionHandler</span><span class="p">(</span><span class="kt">string</span> <span class="n">input</span><span class="p">,</span> <span class="n">ILambdaContext</span> <span class="n">context</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">	<span class="n">context</span><span class="p">.</span><span class="n">Logger</span><span class="p">.</span><span class="n">LogLine</span><span class="p">(</span><span class="s">&#34;Querying OpenWeather for: &#34;</span> <span class="p">+</span> <span class="n">input</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">	<span class="kt">var</span> <span class="n">weatherKey</span> <span class="p">=</span> <span class="n">Environment</span><span class="p">.</span><span class="n">GetEnvironmentVariable</span><span class="p">(</span><span class="s">&#34;WEATHER_API_KEY&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">	<span class="c1">// (!) Injecting strings into your query without checking them first is dangerous. Don&#39;t do it in production!</span>
+</span></span><span class="line"><span class="cl">	<span class="kt">var</span> <span class="n">query</span> <span class="p">=</span> <span class="s">$&#34;https://api.openweathermap.org/data/2.5/weather?q={input}&amp;appid={weatherKey}&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">	<span class="k">using</span> <span class="p">(</span><span class="kt">var</span> <span class="n">http</span> <span class="p">=</span> <span class="k">new</span> <span class="n">HttpClient</span><span class="p">())</span>
+</span></span><span class="line"><span class="cl">	<span class="p">{</span>
+</span></span><span class="line"><span class="cl">		<span class="kt">var</span> <span class="n">output</span> <span class="p">=</span> <span class="k">await</span> <span class="n">http</span><span class="p">.</span><span class="n">GetStringAsync</span><span class="p">(</span><span class="n">query</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">		<span class="kt">var</span> <span class="n">bucket</span> <span class="p">=</span> <span class="s">&#34;sample-lambda-storage&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">		<span class="kt">var</span> <span class="n">key</span> <span class="p">=</span> <span class="s">$&#34;weather_{DateTime.Now.Ticks}.json&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">		<span class="kt">var</span> <span class="n">stored</span> <span class="p">=</span> <span class="k">await</span> <span class="n">PutToS3Async</span><span class="p">(</span><span class="n">bucket</span><span class="p">,</span> <span class="n">key</span><span class="p">,</span> <span class="n">output</span><span class="p">,</span> <span class="n">context</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">		<span class="kt">var</span> <span class="n">msg</span> <span class="p">=</span> <span class="n">stored</span>
+</span></span><span class="line"><span class="cl">			<span class="p">?</span> <span class="s">$&#34;Successfully stored weather data: {bucket}:{key}&#34;</span>
+</span></span><span class="line"><span class="cl">			<span class="p">:</span> <span class="s">$&#34;Failed to store weather data.&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">		<span class="k">return</span> <span class="n">msg</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">	<span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><p>The new lines in <code>FunctionHandler</code> allow it to make a call to PutS3Async with the data received from the weather API call, and this causes that data to be written to an object (file) there.</p>
 <ul>
 <li>The <code>key</code> variable is constructed using <code>DateTime.Now.Ticks</code> - a quick and easy way to get a short timestamp to append to the filename.</li>
 <li><code>PutToS3Async</code> returns <code>true</code> if it succeeded, and so the <code>string</code> returned from the Lambda reflects this indication of success (or not).</li>
@@ -358,8 +358,8 @@
 <li><code>test-a-city.sh</code></li>
 </ul>
 <p>The output has changed, and is now a simple string telling us if it succeeded or not. Here&rsquo;s a sample response:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text">Successfully stored weather data: sample-lambda-storage:weather_637545441697515760.json
-</code></pre></div><p><img src="/csharp-aws-lambda-tutorial/015-test-write-to-s3.png" alt="Test write to S3"></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">Successfully stored weather data: sample-lambda-storage:weather_637545441697515760.json
+</span></span></code></pre></div><p><img src="/csharp-aws-lambda-tutorial/015-test-write-to-s3.png" alt="Test write to S3"></p>
 <p>The real work of the Lambda has shifted to storing the weather data it retrieve in the <code>sample-lambda-storage</code> bucket. Let&rsquo;s check there:</p>
 <ul>
 <li>Visit the S3 service in the AWS console.</li>
@@ -369,58 +369,58 @@
 </ul>
 <p><img src="/csharp-aws-lambda-tutorial/016-download-file-from-s3.png" alt="Download the file from S3"></p>
 <p>You can now take a peek at the file itself to make sure it&rsquo;s the JSON data you&rsquo;re expecting. It&rsquo;ll look like rather a lot of JSON, all on the same line:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="p">{</span><span class="nt">&#34;coord&#34;</span><span class="p">:{</span><span class="nt">&#34;lon&#34;</span><span class="p">:</span><span class="mf">-0.1257</span><span class="p">,</span><span class="nt">&#34;lat&#34;</span><span class="p">:</span><span class="mf">51.5085</span><span class="p">},</span><span class="nt">&#34;weather&#34;</span><span class="p">:[{</span><span class="nt">&#34;id&#34;</span><span class="p">:</span><span class="mi">804</span><span class="p">,</span><span class="nt">&#34;main&#34;</span><span class="p">:</span><span class="s2">&#34;Clouds&#34;</span><span class="p">,</span><span class="nt">&#34;description&#34;</span><span class="p">:</span><span class="s2">&#34;overcast clouds&#34;</span><span class="p">,</span><span class="nt">&#34;icon&#34;</span><span class="p">:</span><span class="s2">&#34;04n&#34;</span><span class="p">}],</span><span class="nt">&#34;base&#34;</span><span class="p">:</span><span class="s2">&#34;stations&#34;</span><span class="p">,</span><span class="nt">&#34;main&#34;</span><span class="p">:{</span><span class="nt">&#34;temp&#34;</span><span class="p">:</span><span class="mf">284.86</span><span class="p">,</span><span class="nt">&#34;feels_like&#34;</span><span class="p">:</span><span class="mf">284.07</span><span class="p">,</span><span class="nt">&#34;temp_min&#34;</span><span class="p">:</span><span class="mf">284.15</span><span class="p">,</span><span class="nt">&#34;temp_max&#34;</span><span class="p">:</span><span class="mf">285.93</span><span class="p">,</span><span class="nt">&#34;pressure&#34;</span><span class="p">:</span><span class="mi">1018</span><span class="p">,</span><span class="nt">&#34;humidity&#34;</span><span class="p">:</span><span class="mi">76</span><span class="p">},</span><span class="nt">&#34;visibility&#34;</span><span class="p">:</span><span class="mi">6000</span><span class="p">,</span><span class="nt">&#34;wind&#34;</span><span class="p">:{</span><span class="nt">&#34;speed&#34;</span><span class="p">:</span><span class="mf">3.6</span><span class="p">,</span><span class="nt">&#34;deg&#34;</span><span class="p">:</span><span class="mi">90</span><span class="p">},</span><span class="nt">&#34;clouds&#34;</span><span class="p">:{</span><span class="nt">&#34;all&#34;</span><span class="p">:</span><span class="mi">95</span><span class="p">},</span><span class="nt">&#34;dt&#34;</span><span class="p">:</span><span class="mi">1618947215</span><span class="p">,</span><span class="nt">&#34;sys&#34;</span><span class="p">:{</span><span class="nt">&#34;type&#34;</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span><span class="nt">&#34;id&#34;</span><span class="p">:</span><span class="mi">1414</span><span class="p">,</span><span class="nt">&#34;country&#34;</span><span class="p">:</span><span class="s2">&#34;GB&#34;</span><span class="p">,</span><span class="nt">&#34;sunrise&#34;</span><span class="p">:</span><span class="mi">1618894425</span><span class="p">,</span><span class="nt">&#34;sunset&#34;</span><span class="p">:</span><span class="mi">1618945477</span><span class="p">},</span><span class="nt">&#34;timezone&#34;</span><span class="p">:</span><span class="mi">3600</span><span class="p">,</span><span class="nt">&#34;id&#34;</span><span class="p">:</span><span class="mi">2643743</span><span class="p">,</span><span class="nt">&#34;name&#34;</span><span class="p">:</span><span class="s2">&#34;London&#34;</span><span class="p">,</span><span class="nt">&#34;cod&#34;</span><span class="p">:</span><span class="mi">200</span><span class="p">}</span>
-</code></pre></div><p>If you wanted to, you could reformat it to make it a little more readable, or use it in another service, or another Lambda.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="p">{</span>
-    <span class="nt">&#34;coord&#34;</span><span class="p">:</span> <span class="p">{</span>
-        <span class="nt">&#34;lon&#34;</span><span class="p">:</span> <span class="mf">-0.1257</span><span class="p">,</span>
-        <span class="nt">&#34;lat&#34;</span><span class="p">:</span> <span class="mf">51.5085</span>
-    <span class="p">},</span>
-    <span class="nt">&#34;weather&#34;</span><span class="p">:</span> <span class="p">[</span>
-        <span class="p">{</span>
-            <span class="nt">&#34;id&#34;</span><span class="p">:</span> <span class="mi">804</span><span class="p">,</span>
-            <span class="nt">&#34;main&#34;</span><span class="p">:</span> <span class="s2">&#34;Clouds&#34;</span><span class="p">,</span>
-            <span class="nt">&#34;description&#34;</span><span class="p">:</span> <span class="s2">&#34;overcast clouds&#34;</span><span class="p">,</span>
-            <span class="nt">&#34;icon&#34;</span><span class="p">:</span> <span class="s2">&#34;04n&#34;</span>
-        <span class="p">}</span>
-    <span class="p">],</span>
-    <span class="nt">&#34;base&#34;</span><span class="p">:</span> <span class="s2">&#34;stations&#34;</span><span class="p">,</span>
-    <span class="nt">&#34;main&#34;</span><span class="p">:</span> <span class="p">{</span>
-        <span class="nt">&#34;temp&#34;</span><span class="p">:</span> <span class="mf">284.86</span><span class="p">,</span>
-        <span class="nt">&#34;feels_like&#34;</span><span class="p">:</span> <span class="mf">284.07</span><span class="p">,</span>
-        <span class="nt">&#34;temp_min&#34;</span><span class="p">:</span> <span class="mf">284.15</span><span class="p">,</span>
-        <span class="nt">&#34;temp_max&#34;</span><span class="p">:</span> <span class="mf">285.93</span><span class="p">,</span>
-        <span class="nt">&#34;pressure&#34;</span><span class="p">:</span> <span class="mi">1018</span><span class="p">,</span>
-        <span class="nt">&#34;humidity&#34;</span><span class="p">:</span> <span class="mi">76</span>
-    <span class="p">},</span>
-    <span class="nt">&#34;visibility&#34;</span><span class="p">:</span> <span class="mi">6000</span><span class="p">,</span>
-    <span class="nt">&#34;wind&#34;</span><span class="p">:</span> <span class="p">{</span>
-        <span class="nt">&#34;speed&#34;</span><span class="p">:</span> <span class="mf">3.6</span><span class="p">,</span>
-        <span class="nt">&#34;deg&#34;</span><span class="p">:</span> <span class="mi">90</span>
-    <span class="p">},</span>
-    <span class="nt">&#34;clouds&#34;</span><span class="p">:</span> <span class="p">{</span>
-        <span class="nt">&#34;all&#34;</span><span class="p">:</span> <span class="mi">95</span>
-    <span class="p">},</span>
-    <span class="nt">&#34;dt&#34;</span><span class="p">:</span> <span class="mi">1618947215</span><span class="p">,</span>
-    <span class="nt">&#34;sys&#34;</span><span class="p">:</span> <span class="p">{</span>
-        <span class="nt">&#34;type&#34;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
-        <span class="nt">&#34;id&#34;</span><span class="p">:</span> <span class="mi">1414</span><span class="p">,</span>
-        <span class="nt">&#34;country&#34;</span><span class="p">:</span> <span class="s2">&#34;GB&#34;</span><span class="p">,</span>
-        <span class="nt">&#34;sunrise&#34;</span><span class="p">:</span> <span class="mi">1618894425</span><span class="p">,</span>
-        <span class="nt">&#34;sunset&#34;</span><span class="p">:</span> <span class="mi">1618945477</span>
-    <span class="p">},</span>
-    <span class="nt">&#34;timezone&#34;</span><span class="p">:</span> <span class="mi">3600</span><span class="p">,</span>
-    <span class="nt">&#34;id&#34;</span><span class="p">:</span> <span class="mi">2643743</span><span class="p">,</span>
-    <span class="nt">&#34;name&#34;</span><span class="p">:</span> <span class="s2">&#34;London&#34;</span><span class="p">,</span>
-    <span class="nt">&#34;cod&#34;</span><span class="p">:</span> <span class="mi">200</span>
-<span class="p">}</span>
-</code></pre></div><h4 id="conclusion">Conclusion</h4>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="line"><span class="cl"><span class="p">{</span><span class="nt">&#34;coord&#34;</span><span class="p">:{</span><span class="nt">&#34;lon&#34;</span><span class="p">:</span><span class="mf">-0.1257</span><span class="p">,</span><span class="nt">&#34;lat&#34;</span><span class="p">:</span><span class="mf">51.5085</span><span class="p">},</span><span class="nt">&#34;weather&#34;</span><span class="p">:[{</span><span class="nt">&#34;id&#34;</span><span class="p">:</span><span class="mi">804</span><span class="p">,</span><span class="nt">&#34;main&#34;</span><span class="p">:</span><span class="s2">&#34;Clouds&#34;</span><span class="p">,</span><span class="nt">&#34;description&#34;</span><span class="p">:</span><span class="s2">&#34;overcast clouds&#34;</span><span class="p">,</span><span class="nt">&#34;icon&#34;</span><span class="p">:</span><span class="s2">&#34;04n&#34;</span><span class="p">}],</span><span class="nt">&#34;base&#34;</span><span class="p">:</span><span class="s2">&#34;stations&#34;</span><span class="p">,</span><span class="nt">&#34;main&#34;</span><span class="p">:{</span><span class="nt">&#34;temp&#34;</span><span class="p">:</span><span class="mf">284.86</span><span class="p">,</span><span class="nt">&#34;feels_like&#34;</span><span class="p">:</span><span class="mf">284.07</span><span class="p">,</span><span class="nt">&#34;temp_min&#34;</span><span class="p">:</span><span class="mf">284.15</span><span class="p">,</span><span class="nt">&#34;temp_max&#34;</span><span class="p">:</span><span class="mf">285.93</span><span class="p">,</span><span class="nt">&#34;pressure&#34;</span><span class="p">:</span><span class="mi">1018</span><span class="p">,</span><span class="nt">&#34;humidity&#34;</span><span class="p">:</span><span class="mi">76</span><span class="p">},</span><span class="nt">&#34;visibility&#34;</span><span class="p">:</span><span class="mi">6000</span><span class="p">,</span><span class="nt">&#34;wind&#34;</span><span class="p">:{</span><span class="nt">&#34;speed&#34;</span><span class="p">:</span><span class="mf">3.6</span><span class="p">,</span><span class="nt">&#34;deg&#34;</span><span class="p">:</span><span class="mi">90</span><span class="p">},</span><span class="nt">&#34;clouds&#34;</span><span class="p">:{</span><span class="nt">&#34;all&#34;</span><span class="p">:</span><span class="mi">95</span><span class="p">},</span><span class="nt">&#34;dt&#34;</span><span class="p">:</span><span class="mi">1618947215</span><span class="p">,</span><span class="nt">&#34;sys&#34;</span><span class="p">:{</span><span class="nt">&#34;type&#34;</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span><span class="nt">&#34;id&#34;</span><span class="p">:</span><span class="mi">1414</span><span class="p">,</span><span class="nt">&#34;country&#34;</span><span class="p">:</span><span class="s2">&#34;GB&#34;</span><span class="p">,</span><span class="nt">&#34;sunrise&#34;</span><span class="p">:</span><span class="mi">1618894425</span><span class="p">,</span><span class="nt">&#34;sunset&#34;</span><span class="p">:</span><span class="mi">1618945477</span><span class="p">},</span><span class="nt">&#34;timezone&#34;</span><span class="p">:</span><span class="mi">3600</span><span class="p">,</span><span class="nt">&#34;id&#34;</span><span class="p">:</span><span class="mi">2643743</span><span class="p">,</span><span class="nt">&#34;name&#34;</span><span class="p">:</span><span class="s2">&#34;London&#34;</span><span class="p">,</span><span class="nt">&#34;cod&#34;</span><span class="p">:</span><span class="mi">200</span><span class="p">}</span>
+</span></span></code></pre></div><p>If you wanted to, you could reformat it to make it a little more readable, or use it in another service, or another Lambda.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&#34;coord&#34;</span><span class="p">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&#34;lon&#34;</span><span class="p">:</span> <span class="mf">-0.1257</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&#34;lat&#34;</span><span class="p">:</span> <span class="mf">51.5085</span>
+</span></span><span class="line"><span class="cl">    <span class="p">},</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&#34;weather&#34;</span><span class="p">:</span> <span class="p">[</span>
+</span></span><span class="line"><span class="cl">        <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="nt">&#34;id&#34;</span><span class="p">:</span> <span class="mi">804</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">            <span class="nt">&#34;main&#34;</span><span class="p">:</span> <span class="s2">&#34;Clouds&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">            <span class="nt">&#34;description&#34;</span><span class="p">:</span> <span class="s2">&#34;overcast clouds&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">            <span class="nt">&#34;icon&#34;</span><span class="p">:</span> <span class="s2">&#34;04n&#34;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="p">],</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&#34;base&#34;</span><span class="p">:</span> <span class="s2">&#34;stations&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&#34;main&#34;</span><span class="p">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&#34;temp&#34;</span><span class="p">:</span> <span class="mf">284.86</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&#34;feels_like&#34;</span><span class="p">:</span> <span class="mf">284.07</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&#34;temp_min&#34;</span><span class="p">:</span> <span class="mf">284.15</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&#34;temp_max&#34;</span><span class="p">:</span> <span class="mf">285.93</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&#34;pressure&#34;</span><span class="p">:</span> <span class="mi">1018</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&#34;humidity&#34;</span><span class="p">:</span> <span class="mi">76</span>
+</span></span><span class="line"><span class="cl">    <span class="p">},</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&#34;visibility&#34;</span><span class="p">:</span> <span class="mi">6000</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&#34;wind&#34;</span><span class="p">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&#34;speed&#34;</span><span class="p">:</span> <span class="mf">3.6</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&#34;deg&#34;</span><span class="p">:</span> <span class="mi">90</span>
+</span></span><span class="line"><span class="cl">    <span class="p">},</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&#34;clouds&#34;</span><span class="p">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&#34;all&#34;</span><span class="p">:</span> <span class="mi">95</span>
+</span></span><span class="line"><span class="cl">    <span class="p">},</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&#34;dt&#34;</span><span class="p">:</span> <span class="mi">1618947215</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&#34;sys&#34;</span><span class="p">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&#34;type&#34;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&#34;id&#34;</span><span class="p">:</span> <span class="mi">1414</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&#34;country&#34;</span><span class="p">:</span> <span class="s2">&#34;GB&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&#34;sunrise&#34;</span><span class="p">:</span> <span class="mi">1618894425</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&#34;sunset&#34;</span><span class="p">:</span> <span class="mi">1618945477</span>
+</span></span><span class="line"><span class="cl">    <span class="p">},</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&#34;timezone&#34;</span><span class="p">:</span> <span class="mi">3600</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&#34;id&#34;</span><span class="p">:</span> <span class="mi">2643743</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&#34;name&#34;</span><span class="p">:</span> <span class="s2">&#34;London&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&#34;cod&#34;</span><span class="p">:</span> <span class="mi">200</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><h4 id="conclusion">Conclusion</h4>
 <p>Congratulations! You&rsquo;ve created a Lambda that fetches and stores current weather information whenever it is triggered.</p>
 <p>In the next part, we&rsquo;ll discuss triggers, and how you might schedule your Lambda to run regularly.</p>
 </div>
         <div class="post-footer">
             <div class="info">
-                <span class="separator"><a class="category" href="/categories/coding/">coding</a><a class="category" href="/categories/tutorial/">tutorial</a></span>
+                <span class="separator"><a class="category" href="/categories/tutorial/">tutorial</a></span>
                 <span class="separator"><a class="tag" href="/tags/coding/">coding</a><a class="tag" href="/tags/c%23/">c#</a><a class="tag" href="/tags/%2enet/">.net</a><a class="tag" href="/tags/aws/">aws</a><a class="tag" href="/tags/lambda/">lambda</a></span>
                 
                   <p>
@@ -442,8 +442,8 @@
 </div>
 
 <script type="text/javascript"
-        src="/js/medium-zoom.min.2d6fd0be87fa98f0c9b4dc2536b312bbca48757f584f6ea1f394abc9bcc38fbc.js"
-        integrity="sha256-LW/Qvof6mPDJtNwlNrMSu8pIdX9YT26h85SrybzDj7w="
+        src="/js/medium-zoom.min.c5719dbaf0204e654acaebc2ae8b75cfadec34b88aeca3a0da573a3a7eccdc2a.js"
+        integrity="sha256-xXGduvAgTmVKyuvCrot1z63sNLiK7KOg2lc6On7M3Co="
         crossorigin="anonymous"></script>
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-SHE42ZWKEN"></script>
 <script>
