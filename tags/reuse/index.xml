@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>reuse on instantiator.dev</title>
+    <link>https://instantiator.dev/tags/reuse/</link>
+    <description>Recent content in reuse on instantiator.dev</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sat, 01 Feb 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://instantiator.dev/tags/reuse/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>How to donate your laptop safely</title>
+      <link>https://instantiator.dev/post/donate-your-laptop-safely/</link>
+      <pubDate>Sat, 01 Feb 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://instantiator.dev/post/donate-your-laptop-safely/</guid>
+      <description>A friend is helping out with a community project and asked for some laptops.</description>
+    </item>
+    
+  </channel>
+</rss>

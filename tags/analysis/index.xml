@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>analysis on instantiator.dev</title>
+    <link>https://instantiator.dev/tags/analysis/</link>
+    <description>Recent content in analysis on instantiator.dev</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sat, 08 Dec 2012 00:00:00 +0000</lastBuildDate><atom:link href="https://instantiator.dev/tags/analysis/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Hacking up Parliament</title>
+      <link>https://instantiator.dev/post/champion/</link>
+      <pubDate>Sat, 08 Dec 2012 00:00:00 +0000</pubDate>
+      
+      <guid>https://instantiator.dev/post/champion/</guid>
+      <description>This is a necropost, resurrected from an old blog.
+The hack The Parliamentary Hack, recently featured in the Independent, was an interesting event.</description>
+    </item>
+    
+  </channel>
+</rss>

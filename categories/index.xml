@@ -6,31 +6,76 @@
     <description>Recent content in Categories on instantiator.dev</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 20 Apr 2021 18:00:00 +0000</lastBuildDate><atom:link href="https://instantiator.dev/categories/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 18 Apr 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://instantiator.dev/categories/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>coding</title>
-      <link>https://instantiator.dev/categories/coding/</link>
-      <pubDate>Tue, 20 Apr 2021 18:00:00 +0000</pubDate>
+      <title>article</title>
+      <link>https://instantiator.dev/categories/article/</link>
+      <pubDate>Mon, 18 Apr 2022 00:00:00 +0000</pubDate>
       
-      <guid>https://instantiator.dev/categories/coding/</guid>
+      <guid>https://instantiator.dev/categories/article/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>publication</title>
+      <link>https://instantiator.dev/categories/publication/</link>
+      <pubDate>Tue, 30 Nov 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://instantiator.dev/categories/publication/</guid>
       <description></description>
     </item>
     
     <item>
       <title>tutorial</title>
       <link>https://instantiator.dev/categories/tutorial/</link>
-      <pubDate>Tue, 20 Apr 2021 18:00:00 +0000</pubDate>
+      <pubDate>Fri, 12 Nov 2021 00:00:00 +0000</pubDate>
       
       <guid>https://instantiator.dev/categories/tutorial/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>tools</title>
-      <link>https://instantiator.dev/categories/tools/</link>
-      <pubDate>Mon, 04 Jan 2021 17:30:00 +0000</pubDate>
+      <title>appeal</title>
+      <link>https://instantiator.dev/categories/appeal/</link>
+      <pubDate>Fri, 18 Jun 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://instantiator.dev/categories/tools/</guid>
+      <guid>https://instantiator.dev/categories/appeal/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>tool</title>
+      <link>https://instantiator.dev/categories/tool/</link>
+      <pubDate>Thu, 17 Jun 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://instantiator.dev/categories/tool/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>police rewired</title>
+      <link>https://instantiator.dev/categories/police-rewired/</link>
+      <pubDate>Wed, 28 Apr 2021 16:00:00 +0000</pubDate>
+      
+      <guid>https://instantiator.dev/categories/police-rewired/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>necropost</title>
+      <link>https://instantiator.dev/categories/necropost/</link>
+      <pubDate>Tue, 05 Mar 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://instantiator.dev/categories/necropost/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>artciel</title>
+      <link>https://instantiator.dev/categories/artciel/</link>
+      <pubDate>Mon, 23 Apr 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://instantiator.dev/categories/artciel/</guid>
       <description></description>
     </item>
     

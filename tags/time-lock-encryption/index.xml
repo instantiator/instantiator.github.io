@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Time-lock Encryption on instantiator.dev</title>
+    <link>https://instantiator.dev/tags/time-lock-encryption/</link>
+    <description>Recent content in Time-lock Encryption on instantiator.dev</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Tue, 30 Nov 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://instantiator.dev/tags/time-lock-encryption/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Dead Person Switches - secrets from beyond the grave</title>
+      <link>https://instantiator.dev/post/dead-person-switch/</link>
+      <pubDate>Tue, 30 Nov 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://instantiator.dev/post/dead-person-switch/</guid>
+      <description>More commonly known as a Dead Man&amp;rsquo;s Switch, a Dead Person Switch (DPS) is a system that can hold a secret on behalf of a person, and govern its release should they become unavailable.</description>
+    </item>
+    
+  </channel>
+</rss>

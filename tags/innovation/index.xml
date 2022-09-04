@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>innovation on instantiator.dev</title>
+    <link>https://instantiator.dev/tags/innovation/</link>
+    <description>Recent content in innovation on instantiator.dev</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Mon, 20 Nov 2017 00:00:00 +0000</lastBuildDate><atom:link href="https://instantiator.dev/tags/innovation/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Hacking the Police, part 2</title>
+      <link>https://instantiator.dev/post/htp2-hacking-the-police/</link>
+      <pubDate>Mon, 20 Nov 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://instantiator.dev/post/htp2-hacking-the-police/</guid>
+      <description>Hacking the Police Hackathons are everywhere these days, and if you know what they are already then do please skip on and learn why the police are so hungry for innovation!</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>developer on instantiator.dev</title>
+    <link>https://instantiator.dev/tags/developer/</link>
+    <description>Recent content in developer on instantiator.dev</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sat, 23 Feb 2019 00:00:00 +0000</lastBuildDate><atom:link href="https://instantiator.dev/tags/developer/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>A friendly face for the victims of burglary</title>
+      <link>https://instantiator.dev/post/burglary-bot/</link>
+      <pubDate>Sat, 23 Feb 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://instantiator.dev/post/burglary-bot/</guid>
+      <description>This is a necropost, resurrected from an old blog. To find out more about Hack the Police events, civic tech, and policing technology, visit: Police Rewired</description>
+    </item>
+    
+    <item>
+      <title>Why are some projects so expensive?</title>
+      <link>https://instantiator.dev/post/project-costs/</link>
+      <pubDate>Fri, 22 Sep 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://instantiator.dev/post/project-costs/</guid>
+      <description>This article was originally posted to Medium.
+Why are some projects so expensive?</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Graphics on instantiator.dev</title>
+    <link>https://instantiator.dev/tags/graphics/</link>
+    <description>Recent content in Graphics on instantiator.dev</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sat, 13 Nov 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://instantiator.dev/tags/graphics/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Rainbow paws</title>
+      <link>https://instantiator.dev/post/rainbow-paws/</link>
+      <pubDate>Sat, 13 Nov 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://instantiator.dev/post/rainbow-paws/</guid>
+      <description>Art is fun and hard and messy and complicated and like every other trade it&amp;rsquo;s full of people who are earnestly showing you what they created (sprinkled with a few jokers).</description>
+    </item>
+    
+  </channel>
+</rss>

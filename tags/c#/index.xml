@@ -61,5 +61,33 @@
       <description>At first glance, Amazon Web Services (AWS) can seem impenetrably complex, but it&amp;rsquo;s not so bad once you&amp;rsquo;ve found your way around it&amp;hellip;</description>
     </item>
     
+    <item>
+      <title>Policing data interventions</title>
+      <link>https://instantiator.dev/post/policing-data-intervention/</link>
+      <pubDate>Tue, 05 Mar 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://instantiator.dev/post/policing-data-intervention/</guid>
+      <description>This is a necropost, resurrected from an old blog. To find out more about Hack the Police events, civic tech, and policing technology, visit: Police Rewired</description>
+    </item>
+    
+    <item>
+      <title>A friendly face for the victims of burglary</title>
+      <link>https://instantiator.dev/post/burglary-bot/</link>
+      <pubDate>Sat, 23 Feb 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://instantiator.dev/post/burglary-bot/</guid>
+      <description>This is a necropost, resurrected from an old blog. To find out more about Hack the Police events, civic tech, and policing technology, visit: Police Rewired</description>
+    </item>
+    
+    <item>
+      <title>Drive Stamper</title>
+      <link>https://instantiator.dev/post/np-drive-stamper/</link>
+      <pubDate>Fri, 29 May 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://instantiator.dev/post/np-drive-stamper/</guid>
+      <description>This is a necropost, resurrected from an old blog.
+Drive Stamper Drive Stamper is one of the first projects I released into the wild, and helped me to kick off my old blog in 2011.</description>
+    </item>
+    
   </channel>
 </rss>

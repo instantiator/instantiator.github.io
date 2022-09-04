@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>ambulance on instantiator.dev</title>
+    <link>https://instantiator.dev/tags/ambulance/</link>
+    <description>Recent content in ambulance on instantiator.dev</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Fri, 07 Jun 2013 00:00:00 +0000</lastBuildDate><atom:link href="https://instantiator.dev/tags/ambulance/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Hack Highlight #3: AroundMET</title>
+      <link>https://instantiator.dev/post/htp1-highlight-3-aroundmet/</link>
+      <pubDate>Fri, 07 Jun 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://instantiator.dev/post/htp1-highlight-3-aroundmet/</guid>
+      <description>This is a necropost, resurrected from an old blog. To find out more about Hack the Police events, civic tech, and policing technology, visit: Police Rewired</description>
+    </item>
+    
+  </channel>
+</rss>

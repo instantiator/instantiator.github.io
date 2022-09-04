@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>tool on instantiator.dev</title>
+    <link>https://instantiator.dev/categories/tool/</link>
+    <description>Recent content in tool on instantiator.dev</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Thu, 17 Jun 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://instantiator.dev/categories/tool/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>A template thesis to simplify your write-up</title>
+      <link>https://instantiator.dev/post/markdown-thesis-template/</link>
+      <pubDate>Thu, 17 Jun 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://instantiator.dev/post/markdown-thesis-template/</guid>
+      <description>The things I&amp;rsquo;ll do to avoid learning LaTeX&amp;hellip;
+Do you prefer Markdown to LaTeX?</description>
+    </item>
+    
+    <item>
+      <title>Querying data files with terminal tools</title>
+      <link>https://instantiator.dev/post/q/</link>
+      <pubDate>Mon, 04 Jan 2021 17:30:00 +0000</pubDate>
+      
+      <guid>https://instantiator.dev/post/q/</guid>
+      <description>There are a many ways to peek inside a data file and reason about its contents.</description>
+    </item>
+    
+    <item>
+      <title>Keeping jobs alive with caffeine</title>
+      <link>https://instantiator.dev/post/caffeine/</link>
+      <pubDate>Sat, 02 Jan 2021 19:00:00 +0000</pubDate>
+      
+      <guid>https://instantiator.dev/post/caffeine/</guid>
+      <description>My Mac likes to go to sleep to save power, and that means any long-running processes I have underway will be suspended when it does.</description>
+    </item>
+    
+    <item>
+      <title>Drive Stamper</title>
+      <link>https://instantiator.dev/post/np-drive-stamper/</link>
+      <pubDate>Fri, 29 May 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://instantiator.dev/post/np-drive-stamper/</guid>
+      <description>This is a necropost, resurrected from an old blog.
+Drive Stamper Drive Stamper is one of the first projects I released into the wild, and helped me to kick off my old blog in 2011.</description>
+    </item>
+    
+  </channel>
+</rss>

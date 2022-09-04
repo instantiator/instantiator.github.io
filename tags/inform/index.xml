@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>inform on instantiator.dev</title>
+    <link>https://instantiator.dev/tags/inform/</link>
+    <description>Recent content in inform on instantiator.dev</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Tue, 29 Oct 2013 00:00:00 +0000</lastBuildDate><atom:link href="https://instantiator.dev/tags/inform/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Text adventures in 3D</title>
+      <link>https://instantiator.dev/post/text-adventures-3d/</link>
+      <pubDate>Tue, 29 Oct 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://instantiator.dev/post/text-adventures-3d/</guid>
+      <description>This is a necropost, resurrected from an old blog.
+Educational games It&amp;rsquo;s time to take a look at a project from almost a decade ago!</description>
+    </item>
+    
+  </channel>
+</rss>

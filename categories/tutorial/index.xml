@@ -6,7 +6,16 @@
     <description>Recent content in tutorial on instantiator.dev</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 20 Apr 2021 18:00:00 +0000</lastBuildDate><atom:link href="https://instantiator.dev/categories/tutorial/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 12 Nov 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://instantiator.dev/categories/tutorial/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>TIL - shell environment variables aren&#39;t available to OS X apps</title>
+      <link>https://instantiator.dev/post/til-osx-apps-environment/</link>
+      <pubDate>Fri, 12 Nov 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://instantiator.dev/post/til-osx-apps-environment/</guid>
+      <description>Just recently I have been exploring a very strange issue: My application couldn&amp;rsquo;t find a tool that was right where it should be&amp;hellip;</description>
+    </item>
+    
     <item>
       <title>Building an AWS Lambda in C#, part 6: Triggers</title>
       <link>https://instantiator.dev/post/csharp-aws-lambda-tutorial-06/</link>
@@ -59,6 +68,42 @@
       
       <guid>https://instantiator.dev/post/csharp-aws-lambda-tutorial-01/</guid>
       <description>At first glance, Amazon Web Services (AWS) can seem impenetrably complex, but it&amp;rsquo;s not so bad once you&amp;rsquo;ve found your way around it&amp;hellip;</description>
+    </item>
+    
+    <item>
+      <title>Querying data files with terminal tools</title>
+      <link>https://instantiator.dev/post/q/</link>
+      <pubDate>Mon, 04 Jan 2021 17:30:00 +0000</pubDate>
+      
+      <guid>https://instantiator.dev/post/q/</guid>
+      <description>There are a many ways to peek inside a data file and reason about its contents.</description>
+    </item>
+    
+    <item>
+      <title>Choosing your first coding language</title>
+      <link>https://instantiator.dev/post/what-language/</link>
+      <pubDate>Sun, 03 Jan 2021 15:00:00 +0000</pubDate>
+      
+      <guid>https://instantiator.dev/post/what-language/</guid>
+      <description>Anyone can code. This is a short exploration of the choices for coding beginners out there.</description>
+    </item>
+    
+    <item>
+      <title>Keeping jobs alive with caffeine</title>
+      <link>https://instantiator.dev/post/caffeine/</link>
+      <pubDate>Sat, 02 Jan 2021 19:00:00 +0000</pubDate>
+      
+      <guid>https://instantiator.dev/post/caffeine/</guid>
+      <description>My Mac likes to go to sleep to save power, and that means any long-running processes I have underway will be suspended when it does.</description>
+    </item>
+    
+    <item>
+      <title>How to donate your laptop safely</title>
+      <link>https://instantiator.dev/post/donate-your-laptop-safely/</link>
+      <pubDate>Sat, 01 Feb 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://instantiator.dev/post/donate-your-laptop-safely/</guid>
+      <description>A friend is helping out with a community project and asked for some laptops.</description>
     </item>
     
   </channel>

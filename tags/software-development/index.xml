@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>software development on instantiator.dev</title>
+    <link>https://instantiator.dev/tags/software-development/</link>
+    <description>Recent content in software development on instantiator.dev</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Thu, 05 Oct 2017 00:00:00 +0000</lastBuildDate><atom:link href="https://instantiator.dev/tags/software-development/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>5 reasons refactoring your project can give you back your competitive edge</title>
+      <link>https://instantiator.dev/post/5-reasons-to-refactor/</link>
+      <pubDate>Thu, 05 Oct 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://instantiator.dev/post/5-reasons-to-refactor/</guid>
+      <description>This article was originally posted to Medium.
+5 reasons refactoring your project can give you back your competitive edge It didn’t used to be so expensive to change one little thing&amp;hellip;</description>
+    </item>
+    
+  </channel>
+</rss>

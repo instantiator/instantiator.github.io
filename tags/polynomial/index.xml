@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Polynomial on instantiator.dev</title>
+    <link>https://instantiator.dev/tags/polynomial/</link>
+    <description>Recent content in Polynomial on instantiator.dev</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Tue, 14 Dec 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://instantiator.dev/tags/polynomial/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Secrets With Friends</title>
+      <link>https://instantiator.dev/post/secrets-with-friends/</link>
+      <pubDate>Tue, 14 Dec 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://instantiator.dev/post/secrets-with-friends/</guid>
+      <description>It&amp;rsquo;s possible to share a secret amongst a group of people so that only some of them are needed to reconstruct it&amp;hellip;</description>
+    </item>
+    
+  </channel>
+</rss>
