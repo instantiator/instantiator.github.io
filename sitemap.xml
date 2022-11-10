@@ -5,6 +5,9 @@
     <loc>https://instantiator.dev/</loc>
     <lastmod>2022-11-10T00:00:00+00:00</lastmod>
   </url><url>
+    <loc>https://instantiator.dev/tags/.net/</loc>
+    <lastmod>2022-11-10T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://instantiator.dev/categories/article/</loc>
     <lastmod>2022-11-10T00:00:00+00:00</lastmod>
   </url><url>
@@ -14,7 +17,22 @@
     <loc>https://instantiator.dev/tags/chess/</loc>
     <lastmod>2022-11-10T00:00:00+00:00</lastmod>
   </url><url>
+    <loc>https://instantiator.dev/tags/chess.com/</loc>
+    <lastmod>2022-11-10T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://instantiator.dev/tags/compose/</loc>
+    <lastmod>2022-11-10T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://instantiator.dev/tags/consensus/</loc>
+    <lastmod>2022-11-10T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://instantiator.dev/tags/distributed/</loc>
+    <lastmod>2022-11-10T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://instantiator.dev/tags/docker/</loc>
+    <lastmod>2022-11-10T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://instantiator.dev/tags/fediverse/</loc>
     <lastmod>2022-11-10T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://instantiator.dev/tags/game/</loc>
@@ -29,10 +47,16 @@
     <loc>https://instantiator.dev/tags/mastodon/</loc>
     <lastmod>2022-11-10T00:00:00+00:00</lastmod>
   </url><url>
+    <loc>https://instantiator.dev/tags/microservice/</loc>
+    <lastmod>2022-11-10T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://instantiator.dev/post/</loc>
     <lastmod>2022-11-10T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://instantiator.dev/tags/project/</loc>
+    <lastmod>2022-11-10T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://instantiator.dev/tags/serverless/</loc>
     <lastmod>2022-11-10T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://instantiator.dev/tags/social/</loc>
@@ -45,6 +69,9 @@
     <lastmod>2022-11-10T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://instantiator.dev/tags/voting/</loc>
+    <lastmod>2022-11-10T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://instantiator.dev/tags/worker/</loc>
     <lastmod>2022-11-10T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://instantiator.dev/post/sophishticated-scam/</loc>
@@ -295,9 +322,6 @@
   </url><url>
     <loc>https://instantiator.dev/contact/</loc>
     <lastmod>2021-04-21T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://instantiator.dev/tags/.net/</loc>
-    <lastmod>2021-04-20T18:00:00+00:00</lastmod>
   </url><url>
     <loc>https://instantiator.dev/tags/aws/</loc>
     <lastmod>2021-04-20T18:00:00+00:00</lastmod>
