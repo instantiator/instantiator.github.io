@@ -3,7 +3,49 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://instantiator.dev/</loc>
-    <lastmod>2022-04-18T00:00:00+00:00</lastmod>
+    <lastmod>2022-11-10T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://instantiator.dev/categories/article/</loc>
+    <lastmod>2022-11-10T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://instantiator.dev/categories/</loc>
+    <lastmod>2022-11-10T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://instantiator.dev/tags/chess/</loc>
+    <lastmod>2022-11-10T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://instantiator.dev/tags/consensus/</loc>
+    <lastmod>2022-11-10T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://instantiator.dev/tags/game/</loc>
+    <lastmod>2022-11-10T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://instantiator.dev/tags/games/</loc>
+    <lastmod>2022-11-10T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://instantiator.dev/post/consensus-games/</loc>
+    <lastmod>2022-11-10T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://instantiator.dev/tags/mastodon/</loc>
+    <lastmod>2022-11-10T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://instantiator.dev/post/</loc>
+    <lastmod>2022-11-10T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://instantiator.dev/tags/project/</loc>
+    <lastmod>2022-11-10T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://instantiator.dev/tags/social/</loc>
+    <lastmod>2022-11-10T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://instantiator.dev/tags/</loc>
+    <lastmod>2022-11-10T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://instantiator.dev/tags/twitter/</loc>
+    <lastmod>2022-11-10T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://instantiator.dev/tags/voting/</loc>
+    <lastmod>2022-11-10T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://instantiator.dev/post/sophishticated-scam/</loc>
     <lastmod>2022-04-18T00:00:00+00:00</lastmod>
@@ -11,13 +53,7 @@
     <loc>https://instantiator.dev/tags/apple-pay/</loc>
     <lastmod>2022-04-18T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://instantiator.dev/categories/article/</loc>
-    <lastmod>2022-04-18T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://instantiator.dev/tags/banking/</loc>
-    <lastmod>2022-04-18T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://instantiator.dev/categories/</loc>
     <lastmod>2022-04-18T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://instantiator.dev/tags/con/</loc>
@@ -29,13 +65,7 @@
     <loc>https://instantiator.dev/tags/phishing/</loc>
     <lastmod>2022-04-18T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://instantiator.dev/post/</loc>
-    <lastmod>2022-04-18T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://instantiator.dev/tags/scam/</loc>
-    <lastmod>2022-04-18T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://instantiator.dev/tags/</loc>
     <lastmod>2022-04-18T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://instantiator.dev/tags/theft/</loc>
@@ -446,9 +476,6 @@
     <loc>https://instantiator.dev/tags/police-rewired/</loc>
     <lastmod>2019-02-23T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://instantiator.dev/tags/project/</loc>
-    <lastmod>2019-02-23T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://instantiator.dev/tags/reporting/</loc>
     <lastmod>2019-02-23T00:00:00+00:00</lastmod>
   </url><url>
@@ -471,9 +498,6 @@
     <lastmod>2018-04-23T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://instantiator.dev/categories/artciel/</loc>
-    <lastmod>2018-04-23T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://instantiator.dev/tags/game/</loc>
     <lastmod>2018-04-23T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://instantiator.dev/tags/nostalgia/</loc>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>social on instantiator.dev</title>
+    <link>https://instantiator.dev/tags/social/</link>
+    <description>Recent content in social on instantiator.dev</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Thu, 10 Nov 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://instantiator.dev/tags/social/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>International Consensus Games</title>
+      <link>https://instantiator.dev/post/consensus-games/</link>
+      <pubDate>Thu, 10 Nov 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://instantiator.dev/post/consensus-games/</guid>
+      <description>I&amp;rsquo;ve been working on a pet project recently: Consensus games are a fun new way to play together through social media&amp;hellip; While we wait for some more accounts to be approved across the fediverse, here&amp;rsquo;s a little intro to the idea and an update on progress&amp;hellip;</description>
+    </item>
+    
+  </channel>
+</rss>
