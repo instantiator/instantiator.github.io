@@ -262,7 +262,7 @@
 <p>I&rsquo;m working in C# and each microservice is a .NET Worker, containerised with docker. The whole application is defined in docker compose - making it easy to bring up and manage.</p>
 <p>All services currently share a single database - a handy shortcut for managing shared games (for now).</p>
 <p>When ready, I expect to be able to run the whole thing on a <a href="https://www.raspberrypi.com/">Raspberry Pi</a> from home.</p>
-<p>This is Colossus, my Raspberry Pi stack&hellip; Its namesake was a World War II computer designed for cryptanalysis of German ciphers. It was the size of your living room, and weighed 5 tonnes.</p>
+<p>This is Colossus, my Raspberry Pi stack&hellip; <a href="https://en.wikipedia.org/wiki/Colossus_computer">Its namesake</a> was a World War II computer designed for cryptanalysis of German ciphers. It was the size of your living room, and weighed 5 tonnes.</p>
 <p><img src="/consensus/colossus.jpg" alt="This is colossus" title="This is colossus - 4 Raspberry Pi computers, stacked one atop the other."></p>
 <h2 id="performance">Performance</h2>
 <p>After MVP I may consider giving each node its own database instance. There aren&rsquo;t too many benefits to that for now - but should we find that the database is the bottleneck, it could help to break things up.</p>
