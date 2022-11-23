@@ -8,6 +8,15 @@
     <language>en</language>
     <lastBuildDate>Thu, 10 Nov 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://instantiator.dev/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>About</title>
+      <link>https://instantiator.dev/about/</link>
+      <pubDate>Wed, 23 Nov 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://instantiator.dev/about/</guid>
+      <description>I am a tech lead and senior software developer. My career reflects a strong emphasis for public service and volunteerism.</description>
+    </item>
+    
+    <item>
       <title>International Consensus Games</title>
       <link>https://instantiator.dev/post/consensus-games/</link>
       <pubDate>Thu, 10 Nov 2022 00:00:00 +0000</pubDate>
@@ -96,15 +105,6 @@ Do you prefer Markdown to LaTeX?</description>
       
       <guid>https://instantiator.dev/archives/</guid>
       <description></description>
-    </item>
-    
-    <item>
-      <title>About</title>
-      <link>https://instantiator.dev/about/</link>
-      <pubDate>Wed, 21 Apr 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://instantiator.dev/about/</guid>
-      <description>Lewis Westbury is a senior software developer at Government Digital Service, volunteer, founder of Police Rewired and keen puzzle gamer.</description>
     </item>
     
     <item>
