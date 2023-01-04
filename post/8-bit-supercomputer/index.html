@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html  dir="ltr" lang="en" data-theme=""><head>
+    <title> instantiator.dev | 8-bit Supercomputer </title>
+
+    
+    <meta charset="utf-8"><meta name="generator" content="Hugo 0.105.0"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+    <meta name="description" content="tech, volunteers, public safety, articles and ideas">
+    
+    
+    
+    <link rel="stylesheet"
+        href="/css/style.min.7ec96a07e10b60a6997be730fc5d4d3467a225c68515a7df6ae17ac2500f828c.css"
+        integrity="sha256-fslqB&#43;ELYKaZe&#43;cw/F1NNGeiJcaFFaffauF6wlAPgow="
+        crossorigin="anonymous"
+        type="text/css">
+    
+
+    
+    <link rel="stylesheet"
+        href="/css/additional-classes.min.1d76732c34340c3588f50dacb5d8ce67a8c9ad2bf0140c8eb825f3f4e3a071c4.css"
+        integrity="sha256-HXZzLDQ0DDWI9Q2stdjOZ6jJrSvwFAyOuCXz9OOgccQ="
+        crossorigin="anonymous"
+        type="text/css">
+
+    
+    <link rel="stylesheet"
+        href="/css/markupHighlight.min.f798cbda9aaa38f89eb38be6414bd082cfd71a6780375cbf67b6d2fb2b96491e.css"
+        integrity="sha256-95jL2pqqOPies4vmQUvQgs/XGmeAN1y/Z7bS&#43;yuWSR4="
+        crossorigin="anonymous"
+        type="text/css">
+    
+
+
+
+    <link rel="stylesheet" 
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" 
+    integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" 
+    crossorigin="anonymous" />
+
+    
+    <link rel="shortcut icon" href="/favicons/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicons/favicon-16x16.png">
+
+    <link rel="canonical" href="/post/8-bit-supercomputer/">
+
+    
+    
+    
+    
+    <script type="text/javascript"
+            src="/js/anatole-header.min.df804b63b5bd8474ea0756ea874bc8f1e92552708cc6ea43aa0d76981dc419f9.js"
+            integrity="sha256-34BLY7W9hHTqB1bqh0vI8eklUnCMxupDqg12mB3EGfk="
+            crossorigin="anonymous"></script>
+
+
+    
+        
+        
+        <script type="text/javascript"
+                src="/js/anatole-theme-switcher.min.ea8ebe268922ef9849261a1312cd65b640595e65251ce4c00534a176afd1ac0c.js"
+                integrity="sha256-6o6&#43;Joki75hJJhoTEs1ltkBZXmUlHOTABTShdq/RrAw="
+                crossorigin="anonymous"></script>
+    
+    <meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://instantiator.dev/advent-2022/deep-thought.png"/>
+
+<meta name="twitter:title" content="8-bit Supercomputer"/>
+<meta name="twitter:description" content="It took me 3 weeks to complete the day 11 puzzle for Advent of Code on a BBC Micro this year, and you&rsquo;d be hard pressed to describe my solution as &ldquo;proportionate&rdquo; or &ldquo;necessary&rdquo;&hellip;"/>
+
+
+    
+    <meta property="og:title" content="8-bit Supercomputer" />
+<meta property="og:description" content="It took me 3 weeks to complete the day 11 puzzle for Advent of Code on a BBC Micro this year, and you&rsquo;d be hard pressed to describe my solution as &ldquo;proportionate&rdquo; or &ldquo;necessary&rdquo;&hellip;" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://instantiator.dev/post/8-bit-supercomputer/" /><meta property="og:image" content="https://instantiator.dev/advent-2022/deep-thought.png" /><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2023-01-04T00:00:00+00:00" />
+<meta property="article:modified_time" content="2023-01-04T00:00:00+00:00" /><meta property="og:site_name" content="instantiator.dev" />
+
+
+
+</head>
+<body><div class="sidebar animated fadeInDown ">
+    <div class="logo-title">
+        <div class="title">
+            <img src="/lewis/profile.jpg" alt="profile picture">
+            <h3 title=""><a href="/">instantiator.dev</a></h3>
+            <div class="description">
+                <p>tech, volunteers, public safety, articles and ideas</p>
+            </div>
+        </div>
+    </div>
+    <ul class="social-links">
+        
+            <li>
+                <a href="https://icgames.net" rel="me" aria-label="icgames.net">
+                    <i class="fas fa-chess-knight fa-2x" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+            <li>
+                <a href="https://www.chess.com/member/instantiator" rel="me" aria-label="icgames.net">
+                    <i class="fas fa-chess-pawn fa-2x" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+            <li>
+                <a href="https://mastodon.social/@instantiator" rel="me" aria-label="Mastodon">
+                    <i class="fab fa-mastodon fa-2x" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+            <li>
+                <a href="https://twitter.com/instantiator" rel="me" aria-label="Twitter">
+                    <i class="fab fa-twitter fa-2x" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+            <li>
+                <a href="https://github.com/instantiator" rel="me" aria-label="GitHub">
+                    <i class="fab fa-github fa-2x" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+            <li>
+                <a href="https://www.linkedin.com/in/lewiswestbury" rel="me" aria-label="Linkedin">
+                    <i class="fab fa-linkedin fa-2x" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+            <li>
+                <a href="https://instantiator.dev/index.xml" rel="me" aria-label="RSS">
+                    <i class="fas fa-rss fa-2x" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+    </ul>
+    <div class="footer">
+        <div class="by_farbox">&copy; Lewis Westbury  2023 </div>
+    </div>
+</div>
+<div class="main">
+    <div class="page-top  animated fadeInDown ">
+    <a role="button" class="navbar-burger" data-target="navMenu" aria-label="menu" aria-expanded="false">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+    </a>
+    <ul class="nav" id="navMenu">
+        
+        
+            
+            <li><a 
+                   href="/"
+                        
+                   title="">Home</a></li>
+        
+            
+            <li><a 
+                   href="/post/"
+                        
+                   title="">Posts</a></li>
+        
+            
+            <li><a 
+                   href="/about/"
+                        
+                   title="">About</a></li>
+        
+        
+        
+            <li class="theme-switch-item">
+                <a class="theme-switch" title="Switch Theme">
+                    <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+    </ul>
+</div>
+
+    <div class="autopagerize_page_element">
+        <div class="content">
+    <div class="post  animated fadeInDown ">
+        <div class="post-content">
+            
+            <div class="post-title">
+                <h3>8-bit Supercomputer</h3>
+                
+                    <div class="info">
+                        <em class="fas fa-calendar-day"></em>
+                        <span class="date"> 
+                                                2023-01-04
+                                           </span>
+                        <em class="fas fa-stopwatch"></em>
+                        <span class="reading-time">7-minute read</span>
+                    </div>
+                
+            </div>
+
+            <p>It took me 3 weeks to complete the day 11 puzzle for Advent of Code on a BBC Micro this year, and you&rsquo;d be hard pressed to describe my solution as &ldquo;proportionate&rdquo; or &ldquo;necessary&rdquo;&hellip;</p>
+<p><em><strong>TLDR:</strong> I wrote an arithmetic library in BBC BASIC to work on arbitrary sized numbers, and containerised beebjit to run it at modern speeds.** You&rsquo;re welcome to plunder my solutions and use them in your own projects.</em></p>
+<h1 id="8-bit-supercomputer">8-bit Supercomputer</h1>
+<p>The <a href="https://en.wikipedia.org/wiki/BBC_Micro">BBC Micro</a> is an iconic little computer from 1981, firmly printed into the minds of school-children in the UK who grew up in the 80s. (I feel a close kinship with it - as I&rsquo;m from 1981, too.)</p>
+<p><img 
+style="max-width: 480px;"
+src="/advent-2022/bbc-micro.jpg"
+alt="A BBC Micro computer - black keys built into a light beige plastic casing, with a row of red function keys above the keyboard."
+title="A BBC Micro computer - black keys built into a light beige plastic casing, with a row of red function keys above the keyboard."></p>
+<p><a href="https://adventofcode.com/">Advent of Code</a> is a series of coding puzzles, published in December of each year, of (approximately) increasing difficulty. There are 2 puzzles per day for each day until Christmas.</p>
+<p>This year (2022), I decided to attempt the challenge in BBC BASIC - the programming language that shipped with the BBC Micro. There&rsquo;s a fun editor and emulator at <a href="https://bbcmic.ro">bbcmic.ro</a>, and lots of fun examples of tiny programs written with it for the <a href="https://www.bbcmicrobot.com/">BBC Micro Bot</a>.</p>
+<p>Everything was going swimmingly (although on some days I ran pretty close to the memory limits of the BBC) until day 11. I completed the first part of the problem in reasonable time, but the second one had me stumped. There were 3 difficult aspects to this particular puzzle&hellip;</p>
+<ol>
+<li>It required a little bit of knowledge of remainder theorem.</li>
+<li>It required use of very big numbers (larger than can be represented with 32 bits).</li>
+<li>It required 10,000 iterations of a complex algorithm to reach the answer.</li>
+</ol>
+<p>The poor little machine was not built to do this kind of work!</p>
+<h2 id="1-the-remainder-theorem-thing">1. The remainder theorem thing</h2>
+<p>Aspect 1 caught me out at first, but once I&rsquo;d grasped this, I was able to make progress:</p>
+<blockquote>
+<p>if you have a very large number and you want to reduce it, but also need to preserve the remainder properties when divided by a collection of other numbers, get the product of those other numbers, divide the original by that, and take the remainder.</p>
+</blockquote>
+<p>For example:</p>
+<ul>
+<li>You have a large number: 5000</li>
+<li><code>5000 / 3 = 1666 r 2</code></li>
+<li><code>5000 / 5 = 1000 r 0</code></li>
+<li><code>5000 / 11 = 454 r 6</code></li>
+<li>You can divide 5000 by (<code>3 x 5 x 11 = 165</code>) to preserve the remainders, ie.</li>
+<li><code>5000 / 165 = 30 r 50</code> (take the remainder)</li>
+<li><code>50 / 3 = 16 r 2</code> (the remainder is preserved)</li>
+<li><code>50 / 5 = 10 r 0</code> (the remainder is preserved)</li>
+<li><code>50 / 11 = 4 r 6</code> (the remainder is preserved)</li>
+</ul>
+<p>Fine - I had that part of the problem solved, and for a while my solution seemed to work, although it was taking a very long time!</p>
+<h2 id="2-very-big-numbers">2. Very Big Numbers</h2>
+<p>At first, the solution I had put together seemed to be working, but then disaster struck! Despite reducing each value by the product of the numbers found in the real problem (<code>2 x 3 x 5 x 7 x 11 x 13 x 17 x 19 = 9699690</code>), the values reached during the calculations were still far too large and the program crashed out&hellip;</p>
+<p>BBC BASIC can handle 32-bit signed numbers. That gives a range of -2147483648 through to 2147483647. I had run into a limitation of the computer.</p>
+<p>I needed a way to do arithmetic with numbers of any size. Remembering that I&rsquo;d read something about big numbers in one of my brother&rsquo;s old BBC Micro magazines, years ago, I started searching. Sadly, I couldn&rsquo;t find any reference to it.</p>
+<p>I kept searching&hellip; and I did come across a couple of interesting hits:</p>
+<ol>
+<li>The <code>bigint.bbc</code> library that&rsquo;s bundled with R. T. Russell&rsquo;s <a href="https://www.bbcbasic.co.uk/bbcsdl/index.html">BBC BASIC for SDL 2.0</a></li>
+<li>An article by David Tall, found in MICROMATH, Autumn 1985 edition: <a href="/advent-2022/ot1985e-large-numbers.pdf">Arithmetic with large numbers</a></li>
+</ol>
+<p>Unfortunately, the <code>bigint.bbc</code> library doesn&rsquo;t really fit the need here: It assumes the availability of 64-bit integers - and this means it&rsquo;s only really going to work for more recent/modern editions of BASIC.</p>
+<p>David Tall&rsquo;s article, on the other hand, was very promising! It describes how to use some procedures and functions he developed, that work on arbitrary numbers stored as strings. The code itself was almost certainly provided on a tape or disk that came with the magazine - but sadly that was not available.</p>
+<p><a href="https://en.wikipedia.org/wiki/David_Tall">David Tall</a> is a Professor of Mathematical Thinking at Warwick University, and maintains a professional and personal website. I reached out to him to ask if he still had any of the missing code. In response, he was very encouraging - but invited me to develop my own solution, rather than handing over his 1985 work.</p>
+<p>I&rsquo;m pleased to say that I did! It took a while, it&rsquo;s not my finest work, and I had to learn some basic pencil-and-paper arithmetic again to do it - but it works.</p>
+<p>You can see the library here: <a href="https://github.com/instantiator/advent-of-code-2022/blob/main/bignums/bignum.v1.basic">bignum.v1.basic</a> (and you&rsquo;re more than welcome to plunder it for your own project, or improve on it!)</p>
+<p><img 
+style="max-width: 640px;"
+src="/advent-2022/bignum.png"
+alt="A BBC Micro screen - coloured text on a black background. It's showing a number of tests in progress that exercise a variety of big number arithmetic functions."
+title="A BBC Micro screen - coloured text on a black background. It's showing a number of tests in progress that exercise a variety of big number arithmetic functions."></p>
+<p>So I now had functions that can parse numbers of indefinite size! (Well, limited by strings in BBC BASIC - which gives an upper limit of <code>255</code> characters. Still, that&rsquo;s much bigger than before, and easily big enough&hellip;)</p>
+<p><em>A trick I picked up was to initialise strings to their maximum length when they are first defined. If a string variable is replaced with a string that&rsquo;s longer, the original becomes wasted space and the computer must claim additional memory (from a very limited supply!) By initialising each string at maximum length, the space can be reused.</em></p>
+<h2 id="3-10000-iterations">3. 10,000 iterations</h2>
+<p>Everything was back on track - I could do my calculations without crashing the machine, but there was another problem. This solution going to take a very long time to run! <a href="https://stardot.org.uk/forums/viewtopic.php?t=19819">BBC BASIC is a fast implementation of BASIC</a> (for which a lot of credit is attributed to Sophie Wilson&rsquo;s work) - but it&rsquo;s all running on a 6502 processor (clocked at ~2Mhz), and it&rsquo;s an interpreted language.</p>
+<p>Add to that, the laboriously slow big number arithemtic library I&rsquo;d just written, and multiply the work to 10,000 iterations, and we have a problem!</p>
+<p>I&rsquo;ll cut to the chase: The solution ought to complete in about <strong>72 minutes</strong> on a standard BBC Micro model B. That&rsquo;s far too long for me. Particularly when I didn&rsquo;t know for sure that I had it right, yet!</p>
+<p>I turned to the black art of &ldquo;finding a fast emulator&rdquo; - and <a href="https://github.com/scarybeasts/beebjit">beebjit</a> by <a href="https://github.com/scarybeasts">Chris Evans</a> was just the ticket!</p>
+<p>As the name implies, it&rsquo;s features &ldquo;just-in-time&rdquo; compilation, which means it will compile the 6502 code it needs to run into host code, as it encounters it. This means the BASIC interpreter can now run at the speed of the modern super-fast computer you&rsquo;re using.</p>
+<p>This reduced my runtime to 13 minutes. It&rsquo;s still quite long - but good enough for a few iterations to get the solution just right.</p>
+<p>In the form found on github, beebjit is reasonably straightforward to compile for yourself - but I went ahead and containerised it with <a href="https://www.docker.com/products/docker-desktop/">docker</a> to make it a bit easier to use.</p>
+<p>You can see my solution here: <a href="https://github.com/instantiator/advent-of-code-2022/tree/main/beebjit">instantiator/advent-of-code-2022/beebjit</a></p>
+<p>I was particularly interested in fast terminal mode that it offers, so that&rsquo;s all I&rsquo;ve scripted. With docker installed on your system, you can:</p>
+<ul>
+<li>Run <code>docker-build.sh</code> to create a docker image containing beebjit, compiled and ready to use.</li>
+<li>Run <code>run-fast-bbc-terminal.sh</code> to launch beebjit on the terminal in fast mode.</li>
+</ul>
+<p>NB. It seems like I/O is pretty slow for beebjit in this mode, but when it&rsquo;s not printing to the screen it&rsquo;s <em>very</em> fast!</p>
+<h2 id="of-mice-and-men">Of mice and men</h2>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/List_of_The_Hitchhiker%27s_Guide_to_the_Galaxy_characters#Deep_Thought">Deep Thought</a> ran for <strong>7.5 million years</strong>, determining that the answer to the ultimate question of life, the universe and everything was 42.</li>
+<li><a href="https://hitchhikers.fandom.com/wiki/Earth#Destruction">Earth</a> was destroyed 5 minutes before it was due to finish calculating the original question, destroying <strong>10 million years</strong> worth of work.</li>
+<li>beebjit running my solution took <strong>13 minutes</strong> to determine that the level of monkey business on day 11 of Advent of Code 2022 was <code>30616425600</code>.</li>
+</ul>
+<p><img 
+style="width: 640px;"
+src="/advent-2022/deep-thought.png"
+alt="Deep Thought, a giant green supercomputer pouring with steam or smoke from dry ice, towers above 2 philosophers who are asking it a complicated question."
+title="Deep Thought, a giant green supercomputer pouring with steam or smoke from dry ice, towers above 2 philosophers who are asking it a complicated question."></p>
+<p><img 
+style="width: 640px;"
+src="/advent-2022/11B-screenshot.png"
+alt="A terminal shows a BBC Micro prompt with RUN. Below is a row of dots. Below that are 8 entries - one for each money, indicating how many inspections each monkey made."
+title="A terminal shows a BBC Micro prompt with RUN. Below is a row of dots. Below that are 8 entries - one for each money, indicating how many inspections each monkey made."></p>
+<p>A BBC Micro conducting arithmetic on arbitrary size numbers, at modern speeds, is an 8-bit super-computer in my books!</p>
+<p>That&rsquo;s good enough for me.</p>
+</div>
+        <div class="post-footer">
+            <div class="info">
+                <span class="separator"><a class="category" href="/categories/article/">article</a></span>
+                <span class="separator"><a class="tag" href="/tags/bbcmicro/">BBCMicro</a><a class="tag" href="/tags/8-bit/">8-bit</a><a class="tag" href="/tags/retro/">Retro</a><a class="tag" href="/tags/retrocomputing/">RetroComputing</a><a class="tag" href="/tags/adventofcode/">AdventOfCode</a><a class="tag" href="/tags/arithemetic/">Arithemetic</a><a class="tag" href="/tags/bignumbers/">BigNumbers</a><a class="tag" href="/tags/emulator/">Emulator</a><a class="tag" href="/tags/1981/">1981</a><a class="tag" href="/tags/supercomputer/">Supercomputer</a><a class="tag" href="/tags/beebjit/">beebjit</a><a class="tag" href="/tags/docker/">Docker</a><a class="tag" href="/tags/container/">Container</a></span>
+                
+
+            </div>
+        </div>
+
+        
+    </div>
+
+
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript"
+        src="/js/medium-zoom.min.e1c6918cbaa90022a5612f0bd71c7bf3be6d036614c5729cebfe14f7b91fa4bc.js"
+        integrity="sha256-4caRjLqpACKlYS8L1xx7875tA2YUxXKc6/4U97kfpLw="
+        crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-SHE42ZWKEN"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-SHE42ZWKEN');
+</script></body>
+
+</html>

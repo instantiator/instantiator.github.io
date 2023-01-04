@@ -3,15 +3,63 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://instantiator.dev/</loc>
-    <lastmod>2022-12-08T00:00:00+00:00</lastmod>
+    <lastmod>2023-01-04T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://instantiator.dev/tags/.net/</loc>
-    <lastmod>2022-12-08T00:00:00+00:00</lastmod>
+    <loc>https://instantiator.dev/tags/1981/</loc>
+    <lastmod>2023-01-04T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://instantiator.dev/tags/8-bit/</loc>
+    <lastmod>2023-01-04T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://instantiator.dev/post/8-bit-supercomputer/</loc>
+    <lastmod>2023-01-04T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://instantiator.dev/tags/adventofcode/</loc>
+    <lastmod>2023-01-04T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://instantiator.dev/tags/arithemetic/</loc>
+    <lastmod>2023-01-04T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://instantiator.dev/categories/article/</loc>
-    <lastmod>2022-12-08T00:00:00+00:00</lastmod>
+    <lastmod>2023-01-04T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://instantiator.dev/tags/bbcmicro/</loc>
+    <lastmod>2023-01-04T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://instantiator.dev/tags/beebjit/</loc>
+    <lastmod>2023-01-04T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://instantiator.dev/tags/bignumbers/</loc>
+    <lastmod>2023-01-04T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://instantiator.dev/categories/</loc>
+    <lastmod>2023-01-04T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://instantiator.dev/tags/container/</loc>
+    <lastmod>2023-01-04T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://instantiator.dev/tags/docker/</loc>
+    <lastmod>2023-01-04T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://instantiator.dev/tags/emulator/</loc>
+    <lastmod>2023-01-04T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://instantiator.dev/post/</loc>
+    <lastmod>2023-01-04T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://instantiator.dev/tags/retro/</loc>
+    <lastmod>2023-01-04T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://instantiator.dev/tags/retrocomputing/</loc>
+    <lastmod>2023-01-04T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://instantiator.dev/tags/supercomputer/</loc>
+    <lastmod>2023-01-04T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://instantiator.dev/tags/</loc>
+    <lastmod>2023-01-04T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://instantiator.dev/tags/.net/</loc>
     <lastmod>2022-12-08T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://instantiator.dev/tags/chess/</loc>
@@ -24,9 +72,6 @@
     <lastmod>2022-12-08T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://instantiator.dev/tags/distributed/</loc>
-    <lastmod>2022-12-08T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://instantiator.dev/tags/docker/</loc>
     <lastmod>2022-12-08T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://instantiator.dev/tags/fediverse/</loc>
@@ -47,9 +92,6 @@
     <loc>https://instantiator.dev/tags/microservice/</loc>
     <lastmod>2022-12-08T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://instantiator.dev/post/</loc>
-    <lastmod>2022-12-08T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://instantiator.dev/tags/project/</loc>
     <lastmod>2022-12-08T00:00:00+00:00</lastmod>
   </url><url>
@@ -57,9 +99,6 @@
     <lastmod>2022-12-08T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://instantiator.dev/tags/social/</loc>
-    <lastmod>2022-12-08T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://instantiator.dev/tags/</loc>
     <lastmod>2022-12-08T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://instantiator.dev/tags/voting/</loc>
@@ -399,9 +438,6 @@
     <lastmod>2021-01-02T19:00:00+00:00</lastmod>
   </url><url>
     <loc>https://instantiator.dev/post/hello-world/</loc>
-    <lastmod>2021-01-01T22:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://instantiator.dev/tags/retro/</loc>
     <lastmod>2021-01-01T22:00:00+00:00</lastmod>
   </url><url>
     <loc>https://instantiator.dev/tags/aid/</loc>
