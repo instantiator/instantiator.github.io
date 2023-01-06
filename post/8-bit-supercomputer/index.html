@@ -199,7 +199,7 @@
             </div>
 
             <p>It took me 3 weeks to complete the day 11 puzzle for Advent of Code on a BBC Micro this year, and you&rsquo;d be hard pressed to describe my solution as &ldquo;proportionate&rdquo; or &ldquo;necessary&rdquo;&hellip;</p>
-<p><em><strong>TLDR:</strong> I wrote an arithmetic library in BBC BASIC to work on arbitrary sized numbers, and containerised beebjit to run it at modern speeds.** You&rsquo;re welcome to plunder my solutions and use them in your own projects.</em></p>
+<p><em><strong>TLDR:</strong> I wrote an arithmetic library in BBC BASIC to work on arbitrary sized numbers, and containerised beebjit to run it at modern speeds. You&rsquo;re welcome to plunder my solutions and use them in your own projects.</em></p>
 <h1 id="8-bit-supercomputer">8-bit Supercomputer</h1>
 <p>The <a href="https://en.wikipedia.org/wiki/BBC_Micro">BBC Micro</a> is an iconic little computer from 1981, firmly printed into the minds of school-children in the UK who grew up in the 80s. (I feel a close kinship with it - as I&rsquo;m from 1981, too.)</p>
 <p><img 
@@ -209,21 +209,21 @@ alt="A BBC Micro computer - black keys built into a light beige plastic casing, 
 title="A BBC Micro computer - black keys built into a light beige plastic casing, with a row of red function keys above the keyboard."></p>
 <p><a href="https://adventofcode.com/">Advent of Code</a> is a series of coding puzzles, published in December of each year, of (approximately) increasing difficulty. There are 2 puzzles per day for each day until Christmas.</p>
 <p>This year (2022), I decided to attempt the challenge in BBC BASIC - the programming language that shipped with the BBC Micro. There&rsquo;s a fun editor and emulator at <a href="https://bbcmic.ro">bbcmic.ro</a>, and lots of fun examples of tiny programs written with it for the <a href="https://www.bbcmicrobot.com/">BBC Micro Bot</a>.</p>
-<p>Everything was going swimmingly (although on some days I ran pretty close to the memory limits of the BBC) until day 11. I completed the first part of the problem in reasonable time, but the second one had me stumped. There were 3 difficult aspects to this particular puzzle&hellip;</p>
+<p>Everything was going swimmingly until day 11 (although on occasion days I came perilously close to the memory limits of the BBC)&hellip; I completed the first part of the problem in reasonable time, but the second one had me stumped. There were 3 difficult aspects to it:</p>
 <ol>
 <li>It required a little bit of knowledge of remainder theorem.</li>
 <li>It required use of very big numbers (larger than can be represented with 32 bits).</li>
 <li>It required 10,000 iterations of a complex algorithm to reach the answer.</li>
 </ol>
-<p>The poor little machine was not built to do this kind of work!</p>
+<p>The poor little BBC Micro was not built to do this kind of work!</p>
 <h2 id="1-the-remainder-theorem-thing">1. The remainder theorem thing</h2>
-<p>Aspect 1 caught me out at first, but once I&rsquo;d grasped this, I was able to make progress:</p>
+<p>Aspect 1 caught me out at first, but once I&rsquo;d grasped it, I was able to make progress:</p>
 <blockquote>
 <p>if you have a very large number and you want to reduce it, but also need to preserve the remainder properties when divided by a collection of other numbers, get the product of those other numbers, divide the original by that, and take the remainder.</p>
 </blockquote>
 <p>For example:</p>
 <ul>
-<li>You have a large number: 5000</li>
+<li>You have a large number: <code>5000</code></li>
 <li><code>5000 / 3 = 1666 r 2</code></li>
 <li><code>5000 / 5 = 1000 r 0</code></li>
 <li><code>5000 / 11 = 454 r 6</code></li>
@@ -235,16 +235,16 @@ title="A BBC Micro computer - black keys built into a light beige plastic casing
 </ul>
 <p>Fine - I had that part of the problem solved, and for a while my solution seemed to work, although it was taking a very long time!</p>
 <h2 id="2-very-big-numbers">2. Very Big Numbers</h2>
-<p>At first, the solution I had put together seemed to be working, but then disaster struck! Despite reducing each value by the product of the numbers found in the real problem (<code>2 x 3 x 5 x 7 x 11 x 13 x 17 x 19 = 9699690</code>), the values reached during the calculations were still far too large and the program crashed out&hellip;</p>
-<p>BBC BASIC can handle 32-bit signed numbers. That gives a range of -2147483648 through to 2147483647. I had run into a limitation of the computer.</p>
+<p>At first, everything seemed to be working, but then disaster struck! Despite reducing each value by the product of the numbers found in the real problem (<code>2 x 3 x 5 x 7 x 11 x 13 x 17 x 19 = 9699690</code>), the values reached during the calculations were still far too large and the program crashed out&hellip;</p>
+<p>BBC BASIC can handle 32-bit signed numbers. That gives a range of <code>-2147483648</code> through to <code>2147483647</code>. I had run into a limitation of the computer.</p>
 <p>I needed a way to do arithmetic with numbers of any size. Remembering that I&rsquo;d read something about big numbers in one of my brother&rsquo;s old BBC Micro magazines, years ago, I started searching. Sadly, I couldn&rsquo;t find any reference to it.</p>
 <p>I kept searching&hellip; and I did come across a couple of interesting hits:</p>
 <ol>
 <li>The <code>bigint.bbc</code> library that&rsquo;s bundled with R. T. Russell&rsquo;s <a href="https://www.bbcbasic.co.uk/bbcsdl/index.html">BBC BASIC for SDL 2.0</a></li>
 <li>An article by David Tall, found in MICROMATH, Autumn 1985 edition: <a href="/advent-2022/dot1985e-large-numbers.pdf">Arithmetic with large numbers</a></li>
 </ol>
-<p>Unfortunately, the <code>bigint.bbc</code> library doesn&rsquo;t really fit the need here: It assumes the availability of 64-bit integers - and this means it&rsquo;s only really going to work for more recent/modern editions of BASIC.</p>
-<p>David Tall&rsquo;s article, on the other hand, was very promising! It describes how to use some procedures and functions he developed, that work on arbitrary numbers stored as strings. The code itself was almost certainly provided on a tape or disk that came with the magazine - but sadly that was not available.</p>
+<p>Unfortunately, the <code>bigint.bbc</code> library doesn&rsquo;t really fit my need here: It assumes the availability of 64-bit integers - and this means it&rsquo;s only really going to work for the more recent/modern editions of BBC BASIC, rather than the original from the 80s.</p>
+<p>David Tall&rsquo;s article, on the other hand, was very promising! It describes how to use some procedures and functions he&rsquo;d developed to work on arbitrary numbers stored as strings. The code itself was almost certainly provided on a tape or disk that came with the magazine - but sadly that was not available.</p>
 <p><a href="https://en.wikipedia.org/wiki/David_Tall">David Tall</a> is a Professor of Mathematical Thinking at Warwick University, and maintains a professional and personal website. I reached out to him to ask if he still had any of the missing code. In response, he was very encouraging - but invited me to develop my own solution, rather than handing over his 1985 work.</p>
 <p>I&rsquo;m pleased to say that I did! It took a while, it&rsquo;s not my finest work, and I had to learn some basic pencil-and-paper arithmetic again to do it - but it works.</p>
 <p>You can see the library here: <a href="https://github.com/instantiator/advent-of-code-2022/blob/main/bignums/bignum.v1.basic">bignum.v1.basic</a> (and you&rsquo;re more than welcome to plunder it for your own project, or improve on it!)</p>
@@ -253,23 +253,23 @@ style="max-width: 640px;"
 src="/advent-2022/bignum.png"
 alt="A BBC Micro screen - coloured text on a black background. It's showing a number of tests in progress that exercise a variety of big number arithmetic functions."
 title="A BBC Micro screen - coloured text on a black background. It's showing a number of tests in progress that exercise a variety of big number arithmetic functions."></p>
-<p>So I now had functions that can parse numbers of indefinite size! (Well, limited by strings in BBC BASIC - which gives an upper limit of <code>255</code> characters. Still, that&rsquo;s much bigger than before, and easily big enough&hellip;)</p>
-<p><em>A trick I picked up was to initialise strings to their maximum length when they are first defined. If a string variable is replaced with a string that&rsquo;s longer, the original becomes wasted space and the computer must claim additional memory (from a very limited supply!) By initialising each string at maximum length, the space can be reused.</em></p>
+<p>So I now had functions to parse numbers of indefinite size! (Well, limited by strings in BBC BASIC - which gives an upper limit of <code>255</code> characters. Still, that&rsquo;s much bigger than before, and easily big enough for my purposes&hellip;)</p>
+<p><em>A trick I picked up was to initialise strings to the maximum length on first use. If a string variable is replaced with a string that&rsquo;s longer, the original becomes wasted space and the computer must claim additional memory (from a very limited supply!) By initialising each string at maximum length, the space can be reused.</em></p>
 <h2 id="3-10000-iterations">3. 10,000 iterations</h2>
-<p>Everything was back on track - I could do my calculations without crashing the machine, but there was another problem. This solution going to take a very long time to run! <a href="https://stardot.org.uk/forums/viewtopic.php?t=19819">BBC BASIC is a fast implementation of BASIC</a> (for which a lot of credit is attributed to Sophie Wilson&rsquo;s work) - but it&rsquo;s all running on a 6502 processor (clocked at ~2Mhz), and it&rsquo;s an interpreted language.</p>
-<p>Add to that, the laboriously slow big number arithemtic library I&rsquo;d just written, and multiply the work to 10,000 iterations, and we have a problem!</p>
+<p>Everything was back on track - I could do my calculations without crashing the machine, but there was another problem. This solution is going to take a very long time to run! <a href="https://stardot.org.uk/forums/viewtopic.php?t=19819">BBC BASIC is a fast implementation of BASIC</a> (for which a lot of credit is attributed to Sophie Wilson&rsquo;s work) - but it&rsquo;s all running on a 6502 processor (clocked at ~2Mhz), and it&rsquo;s an interpreted language.</p>
+<p>Add to that the laboriously slow big number arithemtic library I&rsquo;d just written and multiply the work to 10,000 iterations&hellip; We have a problem!</p>
 <p>I&rsquo;ll cut to the chase: The solution ought to complete in about <strong>72 minutes</strong> on a standard BBC Micro model B. That&rsquo;s far too long for me. Particularly when I didn&rsquo;t know for sure that I had it right, yet!</p>
 <p>I turned to the black art of &ldquo;finding a fast emulator&rdquo; - and <a href="https://github.com/scarybeasts/beebjit">beebjit</a> by <a href="https://github.com/scarybeasts">Chris Evans</a> was just the ticket!</p>
 <p>As the name implies, it&rsquo;s features &ldquo;just-in-time&rdquo; compilation, which means it will compile the 6502 code it needs to run into host code, as it encounters it. This means the BASIC interpreter can now run at the speed of the modern super-fast computer you&rsquo;re using.</p>
-<p>This reduced my runtime to 13 minutes. It&rsquo;s still quite long - but good enough for a few iterations to get the solution just right.</p>
+<p>This reduced my runtime to 13 minutes. It&rsquo;s still quite long, but it&rsquo;s good enough to iterate a few times and get the solution just right.</p>
 <p>In the form found on github, beebjit is reasonably straightforward to compile for yourself - but I went ahead and containerised it with <a href="https://www.docker.com/products/docker-desktop/">docker</a> to make it a bit easier to use.</p>
 <p>You can see my solution here: <a href="https://github.com/instantiator/advent-of-code-2022/tree/main/beebjit">instantiator/advent-of-code-2022/beebjit</a></p>
-<p>I was particularly interested in fast terminal mode that it offers, so that&rsquo;s all I&rsquo;ve scripted. With docker installed on your system, you can:</p>
+<p>I was particularly interested in the fast terminal mode that it offers so that&rsquo;s what my scripts will do. With docker installed on your system, you can:</p>
 <ul>
-<li>Run <code>docker-build.sh</code> to create a docker image containing beebjit, compiled and ready to use.</li>
-<li>Run <code>run-fast-bbc-terminal.sh</code> to launch beebjit on the terminal in fast mode.</li>
+<li>Run: <code>docker-build.sh</code> to create a docker image containing beebjit, compiled and ready to use.</li>
+<li>Run: <code>run-fast-bbc-terminal.sh</code> to launch beebjit on the terminal in fast mode.</li>
 </ul>
-<p>NB. It seems like I/O is pretty slow for beebjit in this mode, but when it&rsquo;s not printing to the screen it&rsquo;s <em>very</em> fast!</p>
+<p>NB. It seems as if I/O is pretty slow for beebjit in this mode, but when it&rsquo;s not printing to the screen it&rsquo;s <em>very</em> fast!</p>
 <h2 id="of-mice-and-men">Of mice and men</h2>
 <ul>
 <li><a href="https://en.wikipedia.org/wiki/List_of_The_Hitchhiker%27s_Guide_to_the_Galaxy_characters#Deep_Thought">Deep Thought</a> ran for <strong>7.5 million years</strong>, determining that the answer to the ultimate question of life, the universe and everything was 42.</li>
