@@ -1,11 +1,10 @@
 <!DOCTYPE html>
 <html  dir="ltr" lang="en" data-theme=""><head>
-    <title> instantiator.dev | lambda </title>
+    <title> instantiator.dev | The rocketship template 🚀 </title>
 
     
     <meta charset="utf-8"><meta name="generator" content="Hugo 0.105.0"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
     <meta name="description" content="tech, volunteers, public safety, articles and ideas">
-    <link rel="alternate" type="application/rss+xml" href="https://instantiator.dev/tags/lambda/index.xml" title="instantiator.dev" />
     
     
     
@@ -44,10 +43,9 @@
     <link rel="icon" type="image/png" sizes="32x32" href="/favicons/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/favicons/favicon-16x16.png">
 
-    <link rel="canonical" href="/tags/lambda/">
+    <link rel="canonical" href="/post/rocketship-template/">
 
     
-    <link rel="alternate" type="application/rss+xml" href="/tags/lambda/index.xml" title="instantiator.dev" />
     
     
     
@@ -66,17 +64,19 @@
                 crossorigin="anonymous"></script>
     
     <meta name="twitter:card" content="summary_large_image"/>
-<meta name="twitter:image" content="https://instantiator.dev/lewis/default-image.png"/>
+<meta name="twitter:image" content="https://instantiator.dev/rocketship/rocket-mvp.png"/>
 
-<meta name="twitter:title" content="lambda"/>
-<meta name="twitter:description" content="tech, volunteers, public safety, articles and ideas"/>
+<meta name="twitter:title" content="The rocketship template 🚀"/>
+<meta name="twitter:description" content="Presenting a simple template to develop, publish, and test a simple ."/>
 
 
     
-    <meta property="og:title" content="lambda" />
-<meta property="og:description" content="tech, volunteers, public safety, articles and ideas" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://instantiator.dev/tags/lambda/" /><meta property="og:image" content="https://instantiator.dev/lewis/default-image.png"/><meta property="og:site_name" content="instantiator.dev" />
+    <meta property="og:title" content="The rocketship template 🚀" />
+<meta property="og:description" content="Presenting a simple template to develop, publish, and test a simple ." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://instantiator.dev/post/rocketship-template/" /><meta property="og:image" content="https://instantiator.dev/rocketship/rocket-mvp.png" /><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2023-01-08T00:00:00+00:00" />
+<meta property="article:modified_time" content="2023-01-08T00:00:00+00:00" /><meta property="og:site_name" content="instantiator.dev" />
 
 
 
@@ -181,87 +181,52 @@
 
     <div class="autopagerize_page_element">
         <div class="content">
-    <div class="archive  animated fadeInDown ">
-        <ul class="list-with-title">
+    <div class="post  animated fadeInDown ">
+        <div class="post-content">
             
-                <div class="listing-title">2023</div>
+            <div class="post-title">
+                <h3>The rocketship template 🚀</h3>
                 
-                    <ul class="listing">
-                        <div class="listing-item">
-                            <div class="listing-post"><a href="/post/rocketship-template/" title="The rocketship template 🚀">The rocketship template 🚀</a>
-                                <div class="post-time"><span class="date"> 
-                                                                            2023-01-08
-                                                                            </span></div>
-                            </div>
-                        </div>
-                    </ul>
+                    <div class="info">
+                        <em class="fas fa-calendar-day"></em>
+                        <span class="date"> 
+                                                2023-01-08
+                                           </span>
+                        <em class="fas fa-stopwatch"></em>
+                        <span class="reading-time">2-minute read</span>
+                    </div>
                 
-            
-                <div class="listing-title">2021</div>
+            </div>
+
+            <p>Presenting a simple template to develop, publish, and test a simple .NET service backend on AWS, with serverless Lambda functions, supported by DynamoDb, behind an API Gateway, and protected by Cognito auth.</p>
+<p><em>Hopefully this will accelerate some early prototyping for some of my projects, and perhaps you&rsquo;ll find it useful as a reference too.</em></p>
+<h1 id="the-rocketship-template">The rocketship template</h1>
+<p>I&rsquo;ve been giving some thought to building a number of prototype projects for some friends. They need to reflect the realities of hosting on a cloud service provider, exploit the benefits of serverless design, and offer some frequently needed services: serverless lambdas with database support, behind an API gateway protected by an authentication service.</p>
+<p>What I came up with is probably not too surprising given the brief:</p>
+<p><img src="https://raw.githubusercontent.com/instantiator/mvp-rocketship-template/main/documentation/images/rocket-mvp.png" alt="A diagram illustrating several services, each with access to a database; behind an API gateway, which has access to an auth service. A web app and mobile app both have access to the API Gateway and auth service, too." title="A diagram illustrating several services, each with access to a database; behind an API gateway, which has access to an auth service. A web app and mobile app both have access to the API Gateway and auth service, too."></p>
+<p>It&rsquo;s a nice design, it&rsquo;s pretty simple, and it suits a variety of applications. You&rsquo;re welcome to plunder it on GitHub:</p>
+<ul>
+<li><a href="https://github.com/instantiator/mvp-rocketship-template">instantiator/mvp-rocketship-template</a></li>
+</ul>
+<p>Scripts and instructions for setup, building and testing a deployment are included with the repository.</p>
+<h2 id="some-notes">Some notes</h2>
+<p>Zones (DMZ and Services) and connections between services here are implemented through IAM access controls.</p>
+<p>I instinctively work in C# by default, and that&rsquo;s what I&rsquo;ve used for the sample functions in the template. It doesn&rsquo;t need to be .NET services, and you can swap them out for anything else.</p>
+<p>I&rsquo;ve not implemented any kind of client yet. I&rsquo;ve had some good results using <a href="https://dotnet.microsoft.com/en-us/apps/aspnet/web-apps/blazor">Blazor webasm</a> in the past, but you may have a cool javascript or TS framework of your own in mind.</p>
+<p><em>If you make improvements and amendments, do please upstream a PR or two!</em></p>
+</div>
+        <div class="post-footer">
+            <div class="info">
+                <span class="separator"><a class="category" href="/categories/article/">article</a></span>
+                <span class="separator"><a class="tag" href="/tags/aws/">AWS</a><a class="tag" href="/tags/sam/">SAM</a><a class="tag" href="/tags/template/">template</a><a class="tag" href="/tags/rocketship/">rocketship</a><a class="tag" href="/tags/serverless/">serverless</a><a class="tag" href="/tags/api/">api</a><a class="tag" href="/tags/gateway/">gateway</a><a class="tag" href="/tags/lambda/">lambda</a><a class="tag" href="/tags/dynamodb/">dynamodb</a><a class="tag" href="/tags/database/">database</a><a class="tag" href="/tags/cognito/">cognito</a><a class="tag" href="/tags/auth/">auth</a><a class="tag" href="/tags/dotnet/">dotnet</a><a class="tag" href="/tags/csharp/">csharp</a></span>
                 
-                    <ul class="listing">
-                        <div class="listing-item">
-                            <div class="listing-post"><a href="/post/csharp-aws-lambda-tutorial-06/" title="Building an AWS Lambda in C#, part 6: Triggers">Building an AWS Lambda in C#, part 6: Triggers</a>
-                                <div class="post-time"><span class="date"> 
-                                                                            2021-04-20
-                                                                            </span></div>
-                            </div>
-                        </div>
-                    </ul>
-                
-                    <ul class="listing">
-                        <div class="listing-item">
-                            <div class="listing-post"><a href="/post/csharp-aws-lambda-tutorial-05/" title="Building an AWS Lambda in C#, part 5: S3">Building an AWS Lambda in C#, part 5: S3</a>
-                                <div class="post-time"><span class="date"> 
-                                                                            2021-04-19
-                                                                            </span></div>
-                            </div>
-                        </div>
-                    </ul>
-                
-                    <ul class="listing">
-                        <div class="listing-item">
-                            <div class="listing-post"><a href="/post/csharp-aws-lambda-tutorial-04/" title="Building an AWS Lambda in C#, part 4: Logs">Building an AWS Lambda in C#, part 4: Logs</a>
-                                <div class="post-time"><span class="date"> 
-                                                                            2021-04-18
-                                                                            </span></div>
-                            </div>
-                        </div>
-                    </ul>
-                
-                    <ul class="listing">
-                        <div class="listing-item">
-                            <div class="listing-post"><a href="/post/csharp-aws-lambda-tutorial-03/" title="Building an AWS Lambda in C#, part 3: APIs and secrets">Building an AWS Lambda in C#, part 3: APIs and secrets</a>
-                                <div class="post-time"><span class="date"> 
-                                                                            2021-04-17
-                                                                            </span></div>
-                            </div>
-                        </div>
-                    </ul>
-                
-                    <ul class="listing">
-                        <div class="listing-item">
-                            <div class="listing-post"><a href="/post/csharp-aws-lambda-tutorial-02/" title="Building an AWS Lambda in C#, part 2: Build, deploy and invoke">Building an AWS Lambda in C#, part 2: Build, deploy and invoke</a>
-                                <div class="post-time"><span class="date"> 
-                                                                            2021-04-16
-                                                                            </span></div>
-                            </div>
-                        </div>
-                    </ul>
-                
-                    <ul class="listing">
-                        <div class="listing-item">
-                            <div class="listing-post"><a href="/post/csharp-aws-lambda-tutorial-01/" title="Building an AWS Lambda in C#, part 1: AWS">Building an AWS Lambda in C#, part 1: AWS</a>
-                                <div class="post-time"><span class="date"> 
-                                                                            2021-04-15
-                                                                            </span></div>
-                            </div>
-                        </div>
-                    </ul>
-                
-            
-        </ul>
+
+            </div>
+        </div>
+
+        
     </div>
+
 
         </div>
     </div>

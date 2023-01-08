@@ -6,7 +6,133 @@
     <description>Recent content in Tags on instantiator.dev</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 04 Jan 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://instantiator.dev/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 08 Jan 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://instantiator.dev/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>api</title>
+      <link>https://instantiator.dev/tags/api/</link>
+      <pubDate>Sun, 08 Jan 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://instantiator.dev/tags/api/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>auth</title>
+      <link>https://instantiator.dev/tags/auth/</link>
+      <pubDate>Sun, 08 Jan 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://instantiator.dev/tags/auth/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>aws</title>
+      <link>https://instantiator.dev/tags/aws/</link>
+      <pubDate>Sun, 08 Jan 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://instantiator.dev/tags/aws/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>cognito</title>
+      <link>https://instantiator.dev/tags/cognito/</link>
+      <pubDate>Sun, 08 Jan 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://instantiator.dev/tags/cognito/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>csharp</title>
+      <link>https://instantiator.dev/tags/csharp/</link>
+      <pubDate>Sun, 08 Jan 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://instantiator.dev/tags/csharp/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>database</title>
+      <link>https://instantiator.dev/tags/database/</link>
+      <pubDate>Sun, 08 Jan 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://instantiator.dev/tags/database/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>dotnet</title>
+      <link>https://instantiator.dev/tags/dotnet/</link>
+      <pubDate>Sun, 08 Jan 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://instantiator.dev/tags/dotnet/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>dynamodb</title>
+      <link>https://instantiator.dev/tags/dynamodb/</link>
+      <pubDate>Sun, 08 Jan 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://instantiator.dev/tags/dynamodb/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>gateway</title>
+      <link>https://instantiator.dev/tags/gateway/</link>
+      <pubDate>Sun, 08 Jan 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://instantiator.dev/tags/gateway/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>lambda</title>
+      <link>https://instantiator.dev/tags/lambda/</link>
+      <pubDate>Sun, 08 Jan 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://instantiator.dev/tags/lambda/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>rocketship</title>
+      <link>https://instantiator.dev/tags/rocketship/</link>
+      <pubDate>Sun, 08 Jan 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://instantiator.dev/tags/rocketship/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>SAM</title>
+      <link>https://instantiator.dev/tags/sam/</link>
+      <pubDate>Sun, 08 Jan 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://instantiator.dev/tags/sam/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>serverless</title>
+      <link>https://instantiator.dev/tags/serverless/</link>
+      <pubDate>Sun, 08 Jan 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://instantiator.dev/tags/serverless/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>template</title>
+      <link>https://instantiator.dev/tags/template/</link>
+      <pubDate>Sun, 08 Jan 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://instantiator.dev/tags/template/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>1981</title>
       <link>https://instantiator.dev/tags/1981/</link>
@@ -220,15 +346,6 @@
       <pubDate>Thu, 08 Dec 2022 00:00:00 +0000</pubDate>
       
       <guid>https://instantiator.dev/tags/project/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>serverless</title>
-      <link>https://instantiator.dev/tags/serverless/</link>
-      <pubDate>Thu, 08 Dec 2022 00:00:00 +0000</pubDate>
-      
-      <guid>https://instantiator.dev/tags/serverless/</guid>
       <description></description>
     </item>
     
@@ -881,15 +998,6 @@
     </item>
     
     <item>
-      <title>aws</title>
-      <link>https://instantiator.dev/tags/aws/</link>
-      <pubDate>Tue, 20 Apr 2021 18:00:00 +0000</pubDate>
-      
-      <guid>https://instantiator.dev/tags/aws/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>c#</title>
       <link>https://instantiator.dev/tags/c#/</link>
       <pubDate>Tue, 20 Apr 2021 18:00:00 +0000</pubDate>
@@ -904,15 +1012,6 @@
       <pubDate>Tue, 20 Apr 2021 18:00:00 +0000</pubDate>
       
       <guid>https://instantiator.dev/tags/coding/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>lambda</title>
-      <link>https://instantiator.dev/tags/lambda/</link>
-      <pubDate>Tue, 20 Apr 2021 18:00:00 +0000</pubDate>
-      
-      <guid>https://instantiator.dev/tags/lambda/</guid>
       <description></description>
     </item>
     
