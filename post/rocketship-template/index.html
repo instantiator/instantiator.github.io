@@ -3,7 +3,7 @@
     <title> instantiator.dev | The rocketship template 🚀 </title>
 
     
-    <meta charset="utf-8"><meta name="generator" content="Hugo 0.105.0"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+    <meta charset="utf-8"><meta name="generator" content="Hugo 0.111.2"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
     <meta name="description" content="tech, volunteers, public safety, articles and ideas">
     
     
@@ -200,6 +200,14 @@
 
             <p>Presenting a simple template to develop, publish, and test a simple C# service backend on AWS, with serverless Lambda functions, supported by DynamoDb, behind an API Gateway, and protected by Cognito auth.</p>
 <p><em>Hopefully this will accelerate some early prototyping for some of my projects, and perhaps you&rsquo;ll find it useful as a reference too.</em></p>
+<h2 id="update-errata">UPDATE: errata</h2>
+<p>There are a number of fixes I&rsquo;ll be backporting into the template:</p>
+<ul>
+<li>The APIs currently require the user&rsquo;s <em>identity token</em>. It&rsquo;s preferable to use an <em>access token</em>.</li>
+<li>Instead of activating the first use / password reset process, AWS permits us to directly set the test user password.</li>
+<li>Cross-origin requests are rejected by browsers because CORS headers aren&rsquo;t available.</li>
+<li>CORS headers are also required for 4XX errors from the Cognito authorizer, and 5XX from lambda execution.</li>
+</ul>
 <h1 id="the-rocketship-template">The rocketship template</h1>
 <p>I&rsquo;ve been giving some thought to building a number of prototype projects for some friends. They need to reflect the realities of hosting on a cloud service provider, exploit the benefits of serverless design, and offer some frequently needed services: serverless lambdas with database support, behind an API gateway protected by an authentication service.</p>
 <p>What I came up with is probably not too surprising, given the brief&hellip;</p>
