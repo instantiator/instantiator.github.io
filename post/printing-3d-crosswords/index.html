@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html  dir="ltr" lang="en" data-theme=""><head>
+    <title> instantiator.dev | 3D puzzle prints: crosswords </title>
+
+    
+    <meta charset="utf-8"><meta name="generator" content="Hugo 0.111.2"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+    <meta name="description" content="tech, volunteers, public safety, articles and ideas">
+    
+    
+    
+    <link rel="stylesheet"
+        href="/css/style.min.7ec96a07e10b60a6997be730fc5d4d3467a225c68515a7df6ae17ac2500f828c.css"
+        integrity="sha256-fslqB&#43;ELYKaZe&#43;cw/F1NNGeiJcaFFaffauF6wlAPgow="
+        crossorigin="anonymous"
+        type="text/css">
+    
+
+    
+    <link rel="stylesheet"
+        href="/css/additional-classes.min.1d76732c34340c3588f50dacb5d8ce67a8c9ad2bf0140c8eb825f3f4e3a071c4.css"
+        integrity="sha256-HXZzLDQ0DDWI9Q2stdjOZ6jJrSvwFAyOuCXz9OOgccQ="
+        crossorigin="anonymous"
+        type="text/css">
+
+    
+    <link rel="stylesheet"
+        href="/css/markupHighlight.min.f798cbda9aaa38f89eb38be6414bd082cfd71a6780375cbf67b6d2fb2b96491e.css"
+        integrity="sha256-95jL2pqqOPies4vmQUvQgs/XGmeAN1y/Z7bS&#43;yuWSR4="
+        crossorigin="anonymous"
+        type="text/css">
+    
+
+
+
+    <link rel="stylesheet" 
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" 
+    integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" 
+    crossorigin="anonymous" />
+
+    
+    <link rel="shortcut icon" href="/favicons/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicons/favicon-16x16.png">
+
+    <link rel="canonical" href="/post/printing-3d-crosswords/">
+
+    
+    
+    
+    
+    <script type="text/javascript"
+            src="/js/anatole-header.min.df804b63b5bd8474ea0756ea874bc8f1e92552708cc6ea43aa0d76981dc419f9.js"
+            integrity="sha256-34BLY7W9hHTqB1bqh0vI8eklUnCMxupDqg12mB3EGfk="
+            crossorigin="anonymous"></script>
+
+
+    
+        
+        
+        <script type="text/javascript"
+                src="/js/anatole-theme-switcher.min.ea8ebe268922ef9849261a1312cd65b640595e65251ce4c00534a176afd1ac0c.js"
+                integrity="sha256-6o6&#43;Joki75hJJhoTEs1ltkBZXmUlHOTABTShdq/RrAw="
+                crossorigin="anonymous"></script>
+    
+    <meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://instantiator.dev/crossword-prints/"/>
+
+<meta name="twitter:title" content="3D puzzle prints: crosswords"/>
+<meta name="twitter:description" content="A tool to design 3D printed crossword puzzles.
+Generating 3D crossword models I&rsquo;ve been working on a tool to generate crossword designs using OpenSCAD."/>
+
+
+    
+    <meta property="og:title" content="3D puzzle prints: crosswords" />
+<meta property="og:description" content="A tool to design 3D printed crossword puzzles.
+Generating 3D crossword models I&rsquo;ve been working on a tool to generate crossword designs using OpenSCAD." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://instantiator.dev/post/printing-3d-crosswords/" /><meta property="og:image" content="https://instantiator.dev/crossword-prints/" /><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2023-01-18T00:00:00+00:00" />
+<meta property="article:modified_time" content="2023-01-18T00:00:00+00:00" /><meta property="og:site_name" content="instantiator.dev" />
+
+
+
+</head>
+<body><div class="sidebar animated fadeInDown ">
+    <div class="logo-title">
+        <div class="title">
+            <img src="/lewis/profile.jpg" alt="profile picture">
+            <h3 title=""><a href="/">instantiator.dev</a></h3>
+            <div class="description">
+                <p>tech, volunteers, public safety, articles and ideas</p>
+            </div>
+        </div>
+    </div>
+    <ul class="social-links">
+        
+            <li>
+                <a href="https://icgames.net" rel="me" aria-label="icgames.net">
+                    <i class="fas fa-chess-knight fa-2x" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+            <li>
+                <a href="https://www.chess.com/member/instantiator" rel="me" aria-label="icgames.net">
+                    <i class="fas fa-chess-pawn fa-2x" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+            <li>
+                <a href="https://mastodon.social/@instantiator" rel="me" aria-label="Mastodon">
+                    <i class="fab fa-mastodon fa-2x" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+            <li>
+                <a href="https://twitter.com/instantiator" rel="me" aria-label="Twitter">
+                    <i class="fab fa-twitter fa-2x" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+            <li>
+                <a href="https://github.com/instantiator" rel="me" aria-label="GitHub">
+                    <i class="fab fa-github fa-2x" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+            <li>
+                <a href="https://www.linkedin.com/in/lewiswestbury" rel="me" aria-label="Linkedin">
+                    <i class="fab fa-linkedin fa-2x" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+            <li>
+                <a href="https://instantiator.dev/index.xml" rel="me" aria-label="RSS">
+                    <i class="fas fa-rss fa-2x" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+    </ul>
+    <div class="footer">
+        <div class="by_farbox">&copy; Lewis Westbury  2023 </div>
+    </div>
+</div>
+<div class="main">
+    <div class="page-top  animated fadeInDown ">
+    <a role="button" class="navbar-burger" data-target="navMenu" aria-label="menu" aria-expanded="false">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+    </a>
+    <ul class="nav" id="navMenu">
+        
+        
+            
+            <li><a 
+                   href="/"
+                        
+                   title="">Home</a></li>
+        
+            
+            <li><a 
+                   href="/post/"
+                        
+                   title="">Posts</a></li>
+        
+            
+            <li><a 
+                   href="/about/"
+                        
+                   title="">About</a></li>
+        
+        
+        
+            <li class="theme-switch-item">
+                <a class="theme-switch" title="Switch Theme">
+                    <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+    </ul>
+</div>
+
+    <div class="autopagerize_page_element">
+        <div class="content">
+    <div class="post  animated fadeInDown ">
+        <div class="post-content">
+            
+            <div class="post-title">
+                <h3>3D puzzle prints: crosswords</h3>
+                
+                    <div class="info">
+                        <em class="fas fa-calendar-day"></em>
+                        <span class="date"> 
+                                                2023-01-18
+                                           </span>
+                        <em class="fas fa-stopwatch"></em>
+                        <span class="reading-time">3-minute read</span>
+                    </div>
+                
+            </div>
+
+            <p>A tool to design 3D printed crossword puzzles.</p>
+<h1 id="generating-3d-crossword-models">Generating 3D crossword models</h1>
+<p>I&rsquo;ve been working on a tool to generate crossword designs using OpenSCAD. The output is an STL file that you can use with your favourite slicer and send to a 3D printer. It&rsquo;s open source, and you&rsquo;re free to plunder it for tips, techniques, or to generate your own&hellip;</p>
+<ul>
+<li><a href="https://github.com/instantiator/crossword-generator-scad">instantiator/crossword-generator-scad</a></li>
+</ul>
+<p>With minimal effort, you can probably create prints better than this&hellip;</p>
+<p><img src="/crossword-prints/sample-print-clarbert.jpeg" alt=""></p>
+<h2 id="whats-openscad">What&rsquo;s OpenSCAD?</h2>
+<p><a href="https://openscad.org/">OpenSCAD</a> is freely available software for creating solid 3D CAD objects. A SCAD file contains definitions that describe the object you want to create - and OpenSCAD can use that to generate an STL model.</p>
+<p><img src="https://openscad.org/assets/img/screenshot.png" alt="OpenSCAD screenshot"></p>
+<p>OpenSCAD is a neat solution for expressing complex designs, and yes - I&rsquo;m aware there are many other cool ways to achieve this with sophisticated design packages and other tools.</p>
+<h2 id="how-does-the-crossword-generator-work">How does the crossword generator work?</h2>
+<p>The <code>ScadGenerator</code> directory contains the code for a C# application that combines your input CSV with a SCAD <a href="https://github.com/instantiator/crossword-generator-scad/blob/main/templates/crossword-template.scad">crossword template</a> for the crossword, and a set of variables contained in <a href="https://github.com/instantiator/crossword-generator-scad/blob/main/templates/crossword-default-values-18x20.csv">another CSV</a> file. What it produces ought to be a valid SCAD file defining the crossword in the shape you defined.</p>
+<p>The <code>generate-crossword.sh</code> script builds and executes this application in a Docker container for you.</p>
+<p>The output SCAD file it generates is then fed into the <a href="https://hub.docker.com/r/openscad/openscad">openscad/openscad</a> Docker image itself, which is used to generate an STL model from your SCAD definition.</p>
+<table>
+<thead>
+<tr>
+<th>Test cells (STL)</th>
+<th>A crossword design (STL)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><img src="/crossword-prints/preview-test-cells.png" alt="A 3D design showing a small flat base, that&amp;rsquo;s 3 by 1. The first position is blank, so it&amp;rsquo;s just the base. The other 2 positions have grid cells elevated over them, each with a stubby little circle printed inside the grid cell. The 3rd position grid walls are printed slightly higher than the other - they represent a highlighted cell. "></td>
+<td><img src="/crossword-prints/preview-clarbert-crossword.png" alt="A full crossword printed in the same way. There&amp;rsquo;s a large, flat, 11x9 base plate, and then on top of it a crossword grid is elevated. In each cell of the crossword is another stubby little circle. Some cells have higher walls than others - they are highlighted cells."></td>
+</tr>
+</tbody>
+</table>
+<h2 id="how-do-i-use-it">How do I use it?</h2>
+<ul>
+<li>You&rsquo;ll need to have <a href="https://www.docker.com/products/docker-desktop/">Docker</a> installed on your machine.</li>
+<li>Fork, clone, or download <a href="https://github.com/instantiator/crossword-generator-scad">the repository</a>.</li>
+</ul>
+<p>The process is pretty simple:</p>
+<ul>
+<li>Create a CSV file to describe your crossword
+<ul>
+<li><a href="https://docs.google.com/spreadsheets/d/1V18dAKi18F9mF3wuK5d-L5pdg0llTGk-J9Tq7vYNg_I/copy">Copy this template sheet</a></li>
+<li>Edit your characters into the crossword tab of the sheet.</li>
+<li>Use lower case for regular letter grid spaces.</li>
+<li>Use upper case for highlighted spaces.</li>
+<li>Leave everything else blank.</li>
+<li>You may wish to expand the size of the sheet.</li>
+<li>Export the crossword grid as CSV.* Optionally, modify any of the parameters that define the print</li>
+</ul>
+</li>
+<li>Use the <code>generate-crossword.sh</code> script to generate an STL model
+<ul>
+<li>See: <a href="https://github.com/instantiator/crossword-generator-scad#usage">usage examples in the README</a></li>
+</ul>
+</li>
+<li>Generate the gcode for your printer with the slicer of your choice</li>
+<li>Optionally, add some breaks to change filament/colour during the print
+<ul>
+<li>See: <a href="https://github.com/instantiator/crossword-generator-scad#filament-changes">filament changes in the README</a></li>
+</ul>
+</li>
+<li>Send to your printer and print!</li>
+</ul>
+<h2 id="how-do-i-get-those-colour-changes">How do I get those colour changes?</h2>
+<p>There&rsquo;s some extra documentation <a href="https://github.com/instantiator/crossword-generator-scad#filament-changes">in the README</a> about how you can modify the gcode file for your 3D printer, to trigger a change of filament at the right moment during the print.</p>
+<p>Essentially, you need to add an extra <code>M600</code> command to the file just before the layer you want printed with the new material. Many slicers can do this for you but, as I found with Snapmaker Luban, not all!</p>
+<p>Most printers support the <code>M600</code> command - but I suggest checking the documentation for yours before you rely on it!</p>
+</div>
+        <div class="post-footer">
+            <div class="info">
+                <span class="separator"><a class="category" href="/categories/tool/">tool</a></span>
+                <span class="separator"><a class="tag" href="/tags/scad/">scad</a><a class="tag" href="/tags/open-scad/">open-scad</a><a class="tag" href="/tags/3d/">3D</a><a class="tag" href="/tags/3d-printing/">3D-printing</a><a class="tag" href="/tags/snapmaker/">SnapMaker</a><a class="tag" href="/tags/luban/">Luban</a><a class="tag" href="/tags/puzzle/">puzzle</a><a class="tag" href="/tags/crossword/">crossword</a><a class="tag" href="/tags/print/">print</a><a class="tag" href="/tags/design/">design</a><a class="tag" href="/tags/stl/">STL</a><a class="tag" href="/tags/gcode/">gcode</a></span>
+                
+
+            </div>
+        </div>
+
+        
+    </div>
+
+
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript"
+        src="/js/medium-zoom.min.e1c6918cbaa90022a5612f0bd71c7bf3be6d036614c5729cebfe14f7b91fa4bc.js"
+        integrity="sha256-4caRjLqpACKlYS8L1xx7875tA2YUxXKc6/4U97kfpLw="
+        crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-SHE42ZWKEN"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-SHE42ZWKEN');
+</script></body>
+
+</html>

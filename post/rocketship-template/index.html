@@ -201,7 +201,7 @@
             <p>Presenting a simple template to develop, publish, and test a simple C# service backend on AWS, with serverless Lambda functions, supported by DynamoDb, behind an API Gateway, and protected by Cognito auth.</p>
 <p><em>Hopefully this will accelerate some early prototyping for some of my projects, and perhaps you&rsquo;ll find it useful as a reference too.</em></p>
 <h2 id="update-errata">UPDATE: errata</h2>
-<p>There are a number of fixes I&rsquo;ll be backporting into the template:</p>
+<p><strong>2023-03-18.</strong> I&rsquo;ve recently backported a few fixes into the template:</p>
 <ul>
 <li>The APIs currently require the user&rsquo;s <em>identity token</em>. It&rsquo;s preferable to use an <em>access token</em>.</li>
 <li>Instead of activating the first use / password reset process, AWS permits us to directly set the test user password.</li>
