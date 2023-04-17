@@ -3,7 +3,67 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://instantiator.dev/</loc>
-    <lastmod>2023-01-18T00:00:00+00:00</lastmod>
+    <lastmod>2023-04-17T21:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://instantiator.dev/tags/.net/</loc>
+    <lastmod>2023-04-17T21:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://instantiator.dev/tags/ai/</loc>
+    <lastmod>2023-04-17T21:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://instantiator.dev/categories/article/</loc>
+    <lastmod>2023-04-17T21:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://instantiator.dev/tags/c#/</loc>
+    <lastmod>2023-04-17T21:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://instantiator.dev/categories/</loc>
+    <lastmod>2023-04-17T21:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://instantiator.dev/tags/coding/</loc>
+    <lastmod>2023-04-17T21:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://instantiator.dev/tags/csharp/</loc>
+    <lastmod>2023-04-17T21:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://instantiator.dev/tags/dev/</loc>
+    <lastmod>2023-04-17T21:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://instantiator.dev/tags/gpt/</loc>
+    <lastmod>2023-04-17T21:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://instantiator.dev/tags/llm/</loc>
+    <lastmod>2023-04-17T21:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://instantiator.dev/tags/microsoft/</loc>
+    <lastmod>2023-04-17T21:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://instantiator.dev/tags/ml/</loc>
+    <lastmod>2023-04-17T21:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://instantiator.dev/tags/openai/</loc>
+    <lastmod>2023-04-17T21:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://instantiator.dev/post/</loc>
+    <lastmod>2023-04-17T21:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://instantiator.dev/tags/sdk/</loc>
+    <lastmod>2023-04-17T21:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://instantiator.dev/tags/semantic-kernel/</loc>
+    <lastmod>2023-04-17T21:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://instantiator.dev/tags/software-development/</loc>
+    <lastmod>2023-04-17T21:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://instantiator.dev/tags/</loc>
+    <lastmod>2023-04-17T21:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://instantiator.dev/tags/text-completion/</loc>
+    <lastmod>2023-04-17T21:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://instantiator.dev/post/you-too-can-llm/</loc>
+    <lastmod>2023-04-17T21:00:00+00:00</lastmod>
   </url><url>
     <loc>https://instantiator.dev/tags/3d/</loc>
     <lastmod>2023-01-18T00:00:00+00:00</lastmod>
@@ -12,9 +72,6 @@
     <lastmod>2023-01-18T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://instantiator.dev/tags/3d-printing/</loc>
-    <lastmod>2023-01-18T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://instantiator.dev/categories/</loc>
     <lastmod>2023-01-18T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://instantiator.dev/tags/crossword/</loc>
@@ -41,9 +98,6 @@
     <loc>https://instantiator.dev/tags/openscad/</loc>
     <lastmod>2023-01-18T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://instantiator.dev/post/</loc>
-    <lastmod>2023-01-18T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://instantiator.dev/tags/print/</loc>
     <lastmod>2023-01-18T00:00:00+00:00</lastmod>
   </url><url>
@@ -59,16 +113,10 @@
     <loc>https://instantiator.dev/tags/stl/</loc>
     <lastmod>2023-01-18T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://instantiator.dev/tags/</loc>
-    <lastmod>2023-01-18T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://instantiator.dev/categories/tool/</loc>
     <lastmod>2023-01-18T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://instantiator.dev/tags/api/</loc>
-    <lastmod>2023-01-08T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://instantiator.dev/categories/article/</loc>
     <lastmod>2023-01-08T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://instantiator.dev/tags/auth/</loc>
@@ -78,9 +126,6 @@
     <lastmod>2023-01-08T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://instantiator.dev/tags/cognito/</loc>
-    <lastmod>2023-01-08T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://instantiator.dev/tags/csharp/</loc>
     <lastmod>2023-01-08T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://instantiator.dev/tags/database/</loc>
@@ -148,9 +193,6 @@
   </url><url>
     <loc>https://instantiator.dev/tags/supercomputer/</loc>
     <lastmod>2023-01-04T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://instantiator.dev/tags/.net/</loc>
-    <lastmod>2022-12-08T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://instantiator.dev/tags/chess/</loc>
     <lastmod>2022-12-08T00:00:00+00:00</lastmod>
@@ -452,12 +494,6 @@
     <loc>https://instantiator.dev/post/csharp-aws-lambda-tutorial-06/</loc>
     <lastmod>2021-04-20T18:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://instantiator.dev/tags/c#/</loc>
-    <lastmod>2021-04-20T18:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://instantiator.dev/tags/coding/</loc>
-    <lastmod>2021-04-20T18:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://instantiator.dev/series/csharp-aws-lambda-tutorial/</loc>
     <lastmod>2021-04-20T18:00:00+00:00</lastmod>
   </url><url>
@@ -684,9 +720,6 @@
     <lastmod>2017-10-05T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://instantiator.dev/tags/requirements/</loc>
-    <lastmod>2017-10-05T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://instantiator.dev/tags/software-development/</loc>
     <lastmod>2017-10-05T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://instantiator.dev/tags/technical-debt/</loc>
