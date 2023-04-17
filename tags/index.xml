@@ -26,6 +26,24 @@
     </item>
     
     <item>
+      <title>api</title>
+      <link>https://instantiator.dev/tags/api/</link>
+      <pubDate>Mon, 17 Apr 2023 21:00:00 +0000</pubDate>
+      
+      <guid>https://instantiator.dev/tags/api/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>artificial-intelligence</title>
+      <link>https://instantiator.dev/tags/artificial-intelligence/</link>
+      <pubDate>Mon, 17 Apr 2023 21:00:00 +0000</pubDate>
+      
+      <guid>https://instantiator.dev/tags/artificial-intelligence/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>c#</title>
       <link>https://instantiator.dev/tags/c#/</link>
       <pubDate>Mon, 17 Apr 2023 21:00:00 +0000</pubDate>
@@ -71,11 +89,29 @@
     </item>
     
     <item>
+      <title>large-language-models</title>
+      <link>https://instantiator.dev/tags/large-language-models/</link>
+      <pubDate>Mon, 17 Apr 2023 21:00:00 +0000</pubDate>
+      
+      <guid>https://instantiator.dev/tags/large-language-models/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>llm</title>
       <link>https://instantiator.dev/tags/llm/</link>
       <pubDate>Mon, 17 Apr 2023 21:00:00 +0000</pubDate>
       
       <guid>https://instantiator.dev/tags/llm/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>machine-learning</title>
+      <link>https://instantiator.dev/tags/machine-learning/</link>
+      <pubDate>Mon, 17 Apr 2023 21:00:00 +0000</pubDate>
+      
+      <guid>https://instantiator.dev/tags/machine-learning/</guid>
       <description></description>
     </item>
     
@@ -274,15 +310,6 @@
       <pubDate>Wed, 18 Jan 2023 00:00:00 +0000</pubDate>
       
       <guid>https://instantiator.dev/tags/stl/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>api</title>
-      <link>https://instantiator.dev/tags/api/</link>
-      <pubDate>Sun, 08 Jan 2023 00:00:00 +0000</pubDate>
-      
-      <guid>https://instantiator.dev/tags/api/</guid>
       <description></description>
     </item>
     
