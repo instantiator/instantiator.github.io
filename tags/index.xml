@@ -44,6 +44,15 @@
     </item>
     
     <item>
+      <title>jupyter</title>
+      <link>https://instantiator.dev/tags/jupyter/</link>
+      <pubDate>Thu, 20 Apr 2023 17:30:00 +0000</pubDate>
+      
+      <guid>https://instantiator.dev/tags/jupyter/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>netflix</title>
       <link>https://instantiator.dev/tags/netflix/</link>
       <pubDate>Thu, 20 Apr 2023 17:30:00 +0000</pubDate>
@@ -53,11 +62,47 @@
     </item>
     
     <item>
+      <title>pandas</title>
+      <link>https://instantiator.dev/tags/pandas/</link>
+      <pubDate>Thu, 20 Apr 2023 17:30:00 +0000</pubDate>
+      
+      <guid>https://instantiator.dev/tags/pandas/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>python</title>
+      <link>https://instantiator.dev/tags/python/</link>
+      <pubDate>Thu, 20 Apr 2023 17:30:00 +0000</pubDate>
+      
+      <guid>https://instantiator.dev/tags/python/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>tv</title>
+      <link>https://instantiator.dev/tags/tv/</link>
+      <pubDate>Thu, 20 Apr 2023 17:30:00 +0000</pubDate>
+      
+      <guid>https://instantiator.dev/tags/tv/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>visualisation</title>
       <link>https://instantiator.dev/tags/visualisation/</link>
       <pubDate>Thu, 20 Apr 2023 17:30:00 +0000</pubDate>
       
       <guid>https://instantiator.dev/tags/visualisation/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>watch</title>
+      <link>https://instantiator.dev/tags/watch/</link>
+      <pubDate>Thu, 20 Apr 2023 17:30:00 +0000</pubDate>
+      
+      <guid>https://instantiator.dev/tags/watch/</guid>
       <description></description>
     </item>
     
