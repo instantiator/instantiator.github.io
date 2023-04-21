@@ -244,7 +244,7 @@
 </span></span><span class="line"><span class="cl"><span class="kt">var</span> <span class="n">planner</span> <span class="p">=</span> <span class="n">kernel</span><span class="p">.</span><span class="n">ImportPlannerSkill</span><span class="p">();</span>
 </span></span></code></pre></div><p>The various <code>Import*</code> methods are defined as extension methods for <code>IKernel</code> in <a href="https://github.com/instantiator/semantic-kernel-experiment/blob/main/SKE/KernelSkillsExtensions.cs"><code>SKE.KernelSkillsExtensions</code></a>.</p>
 <h4 id="semantic-functions">Semantic functions</h4>
-<p>Semantic Functions are imported from their Skill&rsquo;s directory. Each Skill has its own directory, and each function has a directory within there.</p>
+<p>Semantic Functions are imported from their position in the skills directory tree. Each Skill has its own directory, and each function has a directory within there.</p>
 <p>In this solution, all Skills are grouped inside the <code>Skills</code> directory:</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-csharp" data-lang="csharp"><span class="line"><span class="cl"><span class="n">kernel</span><span class="p">.</span><span class="n">ImportSemanticSkillFromDirectory</span><span class="p">(</span><span class="n">scanDirectory</span><span class="p">,</span> <span class="n">skill</span><span class="p">);</span>
 </span></span></code></pre></div><p>Each Skill contains two files:</p>
