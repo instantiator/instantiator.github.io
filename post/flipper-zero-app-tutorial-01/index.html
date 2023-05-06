@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html  dir="ltr" lang="en" data-theme=""><head>
+    <title> instantiator.dev | Building an app for Flipper Zero, part 1: Getting started </title>
+
+    
+    <meta charset="utf-8"><meta name="generator" content="Hugo 0.111.3"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+    <meta name="description" content="tech, volunteers, public safety, articles and ideas">
+    
+    
+    
+    <link rel="stylesheet"
+        href="/css/style.min.7ec96a07e10b60a6997be730fc5d4d3467a225c68515a7df6ae17ac2500f828c.css"
+        integrity="sha256-fslqB&#43;ELYKaZe&#43;cw/F1NNGeiJcaFFaffauF6wlAPgow="
+        crossorigin="anonymous"
+        type="text/css">
+    
+
+    
+    <link rel="stylesheet"
+        href="/css/additional-classes.min.1d76732c34340c3588f50dacb5d8ce67a8c9ad2bf0140c8eb825f3f4e3a071c4.css"
+        integrity="sha256-HXZzLDQ0DDWI9Q2stdjOZ6jJrSvwFAyOuCXz9OOgccQ="
+        crossorigin="anonymous"
+        type="text/css">
+
+    
+    <link rel="stylesheet"
+        href="/css/markupHighlight.min.f798cbda9aaa38f89eb38be6414bd082cfd71a6780375cbf67b6d2fb2b96491e.css"
+        integrity="sha256-95jL2pqqOPies4vmQUvQgs/XGmeAN1y/Z7bS&#43;yuWSR4="
+        crossorigin="anonymous"
+        type="text/css">
+    
+
+
+
+    <link rel="stylesheet" 
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" 
+    integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" 
+    crossorigin="anonymous" />
+
+    
+    <link rel="shortcut icon" href="/favicons/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicons/favicon-16x16.png">
+
+    <link rel="canonical" href="/post/flipper-zero-app-tutorial-01/">
+
+    
+    
+    
+    
+    <script type="text/javascript"
+            src="/js/anatole-header.min.df804b63b5bd8474ea0756ea874bc8f1e92552708cc6ea43aa0d76981dc419f9.js"
+            integrity="sha256-34BLY7W9hHTqB1bqh0vI8eklUnCMxupDqg12mB3EGfk="
+            crossorigin="anonymous"></script>
+
+
+    
+        
+        
+        <script type="text/javascript"
+                src="/js/anatole-theme-switcher.min.ea8ebe268922ef9849261a1312cd65b640595e65251ce4c00534a176afd1ac0c.js"
+                integrity="sha256-6o6&#43;Joki75hJJhoTEs1ltkBZXmUlHOTABTShdq/RrAw="
+                crossorigin="anonymous"></script>
+    
+    <meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://github.com/instantiator/flipper-zero-experimental-apps/raw/main/resistors/.flipcorg/banner.png"/>
+
+<meta name="twitter:title" content="Building an app for Flipper Zero, part 1: Getting started"/>
+<meta name="twitter:description" content="FlipperZero is a digital signals multi-tool. Here&rsquo;s a short guide to the basics of building an app for it&hellip;"/>
+
+
+    
+    <meta property="og:title" content="Building an app for Flipper Zero, part 1: Getting started" />
+<meta property="og:description" content="FlipperZero is a digital signals multi-tool. Here&rsquo;s a short guide to the basics of building an app for it&hellip;" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://instantiator.dev/post/flipper-zero-app-tutorial-01/" /><meta property="og:image" content="https://github.com/instantiator/flipper-zero-experimental-apps/raw/main/resistors/.flipcorg/banner.png" /><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2023-05-05T09:00:00+00:00" />
+<meta property="article:modified_time" content="2023-05-05T09:00:00+00:00" /><meta property="og:site_name" content="instantiator.dev" />
+<meta property="og:see_also" content="https://instantiator.dev/post/flipper-zero-app-tutorial-02/" />
+
+
+
+</head>
+<body><div class="sidebar animated fadeInDown ">
+    <div class="logo-title">
+        <div class="title">
+            <img src="/lewis/profile.jpg" alt="profile picture">
+            <h3 title=""><a href="/">instantiator.dev</a></h3>
+            <div class="description">
+                <p>tech, volunteers, public safety, articles and ideas</p>
+            </div>
+        </div>
+    </div>
+    <ul class="social-links">
+        
+            <li>
+                <a href="https://mastodon.social/@instantiator" rel="me" aria-label="Mastodon">
+                    <i class="fab fa-mastodon fa-2x" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+            <li>
+                <a href="https://twitter.com/instantiator" rel="me" aria-label="Twitter">
+                    <i class="fab fa-twitter fa-2x" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+            <li>
+                <a href="https://github.com/instantiator" rel="me" aria-label="GitHub">
+                    <i class="fab fa-github fa-2x" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+            <li>
+                <a href="https://www.linkedin.com/in/lewiswestbury" rel="me" aria-label="LinkedIn">
+                    <i class="fab fa-linkedin fa-2x" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+            <li>
+                <a href="https://www.escapethereview.co.uk/profile/?user_id=11" rel="me" aria-label="Escape the Review">
+                    <i class="fas fa-dungeon fa-2x" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+            <li>
+                <a href="https://icgames.net" rel="me" aria-label="International Consensus Games">
+                    <i class="fas fa-chess-knight fa-2x" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+            <li>
+                <a href="https://instantiator.dev/index.xml" rel="me" aria-label="RSS">
+                    <i class="fas fa-rss fa-2x" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+    </ul>
+    <div class="footer">
+        <div class="by_farbox">&copy; Lewis Westbury  2023 </div>
+    </div>
+</div>
+<div class="main">
+    <div class="page-top  animated fadeInDown ">
+    <a role="button" class="navbar-burger" data-target="navMenu" aria-label="menu" aria-expanded="false">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+    </a>
+    <ul class="nav" id="navMenu">
+        
+        
+            
+            <li><a 
+                   href="/"
+                        
+                   title="">Home</a></li>
+        
+            
+            <li><a 
+                   href="/post/"
+                        
+                   title="">Posts</a></li>
+        
+            
+            <li><a 
+                   href="/about/"
+                        
+                   title="">About</a></li>
+        
+        
+        
+            <li class="theme-switch-item">
+                <a class="theme-switch" title="Switch Theme">
+                    <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+    </ul>
+</div>
+
+    <div class="autopagerize_page_element">
+        <div class="content">
+    <div class="post  animated fadeInDown ">
+        <div class="post-content">
+            
+            <div class="post-title">
+                <h3>Building an app for Flipper Zero, part 1: Getting started</h3>
+                
+                    <div class="info">
+                        <em class="fas fa-calendar-day"></em>
+                        <span class="date"> 
+                                                2023-05-05
+                                           </span>
+                        <em class="fas fa-stopwatch"></em>
+                        <span class="reading-time">9-minute read</span>
+                    </div>
+                
+            </div>
+
+            <p>FlipperZero is a digital signals multi-tool. Here&rsquo;s a short guide to the basics of building an app for it&hellip;</p>
+<h1 id="lets-build-an-app-for-flipper-zero">Let&rsquo;s build an app for Flipper Zero</h1>
+<p>Flipper Zero features several apps built directly into the firmware, but you can also create and install external apps onto the SD card which are then available through the Applications menu.</p>
+<h2 id="resistance-is-futile">Resistance is futile</h2>
+<p>I recently built <a href="https://flipc.org/instantiator/flipper-zero-experimental-apps?branch=main&amp;root=resistors">an app to calculate the value of resistors</a> by decoding the coloured bands on them. In this tutorial, we&rsquo;ll walk through the process of setting up an app, and building a simple user interface step-by-step, using the same techniques.</p>
+<h2 id="community">Community</h2>
+<p>Before getting started, it&rsquo;s helpful to know that there&rsquo;s a thriving and welcoming FlipperZero community on a public Discord server, called: <a href="https://discord.gg/flipper">Flipper Devices</a></p>
+<h2 id="with-thanks">With thanks</h2>
+<p>This part of the tutorial series would not have been possible without the help and support of various people in the Flipper Zero community. Many thanks to:</p>
+<ul>
+<li>FlipperZero folks for the <a href="https://github.com/flipperdevices/flipperzero-ufbt">ufbt</a> tool.</li>
+<li><a href="https://github.com/playmean">Aleksey Korolev</a> for the <a href="https://flipc.org/">flipc.org</a> Flipper app catalogue.</li>
+</ul>
+<h2 id="the-toolchain">The toolchain</h2>
+<p>I&rsquo;m using a few tools:</p>
+<ul>
+<li><a href="https://github.com/flipperdevices/flipperzero-ufbt">ufbt</a> (&ldquo;micro Flipper Build Tool&rdquo;) - a cut down version of <a href="https://github.com/flipperdevices/flipperzero-firmware/blob/dev/documentation/fbt.md">fbt</a> (the Flipper Built Tool)</li>
+<li><a href="https://code.visualstudio.com/">Visual Studio Code</a> - an editor and IDE from Microsoft</li>
+<li><a href="https://www.pinta-project.com/">Pinta</a> - a Mac clone of <a href="https://www.getpaint.net/index.html">paint.net</a> (but any graphics tool that allows you to edit 1-bit PNGs will do)</li>
+</ul>
+<p>I can&rsquo;t recommend working with Visual Studio Code highly enough. It provides project management features, C syntax awareness and highlighting, and integrates very nicely with <code>ufbt</code>.</p>
+<h2 id="versions-and-firmwares">Versions and firmwares</h2>
+<p>Flipper apps are written in C, and they&rsquo;re compiled against the version of the firmware you want them to run against. This means that if your firmware changes, your app must too.</p>
+<p>This create a little complexity for distributing an app - as the firmware versions regularly frequently, and many people are using different flavours of firmware altogether (eg. <a href="https://github.com/DarkFlippers/unleashed-firmware">DarkFlipper/Unleashed</a>, <a href="https://github.com/RogueMaster/flipperzero-firmware-wPlugins">RogueMaster</a>).</p>
+<p><em>NB. An exploration of the various firmware features is beyond the scope of this tutorial.</em></p>
+<p>There&rsquo;s a nice app distribution site called <a href="https://flipc.org">flipc.org</a> that solves this problem by compiling apps from source code as they&rsquo;re needed. Provided your source code is in a public GitHub repository, you can use <a href="https://flipc.org">flipc.org</a> to publish it.</p>
+<h2 id="coming-to-c-from-c-type-languages">Coming to C from C-type languages</h2>
+<p>If you&rsquo;re not familiar with C, but you&rsquo;ve worked in C-type languages, you&rsquo;re off to a good start. There are few things to know, though. <em>Feel free to skip this section if you&rsquo;re already a confident C developer.</em></p>
+<p><strong>Caveat:</strong> I&rsquo;ve not been working in C for long, but as I&rsquo;ve experienced most of these pitfalls, I wanted to share them with you to help you avoid the same mistakes! Some of these are very difficult to debug - especially memory leaks.</p>
+<h3 id="memory-safety">Memory safety</h3>
+<p>C isn&rsquo;t managed code, and there&rsquo;s no garbage collection, so you&rsquo;re going to have to take good care of the memory you allocate to data structures (<code>structs</code>) with <code>malloc</code> and <code>free</code> functions. If you allocate some memory, you&rsquo;re going to have to free it - particularly if your code can do the allocation more than once. If you don&rsquo;t release it, this can cause a memory leak - where you eventually run out of assignable memory.</p>
+<p>C also won&rsquo;t prevent you from accessing memory you shouldn&rsquo;t (eg. if you <code>malloc</code> the wrong size for your <code>struct</code>, and then try to write to it (or if you write to an incorrect offset to a pointer), you could end up writing to memory reserved for other variables or even code). This sort of issue manifests as weird crashes or unexpected values in variables, often long after the actual buggy code has been executed. That makes it difficult to debug.</p>
+<h3 id="namespaces">Namespaces</h3>
+<p>C doesn&rsquo;t have objects or enforced namespaces, so as soon as you&rsquo;re writing something reasonably complex I recommend you start naming things carefully, so that it&rsquo;s absolutely clear what&rsquo;s what.</p>
+<p>For instance, <code>enums</code> are named in code, but this is a thin veil over integers, and you can use <code>enum</code> values as integers anywhere in the code. I recommend giving <code>enum</code> values distinct names prefixed with the name of the <code>enum</code> type itself, eg.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl"><span class="k">typedef</span> <span class="k">enum</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="n">TagEventTypeInput</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="n">TagEventTypeSubGhzDataDetected</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="n">TagEventTypeInfraredMessage</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span> <span class="n">TagEventType</span><span class="p">;</span>
+</span></span></code></pre></div><p><code>CapitalisationOfWords</code> or <code>using_underscore_delimiters</code> are both acceptable ways to clarify namespaces and meanings in my book. I&rsquo;m sure there&rsquo;s an established convention. My advice is to be consistent in whatever you do.</p>
+<h3 id="static-and-const"><code>static</code> and <code>const</code></h3>
+<p>It&rsquo;s worth understanding what keywords like <code>static</code> and <code>const</code> mean in C - they won&rsquo;t be perfectly aligned to how you&rsquo;ve been using them in (say) Java, C++, or C#&hellip;</p>
+<ul>
+<li><code>static</code> (function) - a <code>static</code> function is only available to other methods in the same <code>.c</code> file</li>
+<li><code>static</code> (global variable) - a <code>static</code> global variable is only available to methods in the same <code>.c</code> file</li>
+<li><code>static</code> (local variable) - a <code>static</code> variable in a function keeps its value between function calls</li>
+</ul>
+<p>Hiding functions with <code>static</code> is similar to creating private methods in other languages, and it&rsquo;s considered good practice.</p>
+<p>The <code>const</code> keyword distinguishes between pointers and variables, and has a few variants. It&rsquo;s used to indicate that a particular pointer or variable cannot be assigned to after initialisation. Don&rsquo;t worry if this doesn&rsquo;t all go in, it&rsquo;s just worth knowing&hellip;</p>
+<ul>
+<li><code>int var = 5;</code> an <em>assignable</em> integer</li>
+<li><code>int const var = 5;</code> an <em>unassignable</em> integer</li>
+<li><code>int* var</code> - an <em>assignable</em> pointer to an <em>assignable</em> integer</li>
+<li><code>const int* var</code> - an <em>assignable</em> pointer to an <em>unassignable</em> integer</li>
+<li><code>int* const var</code> - an <em>unassignable</em> pointer to an <em>assignable</em> integer</li>
+<li><code>const int* const var</code> - an <em>unassignable</em> pointer to an <em>unassignable</em> integer</li>
+</ul>
+<h3 id="data-structures">Data structures</h3>
+<p><code>struct</code> and <code>enum</code> are similar to what you&rsquo;d expect although, as mentioned earlier, <code>enum</code> values are actually integers - and so not as type-safe as you might assume.</p>
+<p><code>struct</code> is about as close as you can get to a data class - and you&rsquo;ll see them used all over C to represent rich data structures.</p>
+<h3 id="code-headers-and-interfaces">Code, headers and interfaces</h3>
+<p><code>.c</code> files contain code. It&rsquo;s <em>possible</em> to write an entire application in a single <code>.c</code> file - and I&rsquo;ve seen several of these. It&rsquo;s a perfectly acceptable approach, but you risk encountering complexity and difficulties as you go.</p>
+<p>The C compiler cares about the order that things are defined in. So, for instance, if you want to refer to a function, it needs to have been defined <em>before</em> you first refer to it. If not, you&rsquo;ll see a couple of errors.</p>
+<p>For instance, if you refer to a function called <code>do_something</code> before you define it, you&rsquo;ll see something like this where you first call it:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">implicit declaration of function &#39;do_something&#39;
+</span></span></code></pre></div><p>and then, where you define it:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">conflicting types for &#39;do_something&#39;
+</span></span></code></pre></div><p>This is because when you first referred to function <code>do_something</code>, you &lsquo;implicitly&rsquo; defined it. Then, later, when the compiler encountered your actual definition it doesn&rsquo;t know what to do - it already has an implicit definition.</p>
+<p>There are two solutions to this:</p>
+<ul>
+<li>Place the function definition before its first reference in the <code>.c</code> file</li>
+<li>Define the function&rsquo;s <em>footprint</em> in a <code>.h</code> header file, and include that header file at the beginning of your <code>.c</code> file</li>
+</ul>
+<p>In this simple scenario, it&rsquo;s probably easier just to reorder your functions.</p>
+<p>As soon as you want to start defining a group or library of functions and structures that are all linked, you&rsquo;ll want to place them into a separate <code>.c</code> file and then create a header file you can use to define the interface (the methods you&rsquo;re sharing with other <code>.c</code> files).</p>
+<p>The good news is that <code>ufbt</code> will find all your files, and compile them in a sensible order.</p>
+<h2 id="setting-up-your-environment">Setting up your environment</h2>
+<p>First, create the directory you want to work in, open a terminal, and navigate to that directory.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ mkdir test_app
+</span></span><span class="line"><span class="cl">$ <span class="nb">cd</span> test_app
+</span></span></code></pre></div><p>I often open a terminal in Visual Studio Code, as it&rsquo;s easiest to work in a single tool and see what&rsquo;s happening as I go.</p>
+<h3 id="fetch-the-flipperzero-firmware">Fetch the FlipperZero firmware</h3>
+<p>Update <code>ufbt</code> to collect the Software Development Kit (SDK) for the current firmware. You can specify the firmware channel using the <code>--channel=[dev|rc|release]</code> option.</p>
+<p><em>NB. I recommend working against the <code>dev</code> channel firmware. It enables quite a lot of safeguards to help catch certain kinds of mistakes early (you&rsquo;ll see theses as <code>furi_assert</code> assertions in code).</em></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ ufbt update
+</span></span><span class="line"><span class="cl">13:36:51.062 <span class="o">[</span>I<span class="o">]</span> Deploying SDK <span class="k">for</span> f7
+</span></span><span class="line"><span class="cl">13:36:51.062 <span class="o">[</span>I<span class="o">]</span> Fetching version info <span class="k">for</span> UpdateChannel.DEV from https://update.flipperzero.one/firmware/directory.json
+</span></span><span class="line"><span class="cl">13:36:51.201 <span class="o">[</span>I<span class="o">]</span> Using version: a7d1ec03
+</span></span><span class="line"><span class="cl">13:36:51.201 <span class="o">[</span>I<span class="o">]</span> uFBT SDK dir: /Users/lewiswestbury/.ufbt/current
+</span></span><span class="line"><span class="cl">13:36:53.304 <span class="o">[</span>I<span class="o">]</span> Deploying SDK
+</span></span><span class="line"><span class="cl">13:36:53.556 <span class="o">[</span>I<span class="o">]</span> SDK deployed.
+</span></span></code></pre></div><p>Your Flipper&rsquo;s firmware should match the firmware you&rsquo;re working against, or the app won&rsquo;t launch. You can ensure that by updating the firmware on your Flipper through the <strong>qFlipper</strong> application on your computer.</p>
+<p><img src="/f0-tutorial/qflipper-update.png" alt="the qFlipper app showing the firmware view and the big green update button"></p>
+<h3 id="create-a-skeleton-app">Create a skeleton app</h3>
+<p><code>ufbt create</code> will create a nice working environment for your app. Give your app a simple id, eg. <code>test_app</code> - you&rsquo;ll be able to change this later. Provide an id for the application, with the <code>APPID=</code> option.</p>
+<p><em>NB. I recommend using characters from the simple set of <code>a-zA-Z0-9_</code>. Restrict yourself to characters that can appear in a C function name, or you may end up having to rename the main function, and the entrypoint in your application manifest before you can build.</em></p>
+<p>Running for the first time, it&rsquo;ll warn that the <code>application.fam</code> file doesn&rsquo;t exist (and then create one for you):</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ ufbt create <span class="nv">APPID</span><span class="o">=</span>test_app
+</span></span><span class="line"><span class="cl">scons: Entering directory <span class="sb">`</span>/Users/lewiswestbury/.ufbt/current/scripts/ufbt<span class="s1">&#39;
+</span></span></span><span class="line"><span class="cl"><span class="s1">
+</span></span></span><span class="line"><span class="cl"><span class="s1">fbt: warning: Folder app: manifest application.fam is missing
+</span></span></span><span class="line"><span class="cl"><span class="s1">LoadAppManifest, line 31, in file &#34;/Users/lewiswestbury/.ufbt/current/scripts/fbt_tools/fbt_apps.py&#34;
+</span></span></span><span class="line"><span class="cl"><span class="s1">Creating &#39;</span>/Users/lewiswestbury/src/test_app/test_app.c<span class="s1">&#39;
+</span></span></span><span class="line"><span class="cl"><span class="s1">        INSTALL /Users/lewiswestbury/src/test_app/test_app.png
+</span></span></span><span class="line"><span class="cl"><span class="s1">Creating &#39;</span>/Users/lewiswestbury/src/test_app/application.fam<span class="err">&#39;</span>
+</span></span><span class="line"><span class="cl">Mkdir<span class="o">(</span><span class="s2">&#34;/Users/lewiswestbury/src/test_app/images&#34;</span><span class="o">)</span>
+</span></span><span class="line"><span class="cl">Touch<span class="o">(</span><span class="s2">&#34;/Users/lewiswestbury/src/test_app/images/.gitkeep&#34;</span><span class="o">)</span>
+</span></span></code></pre></div><p>You should see the following files in the directory now:</p>
+<ul>
+<li><code>application.fam</code> - this is the app manifest, with details about your app</li>
+<li><code>ufbt-test.c</code> - application source code</li>
+<li><code>ufbt-test.png</code> - a 10x10 1-bit png icon for the app</li>
+<li><code>images/</code> - a directory where you can place 1-bit png icons</li>
+</ul>
+<p><img src="/f0-tutorial/ufbt-create.png" alt="A screenshot of visual studio code showing a terminal with ufbt create, and the application manifest it has created"></p>
+<h3 id="test-a-build">Test a build</h3>
+<p>With no other options, <code>ufbt</code> will build your app.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ ufbt 
+</span></span><span class="line"><span class="cl">scons: Entering directory <span class="sb">`</span>/Users/lewiswestbury/.ufbt/current/scripts/ufbt<span class="err">&#39;</span>
+</span></span><span class="line"><span class="cl">        ICONS   /Users/lewiswestbury/.ufbt/build/test_app/test_app_icons.c
+</span></span><span class="line"><span class="cl">        CDB     /Users/lewiswestbury/src/test_app/.vscode/compile_commands.json
+</span></span><span class="line"><span class="cl">        CC      /Users/lewiswestbury/src/test_app/test_app.c
+</span></span><span class="line"><span class="cl">        CC      /Users/lewiswestbury/.ufbt/build/test_app/test_app_icons.c
+</span></span><span class="line"><span class="cl">        LINK    /Users/lewiswestbury/.ufbt/build/test_app_d.elf
+</span></span><span class="line"><span class="cl">        INSTALL /Users/lewiswestbury/src/test_app/dist/debug/test_app_d.elf
+</span></span><span class="line"><span class="cl">        APPMETA /Users/lewiswestbury/.ufbt/build/test_app.fap
+</span></span><span class="line"><span class="cl">        FAP     /Users/lewiswestbury/.ufbt/build/test_app.fap
+</span></span><span class="line"><span class="cl">        INSTALL /Users/lewiswestbury/src/test_app/dist/test_app.fap
+</span></span><span class="line"><span class="cl">        APPCHK  /Users/lewiswestbury/.ufbt/build/test_app.fap
+</span></span><span class="line"><span class="cl">                Target: 7, API: 23.3
+</span></span></code></pre></div><p>When complete you&rsquo;ll find a file called <code>test_app.fap</code> inside the <code>dist</code> directory. This is your entire application, bundled for the Flipper Zero. If you upload this to your Flipper Zero, into the <code>Examples</code> directory of your SD card, it&rsquo;ll appear in the Applications menu. (It doesn&rsquo;t do much, but you can run it from there.)</p>
+<p>You can change the directory for the app, by altering the <code>fap_category</code> entry in <code>application.fam</code>.</p>
+<h3 id="visual-studio-integration">Visual Studio integration</h3>
+<p>Visual Studio Code can support some nice shortcuts to make your life easer, and <code>ufbt</code> can install them.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ ufbt vscode_dist
+</span></span><span class="line"><span class="cl">scons: Entering directory <span class="sb">`</span>/Users/lewiswestbury/.ufbt/current/scripts/ufbt<span class="s1">&#39;
+</span></span></span><span class="line"><span class="cl"><span class="s1">Creating &#39;</span>/Users/lewiswestbury/src/test_app/.vscode/c_cpp_properties.json<span class="s1">&#39;
+</span></span></span><span class="line"><span class="cl"><span class="s1">Creating &#39;</span>/Users/lewiswestbury/src/test_app/.vscode/extensions.json<span class="s1">&#39;
+</span></span></span><span class="line"><span class="cl"><span class="s1">Creating &#39;</span>/Users/lewiswestbury/src/test_app/.vscode/launch.json<span class="s1">&#39;
+</span></span></span><span class="line"><span class="cl"><span class="s1">Creating &#39;</span>/Users/lewiswestbury/src/test_app/.vscode/settings.json<span class="s1">&#39;
+</span></span></span><span class="line"><span class="cl"><span class="s1">Creating &#39;</span>/Users/lewiswestbury/src/test_app/.vscode/tasks.json<span class="err">&#39;</span>
+</span></span><span class="line"><span class="cl">        INSTALL /Users/lewiswestbury/src/test_app/.clang-format
+</span></span><span class="line"><span class="cl">        INSTALL /Users/lewiswestbury/src/test_app/.editorconfig
+</span></span><span class="line"><span class="cl">        INSTALL /Users/lewiswestbury/src/test_app/.gitignore
+</span></span></code></pre></div><p>Visual Studio Code now becomes aware of references to the SDK in your code, which is very helpful for syntax and error highlighting. You can now also use shortcuts in the IDE:</p>
+<ul>
+<li><code>Shift</code> + <code>Command</code> + <code>B</code> = build menu</li>
+<li><code>Shift</code> + <code>Command</code> + <code>D</code> = debugging menu</li>
+</ul>
+<h2 id="quick-review">Quick review</h2>
+<p>We&rsquo;ve looked at Flipper Zero firmware, pitfalls of working in C, setting up your environment, creating a skeleton app, and testing your toolchain with a simple build.</p>
+<p>In the next part, we&rsquo;ll explore the various approaches, structures and libraries available to help you build a graphical interface for the Flipper.</p>
+</div>
+        <div class="post-footer">
+            <div class="info">
+                <span class="separator"><a class="category" href="/categories/tutorial/">tutorial</a></span>
+                <span class="separator"><a class="tag" href="/tags/flipperzero/">FlipperZero</a><a class="tag" href="/tags/flipper/">flipper</a><a class="tag" href="/tags/app/">app</a><a class="tag" href="/tags/plugin/">plugin</a><a class="tag" href="/tags/coding/">coding</a><a class="tag" href="/tags/c/">c</a><a class="tag" href="/tags/clang/">clang</a><a class="tag" href="/tags/ufbt/">ufbt</a><a class="tag" href="/tags/community/">community</a><a class="tag" href="/tags/project/">project</a><a class="tag" href="/tags/electronics/">electronics</a><a class="tag" href="/tags/resistance/">resistance</a></span>
+                
+                  <p>
+                    See also:
+                    <ul><li><a href="https://instantiator.dev/post/flipper-zero-app-tutorial-02/">Building an app for Flipper Zero, part 2: A simple user interface</a></li>
+                    </ul>
+                  </p>
+                
+
+            </div>
+        </div>
+
+        
+    </div>
+
+
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript"
+        src="/js/medium-zoom.min.e1c6918cbaa90022a5612f0bd71c7bf3be6d036614c5729cebfe14f7b91fa4bc.js"
+        integrity="sha256-4caRjLqpACKlYS8L1xx7875tA2YUxXKc6/4U97kfpLw="
+        crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-SHE42ZWKEN"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-SHE42ZWKEN');
+</script></body>
+
+</html>

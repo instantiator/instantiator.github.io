@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html  dir="ltr" lang="en" data-theme=""><head>
+    <title> instantiator.dev | Building an app for Flipper Zero, part 2: A simple user interface </title>
+
+    
+    <meta charset="utf-8"><meta name="generator" content="Hugo 0.111.3"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+    <meta name="description" content="tech, volunteers, public safety, articles and ideas">
+    
+    
+    
+    <link rel="stylesheet"
+        href="/css/style.min.7ec96a07e10b60a6997be730fc5d4d3467a225c68515a7df6ae17ac2500f828c.css"
+        integrity="sha256-fslqB&#43;ELYKaZe&#43;cw/F1NNGeiJcaFFaffauF6wlAPgow="
+        crossorigin="anonymous"
+        type="text/css">
+    
+
+    
+    <link rel="stylesheet"
+        href="/css/additional-classes.min.1d76732c34340c3588f50dacb5d8ce67a8c9ad2bf0140c8eb825f3f4e3a071c4.css"
+        integrity="sha256-HXZzLDQ0DDWI9Q2stdjOZ6jJrSvwFAyOuCXz9OOgccQ="
+        crossorigin="anonymous"
+        type="text/css">
+
+    
+    <link rel="stylesheet"
+        href="/css/markupHighlight.min.f798cbda9aaa38f89eb38be6414bd082cfd71a6780375cbf67b6d2fb2b96491e.css"
+        integrity="sha256-95jL2pqqOPies4vmQUvQgs/XGmeAN1y/Z7bS&#43;yuWSR4="
+        crossorigin="anonymous"
+        type="text/css">
+    
+
+
+
+    <link rel="stylesheet" 
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" 
+    integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" 
+    crossorigin="anonymous" />
+
+    
+    <link rel="shortcut icon" href="/favicons/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicons/favicon-16x16.png">
+
+    <link rel="canonical" href="/post/flipper-zero-app-tutorial-02/">
+
+    
+    
+    
+    
+    <script type="text/javascript"
+            src="/js/anatole-header.min.df804b63b5bd8474ea0756ea874bc8f1e92552708cc6ea43aa0d76981dc419f9.js"
+            integrity="sha256-34BLY7W9hHTqB1bqh0vI8eklUnCMxupDqg12mB3EGfk="
+            crossorigin="anonymous"></script>
+
+
+    
+        
+        
+        <script type="text/javascript"
+                src="/js/anatole-theme-switcher.min.ea8ebe268922ef9849261a1312cd65b640595e65251ce4c00534a176afd1ac0c.js"
+                integrity="sha256-6o6&#43;Joki75hJJhoTEs1ltkBZXmUlHOTABTShdq/RrAw="
+                crossorigin="anonymous"></script>
+    
+    <meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://github.com/instantiator/flipper-zero-experimental-apps/raw/main/resistors/.flipcorg/banner.png"/>
+
+<meta name="twitter:title" content="Building an app for Flipper Zero, part 2: A simple user interface"/>
+<meta name="twitter:description" content="In this part, we&rsquo;ll build a simple user interface for a Flipper Zero app."/>
+
+
+    
+    <meta property="og:title" content="Building an app for Flipper Zero, part 2: A simple user interface" />
+<meta property="og:description" content="In this part, we&rsquo;ll build a simple user interface for a Flipper Zero app." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://instantiator.dev/post/flipper-zero-app-tutorial-02/" /><meta property="og:image" content="https://github.com/instantiator/flipper-zero-experimental-apps/raw/main/resistors/.flipcorg/banner.png" /><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2023-05-05T21:00:00+00:00" />
+<meta property="article:modified_time" content="2023-05-05T21:00:00+00:00" /><meta property="og:site_name" content="instantiator.dev" />
+<meta property="og:see_also" content="https://instantiator.dev/post/flipper-zero-app-tutorial-01/" />
+
+
+
+</head>
+<body><div class="sidebar animated fadeInDown ">
+    <div class="logo-title">
+        <div class="title">
+            <img src="/lewis/profile.jpg" alt="profile picture">
+            <h3 title=""><a href="/">instantiator.dev</a></h3>
+            <div class="description">
+                <p>tech, volunteers, public safety, articles and ideas</p>
+            </div>
+        </div>
+    </div>
+    <ul class="social-links">
+        
+            <li>
+                <a href="https://mastodon.social/@instantiator" rel="me" aria-label="Mastodon">
+                    <i class="fab fa-mastodon fa-2x" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+            <li>
+                <a href="https://twitter.com/instantiator" rel="me" aria-label="Twitter">
+                    <i class="fab fa-twitter fa-2x" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+            <li>
+                <a href="https://github.com/instantiator" rel="me" aria-label="GitHub">
+                    <i class="fab fa-github fa-2x" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+            <li>
+                <a href="https://www.linkedin.com/in/lewiswestbury" rel="me" aria-label="LinkedIn">
+                    <i class="fab fa-linkedin fa-2x" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+            <li>
+                <a href="https://www.escapethereview.co.uk/profile/?user_id=11" rel="me" aria-label="Escape the Review">
+                    <i class="fas fa-dungeon fa-2x" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+            <li>
+                <a href="https://icgames.net" rel="me" aria-label="International Consensus Games">
+                    <i class="fas fa-chess-knight fa-2x" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+            <li>
+                <a href="https://instantiator.dev/index.xml" rel="me" aria-label="RSS">
+                    <i class="fas fa-rss fa-2x" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+    </ul>
+    <div class="footer">
+        <div class="by_farbox">&copy; Lewis Westbury  2023 </div>
+    </div>
+</div>
+<div class="main">
+    <div class="page-top  animated fadeInDown ">
+    <a role="button" class="navbar-burger" data-target="navMenu" aria-label="menu" aria-expanded="false">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+    </a>
+    <ul class="nav" id="navMenu">
+        
+        
+            
+            <li><a 
+                   href="/"
+                        
+                   title="">Home</a></li>
+        
+            
+            <li><a 
+                   href="/post/"
+                        
+                   title="">Posts</a></li>
+        
+            
+            <li><a 
+                   href="/about/"
+                        
+                   title="">About</a></li>
+        
+        
+        
+            <li class="theme-switch-item">
+                <a class="theme-switch" title="Switch Theme">
+                    <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+    </ul>
+</div>
+
+    <div class="autopagerize_page_element">
+        <div class="content">
+    <div class="post  animated fadeInDown ">
+        <div class="post-content">
+            
+            <div class="post-title">
+                <h3>Building an app for Flipper Zero, part 2: A simple user interface</h3>
+                
+                    <div class="info">
+                        <em class="fas fa-calendar-day"></em>
+                        <span class="date"> 
+                                                2023-05-05
+                                           </span>
+                        <em class="fas fa-stopwatch"></em>
+                        <span class="reading-time">10-minute read</span>
+                    </div>
+                
+            </div>
+
+            <p>In this part, we&rsquo;ll build a simple user interface for a Flipper Zero app.</p>
+<h1 id="lets-build-a-ui-for-flipper-zero">Let&rsquo;s build a UI for Flipper Zero</h1>
+<p>The Flipper Zero firmware provides a range of library functions and structures to support user interfaces. There are some simple options, but anything more complex than the simplest apps will need to display a variety of views grouped into scenes.</p>
+<p>The UI for this tutorial will have 3 scenes:</p>
+<ul>
+<li>A main menu</li>
+<li>A popup (popup 1)</li>
+<li>Another popup (popup 2)</li>
+</ul>
+<p>The user can choose an option from the menu, which will then result in their seeing either popup 1 or popup 2. (It&rsquo;s very simple!)</p>
+<h2 id="tutorial-code">Tutorial code</h2>
+<p><strong>The code for this tutorial is at: <a href="https://github.com/instantiator/flipper-zero-tutorial-app">instantiator/flipper-zero-tutorial-app</a></strong></p>
+<p>For simplicity, the tutorial app is contained in a single, self-contained <code>.c</code> file. When building an app any more complex than this, I recommend breaking it into multiple files, and making the functions you wish to share available by creating and importing <code>.h</code> header files.</p>
+<p><em>NB. Without header files, as here, references must come after that particular resource has been defined, or they will not compile. In effect, the code &ldquo;reads backwards&rdquo;. The entrypoint is the last function defined in <a href="https://github.com/instantiator/flipper-zero-tutorial-app/blob/main/test_app.c"><code>test_app.c</code></a>, as it must refer to functions that came before it - and so on&hellip;</em></p>
+<h3 id="supporting-references">Supporting references</h3>
+<p>A lot of the code I&rsquo;ll be sharing here is derived from the work I did building the <a href="https://github.com/instantiator/flipper-zero-experimental-apps/tree/main/resistors">resistance calculator</a> app, and you&rsquo;re welcome to sift through that code and plunder what you need for your own projects.</p>
+<p>In turn, that app relies heavily on the patterns provided in Derek Jamison&rsquo;s <a href="https://github.com/jamisonderek/flipper-zero-tutorials/tree/main/plugins/basic_scenes">basic scenes</a> tutorial. Derek has been kindly supporting and debugging my work in the background, and has produced a vast library of valuable learning resources. Check out his YouTube channel: <a href="https://www.youtube.com/@MrDerekJamison">@MrDerekJamison</a></p>
+<h3 id="with-thanks">With thanks</h3>
+<p>This part of the tutorial series would not have been possible without the help and support of various people in the Flipper Zero community. Many thanks to:</p>
+<ul>
+<li><a href="https://github.com/jamisonderek">Derek Jamison</a> for the <a href="https://github.com/jamisonderek/flipper-zero-tutorials">Flipper Zero tutorials</a> repository (in particular, <a href="https://github.com/jamisonderek/flipper-zero-tutorials/tree/main/plugins">plugins</a>)</li>
+<li><a href="https://github.com/DroomOne">DroomOne</a> for the <a href="https://github.com/DroomOne/Flipper-Plugin-Tutorial">Flipper Plugin tutorial</a>.</li>
+<li><a href="https://brodan.biz/">Chris Hranj</a> (Brodan) for the <a href="https://brodan.biz/blog/a-visual-guide-to-flipper-zero-gui-components/">guide to Flipper Zero components</a>.</li>
+</ul>
+<p>If you&rsquo;re interested in developing apps for the Flipper, you should really check out Derek&rsquo;s YouTube channel: <a href="https://www.youtube.com/@MrDerekJamison">@MrDerekJamison</a></p>
+<h2 id="approaches">Approaches</h2>
+<p>Flipper Zero provides a few of ways to build an app interface. The simplest is to create and register a <code>ViewPort</code>, and register a function for redrawing it which will be called each time <code>view_port_update</code> is called.</p>
+<p>Although reasonably simple, this approach doesn&rsquo;t benefit from all the components available through the firmware. You&rsquo;ll have to design your own interface. It does seem to be reasonably popular amongst developers of simple games on the Flipper, though. If you want to see an example of this approach, check out the <strong>tag</strong> application (currently under development). In particular: <a href="https://github.com/instantiator/flipper-zero-experimental-apps/blob/main/tag/src/tag_ui.c"><code>tag_ui.c</code></a>, <a href="https://github.com/instantiator/flipper-zero-experimental-apps/blob/main/tag/src/tag_app_loop.c"><code>tag_app_loop.c</code></a></p>
+<p>In this tutorial, we&rsquo;ll explore another approach, which supports the simplification and management of more complex UI structures. It uses the various UI components available through the Flipper firmware.</p>
+<h2 id="scenes-and-views">Scenes and views</h2>
+<p>A user interface is broken down into views, each of which is a visual component (such as a menu, popup, file browser, or text input&hellip;)</p>
+<blockquote>
+<p>For a guide to the various components, I recommend Brodan&rsquo;s <a href="https://brodan.biz/blog/a-visual-guide-to-flipper-zero-gui-components/">Visual Guide to Flipper Zero GUI Modules</a>. The most adaptable of these is the <code>Widget</code> view, which deserve a tutorial of its own. For an example of its use, see the resistor editing scene in the Resistance Calculator app: <a href="https://github.com/instantiator/flipper-zero-experimental-apps/blob/main/resistors/src/scene_edit.c">scene_edit.c </a></p>
+</blockquote>
+<p>We&rsquo;ll take a look at a the <code>Menu</code> and <code>Popup</code> components in a little more detail as a part of this tutorial.</p>
+<p>Scenes are a layer of abstraction above views, allowing you to define a number of scene handler functions - responsible for rendering the view on entering a scene, destroying it on exit, and responding to events while the scene is active.</p>
+<h2 id="scenemanager-and-viewdispatcher"><code>SceneManager</code> and <code>ViewDispatcher</code></h2>
+<p>A <code>SceneManager</code> (supported by a number of <code>scene_manager_*</code> functions) contains and manages all details of the scenes known to the app. It&rsquo;s responsible for ensuring that the functions that govern the active scene are called during entry, exit, and when events are received.</p>
+<p>Views are managed by a <code>ViewDispatcher</code> (with a number of <code>view_dispatcher_</code> prefixed functions), called from the handler functions passed in to the <code>SceneManager</code>.</p>
+<p>To define all the scenes for your app, provide all the handler functions as a <a href="https://github.com/flipperdevices/flipperzero-firmware/blob/dev/applications/services/gui/scene_manager.h#L42"><code>SceneManagerHandlers</code></a> <code>struct</code> to the <a href="https://github.com/flipperdevices/flipperzero-firmware/blob/dev/applications/services/gui/scene_manager.h#L77"><code>scene_manager_alloc</code></a> function.</p>
+<p>Scenes are indexed numerically, and so it&rsquo;s helpful to create an enum to track their indices, eg.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl"><span class="k">typedef</span> <span class="k">enum</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="n">TestAppScene_MainMenu</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="n">TestAppScene_FirstPopup</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="n">TestAppScene_SecondPopup</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="n">TestAppScene_count</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span> <span class="n">TestAppScene</span><span class="p">;</span>
+</span></span></code></pre></div><p><em>NB. That <code>TestAppScene_count</code> value at the end of the enum is a handy way to safely obtain the size of the <code>enum</code> even if you change its contents later. Just ensure it&rsquo;s always the last item.</em></p>
+<p>Views can be reused, and so there may be fewer views than scenes, eg.:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl"><span class="k">typedef</span> <span class="k">enum</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="n">TestAppView_Menu</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="n">TestAppView_Popup</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span> <span class="n">TestAppScene</span><span class="p">;</span>
+</span></span></code></pre></div><h2 id="initialising-the-app">Initialising the app</h2>
+<p>With these enums defined, we&rsquo;re ready to set up the main <code>struct</code> containing the app&rsquo;s state, and then go on to allocate and initialise everything.</p>
+<p>In the tutorial app, this takes place in the <code>test_app_init</code> function, which goes on to call out to functions that will initialise the scene manager, and view dispatcher:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl"><span class="n">TestApp</span><span class="o">*</span> <span class="n">app</span> <span class="o">=</span> <span class="nf">malloc</span><span class="p">(</span><span class="k">sizeof</span><span class="p">(</span><span class="n">TestApp</span><span class="p">));</span>
+</span></span><span class="line"><span class="cl"><span class="nf">test_app_scene_manager_init</span><span class="p">(</span><span class="n">app</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="nf">test_app_view_dispatcher_init</span><span class="p">(</span><span class="n">app</span><span class="p">);</span>
+</span></span></code></pre></div><h2 id="setting-up-the-scene-manager">Setting up the scene manager</h2>
+<p><code>test_app_scene_manager_init</code> is reasonably simple. It allocates memory for a <code>SceneManager</code>.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl"><span class="n">app</span><span class="o">-&gt;</span><span class="n">scene_manager</span> <span class="o">=</span> <span class="nf">scene_manager_alloc</span><span class="p">(</span><span class="o">&amp;</span><span class="n">test_app_scene_event_handlers</span><span class="p">,</span> <span class="n">app</span><span class="p">);</span>
+</span></span></code></pre></div><p>The second parameter is simply the context, passed back to the active scene&rsquo;s handler methods when they are called. The first parameter, <code>SceneManagerHandlers* test_app_scene_event_handlers</code> has already been defined above. It&rsquo;s a collection of all the <code>on_enter</code>, <code>on_exit</code>, and <code>on_event</code> handler functions for all the scenes:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl"><span class="cm">/** collection of all scene on_enter handlers - in the same order as their enum */</span>
+</span></span><span class="line"><span class="cl"><span class="kt">void</span> <span class="p">(</span><span class="o">*</span><span class="k">const</span> <span class="n">test_app_scene_on_enter_handlers</span><span class="p">[])(</span><span class="kt">void</span><span class="o">*</span><span class="p">)</span> <span class="o">=</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="n">test_app_scene_on_enter_main_menu</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="n">test_app_scene_on_enter_popup_one</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="n">test_app_scene_on_enter_popup_two</span><span class="p">};</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="cm">/** collection of all scene on event handlers - in the same order as their enum */</span>
+</span></span><span class="line"><span class="cl"><span class="kt">bool</span> <span class="p">(</span><span class="o">*</span><span class="k">const</span> <span class="n">test_app_scene_on_event_handlers</span><span class="p">[])(</span><span class="kt">void</span><span class="o">*</span><span class="p">,</span> <span class="n">SceneManagerEvent</span><span class="p">)</span> <span class="o">=</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="n">test_app_scene_on_event_main_menu</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="n">test_app_scene_on_event_popup_one</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="n">test_app_scene_on_event_popup_two</span><span class="p">};</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="cm">/** collection of all scene on exit handlers - in the same order as their enum */</span>
+</span></span><span class="line"><span class="cl"><span class="kt">void</span> <span class="p">(</span><span class="o">*</span><span class="k">const</span> <span class="n">test_app_scene_on_exit_handlers</span><span class="p">[])(</span><span class="kt">void</span><span class="o">*</span><span class="p">)</span> <span class="o">=</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="n">test_app_scene_on_exit_main_menu</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="n">test_app_scene_on_exit_popup_one</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="n">test_app_scene_on_exit_popup_two</span><span class="p">};</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="cm">/** collection of all on_enter, on_event, on_exit handlers */</span>
+</span></span><span class="line"><span class="cl"><span class="k">const</span> <span class="n">SceneManagerHandlers</span> <span class="n">test_app_scene_event_handlers</span> <span class="o">=</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="p">.</span><span class="n">on_enter_handlers</span> <span class="o">=</span> <span class="n">test_app_scene_on_enter_handlers</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="p">.</span><span class="n">on_event_handlers</span> <span class="o">=</span> <span class="n">test_app_scene_on_event_handlers</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="p">.</span><span class="n">on_exit_handlers</span> <span class="o">=</span> <span class="n">test_app_scene_on_exit_handlers</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="p">.</span><span class="n">scene_num</span> <span class="o">=</span> <span class="n">TestAppScene_count</span><span class="p">};</span>
+</span></span></code></pre></div><h2 id="setting-up-the-view-dispatcher">Setting up the view dispatcher</h2>
+<p><code>test_app_view_dispatcher_init</code> has a little more to do.</p>
+<h3 id="allocate-the-dispatcher">Allocate the dispatcher</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl"><span class="n">app</span><span class="o">-&gt;</span><span class="n">view_dispatcher</span> <span class="o">=</span> <span class="nf">view_dispatcher_alloc</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl"><span class="nf">view_dispatcher_enable_queue</span><span class="p">(</span><span class="n">app</span><span class="o">-&gt;</span><span class="n">view_dispatcher</span><span class="p">);</span>
+</span></span></code></pre></div><h3 id="allocate-individual-views">Allocate individual views</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl"><span class="n">app</span><span class="o">-&gt;</span><span class="n">menu</span> <span class="o">=</span> <span class="nf">menu_alloc</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl"><span class="n">app</span><span class="o">-&gt;</span><span class="n">popup</span> <span class="o">=</span> <span class="nf">popup_alloc</span><span class="p">();</span>
+</span></span></code></pre></div><h3 id="pass-events-from-the-view-to-the-scene">Pass events from the view to the scene</h3>
+<p>The views themselves initially handle events and navigation, but we want to pass those to the scene manager so that they&rsquo;re available to the active scene&rsquo;s handler functions.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl"><span class="c1">// assign callback that pass events from views to the scene manager
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nf">view_dispatcher_set_event_callback_context</span><span class="p">(</span><span class="n">app</span><span class="o">-&gt;</span><span class="n">view_dispatcher</span><span class="p">,</span> <span class="n">app</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="nf">view_dispatcher_set_custom_event_callback</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">    <span class="n">app</span><span class="o">-&gt;</span><span class="n">view_dispatcher</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="n">test_app_scene_manager_custom_event_callback</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="nf">view_dispatcher_set_navigation_event_callback</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">    <span class="n">app</span><span class="o">-&gt;</span><span class="n">view_dispatcher</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="n">test_app_scene_manager_navigation_event_callback</span><span class="p">);</span>
+</span></span></code></pre></div><h3 id="register-views-with-the-dispatcher">Register views with the dispatcher</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl"><span class="c1">// add views to the dispatcher, indexed by their enum value
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nf">view_dispatcher_add_view</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">    <span class="n">app</span><span class="o">-&gt;</span><span class="n">view_dispatcher</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="n">TestAppView_Menu</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="nf">menu_get_view</span><span class="p">(</span><span class="n">app</span><span class="o">-&gt;</span><span class="n">menu</span><span class="p">));</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nf">view_dispatcher_add_view</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">    <span class="n">app</span><span class="o">-&gt;</span><span class="n">view_dispatcher</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="n">TestAppView_Popup</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="nf">popup_get_view</span><span class="p">(</span><span class="n">app</span><span class="o">-&gt;</span><span class="n">popup</span><span class="p">));</span>
+</span></span></code></pre></div><h2 id="defining-the-scenes">Defining the scenes</h2>
+<p>With all the structure to support scenes in place, the scene functions will complete the test app. Each scene has 3 functions:</p>
+<ul>
+<li><code>*_on_enter</code> - initiating the view and scene resources</li>
+<li><code>*_on_event</code> - handling inputs and custom events</li>
+<li><code>*_on_exit</code> - freeing resources used by the scene</li>
+</ul>
+<p>Of these, the main menu scene <code>TestAppScene_MainMenu</code> is the most complex.</p>
+<h3 id="the-menu-callback">The menu callback</h3>
+<p>The menu view itself has an additional callback of its own:</p>
+<p><code>test_app_menu_callback_main_menu</code> is provided with a value from <code>TestAppMenuSelection</code> indicating the selection that the user made. This is then used to determine which event from <code>TestAppEvent</code> to send to the scene&rsquo;s custom event handler function with a call to <code>scene_manager_handle_custom_event</code>.</p>
+<blockquote>
+<p>Sending events on to the scene manager, rather than handling them in the menu&rsquo;s callback, is good practise - ensuring that the <em>active</em> scene is sent the event, and that the scene&rsquo;s <code>_on_event</code> handler is the place where actions are initiated. This pattern ensures that your application&rsquo;s decision-making logic for each scene is easy to locate.</p>
+</blockquote>
+<h3 id="on-entering-the-main-menu-scene">On entering the main menu scene</h3>
+<p>When entering a scene, the <code>test_app_scene_on_enter_main_menu</code> function is called. This is responsible for setting up the scene, by initiating the view for the scene (and any other resources it needs), and then instructing the view dispatcher to switch to the appropriate view, with a call to: <code>view_dispatcher_switch_to_view</code></p>
+<p>First, the menu view is reset:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl"><span class="nf">menu_reset</span><span class="p">(</span><span class="n">app</span><span class="o">-&gt;</span><span class="n">menu</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="nf">view_set_context</span><span class="p">(</span><span class="nf">menu_get_view</span><span class="p">(</span><span class="n">app</span><span class="o">-&gt;</span><span class="n">menu</span><span class="p">),</span> <span class="n">app</span><span class="p">);</span>
+</span></span></code></pre></div><p>Then each menu item is added. Each is given an id from <code>TestAppMenuSelection</code> - this is used in <code>test_app_menu_callback_main_menu</code> to identify the user&rsquo;s selection:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl"><span class="nf">menu_add_item</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">    <span class="n">app</span><span class="o">-&gt;</span><span class="n">menu</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="s">&#34;First popup&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="o">&amp;</span><span class="n">I_one</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="n">TestAppMenuSelection_One</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="n">test_app_menu_callback_main_menu</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="n">app</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="nf">menu_add_item</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">    <span class="n">app</span><span class="o">-&gt;</span><span class="n">menu</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="s">&#34;Second popup&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="o">&amp;</span><span class="n">I_two</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="n">TestAppMenuSelection_Two</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="n">test_app_menu_callback_main_menu</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="n">app</span><span class="p">);</span>
+</span></span></code></pre></div><p>Finally the view dispatcher is instructed to switch to this view:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl"><span class="nf">view_dispatcher_switch_to_view</span><span class="p">(</span><span class="n">app</span><span class="o">-&gt;</span><span class="n">view_dispatcher</span><span class="p">,</span> <span class="n">TestAppView_Menu</span><span class="p">);</span>
+</span></span></code></pre></div><h3 id="handling-events-in-the-menu-scene">Handling events in the menu scene</h3>
+<p>The menu scene&rsquo;s event handling function, <code>test_app_scene_on_event_main_menu</code> is given a <code>SceneManagerEvent</code> to interpret. It returns a <code>bool</code> indicating if it handled the event or not. This is a reasonably simple struct:</p>
+<p><code>event.type</code> is a <code>SceneManagerEventType</code> with 3 possible values:</p>
+<ul>
+<li><code>SceneManagerEventTypeCustom</code> - these are events we have passed to the scene manager, and can be for anything. They often represent significant events, such as user interactions, or inputs.</li>
+<li><code>SceneManagerEventTypeBack</code> - this event indicates that the user is attempting to go back in the app (ie. with the back button). If not handled, the scene manager will do the right thing and pass the user to the previous scene.</li>
+<li><code>SceneManagerEventTypeTick</code> - this event indicates that the scene has been sent a tick, and should refresh. It&rsquo;s also an opportunity to update any models that the application updates over time. Similarly, if not handled, the scene manager will take care of this.</li>
+</ul>
+<p><code>SceneManagerEventTypeCustom</code> is the type of event that the <code>test_app_menu_callback_main_menu</code> function creates when it invokes <code>scene_manager_handle_custom_event</code>.</p>
+<p><code>event.event</code> contains the value from <code>TestAppEvent</code> that was passed in, ie. <code>TestAppEvent_ShowPopupOne</code> or <code>TestAppEvent_ShowPopupTwo</code>. These events should be reasonably clear - they are instructions to switch the scene, using <code>scene_manager_next_scene</code>.</p>
+<p>This logic is handled in two nested switch statements:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl"><span class="kt">bool</span> <span class="n">consumed</span> <span class="o">=</span> <span class="nb">false</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="k">switch</span><span class="p">(</span><span class="n">event</span><span class="p">.</span><span class="n">type</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl"><span class="k">case</span> <span class="nl">SceneManagerEventTypeCustom</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="k">switch</span><span class="p">(</span><span class="n">event</span><span class="p">.</span><span class="n">event</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">case</span> <span class="nl">TestAppEvent_ShowPopupOne</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">        <span class="nf">scene_manager_next_scene</span><span class="p">(</span><span class="n">app</span><span class="o">-&gt;</span><span class="n">scene_manager</span><span class="p">,</span> <span class="n">TestAppScene_FirstPopup</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="n">consumed</span> <span class="o">=</span> <span class="nb">true</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="k">break</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">case</span> <span class="nl">TestAppEvent_ShowPopupTwo</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">        <span class="nf">scene_manager_next_scene</span><span class="p">(</span><span class="n">app</span><span class="o">-&gt;</span><span class="n">scene_manager</span><span class="p">,</span> <span class="n">TestAppScene_SecondPopup</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="n">consumed</span> <span class="o">=</span> <span class="nb">true</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="k">break</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="k">break</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="k">default</span><span class="o">:</span> <span class="c1">// eg. SceneManagerEventTypeBack, SceneManagerEventTypeTick
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="n">consumed</span> <span class="o">=</span> <span class="nb">false</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">break</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="k">return</span> <span class="n">consumed</span><span class="p">;</span>
+</span></span></code></pre></div><h3 id="exiting-the-main-menu-scene">Exiting the main menu scene</h3>
+<p>Finally, the <code>test_app_scene_on_exit_main_menu</code> function very simply clears up the menu, using <code>menu_reset</code>.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl"><span class="n">TestApp</span><span class="o">*</span> <span class="n">app</span> <span class="o">=</span> <span class="n">context</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="nf">menu_reset</span><span class="p">(</span><span class="n">app</span><span class="o">-&gt;</span><span class="n">menu</span><span class="p">);</span>
+</span></span></code></pre></div><p><em>NB. This does not free the menu&rsquo;s memory allocation, but it does clear away the menu items and content of the menu.</em></p>
+<p>Although we also do this reset when entering the menu scene, it&rsquo;s good practise to clear up a resource on exit to ensure that it&rsquo;s not occupying space when not in use.</p>
+<h3 id="the-popup-scenes">The popup scenes</h3>
+<p>The popup scenes, <code>TestAppScene_FirstPopup</code> and <code>TestAppScene_SecondPopup</code>, are much simpler than the menu scene.</p>
+<p>The most complex part of each is their <code>_on_enter</code> function, that sets up the popup. eg. <code>test_app_scene_on_enter_popup_one</code> resets the popup, and adds several pieces of content (the context, header, icon, and text), before finally instructing the view dispatcher to switch to the popup view, with a call to: <code>view_dispatcher_switch_to_view</code></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl"><span class="nf">popup_reset</span><span class="p">(</span><span class="n">app</span><span class="o">-&gt;</span><span class="n">popup</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="nf">view_set_context</span><span class="p">(</span><span class="nf">popup_get_view</span><span class="p">(</span><span class="n">app</span><span class="o">-&gt;</span><span class="n">popup</span><span class="p">),</span> <span class="n">app</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="nf">popup_set_context</span><span class="p">(</span><span class="n">app</span><span class="o">-&gt;</span><span class="n">popup</span><span class="p">,</span> <span class="n">app</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="nf">popup_set_header</span><span class="p">(</span><span class="n">app</span><span class="o">-&gt;</span><span class="n">popup</span><span class="p">,</span> <span class="s">&#34;Popup One&#34;</span><span class="p">,</span> <span class="mi">64</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="n">AlignCenter</span><span class="p">,</span> <span class="n">AlignTop</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="nf">popup_set_icon</span><span class="p">(</span><span class="n">app</span><span class="o">-&gt;</span><span class="n">popup</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">I_cvc_36x36</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="nf">popup_set_text</span><span class="p">(</span><span class="n">app</span><span class="o">-&gt;</span><span class="n">popup</span><span class="p">,</span> <span class="s">&#34;One! One popup. Ah ah ah...&#34;</span><span class="p">,</span> <span class="mi">64</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="n">AlignLeft</span><span class="p">,</span> <span class="n">AlignTop</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="nf">view_dispatcher_switch_to_view</span><span class="p">(</span><span class="n">app</span><span class="o">-&gt;</span><span class="n">view_dispatcher</span><span class="p">,</span> <span class="n">TestAppView_Popup</span><span class="p">);</span>
+</span></span></code></pre></div><p>Neither popup scene handles any events - just returning <code>false</code> in their <code>_on_event</code> functions and leaving it to the scene manager to do the right thing.</p>
+<p><em>NB. Popups can ordinarily handle use inputs, often giving users a choice between a couple of options. This tutorial does not, for the sake of simplicity.</em></p>
+<p>Finally, each popup&rsquo;s <code>_on_exit</code> function simply clears away the content, with another call to <code>popup_reset</code>.</p>
+<h2 id="graphics">Graphics</h2>
+<p>In a few places, the code refers to <code>Icon</code> pointers, prefixed with <code>I_</code>. These are created automatically by <code>ufbt</code> during the build process, from resources found in the <code>images/</code> directory.</p>
+<p>There are a few images in the directory:</p>
+<ul>
+<li><code>cvc_36x36.png</code> (a tiny image of Count von Count), which becomes <code>I_cvc_36x46</code></li>
+<li><code>one.png</code> (a 10x10 icon representing 1 in roman numerals as &lsquo;i&rsquo;), becomes <code>I_one</code></li>
+<li><code>two.png</code> (a 10x10 icon representing 2 in roman numerals as &lsquo;ii&rsquo;), becomes <code>I_two</code></li>
+</ul>
+<p>Adding more 1-bit png files to this directory will result in their being compiled into the app and available to the code as <code>Icon</code> resources.</p>
+<h2 id="putting-it-all-together">Putting it all together</h2>
+<p>This walk-through has hopefully covered everything required to initiate and launch a simple UI for a Flipper Zero app.</p>
+<p><strong>The code for this tutorial is available at: <a href="https://github.com/instantiator/flipper-zero-tutorial-app">instantiator/flipper-zero-tutorial-app</a></strong></p>
+<p>Feel free to plunder it for your own app. I highly recommend reading it through, and then taking a look at some other tutorials too to ensure you get a fully rounded view of the patterns for UI development on the Flipper.</p>
+</div>
+        <div class="post-footer">
+            <div class="info">
+                <span class="separator"><a class="category" href="/categories/tutorial/">tutorial</a></span>
+                <span class="separator"><a class="tag" href="/tags/flipperzero/">FlipperZero</a><a class="tag" href="/tags/flipper/">flipper</a><a class="tag" href="/tags/app/">app</a><a class="tag" href="/tags/plugin/">plugin</a><a class="tag" href="/tags/coding/">coding</a><a class="tag" href="/tags/c/">c</a><a class="tag" href="/tags/clang/">clang</a><a class="tag" href="/tags/ufbt/">ufbt</a><a class="tag" href="/tags/community/">community</a><a class="tag" href="/tags/project/">project</a><a class="tag" href="/tags/ui/">ui</a><a class="tag" href="/tags/gui/">gui</a><a class="tag" href="/tags/user-interface/">user interface</a><a class="tag" href="/tags/graphics/">graphics</a><a class="tag" href="/tags/view/">view</a><a class="tag" href="/tags/scene/">scene</a></span>
+                
+                  <p>
+                    See also:
+                    <ul><li><a href="https://instantiator.dev/post/flipper-zero-app-tutorial-01/">Building an app for Flipper Zero, part 1: Getting started</a></li>
+                    </ul>
+                  </p>
+                
+
+            </div>
+        </div>
+
+        
+    </div>
+
+
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript"
+        src="/js/medium-zoom.min.e1c6918cbaa90022a5612f0bd71c7bf3be6d036614c5729cebfe14f7b91fa4bc.js"
+        integrity="sha256-4caRjLqpACKlYS8L1xx7875tA2YUxXKc6/4U97kfpLw="
+        crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-SHE42ZWKEN"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-SHE42ZWKEN');
+</script></body>
+
+</html>
