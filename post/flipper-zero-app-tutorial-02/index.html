@@ -416,6 +416,39 @@
 <li><code>two.png</code> (a 10x10 icon representing 2 in roman numerals as &lsquo;ii&rsquo;), becomes <code>I_two</code></li>
 </ul>
 <p>Adding more 1-bit png files to this directory will result in their being compiled into the app and available to the code as <code>Icon</code> resources.</p>
+<h2 id="build-and-deploy">Build and deploy</h2>
+<p>If you haven&rsquo;t already, get a copy of the code from:</p>
+<ul>
+<li><a href="https://github.com/instantiator/flipper-zero-tutorial-app">instantiator/flipper-zero-tutorial-app</a></li>
+</ul>
+<p>Now, you can build the application:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ ufbt
+</span></span><span class="line"><span class="cl">scons: Entering directory <span class="sb">`</span>/Users/lewiswestbury/.ufbt/current/scripts/ufbt<span class="err">&#39;</span>
+</span></span><span class="line"><span class="cl">        CC      /Users/lewiswestbury/src/personal/test_app/test_app.c
+</span></span><span class="line"><span class="cl">        CDB     /Users/lewiswestbury/src/personal/test_app/.vscode/compile_commands.json
+</span></span><span class="line"><span class="cl">        LINK    /Users/lewiswestbury/.ufbt/build/test_app_d.elf
+</span></span><span class="line"><span class="cl">        INSTALL /Users/lewiswestbury/src/personal/test_app/dist/debug/test_app_d.elf
+</span></span><span class="line"><span class="cl">        APPMETA /Users/lewiswestbury/.ufbt/build/test_app.fap
+</span></span><span class="line"><span class="cl">        FAP     /Users/lewiswestbury/.ufbt/build/test_app.fap
+</span></span><span class="line"><span class="cl">        INSTALL /Users/lewiswestbury/src/personal/test_app/dist/test_app.fap
+</span></span><span class="line"><span class="cl">        APPCHK  /Users/lewiswestbury/.ufbt/build/test_app.fap
+</span></span><span class="line"><span class="cl">                Target: 7, API: 26.0
+</span></span></code></pre></div><p>Provided <code>ufbt</code> and your Flipper agree on the firmware version, you can deploy it to your Flipper to try it out:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ ufbt launch
+</span></span><span class="line"><span class="cl">scons: Entering directory <span class="sb">`</span>/Users/lewiswestbury/.ufbt/current/scripts/ufbt<span class="err">&#39;</span>
+</span></span><span class="line"><span class="cl">python3 <span class="s2">&#34;/Users/lewiswestbury/.ufbt/current/scripts/runfap.py&#34;</span> -s /Users/lewiswestbury/.ufbt/build/test_app.fap -t /ext/apps/Examples/test_app.fap
+</span></span><span class="line"><span class="cl">        APPCHK  /Users/lewiswestbury/.ufbt/build/test_app.fap
+</span></span><span class="line"><span class="cl">                Target: 7, API: 26.0
+</span></span><span class="line"><span class="cl">2023-05-06 23:38:36,824 <span class="o">[</span>INFO<span class="o">]</span> Using flip_Akurisau on /dev/cu.usbmodemflip_Akurisau1
+</span></span><span class="line"><span class="cl">2023-05-06 23:38:36,877 <span class="o">[</span>INFO<span class="o">]</span> Installing <span class="s2">&#34;/Users/lewiswestbury/.ufbt/build/test_app.fap&#34;</span> to /ext/apps/Examples/test_app.fap
+</span></span><span class="line"><span class="cl">2023-05-06 23:38:36,916 <span class="o">[</span>INFO<span class="o">]</span> Sending <span class="s2">&#34;/Users/lewiswestbury/.ufbt/build/test_app.fap&#34;</span> to <span class="s2">&#34;/ext/apps/Examples/test_app.fap&#34;</span>
+</span></span><span class="line"><span class="cl">100%, chunk <span class="m">1</span> of <span class="m">1</span>
+</span></span><span class="line"><span class="cl">2023-05-06 23:38:37,108 <span class="o">[</span>INFO<span class="o">]</span> Launching app: <span class="s2">&#34;Applications&#34;</span> /ext/apps/Examples/test_app.fap
+</span></span></code></pre></div>
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+  <iframe src="https://www.youtube.com/embed/Lkau7hTrkLE" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
+</div>
+
 <h2 id="putting-it-all-together">Putting it all together</h2>
 <p>This walk-through has hopefully covered everything required to initiate and launch a simple UI for a Flipper Zero app.</p>
 <p><strong>The code for this tutorial is available at: <a href="https://github.com/instantiator/flipper-zero-tutorial-app">instantiator/flipper-zero-tutorial-app</a></strong></p>
