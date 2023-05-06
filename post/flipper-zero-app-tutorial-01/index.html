@@ -194,7 +194,7 @@
                                                 2023-05-05
                                            </span>
                         <em class="fas fa-stopwatch"></em>
-                        <span class="reading-time">9-minute read</span>
+                        <span class="reading-time">10-minute read</span>
                     </div>
                 
             </div>
@@ -203,13 +203,26 @@
 <h1 id="lets-build-an-app-for-flipper-zero">Let&rsquo;s build an app for Flipper Zero</h1>
 <p>Flipper Zero features several apps built directly into the firmware, but you can also create and install external apps onto the SD card which are then available through the Applications menu.</p>
 <h2 id="resistance-is-futile">Resistance is futile</h2>
-<p>I recently built <a href="https://flipc.org/instantiator/flipper-zero-experimental-apps?branch=main&amp;root=resistors">an app to calculate the value of resistors</a> by decoding the coloured bands on them. In this tutorial, we&rsquo;ll walk through the process of setting up an app, and building a simple user interface step-by-step, using the same techniques.</p>
+<p>With the help of several folks from the Flipper dev community, I recently built <a href="https://flipc.org/instantiator/flipper-zero-experimental-apps?branch=main&amp;root=resistors">an app to calculate the value of resistors</a> by decoding the coloured bands on them. More detail and source code at:</p>
+<ul>
+<li><a href="https://github.com/instantiator/flipper-zero-experimental-apps">instantiator/flipper-zero-experimental-apps</a></li>
+</ul>
+<p>Thanks to</p>
+<ul>
+<li><a href="https://github.com/jamisonderek">Derek Jamison</a> for helping to debug a thorny issue or two, and</li>
+<li><a href="https://github.com/Kuronons">Kuronons</a> for the graphics in the app.</li>
+</ul>
+<p>In this tutorial, we&rsquo;ll walk through the process of setting up an app, and building a simple user interface, using the same techniques.</p>
 <h2 id="community">Community</h2>
-<p>Before getting started, it&rsquo;s helpful to know that there&rsquo;s a thriving and welcoming FlipperZero community on a public Discord server, called: <a href="https://discord.gg/flipper">Flipper Devices</a></p>
+<p>Before getting started, it&rsquo;s helpful to know that there&rsquo;s a thriving and welcoming FlipperZero community on a public Discord server:</p>
+<ul>
+<li><a href="https://discord.gg/flipper">Flipper Devices</a></li>
+</ul>
 <h2 id="with-thanks">With thanks</h2>
 <p>This part of the tutorial series would not have been possible without the help and support of various people in the Flipper Zero community. Many thanks to:</p>
 <ul>
-<li>FlipperZero folks for the <a href="https://github.com/flipperdevices/flipperzero-ufbt">ufbt</a> tool.</li>
+<li>Derek Jamison for his <a href="https://github.com/jamisonderek/flipper-zero-tutorials">plugin tutorials</a>,</li>
+<li>FlipperZero folks for the <a href="https://github.com/flipperdevices/flipperzero-ufbt">ufbt</a> tool, and</li>
 <li><a href="https://github.com/playmean">Aleksey Korolev</a> for the <a href="https://flipc.org/">flipc.org</a> Flipper app catalogue.</li>
 </ul>
 <h2 id="the-toolchain">The toolchain</h2>
@@ -219,7 +232,7 @@
 <li><a href="https://code.visualstudio.com/">Visual Studio Code</a> - an editor and IDE from Microsoft</li>
 <li><a href="https://www.pinta-project.com/">Pinta</a> - a Mac clone of <a href="https://www.getpaint.net/index.html">paint.net</a> (but any graphics tool that allows you to edit 1-bit PNGs will do)</li>
 </ul>
-<p>I can&rsquo;t recommend working with Visual Studio Code highly enough. It provides project management features, C syntax awareness and highlighting, and integrates very nicely with <code>ufbt</code>.</p>
+<p>The experience working with Visual Studio Code is brilliant. It provides project management features, C syntax awareness and highlighting, and <code>ufbt</code> provides a nice integration to support build and debug options from the IDE.</p>
 <h2 id="versions-and-firmwares">Versions and firmwares</h2>
 <p>Flipper apps are written in C, and they&rsquo;re compiled against the version of the firmware you want them to run against. This means that if your firmware changes, your app must too.</p>
 <p>This create a little complexity for distributing an app - as the firmware versions regularly frequently, and many people are using different flavours of firmware altogether (eg. <a href="https://github.com/DarkFlippers/unleashed-firmware">DarkFlipper/Unleashed</a>, <a href="https://github.com/RogueMaster/flipperzero-firmware-wPlugins">RogueMaster</a>).</p>
