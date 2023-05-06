@@ -230,7 +230,6 @@
 <li><a href="https://github.com/DroomOne">DroomOne</a> for the <a href="https://github.com/DroomOne/Flipper-Plugin-Tutorial">Flipper Plugin tutorial</a>.</li>
 <li><a href="https://brodan.biz/">Chris Hranj</a> (Brodan) for the <a href="https://brodan.biz/blog/a-visual-guide-to-flipper-zero-gui-components/">guide to Flipper Zero components</a>.</li>
 </ul>
-<p>If you&rsquo;re interested in developing apps for the Flipper, you should really check out Derek&rsquo;s YouTube channel: <a href="https://www.youtube.com/@MrDerekJamison">@MrDerekJamison</a></p>
 <h2 id="approaches">Approaches</h2>
 <p>Flipper Zero provides a few of ways to build an app interface. The simplest is to create and register a <code>ViewPort</code>, and register a function for redrawing it which will be called each time <code>view_port_update</code> is called.</p>
 <p>Although reasonably simple, this approach doesn&rsquo;t benefit from all the components available through the firmware. You&rsquo;ll have to design your own interface. It does seem to be reasonably popular amongst developers of simple games on the Flipper, though. If you want to see an example of this approach, check out the <strong>tag</strong> application (currently under development). In particular: <a href="https://github.com/instantiator/flipper-zero-experimental-apps/blob/main/tag/src/tag_ui.c"><code>tag_ui.c</code></a>, <a href="https://github.com/instantiator/flipper-zero-experimental-apps/blob/main/tag/src/tag_app_loop.c"><code>tag_app_loop.c</code></a></p>
