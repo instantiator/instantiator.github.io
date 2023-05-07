@@ -302,15 +302,20 @@
 </span></span></code></pre></div><p>I often open a terminal in Visual Studio Code, as it&rsquo;s easiest to work in a single tool and see what&rsquo;s happening as I go.</p>
 <h3 id="fetch-the-flipperzero-firmware">Fetch the FlipperZero firmware</h3>
 <p>Update <code>ufbt</code> to collect the Software Development Kit (SDK) for the current firmware. You can specify the firmware channel using the <code>--channel=[dev|rc|release]</code> option.</p>
-<p><em>NB. I recommend working against the <code>dev</code> channel firmware. It enables quite a lot of safeguards to help catch certain kinds of mistakes early (you&rsquo;ll see theses as <code>furi_assert</code> assertions in code).</em></p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ ufbt update
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ ufbt update --channel<span class="o">=</span>dev
 </span></span><span class="line"><span class="cl">13:36:51.062 <span class="o">[</span>I<span class="o">]</span> Deploying SDK <span class="k">for</span> f7
 </span></span><span class="line"><span class="cl">13:36:51.062 <span class="o">[</span>I<span class="o">]</span> Fetching version info <span class="k">for</span> UpdateChannel.DEV from https://update.flipperzero.one/firmware/directory.json
 </span></span><span class="line"><span class="cl">13:36:51.201 <span class="o">[</span>I<span class="o">]</span> Using version: a7d1ec03
 </span></span><span class="line"><span class="cl">13:36:51.201 <span class="o">[</span>I<span class="o">]</span> uFBT SDK dir: /Users/lewiswestbury/.ufbt/current
 </span></span><span class="line"><span class="cl">13:36:53.304 <span class="o">[</span>I<span class="o">]</span> Deploying SDK
 </span></span><span class="line"><span class="cl">13:36:53.556 <span class="o">[</span>I<span class="o">]</span> SDK deployed.
-</span></span></code></pre></div><p>Your Flipper&rsquo;s firmware should match the firmware you&rsquo;re working against, or the app won&rsquo;t launch. You can ensure that by updating the firmware on your Flipper through the <strong>qFlipper</strong> application on your computer.</p>
+</span></span></code></pre></div><p><em>NB. I recommend working against the <code>dev</code> channel firmware. It enables quite a lot of safeguards to help catch certain kinds of mistakes early (you&rsquo;ll see theses as <code>furi_assert</code> assertions in firmware code, and you can use them yourself).</em></p>
+<p><em>NNB. If a <code>furi_assert</code> fails (ie. the assertion isn&rsquo;t true), it will hang your program. It can sometimes be quite difficult to identify or locate the problem, particularly if you haven&rsquo;t tried to debug your code yet, but at least you&rsquo;ll know there&rsquo;s an issue. I&rsquo;ll cover debugging in a future tutorial (once I have the supporting hardware). In the meantime, you could check out <a href="https://www.youtube.com/@MrDerekJamison">Derek Jamison</a>&rsquo;s guide on YouTube: <a href="https://youtu.be/CLsLZO15S44">Flipper Zero: Debugging FURI_ASSERT failures</a></em></p>
+<p>Your Flipper&rsquo;s firmware should match the firmware you&rsquo;re working against, or the app won&rsquo;t launch. You can use <code>ufbt</code> to flash the firmware on your Flipper:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">ufbt flash_usb
+</span></span></code></pre></div><p><code>ufbt</code> will also flash through an ST-link if you have that available:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">ufbt flash
+</span></span></code></pre></div><p>The <strong>qFlipper</strong> application also supports this:</p>
 <p><img src="/f0-tutorial/qflipper-update.png" alt="the qFlipper app showing the firmware view and the big green update button"></p>
 <h3 id="create-a-skeleton-app">Create a skeleton app</h3>
 <p><code>ufbt create</code> will create a nice working environment for your app. Give your app a simple id, eg. <code>test_app</code> - you&rsquo;ll be able to change this later. Provide an id for the application, with the <code>APPID=</code> option.</p>
