@@ -194,7 +194,7 @@
                                                 2023-05-05
                                            </span>
                         <em class="fas fa-stopwatch"></em>
-                        <span class="reading-time">10-minute read</span>
+                        <span class="reading-time">11-minute read</span>
                     </div>
                 
             </div>
@@ -294,7 +294,15 @@
 </ul>
 <p>In this simple scenario, it&rsquo;s probably easier just to reorder your functions.</p>
 <p>As soon as you want to start defining a group or library of functions and structures that are all linked, you&rsquo;ll want to place them into a separate <code>.c</code> file and then create a header file you can use to define the interface (the methods you&rsquo;re sharing with other <code>.c</code> files).</p>
-<p>The good news is that <code>ufbt</code> will find all your files, and compile them in a sensible order.</p>
+<p>As a rule of thumb, if you want to include a header file from your own code, use inverted commas:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl"><span class="cp">#include</span> <span class="cpf">&#34;my_lib.h&#34;</span><span class="cp">
+</span></span></span></code></pre></div><p>If you want to include a library header (eg. from the firmware), use angle brackets:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl"><span class="cp">#include</span> <span class="cpf">&lt;gui/gui.h&gt;</span><span class="cp">
+</span></span></span></code></pre></div><p>The good news is that <code>ufbt</code> is smart. It will find all your <code>.c</code> code files, and compile them in a sensible order. (The days of having to list all your code files for <code>gcc</code> are a long distant nightmare&hellip;)</p>
+<h3 id="firmware-headers">Firmware headers</h3>
+<p>A lot of this tutorial will use the <a href="https://github.com/flipperdevices/flipperzero-firmware/tree/dev/applications/services/gui">gui libraries</a> made available through the <a href="https://github.com/flipperdevices/flipperzero-firmware">official firmware</a>. If you ever need to figure out how something works, it&rsquo;s definitely worth taking a look.</p>
+<p>If you do poke around you&rsquo;ll see plenty of <code>.c</code> code files and <code>.h</code> header files. Those header files define exactly which functions, structs, enums, global variables, and macros you&rsquo;ll be able to use to develop your app.</p>
+<p>You&rsquo;ll also see some header files that end with the suffix <code>_i.h</code>. These are <em>internal</em> headers. This means that their content is not made available to app developers. You <em>shouldn&rsquo;t</em> need anything in them, although occasionally you may see something in there you&rsquo;d like to use. Try searching to see if it&rsquo;s called as a part of another function. There&rsquo;s often a good reason why a function has not been exposed to app developers. If you still think you need it, you can always raise the question on Discord.</p>
 <h2 id="setting-up-your-environment">Setting up your environment</h2>
 <p>First, create the directory you want to work in, open a terminal, and navigate to that directory.</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ mkdir test_app
