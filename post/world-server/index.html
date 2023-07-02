@@ -213,7 +213,7 @@
 <li><a href="https://github.com/instantiator/world-server">instantiator/world-server</a></li>
 </ul>
 <h2 id="technologies">Technologies</h2>
-<p>As the purpose of this project is to simplify running and connecting a variety of existing tools, the choice of technologies was guided by how simplicity of containerisation. We&rsquo;re using:</p>
+<p>As the purpose of this project is to simplify running and connecting a variety of existing tools, the choice of technologies was guided by simplicity of containerisation. We&rsquo;re using:</p>
 <ul>
 <li><a href="https://www.docker.com/products/docker-desktop/">Docker</a> - to run containers for individual applications.</li>
 <li><a href="https://www.lua.org/">Lua</a> - a simple scripting language.</li>
@@ -222,10 +222,10 @@
 <li><a href="https://github.com/CrunchyData/pg_tileserv">pg_tileserv</a> - a tile server with a simple map interface</li>
 </ul>
 <h2 id="data">Data</h2>
-<p>Data comes from <a href="https://www.openstreetmap.org/">OpenStreetMap</a> (OSM). <a href="https://download.geofabrik.de/">GEOFABRIK</a> host mirrors of OSM data as downloads, broken down by region. The data is provided in <code>.pbf</code> (<a href="https://wiki.openstreetmap.org/wiki/PBF_Format">Protocolbuffer binary format</a>).</p>
+<p>Data comes from <a href="https://www.openstreetmap.org/">OpenStreetMap</a> (OSM). <a href="https://download.geofabrik.de/">GEOFABRIK</a> host mirrors of OSM data as downloads, broken down by region. The data is provided as <code>pbf</code> files (<a href="https://wiki.openstreetmap.org/wiki/PBF_Format">Protocolbuffer binary format</a>).</p>
 <p>For this project, we&rsquo;ll use data from <a href="https://download.geofabrik.de/europe/great-britain.html">Great Britain</a>.</p>
 <h2 id="getting-started">Getting started</h2>
-<p>First, clone the code for this project to your machine:</p>
+<p>First, clone the project code to your machine:</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">$ git clone https://github.com/instantiator/world-server.git
 </span></span></code></pre></div><h3 id="downloading-the-data">Downloading the data</h3>
 <p>The <code>update-data.sh</code> script is a simple way to fetch the data from GEOFABRIK.</p>
