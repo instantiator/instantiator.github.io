@@ -3,14 +3,14 @@
     <title> instantiator.dev | Hacking up Parliament </title>
 
     
-    <meta charset="utf-8"><meta name="generator" content="Hugo 0.111.3"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+    <meta charset="utf-8"><meta name="generator" content="Hugo 0.113.0"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
     <meta name="description" content="tech, volunteers, public safety, articles and ideas">
     
     
     
     <link rel="stylesheet"
-        href="/css/style.min.688d088b8abc241d1b64bc9fc06c044f5b49e09091a240e662c2710dcd97668a.css"
-        integrity="sha256-aI0Ii4q8JB0bZLyfwGwET1tJ4JCRokDmYsJxDc2XZoo="
+        href="/css/style.min.dcefd58209edfcfe74f79deeeb69d03e329f7975df4c55d671bfd6439908ceab.css"
+        integrity="sha256-3O/Vggnt/P50953u62nQPjKfeXXfTFXWcb/WQ5kIzqs="
         crossorigin="anonymous"
         type="text/css">
     
@@ -205,7 +205,7 @@ The hack The Parliamentary Hack, recently featured in the Independent, was an in
 <p>The Parliamentary Hack, recently <a href="http://www.independent.co.uk/life-style/gadgets-and-tech/features/parliament-2012-how-to-hack-the-house-of-commons-without-anyone-even-trying-to-stop-you-8386762.html">featured in the Independent</a>, was an interesting event. Almost every age group was represented and the event was a hive of activity from the word go.</p>
 <p>Hack days (this was a weekender) are popular amongst data geeks, design geeks, and coders. They serve as a very sociable way to get together and create cool stuff under pressure, and that&rsquo;s fun! The idea is simple: hack up something cool from the data available in 36 hours. Work with whoever you like, join teams, leave teams, work solo, and whatever you create: present it at the end for the possibility of a prize.</p>
 <p>Working with a few folks (we called ourselves Team Whip), we settled on a project: Champion - a service that parses debates from parliament and using that data allows you to search for MPs that care about the things you do. The data we settled on was a pre-parsed set of XML representing the <a href="http://www.theyworkforyou.com/search-hansard/">Hansard data</a>, and a few other supplimentary sources.</p>
-<p><img src="/necro-images/champion.jpg" alt="Champion - who&amp;rsquo;s fighting your cause?"></p>
+<p><img src="/necro-images/champion.jpg" alt="Champion - who&rsquo;s fighting your cause?"></p>
 <h2 id="analysing-mps">Analysing MPs</h2>
 <p>Our analysis looked at all the parliamentary debates since the last election. We pulled out frequencies of term usage to help detect what MPs were talking about, and made the results searchable so that users could type some simple keywords declaring their interests, and get back MPs ranked by just how much they&rsquo;d talked about those things. It&rsquo;s a crude measure of how much they share that interest.</p>
 <p>This is harder than it sounds for quite a few reasons. Words are easy to search for, but many words appear in different forms - so you can&rsquo;t just do a plain-text search.</p>

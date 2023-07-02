@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html  dir="ltr" lang="en" data-theme=""><head>
+    <title> instantiator.dev | Your own map server </title>
+
+    
+    <meta charset="utf-8"><meta name="generator" content="Hugo 0.113.0"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+    <meta name="description" content="tech, volunteers, public safety, articles and ideas">
+    
+    
+    
+    <link rel="stylesheet"
+        href="/css/style.min.dcefd58209edfcfe74f79deeeb69d03e329f7975df4c55d671bfd6439908ceab.css"
+        integrity="sha256-3O/Vggnt/P50953u62nQPjKfeXXfTFXWcb/WQ5kIzqs="
+        crossorigin="anonymous"
+        type="text/css">
+    
+
+    
+    <link rel="stylesheet"
+        href="/css/additional-classes.min.1d76732c34340c3588f50dacb5d8ce67a8c9ad2bf0140c8eb825f3f4e3a071c4.css"
+        integrity="sha256-HXZzLDQ0DDWI9Q2stdjOZ6jJrSvwFAyOuCXz9OOgccQ="
+        crossorigin="anonymous"
+        type="text/css">
+
+    
+    <link rel="stylesheet"
+        href="/css/markupHighlight.min.59c08a266e8a6489aab7cb3ace4259db920d0e8893682a44ef8401387af97664.css"
+        integrity="sha256-WcCKJm6KZImqt8s6zkJZ25INDoiTaCpE74QBOHr5dmQ="
+        crossorigin="anonymous"
+        type="text/css">
+    
+
+
+
+    <link rel="stylesheet" 
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" 
+    integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" 
+    crossorigin="anonymous" />
+
+    
+    <link rel="shortcut icon" href="/favicons/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicons/favicon-16x16.png">
+
+    <link rel="canonical" href="/post/world-server/">
+
+    
+    
+    
+    
+    <script type="text/javascript"
+            src="/js/anatole-header.min.df804b63b5bd8474ea0756ea874bc8f1e92552708cc6ea43aa0d76981dc419f9.js"
+            integrity="sha256-34BLY7W9hHTqB1bqh0vI8eklUnCMxupDqg12mB3EGfk="
+            crossorigin="anonymous"></script>
+
+
+    
+        
+        
+        <script type="text/javascript"
+                src="/js/anatole-theme-switcher.min.ea8ebe268922ef9849261a1312cd65b640595e65251ce4c00534a176afd1ac0c.js"
+                integrity="sha256-6o6&#43;Joki75hJJhoTEs1ltkBZXmUlHOTABTShdq/RrAw="
+                crossorigin="anonymous"></script>
+    
+    <meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://github.com/instantiator/world-server/blob/main/screenshots/public.campsites_all.png?raw=true"/>
+
+<meta name="twitter:title" content="Your own map server"/>
+<meta name="twitter:description" content="A quick guide to running your own tile server, with a geo database populated from OpenStreetMap data."/>
+
+
+    
+    <meta property="og:title" content="Your own map server" />
+<meta property="og:description" content="A quick guide to running your own tile server, with a geo database populated from OpenStreetMap data." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://instantiator.dev/post/world-server/" /><meta property="og:image" content="https://github.com/instantiator/world-server/blob/main/screenshots/public.campsites_all.png?raw=true" /><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2023-07-02T13:00:00+00:00" />
+<meta property="article:modified_time" content="2023-07-02T13:00:00+00:00" /><meta property="og:site_name" content="instantiator.dev" />
+
+
+
+</head>
+<body><div class="sidebar animated fadeInDown ">
+    <div class="logo-title">
+        <div class="title">
+            <img src="/lewis/profile.jpg" alt="profile picture">
+            <h3 title=""><a href="/">instantiator.dev</a></h3>
+            <div class="description">
+                <p>tech, volunteers, public safety, articles and ideas</p>
+            </div>
+        </div>
+    </div>
+    <ul class="social-links">
+        
+            <li>
+                <a href="https://mastodon.social/@instantiator" rel="me" aria-label="Mastodon">
+                    <i class="fab fa-mastodon fa-2x" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+            <li>
+                <a href="https://twitter.com/instantiator" rel="me" aria-label="Twitter">
+                    <i class="fab fa-twitter fa-2x" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+            <li>
+                <a href="https://github.com/instantiator" rel="me" aria-label="GitHub">
+                    <i class="fab fa-github fa-2x" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+            <li>
+                <a href="https://www.linkedin.com/in/lewiswestbury" rel="me" aria-label="LinkedIn">
+                    <i class="fab fa-linkedin fa-2x" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+            <li>
+                <a href="https://www.escapethereview.co.uk/profile/?user_id=11" rel="me" aria-label="Escape the Review">
+                    <i class="fas fa-dungeon fa-2x" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+            <li>
+                <a href="https://icgames.net" rel="me" aria-label="International Consensus Games">
+                    <i class="fas fa-chess-knight fa-2x" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+            <li>
+                <a href="https://instantiator.dev/index.xml" rel="me" aria-label="RSS">
+                    <i class="fas fa-rss fa-2x" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+    </ul>
+    <div class="footer">
+        <div class="by_farbox">&copy; Lewis Westbury  2023 </div>
+    </div>
+</div>
+<div class="main">
+    <div class="page-top  animated fadeInDown ">
+    <a role="button" class="navbar-burger" data-target="navMenu" aria-label="menu" aria-expanded="false">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+    </a>
+    <ul class="nav" id="navMenu">
+        
+        
+            
+            <li><a 
+                   href="/"
+                        
+                   title="">Home</a></li>
+        
+            
+            <li><a 
+                   href="/post/"
+                        
+                   title="">Posts</a></li>
+        
+            
+            <li><a 
+                   href="/about/"
+                        
+                   title="">About</a></li>
+        
+        
+        
+            <li class="theme-switch-item">
+                <a class="theme-switch" title="Switch Theme">
+                    <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+    </ul>
+</div>
+
+    <div class="autopagerize_page_element">
+        <div class="content">
+    <div class="post  animated fadeInDown ">
+        <div class="post-content">
+            
+            <img class="post-thumbnail" src="https://github.com/instantiator/world-server/blob/main/screenshots/public.campsites_all.png?raw=true" alt="Thumbnail image">
+            
+            <div class="post-title">
+                <h3>Your own map server</h3>
+                
+                    <div class="info">
+                        <em class="fas fa-calendar-day"></em>
+                        <span class="date"> 
+                                                2023-07-02
+                                           </span>
+                        <em class="fas fa-stopwatch"></em>
+                        <span class="reading-time">7-minute read</span>
+                    </div>
+                
+            </div>
+
+            <p>A quick guide to running your own tile server, with a geo database populated from <a href="https://www.openstreetmap.org/">OpenStreetMap</a> data.</p>
+<h1 id="your-own-map-server">Your own map server</h1>
+<p>With this project, you will be able to:</p>
+<ul>
+<li>Launch your own GIS database and tile server</li>
+<li>Populate the database with data from OpenStreetMap (OSM)</li>
+<li>View a map generated by your tile server</li>
+</ul>
+<p>The code is in a GitHub repository, and there&rsquo;s also a quick guide there to getting started:</p>
+<ul>
+<li><a href="https://github.com/instantiator/world-server">instantiator/world-server</a></li>
+</ul>
+<h2 id="technologies">Technologies</h2>
+<p>As the purpose of this project is to simplify running and connecting a variety of existing tools, the choice of technologies was guided by how simplicity of containerisation. We&rsquo;re using:</p>
+<ul>
+<li><a href="https://www.docker.com/products/docker-desktop/">Docker</a> - to run containers for individual applications.</li>
+<li><a href="https://www.lua.org/">Lua</a> - a simple scripting language.</li>
+<li><a href="https://postgis.net/">PostGIS</a> - a postgres database with geographical capabilities.</li>
+<li><a href="https://osm2pgsql.org/">osm2pgsql</a> - a tool to import OSM data into a PostGIS database.</li>
+<li><a href="https://github.com/CrunchyData/pg_tileserv">pg_tileserv</a> - a tile server with a simple map interface</li>
+</ul>
+<h2 id="data">Data</h2>
+<p>Data comes from <a href="https://www.openstreetmap.org/">OpenStreetMap</a> (OSM). <a href="https://download.geofabrik.de/">GEOFABRIK</a> host mirrors of OSM data as downloads, broken down by region. The data is provided in <code>.pbf</code> (<a href="https://wiki.openstreetmap.org/wiki/PBF_Format">Protocolbuffer binary format</a>).</p>
+<p>For this project, we&rsquo;ll use data from <a href="https://download.geofabrik.de/europe/great-britain.html">Great Britain</a>.</p>
+<h2 id="getting-started">Getting started</h2>
+<p>First, clone the code for this project to your machine:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">$ git clone https://github.com/instantiator/world-server.git
+</span></span></code></pre></div><h3 id="downloading-the-data">Downloading the data</h3>
+<p>The <code>update-data.sh</code> script is a simple way to fetch the data from GEOFABRIK.</p>
+<p>If you&rsquo;re going to fetch an area other than Great Britain, you&rsquo;ll want to modify these variables in the script:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="nv">DATA_PATH</span><span class="o">=</span>europe
+</span></span><span class="line"><span class="cl"><span class="nv">DATA_FILE</span><span class="o">=</span>great-britain-lastest.osm.pbf
+</span></span><span class="line"><span class="cl"><span class="nv">BACKUP_FILE</span><span class="o">=</span>great-britain-lastest.osm.pbf.backup
+</span></span></code></pre></div><p><code>DATA_PATH</code> and <code>DATA_FILE</code> are composed into a GEOFABRIK url. Run the script to download your chosen data into the <code>data/</code> directory:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">$ ./update-data.sh
+</span></span></code></pre></div><h3 id="launching-the-servers">Launching the servers</h3>
+<p><code>compose.yaml</code> defines a Docker Compose application that combines and connects:</p>
+<ul>
+<li><code>world-server-db</code> (PostGIS) - the database</li>
+<li><code>tile-server</code> (pg_tileserv) - a simple tile server</li>
+</ul>
+<p>There are a number of settings worth noting:</p>
+<ul>
+<li><code>world-server-db</code> (PostGIS) has a healthcheck that runs when it starts up.</li>
+<li><code>tile-server</code> has a dependency on <code>world-server-db</code> and so will wait until the database is ready to start.</li>
+</ul>
+<p><code>world-server-db</code> has a volume called <code>db-data-world-server</code> that points to <code>/var/lib/postgresql/data/</code> in the container. This volume effectively preserves the database contents across container states.</p>
+<p>There are a number of variables in <code>config/world-server.env</code> that control these components, too:</p>
+<ul>
+<li><code>tile-server</code> is exposed on the port specified in <code>TILE_PORT</code>.</li>
+<li><code>world-server-db</code> is exposed on the port specified in <code>DB_PORT</code>.</li>
+</ul>
+<p>You shouldn&rsquo;t need to change much, but you may wish to change the password in a production environment (the default password provided is not a secret and should be treated with caution).</p>
+<table>
+<thead>
+<tr>
+<th>To change</th>
+<th>Modify environment variables</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>The database password</td>
+<td><code>POSTGRES_PASSWORD</code>, <code>DATABASE_URL</code>, <code>DATABASE_URL_LOCAL</code></td>
+</tr>
+<tr>
+<td>The database name</td>
+<td><code>POSTGRES_DB</code>, <code>DATABASE_URL</code>, <code>DATABASE_URL_LOCAL</code></td>
+</tr>
+</tbody>
+</table>
+<p>Ensure that Docker is running on your system, and launch the application:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">$ ./run-server.sh
+</span></span></code></pre></div><h3 id="import-the-data">Import the data</h3>
+<p>Use the <code>import-data.sh</code> script to import the data you previously downloaded into your PostGIS database, using <code>osm2pgsql</code>.</p>
+<p>By default it&rsquo;ll import <code>data/great-britain-latest.osm.pbf</code>, using <code>scripts/import-campsites.lua</code> to filter the data.</p>
+<p>Configure the import with these parameters:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">Import data from a provided .osm.pbf file into a local postgis database.
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">Options:
+</span></span><span class="line"><span class="cl">    -d &lt;path&gt;     --data &lt;path&gt;       Specify the .osm.pbf data source
+</span></span><span class="line"><span class="cl">    -s            --script &lt;path&gt;     Control import activity with a lua script
+</span></span><span class="line"><span class="cl">    -a            --all               Import all data from the data source
+</span></span><span class="line"><span class="cl">    -h            --help              Prints this help message and exits
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">Defaults:
+</span></span><span class="line"><span class="cl">    -a false
+</span></span><span class="line"><span class="cl">    -d data/great-britain-latest.osm.pbf
+</span></span><span class="line"><span class="cl">    -s scripts/import-campsites.lua
+</span></span></code></pre></div><blockquote>
+<p>NB. If you specify the <code>--all</code> parameter, no filtering script will be used, and the entire dataset will be imported. This can take a long time!</p>
+</blockquote>
+<p>To use the defaults, which will import campsite data from Great Britain, run the script with no options:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">$ ./import-data.sh
+</span></span></code></pre></div><h4 id="import-filtering">Import filtering</h4>
+<p><code>osm2pgsql</code> supports the use of a Lua script to control the import - effectively configuring the database table to import to, and providing functions to filter the import.</p>
+<p>See: <a href="https://osm2pgsql.org/doc/manual.html#the-flex-output">The Flex Output</a></p>
+<p>By default, the import script uses <code>scripts/import-campsites.lua</code> - a Lua script that looks for campsite here. Use the <code>--script</code> option to provide another. There are plenty of lua examples at: <a href="https://github.com/openstreetmap/osm2pgsql/tree/master/flex-config">https://github.com/openstreetmap/osm2pgsql/tree/master/flex-config</a></p>
+<p><code>osm2pgsql</code> provides some functions to support the import:</p>
+<ul>
+<li><code>osm2pgsql.define_table</code> is used to define tables
+<ul>
+<li><code>table:insert</code> can then be used to insert records</li>
+</ul>
+</li>
+</ul>
+<p>See: <a href="https://osm2pgsql.org/doc/manual.html#defining-a-table">Defining a table</a></p>
+<ul>
+<li>A function is called for each object found in the dataset:
+<ul>
+<li><code>osm2pgsql.process_node</code> - called if the object is a node</li>
+<li><code>osm2pgsql.process_way</code> - called if the object is a way</li>
+<li><code>osm2pgsql.process_relation</code> - called if the object is a relation</li>
+</ul>
+</li>
+</ul>
+<p>See: <a href="https://osm2pgsql.org/doc/manual.html#processing-callbacks">Processing callbacks</a></p>
+<h4 id="script-breakdown">Script breakdown</h4>
+<p>Here&rsquo;s a quick breakdown of the campsites import script:</p>
+<ol>
+<li>Create tables for the database:</li>
+</ol>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-lua" data-lang="lua"><span class="line"><span class="cl"><span class="kd">local</span> <span class="n">tables</span> <span class="o">=</span> <span class="p">{}</span>
+</span></span><span class="line"><span class="cl"><span class="n">tables.campsites_all</span> <span class="o">=</span> <span class="n">osm2pgsql.define_table</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="n">name</span> <span class="o">=</span> <span class="s2">&#34;campsites_all&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="c1">-- This will generate a column &#34;osm_id INT8&#34; for the id, and a column</span>
+</span></span><span class="line"><span class="cl">  <span class="c1">-- &#34;osm_type CHAR(1)&#34; for the type of object: N(ode), W(way), R(relation)</span>
+</span></span><span class="line"><span class="cl">  <span class="n">ids</span> <span class="o">=</span> <span class="p">{</span> <span class="n">type</span> <span class="o">=</span> <span class="s1">&#39;any&#39;</span><span class="p">,</span> <span class="n">id_column</span> <span class="o">=</span> <span class="s1">&#39;osm_id&#39;</span><span class="p">,</span> <span class="n">type_column</span> <span class="o">=</span> <span class="s1">&#39;osm_type&#39;</span> <span class="p">},</span>
+</span></span><span class="line"><span class="cl">  <span class="n">columns</span> <span class="o">=</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">      <span class="p">{</span> <span class="n">column</span> <span class="o">=</span> <span class="s1">&#39;type&#39;</span><span class="p">,</span> <span class="n">type</span> <span class="o">=</span> <span class="s1">&#39;text&#39;</span> <span class="p">},</span>
+</span></span><span class="line"><span class="cl">      <span class="p">{</span> <span class="n">column</span> <span class="o">=</span> <span class="s1">&#39;name&#39;</span><span class="p">,</span> <span class="n">type</span> <span class="o">=</span> <span class="s1">&#39;text&#39;</span> <span class="p">},</span>
+</span></span><span class="line"><span class="cl">      <span class="p">{</span> <span class="n">column</span> <span class="o">=</span> <span class="s1">&#39;tags&#39;</span><span class="p">,</span>  <span class="n">type</span> <span class="o">=</span> <span class="s1">&#39;jsonb&#39;</span> <span class="p">},</span>
+</span></span><span class="line"><span class="cl">      <span class="p">{</span> <span class="n">column</span> <span class="o">=</span> <span class="s1">&#39;geom&#39;</span><span class="p">,</span>  <span class="n">type</span> <span class="o">=</span> <span class="s1">&#39;geometry&#39;</span> <span class="p">},</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><ul>
+<li>The <code>tags</code> field is a binary json field that contains additional data captured aboutthe imported feature.</li>
+<li>The <code>geom</code> field will contain the actual geometry of the imported feature. See: <a href="https://postgis.net/docs/geometry.html">geometry</a>, and <a href="https://postgis.net/docs/using_postgis_dbmanagement.html#RefObject">Spatial Data Model</a></li>
+</ul>
+<ol start="2">
+<li>A function to remove uninteresting tags from the data:</li>
+</ol>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-lua" data-lang="lua"><span class="line"><span class="cl"><span class="kr">function</span> <span class="nf">clean_tags</span><span class="p">(</span><span class="n">tags</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">  <span class="n">tags.odbl</span> <span class="o">=</span> <span class="kc">nil</span>
+</span></span><span class="line"><span class="cl">  <span class="n">tags</span><span class="p">[</span><span class="s1">&#39;source:ref&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="kc">nil</span>
+</span></span><span class="line"><span class="cl">  <span class="c1">-- tags.created_by = nil</span>
+</span></span><span class="line"><span class="cl">  <span class="c1">-- tags.source = nil</span>
+</span></span><span class="line"><span class="cl">  <span class="kr">return</span> <span class="n">next</span><span class="p">(</span><span class="n">tags</span><span class="p">)</span> <span class="o">==</span> <span class="kc">nil</span>
+</span></span><span class="line"><span class="cl"><span class="kr">end</span>
+</span></span></code></pre></div><ul>
+<li>Returns <code>true</code> if there are no more tags.</li>
+</ul>
+<ol start="3">
+<li>A function to indicate if a given feature looks like a campsite. This is the core of the filtering:</li>
+</ol>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-lua" data-lang="lua"><span class="line"><span class="cl"><span class="kr">function</span> <span class="nf">looks_like_a_campsite</span><span class="p">(</span><span class="n">object</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">  <span class="kr">return</span> <span class="n">object.tags</span><span class="p">.</span><span class="n">tourism</span> <span class="o">==</span> <span class="s1">&#39;camp_site&#39;</span> <span class="ow">or</span> <span class="n">object.tags</span><span class="p">.</span><span class="n">tourism</span> <span class="o">==</span> <span class="s1">&#39;camp_pitch&#39;</span> <span class="ow">or</span> <span class="n">object.tags</span><span class="p">.</span><span class="n">tourism</span> <span class="o">==</span> <span class="s1">&#39;caravan_site&#39;</span>
+</span></span><span class="line"><span class="cl"><span class="kr">end</span>
+</span></span></code></pre></div><ul>
+<li>Returns true if the feature&rsquo;s tags indicate it&rsquo;s a campsite of some sort.</li>
+</ul>
+<ol start="4">
+<li>A function to insert a feature into the database:</li>
+</ol>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-lua" data-lang="lua"><span class="line"><span class="cl"><span class="kr">function</span> <span class="nf">process</span><span class="p">(</span><span class="n">object</span><span class="p">,</span> <span class="n">geometry</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">  <span class="n">tables.campsites_all</span><span class="p">:</span><span class="n">insert</span><span class="p">({</span>
+</span></span><span class="line"><span class="cl">      <span class="n">type</span> <span class="o">=</span> <span class="n">object.type</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="n">name</span> <span class="o">=</span> <span class="n">object.tags</span><span class="p">.</span><span class="n">name</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="n">tags</span> <span class="o">=</span> <span class="n">object.tags</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="n">geom</span> <span class="o">=</span> <span class="n">geometry</span>
+</span></span><span class="line"><span class="cl">  <span class="p">})</span>
+</span></span><span class="line"><span class="cl"><span class="kr">end</span>
+</span></span></code></pre></div><ul>
+<li>The <code>object</code> and <code>geometry</code> are provided separately to the function, and then inserted into the <code>campsites_all</code> table defined earlier.</li>
+</ul>
+<ol start="5">
+<li>Override <code>osm2pgsql.process_node</code> to process <strong>node</strong> features:</li>
+</ol>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-lua" data-lang="lua"><span class="line"><span class="cl"><span class="kr">function</span> <span class="nc">osm2pgsql</span><span class="p">.</span><span class="nf">process_node</span><span class="p">(</span><span class="n">object</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">  <span class="kr">if</span> <span class="n">clean_tags</span><span class="p">(</span><span class="n">object.tags</span><span class="p">)</span> <span class="kr">then</span>
+</span></span><span class="line"><span class="cl">      <span class="kr">return</span>
+</span></span><span class="line"><span class="cl">  <span class="kr">end</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="kr">if</span> <span class="n">looks_like_a_campsite</span><span class="p">(</span><span class="n">object</span><span class="p">)</span> <span class="kr">then</span>
+</span></span><span class="line"><span class="cl">      <span class="n">process</span><span class="p">(</span><span class="n">object</span><span class="p">,</span> <span class="n">object</span><span class="p">:</span><span class="n">as_point</span><span class="p">())</span>
+</span></span><span class="line"><span class="cl">  <span class="kr">end</span>
+</span></span><span class="line"><span class="cl"><span class="kr">end</span>
+</span></span></code></pre></div><ul>
+<li>First cleans out uninteresting object tags, and exits if there are no more tags.</li>
+<li>Checks to see if the object looks like a campsite.</li>
+<li>If acceptable, the object is then inserted into the database with a call to <code>process</code>, and <code>object:as_point()</code> to convert it to a point <code>geometry</code> for PostGIS.</li>
+</ul>
+<ol start="6">
+<li>Override <code>osm2pgsql.process_way</code> to process <strong>way</strong> features:</li>
+</ol>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-lua" data-lang="lua"><span class="line"><span class="cl"><span class="c1">-- Called for every way in the input</span>
+</span></span><span class="line"><span class="cl"><span class="kr">function</span> <span class="nc">osm2pgsql</span><span class="p">.</span><span class="nf">process_way</span><span class="p">(</span><span class="n">object</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">  <span class="kr">if</span> <span class="n">clean_tags</span><span class="p">(</span><span class="n">object.tags</span><span class="p">)</span> <span class="kr">then</span>
+</span></span><span class="line"><span class="cl">      <span class="kr">return</span>
+</span></span><span class="line"><span class="cl">  <span class="kr">end</span>
+</span></span><span class="line"><span class="cl">  
+</span></span><span class="line"><span class="cl">  <span class="c1">-- object.is_closed is a simple, imperfect, way to check if this is a polygon</span>
+</span></span><span class="line"><span class="cl">  <span class="kr">if</span> <span class="n">object.is_closed</span> <span class="ow">and</span> <span class="n">looks_like_a_campsite</span><span class="p">(</span><span class="n">object</span><span class="p">)</span> <span class="kr">then</span>
+</span></span><span class="line"><span class="cl">      <span class="n">process</span><span class="p">(</span><span class="n">object</span><span class="p">,</span> <span class="n">object</span><span class="p">:</span><span class="n">as_polygon</span><span class="p">())</span>
+</span></span><span class="line"><span class="cl">  <span class="kr">end</span>
+</span></span><span class="line"><span class="cl"><span class="kr">end</span>
+</span></span></code></pre></div><ul>
+<li>This is similar to the node processing, except that the way should be closed (eg. a closed polygon).</li>
+<li><code>object:as_polygon()</code> is used to convert the object to a polygon <code>geometry</code> for PostGIS.</li>
+</ul>
+<ol start="7">
+<li>Override <code>osm2pgsql.process_relation</code> to process <strong>relation</strong> features:</li>
+</ol>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-lua" data-lang="lua"><span class="line"><span class="cl"><span class="kr">function</span> <span class="nc">osm2pgsql</span><span class="p">.</span><span class="nf">process_relation</span><span class="p">(</span><span class="n">object</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">  <span class="kr">if</span> <span class="n">looks_like_a_campsite</span><span class="p">(</span><span class="n">object</span><span class="p">)</span> <span class="kr">then</span>
+</span></span><span class="line"><span class="cl">      <span class="n">process</span><span class="p">(</span><span class="n">object</span><span class="p">,</span> <span class="n">object</span><span class="p">:</span><span class="n">as_geometrycollection</span><span class="p">())</span>
+</span></span><span class="line"><span class="cl">  <span class="kr">end</span>
+</span></span><span class="line"><span class="cl"><span class="kr">end</span>
+</span></span></code></pre></div><ul>
+<li>Similar to the above, this uses <code>as_geometrycollection</code> to convert the object to a collection <code>geometry</code> for PostGIS.</li>
+</ul>
+<h3 id="view-a-map">View a map</h3>
+<p><code>pg_tileserv</code> also offers a simple map view, from which you can explore the geometry tables in your PostGIS database.</p>
+<ul>
+<li>Visit: <a href="http://localhost:7800">localhost:7800</a></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th><a href="http://localhost:7800">tables</a></th>
+<th><a href="http://localhost:7800/public.campsites_all.html">map</a></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><img src="/world-server/pg_tileserv-tables.png" alt=""></td>
+<td><img src="/world-server/pg_tileserv-map.png" alt=""></td>
+</tr>
+</tbody>
+</table>
+<h2 id="congratulations">Congratulations!</h2>
+<p>You have configured, launched and populated a GIS database paired with a tile server. Good luck applying it to your own project!</p>
+<h2 id="security">Security</h2>
+<p>There are a few security issues to be aware of&hellip;</p>
+<blockquote>
+<p><em>The application is assumed to be running on your personal machine and exposed, at most, to your local home network. In order to use it in any other context, you will need to take some precautionary steps&hellip;</em></p>
+</blockquote>
+<p><strong>The default database password is published in the code repository.</strong> This means it is not safe. Do not use this password in production. Modify the values found in: <code>config/word-server.env</code> and do not commit those values to your repository if public.</p>
+<p><strong>The tile server runs over HTTP by default.</strong> Do not expose this tile server to the internet! Put it behind <a href="https://www.nginx.com/">NGINX</a> or another suitable proxy.</p>
+<p>It is also possible to <a href="https://github.com/CrunchyData/pg_tileserv#configuration-file">configure</a> <code>pg_tileserv</code> to support SSL certificates.</p>
+</div>
+        <div class="post-footer">
+            <div class="info">
+                <span class="separator"><a class="category" href="/categories/tutorial/">tutorial</a><a class="category" href="/categories/tool/">tool</a></span>
+                <span class="separator"><a class="tag" href="/tags/map/">map</a><a class="tag" href="/tags/server/">server</a><a class="tag" href="/tags/docker/">docker</a><a class="tag" href="/tags/container/">container</a><a class="tag" href="/tags/docker-compose/">docker compose</a><a class="tag" href="/tags/postgis/">PostGIS</a><a class="tag" href="/tags/pg_tileserv/">pg_tileserv</a><a class="tag" href="/tags/osm/">OSM</a><a class="tag" href="/tags/openstreetmap/">OpenStreetMap</a><a class="tag" href="/tags/gis/">GIS</a></span>
+                
+
+            </div>
+        </div>
+
+        
+    </div>
+
+
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript"
+        src="/js/medium-zoom.min.e1c6918cbaa90022a5612f0bd71c7bf3be6d036614c5729cebfe14f7b91fa4bc.js"
+        integrity="sha256-4caRjLqpACKlYS8L1xx7875tA2YUxXKc6/4U97kfpLw="
+        crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-SHE42ZWKEN"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-SHE42ZWKEN');
+</script></body>
+
+</html>

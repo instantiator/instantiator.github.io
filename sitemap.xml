@@ -3,7 +3,55 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://instantiator.dev/</loc>
-    <lastmod>2023-05-05T21:00:00+00:00</lastmod>
+    <lastmod>2023-07-02T13:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://instantiator.dev/categories/</loc>
+    <lastmod>2023-07-02T13:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://instantiator.dev/tags/container/</loc>
+    <lastmod>2023-07-02T13:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://instantiator.dev/tags/docker/</loc>
+    <lastmod>2023-07-02T13:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://instantiator.dev/tags/docker-compose/</loc>
+    <lastmod>2023-07-02T13:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://instantiator.dev/tags/gis/</loc>
+    <lastmod>2023-07-02T13:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://instantiator.dev/tags/map/</loc>
+    <lastmod>2023-07-02T13:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://instantiator.dev/tags/openstreetmap/</loc>
+    <lastmod>2023-07-02T13:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://instantiator.dev/tags/osm/</loc>
+    <lastmod>2023-07-02T13:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://instantiator.dev/tags/pg_tileserv/</loc>
+    <lastmod>2023-07-02T13:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://instantiator.dev/tags/postgis/</loc>
+    <lastmod>2023-07-02T13:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://instantiator.dev/post/</loc>
+    <lastmod>2023-07-02T13:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://instantiator.dev/tags/server/</loc>
+    <lastmod>2023-07-02T13:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://instantiator.dev/tags/</loc>
+    <lastmod>2023-07-02T13:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://instantiator.dev/categories/tool/</loc>
+    <lastmod>2023-07-02T13:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://instantiator.dev/categories/tutorial/</loc>
+    <lastmod>2023-07-02T13:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://instantiator.dev/post/world-server/</loc>
+    <lastmod>2023-07-02T13:00:00+00:00</lastmod>
   </url><url>
     <loc>https://instantiator.dev/tags/app/</loc>
     <lastmod>2023-05-05T21:00:00+00:00</lastmod>
@@ -12,9 +60,6 @@
     <lastmod>2023-05-05T21:00:00+00:00</lastmod>
   </url><url>
     <loc>https://instantiator.dev/tags/c/</loc>
-    <lastmod>2023-05-05T21:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://instantiator.dev/categories/</loc>
     <lastmod>2023-05-05T21:00:00+00:00</lastmod>
   </url><url>
     <loc>https://instantiator.dev/tags/clang/</loc>
@@ -44,9 +89,6 @@
     <loc>https://instantiator.dev/tags/plugin/</loc>
     <lastmod>2023-05-05T21:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://instantiator.dev/post/</loc>
-    <lastmod>2023-05-05T21:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://instantiator.dev/tags/project/</loc>
     <lastmod>2023-05-05T21:00:00+00:00</lastmod>
   </url><url>
@@ -54,12 +96,6 @@
     <lastmod>2023-05-05T21:00:00+00:00</lastmod>
   </url><url>
     <loc>https://instantiator.dev/series/</loc>
-    <lastmod>2023-05-05T21:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://instantiator.dev/tags/</loc>
-    <lastmod>2023-05-05T21:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://instantiator.dev/categories/tutorial/</loc>
     <lastmod>2023-05-05T21:00:00+00:00</lastmod>
   </url><url>
     <loc>https://instantiator.dev/tags/ufbt/</loc>
@@ -191,9 +227,6 @@
     <loc>https://instantiator.dev/tags/design/</loc>
     <lastmod>2023-01-18T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://instantiator.dev/tags/docker/</loc>
-    <lastmod>2023-01-18T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://instantiator.dev/tags/dotnet/</loc>
     <lastmod>2023-01-18T00:00:00+00:00</lastmod>
   </url><url>
@@ -222,9 +255,6 @@
     <lastmod>2023-01-18T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://instantiator.dev/tags/stl/</loc>
-    <lastmod>2023-01-18T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://instantiator.dev/categories/tool/</loc>
     <lastmod>2023-01-18T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://instantiator.dev/categories/article/</loc>
@@ -288,9 +318,6 @@
     <lastmod>2023-01-04T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://instantiator.dev/tags/bignumbers/</loc>
-    <lastmod>2023-01-04T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://instantiator.dev/tags/container/</loc>
     <lastmod>2023-01-04T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://instantiator.dev/tags/emulator/</loc>
