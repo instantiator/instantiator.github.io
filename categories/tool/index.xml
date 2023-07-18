@@ -6,14 +6,23 @@
     <description>Recent content in tool on instantiator.dev</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 16 Jul 2023 10:00:00 +0000</lastBuildDate><atom:link href="https://instantiator.dev/categories/tool/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 18 Jul 2023 17:00:00 +0000</lastBuildDate><atom:link href="https://instantiator.dev/categories/tool/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Playing with OAuth</title>
+      <link>https://instantiator.dev/post/playing-with-oauth/</link>
+      <pubDate>Tue, 18 Jul 2023 17:00:00 +0000</pubDate>
+      
+      <guid>https://instantiator.dev/post/playing-with-oauth/</guid>
+      <description>OAuth Token Explorer is a tool to explore authentication and authorisation on behalf of a user.</description>
+    </item>
+    
     <item>
       <title>Hammering JSON into CSV</title>
       <link>https://instantiator.dev/post/hammer-json-into-csv/</link>
       <pubDate>Sun, 16 Jul 2023 10:00:00 +0000</pubDate>
       
       <guid>https://instantiator.dev/post/hammer-json-into-csv/</guid>
-      <description>A tool to help build CSV records from arbitrary JSON&amp;hellip;</description>
+      <description>json-to-smart-csv is a tool to help build CSV records from arbitrary JSON&amp;hellip;</description>
     </item>
     
     <item>

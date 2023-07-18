@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html  dir="ltr" lang="en" data-theme=""><head>
-    <title> instantiator.dev | Hammering JSON into CSV </title>
+    <title> instantiator.dev </title>
 
     
     <meta charset="utf-8"><meta name="generator" content="Hugo 0.115.1"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
     <meta name="description" content="tech, volunteers, public safety, articles and ideas">
+    <link rel="alternate" type="application/rss+xml" href="https://instantiator.dev/index.xml" title="instantiator.dev" />
     
     
     
@@ -43,9 +44,10 @@
     <link rel="icon" type="image/png" sizes="32x32" href="/favicons/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/favicons/favicon-16x16.png">
 
-    <link rel="canonical" href="/post/hammer-json-into-csv/">
+    <link rel="canonical" href="/">
 
     
+    <link rel="alternate" type="application/rss+xml" href="/index.xml" title="instantiator.dev" />
     
     
     
@@ -64,19 +66,17 @@
                 crossorigin="anonymous"></script>
     
     <meta name="twitter:card" content="summary_large_image"/>
-<meta name="twitter:image" content="https://instantiator.dev/hammer/hammer.png"/>
+<meta name="twitter:image" content="https://instantiator.dev/lewis/default-image.png"/>
 
-<meta name="twitter:title" content="Hammering JSON into CSV"/>
-<meta name="twitter:description" content="json-to-smart-csv is a tool to help build CSV records from arbitrary JSON&hellip;"/>
+<meta name="twitter:title" content=""/>
+<meta name="twitter:description" content="tech, volunteers, public safety, articles and ideas"/>
 
 
     
-    <meta property="og:title" content="Hammering JSON into CSV" />
-<meta property="og:description" content="json-to-smart-csv is a tool to help build CSV records from arbitrary JSON&hellip;" />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://instantiator.dev/post/hammer-json-into-csv/" /><meta property="og:image" content="https://instantiator.dev/hammer/hammer.png" /><meta property="article:section" content="post" />
-<meta property="article:published_time" content="2023-07-16T10:00:00+00:00" />
-<meta property="article:modified_time" content="2023-07-16T10:00:00+00:00" /><meta property="og:site_name" content="instantiator.dev" />
+    <meta property="og:title" content="" />
+<meta property="og:description" content="tech, volunteers, public safety, articles and ideas" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://instantiator.dev/" /><meta property="og:image" content="https://instantiator.dev/lewis/default-image.png"/><meta property="og:site_name" content="instantiator.dev" />
 
 
 
@@ -151,7 +151,7 @@
         
         
             
-            <li><a 
+            <li><a class="current"
                    href="/"
                         
                    title="">Home</a></li>
@@ -181,67 +181,98 @@
 
     <div class="autopagerize_page_element">
         <div class="content">
+
     <div class="post  animated fadeInDown ">
-        <div class="post-content">
-            
-           <img class="post-thumbnail" src="/hammer/hammer.png" alt="Thumbnail image">
-            
-            <div class="post-title">
-                <h3>Hammering JSON into CSV</h3>
-                
-                    <div class="info">
-                        <em class="fas fa-calendar-day"></em>
-                        <span class="date"> 
-                                                2023-07-16
-                                           </span>
-                        <em class="fas fa-stopwatch"></em>
-                        <span class="reading-time">2-minute read</span>
-                    </div>
-                
-            </div>
-
-            <p><em>json-to-smart-csv is a tool to help build CSV records from arbitrary JSON&hellip;</em></p>
-<h1 id="hammering-json-into-csv">Hammering JSON into CSV</h1>
-<p>I&rsquo;ve built a simple tool to help hammer arbitrary JSON into CSV records.</p>
-<ul>
-<li><a href="https://github.com/instantiator/json-to-smart-csv">instantiator/json-to-smart-csv</a></li>
-</ul>
-<p>You&rsquo;re welcome to pilfer it, use it, and adapt it to your needs. If you make any modifications, do please upstream your improvements.</p>
-<p>At the moment, you can launch it through the <code>json-to-smart-csv.sh</code> bash script.</p>
-<h2 id="prerequisites">Prerequisites</h2>
-<p>You&rsquo;ll need <a href="https://www.gnu.org/software/bash/">bash</a> on your system (available by default on Mac OS), and the <a href="https://dotnet.microsoft.com/en-us/download">.NET 7.0 SDK</a>.</p>
-<h2 id="getting-started">Getting started</h2>
-<p>Take a look in the <a href="https://github.com/instantiator/json-to-smart-csv/tree/main/sample-data">sample-data</a> directory to get a feel for the tool.</p>
-<ul>
-<li><a href="https://github.com/instantiator/json-to-smart-csv/blob/main/sample-data/sample-list.json">sample-list.json</a> is a JSON file containing several rich objects - representing a number of fruit/vegetables found in the kitchen.</li>
-<li><a href="https://github.com/instantiator/json-to-smart-csv/blob/main/sample-data/sample-rules.csv">sample-rules.csv</a> defines a number of columns to create in output CSV, and how to source them from the JSON.</li>
-<li><a href="https://github.com/instantiator/json-to-smart-csv/blob/main/sample-data/sample-out.csv">sample-out.csv</a> is the output generated by the tool.</li>
-</ul>
-<p><img src="/hammer/sample-out.csv.png" alt="sample output" title="Sample output CSV file showing a record for each fruit-or-vegetable"></p>
-<p>You can regenerate the test output by running the <a href="https://github.com/instantiator/json-to-smart-csv/blob/main/test-sample.sh">test-sample.sh</a> script.</p>
-<p>As you can see from the script, it provides these arguments to <code>json-to-smart-csv.sh</code>:</p>
-<ul>
-<li><code>-c sample-data/sample-rules.csv</code> - indicating the CSV file to find column definitions in</li>
-<li><code>-s sample-data/sample-list.json</code> - indicating the source data JSON file</li>
-<li><code>-t sample-data/sample-out.csv</code> - indicating the target file to put the results</li>
-</ul>
-<p>By default it runs in <code>Create</code> mode - but you can switch it to append to the target file by adding the <code>-m Append</code> option.</p>
-<h2 id="future-work">Future work</h2>
-<p>At the moment, this tool relies on the presence of the .NET SDK and bash. It would be nice to bundle it up into a binary and distribute through the standard package managers. I&rsquo;ll look into that.</p>
-<p>Other than that, it&rsquo;s about as feature-complete as I need it to be. If you want to improve on it, you&rsquo;re very welcome to do so - and do please upstream your changes.</p>
-</div>
-        <div class="post-footer">
-            <div class="info">
-                <span class="separator"><a class="category" href="/categories/tool/">tool</a></span>
-                <span class="separator"><a class="tag" href="/tags/json/">json</a><a class="tag" href="/tags/csv/">csv</a><a class="tag" href="/tags/tool/">tool</a><a class="tag" href="/tags/dotnet/">DotNet</a><a class="tag" href="/tags/csharp/">csharp</a></span>
-                
-
-            </div>
-        </div>
-
         
+        <!--
+This file is left intentionally empty by default to be backward compatible with initial theme setup.
+
+Although the theme has advanced a little bit and it now allows to specify the content on the main page (even if the list of posts/articles is not intended).
+This can be:
+- with the list of posts/articles (default: `mainSections = ["post"]) or
+- without the list of posts/articles (by setting `mainSections = [""]`)
+
+Markdown supported, ie:
+
+```
+# Welcome
+
+- Hugo 🚀
+- Hugo theme 🚀
+
+Don't forget to check the README.md file!
+```
+
+-->
+
     </div>
 
+    
+    
+
+        <div class="post  animated fadeInDown ">
+            <div class="home-post">
+                
+                <div class="home-post-description-container">
+                    <div class="post-title">
+                        <h3><a href="/post/champion/">Hacking up Parliament</a></h3>
+                    </div>
+                    <div class="post-content">
+                        <div class="p_part">
+                            <p>This is a necropost, resurrected from an old blog.
+The hack The Parliamentary Hack, recently featured in the Independent, was an interesting event.</p>
+                            </div>
+                    </div>
+
+                    
+                    <div class="post-footer">
+                        <div class="meta">
+                            <div class="info">
+                                <em class="fas fa-calendar-day"></em>
+                                    <span class="date">
+                                                        2012-12-08
+                                                    </span>
+                                <span class="separator"><a class="category" href="/categories/necropost/">necropost</a><a class="category" href="/categories/article/">article</a></span>
+                                <span class="separator"><a class="tag" href="/tags/necropost/">Necropost</a><a class="tag" href="/tags/parliament/">Parliament</a><a class="tag" href="/tags/hackathon/">hackathon</a><a class="tag" href="/tags/hack/">hack</a><a class="tag" href="/tags/hansard/">Hansard</a><a class="tag" href="/tags/analysis/">analysis</a><a class="tag" href="/tags/lda/">LDA</a></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+    <div class="pagination">
+        
+    <ul class="pagination pagination-default">
+      <li class="page-item">
+        <a href="/" aria-label="First" class="page-link" role="button"><span aria-hidden="true">&laquo;&laquo;</span></a>
+      </li>
+      <li class="page-item">
+        <a href="/page/5/" aria-label="Previous" class="page-link" role="button"><span aria-hidden="true">&laquo;</span></a>
+      </li>
+      <li class="page-item">
+        <a href="/page/2/" aria-label="Page 2" class="page-link" role="button">2</a>
+      </li>
+      <li class="page-item">
+        <a href="/page/3/" aria-label="Page 3" class="page-link" role="button">3</a>
+      </li>
+      <li class="page-item">
+        <a href="/page/4/" aria-label="Page 4" class="page-link" role="button">4</a>
+      </li>
+      <li class="page-item">
+        <a href="/page/5/" aria-label="Page 5" class="page-link" role="button">5</a>
+      </li>
+      <li class="page-item active">
+        <a aria-current="page" aria-label="Page 6" class="page-link" role="button">6</a>
+      </li>
+      <li class="page-item disabled">
+        <a aria-disabled="true" aria-label="Next" class="page-link" role="button" tabindex="-1"><span aria-hidden="true">&raquo;</span></a>
+      </li>
+      <li class="page-item disabled">
+        <a aria-disabled="true" aria-label="Last" class="page-link" role="button" tabindex="-1"><span aria-hidden="true">&raquo;&raquo;</span></a>
+      </li>
+    </ul>
+    </div>
 
         </div>
     </div>
