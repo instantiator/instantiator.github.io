@@ -8,6 +8,9 @@
     <loc>https://instantiator.dev/tags/access-token/</loc>
     <lastmod>2023-07-18T17:00:00+00:00</lastmod>
   </url><url>
+    <loc>https://instantiator.dev/tags/authentication/</loc>
+    <lastmod>2023-07-18T17:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://instantiator.dev/tags/authorisation/</loc>
     <lastmod>2023-07-18T17:00:00+00:00</lastmod>
   </url><url>
@@ -20,10 +23,16 @@
     <loc>https://instantiator.dev/categories/</loc>
     <lastmod>2023-07-18T17:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://instantiator.dev/tags/oauth/</loc>
+    <loc>https://instantiator.dev/tags/explore/</loc>
     <lastmod>2023-07-18T17:00:00+00:00</lastmod>
   </url><url>
     <loc>https://instantiator.dev/post/playing-with-oauth/</loc>
+    <lastmod>2023-07-18T17:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://instantiator.dev/tags/federated/</loc>
+    <lastmod>2023-07-18T17:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://instantiator.dev/tags/oauth/</loc>
     <lastmod>2023-07-18T17:00:00+00:00</lastmod>
   </url><url>
     <loc>https://instantiator.dev/post/</loc>
@@ -35,7 +44,16 @@
     <loc>https://instantiator.dev/tags/scope/</loc>
     <lastmod>2023-07-18T17:00:00+00:00</lastmod>
   </url><url>
+    <loc>https://instantiator.dev/tags/sign-in/</loc>
+    <lastmod>2023-07-18T17:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://instantiator.dev/tags/social-network/</loc>
+    <lastmod>2023-07-18T17:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://instantiator.dev/tags/</loc>
+    <lastmod>2023-07-18T17:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://instantiator.dev/tags/tool/</loc>
     <lastmod>2023-07-18T17:00:00+00:00</lastmod>
   </url><url>
     <loc>https://instantiator.dev/categories/tool/</loc>
@@ -54,9 +72,6 @@
     <lastmod>2023-07-16T10:00:00+00:00</lastmod>
   </url><url>
     <loc>https://instantiator.dev/tags/json/</loc>
-    <lastmod>2023-07-16T10:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://instantiator.dev/tags/tool/</loc>
     <lastmod>2023-07-16T10:00:00+00:00</lastmod>
   </url><url>
     <loc>https://instantiator.dev/tags/container/</loc>

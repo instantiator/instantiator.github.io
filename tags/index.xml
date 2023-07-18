@@ -17,6 +17,15 @@
     </item>
     
     <item>
+      <title>authentication</title>
+      <link>https://instantiator.dev/tags/authentication/</link>
+      <pubDate>Tue, 18 Jul 2023 17:00:00 +0000</pubDate>
+      
+      <guid>https://instantiator.dev/tags/authentication/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>authorisation</title>
       <link>https://instantiator.dev/tags/authorisation/</link>
       <pubDate>Tue, 18 Jul 2023 17:00:00 +0000</pubDate>
@@ -44,6 +53,24 @@
     </item>
     
     <item>
+      <title>explore</title>
+      <link>https://instantiator.dev/tags/explore/</link>
+      <pubDate>Tue, 18 Jul 2023 17:00:00 +0000</pubDate>
+      
+      <guid>https://instantiator.dev/tags/explore/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>federated</title>
+      <link>https://instantiator.dev/tags/federated/</link>
+      <pubDate>Tue, 18 Jul 2023 17:00:00 +0000</pubDate>
+      
+      <guid>https://instantiator.dev/tags/federated/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>OAuth</title>
       <link>https://instantiator.dev/tags/oauth/</link>
       <pubDate>Tue, 18 Jul 2023 17:00:00 +0000</pubDate>
@@ -67,6 +94,33 @@
       <pubDate>Tue, 18 Jul 2023 17:00:00 +0000</pubDate>
       
       <guid>https://instantiator.dev/tags/scope/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>sign in</title>
+      <link>https://instantiator.dev/tags/sign-in/</link>
+      <pubDate>Tue, 18 Jul 2023 17:00:00 +0000</pubDate>
+      
+      <guid>https://instantiator.dev/tags/sign-in/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>social network</title>
+      <link>https://instantiator.dev/tags/social-network/</link>
+      <pubDate>Tue, 18 Jul 2023 17:00:00 +0000</pubDate>
+      
+      <guid>https://instantiator.dev/tags/social-network/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>tool</title>
+      <link>https://instantiator.dev/tags/tool/</link>
+      <pubDate>Tue, 18 Jul 2023 17:00:00 +0000</pubDate>
+      
+      <guid>https://instantiator.dev/tags/tool/</guid>
       <description></description>
     </item>
     
@@ -103,15 +157,6 @@
       <pubDate>Sun, 16 Jul 2023 10:00:00 +0000</pubDate>
       
       <guid>https://instantiator.dev/tags/json/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>tool</title>
-      <link>https://instantiator.dev/tags/tool/</link>
-      <pubDate>Sun, 16 Jul 2023 10:00:00 +0000</pubDate>
-      
-      <guid>https://instantiator.dev/tags/tool/</guid>
       <description></description>
     </item>
     
