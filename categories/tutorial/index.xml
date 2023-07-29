@@ -54,6 +54,15 @@ What you see is a visualisation of everything I&amp;rsquo;ved watched since 2012
     </item>
     
     <item>
+      <title>The rocketship template 🚀</title>
+      <link>https://instantiator.dev/post/rocketship-template/</link>
+      <pubDate>Sun, 08 Jan 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://instantiator.dev/post/rocketship-template/</guid>
+      <description>Presenting a simple template to develop, publish, and test a simple C# service backend on AWS, with serverless Lambda functions, supported by DynamoDb, behind an API Gateway, and protected by Cognito auth.</description>
+    </item>
+    
+    <item>
       <title>TIL - shell environment variables aren&#39;t available to OS X apps</title>
       <link>https://instantiator.dev/post/til-osx-apps-environment/</link>
       <pubDate>Fri, 12 Nov 2021 00:00:00 +0000</pubDate>

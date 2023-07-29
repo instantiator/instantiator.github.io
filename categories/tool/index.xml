@@ -45,6 +45,15 @@ Generating 3D crossword models I&amp;rsquo;ve been working on a tool to generate
     </item>
     
     <item>
+      <title>The rocketship template 🚀</title>
+      <link>https://instantiator.dev/post/rocketship-template/</link>
+      <pubDate>Sun, 08 Jan 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://instantiator.dev/post/rocketship-template/</guid>
+      <description>Presenting a simple template to develop, publish, and test a simple C# service backend on AWS, with serverless Lambda functions, supported by DynamoDb, behind an API Gateway, and protected by Cognito auth.</description>
+    </item>
+    
+    <item>
       <title>A template thesis to simplify your write-up</title>
       <link>https://instantiator.dev/post/markdown-thesis-template/</link>
       <pubDate>Thu, 17 Jun 2021 00:00:00 +0000</pubDate>
