@@ -6,7 +6,115 @@
     <description>Recent content in Tags on instantiator.dev</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 18 Jul 2023 17:00:00 +0000</lastBuildDate><atom:link href="https://instantiator.dev/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 12 Sep 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://instantiator.dev/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>javascript</title>
+      <link>https://instantiator.dev/tags/javascript/</link>
+      <pubDate>Tue, 12 Sep 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://instantiator.dev/tags/javascript/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>NextJS</title>
+      <link>https://instantiator.dev/tags/nextjs/</link>
+      <pubDate>Tue, 12 Sep 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://instantiator.dev/tags/nextjs/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>presentation</title>
+      <link>https://instantiator.dev/tags/presentation/</link>
+      <pubDate>Tue, 12 Sep 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://instantiator.dev/tags/presentation/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>React</title>
+      <link>https://instantiator.dev/tags/react/</link>
+      <pubDate>Tue, 12 Sep 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://instantiator.dev/tags/react/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>repository</title>
+      <link>https://instantiator.dev/tags/repository/</link>
+      <pubDate>Tue, 12 Sep 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://instantiator.dev/tags/repository/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>reveal</title>
+      <link>https://instantiator.dev/tags/reveal/</link>
+      <pubDate>Tue, 12 Sep 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://instantiator.dev/tags/reveal/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>RevealJS</title>
+      <link>https://instantiator.dev/tags/revealjs/</link>
+      <pubDate>Tue, 12 Sep 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://instantiator.dev/tags/revealjs/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>SlideShow</title>
+      <link>https://instantiator.dev/tags/slideshow/</link>
+      <pubDate>Tue, 12 Sep 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://instantiator.dev/tags/slideshow/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>template</title>
+      <link>https://instantiator.dev/tags/template/</link>
+      <pubDate>Tue, 12 Sep 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://instantiator.dev/tags/template/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>TypeScript</title>
+      <link>https://instantiator.dev/tags/typescript/</link>
+      <pubDate>Tue, 12 Sep 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://instantiator.dev/tags/typescript/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>ui</title>
+      <link>https://instantiator.dev/tags/ui/</link>
+      <pubDate>Tue, 12 Sep 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://instantiator.dev/tags/ui/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>UX</title>
+      <link>https://instantiator.dev/tags/ux/</link>
+      <pubDate>Tue, 12 Sep 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://instantiator.dev/tags/ux/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>access token</title>
       <link>https://instantiator.dev/tags/access-token/</link>
@@ -364,15 +472,6 @@
       <pubDate>Fri, 05 May 2023 21:00:00 +0000</pubDate>
       
       <guid>https://instantiator.dev/tags/ufbt/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>ui</title>
-      <link>https://instantiator.dev/tags/ui/</link>
-      <pubDate>Fri, 05 May 2023 21:00:00 +0000</pubDate>
-      
-      <guid>https://instantiator.dev/tags/ui/</guid>
       <description></description>
     </item>
     
@@ -859,15 +958,6 @@
       <pubDate>Sun, 08 Jan 2023 00:00:00 +0000</pubDate>
       
       <guid>https://instantiator.dev/tags/serverless/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>template</title>
-      <link>https://instantiator.dev/tags/template/</link>
-      <pubDate>Sun, 08 Jan 2023 00:00:00 +0000</pubDate>
-      
-      <guid>https://instantiator.dev/tags/template/</guid>
       <description></description>
     </item>
     

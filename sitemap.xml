@@ -3,7 +3,58 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://instantiator.dev/</loc>
-    <lastmod>2023-07-18T17:00:00+00:00</lastmod>
+    <lastmod>2023-09-12T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://instantiator.dev/categories/</loc>
+    <lastmod>2023-09-12T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://instantiator.dev/tags/javascript/</loc>
+    <lastmod>2023-09-12T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://instantiator.dev/tags/nextjs/</loc>
+    <lastmod>2023-09-12T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://instantiator.dev/post/</loc>
+    <lastmod>2023-09-12T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://instantiator.dev/tags/presentation/</loc>
+    <lastmod>2023-09-12T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://instantiator.dev/tags/react/</loc>
+    <lastmod>2023-09-12T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://instantiator.dev/tags/repository/</loc>
+    <lastmod>2023-09-12T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://instantiator.dev/tags/reveal/</loc>
+    <lastmod>2023-09-12T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://instantiator.dev/post/reveal-in-react/</loc>
+    <lastmod>2023-09-12T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://instantiator.dev/tags/revealjs/</loc>
+    <lastmod>2023-09-12T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://instantiator.dev/tags/slideshow/</loc>
+    <lastmod>2023-09-12T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://instantiator.dev/tags/</loc>
+    <lastmod>2023-09-12T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://instantiator.dev/tags/template/</loc>
+    <lastmod>2023-09-12T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://instantiator.dev/categories/tutorial/</loc>
+    <lastmod>2023-09-12T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://instantiator.dev/tags/typescript/</loc>
+    <lastmod>2023-09-12T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://instantiator.dev/tags/ui/</loc>
+    <lastmod>2023-09-12T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://instantiator.dev/tags/ux/</loc>
+    <lastmod>2023-09-12T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://instantiator.dev/tags/access-token/</loc>
     <lastmod>2023-07-18T17:00:00+00:00</lastmod>
@@ -20,9 +71,6 @@
     <loc>https://instantiator.dev/tags/authorization-code/</loc>
     <lastmod>2023-07-18T17:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://instantiator.dev/categories/</loc>
-    <lastmod>2023-07-18T17:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://instantiator.dev/tags/explore/</loc>
     <lastmod>2023-07-18T17:00:00+00:00</lastmod>
   </url><url>
@@ -35,9 +83,6 @@
     <loc>https://instantiator.dev/tags/oauth/</loc>
     <lastmod>2023-07-18T17:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://instantiator.dev/post/</loc>
-    <lastmod>2023-07-18T17:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://instantiator.dev/tags/redirect-url/</loc>
     <lastmod>2023-07-18T17:00:00+00:00</lastmod>
   </url><url>
@@ -48,9 +93,6 @@
     <lastmod>2023-07-18T17:00:00+00:00</lastmod>
   </url><url>
     <loc>https://instantiator.dev/tags/social-network/</loc>
-    <lastmod>2023-07-18T17:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://instantiator.dev/tags/</loc>
     <lastmod>2023-07-18T17:00:00+00:00</lastmod>
   </url><url>
     <loc>https://instantiator.dev/tags/tool/</loc>
@@ -104,9 +146,6 @@
     <loc>https://instantiator.dev/tags/server/</loc>
     <lastmod>2023-07-02T13:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://instantiator.dev/categories/tutorial/</loc>
-    <lastmod>2023-07-02T13:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://instantiator.dev/post/world-server/</loc>
     <lastmod>2023-07-02T13:00:00+00:00</lastmod>
   </url><url>
@@ -156,9 +195,6 @@
     <lastmod>2023-05-05T21:00:00+00:00</lastmod>
   </url><url>
     <loc>https://instantiator.dev/tags/ufbt/</loc>
-    <lastmod>2023-05-05T21:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://instantiator.dev/tags/ui/</loc>
     <lastmod>2023-05-05T21:00:00+00:00</lastmod>
   </url><url>
     <loc>https://instantiator.dev/tags/user-interface/</loc>
@@ -336,9 +372,6 @@
     <lastmod>2023-01-08T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://instantiator.dev/tags/serverless/</loc>
-    <lastmod>2023-01-08T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://instantiator.dev/tags/template/</loc>
     <lastmod>2023-01-08T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://instantiator.dev/post/rocketship-template/</loc>

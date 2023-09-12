@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html  dir="ltr" lang="en" data-theme=""><head>
+    <title> instantiator.dev | Reveal in React </title>
+
+    
+    <meta charset="utf-8"><meta name="generator" content="Hugo 0.118.2"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+    <meta name="description" content="tech, volunteers, public safety, articles and ideas">
+    
+    
+    
+    <link rel="stylesheet"
+        href="/css/style.min.59fe2a27cd19eafc8c4aef4e2c18a287287097d0516d9baf6ade257c0f4b4d64.css"
+        integrity="sha256-Wf4qJ80Z6vyMSu9OLBiihyhwl9BRbZuvat4lfA9LTWQ="
+        crossorigin="anonymous"
+        type="text/css">
+    
+
+    
+    <link rel="stylesheet"
+        href="/css/additional-classes.min.1d76732c34340c3588f50dacb5d8ce67a8c9ad2bf0140c8eb825f3f4e3a071c4.css"
+        integrity="sha256-HXZzLDQ0DDWI9Q2stdjOZ6jJrSvwFAyOuCXz9OOgccQ="
+        crossorigin="anonymous"
+        type="text/css">
+
+    
+    <link rel="stylesheet"
+        href="/css/markupHighlight.min.59c08a266e8a6489aab7cb3ace4259db920d0e8893682a44ef8401387af97664.css"
+        integrity="sha256-WcCKJm6KZImqt8s6zkJZ25INDoiTaCpE74QBOHr5dmQ="
+        crossorigin="anonymous"
+        type="text/css">
+    
+
+
+
+    <link rel="stylesheet" 
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" 
+    integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" 
+    crossorigin="anonymous" />
+
+    
+    <link rel="shortcut icon" href="/favicons/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicons/favicon-16x16.png">
+
+    <link rel="canonical" href="/post/reveal-in-react/">
+
+    
+    
+    
+    
+    <script type="text/javascript"
+            src="/js/anatole-header.min.df804b63b5bd8474ea0756ea874bc8f1e92552708cc6ea43aa0d76981dc419f9.js"
+            integrity="sha256-34BLY7W9hHTqB1bqh0vI8eklUnCMxupDqg12mB3EGfk="
+            crossorigin="anonymous"></script>
+
+
+    
+        
+        
+        <script type="text/javascript"
+                src="/js/anatole-theme-switcher.min.ea8ebe268922ef9849261a1312cd65b640595e65251ce4c00534a176afd1ac0c.js"
+                integrity="sha256-6o6&#43;Joki75hJJhoTEs1ltkBZXmUlHOTABTShdq/RrAw="
+                crossorigin="anonymous"></script>
+    
+    <meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://instantiator.dev/reveal/multiplexing-slides-1-and-2.gif"/>
+
+<meta name="twitter:title" content="Reveal in React"/>
+<meta name="twitter:description" content="What if your UI was a slide show?
+Reveal in React TLDR: Here&rsquo;s a template repository for a NextJS app with a Reveal slide show UI: instantiator/reveal-on-next"/>
+
+
+    
+    <meta property="og:title" content="Reveal in React" />
+<meta property="og:description" content="What if your UI was a slide show?
+Reveal in React TLDR: Here&rsquo;s a template repository for a NextJS app with a Reveal slide show UI: instantiator/reveal-on-next" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://instantiator.dev/post/reveal-in-react/" /><meta property="og:image" content="https://instantiator.dev/reveal/multiplexing-slides-1-and-2.gif" /><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2023-09-12T00:00:00+00:00" />
+<meta property="article:modified_time" content="2023-09-12T00:00:00+00:00" /><meta property="og:site_name" content="instantiator.dev" />
+
+
+
+</head>
+<body><div class="sidebar animated fadeInDown ">
+    <div class="logo-title">
+        <div class="title">
+            <img src="/lewis/profile.jpg" alt="profile picture">
+            <h3 title=""><a href="/">instantiator.dev</a></h3>
+            <div class="description">
+                <p>tech, volunteers, public safety, articles and ideas</p>
+            </div>
+        </div>
+    </div>
+    <ul class="social-links">
+        
+            <li>
+                <a href="https://mastodon.social/@instantiator" rel="me" aria-label="Mastodon">
+                    <i class="fab fa-mastodon fa-2x" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+            <li>
+                <a href="https://twitter.com/instantiator" rel="me" aria-label="Twitter">
+                    <i class="fab fa-twitter fa-2x" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+            <li>
+                <a href="https://github.com/instantiator" rel="me" aria-label="GitHub">
+                    <i class="fab fa-github fa-2x" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+            <li>
+                <a href="https://www.linkedin.com/in/lewiswestbury" rel="me" aria-label="LinkedIn">
+                    <i class="fab fa-linkedin fa-2x" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+            <li>
+                <a href="https://www.escapethereview.co.uk/profile/?user_id=11" rel="me" aria-label="Escape the Review">
+                    <i class="fas fa-dungeon fa-2x" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+            <li>
+                <a href="https://icgames.net" rel="me" aria-label="International Consensus Games">
+                    <i class="fas fa-chess-knight fa-2x" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+            <li>
+                <a href="https://instantiator.dev/index.xml" rel="me" aria-label="RSS">
+                    <i class="fas fa-rss fa-2x" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+    </ul>
+    <div class="footer">
+        <div class="by_farbox">&copy; Lewis Westbury  2023 </div>
+    </div>
+</div>
+<div class="main">
+    <div class="page-top  animated fadeInDown ">
+    <a role="button" class="navbar-burger" data-target="navMenu" aria-label="menu" aria-expanded="false">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+    </a>
+    <ul class="nav" id="navMenu">
+        
+        
+            
+            <li><a 
+                   href="/"
+                        
+                   title="">Home</a></li>
+        
+            
+            <li><a 
+                   href="/post/"
+                        
+                   title="">All posts</a></li>
+        
+            
+            <li><a 
+                   href="/categories/tool/"
+                        
+                   title="">Tools</a></li>
+        
+            
+            <li><a 
+                   href="/categories/tutorial/"
+                        
+                   title="">Tutorials</a></li>
+        
+            
+            <li><a 
+                   href="/categories/article/"
+                        
+                   title="">Articles</a></li>
+        
+            
+            <li><a 
+                   href="/about/"
+                        
+                   title="">About</a></li>
+        
+        
+        
+            <li class="theme-switch-item">
+                <a class="theme-switch" title="Switch Theme">
+                    <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+    </ul>
+</div>
+
+    <div class="autopagerize_page_element">
+        <div class="content">
+    <div class="post  animated fadeInDown ">
+        <div class="post-content">
+            
+           <img class="post-thumbnail" src="/reveal/multiplexing-slides-1-and-2.gif" alt="Thumbnail image">
+            
+            <div class="post-title">
+                <h3>Reveal in React</h3>
+                
+                    <div class="info">
+                        <em class="fas fa-calendar-day"></em>
+                        <span class="date"> 
+                                                2023-09-12
+                                           </span>
+                        <em class="fas fa-stopwatch"></em>
+                        <span class="reading-time">8-minute read</span>
+                    </div>
+                
+            </div>
+
+            <p>What if your UI was a slide show?</p>
+<h1 id="reveal-in-react">Reveal in React</h1>
+<p><strong>TLDR:</strong> Here&rsquo;s a template repository for a NextJS app with a Reveal slide show UI: <a href="https://github.com/instantiator/reveal-on-next">instantiator/reveal-on-next</a></p>
+<p><a href="https://nextjs.org/">NextJS</a> from <a href="https://vercel.com/">Vercel</a> is a <a href="https://react.dev/">React</a> framework for creating web applications that can be hosted statically or dynamically - with some clever ways to control if your code should run server-side or client-side. It can statically load pages with content from build time, and then update them dynamically. This is a very important for SEO.</p>
+<p>I&rsquo;ve been exploring ways to embed slide shows into React applications, and allowing them to interact with the rest of the web app as React elements or components in their own right.</p>
+<p><a href="https://revealjs.com/">RevealJS</a> is described as &ldquo;an HTML presentation framework&rdquo;. It&rsquo;s nice looking, simple to create content for, and very flexible. It embeds into regular vanilla javascript websites easily, and with a little tweaking it can be made compatible with React apps, too.</p>
+<h2 id="multiplexing">Multiplexing</h2>
+<p>RevealJS has another feature: Multiplexing. This allows one (or more) client slide shows to follow the progress of one (or more) <del>master</del> controller slide show. This capability is available as the <a href="https://github.com/reveal/multiplex">Multiplex plugin</a>. It can be easily enabled, provided you have access to its socket.io server.</p>
+<p>You can stand up your own server, or for non-production work there&rsquo;s also one hosted at <a href="https://reveal-multiplex.glitch.me/">reveal-multiplex.glitch.me</a>.</p>
+<p>This experiment also explores multiplexing capability.</p>
+<h2 id="dynamic-content">Dynamic content</h2>
+<p>Another aspect of using a presentation as a UI is the ability for an application to control the content that goes inside it. This experiment explores the use of the <a href="https://swr.vercel.app/">SWR</a> library to fetch content, and then <a href="https://www.npmjs.com/package/html-react-parser">html-react-parser</a> to render that content inside the presentation.</p>
+<p>This has an interesting benefit: It&rsquo;s possible to create and insert real React elements inside the presentation - meaning you can create rich user experiences and interactions within the slide show UI.</p>
+<h2 id="static-sites">Static sites</h2>
+<p>An interesting benefit of working with NextJS is that it can generate a fully static export of your application. This can significantly reduce your hosting costs, provided you don&rsquo;t need server-side features. Some static hosting, eg. <a href="https://pages.github.com/">GitHub Pages</a>, is completely free.</p>
+<p>NB. Some NextJS features are at odds with the ability to generate a static export, eg. if you need to regularly update the content of your static preview. These should be avoided to preserve this capability.</p>
+<p>Building a static site aligns well with requirements for Reveal, as it needs client-side javascript from the moment it is created.</p>
+<p>A goal of this experiment is to build an application that preserves this static export capability.</p>
+<h2 id="getting-started">Getting started</h2>
+<p>To get a simple web app running, with slide show pages for client and controllers:</p>
+<ul>
+<li>
+<p>Fork the template repository: <a href="https://github.com/instantiator/reveal-on-next">instantiator/reveal-on-next</a></p>
+</li>
+<li>
+<p>Install dependencies and run the dev server:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">npm install
+</span></span><span class="line"><span class="cl">npm run dev
+</span></span></code></pre></div></li>
+</ul>
+<p>The site will be served at: <a href="http://localhost:3000">localhost:3000</a></p>
+<h2 id="build-your-own">Build your own</h2>
+<p>The following notes outline the approach I took to embedding Reveal in a Next/React application&hellip;</p>
+<h3 id="install-node-and-npx">Install node and npx</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">brew install node
+</span></span><span class="line"><span class="cl">npm install -g npx
+</span></span></code></pre></div><h3 id="create-the-app">Create the app</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">npx create-next-app@latest
+</span></span></code></pre></div><h3 id="install-revealjs">Install <code>reveal.js</code></h3>
+<p>There are a few react-reveal packages that wrap Reveal for React/Next applications, but they&rsquo;re a little out of date now (the latest was last updated 3 years ago), and aren&rsquo;t really suited to Next or server-side rendering without some extra work.</p>
+<p>Install <code>reveal.js</code> directly:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">npm install reveal.js
+</span></span></code></pre></div><h3 id="create-a-presentation-component">Create a presentation component</h3>
+<p><strong>See:</strong> <a href="https://github.com/instantiator/reveal-on-next/blob/main/components/Presentation.tsx"><code>components/Presentation.tsx</code></a></p>
+<p><code>reveal.js</code> will only run in a browser environment, as it needs access to client specific javascript objects, such as <code>navigator</code>. It also needs to be able to see the <code>div</code> elements with <code>reveal</code> and <code>slides</code> CSS classes, as soon as it is created. This code forces Next to only invoke it in a browser&hellip;</p>
+<p>This is an invocation for Next - telling it that the component needs client-side rendering:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-tsx" data-lang="tsx"><span class="line"><span class="cl"><span class="s2">&#34;use client&#34;</span><span class="p">;</span>
+</span></span></code></pre></div><p><code>Reveal</code> is only created inside a <code>useEffect</code> - which is called when the page and divs are ready.</p>
+<p>The <code>embedded</code> option is set to true - and this helps to incorporate other layout and elements alongside the presentation. As the presentation no longer automatically fills the page, the <code>reveal</code> <code>div</code> will need to have its size specified in CSS&hellip;</p>
+<p><em>NB. The configuration also includes multiplex information and dependencies. See below for more information.</em></p>
+<p><code>Reveal</code> is only initialised once the content inside the presentation is ready. See below for details of how the content is retrieved and rendered.</p>
+<h3 id="modify-globalscss">Modify <code>globals.css</code></h3>
+<p><strong>See:</strong> <a href="https://github.com/instantiator/reveal-on-next/blob/main/app/globals.css"><code>app/globals.css</code></a></p>
+<p>The global CSS can be simplified and adjusted to help fit the presentation to the page. If you are using another framework, such as <a href="https://mui.com/">MUI</a>, you may need to solve this another way.</p>
+<p>In particular:</p>
+<ul>
+<li>Zero <code>margin</code> and <code>padding</code> on <code>html</code> and <code>body</code>. This removes any whitespace around the edges of the page.</li>
+<li>Set <code>body</code> to <code>display: flex</code> (in column direction). This allows us to resize the presentation to fit below any layout above it.</li>
+</ul>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-css" data-lang="css"><span class="line"><span class="cl"><span class="nt">html</span><span class="o">,</span> <span class="nt">body</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="k">max-width</span><span class="p">:</span> <span class="mi">100</span><span class="kt">vw</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="k">overflow-x</span><span class="p">:</span> <span class="kc">hidden</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="k">height</span><span class="p">:</span> <span class="mi">100</span><span class="kt">%</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="k">margin</span><span class="p">:</span> <span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="k">padding</span><span class="p">:</span> <span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nt">body</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="k">display</span><span class="p">:</span> <span class="kc">flex</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="k">flex-direction</span><span class="p">:</span> <span class="kc">column</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="k">color</span><span class="p">:</span> <span class="nb">rgb</span><span class="p">(</span><span class="nf">var</span><span class="p">(</span><span class="o">--</span><span class="n">foreground</span><span class="o">-</span><span class="n">rgb</span><span class="p">));</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><h3 id="import-the-presentation-component">Import the presentation component</h3>
+<p><strong>See:</strong></p>
+<ul>
+<li><a href="https://github.com/instantiator/reveal-on-next/blob/main/app/slides/controller/page.tsx"><code>app/slides/controller/page.tsx</code></a></li>
+<li><a href="https://github.com/instantiator/reveal-on-next/blob/main/app/slides/client/page.tsx"><code>app/slides/client/page.tsx</code></a></li>
+</ul>
+<p><code>dynamic</code> is used to import the <code>Presentation</code> element dynamically, with <code>ssr: false</code> to prevent server-side rendering.</p>
+<h2 id="remote-content">Remote content</h2>
+<p>The <a href="https://github.com/instantiator/reveal-on-next/blob/main/components/presentation.tsx"><code>Presentation</code></a> element has a <code>src</code> parameter, and this is passed to an internal <a href="https://github.com/instantiator/reveal-on-next/blob/main/components/PresentationContent.tsx"><code>PresentationContent</code></a> element which uses the <a href="https://swr.vercel.app/">SWR</a> library to fetch the content. This content is then enriched (React elements are created where needed inside it), and then rendered inside the <code>Presentation</code>.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">npm install swr
+</span></span></code></pre></div><h3 id="dynamically-creating-react-elements">Dynamically creating React elements</h3>
+<p>Some of the content is regular HTML, but some of the elements are React components. There are a number of packages that might help us convert the HTML and manage React components:</p>
+<table>
+<thead>
+<tr>
+<th>Library</th>
+<th>Last updated</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://www.npmjs.com/package/html-react-parser">html-react-parser</a></td>
+<td>recently</td>
+</tr>
+<tr>
+<td><a href="https://www.npmjs.com/package/html-to-react">html-to-react</a></td>
+<td>recently</td>
+</tr>
+<tr>
+<td><del><a href="https://www.npmjs.com/package/react-html-parser">react-html-parser</a></del></td>
+<td>6 years ago</td>
+</tr>
+</tbody>
+</table>
+<p>Install <code>html-react-parser</code></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">npm install html-react-parser
+</span></span></code></pre></div><p><strong>NB.</strong> <code>html-react-parser</code> is simple to use, but not XSS-safe, and should be used with caution. <code>PresentationContent</code> manages replacement of individual React elements by type:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-tsx" data-lang="tsx"><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">options</span> <span class="o">=</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">replace</span><span class="o">:</span> <span class="p">(</span><span class="nx">domNode</span>: <span class="kt">any</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="p">(</span><span class="nx">domNode</span> <span class="k">instanceof</span> <span class="nx">Element</span> <span class="o">&amp;&amp;</span> <span class="nx">domNode</span><span class="p">.</span><span class="nx">attribs</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">      <span class="k">switch</span> <span class="p">(</span><span class="nx">domNode</span><span class="p">.</span><span class="nx">tagName</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="k">case</span> <span class="s2">&#34;question&#34;</span><span class="o">:</span>
+</span></span><span class="line"><span class="cl">          <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&#34;Enriching question tag...&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">          <span class="kd">let</span> <span class="nx">question</span> <span class="o">=</span> <span class="nx">domNode</span><span class="p">.</span><span class="nx">attribs</span><span class="p">[</span><span class="s2">&#34;question&#34;</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl">          <span class="kd">let</span> <span class="nx">explanation</span> <span class="o">=</span> <span class="nx">domNode</span><span class="p">.</span><span class="nx">attribs</span><span class="p">[</span><span class="s2">&#34;explanation&#34;</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl">          <span class="kd">let</span> <span class="nx">instruction</span> <span class="o">=</span> <span class="nx">domNode</span><span class="p">.</span><span class="nx">attribs</span><span class="p">[</span><span class="s2">&#34;instruction&#34;</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl">          <span class="k">if</span> <span class="p">(</span><span class="nx">question</span> <span class="o">&amp;&amp;</span> <span class="nx">explanation</span> <span class="o">&amp;&amp;</span> <span class="nx">instruction</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="k">return</span> <span class="p">(</span>
+</span></span><span class="line"><span class="cl">              <span class="p">&lt;</span><span class="nt">Question</span>
+</span></span><span class="line"><span class="cl">                <span class="na">question</span><span class="o">=</span><span class="p">{</span><span class="nx">question</span><span class="p">}</span>
+</span></span><span class="line"><span class="cl">                <span class="na">explanation</span><span class="o">=</span><span class="p">{</span><span class="nx">explanation</span><span class="p">}</span>
+</span></span><span class="line"><span class="cl">                <span class="na">instruction</span><span class="o">=</span><span class="p">{</span><span class="nx">instruction</span><span class="p">}</span>
+</span></span><span class="line"><span class="cl">              <span class="p">/&gt;</span>
+</span></span><span class="line"><span class="cl">            <span class="p">);</span>
+</span></span><span class="line"><span class="cl">          <span class="p">}</span>
+</span></span><span class="line"><span class="cl">          <span class="k">break</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">      <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">  <span class="p">},</span>
+</span></span><span class="line"><span class="cl"><span class="p">};</span>
+</span></span></code></pre></div><p>Here, <a href="https://github.com/instantiator/reveal-on-next/blob/main/components/Question.tsx"><code>Question</code></a> also incorporates a <code>Rating</code> element, from: <a href="https://www.npmjs.com/package/react-rating">react-rating</a></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">npm install react-rating
+</span></span></code></pre></div><h2 id="multiplexing-1">Multiplexing</h2>
+<p>Multiplexing allows a controller presentation to send its state to client presentations on other devices (ie. to allow them to follow along).</p>
+<p>There are 3 components:</p>
+<ul>
+<li>Any number of client presentations</li>
+<li>A controller* presentation, with the same slides</li>
+<li>A socket.io based server that passes messages between the various presentations</li>
+</ul>
+<p><em>*Sometimes referred to as a master presentation.</em></p>
+<h3 id="the-server">The server</h3>
+<p>This demo uses the server at: <a href="https://reveal-multiplex.glitch.me/">https://reveal-multiplex.glitch.me/</a></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-tsx" data-lang="tsx"><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">SOCKET_IO_SERVER</span> <span class="o">=</span> <span class="s2">&#34;https://reveal-multiplex.glitch.me/&#34;</span><span class="p">;</span>
+</span></span></code></pre></div><ul>
+<li>To test locally, you could also run your own server.</li>
+<li>A production system should host its own server.</li>
+<li>See: <a href="https://github.com/reveal/multiplex">reveal/multiplex</a></li>
+</ul>
+<h3 id="client-and-controller">Client and controller</h3>
+<p>Install the multiplex plugin:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">npm install reveal-multiplex
+</span></span></code></pre></div><p>The Presentation component in <a href="https://github.com/instantiator/reveal-on-next/blob/main/components/Presentation.tsx"><code>Presentation.tsx</code></a> accepts several parameters:</p>
+<ul>
+<li>
+<p><code>secret</code> (a secret to permit control, or <code>null</code> if acting as the client)</p>
+</li>
+<li>
+<p><code>id</code> (the id of the presentation)</p>
+</li>
+<li>
+<p><code>role</code> (not currently used)</p>
+</li>
+<li>
+<p>To collect a fresh secret and id from the server, visit: <a href="https://reveal-multiplex.glitch.me/token">https://reveal-multiplex.glitch.me/token</a></p>
+</li>
+</ul>
+<p>The multiplex plugin is configured during initialization of Reveal:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-tsx" data-lang="tsx"><span class="line"><span class="cl"><span class="nx">multiplex</span><span class="o">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">secret</span>: <span class="kt">secret</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">id</span>: <span class="kt">id</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">url</span>: <span class="kt">SOCKET_IO_SERVER</span>
+</span></span><span class="line"><span class="cl"><span class="p">},</span>
+</span></span><span class="line"><span class="cl"><span class="nx">dependencies</span><span class="o">:</span> <span class="p">[</span>
+</span></span><span class="line"><span class="cl">    <span class="p">{</span> <span class="nx">src</span><span class="o">:</span> <span class="s1">&#39;https://reveal-multiplex.glitch.me/socket.io/socket.io.js&#39;</span><span class="p">,</span> <span class="kr">async</span><span class="o">:</span> <span class="kc">true</span> <span class="p">},</span>
+</span></span><span class="line"><span class="cl">    <span class="p">{</span> <span class="nx">src</span><span class="o">:</span> <span class="s1">&#39;https://reveal-multiplex.glitch.me/master.js&#39;</span><span class="p">,</span> <span class="kr">async</span><span class="o">:</span> <span class="kc">true</span> <span class="p">},</span>
+</span></span><span class="line"><span class="cl">    <span class="p">{</span> <span class="nx">src</span><span class="o">:</span> <span class="s1">&#39;https://reveal-multiplex.glitch.me/client.js&#39;</span><span class="p">,</span> <span class="kr">async</span><span class="o">:</span> <span class="kc">true</span> <span class="p">},</span>
+</span></span><span class="line"><span class="cl"><span class="p">]</span>
+</span></span></code></pre></div><p>Because these dependencies rely on being able to find <code>Reveal</code> as a global variable, we also add this, just before initialization:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-tsx" data-lang="tsx"><span class="line"><span class="cl"><span class="nb">window</span><span class="p">.</span><span class="nx">Reveal</span> <span class="o">=</span> <span class="nx">reveal</span><span class="p">;</span>
+</span></span></code></pre></div><h2 id="static-builds">Static builds</h2>
+<h3 id="fix-compiler-issues">Fix compiler issues</h3>
+<p>Not all imports agree on the version of React to use, and this can lead to difficulties with imported elements (such as the <code>Rating</code> element used in <a href="https://github.com/instantiator/reveal-on-next/blob/main/components/Question.tsx"><code>Question.tsx</code></a>). In <a href="https://github.com/instantiator/reveal-on-next/blob/main/tsconfig.json"><code>tsconfig.json</code></a> add the following to <code>$.compilerOptions.paths</code> to enforce use of the same version:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">{
+</span></span><span class="line"><span class="cl">    // ...
+</span></span><span class="line"><span class="cl">    &#34;compilerOptions&#34;: {
+</span></span><span class="line"><span class="cl">        &#34;paths&#34;: [
+</span></span><span class="line"><span class="cl">            // ...
+</span></span><span class="line"><span class="cl">            &#34;react&#34;: [&#34;./node_modules/@types/react&#34;]
+</span></span><span class="line"><span class="cl">        ]
+</span></span><span class="line"><span class="cl">    } 
+</span></span><span class="line"><span class="cl">}
+</span></span></code></pre></div><p>In <a href="https://github.com/instantiator/reveal-on-next/blob/main/components/Presentation.tsx"><code>Presentation.tsx</code></a>, <code>window.Reveal</code> is explicitly set to ensure that it is available to the multiplexing scripts imported as dependencies of <code>Reveal</code>.</p>
+<p>TypeScript is strict during a production build, and rejects this as it thinks <code>Reveal</code> is already the name of the module. To instruct the compiler to overlook TypeScript errors, precede the line with <code>// @ts-ignore</code>, as here:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-tsx" data-lang="tsx"><span class="line"><span class="cl"><span class="c1">// @ts-ignore
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nb">window</span><span class="p">.</span><span class="nx">Reveal</span> <span class="o">=</span> <span class="nx">reveal</span><span class="p">;</span>
+</span></span></code></pre></div><h3 id="build-and-export-the-project">Build and export the project</h3>
+<p>Modify <a href="https://github.com/instantiator/reveal-on-next/blob/main/next.config.js"><code>next.config.js</code></a> to set <code>output</code> to <code>export</code>:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">nextConfig</span> <span class="o">=</span> <span class="p">{</span> <span class="nx">output</span><span class="o">:</span> <span class="s2">&#34;export&#34;</span> <span class="p">};</span>
+</span></span></code></pre></div><p>Build the project:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">npx next build
+</span></span></code></pre></div><p>Static output is put into the <code>out</code> directory by default.</p>
+<h2 id="hosting-on-github-pages">Hosting on GitHub pages</h2>
+<p><a href="https://pages.github.com/">GitHub Pages</a> can serve the static content either from the root directory of a repository, or from the <code>docs/</code> directory. You can place the output from <code>out</code> into another repository, and serve it from there by enabling GitHub Pages.</p>
+<p><strong>However,</strong> directories that are prefixed with <code>_</code> (underscore) are ignored by default. To work around this, add an empty file called <code>.nojekyll</code> at the root of the repository (see: <a href="https://github.blog/2009-12-29-bypassing-jekyll-on-github-pages/">this blog post</a> about it).</p>
+<h2 id="conclusion">Conclusion</h2>
+<p>This is an absolute bare-bones application - but hopefully it illustrates how you can build a presentation as a React component with dynamically fetched content, and how it can contain rich React components within it to interact with the rest of the application.</p>
+<p>Feel free to use the template in any way you wish.</p>
+</div>
+        <div class="post-footer">
+            <div class="info">
+                <span class="separator"><a class="category" href="/categories/tutorial/">tutorial</a></span>
+                <span class="separator"><a class="tag" href="/tags/revealjs/">RevealJS</a><a class="tag" href="/tags/reveal/">reveal</a><a class="tag" href="/tags/react/">React</a><a class="tag" href="/tags/nextjs/">NextJS</a><a class="tag" href="/tags/presentation/">presentation</a><a class="tag" href="/tags/slideshow/">SlideShow</a><a class="tag" href="/tags/javascript/">javascript</a><a class="tag" href="/tags/typescript/">TypeScript</a><a class="tag" href="/tags/template/">template</a><a class="tag" href="/tags/repository/">repository</a><a class="tag" href="/tags/ui/">UI</a><a class="tag" href="/tags/ux/">UX</a></span>
+                
+
+            </div>
+        </div>
+
+        
+    </div>
+
+
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript"
+        src="/js/medium-zoom.min.e1c6918cbaa90022a5612f0bd71c7bf3be6d036614c5729cebfe14f7b91fa4bc.js"
+        integrity="sha256-4caRjLqpACKlYS8L1xx7875tA2YUxXKc6/4U97kfpLw="
+        crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-SHE42ZWKEN"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-SHE42ZWKEN');
+</script></body>
+
+</html>
