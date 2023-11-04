@@ -6,15 +6,14 @@
     <description>Recent content in DSA on instantiator.dev</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 28 Apr 2021 16:00:00 +0000</lastBuildDate><atom:link href="https://instantiator.dev/tags/dsa/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 28 Apr 2021 16:00:00 +0000</lastBuildDate>
+    <atom:link href="https://instantiator.dev/tags/dsa/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Making the best possible referrals</title>
       <link>https://instantiator.dev/post/referral-data-standards/</link>
       <pubDate>Wed, 28 Apr 2021 16:00:00 +0000</pubDate>
-      
       <guid>https://instantiator.dev/post/referral-data-standards/</guid>
       <description>The Data Standards Authority are holding an open challenge to discover and set a new data standard for vulnerable people services.</description>
     </item>
-    
   </channel>
 </rss>

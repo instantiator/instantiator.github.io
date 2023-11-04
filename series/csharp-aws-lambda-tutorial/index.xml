@@ -6,60 +6,49 @@
     <description>Recent content in csharp-aws-lambda-tutorial on instantiator.dev</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 20 Apr 2021 18:00:00 +0000</lastBuildDate><atom:link href="https://instantiator.dev/series/csharp-aws-lambda-tutorial/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 20 Apr 2021 18:00:00 +0000</lastBuildDate>
+    <atom:link href="https://instantiator.dev/series/csharp-aws-lambda-tutorial/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Building an AWS Lambda in C#, part 6: Triggers</title>
       <link>https://instantiator.dev/post/csharp-aws-lambda-tutorial-06/</link>
       <pubDate>Tue, 20 Apr 2021 18:00:00 +0000</pubDate>
-      
       <guid>https://instantiator.dev/post/csharp-aws-lambda-tutorial-06/</guid>
       <description>In part 5, we amended our Lambda to write to an S3 bucket; and in this part, we&amp;rsquo;ll explore triggers to run it regularly.</description>
     </item>
-    
     <item>
       <title>Building an AWS Lambda in C#, part 5: S3</title>
       <link>https://instantiator.dev/post/csharp-aws-lambda-tutorial-05/</link>
       <pubDate>Mon, 19 Apr 2021 18:00:00 +0000</pubDate>
-      
       <guid>https://instantiator.dev/post/csharp-aws-lambda-tutorial-05/</guid>
       <description>In previous parts, we&amp;rsquo;ve built a Lambda that can query the OpenWeather API, using a secret key; and in this part we&amp;rsquo;ll extend it to write that data to S3.</description>
     </item>
-    
     <item>
       <title>Building an AWS Lambda in C#, part 4: Logs</title>
       <link>https://instantiator.dev/post/csharp-aws-lambda-tutorial-04/</link>
       <pubDate>Sun, 18 Apr 2021 18:00:00 +0000</pubDate>
-      
       <guid>https://instantiator.dev/post/csharp-aws-lambda-tutorial-04/</guid>
       <description>In part 3, we extended our Lambda to communicate with an API, using a secret key; and in this part, we&amp;rsquo;ll explore the logs created when the Lambda runs.</description>
     </item>
-    
     <item>
       <title>Building an AWS Lambda in C#, part 3: APIs and secrets</title>
       <link>https://instantiator.dev/post/csharp-aws-lambda-tutorial-03/</link>
       <pubDate>Sat, 17 Apr 2021 18:00:00 +0000</pubDate>
-      
       <guid>https://instantiator.dev/post/csharp-aws-lambda-tutorial-03/</guid>
       <description>In part 2, we build a Lambda function, deployed and invoked it; and in this part, we&amp;rsquo;ll extend it to communicate with an API using a secret key.</description>
     </item>
-    
     <item>
       <title>Building an AWS Lambda in C#, part 2: Build, deploy and invoke</title>
       <link>https://instantiator.dev/post/csharp-aws-lambda-tutorial-02/</link>
       <pubDate>Fri, 16 Apr 2021 18:00:00 +0000</pubDate>
-      
       <guid>https://instantiator.dev/post/csharp-aws-lambda-tutorial-02/</guid>
       <description>In part 1, we set up the basic infrastructure to support a new Lambda function on AWS; and n this part, we&amp;rsquo;ll build a Lambda function, deploy it to AWS, and invoke it with some input.</description>
     </item>
-    
     <item>
       <title>Building an AWS Lambda in C#, part 1: AWS</title>
       <link>https://instantiator.dev/post/csharp-aws-lambda-tutorial-01/</link>
       <pubDate>Thu, 15 Apr 2021 18:00:00 +0000</pubDate>
-      
       <guid>https://instantiator.dev/post/csharp-aws-lambda-tutorial-01/</guid>
       <description>At first glance, Amazon Web Services (AWS) can seem impenetrably complex, but it&amp;rsquo;s not so bad once you&amp;rsquo;ve found your way around it&amp;hellip;</description>
     </item>
-    
   </channel>
 </rss>

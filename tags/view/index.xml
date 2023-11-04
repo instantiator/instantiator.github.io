@@ -6,15 +6,14 @@
     <description>Recent content in view on instantiator.dev</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Fri, 05 May 2023 21:00:00 +0000</lastBuildDate><atom:link href="https://instantiator.dev/tags/view/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 05 May 2023 21:00:00 +0000</lastBuildDate>
+    <atom:link href="https://instantiator.dev/tags/view/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Building an app for Flipper Zero, part 2: A simple user interface</title>
       <link>https://instantiator.dev/post/flipper-zero-app-tutorial-02/</link>
       <pubDate>Fri, 05 May 2023 21:00:00 +0000</pubDate>
-      
       <guid>https://instantiator.dev/post/flipper-zero-app-tutorial-02/</guid>
       <description>In this part, we&amp;rsquo;ll build a simple user interface for a Flipper Zero app.</description>
     </item>
-    
   </channel>
 </rss>

@@ -6,69 +6,84 @@
     <description>Recent content in Categories on instantiator.dev</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 12 Sep 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://instantiator.dev/categories/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 12 Sep 2023 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://instantiator.dev/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>hack</title>
+      <link>https://instantiator.dev/categories/hack/</link>
+      <pubDate>Tue, 12 Sep 2023 00:00:00 +0000</pubDate>
+      <guid>https://instantiator.dev/categories/hack/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>template</title>
+      <link>https://instantiator.dev/categories/template/</link>
+      <pubDate>Tue, 12 Sep 2023 00:00:00 +0000</pubDate>
+      <guid>https://instantiator.dev/categories/template/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>tool</title>
+      <link>https://instantiator.dev/categories/tool/</link>
+      <pubDate>Tue, 12 Sep 2023 00:00:00 +0000</pubDate>
+      <guid>https://instantiator.dev/categories/tool/</guid>
+      <description></description>
+    </item>
     <item>
       <title>tutorial</title>
       <link>https://instantiator.dev/categories/tutorial/</link>
       <pubDate>Tue, 12 Sep 2023 00:00:00 +0000</pubDate>
-      
       <guid>https://instantiator.dev/categories/tutorial/</guid>
       <description></description>
     </item>
-    
-    <item>
-      <title>tool</title>
-      <link>https://instantiator.dev/categories/tool/</link>
-      <pubDate>Tue, 18 Jul 2023 17:00:00 +0000</pubDate>
-      
-      <guid>https://instantiator.dev/categories/tool/</guid>
-      <description></description>
-    </item>
-    
     <item>
       <title>article</title>
       <link>https://instantiator.dev/categories/article/</link>
       <pubDate>Sun, 08 Jan 2023 00:00:00 +0000</pubDate>
-      
       <guid>https://instantiator.dev/categories/article/</guid>
       <description></description>
     </item>
-    
+    <item>
+      <title>game</title>
+      <link>https://instantiator.dev/categories/game/</link>
+      <pubDate>Thu, 08 Dec 2022 00:00:00 +0000</pubDate>
+      <guid>https://instantiator.dev/categories/game/</guid>
+      <description></description>
+    </item>
     <item>
       <title>publication</title>
       <link>https://instantiator.dev/categories/publication/</link>
       <pubDate>Tue, 30 Nov 2021 00:00:00 +0000</pubDate>
-      
       <guid>https://instantiator.dev/categories/publication/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>appeal</title>
       <link>https://instantiator.dev/categories/appeal/</link>
       <pubDate>Fri, 18 Jun 2021 00:00:00 +0000</pubDate>
-      
       <guid>https://instantiator.dev/categories/appeal/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>police rewired</title>
       <link>https://instantiator.dev/categories/police-rewired/</link>
       <pubDate>Wed, 28 Apr 2021 16:00:00 +0000</pubDate>
-      
       <guid>https://instantiator.dev/categories/police-rewired/</guid>
       <description></description>
     </item>
-    
+    <item>
+      <title>research</title>
+      <link>https://instantiator.dev/categories/research/</link>
+      <pubDate>Thu, 23 Apr 2020 00:00:00 +0000</pubDate>
+      <guid>https://instantiator.dev/categories/research/</guid>
+      <description></description>
+    </item>
     <item>
       <title>necropost</title>
       <link>https://instantiator.dev/categories/necropost/</link>
       <pubDate>Tue, 05 Mar 2019 00:00:00 +0000</pubDate>
-      
       <guid>https://instantiator.dev/categories/necropost/</guid>
       <description></description>
     </item>
-    
   </channel>
 </rss>

@@ -6,16 +6,15 @@
     <description>Recent content in visualisation on instantiator.dev</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 20 Apr 2023 17:30:00 +0000</lastBuildDate><atom:link href="https://instantiator.dev/tags/visualisation/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 20 Apr 2023 17:30:00 +0000</lastBuildDate>
+    <atom:link href="https://instantiator.dev/tags/visualisation/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>A Netflixstory - analyse your Netflix watch history</title>
       <link>https://instantiator.dev/post/netflix-history/</link>
       <pubDate>Thu, 20 Apr 2023 17:30:00 +0000</pubDate>
-      
       <guid>https://instantiator.dev/post/netflix-history/</guid>
       <description>Exploring your personal Netflix viewing history&amp;hellip;
 What you see is a visualisation of everything I&amp;rsquo;ved watched since 2012.</description>
     </item>
-    
   </channel>
 </rss>

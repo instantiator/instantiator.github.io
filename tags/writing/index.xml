@@ -6,16 +6,15 @@
     <description>Recent content in writing on instantiator.dev</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 17 Jun 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://instantiator.dev/tags/writing/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 17 Jun 2021 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://instantiator.dev/tags/writing/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>A template thesis to simplify your write-up</title>
       <link>https://instantiator.dev/post/markdown-thesis-template/</link>
       <pubDate>Thu, 17 Jun 2021 00:00:00 +0000</pubDate>
-      
       <guid>https://instantiator.dev/post/markdown-thesis-template/</guid>
       <description>The things I&amp;rsquo;ll do to avoid learning LaTeX&amp;hellip;
 Do you prefer Markdown to LaTeX?</description>
     </item>
-    
   </channel>
 </rss>

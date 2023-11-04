@@ -6,25 +6,22 @@
     <description>Recent content in trust on instantiator.dev</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 14 Dec 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://instantiator.dev/tags/trust/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 14 Dec 2021 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://instantiator.dev/tags/trust/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Secrets With Friends</title>
       <link>https://instantiator.dev/post/secrets-with-friends/</link>
       <pubDate>Tue, 14 Dec 2021 00:00:00 +0000</pubDate>
-      
       <guid>https://instantiator.dev/post/secrets-with-friends/</guid>
       <description>It&amp;rsquo;s possible to share a secret amongst a group of people so that only some of them are needed to reconstruct it&amp;hellip;</description>
     </item>
-    
     <item>
       <title>3 excellent ways to build trust with your users</title>
       <link>https://instantiator.dev/post/3-ways-build-trust/</link>
       <pubDate>Wed, 11 Oct 2017 00:00:00 +0000</pubDate>
-      
       <guid>https://instantiator.dev/post/3-ways-build-trust/</guid>
       <description>This article was originally posted to Medium.
 3 excellent ways to build trust with your users I don’t see why it needs that permission!</description>
     </item>
-    
   </channel>
 </rss>

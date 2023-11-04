@@ -8,6 +8,9 @@
     <loc>https://instantiator.dev/categories/</loc>
     <lastmod>2023-09-12T00:00:00+00:00</lastmod>
   </url><url>
+    <loc>https://instantiator.dev/categories/hack/</loc>
+    <lastmod>2023-09-12T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://instantiator.dev/tags/javascript/</loc>
     <lastmod>2023-09-12T00:00:00+00:00</lastmod>
   </url><url>
@@ -42,6 +45,12 @@
     <lastmod>2023-09-12T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://instantiator.dev/tags/template/</loc>
+    <lastmod>2023-09-12T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://instantiator.dev/categories/template/</loc>
+    <lastmod>2023-09-12T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://instantiator.dev/categories/tool/</loc>
     <lastmod>2023-09-12T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://instantiator.dev/categories/tutorial/</loc>
@@ -98,8 +107,8 @@
     <loc>https://instantiator.dev/tags/tool/</loc>
     <lastmod>2023-07-18T17:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://instantiator.dev/categories/tool/</loc>
-    <lastmod>2023-07-18T17:00:00+00:00</lastmod>
+    <loc>https://instantiator.dev/tags/convert/</loc>
+    <lastmod>2023-07-16T10:00:00+00:00</lastmod>
   </url><url>
     <loc>https://instantiator.dev/tags/csharp/</loc>
     <lastmod>2023-07-16T10:00:00+00:00</lastmod>
@@ -107,13 +116,28 @@
     <loc>https://instantiator.dev/tags/csv/</loc>
     <lastmod>2023-07-16T10:00:00+00:00</lastmod>
   </url><url>
+    <loc>https://instantiator.dev/tags/data/</loc>
+    <lastmod>2023-07-16T10:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://instantiator.dev/tags/datascience/</loc>
+    <lastmod>2023-07-16T10:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://instantiator.dev/tags/dotnet/</loc>
+    <lastmod>2023-07-16T10:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://instantiator.dev/tags/formatting/</loc>
+    <lastmod>2023-07-16T10:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://instantiator.dev/tags/hammer/</loc>
     <lastmod>2023-07-16T10:00:00+00:00</lastmod>
   </url><url>
     <loc>https://instantiator.dev/post/hammer-json-into-csv/</loc>
     <lastmod>2023-07-16T10:00:00+00:00</lastmod>
   </url><url>
     <loc>https://instantiator.dev/tags/json/</loc>
+    <lastmod>2023-07-16T10:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://instantiator.dev/tags/reformat/</loc>
     <lastmod>2023-07-16T10:00:00+00:00</lastmod>
   </url><url>
     <loc>https://instantiator.dev/tags/container/</loc>
@@ -215,9 +239,6 @@
     <loc>https://instantiator.dev/post/netflix-history/</loc>
     <lastmod>2023-04-20T17:30:00+00:00</lastmod>
   </url><url>
-    <loc>https://instantiator.dev/tags/data/</loc>
-    <lastmod>2023-04-20T17:30:00+00:00</lastmod>
-  </url><url>
     <loc>https://instantiator.dev/tags/download/</loc>
     <lastmod>2023-04-20T17:30:00+00:00</lastmod>
   </url><url>
@@ -254,7 +275,7 @@
     <loc>https://instantiator.dev/tags/api/</loc>
     <lastmod>2023-04-17T21:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://instantiator.dev/tags/artificial-intelligence/</loc>
+    <loc>https://instantiator.dev/tags/artificialintelligence/</loc>
     <lastmod>2023-04-17T21:00:00+00:00</lastmod>
   </url><url>
     <loc>https://instantiator.dev/post/you-too-can-llm/</loc>
@@ -269,7 +290,7 @@
     <loc>https://instantiator.dev/tags/gpt/</loc>
     <lastmod>2023-04-17T21:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://instantiator.dev/tags/large-language-models/</loc>
+    <loc>https://instantiator.dev/tags/largelanguagemodel/</loc>
     <lastmod>2023-04-17T21:00:00+00:00</lastmod>
   </url><url>
     <loc>https://instantiator.dev/tags/llm/</loc>
@@ -296,7 +317,7 @@
     <loc>https://instantiator.dev/tags/software-development/</loc>
     <lastmod>2023-04-17T21:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://instantiator.dev/tags/text-completion/</loc>
+    <loc>https://instantiator.dev/tags/textcompletion/</loc>
     <lastmod>2023-04-17T21:00:00+00:00</lastmod>
   </url><url>
     <loc>https://instantiator.dev/tags/3d/</loc>
@@ -429,6 +450,9 @@
     <lastmod>2022-12-08T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://instantiator.dev/tags/game/</loc>
+    <lastmod>2022-12-08T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://instantiator.dev/categories/game/</loc>
     <lastmod>2022-12-08T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://instantiator.dev/tags/games/</loc>
@@ -773,6 +797,15 @@
     <loc>https://instantiator.dev/post/look-for-the-helpers/</loc>
     <lastmod>2020-04-23T00:00:00+00:00</lastmod>
   </url><url>
+    <loc>https://instantiator.dev/tags/mutualaid/</loc>
+    <lastmod>2020-04-23T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://instantiator.dev/tags/opendata/</loc>
+    <lastmod>2020-04-23T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://instantiator.dev/categories/research/</loc>
+    <lastmod>2020-04-23T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://instantiator.dev/post/donate-your-laptop-safely/</loc>
     <lastmod>2020-02-01T00:00:00+00:00</lastmod>
   </url><url>
@@ -823,6 +856,9 @@
   </url><url>
     <loc>https://instantiator.dev/tags/witness/</loc>
     <lastmod>2019-03-28T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://instantiator.dev/tags/conversion/</loc>
+    <lastmod>2019-03-05T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://instantiator.dev/categories/necropost/</loc>
     <lastmod>2019-03-05T00:00:00+00:00</lastmod>
@@ -893,6 +929,54 @@
     <loc>https://instantiator.dev/tags/talk/</loc>
     <lastmod>2018-04-12T00:00:00+00:00</lastmod>
   </url><url>
+    <loc>https://instantiator.dev/tags/androiddev/</loc>
+    <lastmod>2017-11-26T13:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://instantiator.dev/tags/closeness/</loc>
+    <lastmod>2017-11-26T13:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://instantiator.dev/tags/contact/</loc>
+    <lastmod>2017-11-26T13:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://instantiator.dev/tags/experiment/</loc>
+    <lastmod>2017-11-26T13:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://instantiator.dev/tags/intimacy/</loc>
+    <lastmod>2017-11-26T13:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://instantiator.dev/tags/java/</loc>
+    <lastmod>2017-11-26T13:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://instantiator.dev/tags/nearby/</loc>
+    <lastmod>2017-11-26T13:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://instantiator.dev/tags/nearbyapi/</loc>
+    <lastmod>2017-11-26T13:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://instantiator.dev/tags/opensource/</loc>
+    <lastmod>2017-11-26T13:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://instantiator.dev/tags/pairing/</loc>
+    <lastmod>2017-11-26T13:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://instantiator.dev/tags/sex/</loc>
+    <lastmod>2017-11-26T13:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://instantiator.dev/tags/sextech/</loc>
+    <lastmod>2017-11-26T13:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://instantiator.dev/tags/speech/</loc>
+    <lastmod>2017-11-26T13:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://instantiator.dev/tags/touch/</loc>
+    <lastmod>2017-11-26T13:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://instantiator.dev/post/touch-pairing/</loc>
+    <lastmod>2017-11-26T13:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://instantiator.dev/tags/touchpairing/</loc>
+    <lastmod>2017-11-26T13:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://instantiator.dev/post/htp2-hacking-the-police/</loc>
     <lastmod>2017-11-20T00:00:00+00:00</lastmod>
   </url><url>
@@ -940,6 +1024,15 @@
   </url><url>
     <loc>https://instantiator.dev/tags/source/</loc>
     <lastmod>2015-05-29T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://instantiator.dev/tags/c-language/</loc>
+    <lastmod>2013-10-29T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://instantiator.dev/tags/c&#43;&#43;/</loc>
+    <lastmod>2013-10-29T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://instantiator.dev/tags/cpp/</loc>
+    <lastmod>2013-10-29T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://instantiator.dev/tags/frotz/</loc>
     <lastmod>2013-10-29T00:00:00+00:00</lastmod>

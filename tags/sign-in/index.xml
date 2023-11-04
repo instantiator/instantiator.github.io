@@ -6,15 +6,14 @@
     <description>Recent content in sign in on instantiator.dev</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 18 Jul 2023 17:00:00 +0000</lastBuildDate><atom:link href="https://instantiator.dev/tags/sign-in/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 18 Jul 2023 17:00:00 +0000</lastBuildDate>
+    <atom:link href="https://instantiator.dev/tags/sign-in/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Exploring OAuth</title>
       <link>https://instantiator.dev/post/playing-with-oauth/</link>
       <pubDate>Tue, 18 Jul 2023 17:00:00 +0000</pubDate>
-      
       <guid>https://instantiator.dev/post/playing-with-oauth/</guid>
       <description>OAuth Token Explorer is a tool to explore authentication and authorisation on behalf of a user.</description>
     </item>
-    
   </channel>
 </rss>

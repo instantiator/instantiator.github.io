@@ -6,487 +6,391 @@
     <description>Recent content in Posts on instantiator.dev</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 12 Sep 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://instantiator.dev/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 12 Sep 2023 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://instantiator.dev/post/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Reveal in React</title>
       <link>https://instantiator.dev/post/reveal-in-react/</link>
       <pubDate>Tue, 12 Sep 2023 00:00:00 +0000</pubDate>
-      
       <guid>https://instantiator.dev/post/reveal-in-react/</guid>
       <description>What if your UI was a slide show?
 Reveal in React TLDR: Here&amp;rsquo;s a template repository for a NextJS app with a Reveal slide show UI: instantiator/reveal-on-next</description>
     </item>
-    
     <item>
       <title>Exploring OAuth</title>
       <link>https://instantiator.dev/post/playing-with-oauth/</link>
       <pubDate>Tue, 18 Jul 2023 17:00:00 +0000</pubDate>
-      
       <guid>https://instantiator.dev/post/playing-with-oauth/</guid>
       <description>OAuth Token Explorer is a tool to explore authentication and authorisation on behalf of a user.</description>
     </item>
-    
     <item>
       <title>Hammering JSON into CSV</title>
       <link>https://instantiator.dev/post/hammer-json-into-csv/</link>
       <pubDate>Sun, 16 Jul 2023 10:00:00 +0000</pubDate>
-      
       <guid>https://instantiator.dev/post/hammer-json-into-csv/</guid>
       <description>json-to-smart-csv is a tool to help build CSV records from arbitrary JSON&amp;hellip;</description>
     </item>
-    
     <item>
       <title>Your own map server</title>
       <link>https://instantiator.dev/post/world-server/</link>
       <pubDate>Sun, 02 Jul 2023 13:00:00 +0000</pubDate>
-      
       <guid>https://instantiator.dev/post/world-server/</guid>
       <description>A quick guide to running your own tile server, with a geo database populated from OpenStreetMap data.</description>
     </item>
-    
     <item>
       <title>Building an app for Flipper Zero, part 2: A simple user interface</title>
       <link>https://instantiator.dev/post/flipper-zero-app-tutorial-02/</link>
       <pubDate>Fri, 05 May 2023 21:00:00 +0000</pubDate>
-      
       <guid>https://instantiator.dev/post/flipper-zero-app-tutorial-02/</guid>
       <description>In this part, we&amp;rsquo;ll build a simple user interface for a Flipper Zero app.</description>
     </item>
-    
     <item>
       <title>Building an app for Flipper Zero, part 1: Getting started</title>
       <link>https://instantiator.dev/post/flipper-zero-app-tutorial-01/</link>
       <pubDate>Fri, 05 May 2023 09:00:00 +0000</pubDate>
-      
       <guid>https://instantiator.dev/post/flipper-zero-app-tutorial-01/</guid>
       <description>FlipperZero is a digital signals multi-tool. Here&amp;rsquo;s a short guide to the basics of building an app for it&amp;hellip;</description>
     </item>
-    
     <item>
       <title>A Netflixstory - analyse your Netflix watch history</title>
       <link>https://instantiator.dev/post/netflix-history/</link>
       <pubDate>Thu, 20 Apr 2023 17:30:00 +0000</pubDate>
-      
       <guid>https://instantiator.dev/post/netflix-history/</guid>
       <description>Exploring your personal Netflix viewing history&amp;hellip;
 What you see is a visualisation of everything I&amp;rsquo;ved watched since 2012.</description>
     </item>
-    
     <item>
       <title>Building AI into your application with Semantic Kernel</title>
       <link>https://instantiator.dev/post/you-too-can-llm/</link>
       <pubDate>Mon, 17 Apr 2023 21:00:00 +0000</pubDate>
-      
       <guid>https://instantiator.dev/post/you-too-can-llm/</guid>
       <description>This is a quick guide to some of the features of the Semantic Kernel, a Software Development Kit that simplifies integration of language models into your own applications.</description>
     </item>
-    
     <item>
       <title>3D puzzle print: a crossword generation tool</title>
       <link>https://instantiator.dev/post/printing-3d-crosswords/</link>
       <pubDate>Wed, 18 Jan 2023 00:00:00 +0000</pubDate>
-      
       <guid>https://instantiator.dev/post/printing-3d-crosswords/</guid>
       <description>A tool to design 3D printed crossword puzzles.
 Generating 3D crossword models I&amp;rsquo;ve been working on a tool to generate crossword designs using OpenSCAD.</description>
     </item>
-    
     <item>
       <title>The rocketship template 🚀</title>
       <link>https://instantiator.dev/post/rocketship-template/</link>
       <pubDate>Sun, 08 Jan 2023 00:00:00 +0000</pubDate>
-      
       <guid>https://instantiator.dev/post/rocketship-template/</guid>
       <description>Presenting a simple template to develop, publish, and test a simple C# service backend on AWS, with serverless Lambda functions, supported by DynamoDb, behind an API Gateway, and protected by Cognito auth.</description>
     </item>
-    
     <item>
       <title>8-bit Supercomputer</title>
       <link>https://instantiator.dev/post/8-bit-supercomputer/</link>
       <pubDate>Wed, 04 Jan 2023 00:00:00 +0000</pubDate>
-      
       <guid>https://instantiator.dev/post/8-bit-supercomputer/</guid>
       <description>It took me 3 weeks to complete the day 11 puzzle for Advent of Code on a BBC Micro this year, and you&amp;rsquo;d be hard pressed to describe my solution as &amp;ldquo;proportionate&amp;rdquo; or &amp;ldquo;necessary&amp;rdquo;&amp;hellip;</description>
     </item>
-    
     <item>
       <title>International Consensus Chess is in public beta!</title>
       <link>https://instantiator.dev/post/icgames-net/</link>
       <pubDate>Thu, 08 Dec 2022 00:00:00 +0000</pubDate>
-      
       <guid>https://instantiator.dev/post/icgames-net/</guid>
       <description>Consensus Chess is going through some beta testing on Mastodon, and you can play today!</description>
     </item>
-    
     <item>
       <title>International Consensus Games (WIP)</title>
       <link>https://instantiator.dev/post/consensus-games/</link>
       <pubDate>Thu, 10 Nov 2022 00:00:00 +0000</pubDate>
-      
       <guid>https://instantiator.dev/post/consensus-games/</guid>
       <description>I&amp;rsquo;ve been working on a pet project recently: Consensus games are a fun new way to play together through social media&amp;hellip;</description>
     </item>
-    
     <item>
       <title>A rather so-phish-ticated scam</title>
       <link>https://instantiator.dev/post/sophishticated-scam/</link>
       <pubDate>Mon, 18 Apr 2022 00:00:00 +0000</pubDate>
-      
       <guid>https://instantiator.dev/post/sophishticated-scam/</guid>
       <description>A few days ago we had a call from one of the most sophisticated phishing attacks I&amp;rsquo;ve experienced&amp;hellip;</description>
     </item>
-    
     <item>
       <title>Secrets With Friends</title>
       <link>https://instantiator.dev/post/secrets-with-friends/</link>
       <pubDate>Tue, 14 Dec 2021 00:00:00 +0000</pubDate>
-      
       <guid>https://instantiator.dev/post/secrets-with-friends/</guid>
       <description>It&amp;rsquo;s possible to share a secret amongst a group of people so that only some of them are needed to reconstruct it&amp;hellip;</description>
     </item>
-    
     <item>
       <title>Dead Person Switches - secrets from beyond the grave</title>
       <link>https://instantiator.dev/post/dead-person-switch/</link>
       <pubDate>Tue, 30 Nov 2021 00:00:00 +0000</pubDate>
-      
       <guid>https://instantiator.dev/post/dead-person-switch/</guid>
       <description>More commonly known as a Dead Man&amp;rsquo;s Switch, a Dead Person Switch (DPS) is a system that can hold a secret on behalf of a person, and govern its release should they become unavailable.</description>
     </item>
-    
     <item>
       <title>Rainbow paws</title>
       <link>https://instantiator.dev/post/rainbow-paws/</link>
       <pubDate>Sat, 13 Nov 2021 00:00:00 +0000</pubDate>
-      
       <guid>https://instantiator.dev/post/rainbow-paws/</guid>
       <description>Art is fun and hard and messy and complicated and like every other trade it&amp;rsquo;s full of people who are earnestly showing you what they created (sprinkled with a few jokers).</description>
     </item>
-    
     <item>
       <title>TIL - shell environment variables aren&#39;t available to OS X apps</title>
       <link>https://instantiator.dev/post/til-osx-apps-environment/</link>
       <pubDate>Fri, 12 Nov 2021 00:00:00 +0000</pubDate>
-      
       <guid>https://instantiator.dev/post/til-osx-apps-environment/</guid>
       <description>Just recently I have been exploring a very strange issue: My application couldn&amp;rsquo;t find a tool that was right where it should be&amp;hellip;</description>
     </item>
-    
     <item>
       <title>Dead Person Switches - appeal for journalists</title>
       <link>https://instantiator.dev/post/dead-mans-switches-appeal/</link>
       <pubDate>Fri, 18 Jun 2021 00:00:00 +0000</pubDate>
-      
       <guid>https://instantiator.dev/post/dead-mans-switches-appeal/</guid>
       <description>I am hoping to interview some investigative journalists for my masters thesis at the University of Oxford.</description>
     </item>
-    
     <item>
       <title>A template thesis to simplify your write-up</title>
       <link>https://instantiator.dev/post/markdown-thesis-template/</link>
       <pubDate>Thu, 17 Jun 2021 00:00:00 +0000</pubDate>
-      
       <guid>https://instantiator.dev/post/markdown-thesis-template/</guid>
       <description>The things I&amp;rsquo;ll do to avoid learning LaTeX&amp;hellip;
 Do you prefer Markdown to LaTeX?</description>
     </item>
-    
     <item>
       <title>Making the best possible referrals</title>
       <link>https://instantiator.dev/post/referral-data-standards/</link>
       <pubDate>Wed, 28 Apr 2021 16:00:00 +0000</pubDate>
-      
       <guid>https://instantiator.dev/post/referral-data-standards/</guid>
       <description>The Data Standards Authority are holding an open challenge to discover and set a new data standard for vulnerable people services.</description>
     </item>
-    
     <item>
       <title>Building an AWS Lambda in C#, part 6: Triggers</title>
       <link>https://instantiator.dev/post/csharp-aws-lambda-tutorial-06/</link>
       <pubDate>Tue, 20 Apr 2021 18:00:00 +0000</pubDate>
-      
       <guid>https://instantiator.dev/post/csharp-aws-lambda-tutorial-06/</guid>
       <description>In part 5, we amended our Lambda to write to an S3 bucket; and in this part, we&amp;rsquo;ll explore triggers to run it regularly.</description>
     </item>
-    
     <item>
       <title>Building an AWS Lambda in C#, part 5: S3</title>
       <link>https://instantiator.dev/post/csharp-aws-lambda-tutorial-05/</link>
       <pubDate>Mon, 19 Apr 2021 18:00:00 +0000</pubDate>
-      
       <guid>https://instantiator.dev/post/csharp-aws-lambda-tutorial-05/</guid>
       <description>In previous parts, we&amp;rsquo;ve built a Lambda that can query the OpenWeather API, using a secret key; and in this part we&amp;rsquo;ll extend it to write that data to S3.</description>
     </item>
-    
     <item>
       <title>Building an AWS Lambda in C#, part 4: Logs</title>
       <link>https://instantiator.dev/post/csharp-aws-lambda-tutorial-04/</link>
       <pubDate>Sun, 18 Apr 2021 18:00:00 +0000</pubDate>
-      
       <guid>https://instantiator.dev/post/csharp-aws-lambda-tutorial-04/</guid>
       <description>In part 3, we extended our Lambda to communicate with an API, using a secret key; and in this part, we&amp;rsquo;ll explore the logs created when the Lambda runs.</description>
     </item>
-    
     <item>
       <title>Building an AWS Lambda in C#, part 3: APIs and secrets</title>
       <link>https://instantiator.dev/post/csharp-aws-lambda-tutorial-03/</link>
       <pubDate>Sat, 17 Apr 2021 18:00:00 +0000</pubDate>
-      
       <guid>https://instantiator.dev/post/csharp-aws-lambda-tutorial-03/</guid>
       <description>In part 2, we build a Lambda function, deployed and invoked it; and in this part, we&amp;rsquo;ll extend it to communicate with an API using a secret key.</description>
     </item>
-    
     <item>
       <title>Building an AWS Lambda in C#, part 2: Build, deploy and invoke</title>
       <link>https://instantiator.dev/post/csharp-aws-lambda-tutorial-02/</link>
       <pubDate>Fri, 16 Apr 2021 18:00:00 +0000</pubDate>
-      
       <guid>https://instantiator.dev/post/csharp-aws-lambda-tutorial-02/</guid>
       <description>In part 1, we set up the basic infrastructure to support a new Lambda function on AWS; and n this part, we&amp;rsquo;ll build a Lambda function, deploy it to AWS, and invoke it with some input.</description>
     </item>
-    
     <item>
       <title>Building an AWS Lambda in C#, part 1: AWS</title>
       <link>https://instantiator.dev/post/csharp-aws-lambda-tutorial-01/</link>
       <pubDate>Thu, 15 Apr 2021 18:00:00 +0000</pubDate>
-      
       <guid>https://instantiator.dev/post/csharp-aws-lambda-tutorial-01/</guid>
       <description>At first glance, Amazon Web Services (AWS) can seem impenetrably complex, but it&amp;rsquo;s not so bad once you&amp;rsquo;ve found your way around it&amp;hellip;</description>
     </item>
-    
     <item>
       <title>Querying data files with terminal tools</title>
       <link>https://instantiator.dev/post/q/</link>
       <pubDate>Mon, 04 Jan 2021 17:30:00 +0000</pubDate>
-      
       <guid>https://instantiator.dev/post/q/</guid>
       <description>There are a many ways to peek inside a data file and reason about its contents.</description>
     </item>
-    
     <item>
       <title>Choosing your first coding language</title>
       <link>https://instantiator.dev/post/what-language/</link>
       <pubDate>Sun, 03 Jan 2021 15:00:00 +0000</pubDate>
-      
       <guid>https://instantiator.dev/post/what-language/</guid>
       <description>Anyone can code. This is a short exploration of the choices for coding beginners out there.</description>
     </item>
-    
     <item>
       <title>Keeping jobs alive with caffeine</title>
       <link>https://instantiator.dev/post/caffeine/</link>
       <pubDate>Sat, 02 Jan 2021 19:00:00 +0000</pubDate>
-      
       <guid>https://instantiator.dev/post/caffeine/</guid>
       <description>My Mac likes to go to sleep to save power, and that means any long-running processes I have underway will be suspended when it does.</description>
     </item>
-    
     <item>
       <title>Hello, World!</title>
       <link>https://instantiator.dev/post/hello-world/</link>
       <pubDate>Fri, 01 Jan 2021 22:00:00 +0000</pubDate>
-      
       <guid>https://instantiator.dev/post/hello-world/</guid>
       <description>I learned to code on a computer called the BBC Micro, released by the BBC in 1981.</description>
     </item>
-    
     <item>
       <title>We&#39;re only human</title>
       <link>https://instantiator.dev/post/covid-volunteer-data/</link>
       <pubDate>Fri, 24 Apr 2020 00:00:00 +0000</pubDate>
-      
       <guid>https://instantiator.dev/post/covid-volunteer-data/</guid>
       <description>Cleaning up data from volunteer groups across the UK.
 We&amp;rsquo;re only human In the previous post, we took a tour of the open data available that tells the story of volunteerism across the UK since the coronavirus crisis began.</description>
     </item>
-    
     <item>
       <title>Look for the helpers</title>
       <link>https://instantiator.dev/post/look-for-the-helpers/</link>
       <pubDate>Thu, 23 Apr 2020 00:00:00 +0000</pubDate>
-      
       <guid>https://instantiator.dev/post/look-for-the-helpers/</guid>
       <description>What can we learn about grass-roots COVID-19 volunteer groups from open data?</description>
     </item>
-    
     <item>
       <title>How to donate your laptop safely</title>
       <link>https://instantiator.dev/post/donate-your-laptop-safely/</link>
       <pubDate>Sat, 01 Feb 2020 00:00:00 +0000</pubDate>
-      
       <guid>https://instantiator.dev/post/donate-your-laptop-safely/</guid>
       <description>A friend is helping out with a community project and asked for some laptops.</description>
     </item>
-    
     <item>
       <title>Being a better witness</title>
       <link>https://instantiator.dev/post/being-a-better-witness/</link>
       <pubDate>Thu, 28 Mar 2019 00:00:00 +0000</pubDate>
-      
       <guid>https://instantiator.dev/post/being-a-better-witness/</guid>
       <description>A couple of weeks ago I witnessed a stabbing&amp;hellip;
 Being a better witness I didn’t know it was a stabbing at the time.</description>
     </item>
-    
     <item>
       <title>Policing data interventions</title>
       <link>https://instantiator.dev/post/policing-data-intervention/</link>
       <pubDate>Tue, 05 Mar 2019 00:00:00 +0000</pubDate>
-      
       <guid>https://instantiator.dev/post/policing-data-intervention/</guid>
       <description>This is a necropost, resurrected from an old blog. To find out more about Hack the Police events, civic tech, and policing technology, visit: Police Rewired</description>
     </item>
-    
     <item>
       <title>A friendly face for the victims of burglary</title>
       <link>https://instantiator.dev/post/burglary-bot/</link>
       <pubDate>Sat, 23 Feb 2019 00:00:00 +0000</pubDate>
-      
       <guid>https://instantiator.dev/post/burglary-bot/</guid>
       <description>This is a necropost, resurrected from an old blog. To find out more about Hack the Police events, civic tech, and policing technology, visit: Police Rewired</description>
     </item>
-    
     <item>
       <title>Let&#39;s hack the police, part 3</title>
       <link>https://instantiator.dev/post/htp3-lets-hack-the-police/</link>
       <pubDate>Wed, 07 Nov 2018 00:00:00 +0000</pubDate>
-      
       <guid>https://instantiator.dev/post/htp3-lets-hack-the-police/</guid>
       <description>To find out more about Hack the Police events, civic tech, and policing technology, visit: Police Rewired</description>
     </item>
-    
     <item>
       <title>Wriggler</title>
       <link>https://instantiator.dev/post/wriggler/</link>
       <pubDate>Mon, 23 Apr 2018 00:00:00 +0000</pubDate>
-      
       <guid>https://instantiator.dev/post/wriggler/</guid>
       <description>This is a necropost, resurrected from an old blog.
 Wriggler It was 1998 and I was 17.</description>
     </item>
-    
     <item>
       <title>Software Self Defence 101</title>
       <link>https://instantiator.dev/post/software-self-defence-101/</link>
       <pubDate>Thu, 12 Apr 2018 00:00:00 +0000</pubDate>
-      
       <guid>https://instantiator.dev/post/software-self-defence-101/</guid>
       <description>Software Self-Defence 101 The first time I met Glyn Wintle, I embarrassed myself.</description>
     </item>
-    
+    <item>
+      <title>Touch Pairing at Sex Tech Hack 2017</title>
+      <link>https://instantiator.dev/post/touch-pairing/</link>
+      <pubDate>Sun, 26 Nov 2017 13:00:00 +0000</pubDate>
+      <guid>https://instantiator.dev/post/touch-pairing/</guid>
+      <description>Touch pairing is an exploration of intimacy and closeness at a distance, from Sex Tech Hack 2017.</description>
+    </item>
     <item>
       <title>Hacking the Police, part 2</title>
       <link>https://instantiator.dev/post/htp2-hacking-the-police/</link>
       <pubDate>Mon, 20 Nov 2017 00:00:00 +0000</pubDate>
-      
       <guid>https://instantiator.dev/post/htp2-hacking-the-police/</guid>
       <description>Hacking the Police Hackathons are everywhere these days, and if you know what they are already then do please skip on and learn why the police are so hungry for innovation!</description>
     </item>
-    
     <item>
       <title>3 excellent ways to build trust with your users</title>
       <link>https://instantiator.dev/post/3-ways-build-trust/</link>
       <pubDate>Wed, 11 Oct 2017 00:00:00 +0000</pubDate>
-      
       <guid>https://instantiator.dev/post/3-ways-build-trust/</guid>
       <description>This article was originally posted to Medium.
 3 excellent ways to build trust with your users I don’t see why it needs that permission!</description>
     </item>
-    
     <item>
       <title>5 reasons refactoring your project can give you back your competitive edge</title>
       <link>https://instantiator.dev/post/5-reasons-to-refactor/</link>
       <pubDate>Thu, 05 Oct 2017 00:00:00 +0000</pubDate>
-      
       <guid>https://instantiator.dev/post/5-reasons-to-refactor/</guid>
       <description>This article was originally posted to Medium.
 5 reasons refactoring your project can give you back your competitive edge It didn’t used to be so expensive to change one little thing&amp;hellip;</description>
     </item>
-    
     <item>
       <title>Why are some projects so expensive?</title>
       <link>https://instantiator.dev/post/project-costs/</link>
       <pubDate>Fri, 22 Sep 2017 00:00:00 +0000</pubDate>
-      
       <guid>https://instantiator.dev/post/project-costs/</guid>
       <description>This article was originally posted to Medium.
 Why are some projects so expensive?</description>
     </item>
-    
     <item>
       <title>Drive Stamper</title>
       <link>https://instantiator.dev/post/np-drive-stamper/</link>
       <pubDate>Fri, 29 May 2015 00:00:00 +0000</pubDate>
-      
       <guid>https://instantiator.dev/post/np-drive-stamper/</guid>
       <description>This is a necropost, resurrected from an old blog.
 Drive Stamper Drive Stamper is one of the first projects I released into the wild, and helped me to kick off my old blog in 2011.</description>
     </item>
-    
     <item>
       <title>Text adventures in 3D</title>
       <link>https://instantiator.dev/post/text-adventures-3d/</link>
       <pubDate>Tue, 29 Oct 2013 00:00:00 +0000</pubDate>
-      
       <guid>https://instantiator.dev/post/text-adventures-3d/</guid>
       <description>This is a necropost, resurrected from an old blog.
 Educational games It&amp;rsquo;s time to take a look at a project from almost a decade ago!</description>
     </item>
-    
     <item>
       <title>Hack Highlight #4: How did we do?</title>
       <link>https://instantiator.dev/post/htp1-highlight-4-how-did-we-do/</link>
       <pubDate>Fri, 14 Jun 2013 00:00:00 +0000</pubDate>
-      
       <guid>https://instantiator.dev/post/htp1-highlight-4-how-did-we-do/</guid>
       <description>This is a necropost, resurrected from an old blog. To find out more about Hack the Police events, civic tech, and policing technology, visit: Police Rewired</description>
     </item>
-    
     <item>
       <title>Hack Highlight #3: AroundMET</title>
       <link>https://instantiator.dev/post/htp1-highlight-3-aroundmet/</link>
       <pubDate>Fri, 07 Jun 2013 00:00:00 +0000</pubDate>
-      
       <guid>https://instantiator.dev/post/htp1-highlight-3-aroundmet/</guid>
       <description>This is a necropost, resurrected from an old blog. To find out more about Hack the Police events, civic tech, and policing technology, visit: Police Rewired</description>
     </item>
-    
     <item>
       <title>Hack Highlight #2: Terminal 2.0</title>
       <link>https://instantiator.dev/post/htp1-highlight-2-terminal-2/</link>
       <pubDate>Wed, 29 May 2013 00:00:00 +0000</pubDate>
-      
       <guid>https://instantiator.dev/post/htp1-highlight-2-terminal-2/</guid>
       <description>This is a necropost, resurrected from an old blog. To find out more about Hack the Police events, civic tech, and policing technology, visit: Police Rewired</description>
     </item>
-    
     <item>
       <title>Hack Highlight #1: Secure evidence recording</title>
       <link>https://instantiator.dev/post/htp1-highlight-1-secure-evidence-recorder/</link>
       <pubDate>Sat, 25 May 2013 00:00:00 +0000</pubDate>
-      
       <guid>https://instantiator.dev/post/htp1-highlight-1-secure-evidence-recorder/</guid>
       <description>This is a necropost, resurrected from an old blog. To find out more about Hack the Police events, civic tech, and policing technology, visit: Police Rewired</description>
     </item>
-    
     <item>
       <title>We hacked the Police!</title>
       <link>https://instantiator.dev/post/we-hacked-the-police/</link>
       <pubDate>Sun, 05 May 2013 00:00:00 +0000</pubDate>
-      
       <guid>https://instantiator.dev/post/we-hacked-the-police/</guid>
       <description>This is a necropost, resurrected from an old blog. To find out more about Hack the Police events, civic tech, and policing technology, visit: Police Rewired</description>
     </item>
-    
     <item>
       <title>Hacking up Parliament</title>
       <link>https://instantiator.dev/post/champion/</link>
       <pubDate>Sat, 08 Dec 2012 00:00:00 +0000</pubDate>
-      
       <guid>https://instantiator.dev/post/champion/</guid>
       <description>This is a necropost, resurrected from an old blog.
 The hack The Parliamentary Hack, recently featured in the Independent, was an interesting event.</description>
     </item>
-    
   </channel>
 </rss>

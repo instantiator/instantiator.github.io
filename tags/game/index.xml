@@ -6,34 +6,29 @@
     <description>Recent content in game on instantiator.dev</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 08 Dec 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://instantiator.dev/tags/game/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 08 Dec 2022 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://instantiator.dev/tags/game/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>International Consensus Chess is in public beta!</title>
       <link>https://instantiator.dev/post/icgames-net/</link>
       <pubDate>Thu, 08 Dec 2022 00:00:00 +0000</pubDate>
-      
       <guid>https://instantiator.dev/post/icgames-net/</guid>
       <description>Consensus Chess is going through some beta testing on Mastodon, and you can play today!</description>
     </item>
-    
     <item>
       <title>International Consensus Games (WIP)</title>
       <link>https://instantiator.dev/post/consensus-games/</link>
       <pubDate>Thu, 10 Nov 2022 00:00:00 +0000</pubDate>
-      
       <guid>https://instantiator.dev/post/consensus-games/</guid>
       <description>I&amp;rsquo;ve been working on a pet project recently: Consensus games are a fun new way to play together through social media&amp;hellip;</description>
     </item>
-    
     <item>
       <title>Wriggler</title>
       <link>https://instantiator.dev/post/wriggler/</link>
       <pubDate>Mon, 23 Apr 2018 00:00:00 +0000</pubDate>
-      
       <guid>https://instantiator.dev/post/wriggler/</guid>
       <description>This is a necropost, resurrected from an old blog.
 Wriggler It was 1998 and I was 17.</description>
     </item>
-    
   </channel>
 </rss>

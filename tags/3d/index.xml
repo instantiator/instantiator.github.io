@@ -6,26 +6,23 @@
     <description>Recent content in 3D on instantiator.dev</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 18 Jan 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://instantiator.dev/tags/3d/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 18 Jan 2023 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://instantiator.dev/tags/3d/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>3D puzzle print: a crossword generation tool</title>
       <link>https://instantiator.dev/post/printing-3d-crosswords/</link>
       <pubDate>Wed, 18 Jan 2023 00:00:00 +0000</pubDate>
-      
       <guid>https://instantiator.dev/post/printing-3d-crosswords/</guid>
       <description>A tool to design 3D printed crossword puzzles.
 Generating 3D crossword models I&amp;rsquo;ve been working on a tool to generate crossword designs using OpenSCAD.</description>
     </item>
-    
     <item>
       <title>Text adventures in 3D</title>
       <link>https://instantiator.dev/post/text-adventures-3d/</link>
       <pubDate>Tue, 29 Oct 2013 00:00:00 +0000</pubDate>
-      
       <guid>https://instantiator.dev/post/text-adventures-3d/</guid>
       <description>This is a necropost, resurrected from an old blog.
 Educational games It&amp;rsquo;s time to take a look at a project from almost a decade ago!</description>
     </item>
-    
   </channel>
 </rss>

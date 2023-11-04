@@ -6,52 +6,43 @@
     <description>Recent content in tool on instantiator.dev</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 18 Jul 2023 17:00:00 +0000</lastBuildDate><atom:link href="https://instantiator.dev/tags/tool/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 18 Jul 2023 17:00:00 +0000</lastBuildDate>
+    <atom:link href="https://instantiator.dev/tags/tool/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Exploring OAuth</title>
       <link>https://instantiator.dev/post/playing-with-oauth/</link>
       <pubDate>Tue, 18 Jul 2023 17:00:00 +0000</pubDate>
-      
       <guid>https://instantiator.dev/post/playing-with-oauth/</guid>
       <description>OAuth Token Explorer is a tool to explore authentication and authorisation on behalf of a user.</description>
     </item>
-    
     <item>
       <title>Hammering JSON into CSV</title>
       <link>https://instantiator.dev/post/hammer-json-into-csv/</link>
       <pubDate>Sun, 16 Jul 2023 10:00:00 +0000</pubDate>
-      
       <guid>https://instantiator.dev/post/hammer-json-into-csv/</guid>
       <description>json-to-smart-csv is a tool to help build CSV records from arbitrary JSON&amp;hellip;</description>
     </item>
-    
     <item>
       <title>Querying data files with terminal tools</title>
       <link>https://instantiator.dev/post/q/</link>
       <pubDate>Mon, 04 Jan 2021 17:30:00 +0000</pubDate>
-      
       <guid>https://instantiator.dev/post/q/</guid>
       <description>There are a many ways to peek inside a data file and reason about its contents.</description>
     </item>
-    
     <item>
       <title>Keeping jobs alive with caffeine</title>
       <link>https://instantiator.dev/post/caffeine/</link>
       <pubDate>Sat, 02 Jan 2021 19:00:00 +0000</pubDate>
-      
       <guid>https://instantiator.dev/post/caffeine/</guid>
       <description>My Mac likes to go to sleep to save power, and that means any long-running processes I have underway will be suspended when it does.</description>
     </item>
-    
     <item>
       <title>Drive Stamper</title>
       <link>https://instantiator.dev/post/np-drive-stamper/</link>
       <pubDate>Fri, 29 May 2015 00:00:00 +0000</pubDate>
-      
       <guid>https://instantiator.dev/post/np-drive-stamper/</guid>
       <description>This is a necropost, resurrected from an old blog.
 Drive Stamper Drive Stamper is one of the first projects I released into the wild, and helped me to kick off my old blog in 2011.</description>
     </item>
-    
   </channel>
 </rss>

@@ -6,15 +6,14 @@
     <description>Recent content in Smart Contract on instantiator.dev</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 30 Nov 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://instantiator.dev/tags/smart-contract/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 30 Nov 2021 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://instantiator.dev/tags/smart-contract/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Dead Person Switches - secrets from beyond the grave</title>
       <link>https://instantiator.dev/post/dead-person-switch/</link>
       <pubDate>Tue, 30 Nov 2021 00:00:00 +0000</pubDate>
-      
       <guid>https://instantiator.dev/post/dead-person-switch/</guid>
       <description>More commonly known as a Dead Man&amp;rsquo;s Switch, a Dead Person Switch (DPS) is a system that can hold a secret on behalf of a person, and govern its release should they become unavailable.</description>
     </item>
-    
   </channel>
 </rss>

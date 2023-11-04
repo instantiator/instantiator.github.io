@@ -3,7 +3,7 @@
     <title> instantiator.dev | Building an AWS Lambda in C#, part 5: S3 </title>
 
     
-    <meta charset="utf-8"><meta name="generator" content="Hugo 0.118.2"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+    <meta charset="utf-8"><meta name="generator" content="Hugo 0.120.3"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
     <meta name="description" content="tech, volunteers, public safety, articles and ideas">
     
     
@@ -78,6 +78,7 @@
 <meta property="article:published_time" content="2021-04-19T18:00:00+00:00" />
 <meta property="article:modified_time" content="2021-04-19T18:00:00+00:00" /><meta property="og:site_name" content="instantiator.dev" />
 <meta property="og:see_also" content="https://instantiator.dev/post/csharp-aws-lambda-tutorial-06/" /><meta property="og:see_also" content="https://instantiator.dev/post/csharp-aws-lambda-tutorial-04/" /><meta property="og:see_also" content="https://instantiator.dev/post/csharp-aws-lambda-tutorial-03/" /><meta property="og:see_also" content="https://instantiator.dev/post/csharp-aws-lambda-tutorial-02/" /><meta property="og:see_also" content="https://instantiator.dev/post/csharp-aws-lambda-tutorial-01/" />
+
 
 
 
@@ -333,7 +334,7 @@
 <p><img src="/csharp-aws-lambda-tutorial/014-add-aws-sdk-s3-nuget.png" alt="Adding the AWS SDK for S3 in Nuget"></p>
 <p>With this package, the Lambda will be able to perform <code>PutObject</code> and <code>GetObject</code> operations against your new S3 bucket.</p>
 <p>Now open up <code>Function.cs</code> and add a new method to your <code>Function</code> class:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-csharp" data-lang="csharp"><span class="line"><span class="cl"><span class="k">private</span> <span class="k">async</span> <span class="n">Task</span><span class="p">&lt;</span><span class="kt">bool</span><span class="p">&gt;</span> <span class="n">PutToS3Async</span><span class="p">(</span><span class="kt">string</span> <span class="n">bucket</span><span class="p">,</span> <span class="kt">string</span> <span class="n">key</span><span class="p">,</span> <span class="kt">string</span> <span class="n">content</span><span class="p">,</span> <span class="n">ILambdaContext</span> <span class="n">context</span><span class="p">)</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-csharp" data-lang="csharp"><span class="line"><span class="cl"><span class="kd">private</span> <span class="kd">async</span> <span class="n">Task</span><span class="p">&lt;</span><span class="kt">bool</span><span class="p">&gt;</span> <span class="n">PutToS3Async</span><span class="p">(</span><span class="kt">string</span> <span class="n">bucket</span><span class="p">,</span> <span class="kt">string</span> <span class="n">key</span><span class="p">,</span> <span class="kt">string</span> <span class="n">content</span><span class="p">,</span> <span class="n">ILambdaContext</span> <span class="n">context</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl"><span class="p">{</span>
 </span></span><span class="line"><span class="cl">	<span class="kt">var</span> <span class="n">request</span> <span class="p">=</span> <span class="k">new</span> <span class="n">PutObjectRequest</span>
 </span></span><span class="line"><span class="cl">	<span class="p">{</span>
@@ -347,12 +348,12 @@
 </span></span><span class="line"><span class="cl">		<span class="kt">var</span> <span class="n">response</span> <span class="p">=</span> <span class="k">await</span> <span class="n">s3</span><span class="p">.</span><span class="n">PutObjectAsync</span><span class="p">(</span><span class="n">request</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl">		<span class="k">if</span> <span class="p">(</span><span class="n">response</span><span class="p">.</span><span class="n">HttpStatusCode</span> <span class="p">==</span> <span class="n">HttpStatusCode</span><span class="p">.</span><span class="n">OK</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl">		<span class="p">{</span>
-</span></span><span class="line"><span class="cl">			<span class="k">return</span> <span class="k">true</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">			<span class="k">return</span> <span class="kc">true</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">		<span class="p">}</span>
 </span></span><span class="line"><span class="cl">		<span class="k">else</span>
 </span></span><span class="line"><span class="cl">		<span class="p">{</span>
 </span></span><span class="line"><span class="cl">			<span class="n">context</span><span class="p">.</span><span class="n">Logger</span><span class="p">.</span><span class="n">Log</span><span class="p">(</span><span class="s">$&#34;{response.HttpStatusCode} encountered putting: {bucket}:{key}&#34;</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">			<span class="k">return</span> <span class="k">false</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">			<span class="k">return</span> <span class="kc">false</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">		<span class="p">}</span>
 </span></span><span class="line"><span class="cl">	<span class="p">}</span>
 </span></span><span class="line"><span class="cl"><span class="p">}</span>
@@ -365,7 +366,7 @@
 <li>It returns true if the response suggests it succeeded, and false otherwise.</li>
 </ul>
 <p>Now, it&rsquo;s time to add a few extra lines to the <code>FunctionHandler</code> method. Here&rsquo;s the full method, now:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-csharp" data-lang="csharp"><span class="line"><span class="cl"><span class="k">public</span> <span class="k">async</span> <span class="n">Task</span><span class="p">&lt;</span><span class="kt">string</span><span class="p">&gt;</span> <span class="n">FunctionHandler</span><span class="p">(</span><span class="kt">string</span> <span class="n">input</span><span class="p">,</span> <span class="n">ILambdaContext</span> <span class="n">context</span><span class="p">)</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-csharp" data-lang="csharp"><span class="line"><span class="cl"><span class="kd">public</span> <span class="kd">async</span> <span class="n">Task</span><span class="p">&lt;</span><span class="kt">string</span><span class="p">&gt;</span> <span class="n">FunctionHandler</span><span class="p">(</span><span class="kt">string</span> <span class="n">input</span><span class="p">,</span> <span class="n">ILambdaContext</span> <span class="n">context</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl"><span class="p">{</span>
 </span></span><span class="line"><span class="cl">	<span class="n">context</span><span class="p">.</span><span class="n">Logger</span><span class="p">.</span><span class="n">LogLine</span><span class="p">(</span><span class="s">&#34;Querying OpenWeather for: &#34;</span> <span class="p">+</span> <span class="n">input</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl">	<span class="kt">var</span> <span class="n">weatherKey</span> <span class="p">=</span> <span class="n">Environment</span><span class="p">.</span><span class="n">GetEnvironmentVariable</span><span class="p">(</span><span class="s">&#34;WEATHER_API_KEY&#34;</span><span class="p">);</span>
