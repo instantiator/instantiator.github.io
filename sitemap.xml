@@ -3,10 +3,55 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://instantiator.dev/</loc>
-    <lastmod>2023-09-12T00:00:00+00:00</lastmod>
+    <lastmod>2023-11-11T11:00:00+00:00</lastmod>
   </url><url>
     <loc>https://instantiator.dev/categories/</loc>
-    <lastmod>2023-09-12T00:00:00+00:00</lastmod>
+    <lastmod>2023-11-11T11:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://instantiator.dev/tags/discord/</loc>
+    <lastmod>2023-11-11T11:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://instantiator.dev/tags/facebook/</loc>
+    <lastmod>2023-11-11T11:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://instantiator.dev/tags/formatting/</loc>
+    <lastmod>2023-11-11T11:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://instantiator.dev/tags/linkedin/</loc>
+    <lastmod>2023-11-11T11:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://instantiator.dev/tags/mastodon/</loc>
+    <lastmod>2023-11-11T11:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://instantiator.dev/tags/media/</loc>
+    <lastmod>2023-11-11T11:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://instantiator.dev/post/open-social-distributor/</loc>
+    <lastmod>2023-11-11T11:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://instantiator.dev/tags/post/</loc>
+    <lastmod>2023-11-11T11:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://instantiator.dev/post/</loc>
+    <lastmod>2023-11-11T11:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://instantiator.dev/tags/social/</loc>
+    <lastmod>2023-11-11T11:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://instantiator.dev/tags/socialmedia/</loc>
+    <lastmod>2023-11-11T11:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://instantiator.dev/tags/socialnetwork/</loc>
+    <lastmod>2023-11-11T11:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://instantiator.dev/tags/</loc>
+    <lastmod>2023-11-11T11:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://instantiator.dev/tags/thread/</loc>
+    <lastmod>2023-11-11T11:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://instantiator.dev/categories/tool/</loc>
+    <lastmod>2023-11-11T11:00:00+00:00</lastmod>
   </url><url>
     <loc>https://instantiator.dev/categories/hack/</loc>
     <lastmod>2023-09-12T00:00:00+00:00</lastmod>
@@ -15,9 +60,6 @@
     <lastmod>2023-09-12T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://instantiator.dev/tags/nextjs/</loc>
-    <lastmod>2023-09-12T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://instantiator.dev/post/</loc>
     <lastmod>2023-09-12T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://instantiator.dev/tags/presentation/</loc>
@@ -41,16 +83,10 @@
     <loc>https://instantiator.dev/tags/slideshow/</loc>
     <lastmod>2023-09-12T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://instantiator.dev/tags/</loc>
-    <lastmod>2023-09-12T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://instantiator.dev/tags/template/</loc>
     <lastmod>2023-09-12T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://instantiator.dev/categories/template/</loc>
-    <lastmod>2023-09-12T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://instantiator.dev/categories/tool/</loc>
     <lastmod>2023-09-12T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://instantiator.dev/categories/tutorial/</loc>
@@ -123,9 +159,6 @@
     <lastmod>2023-07-16T10:00:00+00:00</lastmod>
   </url><url>
     <loc>https://instantiator.dev/tags/dotnet/</loc>
-    <lastmod>2023-07-16T10:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://instantiator.dev/tags/formatting/</loc>
     <lastmod>2023-07-16T10:00:00+00:00</lastmod>
   </url><url>
     <loc>https://instantiator.dev/tags/hammer/</loc>
@@ -461,13 +494,7 @@
     <loc>https://instantiator.dev/post/icgames-net/</loc>
     <lastmod>2022-12-08T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://instantiator.dev/tags/mastodon/</loc>
-    <lastmod>2022-12-08T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://instantiator.dev/tags/microservice/</loc>
-    <lastmod>2022-12-08T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://instantiator.dev/tags/social/</loc>
     <lastmod>2022-12-08T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://instantiator.dev/tags/voting/</loc>

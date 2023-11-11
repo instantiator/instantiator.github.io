@@ -6,8 +6,85 @@
     <description>Recent content in Tags on instantiator.dev</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 12 Sep 2023 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 11 Nov 2023 11:00:00 +0000</lastBuildDate>
     <atom:link href="https://instantiator.dev/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>discord</title>
+      <link>https://instantiator.dev/tags/discord/</link>
+      <pubDate>Sat, 11 Nov 2023 11:00:00 +0000</pubDate>
+      <guid>https://instantiator.dev/tags/discord/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>facebook</title>
+      <link>https://instantiator.dev/tags/facebook/</link>
+      <pubDate>Sat, 11 Nov 2023 11:00:00 +0000</pubDate>
+      <guid>https://instantiator.dev/tags/facebook/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>formatting</title>
+      <link>https://instantiator.dev/tags/formatting/</link>
+      <pubDate>Sat, 11 Nov 2023 11:00:00 +0000</pubDate>
+      <guid>https://instantiator.dev/tags/formatting/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>linkedin</title>
+      <link>https://instantiator.dev/tags/linkedin/</link>
+      <pubDate>Sat, 11 Nov 2023 11:00:00 +0000</pubDate>
+      <guid>https://instantiator.dev/tags/linkedin/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>mastodon</title>
+      <link>https://instantiator.dev/tags/mastodon/</link>
+      <pubDate>Sat, 11 Nov 2023 11:00:00 +0000</pubDate>
+      <guid>https://instantiator.dev/tags/mastodon/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>media</title>
+      <link>https://instantiator.dev/tags/media/</link>
+      <pubDate>Sat, 11 Nov 2023 11:00:00 +0000</pubDate>
+      <guid>https://instantiator.dev/tags/media/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>post</title>
+      <link>https://instantiator.dev/tags/post/</link>
+      <pubDate>Sat, 11 Nov 2023 11:00:00 +0000</pubDate>
+      <guid>https://instantiator.dev/tags/post/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>social</title>
+      <link>https://instantiator.dev/tags/social/</link>
+      <pubDate>Sat, 11 Nov 2023 11:00:00 +0000</pubDate>
+      <guid>https://instantiator.dev/tags/social/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>SocialMedia</title>
+      <link>https://instantiator.dev/tags/socialmedia/</link>
+      <pubDate>Sat, 11 Nov 2023 11:00:00 +0000</pubDate>
+      <guid>https://instantiator.dev/tags/socialmedia/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>SocialNetwork</title>
+      <link>https://instantiator.dev/tags/socialnetwork/</link>
+      <pubDate>Sat, 11 Nov 2023 11:00:00 +0000</pubDate>
+      <guid>https://instantiator.dev/tags/socialnetwork/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>thread</title>
+      <link>https://instantiator.dev/tags/thread/</link>
+      <pubDate>Sat, 11 Nov 2023 11:00:00 +0000</pubDate>
+      <guid>https://instantiator.dev/tags/thread/</guid>
+      <description></description>
+    </item>
     <item>
       <title>javascript</title>
       <link>https://instantiator.dev/tags/javascript/</link>
@@ -223,13 +300,6 @@
       <link>https://instantiator.dev/tags/dotnet/</link>
       <pubDate>Sun, 16 Jul 2023 10:00:00 +0000</pubDate>
       <guid>https://instantiator.dev/tags/dotnet/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>formatting</title>
-      <link>https://instantiator.dev/tags/formatting/</link>
-      <pubDate>Sun, 16 Jul 2023 10:00:00 +0000</pubDate>
-      <guid>https://instantiator.dev/tags/formatting/</guid>
       <description></description>
     </item>
     <item>
@@ -912,24 +982,10 @@
       <description></description>
     </item>
     <item>
-      <title>mastodon</title>
-      <link>https://instantiator.dev/tags/mastodon/</link>
-      <pubDate>Thu, 08 Dec 2022 00:00:00 +0000</pubDate>
-      <guid>https://instantiator.dev/tags/mastodon/</guid>
-      <description></description>
-    </item>
-    <item>
       <title>microservice</title>
       <link>https://instantiator.dev/tags/microservice/</link>
       <pubDate>Thu, 08 Dec 2022 00:00:00 +0000</pubDate>
       <guid>https://instantiator.dev/tags/microservice/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>social</title>
-      <link>https://instantiator.dev/tags/social/</link>
-      <pubDate>Thu, 08 Dec 2022 00:00:00 +0000</pubDate>
-      <guid>https://instantiator.dev/tags/social/</guid>
       <description></description>
     </item>
     <item>

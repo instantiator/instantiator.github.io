@@ -1,26 +1,19 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>formatting on instantiator.dev</title>
-    <link>https://instantiator.dev/tags/formatting/</link>
-    <description>Recent content in formatting on instantiator.dev</description>
+    <title>post on instantiator.dev</title>
+    <link>https://instantiator.dev/tags/post/</link>
+    <description>Recent content in post on instantiator.dev</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <lastBuildDate>Sat, 11 Nov 2023 11:00:00 +0000</lastBuildDate>
-    <atom:link href="https://instantiator.dev/tags/formatting/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://instantiator.dev/tags/post/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Open Social Distributor</title>
       <link>https://instantiator.dev/post/open-social-distributor/</link>
       <pubDate>Sat, 11 Nov 2023 11:00:00 +0000</pubDate>
       <guid>https://instantiator.dev/post/open-social-distributor/</guid>
       <description>How to use Open Social Distributor to post threads and messages across multiple social networks at once.</description>
-    </item>
-    <item>
-      <title>Hammering JSON into CSV</title>
-      <link>https://instantiator.dev/post/hammer-json-into-csv/</link>
-      <pubDate>Sun, 16 Jul 2023 10:00:00 +0000</pubDate>
-      <guid>https://instantiator.dev/post/hammer-json-into-csv/</guid>
-      <description>json-to-smart-csv is a tool to help build CSV records from arbitrary JSON&amp;hellip;</description>
     </item>
   </channel>
 </rss>

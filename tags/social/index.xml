@@ -6,8 +6,15 @@
     <description>Recent content in social on instantiator.dev</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 08 Dec 2022 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 11 Nov 2023 11:00:00 +0000</lastBuildDate>
     <atom:link href="https://instantiator.dev/tags/social/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Open Social Distributor</title>
+      <link>https://instantiator.dev/post/open-social-distributor/</link>
+      <pubDate>Sat, 11 Nov 2023 11:00:00 +0000</pubDate>
+      <guid>https://instantiator.dev/post/open-social-distributor/</guid>
+      <description>How to use Open Social Distributor to post threads and messages across multiple social networks at once.</description>
+    </item>
     <item>
       <title>International Consensus Chess is in public beta!</title>
       <link>https://instantiator.dev/post/icgames-net/</link>

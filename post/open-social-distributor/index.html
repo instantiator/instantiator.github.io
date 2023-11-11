@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html  dir="ltr" lang="en" data-theme=""><head>
+    <title> instantiator.dev | Open Social Distributor </title>
+
+    
+    <meta charset="utf-8"><meta name="generator" content="Hugo 0.120.3"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+    <meta name="description" content="tech, volunteers, public safety, articles and ideas">
+    
+    
+    
+    <link rel="stylesheet"
+        href="/css/style.min.59fe2a27cd19eafc8c4aef4e2c18a287287097d0516d9baf6ade257c0f4b4d64.css"
+        integrity="sha256-Wf4qJ80Z6vyMSu9OLBiihyhwl9BRbZuvat4lfA9LTWQ="
+        crossorigin="anonymous"
+        type="text/css">
+    
+
+    
+    <link rel="stylesheet"
+        href="/css/additional-classes.min.1d76732c34340c3588f50dacb5d8ce67a8c9ad2bf0140c8eb825f3f4e3a071c4.css"
+        integrity="sha256-HXZzLDQ0DDWI9Q2stdjOZ6jJrSvwFAyOuCXz9OOgccQ="
+        crossorigin="anonymous"
+        type="text/css">
+
+    
+    <link rel="stylesheet"
+        href="/css/markupHighlight.min.59c08a266e8a6489aab7cb3ace4259db920d0e8893682a44ef8401387af97664.css"
+        integrity="sha256-WcCKJm6KZImqt8s6zkJZ25INDoiTaCpE74QBOHr5dmQ="
+        crossorigin="anonymous"
+        type="text/css">
+    
+
+
+
+    <link rel="stylesheet" 
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" 
+    integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" 
+    crossorigin="anonymous" />
+
+    
+    <link rel="shortcut icon" href="/favicons/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicons/favicon-16x16.png">
+
+    <link rel="canonical" href="/post/open-social-distributor/">
+
+    
+    
+    
+    
+    <script type="text/javascript"
+            src="/js/anatole-header.min.df804b63b5bd8474ea0756ea874bc8f1e92552708cc6ea43aa0d76981dc419f9.js"
+            integrity="sha256-34BLY7W9hHTqB1bqh0vI8eklUnCMxupDqg12mB3EGfk="
+            crossorigin="anonymous"></script>
+
+
+    
+        
+        
+        <script type="text/javascript"
+                src="/js/anatole-theme-switcher.min.ea8ebe268922ef9849261a1312cd65b640595e65251ce4c00534a176afd1ac0c.js"
+                integrity="sha256-6o6&#43;Joki75hJJhoTEs1ltkBZXmUlHOTABTShdq/RrAw="
+                crossorigin="anonymous"></script>
+    
+    <meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://instantiator.dev/osd/social-distributor-icon.png"/>
+
+<meta name="twitter:title" content="Open Social Distributor"/>
+<meta name="twitter:description" content="How to use Open Social Distributor to post threads and messages across multiple social networks at once."/>
+
+
+    
+    <meta property="og:title" content="Open Social Distributor" />
+<meta property="og:description" content="How to use Open Social Distributor to post threads and messages across multiple social networks at once." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://instantiator.dev/post/open-social-distributor/" /><meta property="og:image" content="https://instantiator.dev/osd/social-distributor-icon.png" /><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2023-11-11T11:00:00+00:00" />
+<meta property="article:modified_time" content="2023-11-11T11:00:00+00:00" /><meta property="og:site_name" content="instantiator.dev" />
+
+
+
+
+</head>
+<body><div class="sidebar animated fadeInDown ">
+    <div class="logo-title">
+        <div class="title">
+            <img src="/lewis/profile.jpg" alt="profile picture">
+            <h3 title=""><a href="/">instantiator.dev</a></h3>
+            <div class="description">
+                <p>tech, volunteers, public safety, articles and ideas</p>
+            </div>
+        </div>
+    </div>
+    <ul class="social-links">
+        
+            <li>
+                <a href="https://mastodon.social/@instantiator" rel="me" aria-label="Mastodon">
+                    <i class="fab fa-mastodon fa-2x" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+            <li>
+                <a href="https://twitter.com/instantiator" rel="me" aria-label="Twitter">
+                    <i class="fab fa-twitter fa-2x" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+            <li>
+                <a href="https://github.com/instantiator" rel="me" aria-label="GitHub">
+                    <i class="fab fa-github fa-2x" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+            <li>
+                <a href="https://www.linkedin.com/in/lewiswestbury" rel="me" aria-label="LinkedIn">
+                    <i class="fab fa-linkedin fa-2x" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+            <li>
+                <a href="https://www.escapethereview.co.uk/profile/?user_id=11" rel="me" aria-label="Escape the Review">
+                    <i class="fas fa-dungeon fa-2x" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+            <li>
+                <a href="https://icgames.net" rel="me" aria-label="International Consensus Games">
+                    <i class="fas fa-chess-knight fa-2x" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+            <li>
+                <a href="https://instantiator.dev/index.xml" rel="me" aria-label="RSS">
+                    <i class="fas fa-rss fa-2x" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+    </ul>
+    <div class="footer">
+        <div class="by_farbox">&copy; Lewis Westbury  2023 </div>
+    </div>
+</div>
+<div class="main">
+    <div class="page-top  animated fadeInDown ">
+    <a role="button" class="navbar-burger" data-target="navMenu" aria-label="menu" aria-expanded="false">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+    </a>
+    <ul class="nav" id="navMenu">
+        
+        
+            
+            <li><a 
+                   href="/"
+                        
+                   title="">Home</a></li>
+        
+            
+            <li><a 
+                   href="/post/"
+                        
+                   title="">All posts</a></li>
+        
+            
+            <li><a 
+                   href="/categories/tool/"
+                        
+                   title="">Tools</a></li>
+        
+            
+            <li><a 
+                   href="/categories/tutorial/"
+                        
+                   title="">Tutorials</a></li>
+        
+            
+            <li><a 
+                   href="/categories/article/"
+                        
+                   title="">Articles</a></li>
+        
+            
+            <li><a 
+                   href="/about/"
+                        
+                   title="">About</a></li>
+        
+        
+        
+            <li class="theme-switch-item">
+                <a class="theme-switch" title="Switch Theme">
+                    <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+    </ul>
+</div>
+
+    <div class="autopagerize_page_element">
+        <div class="content">
+    <div class="post  animated fadeInDown ">
+        <div class="post-content">
+            
+           <img class="post-thumbnail" src="/osd/social-distributor-icon.png" alt="Thumbnail image">
+            
+            <div class="post-title">
+                <h3>Open Social Distributor</h3>
+                
+                    <div class="info">
+                        <em class="fas fa-calendar-day"></em>
+                        <span class="date"> 
+                                                2023-11-11
+                                           </span>
+                        <em class="fas fa-stopwatch"></em>
+                        <span class="reading-time">5-minute read</span>
+                    </div>
+                
+            </div>
+
+            <p><em>How to use Open Social Distributor to post threads and messages across multiple social networks at once.</em></p>
+<h1 id="open-social-distributor">Open Social Distributor</h1>
+<p>The Open Social Distributor is a simple tool that to format and post your message across any number of social networks.</p>
+<p>It&rsquo;s free and open source.</p>
+<h2 id="download">Download</h2>
+<ul>
+<li><a href="https://github.com/instantiator/open-social-distributor/releases">Releases</a> (binaries for Windows, Mac OS, Linux)</li>
+</ul>
+<h2 id="documentation">Documentation</h2>
+<ul>
+<li><a href="https://instantiator.dev/open-social-distributor/">Documentation</a></li>
+<li><a href="https://github.com/instantiator/open-social-distributor">Source code</a></li>
+</ul>
+<h2 id="configuring-social-networks">Configuring social networks</h2>
+<p>The Open Social Distributor supports a number of different social networks. At time of writing, that includes Mastodon, Discord, Facebook, and LinkedIn.</p>
+<table>
+<thead>
+<tr>
+<th>Network</th>
+<th>Test</th>
+<th>Post</th>
+<th>Thread</th>
+<th>Link</th>
+<th>Tags</th>
+<th>Images</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Console</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>🆗</td>
+</tr>
+<tr>
+<td>Mastodon</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>Discord</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>Facebook (page)</td>
+<td>✅</td>
+<td>✅</td>
+<td>⌛️</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>LinkedIn (org)</td>
+<td>✅</td>
+<td>✅</td>
+<td>⌛️</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>LinkedIn (member)</td>
+<td>✅</td>
+<td>✅</td>
+<td>⌛️</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+</tr>
+</tbody>
+</table>
+<p>✅ = implemented, working
+⌛️ = implemented, not fully tested yet</p>
+<h3 id="installation">Installation</h3>
+<p><em>These instructions assume you&rsquo;re reasonably comfortable with the command line interface, or shell, on your system.</em></p>
+<p>Download the binaries, and locate the binary for your system (Windows, Mac OS, or Linux) from: <a href="https://github.com/instantiator/open-social-distributor/releases">Releases</a></p>
+<p>You&rsquo;ll need to include this in your path, or call it directly.</p>
+<h3 id="configuring-social-networks-1">Configuring social networks</h3>
+<p>Open Social Distributor needs a little configuration to know about the social network accounts it&rsquo;ll be posting to, and you&rsquo;ll need to take a few actions in your accounts to permit it.</p>
+<p>The configuration format is simple JSON, described in the documentation:</p>
+<ul>
+<li><a href="https://instantiator.dev/open-social-distributor/configuration.html">Configuration</a></li>
+<li><a href="https://instantiator.dev/open-social-distributor/connection-strings.html">Connection strings</a></li>
+</ul>
+<p>Create a blank config file if you do not have one.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&#34;networks&#34;</span><span class="p">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&#34;enabled&#34;</span><span class="p">:</span> <span class="p">[</span>
+</span></span><span class="line"><span class="cl">            <span class="s2">&#34;type=console&#34;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">],</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&#34;disabled&#34;</span><span class="p">:</span> <span class="p">[]</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><p>For each type of social network, you&rsquo;ll need to take some specific actions to obtain permission to post. These are described here:</p>
+<ul>
+<li><a href="https://instantiator.dev/open-social-distributor/mastodon-notes.html">Mastodon</a></li>
+<li><a href="https://instantiator.dev/open-social-distributor/facebook-notes.html">Facebook</a></li>
+<li><a href="https://instantiator.dev/open-social-distributor/linkedin-notes.html">LinkedIn</a></li>
+<li><a href="https://instantiator.dev/open-social-distributor/discord-notes.html">Discord</a></li>
+</ul>
+<p>Add a connection string, as described in the documentation, to the <code>enabled</code> list for each network you want to post to.</p>
+<h2 id="make-a-simple-post">Make a simple post</h2>
+<p>There are a couple of ways to post. You can provide some simple information through command line options, or you can create a posts file and draw from there.</p>
+<h3 id="posting-with-cli-options">Posting with CLI options</h3>
+<p>Simple posting is documented in:</p>
+<ul>
+<li><a href="https://instantiator.dev/open-social-distributor/post-composition.html">Post composition</a></li>
+</ul>
+<p>On the command line, you can provide some simple options to describe the post you wish to make:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">-m, --message               Simple message text.
+</span></span><span class="line"><span class="cl">-l, --link                  Link for this message.
+</span></span><span class="line"><span class="cl">-i, --images                URIs to images, semi-colon separated (;)
+</span></span><span class="line"><span class="cl">-d, --image-descriptions    Image descriptions, semi-colon separated (;)
+</span></span><span class="line"><span class="cl">-t, --tags                  A list of tags (without # prefix), semi-colon separated (;)
+</span></span></code></pre></div><p>For the simplest possible message, you could construct a post like this:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">DistributionCLI post <span class="se">\
+</span></span></span><span class="line"><span class="cl"><span class="se"></span>  --config-file path/to/config.json <span class="se">\
+</span></span></span><span class="line"><span class="cl"><span class="se"></span>  --message <span class="s2">&#34;this is a test&#34;</span>
+</span></span></code></pre></div><p>If there&rsquo;s an overall link for the message, you could include it in your message text, or you can include it with the <code>--link</code> option. If you use the link option, it&rsquo;ll be included as a part of the message text, or as a media link - depending on each social network&rsquo;s specifics.</p>
+<p>To include images, provide a semi-colon separated list of paths to files with the <code>--images</code> option (these can be as a URIs, or local paths).</p>
+<p>To include image descriptions, provide a semi-colon separated list of descriptions with the <code>--image-descriptions</code> option.</p>
+<p>Finally, you could include hashtags in your message, or use the <code>--tags</code> option (as a semi-colon separated list of tags without the preceding <code>#</code> hash). These will be added to the end of each message - if there&rsquo;s room. (If not, a random subset will be used on each message in the thread.)</p>
+<h3 id="threads">Threads</h3>
+<p>If your message is longer than a message length for each social network, it will be reformatted into a thread. Threads have different meanings for different social networks.</p>
+<p>Some items (ie. tags, links) will either be moved to the first post, duplicated across all posts, or may be handled differently depending on the social network.</p>
+<table>
+<thead>
+<tr>
+<th>Network</th>
+<th>First post</th>
+<th>Subsequent posts</th>
+<th>Tags</th>
+<th>Link</th>
+<th>Images</th>
+<th>Images per post</th>
+<th>Image size limit</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Mastodon</td>
+<td><code>500</code></td>
+<td><code>500</code></td>
+<td>All posts</td>
+<td>First post</td>
+<td>Front-loaded</td>
+<td><code>4</code></td>
+<td>TBC</td>
+</tr>
+<tr>
+<td>Discord</td>
+<td><code>2000</code></td>
+<td><code>2000</code></td>
+<td>First post</td>
+<td>First post</td>
+<td>First post</td>
+<td><code>10</code></td>
+<td>TBC</td>
+</tr>
+<tr>
+<td>Facebook</td>
+<td><code>63206</code></td>
+<td><code>8000</code></td>
+<td>First post</td>
+<td>Special</td>
+<td>First post</td>
+<td><code>∞</code></td>
+<td><code>10Mb</code></td>
+</tr>
+<tr>
+<td>LinkedIn</td>
+<td><code>3000</code></td>
+<td><code>1250</code></td>
+<td>First post</td>
+<td>First post</td>
+<td>First post</td>
+<td><code>20</code></td>
+<td>TBC</td>
+</tr>
+<tr>
+<td>Twitter</td>
+<td><code>280</code></td>
+<td><code>280</code></td>
+<td>All posts</td>
+<td>First post</td>
+<td>Front-loaded</td>
+<td><code>4</code></td>
+<td>TBC</td>
+</tr>
+</tbody>
+</table>
+<p>Thread formatting is described fully in:</p>
+<ul>
+<li><a href="https://instantiator.dev/open-social-distributor/post-composition.html">Post composition</a></li>
+</ul>
+<p>By and large, you can expect that Open Social Distributor will try to do <em>the right thing</em> for long posts, links, images, and tags - depending on the constraints of each social network.</p>
+<h3 id="posting-from-a-posts-file">Posting from a posts file</h3>
+<p>It&rsquo;s likely you&rsquo;ll be building a set of posts to work from, and these can be stored in a posts file.</p>
+<p>To use a post list file, you can provide these options:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">-s, --source-file           Path or url to a source file containing posts.
+</span></span><span class="line"><span class="cl">-o, --offset                Offset (index) of a post within the source file. (Leave blank to send all posts in the source file.)
+</span></span></code></pre></div><p>For the simplest possible message, you could construct a post like this:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">DistributionCLI post <span class="se">\
+</span></span></span><span class="line"><span class="cl"><span class="se"></span>  --config-file path/to/config.json <span class="se">\
+</span></span></span><span class="line"><span class="cl"><span class="se"></span>  --source-file path/to/posts.json <span class="se">\
+</span></span></span><span class="line"><span class="cl"><span class="se"></span>  --offset <span class="m">0</span>
+</span></span></code></pre></div><p>The post list format is described at:</p>
+<ul>
+<li><a href="https://instantiator.dev/open-social-distributor/post-list-format.html">Post list format</a></li>
+</ul>
+<p>Some samples are available at:</p>
+<table>
+<thead>
+<tr>
+<th>Sample</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://github.com/instantiator/open-social-distributor/blob/main/open-social-distributor-app/sample-messages/blank-root.json">sample-messages/blank-root.json</a></td>
+<td>Blank template</td>
+</tr>
+<tr>
+<td><a href="https://github.com/instantiator/open-social-distributor/blob/main/open-social-distributor-app/sample-messages/single-message.jsonc">sample-messages/single-message.jsonc</a></td>
+<td>A simple message, documented with comments</td>
+</tr>
+<tr>
+<td><a href="https://github.com/instantiator/open-social-distributor/blob/main/open-social-distributor-app/sample-messages/release-announcement-v0.1.jsonc">sample-messages/release-announcement-v0.1.jsonc</a></td>
+<td>The v0.1 release announcement post</td>
+</tr>
+</tbody>
+</table>
+<h2 id="contributing">Contributing</h2>
+<p>The project is open source, and covered by the (very permissive) <a href="https://github.com/instantiator/open-social-distributor/blob/main/LICENSE">MIT license</a>.</p>
+<p>If you&rsquo;d to contribute, please read the <a href="https://github.com/instantiator/open-social-distributor/blob/main/CONTRIBUTING.md">contributors guide</a> and get stuck in! You&rsquo;re very welcome.</p>
+<p>We have a <a href="https://github.com/instantiator/open-social-distributor/blob/main/CODE_OF_CONDUCT.md">code of conduct</a> to ensure that working on this project is a welcoming and safe experience.</p>
+</div>
+        <div class="post-footer">
+            <div class="info">
+                <span class="separator"><a class="category" href="/categories/tool/">tool</a></span>
+                <span class="separator"><a class="tag" href="/tags/socialnetwork/">SocialNetwork</a><a class="tag" href="/tags/social/">social</a><a class="tag" href="/tags/socialmedia/">SocialMedia</a><a class="tag" href="/tags/media/">media</a><a class="tag" href="/tags/post/">post</a><a class="tag" href="/tags/facebook/">facebook</a><a class="tag" href="/tags/mastodon/">mastodon</a><a class="tag" href="/tags/linkedin/">linkedin</a><a class="tag" href="/tags/discord/">discord</a><a class="tag" href="/tags/formatting/">formatting</a><a class="tag" href="/tags/thread/">thread</a></span>
+                
+
+            </div>
+        </div>
+
+        
+    </div>
+
+
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript"
+        src="/js/medium-zoom.min.e1c6918cbaa90022a5612f0bd71c7bf3be6d036614c5729cebfe14f7b91fa4bc.js"
+        integrity="sha256-4caRjLqpACKlYS8L1xx7875tA2YUxXKc6/4U97kfpLw="
+        crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-SHE42ZWKEN"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-SHE42ZWKEN');
+</script></body>
+
+</html>
