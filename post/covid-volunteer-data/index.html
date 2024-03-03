@@ -3,7 +3,7 @@
     <title> instantiator.dev | We&#39;re only human </title>
 
     
-    <meta charset="utf-8"><meta name="generator" content="Hugo 0.120.3"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+    <meta charset="utf-8"><meta name="generator" content="Hugo 0.123.7"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
     <meta name="description" content="tech, volunteers, public safety, articles and ideas">
     
     
@@ -63,10 +63,8 @@
                 integrity="sha256-6o6&#43;Joki75hJJhoTEs1ltkBZXmUlHOTABTShdq/RrAw="
                 crossorigin="anonymous"></script>
     
-    <meta name="twitter:card" content="summary_large_image"/>
-<meta name="twitter:image" content="https://instantiator.dev/covid-19/covid-groups-map.png"/>
-
-<meta name="twitter:title" content="We&#39;re only human"/>
+    <meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="https://instantiator.dev/covid-19/covid-groups-map.png" /><meta name="twitter:title" content="We&#39;re only human"/>
 <meta name="twitter:description" content="Cleaning up data from volunteer groups across the UK.
 We&rsquo;re only human In the previous post, we took a tour of the open data available that tells the story of volunteerism across the UK since the coronavirus crisis began."/>
 
@@ -141,7 +139,7 @@ We&rsquo;re only human In the previous post, we took a tour of the open data ava
         
     </ul>
     <div class="footer">
-        <div class="by_farbox">&copy; Lewis Westbury  2023 </div>
+        <div class="by_farbox">&copy; Lewis Westbury  2024 </div>
     </div>
 </div>
 <div class="main">
@@ -226,7 +224,7 @@ We&rsquo;re only human In the previous post, we took a tour of the open data ava
 <h1 id="were-only-human">We&rsquo;re only human</h1>
 <p>In the previous post, we took a tour of the open data available that tells the story of volunteerism across the UK since the coronavirus crisis began.</p>
 <p>Since the beginning of the year, thousands of groups have registered, and an order of magnitude more individual volunteers have carried out acts of kindness for people in self-isolation.</p>
-<p><img src="/covid-19/covid-groups-map.png" alt="Covid groups map"></p>
+<p><img alt="Covid groups map" src="/covid-19/covid-groups-map.png"></p>
 <p>Volunteers and organisers are, quite frankly, inspirational. Driven by any number of different value systems, they are helping people for little or no recognition or reward.</p>
 <p>Volunteers have provided all the data we’ve seen in the previous article and this, of course, comes with a degree of human error. Cleaning up the registered group information has been challenging for a number of reasons&hellip;</p>
 <p>The data we are looking at for this article is the combined and cleaned data set collated and shared through <a href="https://policerewired.org">Police Rewired</a>:</p>
@@ -261,9 +259,9 @@ We&rsquo;re only human In the previous post, we took a tour of the open data ava
 <li>Dates are recorded one way before a certain date and another way afterwards. The registration system isn’t generating a mix of both.</li>
 </ul>
 <p>The process applied (and shown below) would not have been anywhere near as simple without the kind help of a good friend called Sam. The <em>no future dates</em> constraint is far more helpful than I had assumed!</p>
-<p><img src="/covid-19/date-reasoning.png" alt="Reasoning about dates"></p>
+<p><img alt="Reasoning about dates" src="/covid-19/date-reasoning.png"></p>
 <p>Having completed our initial round of interpretation, only a few hundred dates remain ambiguous. Good enough! We can now plot the unambiguous data we have…</p>
-<p><img src="/covid-19/unambiguous-date-formats.png" alt="Unambiguous date formats"></p>
+<p><img alt="Unambiguous date formats" src="/covid-19/unambiguous-date-formats.png"></p>
 <p>NB. the spike in UK format dates on the right comes from local council hubs data imported on 10th April. Remove that, and it’s pretty clear that the switch-over to US date format happens around 28th March.</p>
 <p>This means we can interpret every date after the 28th as a US date, including the 4 days of ambiguous dates found in the first pass (1st to 4th April), giving us a near-complete set of unambiguous dates.</p>
 <h3 id="updates-and-duplicates-look-like-registrations">Updates and duplicates look like registrations</h3>
@@ -308,7 +306,7 @@ We&rsquo;re only human In the previous post, we took a tour of the open data ava
 <h3 id="are-all-the-links-really-for-volunteer-groups">Are all the links really for volunteer groups?</h3>
 <p>Having run these processes what we are left with is almost a clean data set. There are just a few other wrinkles to iron out, and for this we need to understand a little bit more about the data itself.</p>
 <p>In the previous post, we explored the URLs provided for each volunteer group — matching on aspects of them to determine which tools they represented.</p>
-<p><img src="/covid-19/group-organisation-tools.png" alt="Groups by tool"></p>
+<p><img alt="Groups by tool" src="/covid-19/group-organisation-tools.png"></p>
 <p>A group of links worth filtering through manually are the organisations that appear on facebook (perhaps churches, schools, community centres, etc.) — many of which will be legitimately taking part in local volunteering efforts.</p>
 <p>Some facebook links, however, may have been miscategorised or listed by opportunists hoping to raise the profile of their personal or business accounts.</p>
 <p>Facebook links have some clues that help us to identify whether they point to a group, and by and large the groups are likely to be appropriately listed.</p>
@@ -329,7 +327,7 @@ We&rsquo;re only human In the previous post, we took a tour of the open data ava
 <h2 id="police-rewired">Police Rewired</h2>
 <p><a href="https://policerewired.org">Police Rewired</a> is a group for volunteer professionals, students, academics, developers, designers, and creative problem-solvers who want to develop tools and work on projects in public safety and crime.</p>
 <p>If you’d like to take part, or you’re already working on a voluntary project in public safety, we’d love to hear from you!</p>
-<p><img src="/police-rewired/police-rewired-poster.png" alt="Police Rewired poster"></p>
+<p><img alt="Police Rewired poster" src="/police-rewired/police-rewired-poster.png"></p>
 </div>
         <div class="post-footer">
             <div class="info">

@@ -3,7 +3,7 @@
     <title> instantiator.dev | A Netflixstory - analyse your Netflix watch history </title>
 
     
-    <meta charset="utf-8"><meta name="generator" content="Hugo 0.120.3"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+    <meta charset="utf-8"><meta name="generator" content="Hugo 0.123.7"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
     <meta name="description" content="tech, volunteers, public safety, articles and ideas">
     
     
@@ -63,10 +63,8 @@
                 integrity="sha256-6o6&#43;Joki75hJJhoTEs1ltkBZXmUlHOTABTShdq/RrAw="
                 crossorigin="anonymous"></script>
     
-    <meta name="twitter:card" content="summary_large_image"/>
-<meta name="twitter:image" content="https://instantiator.dev/netflix/netflix-wallpaper.jpg"/>
-
-<meta name="twitter:title" content="A Netflixstory - analyse your Netflix watch history"/>
+    <meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="https://instantiator.dev/netflix/netflix-wallpaper.jpg" /><meta name="twitter:title" content="A Netflixstory - analyse your Netflix watch history"/>
 <meta name="twitter:description" content="Exploring your personal Netflix viewing history&hellip;
 What you see is a visualisation of everything I&rsquo;ved watched since 2012."/>
 
@@ -140,7 +138,7 @@ What you see is a visualisation of everything I&rsquo;ved watched since 2012." /
         
     </ul>
     <div class="footer">
-        <div class="by_farbox">&copy; Lewis Westbury  2023 </div>
+        <div class="by_farbox">&copy; Lewis Westbury  2024 </div>
     </div>
 </div>
 <div class="main">
@@ -222,7 +220,7 @@ What you see is a visualisation of everything I&rsquo;ved watched since 2012." /
             </div>
 
             <p><em>Exploring your personal Netflix viewing history&hellip;</em></p>
-<p><img src="/netflix/netflix-visualisation.png" alt="A visualisation of my Netflix viewing for the past decade. Cells are filled if I watched a show in a given month."></p>
+<p><img alt="A visualisation of my Netflix viewing for the past decade. Cells are filled if I watched a show in a given month." src="/netflix/netflix-visualisation.png"></p>
 <p>What you see is a visualisation of everything I&rsquo;ved watched since 2012. If you&rsquo;d like to explore my data, I&rsquo;ve embedded a copy of my processed monthly viewing at the bottom. If you want to find out how to generate this for yourself, read on!</p>
 <h2 id="tldr">TLDR</h2>
 <p>If you&rsquo;d like to generate your own Netflix data visualisation, feel free to make use of this Jupyter notebook:</p>
@@ -233,13 +231,13 @@ What you see is a visualisation of everything I&rsquo;ved watched since 2012." /
 <p>Curious to see what data they hold, I recently requested all my Netflix data. You can make this sort of request through your account settings.</p>
 <h2 id="requesting-your-data">Requesting your data</h2>
 <p>You can find this option in your settings, under <strong>SECURITY &amp; PRIVACY</strong>, choose: <a href="https://www.netflix.com/account/getmyinfo">Download your personal information</a> (or just use this link)</p>
-<p><img src="/netflix/request-your-information.png" alt="The request your information page in Netflix settings"></p>
+<p><img alt="The request your information page in Netflix settings" src="/netflix/request-your-information.png"></p>
 <p>It takes a few days to process, and then you&rsquo;ll receive an email notification letting you know that your data is ready. Follow the link, and you&rsquo;ll be able to download a zip file with all your data.</p>
 <h2 id="whats-inside">What&rsquo;s inside?</h2>
 <p>There&rsquo;s rather a lot of data - as Netflix are giving you just about everything they know about you.</p>
-<p><img src="/netflix/netflix-report.png" alt="A Mac OS Finder window for a folder called netflix report. Inside it are folders for account, content, and various different records of interaction plus a couple of PDF documents that purport to describe what&rsquo;s included."></p>
+<p><img alt="A Mac OS Finder window for a folder called netflix report. Inside it are folders for account, content, and various different records of interaction plus a couple of PDF documents that purport to describe what&rsquo;s included." src="/netflix/netflix-report.png"></p>
 <p>Your watching history is available inside the <code>CONTENT_INTERACTION</code> folder. The raw data is in a file called: <strong><code>ViewingActivity.csv</code></strong></p>
-<p><img src="/netflix/content-interaction.png" alt="A Mac OS Finder window for a folder called content interaction. Inside it are a number of text files and csv files for various interactive playback events, including my viewing activity."></p>
+<p><img alt="A Mac OS Finder window for a folder called content interaction. Inside it are a number of text files and csv files for various interactive playback events, including my viewing activity." src="/netflix/content-interaction.png"></p>
 <p><code>ViewingActivity.csv</code> has several columns that we&rsquo;ll be using as a starting point for collating your viewing data:</p>
 <ul>
 <li><code>Profile Name</code> - which profile was watching</li>

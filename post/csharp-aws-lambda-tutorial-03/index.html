@@ -3,7 +3,7 @@
     <title> instantiator.dev | Building an AWS Lambda in C#, part 3: APIs and secrets </title>
 
     
-    <meta charset="utf-8"><meta name="generator" content="Hugo 0.120.3"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+    <meta charset="utf-8"><meta name="generator" content="Hugo 0.123.7"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
     <meta name="description" content="tech, volunteers, public safety, articles and ideas">
     
     
@@ -63,10 +63,8 @@
                 integrity="sha256-6o6&#43;Joki75hJJhoTEs1ltkBZXmUlHOTABTShdq/RrAw="
                 crossorigin="anonymous"></script>
     
-    <meta name="twitter:card" content="summary_large_image"/>
-<meta name="twitter:image" content="https://instantiator.dev/csharp-aws-lambda-tutorial/000-heading-img.png"/>
-
-<meta name="twitter:title" content="Building an AWS Lambda in C#, part 3: APIs and secrets"/>
+    <meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="https://instantiator.dev/csharp-aws-lambda-tutorial/000-heading-img.png" /><meta name="twitter:title" content="Building an AWS Lambda in C#, part 3: APIs and secrets"/>
 <meta name="twitter:description" content="In part 2, we build a Lambda function, deployed and invoked it; and in this part, we&rsquo;ll extend it to communicate with an API using a secret key."/>
 
 
@@ -139,7 +137,7 @@
         
     </ul>
     <div class="footer">
-        <div class="by_farbox">&copy; Lewis Westbury  2023 </div>
+        <div class="by_farbox">&copy; Lewis Westbury  2024 </div>
     </div>
 </div>
 <div class="main">
@@ -253,7 +251,7 @@
 <li>Visit the <strong>Lambda service</strong> in the AWS console.</li>
 <li>Click into your <strong>SampleLambaFunction</strong> from the list of functions.</li>
 </ul>
-<p><img src="/csharp-aws-lambda-tutorial/005-lambda-listed.png" alt="Lambda list on AWS"></p>
+<p><img alt="Lambda list on AWS" src="/csharp-aws-lambda-tutorial/005-lambda-listed.png"></p>
 <ul>
 <li>Choose the <strong>Configuration</strong> tab</li>
 <li>Choose <strong>Environment variables</strong> from the configuration options</li>
@@ -267,7 +265,7 @@
 <h4 id="providing-the-weather-api-key-locally">Providing the weather API key locally</h4>
 <p>When testing your Lambda locally, you&rsquo;ll also need the environment variable set.</p>
 <p>If testing from your IDE, you&rsquo;ll need to create a <strong>Run Configuration</strong> in the settings for the <strong>SampleLambdaFunction.Tests</strong> project, and provide the <strong>Environment Variable</strong> <code>WEATHER_API_KEY</code> there.</p>
-<p><img src="/csharp-aws-lambda-tutorial/003.5-run-configuration.png" alt="Run configuration"></p>
+<p><img alt="Run configuration" src="/csharp-aws-lambda-tutorial/003.5-run-configuration.png"></p>
 <p>If testing from the terminal, you&rsquo;ll need to ensure you&rsquo;ve exported the environment variable first:</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-gdscript3" data-lang="gdscript3"><span class="line"><span class="cl"><span class="k">export</span> <span class="n">WEATHER_API_KEY</span><span class="o">=</span><span class="s1">&#39;the-weather-api-key-goes-here&#39;</span>
 </span></span><span class="line"><span class="cl"><span class="n">dotnet</span> <span class="n">test</span>

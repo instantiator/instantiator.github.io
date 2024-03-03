@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>research on instantiator.dev</title>
+    <title>Research on instantiator.dev</title>
     <link>https://instantiator.dev/tags/research/</link>
-    <description>Recent content in research on instantiator.dev</description>
+    <description>Recent content in Research on instantiator.dev</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <lastBuildDate>Tue, 30 Nov 2021 00:00:00 +0000</lastBuildDate>
@@ -27,16 +27,14 @@
       <link>https://instantiator.dev/post/markdown-thesis-template/</link>
       <pubDate>Thu, 17 Jun 2021 00:00:00 +0000</pubDate>
       <guid>https://instantiator.dev/post/markdown-thesis-template/</guid>
-      <description>The things I&amp;rsquo;ll do to avoid learning LaTeX&amp;hellip;
-Do you prefer Markdown to LaTeX?</description>
+      <description>The things I&amp;rsquo;ll do to avoid learning LaTeX&amp;hellip;&#xA;Do you prefer Markdown to LaTeX?</description>
     </item>
     <item>
       <title>We&#39;re only human</title>
       <link>https://instantiator.dev/post/covid-volunteer-data/</link>
       <pubDate>Fri, 24 Apr 2020 00:00:00 +0000</pubDate>
       <guid>https://instantiator.dev/post/covid-volunteer-data/</guid>
-      <description>Cleaning up data from volunteer groups across the UK.
-We&amp;rsquo;re only human In the previous post, we took a tour of the open data available that tells the story of volunteerism across the UK since the coronavirus crisis began.</description>
+      <description>Cleaning up data from volunteer groups across the UK.&#xA;We&amp;rsquo;re only human In the previous post, we took a tour of the open data available that tells the story of volunteerism across the UK since the coronavirus crisis began.</description>
     </item>
     <item>
       <title>Look for the helpers</title>

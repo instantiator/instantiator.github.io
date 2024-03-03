@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>tool on instantiator.dev</title>
+    <title>Tool on instantiator.dev</title>
     <link>https://instantiator.dev/tags/tool/</link>
-    <description>Recent content in tool on instantiator.dev</description>
+    <description>Recent content in Tool on instantiator.dev</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <lastBuildDate>Tue, 18 Jul 2023 17:00:00 +0000</lastBuildDate>
@@ -41,8 +41,7 @@
       <link>https://instantiator.dev/post/np-drive-stamper/</link>
       <pubDate>Fri, 29 May 2015 00:00:00 +0000</pubDate>
       <guid>https://instantiator.dev/post/np-drive-stamper/</guid>
-      <description>This is a necropost, resurrected from an old blog.
-Drive Stamper Drive Stamper is one of the first projects I released into the wild, and helped me to kick off my old blog in 2011.</description>
+      <description>This is a necropost, resurrected from an old blog.&#xA;Drive Stamper Drive Stamper is one of the first projects I released into the wild, and helped me to kick off my old blog in 2011.</description>
     </item>
   </channel>
 </rss>

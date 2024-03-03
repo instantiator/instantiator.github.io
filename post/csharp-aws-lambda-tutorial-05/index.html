@@ -3,7 +3,7 @@
     <title> instantiator.dev | Building an AWS Lambda in C#, part 5: S3 </title>
 
     
-    <meta charset="utf-8"><meta name="generator" content="Hugo 0.120.3"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+    <meta charset="utf-8"><meta name="generator" content="Hugo 0.123.7"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
     <meta name="description" content="tech, volunteers, public safety, articles and ideas">
     
     
@@ -63,10 +63,8 @@
                 integrity="sha256-6o6&#43;Joki75hJJhoTEs1ltkBZXmUlHOTABTShdq/RrAw="
                 crossorigin="anonymous"></script>
     
-    <meta name="twitter:card" content="summary_large_image"/>
-<meta name="twitter:image" content="https://instantiator.dev/csharp-aws-lambda-tutorial/000-heading-img.png"/>
-
-<meta name="twitter:title" content="Building an AWS Lambda in C#, part 5: S3"/>
+    <meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="https://instantiator.dev/csharp-aws-lambda-tutorial/000-heading-img.png" /><meta name="twitter:title" content="Building an AWS Lambda in C#, part 5: S3"/>
 <meta name="twitter:description" content="In previous parts, we&rsquo;ve built a Lambda that can query the OpenWeather API, using a secret key; and in this part we&rsquo;ll extend it to write that data to S3."/>
 
 
@@ -139,7 +137,7 @@
         
     </ul>
     <div class="footer">
-        <div class="by_farbox">&copy; Lewis Westbury  2023 </div>
+        <div class="by_farbox">&copy; Lewis Westbury  2024 </div>
     </div>
 </div>
 <div class="main">
@@ -233,7 +231,7 @@
 <li>Visit the S3 service in AWS console</li>
 <li>Tap <code>Create bucket</code></li>
 </ul>
-<p><img src="/csharp-aws-lambda-tutorial/010-create-s3-bucket.png" alt="Create an S3 bucket"></p>
+<p><img alt="Create an S3 bucket" src="/csharp-aws-lambda-tutorial/010-create-s3-bucket.png"></p>
 <ul>
 <li>Give your bucket a <strong>name</strong>, eg. <code>sample-lambda-storage</code></li>
 <li>Check the <strong>region</strong>, and other defaults, look right to you</li>
@@ -250,7 +248,7 @@
 <li>Click the name of your new bucket (sample-lambda-storage).</li>
 <li>Choose the <strong>Permissions</strong> tab.</li>
 </ul>
-<p><img src="/csharp-aws-lambda-tutorial/011-s3-bucket-permissions.png" alt="S3 bucket permissions"></p>
+<p><img alt="S3 bucket permissions" src="/csharp-aws-lambda-tutorial/011-s3-bucket-permissions.png"></p>
 <ul>
 <li>Scroll down to the <strong>Bucket policy</strong> section.</li>
 <li>Tap <code>Edit</code></li>
@@ -290,7 +288,7 @@
 </span></span></code></pre></div><ul>
 <li>Substitute <code>&lt;YOUR ACCOUNT NUMBER&gt;</code> with your numeric 12-digit AWS account number.</li>
 </ul>
-<p><img src="/csharp-aws-lambda-tutorial/013-s3-bucket-policy-set.png" alt="Bucket policy (set)"></p>
+<p><img alt="Bucket policy (set)" src="/csharp-aws-lambda-tutorial/013-s3-bucket-policy-set.png"></p>
 <p>There are a few things to note about this policy:</p>
 <ul>
 <li>
@@ -331,7 +329,7 @@
 <ul>
 <li>Open up the solution in your .NET IDE, and add the nuget package: <code>AWSSDK.S3</code></li>
 </ul>
-<p><img src="/csharp-aws-lambda-tutorial/014-add-aws-sdk-s3-nuget.png" alt="Adding the AWS SDK for S3 in Nuget"></p>
+<p><img alt="Adding the AWS SDK for S3 in Nuget" src="/csharp-aws-lambda-tutorial/014-add-aws-sdk-s3-nuget.png"></p>
 <p>With this package, the Lambda will be able to perform <code>PutObject</code> and <code>GetObject</code> operations against your new S3 bucket.</p>
 <p>Now open up <code>Function.cs</code> and add a new method to your <code>Function</code> class:</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-csharp" data-lang="csharp"><span class="line"><span class="cl"><span class="kd">private</span> <span class="kd">async</span> <span class="n">Task</span><span class="p">&lt;</span><span class="kt">bool</span><span class="p">&gt;</span> <span class="n">PutToS3Async</span><span class="p">(</span><span class="kt">string</span> <span class="n">bucket</span><span class="p">,</span> <span class="kt">string</span> <span class="n">key</span><span class="p">,</span> <span class="kt">string</span> <span class="n">content</span><span class="p">,</span> <span class="n">ILambdaContext</span> <span class="n">context</span><span class="p">)</span>
@@ -398,7 +396,7 @@
 </ul>
 <p>The output has changed, and is now a simple string telling us if it succeeded or not. Here&rsquo;s a sample response:</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">Successfully stored weather data: sample-lambda-storage:weather_637545441697515760.json
-</span></span></code></pre></div><p><img src="/csharp-aws-lambda-tutorial/015-test-write-to-s3.png" alt="Test write to S3"></p>
+</span></span></code></pre></div><p><img alt="Test write to S3" src="/csharp-aws-lambda-tutorial/015-test-write-to-s3.png"></p>
 <p>The real work of the Lambda has shifted to storing the weather data it retrieve in the <code>sample-lambda-storage</code> bucket. Let&rsquo;s check there:</p>
 <ul>
 <li>Visit the S3 service in the AWS console.</li>
@@ -406,7 +404,7 @@
 <li>You should see your file listed there.</li>
 <li>Check the box next to it, tap the <code>Actions</code> button, and choose <code>Download</code></li>
 </ul>
-<p><img src="/csharp-aws-lambda-tutorial/016-download-file-from-s3.png" alt="Download the file from S3"></p>
+<p><img alt="Download the file from S3" src="/csharp-aws-lambda-tutorial/016-download-file-from-s3.png"></p>
 <p>You can now take a peek at the file itself to make sure it&rsquo;s the JSON data you&rsquo;re expecting. It&rsquo;ll look like rather a lot of JSON, all on the same line:</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="line"><span class="cl"><span class="p">{</span><span class="nt">&#34;coord&#34;</span><span class="p">:{</span><span class="nt">&#34;lon&#34;</span><span class="p">:</span><span class="mf">-0.1257</span><span class="p">,</span><span class="nt">&#34;lat&#34;</span><span class="p">:</span><span class="mf">51.5085</span><span class="p">},</span><span class="nt">&#34;weather&#34;</span><span class="p">:[{</span><span class="nt">&#34;id&#34;</span><span class="p">:</span><span class="mi">804</span><span class="p">,</span><span class="nt">&#34;main&#34;</span><span class="p">:</span><span class="s2">&#34;Clouds&#34;</span><span class="p">,</span><span class="nt">&#34;description&#34;</span><span class="p">:</span><span class="s2">&#34;overcast clouds&#34;</span><span class="p">,</span><span class="nt">&#34;icon&#34;</span><span class="p">:</span><span class="s2">&#34;04n&#34;</span><span class="p">}],</span><span class="nt">&#34;base&#34;</span><span class="p">:</span><span class="s2">&#34;stations&#34;</span><span class="p">,</span><span class="nt">&#34;main&#34;</span><span class="p">:{</span><span class="nt">&#34;temp&#34;</span><span class="p">:</span><span class="mf">284.86</span><span class="p">,</span><span class="nt">&#34;feels_like&#34;</span><span class="p">:</span><span class="mf">284.07</span><span class="p">,</span><span class="nt">&#34;temp_min&#34;</span><span class="p">:</span><span class="mf">284.15</span><span class="p">,</span><span class="nt">&#34;temp_max&#34;</span><span class="p">:</span><span class="mf">285.93</span><span class="p">,</span><span class="nt">&#34;pressure&#34;</span><span class="p">:</span><span class="mi">1018</span><span class="p">,</span><span class="nt">&#34;humidity&#34;</span><span class="p">:</span><span class="mi">76</span><span class="p">},</span><span class="nt">&#34;visibility&#34;</span><span class="p">:</span><span class="mi">6000</span><span class="p">,</span><span class="nt">&#34;wind&#34;</span><span class="p">:{</span><span class="nt">&#34;speed&#34;</span><span class="p">:</span><span class="mf">3.6</span><span class="p">,</span><span class="nt">&#34;deg&#34;</span><span class="p">:</span><span class="mi">90</span><span class="p">},</span><span class="nt">&#34;clouds&#34;</span><span class="p">:{</span><span class="nt">&#34;all&#34;</span><span class="p">:</span><span class="mi">95</span><span class="p">},</span><span class="nt">&#34;dt&#34;</span><span class="p">:</span><span class="mi">1618947215</span><span class="p">,</span><span class="nt">&#34;sys&#34;</span><span class="p">:{</span><span class="nt">&#34;type&#34;</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span><span class="nt">&#34;id&#34;</span><span class="p">:</span><span class="mi">1414</span><span class="p">,</span><span class="nt">&#34;country&#34;</span><span class="p">:</span><span class="s2">&#34;GB&#34;</span><span class="p">,</span><span class="nt">&#34;sunrise&#34;</span><span class="p">:</span><span class="mi">1618894425</span><span class="p">,</span><span class="nt">&#34;sunset&#34;</span><span class="p">:</span><span class="mi">1618945477</span><span class="p">},</span><span class="nt">&#34;timezone&#34;</span><span class="p">:</span><span class="mi">3600</span><span class="p">,</span><span class="nt">&#34;id&#34;</span><span class="p">:</span><span class="mi">2643743</span><span class="p">,</span><span class="nt">&#34;name&#34;</span><span class="p">:</span><span class="s2">&#34;London&#34;</span><span class="p">,</span><span class="nt">&#34;cod&#34;</span><span class="p">:</span><span class="mi">200</span><span class="p">}</span>
 </span></span></code></pre></div><p>If you wanted to, you could reformat it to make it a little more readable, or use it in another service, or another Lambda.</p>

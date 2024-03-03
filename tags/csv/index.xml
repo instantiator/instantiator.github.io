@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>csv on instantiator.dev</title>
+    <title>Csv on instantiator.dev</title>
     <link>https://instantiator.dev/tags/csv/</link>
-    <description>Recent content in csv on instantiator.dev</description>
+    <description>Recent content in Csv on instantiator.dev</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <lastBuildDate>Sun, 16 Jul 2023 10:00:00 +0000</lastBuildDate>
@@ -20,8 +20,7 @@
       <link>https://instantiator.dev/post/netflix-history/</link>
       <pubDate>Thu, 20 Apr 2023 17:30:00 +0000</pubDate>
       <guid>https://instantiator.dev/post/netflix-history/</guid>
-      <description>Exploring your personal Netflix viewing history&amp;hellip;
-What you see is a visualisation of everything I&amp;rsquo;ved watched since 2012.</description>
+      <description>Exploring your personal Netflix viewing history&amp;hellip;&#xA;What you see is a visualisation of everything I&amp;rsquo;ved watched since 2012.</description>
     </item>
     <item>
       <title>Querying data files with terminal tools</title>

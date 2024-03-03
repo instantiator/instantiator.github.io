@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>covid-19 on instantiator.dev</title>
+    <title>Covid-19 on instantiator.dev</title>
     <link>https://instantiator.dev/series/covid-19/</link>
-    <description>Recent content in covid-19 on instantiator.dev</description>
+    <description>Recent content in Covid-19 on instantiator.dev</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <lastBuildDate>Fri, 24 Apr 2020 00:00:00 +0000</lastBuildDate>
@@ -13,8 +13,7 @@
       <link>https://instantiator.dev/post/covid-volunteer-data/</link>
       <pubDate>Fri, 24 Apr 2020 00:00:00 +0000</pubDate>
       <guid>https://instantiator.dev/post/covid-volunteer-data/</guid>
-      <description>Cleaning up data from volunteer groups across the UK.
-We&amp;rsquo;re only human In the previous post, we took a tour of the open data available that tells the story of volunteerism across the UK since the coronavirus crisis began.</description>
+      <description>Cleaning up data from volunteer groups across the UK.&#xA;We&amp;rsquo;re only human In the previous post, we took a tour of the open data available that tells the story of volunteerism across the UK since the coronavirus crisis began.</description>
     </item>
     <item>
       <title>Look for the helpers</title>

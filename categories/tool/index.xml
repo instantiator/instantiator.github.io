@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>tool on instantiator.dev</title>
+    <title>Tool on instantiator.dev</title>
     <link>https://instantiator.dev/categories/tool/</link>
-    <description>Recent content in tool on instantiator.dev</description>
+    <description>Recent content in Tool on instantiator.dev</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <lastBuildDate>Sat, 11 Nov 2023 11:00:00 +0000</lastBuildDate>
@@ -20,8 +20,7 @@
       <link>https://instantiator.dev/post/reveal-in-react/</link>
       <pubDate>Tue, 12 Sep 2023 00:00:00 +0000</pubDate>
       <guid>https://instantiator.dev/post/reveal-in-react/</guid>
-      <description>What if your UI was a slide show?
-Reveal in React TLDR: Here&amp;rsquo;s a template repository for a NextJS app with a Reveal slide show UI: instantiator/reveal-on-next</description>
+      <description>What if your UI was a slide show?&#xA;Reveal in React TLDR: Here&amp;rsquo;s a template repository for a NextJS app with a Reveal slide show UI: instantiator/reveal-on-next</description>
     </item>
     <item>
       <title>Exploring OAuth</title>
@@ -49,8 +48,7 @@ Reveal in React TLDR: Here&amp;rsquo;s a template repository for a NextJS app wi
       <link>https://instantiator.dev/post/printing-3d-crosswords/</link>
       <pubDate>Wed, 18 Jan 2023 00:00:00 +0000</pubDate>
       <guid>https://instantiator.dev/post/printing-3d-crosswords/</guid>
-      <description>A tool to design 3D printed crossword puzzles.
-Generating 3D crossword models I&amp;rsquo;ve been working on a tool to generate crossword designs using OpenSCAD.</description>
+      <description>A tool to design 3D printed crossword puzzles.&#xA;Generating 3D crossword models I&amp;rsquo;ve been working on a tool to generate crossword designs using OpenSCAD.</description>
     </item>
     <item>
       <title>The rocketship template 🚀</title>
@@ -71,8 +69,7 @@ Generating 3D crossword models I&amp;rsquo;ve been working on a tool to generate
       <link>https://instantiator.dev/post/markdown-thesis-template/</link>
       <pubDate>Thu, 17 Jun 2021 00:00:00 +0000</pubDate>
       <guid>https://instantiator.dev/post/markdown-thesis-template/</guid>
-      <description>The things I&amp;rsquo;ll do to avoid learning LaTeX&amp;hellip;
-Do you prefer Markdown to LaTeX?</description>
+      <description>The things I&amp;rsquo;ll do to avoid learning LaTeX&amp;hellip;&#xA;Do you prefer Markdown to LaTeX?</description>
     </item>
     <item>
       <title>Querying data files with terminal tools</title>
@@ -93,8 +90,7 @@ Do you prefer Markdown to LaTeX?</description>
       <link>https://instantiator.dev/post/np-drive-stamper/</link>
       <pubDate>Fri, 29 May 2015 00:00:00 +0000</pubDate>
       <guid>https://instantiator.dev/post/np-drive-stamper/</guid>
-      <description>This is a necropost, resurrected from an old blog.
-Drive Stamper Drive Stamper is one of the first projects I released into the wild, and helped me to kick off my old blog in 2011.</description>
+      <description>This is a necropost, resurrected from an old blog.&#xA;Drive Stamper Drive Stamper is one of the first projects I released into the wild, and helped me to kick off my old blog in 2011.</description>
     </item>
   </channel>
 </rss>

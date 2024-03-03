@@ -3,7 +3,7 @@
     <title> instantiator.dev | Building an AWS Lambda in C#, part 6: Triggers </title>
 
     
-    <meta charset="utf-8"><meta name="generator" content="Hugo 0.120.3"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+    <meta charset="utf-8"><meta name="generator" content="Hugo 0.123.7"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
     <meta name="description" content="tech, volunteers, public safety, articles and ideas">
     
     
@@ -63,10 +63,8 @@
                 integrity="sha256-6o6&#43;Joki75hJJhoTEs1ltkBZXmUlHOTABTShdq/RrAw="
                 crossorigin="anonymous"></script>
     
-    <meta name="twitter:card" content="summary_large_image"/>
-<meta name="twitter:image" content="https://instantiator.dev/csharp-aws-lambda-tutorial/000-heading-img.png"/>
-
-<meta name="twitter:title" content="Building an AWS Lambda in C#, part 6: Triggers"/>
+    <meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="https://instantiator.dev/csharp-aws-lambda-tutorial/000-heading-img.png" /><meta name="twitter:title" content="Building an AWS Lambda in C#, part 6: Triggers"/>
 <meta name="twitter:description" content="In part 5, we amended our Lambda to write to an S3 bucket; and in this part, we&rsquo;ll explore triggers to run it regularly."/>
 
 
@@ -139,7 +137,7 @@
         
     </ul>
     <div class="footer">
-        <div class="by_farbox">&copy; Lewis Westbury  2023 </div>
+        <div class="by_farbox">&copy; Lewis Westbury  2024 </div>
     </div>
 </div>
 <div class="main">
@@ -240,7 +238,7 @@
 <li>Configure the <strong>Fixed rate</strong> schedule to run every <strong>5 minutes</strong>.</li>
 <li>Skip the <strong>Select event bus</strong> section (scheduled events always run on the <strong>AWS default event bus</strong>).</li>
 </ul>
-<p><img src="/csharp-aws-lambda-tutorial/017-trigger-schedule-pattern.png" alt="Trigger schedule pattern"></p>
+<p><img alt="Trigger schedule pattern" src="/csharp-aws-lambda-tutorial/017-trigger-schedule-pattern.png"></p>
 <ul>
 <li>In the <strong>Select targets</strong> section, we&rsquo;ll instruct the event to trigger our Lambda.
 <ul>
@@ -251,7 +249,7 @@
 </ul>
 </li>
 </ul>
-<p><img src="/csharp-aws-lambda-tutorial/018-trigger-target.png" alt="Trigger target"></p>
+<p><img alt="Trigger target" src="/csharp-aws-lambda-tutorial/018-trigger-target.png"></p>
 <blockquote>
 <p>Correction to the screenshot above: you must enclose <code>&quot;London, UK&quot;</code> in quotation marks in order for it to be accepted as a JSON string.</p>
 </blockquote>
@@ -316,7 +314,7 @@
 <li>Select <strong>Cron expression</strong> and provide the expression: <code>15 12 * * ? *</code></li>
 </ul>
 <p>As soon as you provide an expression, the schedule section will display the next 10 upcoming trigger times to help you check your cron expression. If it&rsquo;s correct, you&rsquo;ll see it scheduled to run at 12:15:00 GMT on each of the next 10 days.</p>
-<p><img src="/csharp-aws-lambda-tutorial/019-trigger-cron-expression.png" alt="Trigger cron expression"></p>
+<p><img alt="Trigger cron expression" src="/csharp-aws-lambda-tutorial/019-trigger-cron-expression.png"></p>
 <ul>
 <li>Finally scroll to the bottom, and tap <code>Update</code> to confirm the change.</li>
 </ul>

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>presentation on instantiator.dev</title>
+    <title>Presentation on instantiator.dev</title>
     <link>https://instantiator.dev/tags/presentation/</link>
-    <description>Recent content in presentation on instantiator.dev</description>
+    <description>Recent content in Presentation on instantiator.dev</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <lastBuildDate>Tue, 12 Sep 2023 00:00:00 +0000</lastBuildDate>
@@ -13,8 +13,7 @@
       <link>https://instantiator.dev/post/reveal-in-react/</link>
       <pubDate>Tue, 12 Sep 2023 00:00:00 +0000</pubDate>
       <guid>https://instantiator.dev/post/reveal-in-react/</guid>
-      <description>What if your UI was a slide show?
-Reveal in React TLDR: Here&amp;rsquo;s a template repository for a NextJS app with a Reveal slide show UI: instantiator/reveal-on-next</description>
+      <description>What if your UI was a slide show?&#xA;Reveal in React TLDR: Here&amp;rsquo;s a template repository for a NextJS app with a Reveal slide show UI: instantiator/reveal-on-next</description>
     </item>
   </channel>
 </rss>

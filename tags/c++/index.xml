@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>c&#43;&#43; on instantiator.dev</title>
+    <title>C&#43;&#43; on instantiator.dev</title>
     <link>https://instantiator.dev/tags/c&#43;&#43;/</link>
-    <description>Recent content in c&#43;&#43; on instantiator.dev</description>
+    <description>Recent content in C&#43;&#43; on instantiator.dev</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <lastBuildDate>Tue, 29 Oct 2013 00:00:00 +0000</lastBuildDate>
@@ -13,8 +13,7 @@
       <link>https://instantiator.dev/post/text-adventures-3d/</link>
       <pubDate>Tue, 29 Oct 2013 00:00:00 +0000</pubDate>
       <guid>https://instantiator.dev/post/text-adventures-3d/</guid>
-      <description>This is a necropost, resurrected from an old blog.
-Educational games It&amp;rsquo;s time to take a look at a project from almost a decade ago!</description>
+      <description>This is a necropost, resurrected from an old blog.&#xA;Educational games It&amp;rsquo;s time to take a look at a project from almost a decade ago!</description>
     </item>
   </channel>
 </rss>

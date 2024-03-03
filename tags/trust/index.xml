@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>trust on instantiator.dev</title>
+    <title>Trust on instantiator.dev</title>
     <link>https://instantiator.dev/tags/trust/</link>
-    <description>Recent content in trust on instantiator.dev</description>
+    <description>Recent content in Trust on instantiator.dev</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <lastBuildDate>Tue, 14 Dec 2021 00:00:00 +0000</lastBuildDate>
@@ -20,8 +20,7 @@
       <link>https://instantiator.dev/post/3-ways-build-trust/</link>
       <pubDate>Wed, 11 Oct 2017 00:00:00 +0000</pubDate>
       <guid>https://instantiator.dev/post/3-ways-build-trust/</guid>
-      <description>This article was originally posted to Medium.
-3 excellent ways to build trust with your users I don’t see why it needs that permission!</description>
+      <description>This article was originally posted to Medium.&#xA;3 excellent ways to build trust with your users I don’t see why it needs that permission!</description>
     </item>
   </channel>
 </rss>

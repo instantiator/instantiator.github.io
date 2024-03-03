@@ -3,7 +3,7 @@
     <title> instantiator.dev | TIL - shell environment variables aren&#39;t available to OS X apps </title>
 
     
-    <meta charset="utf-8"><meta name="generator" content="Hugo 0.120.3"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+    <meta charset="utf-8"><meta name="generator" content="Hugo 0.123.7"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
     <meta name="description" content="tech, volunteers, public safety, articles and ideas">
     
     
@@ -63,10 +63,8 @@
                 integrity="sha256-6o6&#43;Joki75hJJhoTEs1ltkBZXmUlHOTABTShdq/RrAw="
                 crossorigin="anonymous"></script>
     
-    <meta name="twitter:card" content="summary_large_image"/>
-<meta name="twitter:image" content="https://instantiator.dev/TIL/shellexecute-docs.jpeg"/>
-
-<meta name="twitter:title" content="TIL - shell environment variables aren&#39;t available to OS X apps"/>
+    <meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="https://instantiator.dev/TIL/shellexecute-docs.jpeg" /><meta name="twitter:title" content="TIL - shell environment variables aren&#39;t available to OS X apps"/>
 <meta name="twitter:description" content="Just recently I have been exploring a very strange issue: My application couldn&rsquo;t find a tool that was right where it should be&hellip;"/>
 
 
@@ -138,7 +136,7 @@
         
     </ul>
     <div class="footer">
-        <div class="by_farbox">&copy; Lewis Westbury  2023 </div>
+        <div class="by_farbox">&copy; Lewis Westbury  2024 </div>
     </div>
 </div>
 <div class="main">
@@ -236,7 +234,7 @@
 <li><a href="https://github.com/instantiator/process-start-info-testing">instantiator/process-start-info-testing</a> (GitHub repository)</li>
 </ul>
 <p>I tried setting <code>UseShellExecute</code> to both <code>true</code> and <code>false</code> - and tested with <code>ffmpeg</code> and <code>docker</code> (the control - known to work). Here&rsquo;s what I saw:</p>
-<p><img src="/TIL/test-run-results.png" alt="Tests show that with UseShellExecute false, ffmpeg cannot be found"></p>
+<p><img alt="Tests show that with UseShellExecute false, ffmpeg cannot be found" src="/TIL/test-run-results.png"></p>
 <p>When <code>UseShellExecute</code> was set to <code>false</code>, <code>ffmpeg</code> could not be found - and the test fails.</p>
 <p>Interestingly with <code>UseShellExecute</code> set to <code>true</code>, <code>ffmpeg</code> <em>was</em> found - however, this actually leads to the risk of unwanted behaviour, as with <code>UseShellExecute</code> enabled, the process could easily launch a document or folder in the GUI with the same name as the preferred binary tool.</p>
 <h2 id="the-answer">The answer</h2>
@@ -249,10 +247,7 @@
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">dotnet <span class="nb">test</span>
 </span></span></code></pre></div><p>It is also possible to launch Visual Studio from the terminal, using the <code>open</code> command - so giving it visibility of your shell&rsquo;s <code>PATH</code>:</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">open -n /Applications/Visual<span class="se">\ </span>Studio.app
-</span></span></code></pre></div><blockquote class="twitter-tweet"><p lang="en" dir="ltr">TIL that Mac GUI applications do not inherit environment variables defined in your shell profile. They can if you launch them with open from the terminal, ie. <br>open -n /Applications/&lt;app-name&gt;.app</p>&mdash; Lewis Westbury 💙💛 @instantiator@mastodon.social (@instantiator) <a href="https://twitter.com/instantiator/status/1457683593074028546?ref_src=twsrc%5Etfw">November 8, 2021</a></blockquote>
-<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-
-</div>
+</span></span></code></pre></div></div>
         <div class="post-footer">
             <div class="info">
                 <span class="separator"><a class="category" href="/categories/tutorial/">tutorial</a></span>

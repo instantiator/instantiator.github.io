@@ -3,7 +3,7 @@
     <title> instantiator.dev | How to donate your laptop safely </title>
 
     
-    <meta charset="utf-8"><meta name="generator" content="Hugo 0.120.3"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+    <meta charset="utf-8"><meta name="generator" content="Hugo 0.123.7"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
     <meta name="description" content="tech, volunteers, public safety, articles and ideas">
     
     
@@ -63,10 +63,8 @@
                 integrity="sha256-6o6&#43;Joki75hJJhoTEs1ltkBZXmUlHOTABTShdq/RrAw="
                 crossorigin="anonymous"></script>
     
-    <meta name="twitter:card" content="summary_large_image"/>
-<meta name="twitter:image" content="https://instantiator.dev/necro-images/donate-laptop-finished.jpeg"/>
-
-<meta name="twitter:title" content="How to donate your laptop safely"/>
+    <meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="https://instantiator.dev/necro-images/donate-laptop-finished.jpeg" /><meta name="twitter:title" content="How to donate your laptop safely"/>
 <meta name="twitter:description" content="A friend is helping out with a community project and asked for some laptops."/>
 
 
@@ -138,7 +136,7 @@
         
     </ul>
     <div class="footer">
-        <div class="by_farbox">&copy; Lewis Westbury  2023 </div>
+        <div class="by_farbox">&copy; Lewis Westbury  2024 </div>
     </div>
 </div>
 <div class="main">
@@ -227,7 +225,7 @@
 <p>Why wipe it down? Personal details, websites you’ve visited, even credit card details are left on the disk of your computer long after you’ve used them. A <a href="https://www.theregister.co.uk/2019/04/25/ebay_data_drives/">recent study</a> found that 42% of second-hand hard drives bought on eBay contained sensitive information that was easy to access.</p>
 <p>I’ve chosen to use <a href="https://ubuntu.com/desktop/features">Ubuntu</a>, a completely free operating system. There are plenty of other choices out there, but Ubuntu is well maintained and simple to use. It also has the benefit that even before it’s installed, we can launch it from a pen drive and use it to wipe down the disk.</p>
 <p>NB. These instructions are for PCs. If you’re preparing an old Mac, take a look at <a href="https://support.apple.com/en-gb/HT201065">these instructions</a> from Apple.</p>
-<p><img src="/necro-images/donate-laptop-1.jpeg" alt="Ready to go!"></p>
+<p><img alt="Ready to go!" src="/necro-images/donate-laptop-1.jpeg"></p>
 <p>You will need&hellip;</p>
 <ul>
 <li>A USB pen drive, 2Gb or more</li>
@@ -243,18 +241,18 @@ The Ubuntu CD image (ISO) works when run from a CD or a USB pen drive. These ins
 <li>Connect the pen drive</li>
 <li>Run balenaEtcher, select the ISO you downloaded, the pen drive, and choose Flash!</li>
 </ul>
-<p><img src="/necro-images/donate-laptop-balena-etcher.png" alt="BalenaEtcher, ready to flash!"></p>
+<p><img alt="BalenaEtcher, ready to flash!" src="/necro-images/donate-laptop-balena-etcher.png"></p>
 <h2 id="launch-ubuntu">Launch Ubuntu</h2>
 <p>Once the drive is flashed and verified, you can connect it to your old laptop. When you turn your laptop on, for a few seconds you’ll see some info about how to select a boot device. It’s often a function key, such as F11 or F12.</p>
-<p><img src="/necro-images/donate-laptop-dell-boot.jpeg" alt="Dell BIOS"></p>
+<p><img alt="Dell BIOS" src="/necro-images/donate-laptop-dell-boot.jpeg"></p>
 <p>Press this key to tell the BIOS that you’d like to use something other than the main disk to start up.</p>
 <p>You should be presented with a list that includes an option called USB Device or similar. Select that to start your laptop from the pen drive instead of the main disk. If you’re using an Ubuntu CD, you can select the CD-ROM drive instead.</p>
 <p>Ubuntu will start, and after it has you can choose whether to install or trial it. Choose <strong>Trial</strong> — you’re going to use it to wipe the disk on your laptop before we install it fully.</p>
-<p><img src="/necro-images/donate-laptop-try-ubuntu.jpeg" alt="Ubuntu as a &ldquo;Live CD&rdquo;"></p>
+<p><img alt="Ubuntu as a &ldquo;Live CD&rdquo;" src="/necro-images/donate-laptop-try-ubuntu.jpeg"></p>
 <h2 id="wipe-the-disk">Wipe the disk</h2>
 <p>You’ll need to connect Ubuntu to wifi or a network. You can do that from the menu in the top right of the screen.</p>
 <p>Once connected, launch a terminal. You can do that from the Show Applications icon in the bottom left of the screen. It looks like a grid of 9 dots.</p>
-<p><img src="/necro-images/donate-laptop-wipe-1.jpeg" alt="terminal"></p>
+<p><img alt="terminal" src="/necro-images/donate-laptop-wipe-1.jpeg"></p>
 <h3 id="install-nwipe">Install nwipe</h3>
 <p>In the terminal, type the following commands to find and install nwipe — a tool for erasing disks securely:</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo add-apt-repository universe
@@ -266,7 +264,7 @@ The Ubuntu CD image (ISO) works when run from a CD or a USB pen drive. These ins
 <p>To run nwipe, type:</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo nwipe
 </span></span></code></pre></div><p><code>nwipe</code>’s screen shows the devices that are available to be wiped, and allows you to select which you’d like to choose.</p>
-<p><img src="/necro-images/donate-laptop-wipe-2.jpeg" alt="nwipe"></p>
+<p><img alt="nwipe" src="/necro-images/donate-laptop-wipe-2.jpeg"></p>
 <p>You can use the arrow keys to move up and down, and the space bar to select or deselect a disk.</p>
 <p>Select the main disk (often <code>/dev/sda</code> — but make sure by checking its size and name), and be careful not to choose any other disks that you want to keep!</p>
 <p>When ready, press (capital-) <code>S</code> to start a wipe.</p>
@@ -276,7 +274,7 @@ The Ubuntu CD image (ISO) works when run from a CD or a USB pen drive. These ins
 <p>You can now use the Install Ubuntu application sitting on the desktop to install Ubuntu onto the disk. It will ask you a few questions, and then get to work.</p>
 <p>This will also take a while&hellip;</p>
 <p>Once done, you’ll be able to restart the computer and Ubuntu will be the main operating system. Now it’s ready to donate!</p>
-<p><img src="/necro-images/donate-laptop-finished.jpeg" alt="Here&rsquo;s one we prepared earlier!"></p>
+<p><img alt="Here&rsquo;s one we prepared earlier!" src="/necro-images/donate-laptop-finished.jpeg"></p>
 <h2 id="thanks-for-reading">Thanks for reading!</h2>
 <p>I’m Lewis, a software developer and volunteer.</p>
 <p>I run a community called <a href="https://policerewired.org">Police Rewired</a> for volunteer professionals who want to give a little back and build tools for public safety. If you’re interested, check out our site at <a href="https://policerewired.org">policerewired.org</a>, give us a follow <a href="https://twitter.com/policerewired">on Twitter</a>, and join our community.</p>

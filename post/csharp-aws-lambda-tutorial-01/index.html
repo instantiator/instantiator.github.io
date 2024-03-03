@@ -3,7 +3,7 @@
     <title> instantiator.dev | Building an AWS Lambda in C#, part 1: AWS </title>
 
     
-    <meta charset="utf-8"><meta name="generator" content="Hugo 0.120.3"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+    <meta charset="utf-8"><meta name="generator" content="Hugo 0.123.7"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
     <meta name="description" content="tech, volunteers, public safety, articles and ideas">
     
     
@@ -63,10 +63,8 @@
                 integrity="sha256-6o6&#43;Joki75hJJhoTEs1ltkBZXmUlHOTABTShdq/RrAw="
                 crossorigin="anonymous"></script>
     
-    <meta name="twitter:card" content="summary_large_image"/>
-<meta name="twitter:image" content="https://instantiator.dev/csharp-aws-lambda-tutorial/000-heading-img.png"/>
-
-<meta name="twitter:title" content="Building an AWS Lambda in C#, part 1: AWS"/>
+    <meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="https://instantiator.dev/csharp-aws-lambda-tutorial/000-heading-img.png" /><meta name="twitter:title" content="Building an AWS Lambda in C#, part 1: AWS"/>
 <meta name="twitter:description" content="At first glance, Amazon Web Services (AWS) can seem impenetrably complex, but it&rsquo;s not so bad once you&rsquo;ve found your way around it&hellip;"/>
 
 
@@ -139,7 +137,7 @@
         
     </ul>
     <div class="footer">
-        <div class="by_farbox">&copy; Lewis Westbury  2023 </div>
+        <div class="by_farbox">&copy; Lewis Westbury  2024 </div>
     </div>
 </div>
 <div class="main">
@@ -223,7 +221,7 @@
             <p>At first glance, Amazon Web Services (AWS) can seem impenetrably complex, but it&rsquo;s not so bad once you&rsquo;ve found your way around it&hellip;</p>
 <p>Through this tutorial, we&rsquo;ll build something a little more ambitious than the traditional &ldquo;Hello world!&rdquo; application, and work through some of the concepts you&rsquo;ll need to know to work in AWS.</p>
 <h1 id="lets-build-an-aws-lambda-in-c">Let&rsquo;s build an AWS Lambda in C#</h1>
-<p><img src="/csharp-aws-lambda-tutorial/000-heading-img.png" alt="A 6 part tutorial"></p>
+<p><img alt="A 6 part tutorial" src="/csharp-aws-lambda-tutorial/000-heading-img.png"></p>
 <p><strong>A Lambda</strong> is a lightweight, short-lived, event-triggered process that can run reliably whenever it is needed. AWS Lambdas are perfect for small tasks.</p>
 <p><strong>C#</strong> is a language, with strong typing, for .NET Core. That&rsquo;s one of the runtimes that AWS Lambdas supports. The .NET framework also has some pretty good support for interacting with the AWS Lambda service, which will help us later on in this tutorial.</p>
 <p><strong>An S3 bucket</strong> is a simple file storage instance, where you (or your Lambda) can read and write objects (files).</p>
@@ -238,7 +236,7 @@
 <li>Permissions and polices in AWS</li>
 </ul>
 <h2 id="a-lambda-in-the-wild">A Lambda in the wild</h2>
-<p><img src="/police-rewired/police-rewired-poster.png" alt="Police Rewired poster"></p>
+<p><img alt="Police Rewired poster" src="/police-rewired/police-rewired-poster.png"></p>
 <p><a href="https://policerewired.org">Police Rewired</a> is an open community of technologists, focussed on solving problems in public safety and crime. Our online social footprint spans <a href="https://twitter.com/policerewired">Twitter</a>, <a href="https://www.facebook.com/police.rewired/">Facebook</a>, <a href="https://www.linkedin.com/company/police-rewired/">LinkedIn</a>, <a href="https://www.reddit.com/r/policerewired/">Reddit</a>, and our own Discord server (<a href="https://bit.ly/PoliceRewired-join-discord">invite</a>).</p>
 <p>Distributing news and material, for and about our community, on social media takes a lot of time - so I built a social library service that would do it for us.</p>
 <p><strong>The data source for the Police Rewired social library</strong> is a Google Sheet that contains a set of articles, bookmarks and links of interest to our community. The sheet is published as a CSV file at a known URL.</p>
@@ -394,7 +392,7 @@
 <li>Give your user a username, eg. <strong>sample-admin</strong> (or something more specific)</li>
 <li>Choose both: <strong>Console access</strong> and <strong>Programmatic access</strong></li>
 </ul>
-<p><img src="/csharp-aws-lambda-tutorial/001-add-user.png" alt="Adding a user"></p>
+<p><img alt="Adding a user" src="/csharp-aws-lambda-tutorial/001-add-user.png"></p>
 <p>Next, you&rsquo;ll need to give the user a group. Remember, groups come with policies that define their permissions. In this case, the group we need is for administrator accounts, so you might want to create one called: <strong>sample-org-admins</strong></p>
 <p>AWS comes with a number of preconfigured policies, so find and attach the policy called: <strong>AdministratorAccess</strong></p>
 <p>Finally, AWS permits you add some tags to the things you create. These will make them easier to find by any metric you care to use. It&rsquo;s often helpful to tag things by project. It&rsquo;s optional and you can skip it if you prefer.</p>
@@ -416,14 +414,14 @@
 <li>Choose <strong>Roles</strong></li>
 <li>Tap <code>Create role</code></li>
 </ul>
-<p><img src="/csharp-aws-lambda-tutorial/002-create-role.png" alt="Creating a role"></p>
+<p><img alt="Creating a role" src="/csharp-aws-lambda-tutorial/002-create-role.png"></p>
 <p>The role needs a trusted entity type to define what can assume the role.</p>
 <ul>
 <li>Choose <strong>AWS service</strong></li>
 <li>Choose <strong>Lambda</strong></li>
 </ul>
 <p>Next, we&rsquo;ll need to define permissions by selecting a policy. (You could select multiple policies, or create one.</p>
-<p><img src="/csharp-aws-lambda-tutorial/003-role-permissions.png" alt="Role permissions"></p>
+<p><img alt="Role permissions" src="/csharp-aws-lambda-tutorial/003-role-permissions.png"></p>
 <p>An existing policy, <strong>AWSLambdaExecute</strong>, will do for our purposes. This grants your lambda permission to write to <strong>CloudWatch Logs</strong> (to log its output), and <strong>S3</strong> (to read and write Objects in Buckets).</p>
 <ul>
 <li>Search for and select: <strong>AWSLambdaExecute</strong></li>
