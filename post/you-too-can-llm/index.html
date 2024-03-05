@@ -1,74 +1,19 @@
 <!DOCTYPE html>
-<html  dir="ltr" lang="en" data-theme=""><head>
-    <title> instantiator.dev | Building AI into your application with Semantic Kernel </title>
-
-    
-    <meta charset="utf-8"><meta name="generator" content="Hugo 0.123.7"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-    <meta name="description" content="tech, volunteers, public safety, articles and ideas">
-    
-    
-    
-    <link rel="stylesheet"
-        href="/css/style.min.59fe2a27cd19eafc8c4aef4e2c18a287287097d0516d9baf6ade257c0f4b4d64.css"
-        integrity="sha256-Wf4qJ80Z6vyMSu9OLBiihyhwl9BRbZuvat4lfA9LTWQ="
-        crossorigin="anonymous"
-        type="text/css">
-    
-
-    
-    <link rel="stylesheet"
-        href="/css/additional-classes.min.1d76732c34340c3588f50dacb5d8ce67a8c9ad2bf0140c8eb825f3f4e3a071c4.css"
-        integrity="sha256-HXZzLDQ0DDWI9Q2stdjOZ6jJrSvwFAyOuCXz9OOgccQ="
-        crossorigin="anonymous"
-        type="text/css">
-
-    
-    <link rel="stylesheet"
-        href="/css/markupHighlight.min.59c08a266e8a6489aab7cb3ace4259db920d0e8893682a44ef8401387af97664.css"
-        integrity="sha256-WcCKJm6KZImqt8s6zkJZ25INDoiTaCpE74QBOHr5dmQ="
-        crossorigin="anonymous"
-        type="text/css">
-    
-
-
-
-    <link rel="stylesheet" 
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" 
-    integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" 
-    crossorigin="anonymous" />
-
-    
-    <link rel="shortcut icon" href="/favicons/favicon.ico" type="image/x-icon">
-    <link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicons/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicons/favicon-16x16.png">
-
-    <link rel="canonical" href="/post/you-too-can-llm/">
-
+<html lang="en"><head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
+    <link rel="stylesheet" type="text/css" href="/css/mastodon-timeline.min.css">
     
     
+    <title>instantiator.dev | Building AI into your application with Semantic Kernel</title>
     
-    
-    <script type="text/javascript"
-            src="/js/anatole-header.min.df804b63b5bd8474ea0756ea874bc8f1e92552708cc6ea43aa0d76981dc419f9.js"
-            integrity="sha256-34BLY7W9hHTqB1bqh0vI8eklUnCMxupDqg12mB3EGfk="
-            crossorigin="anonymous"></script>
-
-
-    
-        
-        
-        <script type="text/javascript"
-                src="/js/anatole-theme-switcher.min.ea8ebe268922ef9849261a1312cd65b640595e65251ce4c00534a176afd1ac0c.js"
-                integrity="sha256-6o6&#43;Joki75hJJhoTEs1ltkBZXmUlHOTABTShdq/RrAw="
-                crossorigin="anonymous"></script>
     
     <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:image" content="https://instantiator.dev/sk/sk-logo.png" /><meta name="twitter:title" content="Building AI into your application with Semantic Kernel"/>
 <meta name="twitter:description" content="This is a quick guide to some of the features of the Semantic Kernel, a Software Development Kit that simplifies integration of language models into your own applications."/>
 
-
-    
     <meta property="og:title" content="Building AI into your application with Semantic Kernel" />
 <meta property="og:description" content="This is a quick guide to some of the features of the Semantic Kernel, a Software Development Kit that simplifies integration of language models into your own applications." />
 <meta property="og:type" content="article" />
@@ -79,143 +24,201 @@
 
 
 
-</head>
-<body><div class="sidebar animated fadeInDown ">
-    <div class="logo-title">
-        <div class="title">
-            <img src="/lewis/profile.jpg" alt="profile picture">
-            <h3 title=""><a href="/">instantiator.dev</a></h3>
-            <div class="description">
-                <p>tech, volunteers, public safety, articles and ideas</p>
-            </div>
+    
+    <link rel="stylesheet"
+        href="/css/markupHighlight.min.59c08a266e8a6489aab7cb3ace4259db920d0e8893682a44ef8401387af97664.css"
+        integrity="sha256-WcCKJm6KZImqt8s6zkJZ25INDoiTaCpE74QBOHr5dmQ="
+        crossorigin="anonymous"
+        type="text/css">
+
+    </head><body><nav id="nav" class="navbar sticky-top justify-content-start navbar-expand-md frosted-white shadow mb-4">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="/">instantiator.dev</a>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav">
+        
+        
+        <li class="nav-item">
+          <a class="nav-link " href="/">
+            
+             Home
+          </a>
+        </li>
+        
+        <li class="nav-item">
+          <a class="nav-link " href="/post/">
+            
+             All posts
+          </a>
+        </li>
+        
+        <li class="nav-item">
+          <a class="nav-link " href="/categories/tool/">
+            
+             Tools
+          </a>
+        </li>
+        
+        <li class="nav-item">
+          <a class="nav-link " href="/categories/tutorial/">
+            
+             Tutorials
+          </a>
+        </li>
+        
+        <li class="nav-item">
+          <a class="nav-link " href="/categories/article/">
+            
+             Articles
+          </a>
+        </li>
+        
+        <li class="nav-item">
+          <a class="nav-link " href="/about/">
+            
+             About
+          </a>
+        </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+<div class="container-fluid">
+
+<div class="row align-items-start">
+    <div class="col col-lg-3 d-none d-lg-block">
+      <div class="row mb-2">
+    <div class="col-3 col-lg-12 d-flex flex-column align-items-center">
+        <img 
+            src="/lewis/profile.jpg" alt="profile picture" 
+            class="mb-4 mt-4 img-thumbnail" 
+            style="border-radius: 50%; max-width: 200px; width: 100%;" />
+    </div>
+    <div class="col d-flex flex-column align-items-center">
+        <h3 class="mb-4"><a href="/">instantiator.dev</a></h3>
+        
+        <div style="text-align: center;" class="mb-4">
+            <p>tech, volunteers, public safety, collective intelligence, articles, tools, code and ideas</p>
+        </div>
+
+        <div class="d-flex flex-row justify-content-evenly align-self-stretch mb-4">
+        
+            <a href="https://mastodon.social/@instantiator" rel="me" aria-label="Mastodon">
+                <i data-feather="user" aria-hidden="true"></i>
+            </a>
+            
+            <a href="https://github.com/instantiator" rel="me" aria-label="GitHub">
+                <i data-feather="github" aria-hidden="true"></i>
+            </a>
+            
+            <a href="https://www.linkedin.com/in/lewiswestbury" rel="me" aria-label="LinkedIn">
+                <i data-feather="linkedin" aria-hidden="true"></i>
+            </a>
+            
+            <a href="https://www.escapethereview.co.uk/profile/?user_id=11" rel="me" aria-label="Escape the Review">
+                <i data-feather="crosshair" aria-hidden="true"></i>
+            </a>
+            
+            <a href="https://icgames.net" rel="me" aria-label="International Consensus Games">
+                <i data-feather="target" aria-hidden="true"></i>
+            </a>
+            
+            <a href="https://instantiator.dev/index.xml" rel="me" aria-label="RSS">
+                <i data-feather="rss" aria-hidden="true"></i>
+            </a>
+            
+        </div>
+        <div>
+            <span class="text-body-secondary fw-lighter">
+                &copy; Lewis Westbury  2024 
+            </span>
         </div>
     </div>
-    <ul class="social-links">
-        
-            <li>
-                <a href="https://mastodon.social/@instantiator" rel="me" aria-label="Mastodon">
-                    <i class="fab fa-mastodon fa-2x" aria-hidden="true"></i>
-                </a>
-            </li>
-        
-            <li>
-                <a href="https://twitter.com/instantiator" rel="me" aria-label="Twitter">
-                    <i class="fab fa-twitter fa-2x" aria-hidden="true"></i>
-                </a>
-            </li>
-        
-            <li>
-                <a href="https://github.com/instantiator" rel="me" aria-label="GitHub">
-                    <i class="fab fa-github fa-2x" aria-hidden="true"></i>
-                </a>
-            </li>
-        
-            <li>
-                <a href="https://www.linkedin.com/in/lewiswestbury" rel="me" aria-label="LinkedIn">
-                    <i class="fab fa-linkedin fa-2x" aria-hidden="true"></i>
-                </a>
-            </li>
-        
-            <li>
-                <a href="https://www.escapethereview.co.uk/profile/?user_id=11" rel="me" aria-label="Escape the Review">
-                    <i class="fas fa-dungeon fa-2x" aria-hidden="true"></i>
-                </a>
-            </li>
-        
-            <li>
-                <a href="https://icgames.net" rel="me" aria-label="International Consensus Games">
-                    <i class="fas fa-chess-knight fa-2x" aria-hidden="true"></i>
-                </a>
-            </li>
-        
-            <li>
-                <a href="https://instantiator.dev/index.xml" rel="me" aria-label="RSS">
-                    <i class="fas fa-rss fa-2x" aria-hidden="true"></i>
-                </a>
-            </li>
-        
-    </ul>
-    <div class="footer">
-        <div class="by_farbox">&copy; Lewis Westbury  2024 </div>
-    </div>
-</div>
-<div class="main">
-    <div class="page-top  animated fadeInDown ">
-    <a role="button" class="navbar-burger" data-target="navMenu" aria-label="menu" aria-expanded="false">
-        <span aria-hidden="true"></span>
-        <span aria-hidden="true"></span>
-        <span aria-hidden="true"></span>
-    </a>
-    <ul class="nav" id="navMenu">
-        
-        
-            
-            <li><a 
-                   href="/"
-                        
-                   title="">Home</a></li>
-        
-            
-            <li><a 
-                   href="/post/"
-                        
-                   title="">All posts</a></li>
-        
-            
-            <li><a 
-                   href="/categories/tool/"
-                        
-                   title="">Tools</a></li>
-        
-            
-            <li><a 
-                   href="/categories/tutorial/"
-                        
-                   title="">Tutorials</a></li>
-        
-            
-            <li><a 
-                   href="/categories/article/"
-                        
-                   title="">Articles</a></li>
-        
-            
-            <li><a 
-                   href="/about/"
-                        
-                   title="">About</a></li>
-        
-        
-        
-            <li class="theme-switch-item">
-                <a class="theme-switch" title="Switch Theme">
-                    <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
-                </a>
-            </li>
-        
-    </ul>
-</div>
+</div>    
 
-    <div class="autopagerize_page_element">
-        <div class="content">
-    <div class="post  animated fadeInDown ">
-        <div class="post-content">
-            
-           <img class="post-thumbnail" src="/sk/sk-logo.png" alt="Thumbnail image">
-            
-            <div class="post-title">
-                <h3>Building AI into your application with Semantic Kernel</h3>
-                
-                    <div class="info">
-                        <em class="fas fa-calendar-day"></em>
-                        <span class="date"> 
-                                                2023-04-17
-                                           </span>
-                        <em class="fas fa-stopwatch"></em>
-                        <span class="reading-time">8-minute read</span>
-                    </div>
-                
-            </div>
+
+
+    </div>
+    <div class="col-lg" style="overflow-x: hidden;">
+        <div id="post-content">
+            <h2>Building AI into your application with Semantic Kernel</h1>
+             
+<i data-feather="calendar"></i>
+<time datetime="2023-04-17">2023-04-17</time>
+
+<br/>
+<i data-feather="tag"></i>
+
+
+<a class="badge bg-secondary" href="https://instantiator.dev/tags/gpt">GPT</a>
+
+
+<a class="badge bg-secondary" href="https://instantiator.dev/tags/largelanguagemodel">LargeLanguageModel</a>
+
+
+<a class="badge bg-secondary" href="https://instantiator.dev/tags/llm">LLM</a>
+
+
+<a class="badge bg-secondary" href="https://instantiator.dev/tags/semantic-kernel">semantic-kernel</a>
+
+
+<a class="badge bg-secondary" href="https://instantiator.dev/tags/sdk">sdk</a>
+
+
+<a class="badge bg-secondary" href="https://instantiator.dev/tags/c">c#</a>
+
+
+<a class="badge bg-secondary" href="https://instantiator.dev/tags/.net">.net</a>
+
+
+<a class="badge bg-secondary" href="https://instantiator.dev/tags/textcompletion">TextCompletion</a>
+
+
+<a class="badge bg-secondary" href="https://instantiator.dev/tags/artificialintelligence">ArtificialIntelligence</a>
+
+
+<a class="badge bg-secondary" href="https://instantiator.dev/tags/ai">AI</a>
+
+
+<a class="badge bg-secondary" href="https://instantiator.dev/tags/machine-learning">machine-learning</a>
+
+
+<a class="badge bg-secondary" href="https://instantiator.dev/tags/ml">ML</a>
+
+
+<a class="badge bg-secondary" href="https://instantiator.dev/tags/openai">OpenAI</a>
+
+
+<a class="badge bg-secondary" href="https://instantiator.dev/tags/microsoft">microsoft</a>
+
+
+<a class="badge bg-secondary" href="https://instantiator.dev/tags/software-development">software-development</a>
+
+
+<a class="badge bg-secondary" href="https://instantiator.dev/tags/dev">dev</a>
+
+
+<a class="badge bg-secondary" href="https://instantiator.dev/tags/csharp">CSharp</a>
+
+
+<a class="badge bg-secondary" href="https://instantiator.dev/tags/coding">coding</a>
+
+
+<a class="badge bg-secondary" href="https://instantiator.dev/tags/api">API</a>
+
+
 
             <p>This is a quick guide to some of the features of the Semantic Kernel, a Software Development Kit that simplifies integration of language models into your own applications.</p>
 <h1 id="the-semantic-kernel">The Semantic Kernel</h1>
@@ -243,30 +246,30 @@
 <h3 id="configuration">Configuration</h3>
 <p>Everything starts in <a href="https://github.com/instantiator/semantic-kernel-experiment/blob/main/SKE/Program.cs"><code>SKE.Program.Main()</code></a> - the entrypoint for this console application.</p>
 <p>First, it retrieves config from the <code>.env</code> and <code>.secret.env</code> files, and uses that config to build the kernel.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-csharp" data-lang="csharp"><span class="line"><span class="cl"><span class="c1">// configure and create the semantic kernel</span>
-</span></span><span class="line"><span class="cl"><span class="kt">var</span> <span class="n">config</span> <span class="p">=</span> <span class="n">RetrieveConfiguration</span><span class="p">();</span>
-</span></span><span class="line"><span class="cl"><span class="kt">var</span> <span class="n">kernel</span> <span class="p">=</span> <span class="n">BuildAndConfigureKernel</span><span class="p">(</span><span class="n">config</span><span class="p">);</span>
-</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-csharp" data-lang="csharp"><span class="line"><span class="cl"><span class="kd">private</span> <span class="kd">static</span> <span class="n">IKernel</span> <span class="n">BuildAndConfigureKernel</span><span class="p">(</span><span class="n">IConfigurationRoot</span> <span class="n">config</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl"><span class="p">{</span>
-</span></span><span class="line"><span class="cl">    <span class="kt">var</span> <span class="n">kernel</span> <span class="p">=</span> <span class="n">Kernel</span><span class="p">.</span><span class="n">Builder</span><span class="p">.</span><span class="n">Build</span><span class="p">();</span>
-</span></span><span class="line"><span class="cl">    <span class="n">kernel</span><span class="p">.</span><span class="n">Config</span><span class="p">.</span><span class="n">AddOpenAITextCompletionService</span><span class="p">(</span>
-</span></span><span class="line"><span class="cl">        <span class="n">config</span><span class="p">[</span><span class="s">&#34;serviceId&#34;</span><span class="p">]!,</span>
-</span></span><span class="line"><span class="cl">        <span class="n">config</span><span class="p">[</span><span class="s">&#34;modelId&#34;</span><span class="p">]!,</span>
-</span></span><span class="line"><span class="cl">        <span class="n">config</span><span class="p">[</span><span class="s">&#34;apiKey&#34;</span><span class="p">]!);</span>
-</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">kernel</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl"><span class="p">}</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-csharp" data-lang="csharp"><span style="display:flex;"><span><span style="color:#75715e">// configure and create the semantic kernel</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">var</span> config = RetrieveConfiguration();
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">var</span> kernel = BuildAndConfigureKernel(config);
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-csharp" data-lang="csharp"><span style="display:flex;"><span><span style="color:#66d9ef">private</span> <span style="color:#66d9ef">static</span> IKernel BuildAndConfigureKernel(IConfigurationRoot config)
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">var</span> kernel = Kernel.Builder.Build();
+</span></span><span style="display:flex;"><span>    kernel.Config.AddOpenAITextCompletionService(
+</span></span><span style="display:flex;"><span>        config[<span style="color:#e6db74">&#34;serviceId&#34;</span>]!,
+</span></span><span style="display:flex;"><span>        config[<span style="color:#e6db74">&#34;modelId&#34;</span>]!,
+</span></span><span style="display:flex;"><span>        config[<span style="color:#e6db74">&#34;apiKey&#34;</span>]!);
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> kernel;
+</span></span><span style="display:flex;"><span>}
 </span></span></code></pre></div><p>The Kernel configuration is pretty simple - it just wants to know the service and text completion model it should be using, and an API key to be permitted to access it.</p>
 <h3 id="skills">Skills</h3>
 <p>The Kernel is then used to import the skills defined in the project, and the Planner - a special skill provided by Semantic Kernel.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-csharp" data-lang="csharp"><span class="line"><span class="cl"><span class="c1">// import defined skills, and the planner</span>
-</span></span><span class="line"><span class="cl"><span class="n">kernel</span><span class="p">.</span><span class="n">ImportAllSemanticSkills</span><span class="p">(</span><span class="s">&#34;Skills&#34;</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl"><span class="n">kernel</span><span class="p">.</span><span class="n">ImportAllNativeSkills</span><span class="p">();</span>
-</span></span><span class="line"><span class="cl"><span class="kt">var</span> <span class="n">planner</span> <span class="p">=</span> <span class="n">kernel</span><span class="p">.</span><span class="n">ImportPlannerSkill</span><span class="p">();</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-csharp" data-lang="csharp"><span style="display:flex;"><span><span style="color:#75715e">// import defined skills, and the planner</span>
+</span></span><span style="display:flex;"><span>kernel.ImportAllSemanticSkills(<span style="color:#e6db74">&#34;Skills&#34;</span>);
+</span></span><span style="display:flex;"><span>kernel.ImportAllNativeSkills();
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">var</span> planner = kernel.ImportPlannerSkill();
 </span></span></code></pre></div><p>The various <code>Import*</code> methods are defined as extension methods for <code>IKernel</code> in <a href="https://github.com/instantiator/semantic-kernel-experiment/blob/main/SKE/KernelSkillsExtensions.cs"><code>SKE.KernelSkillsExtensions</code></a>.</p>
 <h4 id="semantic-functions">Semantic functions</h4>
 <p>Semantic Functions are imported from their position in the skills directory tree. Each Skill has its own directory, and each function has a directory within there.</p>
 <p>In this solution, all Skills are grouped inside the <code>Skills</code> directory:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-csharp" data-lang="csharp"><span class="line"><span class="cl"><span class="n">kernel</span><span class="p">.</span><span class="n">ImportSemanticSkillFromDirectory</span><span class="p">(</span><span class="n">scanDirectory</span><span class="p">,</span> <span class="n">skill</span><span class="p">);</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-csharp" data-lang="csharp"><span style="display:flex;"><span>kernel.ImportSemanticSkillFromDirectory(scanDirectory, skill);
 </span></span></code></pre></div><p>Each Skill contains two files:</p>
 <ul>
 <li><code>skprompt.txt</code> - the instructions for a text completion model that represent this capability</li>
@@ -275,100 +278,100 @@
 <p><code>config.json</code> is optional, however of all the information in that file, the <a href="https://github.com/instantiator/semantic-kernel-experiment/blob/main/SKE/Skills/MeaningSkill/ReverseMeaningFunction/config.json#L4">description</a> text is important for the Planner, as it needs it to understand what the function does.</p>
 <p>eg.</p>
 <p><code>skprompt.txt</code></p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">Reverse the meaning of the following, giving the opposite effect to the original intention.
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">---Begin Text---
-</span></span><span class="line"><span class="cl">{{$input}}
-</span></span><span class="line"><span class="cl">---End Text---
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>Reverse the meaning of the following, giving the opposite effect to the original intention.
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>---Begin Text---
+</span></span><span style="display:flex;"><span>{{$input}}
+</span></span><span style="display:flex;"><span>---End Text---
 </span></span></code></pre></div><p>and</p>
 <p><code>config.json</code></p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="line"><span class="cl"><span class="p">{</span>
-</span></span><span class="line"><span class="cl">  <span class="nt">&#34;schema&#34;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">  <span class="nt">&#34;type&#34;</span><span class="p">:</span> <span class="s2">&#34;completion&#34;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">  <span class="nt">&#34;description&#34;</span><span class="p">:</span> <span class="s2">&#34;Reverse the meaning of the text&#34;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">  <span class="nt">&#34;completion&#34;</span><span class="p">:</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">    <span class="nt">&#34;max_tokens&#34;</span><span class="p">:</span> <span class="mi">512</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">    <span class="nt">&#34;temperature&#34;</span><span class="p">:</span> <span class="mf">0.0</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">    <span class="nt">&#34;top_p&#34;</span><span class="p">:</span> <span class="mf">0.0</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">    <span class="nt">&#34;presence_penalty&#34;</span><span class="p">:</span> <span class="mf">0.0</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">    <span class="nt">&#34;frequency_penalty&#34;</span><span class="p">:</span> <span class="mf">0.0</span>
-</span></span><span class="line"><span class="cl">  <span class="p">},</span>
-</span></span><span class="line"><span class="cl">  <span class="nt">&#34;input&#34;</span><span class="p">:</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">    <span class="nt">&#34;parameters&#34;</span><span class="p">:</span> <span class="p">[</span>
-</span></span><span class="line"><span class="cl">      <span class="p">{</span>
-</span></span><span class="line"><span class="cl">        <span class="nt">&#34;name&#34;</span><span class="p">:</span> <span class="s2">&#34;input&#34;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">        <span class="nt">&#34;description&#34;</span><span class="p">:</span> <span class="s2">&#34;Text to reverse the meaning of&#34;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">        <span class="nt">&#34;defaultValue&#34;</span><span class="p">:</span> <span class="s2">&#34;&#34;</span>
-</span></span><span class="line"><span class="cl">      <span class="p">}</span>
-</span></span><span class="line"><span class="cl">    <span class="p">]</span>
-</span></span><span class="line"><span class="cl">  <span class="p">}</span>
-</span></span><span class="line"><span class="cl"><span class="p">}</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;schema&#34;</span>: <span style="color:#ae81ff">1</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;type&#34;</span>: <span style="color:#e6db74">&#34;completion&#34;</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;description&#34;</span>: <span style="color:#e6db74">&#34;Reverse the meaning of the text&#34;</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;completion&#34;</span>: {
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&#34;max_tokens&#34;</span>: <span style="color:#ae81ff">512</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&#34;temperature&#34;</span>: <span style="color:#ae81ff">0.0</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&#34;top_p&#34;</span>: <span style="color:#ae81ff">0.0</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&#34;presence_penalty&#34;</span>: <span style="color:#ae81ff">0.0</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&#34;frequency_penalty&#34;</span>: <span style="color:#ae81ff">0.0</span>
+</span></span><span style="display:flex;"><span>  },
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;input&#34;</span>: {
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&#34;parameters&#34;</span>: [
+</span></span><span style="display:flex;"><span>      {
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&#34;name&#34;</span>: <span style="color:#e6db74">&#34;input&#34;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&#34;description&#34;</span>: <span style="color:#e6db74">&#34;Text to reverse the meaning of&#34;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&#34;defaultValue&#34;</span>: <span style="color:#e6db74">&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>      }
+</span></span><span style="display:flex;"><span>    ]
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>}
 </span></span></code></pre></div><h4 id="native-functions">Native functions</h4>
 <p>Conversely, Native functions are imported by providing an object from a class containing a number of methods marked with the <code>[SKFunction]</code> annotation.</p>
 <p>In this solution, they are detected by reflection - and then each class identified as a Skill is instantiated and imported:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-csharp" data-lang="csharp"><span class="line"><span class="cl"><span class="n">kernel</span><span class="p">.</span><span class="n">ImportSkill</span><span class="p">(</span><span class="n">skillObject</span><span class="p">!,</span> <span class="n">type</span><span class="p">.</span><span class="n">Name</span><span class="p">!);</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-csharp" data-lang="csharp"><span style="display:flex;"><span>kernel.ImportSkill(skillObject!, type.Name!);
 </span></span></code></pre></div><p>In this solution we define a simple native function:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-csharp" data-lang="csharp"><span class="line"><span class="cl"><span class="kd">public</span> <span class="k">class</span> <span class="nc">CharacterManipulationSkill</span>
-</span></span><span class="line"><span class="cl"><span class="p">{</span>
-</span></span><span class="line"><span class="cl"><span class="na">    [SKFunction(&#34;Return the text in all uppercase (aka capitals)&#34;)]</span>
-</span></span><span class="line"><span class="cl">    <span class="kd">public</span> <span class="kt">string</span> <span class="n">Uppercase</span><span class="p">(</span><span class="kt">string</span> <span class="n">input</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">        <span class="p">=&gt;</span> <span class="n">input</span><span class="p">.</span><span class="n">ToUpper</span><span class="p">();</span>
-</span></span><span class="line"><span class="cl"><span class="p">}</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-csharp" data-lang="csharp"><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">CharacterManipulationSkill</span>
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">    [SKFunction(&#34;Return the text in all uppercase (aka capitals)&#34;)]</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">string</span> Uppercase(<span style="color:#66d9ef">string</span> input)
+</span></span><span style="display:flex;"><span>        =&gt; input.ToUpper();
+</span></span><span style="display:flex;"><span>}
 </span></span></code></pre></div><p>It&rsquo;s pretty clear what it does to you or I by inspection of the code. Note that the <code>SKFunction</code> annotation contains a description of the function as its parameter. The Planner needs this to understand the function, so that it can incorporate it into any plans.</p>
 <h4 id="the-planner">The planner</h4>
 <p>Finally, the Planner itself is imported:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-csharp" data-lang="csharp"><span class="line"><span class="cl"><span class="n">kernel</span><span class="p">.</span><span class="n">ImportSkill</span><span class="p">(</span><span class="k">new</span> <span class="n">PlannerSkill</span><span class="p">(</span><span class="n">kernel</span><span class="p">));</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-csharp" data-lang="csharp"><span style="display:flex;"><span>kernel.ImportSkill(<span style="color:#66d9ef">new</span> PlannerSkill(kernel));
 </span></span></code></pre></div><p>This is interesting - the <code>PlannerSkill</code> is passed an instance of the Kernel, and I believe that&rsquo;s because it need to be able to learn which Skills the Kernel has imported, in order to be able to reason about them.</p>
 <h3 id="creating-a-plan">Creating a plan</h3>
 <p>Once configured and with all the skills available to the Planner, the code goes on to prepare an ask - a plain language request for the Kernel.</p>
 <p>This solution uses a very simple, fixed ask to help illustrate how the skills can be used together:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-csharp" data-lang="csharp"><span class="line"><span class="cl"><span class="c1">// provide a simple input and ask as an example</span>
-</span></span><span class="line"><span class="cl"><span class="kt">var</span> <span class="n">input</span> <span class="p">=</span> <span class="s">&#34;Yesterday I went to the London Prompt Engineers jam at Newspeak House. Brilliant to meet folks who want to experiment with the new technologies, and a great opportunity to muck out with Semantic Kernel. Can&#39;t recommend highly enough!&#34;</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl"><span class="kt">var</span> <span class="n">ask</span> <span class="p">=</span> <span class="s">$&#34;Reverse the following and then deliver it as cockney rhyming slag in all caps: {input}&#34;</span><span class="p">;</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-csharp" data-lang="csharp"><span style="display:flex;"><span><span style="color:#75715e">// provide a simple input and ask as an example</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">var</span> input = <span style="color:#e6db74">&#34;Yesterday I went to the London Prompt Engineers jam at Newspeak House. Brilliant to meet folks who want to experiment with the new technologies, and a great opportunity to muck out with Semantic Kernel. Can&#39;t recommend highly enough!&#34;</span>;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">var</span> ask = <span style="color:#e6db74">$&#34;Reverse the following and then deliver it as cockney rhyming slag in all caps: {input}&#34;</span>;
 </span></span></code></pre></div><p>WIth the ask constructed, the Planner can be invoked to create a plan:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-csharp" data-lang="csharp"><span class="line"><span class="cl"><span class="c1">// create plan for the given ask</span>
-</span></span><span class="line"><span class="cl"><span class="kt">var</span> <span class="n">plan</span> <span class="p">=</span> <span class="k">await</span> <span class="n">kernel</span><span class="p">.</span><span class="n">CreatePlanAsync</span><span class="p">(</span><span class="n">planner</span><span class="p">,</span> <span class="n">ask</span><span class="p">);</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-csharp" data-lang="csharp"><span style="display:flex;"><span><span style="color:#75715e">// create plan for the given ask</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">var</span> plan = <span style="color:#66d9ef">await</span> kernel.CreatePlanAsync(planner, ask);
 </span></span></code></pre></div><p>Again, this takes place in an extension method - this time it&rsquo;s an async invocation, as the Kernel will be making calls to the remote LLM to complete the plan:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-csharp" data-lang="csharp"><span class="line"><span class="cl"><span class="k">await</span> <span class="n">kernel</span><span class="p">.</span><span class="n">RunAsync</span><span class="p">(</span><span class="n">ask</span><span class="p">,</span> <span class="n">planner</span><span class="p">[</span><span class="s">&#34;CreatePlan&#34;</span><span class="p">]);</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-csharp" data-lang="csharp"><span style="display:flex;"><span><span style="color:#66d9ef">await</span> kernel.RunAsync(ask, planner[<span style="color:#e6db74">&#34;CreatePlan&#34;</span>]);
 </span></span></code></pre></div><h3 id="executing-the-plan">Executing the plan</h3>
 <p>Finally, the Kernel is asked to execute the plan:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-csharp" data-lang="csharp"><span class="line"><span class="cl"><span class="c1">// execute the plan</span>
-</span></span><span class="line"><span class="cl"><span class="kt">var</span> <span class="n">result</span> <span class="p">=</span> <span class="k">await</span> <span class="n">kernel</span><span class="p">.</span><span class="n">ExecutePlanAsync</span><span class="p">(</span><span class="n">planner</span><span class="p">,</span> <span class="n">plan</span><span class="p">);</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-csharp" data-lang="csharp"><span style="display:flex;"><span><span style="color:#75715e">// execute the plan</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">var</span> result = <span style="color:#66d9ef">await</span> kernel.ExecutePlanAsync(planner, plan);
 </span></span></code></pre></div><p>Again, this is covered in an extension method, but this conceals quite a bit of complexity:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-csharp" data-lang="csharp"><span class="line"><span class="cl"><span class="kd">public</span> <span class="kd">static</span> <span class="kd">async</span> <span class="n">Task</span><span class="p">&lt;</span><span class="kt">string?</span><span class="p">&gt;</span> <span class="n">ExecutePlanAsync</span><span class="p">(</span><span class="k">this</span> <span class="n">IKernel</span> <span class="n">kernel</span><span class="p">,</span> <span class="n">IDictionary</span><span class="p">&lt;</span><span class="kt">string</span><span class="p">,</span> <span class="n">ISKFunction</span><span class="p">&gt;</span> <span class="n">planner</span><span class="p">,</span> <span class="n">SKContext</span> <span class="n">plan</span><span class="p">,</span> <span class="kt">int</span> <span class="n">maxSteps</span> <span class="p">=</span> <span class="m">10</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl"><span class="p">{</span>
-</span></span><span class="line"><span class="cl">    <span class="kt">string?</span> <span class="n">result</span> <span class="p">=</span> <span class="kc">null</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">    <span class="kt">var</span> <span class="n">executionResults</span> <span class="p">=</span> <span class="n">plan</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">    <span class="kt">var</span> <span class="n">partialResults</span> <span class="p">=</span> <span class="k">new</span> <span class="n">List</span><span class="p">&lt;</span><span class="kt">string</span><span class="p">&gt;();</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">    <span class="kt">int</span> <span class="n">step</span> <span class="p">=</span> <span class="m">1</span><span class="p">;</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-csharp" data-lang="csharp"><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">async</span> Task&lt;<span style="color:#66d9ef">string?</span>&gt; ExecutePlanAsync(<span style="color:#66d9ef">this</span> IKernel kernel, IDictionary&lt;<span style="color:#66d9ef">string</span>, ISKFunction&gt; planner, SKContext plan, <span style="color:#66d9ef">int</span> maxSteps = <span style="color:#ae81ff">10</span>)
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">string?</span> result = <span style="color:#66d9ef">null</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">var</span> executionResults = plan;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">var</span> partialResults = <span style="color:#66d9ef">new</span> List&lt;<span style="color:#66d9ef">string</span>&gt;();
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">int</span> step = <span style="color:#ae81ff">1</span>;
 </span></span></code></pre></div><p>After a little set up, it starts a <code>while</code> loop - which will stop when the plan is complete, or has exceeded the maximum number of permissible steps&hellip;</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-csharp" data-lang="csharp"><span class="line"><span class="cl">    <span class="k">while</span> <span class="p">(!</span><span class="n">executionResults</span><span class="p">.</span><span class="n">Variables</span><span class="p">.</span><span class="n">ToPlan</span><span class="p">().</span><span class="n">IsComplete</span> <span class="p">&amp;&amp;</span> <span class="n">step</span> <span class="p">&lt;</span> <span class="n">maxSteps</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">    <span class="p">{</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-csharp" data-lang="csharp"><span style="display:flex;"><span>    <span style="color:#66d9ef">while</span> (!executionResults.Variables.ToPlan().IsComplete &amp;&amp; step &lt; maxSteps)
+</span></span><span style="display:flex;"><span>    {
 </span></span></code></pre></div><p>It executes the next step found in the plan (stored in <code>executionResults</code>). These execution results double as the output from executing a step, and information about execution of the plan itself.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-csharp" data-lang="csharp"><span class="line"><span class="cl">        <span class="c1">// execute the next step found in execution results</span>
-</span></span><span class="line"><span class="cl">        <span class="kt">var</span> <span class="n">results</span> <span class="p">=</span> <span class="k">await</span> <span class="n">kernel</span><span class="p">.</span><span class="n">RunAsync</span><span class="p">(</span><span class="n">executionResults</span><span class="p">.</span><span class="n">Variables</span><span class="p">,</span> <span class="n">planner</span><span class="p">[</span><span class="s">&#34;ExecutePlan&#34;</span><span class="p">]);</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-csharp" data-lang="csharp"><span style="display:flex;"><span>        <span style="color:#75715e">// execute the next step found in execution results</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">var</span> results = <span style="color:#66d9ef">await</span> kernel.RunAsync(executionResults.Variables, planner[<span style="color:#e6db74">&#34;ExecutePlan&#34;</span>]);
 </span></span></code></pre></div><p>Then, assuming that the execution was successful, the output from the current step is captured in <code>result</code>, and also added to the <code>partialResults</code> list (mainly for debugging purposes).</p>
 <p>If execution failed, this is where the method throws a <code>PlanExecutionException</code>, which contains all the debugging information available right now.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-csharp" data-lang="csharp"><span class="line"><span class="cl">        <span class="k">if</span> <span class="p">(</span><span class="n">results</span><span class="p">.</span><span class="n">Variables</span><span class="p">.</span><span class="n">ToPlan</span><span class="p">().</span><span class="n">IsSuccessful</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">        <span class="p">{</span>
-</span></span><span class="line"><span class="cl">            <span class="n">result</span> <span class="p">=</span> <span class="n">results</span><span class="p">.</span><span class="n">Variables</span><span class="p">.</span><span class="n">ToPlan</span><span class="p">().</span><span class="n">Result</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">            <span class="n">partialResults</span><span class="p">.</span><span class="n">Add</span><span class="p">(</span><span class="n">result</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">        <span class="p">}</span>
-</span></span><span class="line"><span class="cl">        <span class="k">else</span>
-</span></span><span class="line"><span class="cl">        <span class="p">{</span>
-</span></span><span class="line"><span class="cl">            <span class="k">throw</span> <span class="k">new</span> <span class="n">PlanExecutionException</span><span class="p">(</span><span class="s">$&#34;Step {step} execution failed.&#34;</span><span class="p">,</span> <span class="n">plan</span><span class="p">,</span> <span class="n">step</span><span class="p">,</span> <span class="n">partialResults</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-csharp" data-lang="csharp"><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> (results.Variables.ToPlan().IsSuccessful)
+</span></span><span style="display:flex;"><span>        {
+</span></span><span style="display:flex;"><span>            result = results.Variables.ToPlan().Result;
+</span></span><span style="display:flex;"><span>            partialResults.Add(result);
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">else</span>
+</span></span><span style="display:flex;"><span>        {
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">throw</span> <span style="color:#66d9ef">new</span> PlanExecutionException(<span style="color:#e6db74">$&#34;Step {step} execution failed.&#34;</span>, plan, step, partialResults);
+</span></span><span style="display:flex;"><span>        }
 </span></span></code></pre></div><p>Finally, <code>results</code> from the current step&rsquo;s execution are put into <code>executionResults</code>, which will be used to provide the next step of the plan when the loop iterates.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-csharp" data-lang="csharp"><span class="line"><span class="cl">        <span class="c1">// iterate - using the execution results as the input for the next step</span>
-</span></span><span class="line"><span class="cl">        <span class="n">executionResults</span> <span class="p">=</span> <span class="n">results</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">        <span class="n">step</span><span class="p">++;</span>
-</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-csharp" data-lang="csharp"><span style="display:flex;"><span>        <span style="color:#75715e">// iterate - using the execution results as the input for the next step</span>
+</span></span><span style="display:flex;"><span>        executionResults = results;
+</span></span><span style="display:flex;"><span>        step++;
+</span></span><span style="display:flex;"><span>    }
 </span></span></code></pre></div><p>When the loop has completed, if it has not thrown an exception, then there should be a final result in <code>result</code>&hellip;</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-csharp" data-lang="csharp"><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">result</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl"><span class="p">}</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-csharp" data-lang="csharp"><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> result;
+</span></span><span style="display:flex;"><span>}
 </span></span></code></pre></div><p>The final line of <code>Program.Main</code> prints this final result to the console:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-csharp" data-lang="csharp"><span class="line"><span class="cl"><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">$&#34;Result:\n\n{result}&#34;</span><span class="p">);</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-csharp" data-lang="csharp"><span style="display:flex;"><span>Console.WriteLine(<span style="color:#e6db74">$&#34;Result:\n\n{result}&#34;</span>);
 </span></span></code></pre></div><h2 id="doing-it-right">Doing it right</h2>
 <p>As with all other applications for Machine Learning, using Large Language Models to solve problems comes with hurdles and caveats.</p>
 <p>Take the time to read the <a href="https://learn.microsoft.com/en-us/semantic-kernel/responsibleai">Responsible AI Transparency Note</a> provided with the Semantic Kernel documentation.</p>
@@ -383,34 +386,16 @@
 <blockquote>
 <p>No company sets out to create a product that’s going to be called “racist” – but it happens over and over again. You can be the voice that helps your company avoid that from ever taking place.</p>
 </blockquote>
-</div>
-        <div class="post-footer">
-            <div class="info">
-                <span class="separator"><a class="category" href="/categories/tutorial/">tutorial</a></span>
-                <span class="separator"><a class="tag" href="/tags/gpt/">GPT</a><a class="tag" href="/tags/largelanguagemodel/">LargeLanguageModel</a><a class="tag" href="/tags/llm/">LLM</a><a class="tag" href="/tags/semantic-kernel/">semantic-kernel</a><a class="tag" href="/tags/sdk/">sdk</a><a class="tag" href="/tags/c%23/">c#</a><a class="tag" href="/tags/%2enet/">.net</a><a class="tag" href="/tags/textcompletion/">TextCompletion</a><a class="tag" href="/tags/artificialintelligence/">ArtificialIntelligence</a><a class="tag" href="/tags/ai/">AI</a><a class="tag" href="/tags/machine-learning/">machine-learning</a><a class="tag" href="/tags/ml/">ML</a><a class="tag" href="/tags/openai/">OpenAI</a><a class="tag" href="/tags/microsoft/">microsoft</a><a class="tag" href="/tags/software-development/">software-development</a><a class="tag" href="/tags/dev/">dev</a><a class="tag" href="/tags/csharp/">CSharp</a><a class="tag" href="/tags/coding/">coding</a><a class="tag" href="/tags/api/">API</a></span>
-                
-
-            </div>
-        </div>
-
-        
-    </div>
-
 
         </div>
     </div>
 </div>
 
-<script type="text/javascript"
-        src="/js/medium-zoom.min.e1c6918cbaa90022a5612f0bd71c7bf3be6d036614c5729cebfe14f7b91fa4bc.js"
-        integrity="sha256-4caRjLqpACKlYS8L1xx7875tA2YUxXKc6/4U97kfpLw="
-        crossorigin="anonymous"></script>
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-SHE42ZWKEN"></script>
+
+        </div><script src="/js/bootstrap.min.js"></script>
+<script src="/js/feather.min.js"></script>
+<script src="/js/mastodon-timeline.umd.js"></script>
 <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-SHE42ZWKEN');
+  feather.replace();
 </script></body>
-
 </html>

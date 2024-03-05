@@ -1,74 +1,19 @@
 <!DOCTYPE html>
-<html  dir="ltr" lang="en" data-theme=""><head>
-    <title> instantiator.dev | Querying data files with terminal tools </title>
-
-    
-    <meta charset="utf-8"><meta name="generator" content="Hugo 0.123.7"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-    <meta name="description" content="tech, volunteers, public safety, articles and ideas">
-    
-    
-    
-    <link rel="stylesheet"
-        href="/css/style.min.59fe2a27cd19eafc8c4aef4e2c18a287287097d0516d9baf6ade257c0f4b4d64.css"
-        integrity="sha256-Wf4qJ80Z6vyMSu9OLBiihyhwl9BRbZuvat4lfA9LTWQ="
-        crossorigin="anonymous"
-        type="text/css">
-    
-
-    
-    <link rel="stylesheet"
-        href="/css/additional-classes.min.1d76732c34340c3588f50dacb5d8ce67a8c9ad2bf0140c8eb825f3f4e3a071c4.css"
-        integrity="sha256-HXZzLDQ0DDWI9Q2stdjOZ6jJrSvwFAyOuCXz9OOgccQ="
-        crossorigin="anonymous"
-        type="text/css">
-
-    
-    <link rel="stylesheet"
-        href="/css/markupHighlight.min.59c08a266e8a6489aab7cb3ace4259db920d0e8893682a44ef8401387af97664.css"
-        integrity="sha256-WcCKJm6KZImqt8s6zkJZ25INDoiTaCpE74QBOHr5dmQ="
-        crossorigin="anonymous"
-        type="text/css">
-    
-
-
-
-    <link rel="stylesheet" 
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" 
-    integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" 
-    crossorigin="anonymous" />
-
-    
-    <link rel="shortcut icon" href="/favicons/favicon.ico" type="image/x-icon">
-    <link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicons/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicons/favicon-16x16.png">
-
-    <link rel="canonical" href="/post/q/">
-
+<html lang="en"><head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
+    <link rel="stylesheet" type="text/css" href="/css/mastodon-timeline.min.css">
     
     
+    <title>instantiator.dev | Querying data files with terminal tools</title>
     
-    
-    <script type="text/javascript"
-            src="/js/anatole-header.min.df804b63b5bd8474ea0756ea874bc8f1e92552708cc6ea43aa0d76981dc419f9.js"
-            integrity="sha256-34BLY7W9hHTqB1bqh0vI8eklUnCMxupDqg12mB3EGfk="
-            crossorigin="anonymous"></script>
-
-
-    
-        
-        
-        <script type="text/javascript"
-                src="/js/anatole-theme-switcher.min.ea8ebe268922ef9849261a1312cd65b640595e65251ce4c00534a176afd1ac0c.js"
-                integrity="sha256-6o6&#43;Joki75hJJhoTEs1ltkBZXmUlHOTABTShdq/RrAw="
-                crossorigin="anonymous"></script>
     
     <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:image" content="https://instantiator.dev/lewis/default-image.png" /><meta name="twitter:title" content="Querying data files with terminal tools"/>
 <meta name="twitter:description" content="There are a many ways to peek inside a data file and reason about its contents."/>
 
-
-    
     <meta property="og:title" content="Querying data files with terminal tools" />
 <meta property="og:description" content="There are a many ways to peek inside a data file and reason about its contents." />
 <meta property="og:type" content="article" />
@@ -79,141 +24,165 @@
 
 
 
-</head>
-<body><div class="sidebar animated fadeInDown ">
-    <div class="logo-title">
-        <div class="title">
-            <img src="/lewis/profile.jpg" alt="profile picture">
-            <h3 title=""><a href="/">instantiator.dev</a></h3>
-            <div class="description">
-                <p>tech, volunteers, public safety, articles and ideas</p>
-            </div>
+    
+    <link rel="stylesheet"
+        href="/css/markupHighlight.min.59c08a266e8a6489aab7cb3ace4259db920d0e8893682a44ef8401387af97664.css"
+        integrity="sha256-WcCKJm6KZImqt8s6zkJZ25INDoiTaCpE74QBOHr5dmQ="
+        crossorigin="anonymous"
+        type="text/css">
+
+    </head><body><nav id="nav" class="navbar sticky-top justify-content-start navbar-expand-md frosted-white shadow mb-4">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="/">instantiator.dev</a>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav">
+        
+        
+        <li class="nav-item">
+          <a class="nav-link " href="/">
+            
+             Home
+          </a>
+        </li>
+        
+        <li class="nav-item">
+          <a class="nav-link " href="/post/">
+            
+             All posts
+          </a>
+        </li>
+        
+        <li class="nav-item">
+          <a class="nav-link " href="/categories/tool/">
+            
+             Tools
+          </a>
+        </li>
+        
+        <li class="nav-item">
+          <a class="nav-link " href="/categories/tutorial/">
+            
+             Tutorials
+          </a>
+        </li>
+        
+        <li class="nav-item">
+          <a class="nav-link " href="/categories/article/">
+            
+             Articles
+          </a>
+        </li>
+        
+        <li class="nav-item">
+          <a class="nav-link " href="/about/">
+            
+             About
+          </a>
+        </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+<div class="container-fluid">
+
+<div class="row align-items-start">
+    <div class="col col-lg-3 d-none d-lg-block">
+      <div class="row mb-2">
+    <div class="col-3 col-lg-12 d-flex flex-column align-items-center">
+        <img 
+            src="/lewis/profile.jpg" alt="profile picture" 
+            class="mb-4 mt-4 img-thumbnail" 
+            style="border-radius: 50%; max-width: 200px; width: 100%;" />
+    </div>
+    <div class="col d-flex flex-column align-items-center">
+        <h3 class="mb-4"><a href="/">instantiator.dev</a></h3>
+        
+        <div style="text-align: center;" class="mb-4">
+            <p>tech, volunteers, public safety, collective intelligence, articles, tools, code and ideas</p>
+        </div>
+
+        <div class="d-flex flex-row justify-content-evenly align-self-stretch mb-4">
+        
+            <a href="https://mastodon.social/@instantiator" rel="me" aria-label="Mastodon">
+                <i data-feather="user" aria-hidden="true"></i>
+            </a>
+            
+            <a href="https://github.com/instantiator" rel="me" aria-label="GitHub">
+                <i data-feather="github" aria-hidden="true"></i>
+            </a>
+            
+            <a href="https://www.linkedin.com/in/lewiswestbury" rel="me" aria-label="LinkedIn">
+                <i data-feather="linkedin" aria-hidden="true"></i>
+            </a>
+            
+            <a href="https://www.escapethereview.co.uk/profile/?user_id=11" rel="me" aria-label="Escape the Review">
+                <i data-feather="crosshair" aria-hidden="true"></i>
+            </a>
+            
+            <a href="https://icgames.net" rel="me" aria-label="International Consensus Games">
+                <i data-feather="target" aria-hidden="true"></i>
+            </a>
+            
+            <a href="https://instantiator.dev/index.xml" rel="me" aria-label="RSS">
+                <i data-feather="rss" aria-hidden="true"></i>
+            </a>
+            
+        </div>
+        <div>
+            <span class="text-body-secondary fw-lighter">
+                &copy; Lewis Westbury  2024 
+            </span>
         </div>
     </div>
-    <ul class="social-links">
-        
-            <li>
-                <a href="https://mastodon.social/@instantiator" rel="me" aria-label="Mastodon">
-                    <i class="fab fa-mastodon fa-2x" aria-hidden="true"></i>
-                </a>
-            </li>
-        
-            <li>
-                <a href="https://twitter.com/instantiator" rel="me" aria-label="Twitter">
-                    <i class="fab fa-twitter fa-2x" aria-hidden="true"></i>
-                </a>
-            </li>
-        
-            <li>
-                <a href="https://github.com/instantiator" rel="me" aria-label="GitHub">
-                    <i class="fab fa-github fa-2x" aria-hidden="true"></i>
-                </a>
-            </li>
-        
-            <li>
-                <a href="https://www.linkedin.com/in/lewiswestbury" rel="me" aria-label="LinkedIn">
-                    <i class="fab fa-linkedin fa-2x" aria-hidden="true"></i>
-                </a>
-            </li>
-        
-            <li>
-                <a href="https://www.escapethereview.co.uk/profile/?user_id=11" rel="me" aria-label="Escape the Review">
-                    <i class="fas fa-dungeon fa-2x" aria-hidden="true"></i>
-                </a>
-            </li>
-        
-            <li>
-                <a href="https://icgames.net" rel="me" aria-label="International Consensus Games">
-                    <i class="fas fa-chess-knight fa-2x" aria-hidden="true"></i>
-                </a>
-            </li>
-        
-            <li>
-                <a href="https://instantiator.dev/index.xml" rel="me" aria-label="RSS">
-                    <i class="fas fa-rss fa-2x" aria-hidden="true"></i>
-                </a>
-            </li>
-        
-    </ul>
-    <div class="footer">
-        <div class="by_farbox">&copy; Lewis Westbury  2024 </div>
-    </div>
-</div>
-<div class="main">
-    <div class="page-top  animated fadeInDown ">
-    <a role="button" class="navbar-burger" data-target="navMenu" aria-label="menu" aria-expanded="false">
-        <span aria-hidden="true"></span>
-        <span aria-hidden="true"></span>
-        <span aria-hidden="true"></span>
-    </a>
-    <ul class="nav" id="navMenu">
-        
-        
-            
-            <li><a 
-                   href="/"
-                        
-                   title="">Home</a></li>
-        
-            
-            <li><a 
-                   href="/post/"
-                        
-                   title="">All posts</a></li>
-        
-            
-            <li><a 
-                   href="/categories/tool/"
-                        
-                   title="">Tools</a></li>
-        
-            
-            <li><a 
-                   href="/categories/tutorial/"
-                        
-                   title="">Tutorials</a></li>
-        
-            
-            <li><a 
-                   href="/categories/article/"
-                        
-                   title="">Articles</a></li>
-        
-            
-            <li><a 
-                   href="/about/"
-                        
-                   title="">About</a></li>
-        
-        
-        
-            <li class="theme-switch-item">
-                <a class="theme-switch" title="Switch Theme">
-                    <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
-                </a>
-            </li>
-        
-    </ul>
-</div>
+</div>    
 
-    <div class="autopagerize_page_element">
-        <div class="content">
-    <div class="post  animated fadeInDown ">
-        <div class="post-content">
-            
-            <div class="post-title">
-                <h3>Querying data files with terminal tools</h3>
-                
-                    <div class="info">
-                        <em class="fas fa-calendar-day"></em>
-                        <span class="date"> 
-                                                2021-01-04
-                                           </span>
-                        <em class="fas fa-stopwatch"></em>
-                        <span class="reading-time">3-minute read</span>
-                    </div>
-                
-            </div>
+
+
+    </div>
+    <div class="col-lg" style="overflow-x: hidden;">
+        <div id="post-content">
+            <h2>Querying data files with terminal tools</h1>
+             
+<i data-feather="calendar"></i>
+<time datetime="2021-01-04">2021-01-04</time>
+
+<br/>
+<i data-feather="tag"></i>
+
+
+<a class="badge bg-secondary" href="https://instantiator.dev/tags/linux">linux</a>
+
+
+<a class="badge bg-secondary" href="https://instantiator.dev/tags/os-x">os x</a>
+
+
+<a class="badge bg-secondary" href="https://instantiator.dev/tags/tool">tool</a>
+
+
+<a class="badge bg-secondary" href="https://instantiator.dev/tags/data">data</a>
+
+
+<a class="badge bg-secondary" href="https://instantiator.dev/tags/json">json</a>
+
+
+<a class="badge bg-secondary" href="https://instantiator.dev/tags/yaml">yaml</a>
+
+
+<a class="badge bg-secondary" href="https://instantiator.dev/tags/csv">csv</a>
+
+
 
             <p>There are a many ways to peek inside a data file and reason about its contents.
 This post is about a triplet of simple, easily available tools that
@@ -246,21 +215,21 @@ You might too&hellip;</p>
 </tbody>
 </table>
 <p>If you&rsquo;re on OS X, they&rsquo;re each available through <a href="https://brew.sh/">homebrew</a>:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">brew install q jq yq
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>brew install q jq yq
 </span></span></code></pre></div><h1 id="querying-csv-files">Querying CSV files</h1>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">q <span class="s2">&#34;&lt;sql-like-query&gt;&#34;</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>q <span style="color:#e6db74">&#34;&lt;sql-like-query&gt;&#34;</span>
 </span></span></code></pre></div><p><code>q</code> is a tool that allows you to query CSV files as if they were database tables,
 using a SQL-like syntax. For example:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">q <span class="s2">&#34;SELECT COUNT(*) FROM ./my-data.csv&#34;</span>
-</span></span><span class="line"><span class="cl">q <span class="s2">&#34;SELECT * FROM ./my-data.csv&#34;</span>
-</span></span><span class="line"><span class="cl">q <span class="s2">&#34;SELECT * FROM ./my-data.csv WHERE c2 &gt; 50&#34;</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>q <span style="color:#e6db74">&#34;SELECT COUNT(*) FROM ./my-data.csv&#34;</span>
+</span></span><span style="display:flex;"><span>q <span style="color:#e6db74">&#34;SELECT * FROM ./my-data.csv&#34;</span>
+</span></span><span style="display:flex;"><span>q <span style="color:#e6db74">&#34;SELECT * FROM ./my-data.csv WHERE c2 &gt; 50&#34;</span>
 </span></span></code></pre></div><p><code>q</code> supports all <code>sqlite3</code> query constructs, and filenames are substituted for the tables themselves.</p>
 <p>If the <code>-H</code> option is provided, the first row will be interpeted as a header, and column names will be derived from the header row.
 Otherwise they will be named <code>c0</code>, <code>c1</code>, <code>c2</code>, etc.</p>
 <p>Output from <code>q</code> is formatted as CSV.</p>
 <p>Find out more from the built in help: <code>q --help</code></p>
 <h1 id="querying-json-files">Querying JSON files</h1>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">jq &lt;filter&gt; &lt;files...&gt;
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>jq &lt;filter&gt; &lt;files...&gt;
 </span></span></code></pre></div><p><code>jq</code> is a JSON procesor. To use it, provide a filter and one or more filenames to operate on.</p>
 <p>The simplest filter is <code>.path.to.something</code> - you provide the key, and <code>jq</code> will provide the value found in the JSON files.</p>
 <ul>
@@ -269,57 +238,39 @@ Otherwise they will be named <code>c0</code>, <code>c1</code>, <code>c2</code>, 
 <li>If you don&rsquo;t want to see an error for something that&rsquo;s missing, suffix a <code>?</code></li>
 </ul>
 <p>For example:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">jq .foo.bar ./my-file.json
-</span></span><span class="line"><span class="cl">jq .foo.bar.list<span class="o">[</span>2<span class="o">]</span> ./my-file.json
-</span></span><span class="line"><span class="cl">jq .foo.bar? ./my-file.json
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>jq .foo.bar ./my-file.json
+</span></span><span style="display:flex;"><span>jq .foo.bar.list<span style="color:#f92672">[</span>2<span style="color:#f92672">]</span> ./my-file.json
+</span></span><span style="display:flex;"><span>jq .foo.bar? ./my-file.json
 </span></span></code></pre></div><p>There are plenty of more interesting filters you can compose to find what you need. The manual pages for <code>jq</code> are very detailed.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">man jq
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>man jq
 </span></span></code></pre></div><h1 id="querying-yaml-files">Querying YAML files</h1>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">yq eval-all <span class="s2">&#34;&lt;expression&gt;&#34;</span> &lt;files...&gt;
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>yq eval-all <span style="color:#e6db74">&#34;&lt;expression&gt;&#34;</span> &lt;files...&gt;
 </span></span></code></pre></div><p><code>yq</code> is a tool to query YAML files. You provide an expression and <code>yq</code> will evalute it for you over
 all YAML documents in each YAML file listed.</p>
 <p>For example:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">yq eval-all <span class="s2">&#34;.path.to.something&#34;</span> ./my-config.yml
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>yq eval-all <span style="color:#e6db74">&#34;.path.to.something&#34;</span> ./my-config.yml
 </span></span></code></pre></div><p>Find out more from the built in help: <code>yq --help</code>, and <code>yq eval --help</code></p>
 <h1 id="querying-lots-of-files">Querying lots of files</h1>
 <p>It can&rsquo;t have escaped your notice that these tools can operate on one or more</p>
 <p><code>bash</code> (and other command shells) offer scripting features that allow you to locate and iterate over files.</p>
 <p>For example, this script explores the path passed in the first argument.
 It finds each file in the directory specified, and prints whatever is at <code>.entity.name</code> in the YAML there:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="nv">DIR</span><span class="o">=</span><span class="nv">$1</span>                                      <span class="c1"># the first parameter is the directory to search</span>
-</span></span><span class="line"><span class="cl"><span class="k">for</span> FILE in <span class="s2">&#34;</span><span class="nv">$DIR</span><span class="s2">&#34;</span>/*.yml<span class="p">;</span> <span class="k">do</span>                <span class="c1"># iterate through each file in the directory</span>
-</span></span><span class="line"><span class="cl">  <span class="nv">FILENAME</span><span class="o">=</span><span class="k">$(</span>basename <span class="nv">$FILE</span><span class="k">)</span>                <span class="c1"># uses basename to get the filename without the path</span>
-</span></span><span class="line"><span class="cl">  <span class="nv">NAME</span><span class="o">=</span><span class="k">$(</span>yq .entity.name <span class="nv">$FILE</span><span class="k">)</span>             <span class="c1"># uses yq to find the value at .entity.name in the file</span>
-</span></span><span class="line"><span class="cl">  <span class="nb">echo</span> <span class="s2">&#34;</span><span class="nv">$FILENAME</span><span class="s2"> contains entity: </span><span class="nv">$NAME</span><span class="s2">&#34;</span>   <span class="c1"># print the file name, and entity name found in the file</span>
-</span></span><span class="line"><span class="cl"><span class="k">done</span>                                        <span class="c1"># continue looping through the files</span>
-</span></span></code></pre></div></div>
-        <div class="post-footer">
-            <div class="info">
-                <span class="separator"><a class="category" href="/categories/tutorial/">tutorial</a><a class="category" href="/categories/tool/">tool</a></span>
-                <span class="separator"><a class="tag" href="/tags/linux/">linux</a><a class="tag" href="/tags/os-x/">os x</a><a class="tag" href="/tags/tool/">tool</a><a class="tag" href="/tags/data/">data</a><a class="tag" href="/tags/json/">json</a><a class="tag" href="/tags/yaml/">yaml</a><a class="tag" href="/tags/csv/">csv</a></span>
-                
-
-            </div>
-        </div>
-
-        
-    </div>
-
-
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>DIR<span style="color:#f92672">=</span>$1                                      <span style="color:#75715e"># the first parameter is the directory to search</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">for</span> FILE in <span style="color:#e6db74">&#34;</span>$DIR<span style="color:#e6db74">&#34;</span>/*.yml; <span style="color:#66d9ef">do</span>                <span style="color:#75715e"># iterate through each file in the directory</span>
+</span></span><span style="display:flex;"><span>  FILENAME<span style="color:#f92672">=</span><span style="color:#66d9ef">$(</span>basename $FILE<span style="color:#66d9ef">)</span>                <span style="color:#75715e"># uses basename to get the filename without the path</span>
+</span></span><span style="display:flex;"><span>  NAME<span style="color:#f92672">=</span><span style="color:#66d9ef">$(</span>yq .entity.name $FILE<span style="color:#66d9ef">)</span>             <span style="color:#75715e"># uses yq to find the value at .entity.name in the file</span>
+</span></span><span style="display:flex;"><span>  echo <span style="color:#e6db74">&#34;</span>$FILENAME<span style="color:#e6db74"> contains entity: </span>$NAME<span style="color:#e6db74">&#34;</span>   <span style="color:#75715e"># print the file name, and entity name found in the file</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">done</span>                                        <span style="color:#75715e"># continue looping through the files</span>
+</span></span></code></pre></div>
         </div>
     </div>
 </div>
 
-<script type="text/javascript"
-        src="/js/medium-zoom.min.e1c6918cbaa90022a5612f0bd71c7bf3be6d036614c5729cebfe14f7b91fa4bc.js"
-        integrity="sha256-4caRjLqpACKlYS8L1xx7875tA2YUxXKc6/4U97kfpLw="
-        crossorigin="anonymous"></script>
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-SHE42ZWKEN"></script>
-<script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-SHE42ZWKEN');
-</script></body>
 
+        </div><script src="/js/bootstrap.min.js"></script>
+<script src="/js/feather.min.js"></script>
+<script src="/js/mastodon-timeline.umd.js"></script>
+<script>
+  feather.replace();
+</script></body>
 </html>

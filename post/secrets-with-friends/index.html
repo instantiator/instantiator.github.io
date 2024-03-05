@@ -1,74 +1,19 @@
 <!DOCTYPE html>
-<html  dir="ltr" lang="en" data-theme=""><head>
-    <title> instantiator.dev | Secrets With Friends </title>
-
-    
-    <meta charset="utf-8"><meta name="generator" content="Hugo 0.123.7"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-    <meta name="description" content="tech, volunteers, public safety, articles and ideas">
-    
-    
-    
-    <link rel="stylesheet"
-        href="/css/style.min.59fe2a27cd19eafc8c4aef4e2c18a287287097d0516d9baf6ade257c0f4b4d64.css"
-        integrity="sha256-Wf4qJ80Z6vyMSu9OLBiihyhwl9BRbZuvat4lfA9LTWQ="
-        crossorigin="anonymous"
-        type="text/css">
-    
-
-    
-    <link rel="stylesheet"
-        href="/css/additional-classes.min.1d76732c34340c3588f50dacb5d8ce67a8c9ad2bf0140c8eb825f3f4e3a071c4.css"
-        integrity="sha256-HXZzLDQ0DDWI9Q2stdjOZ6jJrSvwFAyOuCXz9OOgccQ="
-        crossorigin="anonymous"
-        type="text/css">
-
-    
-    <link rel="stylesheet"
-        href="/css/markupHighlight.min.59c08a266e8a6489aab7cb3ace4259db920d0e8893682a44ef8401387af97664.css"
-        integrity="sha256-WcCKJm6KZImqt8s6zkJZ25INDoiTaCpE74QBOHr5dmQ="
-        crossorigin="anonymous"
-        type="text/css">
-    
-
-
-
-    <link rel="stylesheet" 
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" 
-    integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" 
-    crossorigin="anonymous" />
-
-    
-    <link rel="shortcut icon" href="/favicons/favicon.ico" type="image/x-icon">
-    <link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicons/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicons/favicon-16x16.png">
-
-    <link rel="canonical" href="/post/secrets-with-friends/">
-
+<html lang="en"><head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
+    <link rel="stylesheet" type="text/css" href="/css/mastodon-timeline.min.css">
     
     
+    <title>instantiator.dev | Secrets With Friends</title>
     
-    
-    <script type="text/javascript"
-            src="/js/anatole-header.min.df804b63b5bd8474ea0756ea874bc8f1e92552708cc6ea43aa0d76981dc419f9.js"
-            integrity="sha256-34BLY7W9hHTqB1bqh0vI8eklUnCMxupDqg12mB3EGfk="
-            crossorigin="anonymous"></script>
-
-
-    
-        
-        
-        <script type="text/javascript"
-                src="/js/anatole-theme-switcher.min.ea8ebe268922ef9849261a1312cd65b640595e65251ce4c00534a176afd1ac0c.js"
-                integrity="sha256-6o6&#43;Joki75hJJhoTEs1ltkBZXmUlHOTABTShdq/RrAw="
-                crossorigin="anonymous"></script>
     
     <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:image" content="https://instantiator.dev/dps/key-splitting.png" /><meta name="twitter:title" content="Secrets With Friends"/>
 <meta name="twitter:description" content="It&rsquo;s possible to share a secret amongst a group of people so that only some of them are needed to reconstruct it&hellip;"/>
 
-
-    
     <meta property="og:title" content="Secrets With Friends" />
 <meta property="og:description" content="It&rsquo;s possible to share a secret amongst a group of people so that only some of them are needed to reconstruct it&hellip;" />
 <meta property="og:type" content="article" />
@@ -79,143 +24,165 @@
 
 
 
-</head>
-<body><div class="sidebar animated fadeInDown ">
-    <div class="logo-title">
-        <div class="title">
-            <img src="/lewis/profile.jpg" alt="profile picture">
-            <h3 title=""><a href="/">instantiator.dev</a></h3>
-            <div class="description">
-                <p>tech, volunteers, public safety, articles and ideas</p>
-            </div>
+    
+    <link rel="stylesheet"
+        href="/css/markupHighlight.min.59c08a266e8a6489aab7cb3ace4259db920d0e8893682a44ef8401387af97664.css"
+        integrity="sha256-WcCKJm6KZImqt8s6zkJZ25INDoiTaCpE74QBOHr5dmQ="
+        crossorigin="anonymous"
+        type="text/css">
+
+    </head><body><nav id="nav" class="navbar sticky-top justify-content-start navbar-expand-md frosted-white shadow mb-4">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="/">instantiator.dev</a>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav">
+        
+        
+        <li class="nav-item">
+          <a class="nav-link " href="/">
+            
+             Home
+          </a>
+        </li>
+        
+        <li class="nav-item">
+          <a class="nav-link " href="/post/">
+            
+             All posts
+          </a>
+        </li>
+        
+        <li class="nav-item">
+          <a class="nav-link " href="/categories/tool/">
+            
+             Tools
+          </a>
+        </li>
+        
+        <li class="nav-item">
+          <a class="nav-link " href="/categories/tutorial/">
+            
+             Tutorials
+          </a>
+        </li>
+        
+        <li class="nav-item">
+          <a class="nav-link " href="/categories/article/">
+            
+             Articles
+          </a>
+        </li>
+        
+        <li class="nav-item">
+          <a class="nav-link " href="/about/">
+            
+             About
+          </a>
+        </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+<div class="container-fluid">
+
+<div class="row align-items-start">
+    <div class="col col-lg-3 d-none d-lg-block">
+      <div class="row mb-2">
+    <div class="col-3 col-lg-12 d-flex flex-column align-items-center">
+        <img 
+            src="/lewis/profile.jpg" alt="profile picture" 
+            class="mb-4 mt-4 img-thumbnail" 
+            style="border-radius: 50%; max-width: 200px; width: 100%;" />
+    </div>
+    <div class="col d-flex flex-column align-items-center">
+        <h3 class="mb-4"><a href="/">instantiator.dev</a></h3>
+        
+        <div style="text-align: center;" class="mb-4">
+            <p>tech, volunteers, public safety, collective intelligence, articles, tools, code and ideas</p>
+        </div>
+
+        <div class="d-flex flex-row justify-content-evenly align-self-stretch mb-4">
+        
+            <a href="https://mastodon.social/@instantiator" rel="me" aria-label="Mastodon">
+                <i data-feather="user" aria-hidden="true"></i>
+            </a>
+            
+            <a href="https://github.com/instantiator" rel="me" aria-label="GitHub">
+                <i data-feather="github" aria-hidden="true"></i>
+            </a>
+            
+            <a href="https://www.linkedin.com/in/lewiswestbury" rel="me" aria-label="LinkedIn">
+                <i data-feather="linkedin" aria-hidden="true"></i>
+            </a>
+            
+            <a href="https://www.escapethereview.co.uk/profile/?user_id=11" rel="me" aria-label="Escape the Review">
+                <i data-feather="crosshair" aria-hidden="true"></i>
+            </a>
+            
+            <a href="https://icgames.net" rel="me" aria-label="International Consensus Games">
+                <i data-feather="target" aria-hidden="true"></i>
+            </a>
+            
+            <a href="https://instantiator.dev/index.xml" rel="me" aria-label="RSS">
+                <i data-feather="rss" aria-hidden="true"></i>
+            </a>
+            
+        </div>
+        <div>
+            <span class="text-body-secondary fw-lighter">
+                &copy; Lewis Westbury  2024 
+            </span>
         </div>
     </div>
-    <ul class="social-links">
-        
-            <li>
-                <a href="https://mastodon.social/@instantiator" rel="me" aria-label="Mastodon">
-                    <i class="fab fa-mastodon fa-2x" aria-hidden="true"></i>
-                </a>
-            </li>
-        
-            <li>
-                <a href="https://twitter.com/instantiator" rel="me" aria-label="Twitter">
-                    <i class="fab fa-twitter fa-2x" aria-hidden="true"></i>
-                </a>
-            </li>
-        
-            <li>
-                <a href="https://github.com/instantiator" rel="me" aria-label="GitHub">
-                    <i class="fab fa-github fa-2x" aria-hidden="true"></i>
-                </a>
-            </li>
-        
-            <li>
-                <a href="https://www.linkedin.com/in/lewiswestbury" rel="me" aria-label="LinkedIn">
-                    <i class="fab fa-linkedin fa-2x" aria-hidden="true"></i>
-                </a>
-            </li>
-        
-            <li>
-                <a href="https://www.escapethereview.co.uk/profile/?user_id=11" rel="me" aria-label="Escape the Review">
-                    <i class="fas fa-dungeon fa-2x" aria-hidden="true"></i>
-                </a>
-            </li>
-        
-            <li>
-                <a href="https://icgames.net" rel="me" aria-label="International Consensus Games">
-                    <i class="fas fa-chess-knight fa-2x" aria-hidden="true"></i>
-                </a>
-            </li>
-        
-            <li>
-                <a href="https://instantiator.dev/index.xml" rel="me" aria-label="RSS">
-                    <i class="fas fa-rss fa-2x" aria-hidden="true"></i>
-                </a>
-            </li>
-        
-    </ul>
-    <div class="footer">
-        <div class="by_farbox">&copy; Lewis Westbury  2024 </div>
-    </div>
-</div>
-<div class="main">
-    <div class="page-top  animated fadeInDown ">
-    <a role="button" class="navbar-burger" data-target="navMenu" aria-label="menu" aria-expanded="false">
-        <span aria-hidden="true"></span>
-        <span aria-hidden="true"></span>
-        <span aria-hidden="true"></span>
-    </a>
-    <ul class="nav" id="navMenu">
-        
-        
-            
-            <li><a 
-                   href="/"
-                        
-                   title="">Home</a></li>
-        
-            
-            <li><a 
-                   href="/post/"
-                        
-                   title="">All posts</a></li>
-        
-            
-            <li><a 
-                   href="/categories/tool/"
-                        
-                   title="">Tools</a></li>
-        
-            
-            <li><a 
-                   href="/categories/tutorial/"
-                        
-                   title="">Tutorials</a></li>
-        
-            
-            <li><a 
-                   href="/categories/article/"
-                        
-                   title="">Articles</a></li>
-        
-            
-            <li><a 
-                   href="/about/"
-                        
-                   title="">About</a></li>
-        
-        
-        
-            <li class="theme-switch-item">
-                <a class="theme-switch" title="Switch Theme">
-                    <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
-                </a>
-            </li>
-        
-    </ul>
-</div>
+</div>    
 
-    <div class="autopagerize_page_element">
-        <div class="content">
-    <div class="post  animated fadeInDown ">
-        <div class="post-content">
-            
-           <img class="post-thumbnail" src="/dps/key-splitting.png" alt="Thumbnail image">
-            
-            <div class="post-title">
-                <h3>Secrets With Friends</h3>
-                
-                    <div class="info">
-                        <em class="fas fa-calendar-day"></em>
-                        <span class="date"> 
-                                                2021-12-14
-                                           </span>
-                        <em class="fas fa-stopwatch"></em>
-                        <span class="reading-time">3-minute read</span>
-                    </div>
-                
-            </div>
+
+
+    </div>
+    <div class="col-lg" style="overflow-x: hidden;">
+        <div id="post-content">
+            <h2>Secrets With Friends</h1>
+             
+<i data-feather="calendar"></i>
+<time datetime="2021-12-14">2021-12-14</time>
+
+<br/>
+<i data-feather="tag"></i>
+
+
+<a class="badge bg-secondary" href="https://instantiator.dev/tags/cryptography">Cryptography</a>
+
+
+<a class="badge bg-secondary" href="https://instantiator.dev/tags/fun">Fun</a>
+
+
+<a class="badge bg-secondary" href="https://instantiator.dev/tags/secrets">Secrets</a>
+
+
+<a class="badge bg-secondary" href="https://instantiator.dev/tags/sharing">Sharing</a>
+
+
+<a class="badge bg-secondary" href="https://instantiator.dev/tags/trust">Trust</a>
+
+
+<a class="badge bg-secondary" href="https://instantiator.dev/tags/ssss">SSSS</a>
+
+
+<a class="badge bg-secondary" href="https://instantiator.dev/tags/polynomial">Polynomial</a>
+
+
 
             <p><em>It&rsquo;s possible to share a secret amongst a group of people so that only some of them are needed to reconstruct it&hellip;</em></p>
 <h1 id="secrets-with-friends">Secrets with Friends</h1>
@@ -238,24 +205,24 @@
 <p><img alt="Password Strength, XKCD comic" src="https://imgs.xkcd.com/comics/password_strength.png" title="Password Strength, XKCD comic"></p>
 <h2 id="how-to-use-ssss">How to use SSSS</h2>
 <p>You can install SSSS on your Mac using <a href="https://brew.sh/">homebrew</a>:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">brew install ssss
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>brew install ssss
 </span></span></code></pre></div><p>In the example below, SSSS is being used to split a secret, <code>&quot;X marks the spot&quot;</code>, into 5 fragments:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ ssss-split -t <span class="m">3</span> -n <span class="m">5</span>
-</span></span><span class="line"><span class="cl">Generating shares using a <span class="o">(</span>3,5<span class="o">)</span> scheme with dynamic security level.
-</span></span><span class="line"><span class="cl">Enter the secret, at most <span class="m">128</span> ASCII characters: X marks the spot
-</span></span><span class="line"><span class="cl">Using a <span class="m">128</span> bit security level.
-</span></span><span class="line"><span class="cl">1-a07cfafadfb8c949e10043063dd77bf9
-</span></span><span class="line"><span class="cl">2-c8aca4294241312eae985d2480ffa9f7
-</span></span><span class="line"><span class="cl">3-b94432ce93edd7d2d360939fc0f4b641
-</span></span><span class="line"><span class="cl">4-08426b9a2a8d5f0cde7c1b33734c35bc
-</span></span><span class="line"><span class="cl">5-79aafd7dfb21b9f0a384d58833472a18
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ ssss-split -t <span style="color:#ae81ff">3</span> -n <span style="color:#ae81ff">5</span>
+</span></span><span style="display:flex;"><span>Generating shares using a <span style="color:#f92672">(</span>3,5<span style="color:#f92672">)</span> scheme with dynamic security level.
+</span></span><span style="display:flex;"><span>Enter the secret, at most <span style="color:#ae81ff">128</span> ASCII characters: X marks the spot
+</span></span><span style="display:flex;"><span>Using a <span style="color:#ae81ff">128</span> bit security level.
+</span></span><span style="display:flex;"><span>1-a07cfafadfb8c949e10043063dd77bf9
+</span></span><span style="display:flex;"><span>2-c8aca4294241312eae985d2480ffa9f7
+</span></span><span style="display:flex;"><span>3-b94432ce93edd7d2d360939fc0f4b641
+</span></span><span style="display:flex;"><span>4-08426b9a2a8d5f0cde7c1b33734c35bc
+</span></span><span style="display:flex;"><span>5-79aafd7dfb21b9f0a384d58833472a18
 </span></span></code></pre></div><p>The secret can then be reconstituted using only 3 of them:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ ssss-combine -t <span class="m">3</span>
-</span></span><span class="line"><span class="cl">Enter <span class="m">3</span> shares separated by newlines:
-</span></span><span class="line"><span class="cl">Share <span class="o">[</span>1/3<span class="o">]</span>: 3-b94432ce93edd7d2d360939fc0f4b641
-</span></span><span class="line"><span class="cl">Share <span class="o">[</span>2/3<span class="o">]</span>: 5-79aafd7dfb21b9f0a384d58833472a18
-</span></span><span class="line"><span class="cl">Share <span class="o">[</span>3/3<span class="o">]</span>: 1-a07cfafadfb8c949e10043063dd77bf9
-</span></span><span class="line"><span class="cl">Resulting secret: X marks the spot
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ ssss-combine -t <span style="color:#ae81ff">3</span>
+</span></span><span style="display:flex;"><span>Enter <span style="color:#ae81ff">3</span> shares separated by newlines:
+</span></span><span style="display:flex;"><span>Share <span style="color:#f92672">[</span>1/3<span style="color:#f92672">]</span>: 3-b94432ce93edd7d2d360939fc0f4b641
+</span></span><span style="display:flex;"><span>Share <span style="color:#f92672">[</span>2/3<span style="color:#f92672">]</span>: 5-79aafd7dfb21b9f0a384d58833472a18
+</span></span><span style="display:flex;"><span>Share <span style="color:#f92672">[</span>3/3<span style="color:#f92672">]</span>: 1-a07cfafadfb8c949e10043063dd77bf9
+</span></span><span style="display:flex;"><span>Resulting secret: X marks the spot
 </span></span></code></pre></div><p>In Jameson&rsquo;s example, the secret, which is fragmented using SSSS, is actually a key which can be used to decrypt something much larger.</p>
 <h2 id="how-does-it-work">How does it work?</h2>
 <p>SSSS relies on the notion that <code>K</code> points can define a polynomial curve of degree <code>K-1</code>.</p>
@@ -289,34 +256,16 @@
 <p>For instance, here there are 2 parabolas (polynomials of degree 2), and given only 2 points it is not possible to distinguish them (or any other number of parabolas that pass through these points). However, by providing a third point, they can be disambiguated - and only 1 parabola will match a given set of 3 points.</p>
 <p><img alt="Parabolas" src="/dps/ssss-parabolas.png" title="Parabolas"></p>
 <p>A subject can select <code>N</code> points from the curve, and give those to <code>N</code> trusted contacts. <code>N</code> can be arbitrarily large, provided it is larger than <code>K</code>, and so <code>K</code> of the <code>N</code> distributed points can be used to reconstruct the curve.</p>
-</div>
-        <div class="post-footer">
-            <div class="info">
-                <span class="separator"><a class="category" href="/categories/article/">article</a></span>
-                <span class="separator"><a class="tag" href="/tags/cryptography/">Cryptography</a><a class="tag" href="/tags/fun/">Fun</a><a class="tag" href="/tags/secrets/">Secrets</a><a class="tag" href="/tags/sharing/">Sharing</a><a class="tag" href="/tags/trust/">Trust</a><a class="tag" href="/tags/ssss/">SSSS</a><a class="tag" href="/tags/polynomial/">Polynomial</a></span>
-                
-
-            </div>
-        </div>
-
-        
-    </div>
-
 
         </div>
     </div>
 </div>
 
-<script type="text/javascript"
-        src="/js/medium-zoom.min.e1c6918cbaa90022a5612f0bd71c7bf3be6d036614c5729cebfe14f7b91fa4bc.js"
-        integrity="sha256-4caRjLqpACKlYS8L1xx7875tA2YUxXKc6/4U97kfpLw="
-        crossorigin="anonymous"></script>
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-SHE42ZWKEN"></script>
+
+        </div><script src="/js/bootstrap.min.js"></script>
+<script src="/js/feather.min.js"></script>
+<script src="/js/mastodon-timeline.umd.js"></script>
 <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-SHE42ZWKEN');
+  feather.replace();
 </script></body>
-
 </html>

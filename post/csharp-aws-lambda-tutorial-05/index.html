@@ -1,74 +1,19 @@
 <!DOCTYPE html>
-<html  dir="ltr" lang="en" data-theme=""><head>
-    <title> instantiator.dev | Building an AWS Lambda in C#, part 5: S3 </title>
-
-    
-    <meta charset="utf-8"><meta name="generator" content="Hugo 0.123.7"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-    <meta name="description" content="tech, volunteers, public safety, articles and ideas">
-    
-    
-    
-    <link rel="stylesheet"
-        href="/css/style.min.59fe2a27cd19eafc8c4aef4e2c18a287287097d0516d9baf6ade257c0f4b4d64.css"
-        integrity="sha256-Wf4qJ80Z6vyMSu9OLBiihyhwl9BRbZuvat4lfA9LTWQ="
-        crossorigin="anonymous"
-        type="text/css">
-    
-
-    
-    <link rel="stylesheet"
-        href="/css/additional-classes.min.1d76732c34340c3588f50dacb5d8ce67a8c9ad2bf0140c8eb825f3f4e3a071c4.css"
-        integrity="sha256-HXZzLDQ0DDWI9Q2stdjOZ6jJrSvwFAyOuCXz9OOgccQ="
-        crossorigin="anonymous"
-        type="text/css">
-
-    
-    <link rel="stylesheet"
-        href="/css/markupHighlight.min.59c08a266e8a6489aab7cb3ace4259db920d0e8893682a44ef8401387af97664.css"
-        integrity="sha256-WcCKJm6KZImqt8s6zkJZ25INDoiTaCpE74QBOHr5dmQ="
-        crossorigin="anonymous"
-        type="text/css">
-    
-
-
-
-    <link rel="stylesheet" 
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" 
-    integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" 
-    crossorigin="anonymous" />
-
-    
-    <link rel="shortcut icon" href="/favicons/favicon.ico" type="image/x-icon">
-    <link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicons/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicons/favicon-16x16.png">
-
-    <link rel="canonical" href="/post/csharp-aws-lambda-tutorial-05/">
-
+<html lang="en"><head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
+    <link rel="stylesheet" type="text/css" href="/css/mastodon-timeline.min.css">
     
     
+    <title>instantiator.dev | Building an AWS Lambda in C#, part 5: S3</title>
     
-    
-    <script type="text/javascript"
-            src="/js/anatole-header.min.df804b63b5bd8474ea0756ea874bc8f1e92552708cc6ea43aa0d76981dc419f9.js"
-            integrity="sha256-34BLY7W9hHTqB1bqh0vI8eklUnCMxupDqg12mB3EGfk="
-            crossorigin="anonymous"></script>
-
-
-    
-        
-        
-        <script type="text/javascript"
-                src="/js/anatole-theme-switcher.min.ea8ebe268922ef9849261a1312cd65b640595e65251ce4c00534a176afd1ac0c.js"
-                integrity="sha256-6o6&#43;Joki75hJJhoTEs1ltkBZXmUlHOTABTShdq/RrAw="
-                crossorigin="anonymous"></script>
     
     <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:image" content="https://instantiator.dev/csharp-aws-lambda-tutorial/000-heading-img.png" /><meta name="twitter:title" content="Building an AWS Lambda in C#, part 5: S3"/>
 <meta name="twitter:description" content="In previous parts, we&rsquo;ve built a Lambda that can query the OpenWeather API, using a secret key; and in this part we&rsquo;ll extend it to write that data to S3."/>
 
-
-    
     <meta property="og:title" content="Building an AWS Lambda in C#, part 5: S3" />
 <meta property="og:description" content="In previous parts, we&rsquo;ve built a Lambda that can query the OpenWeather API, using a secret key; and in this part we&rsquo;ll extend it to write that data to S3." />
 <meta property="og:type" content="article" />
@@ -80,143 +25,159 @@
 
 
 
-</head>
-<body><div class="sidebar animated fadeInDown ">
-    <div class="logo-title">
-        <div class="title">
-            <img src="/lewis/profile.jpg" alt="profile picture">
-            <h3 title=""><a href="/">instantiator.dev</a></h3>
-            <div class="description">
-                <p>tech, volunteers, public safety, articles and ideas</p>
-            </div>
+    
+    <link rel="stylesheet"
+        href="/css/markupHighlight.min.59c08a266e8a6489aab7cb3ace4259db920d0e8893682a44ef8401387af97664.css"
+        integrity="sha256-WcCKJm6KZImqt8s6zkJZ25INDoiTaCpE74QBOHr5dmQ="
+        crossorigin="anonymous"
+        type="text/css">
+
+    </head><body><nav id="nav" class="navbar sticky-top justify-content-start navbar-expand-md frosted-white shadow mb-4">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="/">instantiator.dev</a>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav">
+        
+        
+        <li class="nav-item">
+          <a class="nav-link " href="/">
+            
+             Home
+          </a>
+        </li>
+        
+        <li class="nav-item">
+          <a class="nav-link " href="/post/">
+            
+             All posts
+          </a>
+        </li>
+        
+        <li class="nav-item">
+          <a class="nav-link " href="/categories/tool/">
+            
+             Tools
+          </a>
+        </li>
+        
+        <li class="nav-item">
+          <a class="nav-link " href="/categories/tutorial/">
+            
+             Tutorials
+          </a>
+        </li>
+        
+        <li class="nav-item">
+          <a class="nav-link " href="/categories/article/">
+            
+             Articles
+          </a>
+        </li>
+        
+        <li class="nav-item">
+          <a class="nav-link " href="/about/">
+            
+             About
+          </a>
+        </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+<div class="container-fluid">
+
+<div class="row align-items-start">
+    <div class="col col-lg-3 d-none d-lg-block">
+      <div class="row mb-2">
+    <div class="col-3 col-lg-12 d-flex flex-column align-items-center">
+        <img 
+            src="/lewis/profile.jpg" alt="profile picture" 
+            class="mb-4 mt-4 img-thumbnail" 
+            style="border-radius: 50%; max-width: 200px; width: 100%;" />
+    </div>
+    <div class="col d-flex flex-column align-items-center">
+        <h3 class="mb-4"><a href="/">instantiator.dev</a></h3>
+        
+        <div style="text-align: center;" class="mb-4">
+            <p>tech, volunteers, public safety, collective intelligence, articles, tools, code and ideas</p>
+        </div>
+
+        <div class="d-flex flex-row justify-content-evenly align-self-stretch mb-4">
+        
+            <a href="https://mastodon.social/@instantiator" rel="me" aria-label="Mastodon">
+                <i data-feather="user" aria-hidden="true"></i>
+            </a>
+            
+            <a href="https://github.com/instantiator" rel="me" aria-label="GitHub">
+                <i data-feather="github" aria-hidden="true"></i>
+            </a>
+            
+            <a href="https://www.linkedin.com/in/lewiswestbury" rel="me" aria-label="LinkedIn">
+                <i data-feather="linkedin" aria-hidden="true"></i>
+            </a>
+            
+            <a href="https://www.escapethereview.co.uk/profile/?user_id=11" rel="me" aria-label="Escape the Review">
+                <i data-feather="crosshair" aria-hidden="true"></i>
+            </a>
+            
+            <a href="https://icgames.net" rel="me" aria-label="International Consensus Games">
+                <i data-feather="target" aria-hidden="true"></i>
+            </a>
+            
+            <a href="https://instantiator.dev/index.xml" rel="me" aria-label="RSS">
+                <i data-feather="rss" aria-hidden="true"></i>
+            </a>
+            
+        </div>
+        <div>
+            <span class="text-body-secondary fw-lighter">
+                &copy; Lewis Westbury  2024 
+            </span>
         </div>
     </div>
-    <ul class="social-links">
-        
-            <li>
-                <a href="https://mastodon.social/@instantiator" rel="me" aria-label="Mastodon">
-                    <i class="fab fa-mastodon fa-2x" aria-hidden="true"></i>
-                </a>
-            </li>
-        
-            <li>
-                <a href="https://twitter.com/instantiator" rel="me" aria-label="Twitter">
-                    <i class="fab fa-twitter fa-2x" aria-hidden="true"></i>
-                </a>
-            </li>
-        
-            <li>
-                <a href="https://github.com/instantiator" rel="me" aria-label="GitHub">
-                    <i class="fab fa-github fa-2x" aria-hidden="true"></i>
-                </a>
-            </li>
-        
-            <li>
-                <a href="https://www.linkedin.com/in/lewiswestbury" rel="me" aria-label="LinkedIn">
-                    <i class="fab fa-linkedin fa-2x" aria-hidden="true"></i>
-                </a>
-            </li>
-        
-            <li>
-                <a href="https://www.escapethereview.co.uk/profile/?user_id=11" rel="me" aria-label="Escape the Review">
-                    <i class="fas fa-dungeon fa-2x" aria-hidden="true"></i>
-                </a>
-            </li>
-        
-            <li>
-                <a href="https://icgames.net" rel="me" aria-label="International Consensus Games">
-                    <i class="fas fa-chess-knight fa-2x" aria-hidden="true"></i>
-                </a>
-            </li>
-        
-            <li>
-                <a href="https://instantiator.dev/index.xml" rel="me" aria-label="RSS">
-                    <i class="fas fa-rss fa-2x" aria-hidden="true"></i>
-                </a>
-            </li>
-        
-    </ul>
-    <div class="footer">
-        <div class="by_farbox">&copy; Lewis Westbury  2024 </div>
-    </div>
-</div>
-<div class="main">
-    <div class="page-top  animated fadeInDown ">
-    <a role="button" class="navbar-burger" data-target="navMenu" aria-label="menu" aria-expanded="false">
-        <span aria-hidden="true"></span>
-        <span aria-hidden="true"></span>
-        <span aria-hidden="true"></span>
-    </a>
-    <ul class="nav" id="navMenu">
-        
-        
-            
-            <li><a 
-                   href="/"
-                        
-                   title="">Home</a></li>
-        
-            
-            <li><a 
-                   href="/post/"
-                        
-                   title="">All posts</a></li>
-        
-            
-            <li><a 
-                   href="/categories/tool/"
-                        
-                   title="">Tools</a></li>
-        
-            
-            <li><a 
-                   href="/categories/tutorial/"
-                        
-                   title="">Tutorials</a></li>
-        
-            
-            <li><a 
-                   href="/categories/article/"
-                        
-                   title="">Articles</a></li>
-        
-            
-            <li><a 
-                   href="/about/"
-                        
-                   title="">About</a></li>
-        
-        
-        
-            <li class="theme-switch-item">
-                <a class="theme-switch" title="Switch Theme">
-                    <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
-                </a>
-            </li>
-        
-    </ul>
-</div>
+</div>    
 
-    <div class="autopagerize_page_element">
-        <div class="content">
-    <div class="post  animated fadeInDown ">
-        <div class="post-content">
-            
-           <img class="post-thumbnail" src="/csharp-aws-lambda-tutorial/000-heading-img.png" alt="Thumbnail image">
-            
-            <div class="post-title">
-                <h3>Building an AWS Lambda in C#, part 5: S3</h3>
-                
-                    <div class="info">
-                        <em class="fas fa-calendar-day"></em>
-                        <span class="date"> 
-                                                2021-04-19
-                                           </span>
-                        <em class="fas fa-stopwatch"></em>
-                        <span class="reading-time">7-minute read</span>
-                    </div>
-                
-            </div>
+
+
+    </div>
+    <div class="col-lg" style="overflow-x: hidden;">
+        <div id="post-content">
+            <h2>Building an AWS Lambda in C#, part 5: S3</h1>
+             
+<i data-feather="calendar"></i>
+<time datetime="2021-04-19">2021-04-19</time>
+
+<br/>
+<i data-feather="tag"></i>
+
+
+<a class="badge bg-secondary" href="https://instantiator.dev/tags/coding">coding</a>
+
+
+<a class="badge bg-secondary" href="https://instantiator.dev/tags/c">c#</a>
+
+
+<a class="badge bg-secondary" href="https://instantiator.dev/tags/.net">.net</a>
+
+
+<a class="badge bg-secondary" href="https://instantiator.dev/tags/aws">aws</a>
+
+
+<a class="badge bg-secondary" href="https://instantiator.dev/tags/lambda">lambda</a>
+
+
 
             <p>In previous parts, we&rsquo;ve built a Lambda that can query the OpenWeather API, using a secret key; and in this part we&rsquo;ll extend it to write that data to S3.</p>
 <h1 id="lets-build-an-aws-lambda-in-c">Let&rsquo;s build an AWS Lambda in C#</h1>
@@ -258,33 +219,33 @@
 <li>Copy/paste the policy below into your bucket policy.</li>
 <li>Tap <code>Save changes</code> to set the new policy.</li>
 </ul>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="line"><span class="cl"><span class="p">{</span>
-</span></span><span class="line"><span class="cl">    <span class="nt">&#34;Version&#34;</span><span class="p">:</span> <span class="s2">&#34;2012-10-17&#34;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">    <span class="nt">&#34;Id&#34;</span><span class="p">:</span> <span class="s2">&#34;SampleLambdaStoragePolicy&#34;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">    <span class="nt">&#34;Statement&#34;</span><span class="p">:</span> <span class="p">[</span>
-</span></span><span class="line"><span class="cl">        <span class="p">{</span>
-</span></span><span class="line"><span class="cl">            <span class="nt">&#34;Sid&#34;</span><span class="p">:</span> <span class="s2">&#34;statement-1&#34;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">            <span class="nt">&#34;Effect&#34;</span><span class="p">:</span> <span class="s2">&#34;Allow&#34;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">            <span class="nt">&#34;Principal&#34;</span><span class="p">:</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">                <span class="nt">&#34;AWS&#34;</span><span class="p">:</span> <span class="s2">&#34;arn:aws:iam::&lt;YOUR ACCOUNT NUMBER&gt;:role/sample-lambda-role&#34;</span>
-</span></span><span class="line"><span class="cl">            <span class="p">},</span>
-</span></span><span class="line"><span class="cl">            <span class="nt">&#34;Action&#34;</span><span class="p">:</span> <span class="s2">&#34;s3:ListBucket&#34;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">            <span class="nt">&#34;Resource&#34;</span><span class="p">:</span> <span class="s2">&#34;arn:aws:s3:::sample-lambda-storage&#34;</span>
-</span></span><span class="line"><span class="cl">        <span class="p">},</span>
-</span></span><span class="line"><span class="cl">        <span class="p">{</span>
-</span></span><span class="line"><span class="cl">            <span class="nt">&#34;Sid&#34;</span><span class="p">:</span> <span class="s2">&#34;statement-2&#34;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">            <span class="nt">&#34;Effect&#34;</span><span class="p">:</span> <span class="s2">&#34;Allow&#34;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">            <span class="nt">&#34;Principal&#34;</span><span class="p">:</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">                <span class="nt">&#34;AWS&#34;</span><span class="p">:</span> <span class="s2">&#34;arn:aws:iam::&lt;YOUR ACCOUNT NUMBER&gt;:role/sample-lambda-role&#34;</span>
-</span></span><span class="line"><span class="cl">            <span class="p">},</span>
-</span></span><span class="line"><span class="cl">            <span class="nt">&#34;Action&#34;</span><span class="p">:</span> <span class="p">[</span>
-</span></span><span class="line"><span class="cl">                <span class="s2">&#34;s3:GetObject&#34;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">                <span class="s2">&#34;s3:PutObject&#34;</span>
-</span></span><span class="line"><span class="cl">            <span class="p">],</span>
-</span></span><span class="line"><span class="cl">            <span class="nt">&#34;Resource&#34;</span><span class="p">:</span> <span class="s2">&#34;arn:aws:s3:::sample-lambda-storage/*&#34;</span>
-</span></span><span class="line"><span class="cl">        <span class="p">}</span>
-</span></span><span class="line"><span class="cl">    <span class="p">]</span>
-</span></span><span class="line"><span class="cl"><span class="p">}</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&#34;Version&#34;</span>: <span style="color:#e6db74">&#34;2012-10-17&#34;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&#34;Id&#34;</span>: <span style="color:#e6db74">&#34;SampleLambdaStoragePolicy&#34;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&#34;Statement&#34;</span>: [
+</span></span><span style="display:flex;"><span>        {
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&#34;Sid&#34;</span>: <span style="color:#e6db74">&#34;statement-1&#34;</span>,
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&#34;Effect&#34;</span>: <span style="color:#e6db74">&#34;Allow&#34;</span>,
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&#34;Principal&#34;</span>: {
+</span></span><span style="display:flex;"><span>                <span style="color:#f92672">&#34;AWS&#34;</span>: <span style="color:#e6db74">&#34;arn:aws:iam::&lt;YOUR ACCOUNT NUMBER&gt;:role/sample-lambda-role&#34;</span>
+</span></span><span style="display:flex;"><span>            },
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&#34;Action&#34;</span>: <span style="color:#e6db74">&#34;s3:ListBucket&#34;</span>,
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&#34;Resource&#34;</span>: <span style="color:#e6db74">&#34;arn:aws:s3:::sample-lambda-storage&#34;</span>
+</span></span><span style="display:flex;"><span>        },
+</span></span><span style="display:flex;"><span>        {
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&#34;Sid&#34;</span>: <span style="color:#e6db74">&#34;statement-2&#34;</span>,
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&#34;Effect&#34;</span>: <span style="color:#e6db74">&#34;Allow&#34;</span>,
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&#34;Principal&#34;</span>: {
+</span></span><span style="display:flex;"><span>                <span style="color:#f92672">&#34;AWS&#34;</span>: <span style="color:#e6db74">&#34;arn:aws:iam::&lt;YOUR ACCOUNT NUMBER&gt;:role/sample-lambda-role&#34;</span>
+</span></span><span style="display:flex;"><span>            },
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&#34;Action&#34;</span>: [
+</span></span><span style="display:flex;"><span>                <span style="color:#e6db74">&#34;s3:GetObject&#34;</span>,
+</span></span><span style="display:flex;"><span>                <span style="color:#e6db74">&#34;s3:PutObject&#34;</span>
+</span></span><span style="display:flex;"><span>            ],
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&#34;Resource&#34;</span>: <span style="color:#e6db74">&#34;arn:aws:s3:::sample-lambda-storage/*&#34;</span>
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>    ]
+</span></span><span style="display:flex;"><span>}
 </span></span></code></pre></div><ul>
 <li>Substitute <code>&lt;YOUR ACCOUNT NUMBER&gt;</code> with your numeric 12-digit AWS account number.</li>
 </ul>
@@ -332,29 +293,29 @@
 <p><img alt="Adding the AWS SDK for S3 in Nuget" src="/csharp-aws-lambda-tutorial/014-add-aws-sdk-s3-nuget.png"></p>
 <p>With this package, the Lambda will be able to perform <code>PutObject</code> and <code>GetObject</code> operations against your new S3 bucket.</p>
 <p>Now open up <code>Function.cs</code> and add a new method to your <code>Function</code> class:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-csharp" data-lang="csharp"><span class="line"><span class="cl"><span class="kd">private</span> <span class="kd">async</span> <span class="n">Task</span><span class="p">&lt;</span><span class="kt">bool</span><span class="p">&gt;</span> <span class="n">PutToS3Async</span><span class="p">(</span><span class="kt">string</span> <span class="n">bucket</span><span class="p">,</span> <span class="kt">string</span> <span class="n">key</span><span class="p">,</span> <span class="kt">string</span> <span class="n">content</span><span class="p">,</span> <span class="n">ILambdaContext</span> <span class="n">context</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl"><span class="p">{</span>
-</span></span><span class="line"><span class="cl">	<span class="kt">var</span> <span class="n">request</span> <span class="p">=</span> <span class="k">new</span> <span class="n">PutObjectRequest</span>
-</span></span><span class="line"><span class="cl">	<span class="p">{</span>
-</span></span><span class="line"><span class="cl">		<span class="n">BucketName</span> <span class="p">=</span> <span class="n">bucket</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">		<span class="n">Key</span> <span class="p">=</span> <span class="n">key</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">		<span class="n">ContentBody</span> <span class="p">=</span> <span class="n">content</span>
-</span></span><span class="line"><span class="cl">	<span class="p">};</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">	<span class="k">using</span> <span class="p">(</span><span class="kt">var</span> <span class="n">s3</span> <span class="p">=</span> <span class="k">new</span> <span class="n">AmazonS3Client</span><span class="p">(</span><span class="n">RegionEndpoint</span><span class="p">.</span><span class="n">EUWest2</span><span class="p">))</span>
-</span></span><span class="line"><span class="cl">	<span class="p">{</span>
-</span></span><span class="line"><span class="cl">		<span class="kt">var</span> <span class="n">response</span> <span class="p">=</span> <span class="k">await</span> <span class="n">s3</span><span class="p">.</span><span class="n">PutObjectAsync</span><span class="p">(</span><span class="n">request</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">		<span class="k">if</span> <span class="p">(</span><span class="n">response</span><span class="p">.</span><span class="n">HttpStatusCode</span> <span class="p">==</span> <span class="n">HttpStatusCode</span><span class="p">.</span><span class="n">OK</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">		<span class="p">{</span>
-</span></span><span class="line"><span class="cl">			<span class="k">return</span> <span class="kc">true</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">		<span class="p">}</span>
-</span></span><span class="line"><span class="cl">		<span class="k">else</span>
-</span></span><span class="line"><span class="cl">		<span class="p">{</span>
-</span></span><span class="line"><span class="cl">			<span class="n">context</span><span class="p">.</span><span class="n">Logger</span><span class="p">.</span><span class="n">Log</span><span class="p">(</span><span class="s">$&#34;{response.HttpStatusCode} encountered putting: {bucket}:{key}&#34;</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">			<span class="k">return</span> <span class="kc">false</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">		<span class="p">}</span>
-</span></span><span class="line"><span class="cl">	<span class="p">}</span>
-</span></span><span class="line"><span class="cl"><span class="p">}</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-csharp" data-lang="csharp"><span style="display:flex;"><span><span style="color:#66d9ef">private</span> <span style="color:#66d9ef">async</span> Task&lt;<span style="color:#66d9ef">bool</span>&gt; PutToS3Async(<span style="color:#66d9ef">string</span> bucket, <span style="color:#66d9ef">string</span> key, <span style="color:#66d9ef">string</span> content, ILambdaContext context)
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">var</span> request = <span style="color:#66d9ef">new</span> PutObjectRequest
+</span></span><span style="display:flex;"><span>	{
+</span></span><span style="display:flex;"><span>		BucketName = bucket,
+</span></span><span style="display:flex;"><span>		Key = key,
+</span></span><span style="display:flex;"><span>		ContentBody = content
+</span></span><span style="display:flex;"><span>	};
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">using</span> (<span style="color:#66d9ef">var</span> s3 = <span style="color:#66d9ef">new</span> AmazonS3Client(RegionEndpoint.EUWest2))
+</span></span><span style="display:flex;"><span>	{
+</span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">var</span> response = <span style="color:#66d9ef">await</span> s3.PutObjectAsync(request);
+</span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">if</span> (response.HttpStatusCode == HttpStatusCode.OK)
+</span></span><span style="display:flex;"><span>		{
+</span></span><span style="display:flex;"><span>			<span style="color:#66d9ef">return</span> <span style="color:#66d9ef">true</span>;
+</span></span><span style="display:flex;"><span>		}
+</span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">else</span>
+</span></span><span style="display:flex;"><span>		{
+</span></span><span style="display:flex;"><span>			context.Logger.Log(<span style="color:#e6db74">$&#34;{response.HttpStatusCode} encountered putting: {bucket}:{key}&#34;</span>);
+</span></span><span style="display:flex;"><span>			<span style="color:#66d9ef">return</span> <span style="color:#66d9ef">false</span>;
+</span></span><span style="display:flex;"><span>		}
+</span></span><span style="display:flex;"><span>	}
+</span></span><span style="display:flex;"><span>}
 </span></span></code></pre></div><p>A few things to note about the new <code>PutToS3Async</code> method:</p>
 <ul>
 <li>The method runs asychronously, as it makes asynchronous calls to S3.</li>
@@ -364,25 +325,25 @@
 <li>It returns true if the response suggests it succeeded, and false otherwise.</li>
 </ul>
 <p>Now, it&rsquo;s time to add a few extra lines to the <code>FunctionHandler</code> method. Here&rsquo;s the full method, now:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-csharp" data-lang="csharp"><span class="line"><span class="cl"><span class="kd">public</span> <span class="kd">async</span> <span class="n">Task</span><span class="p">&lt;</span><span class="kt">string</span><span class="p">&gt;</span> <span class="n">FunctionHandler</span><span class="p">(</span><span class="kt">string</span> <span class="n">input</span><span class="p">,</span> <span class="n">ILambdaContext</span> <span class="n">context</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl"><span class="p">{</span>
-</span></span><span class="line"><span class="cl">	<span class="n">context</span><span class="p">.</span><span class="n">Logger</span><span class="p">.</span><span class="n">LogLine</span><span class="p">(</span><span class="s">&#34;Querying OpenWeather for: &#34;</span> <span class="p">+</span> <span class="n">input</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">	<span class="kt">var</span> <span class="n">weatherKey</span> <span class="p">=</span> <span class="n">Environment</span><span class="p">.</span><span class="n">GetEnvironmentVariable</span><span class="p">(</span><span class="s">&#34;WEATHER_API_KEY&#34;</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">	<span class="c1">// (!) Injecting strings into your query without checking them first is dangerous. Don&#39;t do it in production!</span>
-</span></span><span class="line"><span class="cl">	<span class="kt">var</span> <span class="n">query</span> <span class="p">=</span> <span class="s">$&#34;https://api.openweathermap.org/data/2.5/weather?q={input}&amp;appid={weatherKey}&#34;</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">	<span class="k">using</span> <span class="p">(</span><span class="kt">var</span> <span class="n">http</span> <span class="p">=</span> <span class="k">new</span> <span class="n">HttpClient</span><span class="p">())</span>
-</span></span><span class="line"><span class="cl">	<span class="p">{</span>
-</span></span><span class="line"><span class="cl">		<span class="kt">var</span> <span class="n">output</span> <span class="p">=</span> <span class="k">await</span> <span class="n">http</span><span class="p">.</span><span class="n">GetStringAsync</span><span class="p">(</span><span class="n">query</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">		<span class="kt">var</span> <span class="n">bucket</span> <span class="p">=</span> <span class="s">&#34;sample-lambda-storage&#34;</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">		<span class="kt">var</span> <span class="n">key</span> <span class="p">=</span> <span class="s">$&#34;weather_{DateTime.Now.Ticks}.json&#34;</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">		<span class="kt">var</span> <span class="n">stored</span> <span class="p">=</span> <span class="k">await</span> <span class="n">PutToS3Async</span><span class="p">(</span><span class="n">bucket</span><span class="p">,</span> <span class="n">key</span><span class="p">,</span> <span class="n">output</span><span class="p">,</span> <span class="n">context</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">		<span class="kt">var</span> <span class="n">msg</span> <span class="p">=</span> <span class="n">stored</span>
-</span></span><span class="line"><span class="cl">			<span class="p">?</span> <span class="s">$&#34;Successfully stored weather data: {bucket}:{key}&#34;</span>
-</span></span><span class="line"><span class="cl">			<span class="p">:</span> <span class="s">$&#34;Failed to store weather data.&#34;</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">		<span class="k">return</span> <span class="n">msg</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">	<span class="p">}</span>
-</span></span><span class="line"><span class="cl"><span class="p">}</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-csharp" data-lang="csharp"><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">async</span> Task&lt;<span style="color:#66d9ef">string</span>&gt; FunctionHandler(<span style="color:#66d9ef">string</span> input, ILambdaContext context)
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>	context.Logger.LogLine(<span style="color:#e6db74">&#34;Querying OpenWeather for: &#34;</span> + input);
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">var</span> weatherKey = Environment.GetEnvironmentVariable(<span style="color:#e6db74">&#34;WEATHER_API_KEY&#34;</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>	<span style="color:#75715e">// (!) Injecting strings into your query without checking them first is dangerous. Don&#39;t do it in production!</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">var</span> query = <span style="color:#e6db74">$&#34;https://api.openweathermap.org/data/2.5/weather?q={input}&amp;appid={weatherKey}&#34;</span>;
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">using</span> (<span style="color:#66d9ef">var</span> http = <span style="color:#66d9ef">new</span> HttpClient())
+</span></span><span style="display:flex;"><span>	{
+</span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">var</span> output = <span style="color:#66d9ef">await</span> http.GetStringAsync(query);
+</span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">var</span> bucket = <span style="color:#e6db74">&#34;sample-lambda-storage&#34;</span>;
+</span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">var</span> key = <span style="color:#e6db74">$&#34;weather_{DateTime.Now.Ticks}.json&#34;</span>;
+</span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">var</span> stored = <span style="color:#66d9ef">await</span> PutToS3Async(bucket, key, output, context);
+</span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">var</span> msg = stored
+</span></span><span style="display:flex;"><span>			? <span style="color:#e6db74">$&#34;Successfully stored weather data: {bucket}:{key}&#34;</span>
+</span></span><span style="display:flex;"><span>			: <span style="color:#e6db74">$&#34;Failed to store weather data.&#34;</span>;
+</span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">return</span> msg;
+</span></span><span style="display:flex;"><span>	}
+</span></span><span style="display:flex;"><span>}
 </span></span></code></pre></div><p>The new lines in <code>FunctionHandler</code> allow it to make a call to PutS3Async with the data received from the weather API call, and this causes that data to be written to an object (file) there.</p>
 <ul>
 <li>The <code>key</code> variable is constructed using <code>DateTime.Now.Ticks</code> - a quick and easy way to get a short timestamp to append to the filename.</li>
@@ -395,7 +356,7 @@
 <li><code>test-a-city.sh</code></li>
 </ul>
 <p>The output has changed, and is now a simple string telling us if it succeeded or not. Here&rsquo;s a sample response:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">Successfully stored weather data: sample-lambda-storage:weather_637545441697515760.json
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>Successfully stored weather data: sample-lambda-storage:weather_637545441697515760.json
 </span></span></code></pre></div><p><img alt="Test write to S3" src="/csharp-aws-lambda-tutorial/015-test-write-to-s3.png"></p>
 <p>The real work of the Lambda has shifted to storing the weather data it retrieve in the <code>sample-lambda-storage</code> bucket. Let&rsquo;s check there:</p>
 <ul>
@@ -406,88 +367,64 @@
 </ul>
 <p><img alt="Download the file from S3" src="/csharp-aws-lambda-tutorial/016-download-file-from-s3.png"></p>
 <p>You can now take a peek at the file itself to make sure it&rsquo;s the JSON data you&rsquo;re expecting. It&rsquo;ll look like rather a lot of JSON, all on the same line:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="line"><span class="cl"><span class="p">{</span><span class="nt">&#34;coord&#34;</span><span class="p">:{</span><span class="nt">&#34;lon&#34;</span><span class="p">:</span><span class="mf">-0.1257</span><span class="p">,</span><span class="nt">&#34;lat&#34;</span><span class="p">:</span><span class="mf">51.5085</span><span class="p">},</span><span class="nt">&#34;weather&#34;</span><span class="p">:[{</span><span class="nt">&#34;id&#34;</span><span class="p">:</span><span class="mi">804</span><span class="p">,</span><span class="nt">&#34;main&#34;</span><span class="p">:</span><span class="s2">&#34;Clouds&#34;</span><span class="p">,</span><span class="nt">&#34;description&#34;</span><span class="p">:</span><span class="s2">&#34;overcast clouds&#34;</span><span class="p">,</span><span class="nt">&#34;icon&#34;</span><span class="p">:</span><span class="s2">&#34;04n&#34;</span><span class="p">}],</span><span class="nt">&#34;base&#34;</span><span class="p">:</span><span class="s2">&#34;stations&#34;</span><span class="p">,</span><span class="nt">&#34;main&#34;</span><span class="p">:{</span><span class="nt">&#34;temp&#34;</span><span class="p">:</span><span class="mf">284.86</span><span class="p">,</span><span class="nt">&#34;feels_like&#34;</span><span class="p">:</span><span class="mf">284.07</span><span class="p">,</span><span class="nt">&#34;temp_min&#34;</span><span class="p">:</span><span class="mf">284.15</span><span class="p">,</span><span class="nt">&#34;temp_max&#34;</span><span class="p">:</span><span class="mf">285.93</span><span class="p">,</span><span class="nt">&#34;pressure&#34;</span><span class="p">:</span><span class="mi">1018</span><span class="p">,</span><span class="nt">&#34;humidity&#34;</span><span class="p">:</span><span class="mi">76</span><span class="p">},</span><span class="nt">&#34;visibility&#34;</span><span class="p">:</span><span class="mi">6000</span><span class="p">,</span><span class="nt">&#34;wind&#34;</span><span class="p">:{</span><span class="nt">&#34;speed&#34;</span><span class="p">:</span><span class="mf">3.6</span><span class="p">,</span><span class="nt">&#34;deg&#34;</span><span class="p">:</span><span class="mi">90</span><span class="p">},</span><span class="nt">&#34;clouds&#34;</span><span class="p">:{</span><span class="nt">&#34;all&#34;</span><span class="p">:</span><span class="mi">95</span><span class="p">},</span><span class="nt">&#34;dt&#34;</span><span class="p">:</span><span class="mi">1618947215</span><span class="p">,</span><span class="nt">&#34;sys&#34;</span><span class="p">:{</span><span class="nt">&#34;type&#34;</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span><span class="nt">&#34;id&#34;</span><span class="p">:</span><span class="mi">1414</span><span class="p">,</span><span class="nt">&#34;country&#34;</span><span class="p">:</span><span class="s2">&#34;GB&#34;</span><span class="p">,</span><span class="nt">&#34;sunrise&#34;</span><span class="p">:</span><span class="mi">1618894425</span><span class="p">,</span><span class="nt">&#34;sunset&#34;</span><span class="p">:</span><span class="mi">1618945477</span><span class="p">},</span><span class="nt">&#34;timezone&#34;</span><span class="p">:</span><span class="mi">3600</span><span class="p">,</span><span class="nt">&#34;id&#34;</span><span class="p">:</span><span class="mi">2643743</span><span class="p">,</span><span class="nt">&#34;name&#34;</span><span class="p">:</span><span class="s2">&#34;London&#34;</span><span class="p">,</span><span class="nt">&#34;cod&#34;</span><span class="p">:</span><span class="mi">200</span><span class="p">}</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span>{<span style="color:#f92672">&#34;coord&#34;</span>:{<span style="color:#f92672">&#34;lon&#34;</span>:<span style="color:#ae81ff">-0.1257</span>,<span style="color:#f92672">&#34;lat&#34;</span>:<span style="color:#ae81ff">51.5085</span>},<span style="color:#f92672">&#34;weather&#34;</span>:[{<span style="color:#f92672">&#34;id&#34;</span>:<span style="color:#ae81ff">804</span>,<span style="color:#f92672">&#34;main&#34;</span>:<span style="color:#e6db74">&#34;Clouds&#34;</span>,<span style="color:#f92672">&#34;description&#34;</span>:<span style="color:#e6db74">&#34;overcast clouds&#34;</span>,<span style="color:#f92672">&#34;icon&#34;</span>:<span style="color:#e6db74">&#34;04n&#34;</span>}],<span style="color:#f92672">&#34;base&#34;</span>:<span style="color:#e6db74">&#34;stations&#34;</span>,<span style="color:#f92672">&#34;main&#34;</span>:{<span style="color:#f92672">&#34;temp&#34;</span>:<span style="color:#ae81ff">284.86</span>,<span style="color:#f92672">&#34;feels_like&#34;</span>:<span style="color:#ae81ff">284.07</span>,<span style="color:#f92672">&#34;temp_min&#34;</span>:<span style="color:#ae81ff">284.15</span>,<span style="color:#f92672">&#34;temp_max&#34;</span>:<span style="color:#ae81ff">285.93</span>,<span style="color:#f92672">&#34;pressure&#34;</span>:<span style="color:#ae81ff">1018</span>,<span style="color:#f92672">&#34;humidity&#34;</span>:<span style="color:#ae81ff">76</span>},<span style="color:#f92672">&#34;visibility&#34;</span>:<span style="color:#ae81ff">6000</span>,<span style="color:#f92672">&#34;wind&#34;</span>:{<span style="color:#f92672">&#34;speed&#34;</span>:<span style="color:#ae81ff">3.6</span>,<span style="color:#f92672">&#34;deg&#34;</span>:<span style="color:#ae81ff">90</span>},<span style="color:#f92672">&#34;clouds&#34;</span>:{<span style="color:#f92672">&#34;all&#34;</span>:<span style="color:#ae81ff">95</span>},<span style="color:#f92672">&#34;dt&#34;</span>:<span style="color:#ae81ff">1618947215</span>,<span style="color:#f92672">&#34;sys&#34;</span>:{<span style="color:#f92672">&#34;type&#34;</span>:<span style="color:#ae81ff">1</span>,<span style="color:#f92672">&#34;id&#34;</span>:<span style="color:#ae81ff">1414</span>,<span style="color:#f92672">&#34;country&#34;</span>:<span style="color:#e6db74">&#34;GB&#34;</span>,<span style="color:#f92672">&#34;sunrise&#34;</span>:<span style="color:#ae81ff">1618894425</span>,<span style="color:#f92672">&#34;sunset&#34;</span>:<span style="color:#ae81ff">1618945477</span>},<span style="color:#f92672">&#34;timezone&#34;</span>:<span style="color:#ae81ff">3600</span>,<span style="color:#f92672">&#34;id&#34;</span>:<span style="color:#ae81ff">2643743</span>,<span style="color:#f92672">&#34;name&#34;</span>:<span style="color:#e6db74">&#34;London&#34;</span>,<span style="color:#f92672">&#34;cod&#34;</span>:<span style="color:#ae81ff">200</span>}
 </span></span></code></pre></div><p>If you wanted to, you could reformat it to make it a little more readable, or use it in another service, or another Lambda.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="line"><span class="cl"><span class="p">{</span>
-</span></span><span class="line"><span class="cl">    <span class="nt">&#34;coord&#34;</span><span class="p">:</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">        <span class="nt">&#34;lon&#34;</span><span class="p">:</span> <span class="mf">-0.1257</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">        <span class="nt">&#34;lat&#34;</span><span class="p">:</span> <span class="mf">51.5085</span>
-</span></span><span class="line"><span class="cl">    <span class="p">},</span>
-</span></span><span class="line"><span class="cl">    <span class="nt">&#34;weather&#34;</span><span class="p">:</span> <span class="p">[</span>
-</span></span><span class="line"><span class="cl">        <span class="p">{</span>
-</span></span><span class="line"><span class="cl">            <span class="nt">&#34;id&#34;</span><span class="p">:</span> <span class="mi">804</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">            <span class="nt">&#34;main&#34;</span><span class="p">:</span> <span class="s2">&#34;Clouds&#34;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">            <span class="nt">&#34;description&#34;</span><span class="p">:</span> <span class="s2">&#34;overcast clouds&#34;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">            <span class="nt">&#34;icon&#34;</span><span class="p">:</span> <span class="s2">&#34;04n&#34;</span>
-</span></span><span class="line"><span class="cl">        <span class="p">}</span>
-</span></span><span class="line"><span class="cl">    <span class="p">],</span>
-</span></span><span class="line"><span class="cl">    <span class="nt">&#34;base&#34;</span><span class="p">:</span> <span class="s2">&#34;stations&#34;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">    <span class="nt">&#34;main&#34;</span><span class="p">:</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">        <span class="nt">&#34;temp&#34;</span><span class="p">:</span> <span class="mf">284.86</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">        <span class="nt">&#34;feels_like&#34;</span><span class="p">:</span> <span class="mf">284.07</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">        <span class="nt">&#34;temp_min&#34;</span><span class="p">:</span> <span class="mf">284.15</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">        <span class="nt">&#34;temp_max&#34;</span><span class="p">:</span> <span class="mf">285.93</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">        <span class="nt">&#34;pressure&#34;</span><span class="p">:</span> <span class="mi">1018</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">        <span class="nt">&#34;humidity&#34;</span><span class="p">:</span> <span class="mi">76</span>
-</span></span><span class="line"><span class="cl">    <span class="p">},</span>
-</span></span><span class="line"><span class="cl">    <span class="nt">&#34;visibility&#34;</span><span class="p">:</span> <span class="mi">6000</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">    <span class="nt">&#34;wind&#34;</span><span class="p">:</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">        <span class="nt">&#34;speed&#34;</span><span class="p">:</span> <span class="mf">3.6</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">        <span class="nt">&#34;deg&#34;</span><span class="p">:</span> <span class="mi">90</span>
-</span></span><span class="line"><span class="cl">    <span class="p">},</span>
-</span></span><span class="line"><span class="cl">    <span class="nt">&#34;clouds&#34;</span><span class="p">:</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">        <span class="nt">&#34;all&#34;</span><span class="p">:</span> <span class="mi">95</span>
-</span></span><span class="line"><span class="cl">    <span class="p">},</span>
-</span></span><span class="line"><span class="cl">    <span class="nt">&#34;dt&#34;</span><span class="p">:</span> <span class="mi">1618947215</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">    <span class="nt">&#34;sys&#34;</span><span class="p">:</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">        <span class="nt">&#34;type&#34;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">        <span class="nt">&#34;id&#34;</span><span class="p">:</span> <span class="mi">1414</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">        <span class="nt">&#34;country&#34;</span><span class="p">:</span> <span class="s2">&#34;GB&#34;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">        <span class="nt">&#34;sunrise&#34;</span><span class="p">:</span> <span class="mi">1618894425</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">        <span class="nt">&#34;sunset&#34;</span><span class="p">:</span> <span class="mi">1618945477</span>
-</span></span><span class="line"><span class="cl">    <span class="p">},</span>
-</span></span><span class="line"><span class="cl">    <span class="nt">&#34;timezone&#34;</span><span class="p">:</span> <span class="mi">3600</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">    <span class="nt">&#34;id&#34;</span><span class="p">:</span> <span class="mi">2643743</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">    <span class="nt">&#34;name&#34;</span><span class="p">:</span> <span class="s2">&#34;London&#34;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">    <span class="nt">&#34;cod&#34;</span><span class="p">:</span> <span class="mi">200</span>
-</span></span><span class="line"><span class="cl"><span class="p">}</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&#34;coord&#34;</span>: {
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&#34;lon&#34;</span>: <span style="color:#ae81ff">-0.1257</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&#34;lat&#34;</span>: <span style="color:#ae81ff">51.5085</span>
+</span></span><span style="display:flex;"><span>    },
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&#34;weather&#34;</span>: [
+</span></span><span style="display:flex;"><span>        {
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&#34;id&#34;</span>: <span style="color:#ae81ff">804</span>,
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&#34;main&#34;</span>: <span style="color:#e6db74">&#34;Clouds&#34;</span>,
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&#34;description&#34;</span>: <span style="color:#e6db74">&#34;overcast clouds&#34;</span>,
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&#34;icon&#34;</span>: <span style="color:#e6db74">&#34;04n&#34;</span>
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>    ],
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&#34;base&#34;</span>: <span style="color:#e6db74">&#34;stations&#34;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&#34;main&#34;</span>: {
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&#34;temp&#34;</span>: <span style="color:#ae81ff">284.86</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&#34;feels_like&#34;</span>: <span style="color:#ae81ff">284.07</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&#34;temp_min&#34;</span>: <span style="color:#ae81ff">284.15</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&#34;temp_max&#34;</span>: <span style="color:#ae81ff">285.93</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&#34;pressure&#34;</span>: <span style="color:#ae81ff">1018</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&#34;humidity&#34;</span>: <span style="color:#ae81ff">76</span>
+</span></span><span style="display:flex;"><span>    },
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&#34;visibility&#34;</span>: <span style="color:#ae81ff">6000</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&#34;wind&#34;</span>: {
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&#34;speed&#34;</span>: <span style="color:#ae81ff">3.6</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&#34;deg&#34;</span>: <span style="color:#ae81ff">90</span>
+</span></span><span style="display:flex;"><span>    },
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&#34;clouds&#34;</span>: {
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&#34;all&#34;</span>: <span style="color:#ae81ff">95</span>
+</span></span><span style="display:flex;"><span>    },
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&#34;dt&#34;</span>: <span style="color:#ae81ff">1618947215</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&#34;sys&#34;</span>: {
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&#34;type&#34;</span>: <span style="color:#ae81ff">1</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&#34;id&#34;</span>: <span style="color:#ae81ff">1414</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&#34;country&#34;</span>: <span style="color:#e6db74">&#34;GB&#34;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&#34;sunrise&#34;</span>: <span style="color:#ae81ff">1618894425</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&#34;sunset&#34;</span>: <span style="color:#ae81ff">1618945477</span>
+</span></span><span style="display:flex;"><span>    },
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&#34;timezone&#34;</span>: <span style="color:#ae81ff">3600</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&#34;id&#34;</span>: <span style="color:#ae81ff">2643743</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&#34;name&#34;</span>: <span style="color:#e6db74">&#34;London&#34;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&#34;cod&#34;</span>: <span style="color:#ae81ff">200</span>
+</span></span><span style="display:flex;"><span>}
 </span></span></code></pre></div><h4 id="conclusion">Conclusion</h4>
 <p>Congratulations! You&rsquo;ve created a Lambda that fetches and stores current weather information whenever it is triggered.</p>
 <p>In the next part, we&rsquo;ll discuss triggers, and how you might schedule your Lambda to run regularly.</p>
-</div>
-        <div class="post-footer">
-            <div class="info">
-                <span class="separator"><a class="category" href="/categories/tutorial/">tutorial</a></span>
-                <span class="separator"><a class="tag" href="/tags/coding/">coding</a><a class="tag" href="/tags/c%23/">c#</a><a class="tag" href="/tags/%2enet/">.net</a><a class="tag" href="/tags/aws/">aws</a><a class="tag" href="/tags/lambda/">lambda</a></span>
-                
-                  <p>
-                    See also:
-                    <ul><li><a href="https://instantiator.dev/post/csharp-aws-lambda-tutorial-06/">Building an AWS Lambda in C#, part 6: Triggers</a></li><li><a href="https://instantiator.dev/post/csharp-aws-lambda-tutorial-04/">Building an AWS Lambda in C#, part 4: Logs</a></li><li><a href="https://instantiator.dev/post/csharp-aws-lambda-tutorial-03/">Building an AWS Lambda in C#, part 3: APIs and secrets</a></li><li><a href="https://instantiator.dev/post/csharp-aws-lambda-tutorial-02/">Building an AWS Lambda in C#, part 2: Build, deploy and invoke</a></li><li><a href="https://instantiator.dev/post/csharp-aws-lambda-tutorial-01/">Building an AWS Lambda in C#, part 1: AWS</a></li>
-                    </ul>
-                  </p>
-                
-
-            </div>
-        </div>
-
-        
-    </div>
-
 
         </div>
     </div>
 </div>
 
-<script type="text/javascript"
-        src="/js/medium-zoom.min.e1c6918cbaa90022a5612f0bd71c7bf3be6d036614c5729cebfe14f7b91fa4bc.js"
-        integrity="sha256-4caRjLqpACKlYS8L1xx7875tA2YUxXKc6/4U97kfpLw="
-        crossorigin="anonymous"></script>
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-SHE42ZWKEN"></script>
+
+        </div><script src="/js/bootstrap.min.js"></script>
+<script src="/js/feather.min.js"></script>
+<script src="/js/mastodon-timeline.umd.js"></script>
 <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-SHE42ZWKEN');
+  feather.replace();
 </script></body>
-
 </html>

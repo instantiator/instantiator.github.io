@@ -1,0 +1,43 @@
+
+.frosted-white {
+    background-color: rgba(255, 255, 255, 0.5);
+    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(5px);
+}
+
+a {
+    text-decoration: none;
+    color: cadetblue;
+}
+
+.mt-post a { 
+    text-decoration: none !important;
+    color: cadetblue !important;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: cadetblue;
+}
+
+.nav-link-active {
+    font-weight: bolder;
+}
+
+.highlight pre {
+    padding: 1em;
+    border-radius: 0.5em;
+}
+
+#post-content img {
+    max-width: 100%;
+    height: auto;
+}
+
+#post-content pre {
+    max-width: 100%;
+}
+
+.pagination-default {
+    box-shadow: var(--bs-box-shadow)!important;
+}

@@ -1,74 +1,19 @@
 <!DOCTYPE html>
-<html  dir="ltr" lang="en" data-theme=""><head>
-    <title> instantiator.dev | Building an app for Flipper Zero, part 2: A simple user interface </title>
-
-    
-    <meta charset="utf-8"><meta name="generator" content="Hugo 0.123.7"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-    <meta name="description" content="tech, volunteers, public safety, articles and ideas">
-    
-    
-    
-    <link rel="stylesheet"
-        href="/css/style.min.59fe2a27cd19eafc8c4aef4e2c18a287287097d0516d9baf6ade257c0f4b4d64.css"
-        integrity="sha256-Wf4qJ80Z6vyMSu9OLBiihyhwl9BRbZuvat4lfA9LTWQ="
-        crossorigin="anonymous"
-        type="text/css">
-    
-
-    
-    <link rel="stylesheet"
-        href="/css/additional-classes.min.1d76732c34340c3588f50dacb5d8ce67a8c9ad2bf0140c8eb825f3f4e3a071c4.css"
-        integrity="sha256-HXZzLDQ0DDWI9Q2stdjOZ6jJrSvwFAyOuCXz9OOgccQ="
-        crossorigin="anonymous"
-        type="text/css">
-
-    
-    <link rel="stylesheet"
-        href="/css/markupHighlight.min.59c08a266e8a6489aab7cb3ace4259db920d0e8893682a44ef8401387af97664.css"
-        integrity="sha256-WcCKJm6KZImqt8s6zkJZ25INDoiTaCpE74QBOHr5dmQ="
-        crossorigin="anonymous"
-        type="text/css">
-    
-
-
-
-    <link rel="stylesheet" 
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" 
-    integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" 
-    crossorigin="anonymous" />
-
-    
-    <link rel="shortcut icon" href="/favicons/favicon.ico" type="image/x-icon">
-    <link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicons/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicons/favicon-16x16.png">
-
-    <link rel="canonical" href="/post/flipper-zero-app-tutorial-02/">
-
+<html lang="en"><head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
+    <link rel="stylesheet" type="text/css" href="/css/mastodon-timeline.min.css">
     
     
+    <title>instantiator.dev | Building an app for Flipper Zero, part 2: A simple user interface</title>
     
-    
-    <script type="text/javascript"
-            src="/js/anatole-header.min.df804b63b5bd8474ea0756ea874bc8f1e92552708cc6ea43aa0d76981dc419f9.js"
-            integrity="sha256-34BLY7W9hHTqB1bqh0vI8eklUnCMxupDqg12mB3EGfk="
-            crossorigin="anonymous"></script>
-
-
-    
-        
-        
-        <script type="text/javascript"
-                src="/js/anatole-theme-switcher.min.ea8ebe268922ef9849261a1312cd65b640595e65251ce4c00534a176afd1ac0c.js"
-                integrity="sha256-6o6&#43;Joki75hJJhoTEs1ltkBZXmUlHOTABTShdq/RrAw="
-                crossorigin="anonymous"></script>
     
     <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:image" content="https://github.com/instantiator/flipper-zero-experimental-apps/raw/main/resistors/.flipcorg/banner.png" /><meta name="twitter:title" content="Building an app for Flipper Zero, part 2: A simple user interface"/>
 <meta name="twitter:description" content="In this part, we&rsquo;ll build a simple user interface for a Flipper Zero app."/>
 
-
-    
     <meta property="og:title" content="Building an app for Flipper Zero, part 2: A simple user interface" />
 <meta property="og:description" content="In this part, we&rsquo;ll build a simple user interface for a Flipper Zero app." />
 <meta property="og:type" content="article" />
@@ -80,143 +25,192 @@
 
 
 
-</head>
-<body><div class="sidebar animated fadeInDown ">
-    <div class="logo-title">
-        <div class="title">
-            <img src="/lewis/profile.jpg" alt="profile picture">
-            <h3 title=""><a href="/">instantiator.dev</a></h3>
-            <div class="description">
-                <p>tech, volunteers, public safety, articles and ideas</p>
-            </div>
+    
+    <link rel="stylesheet"
+        href="/css/markupHighlight.min.59c08a266e8a6489aab7cb3ace4259db920d0e8893682a44ef8401387af97664.css"
+        integrity="sha256-WcCKJm6KZImqt8s6zkJZ25INDoiTaCpE74QBOHr5dmQ="
+        crossorigin="anonymous"
+        type="text/css">
+
+    </head><body><nav id="nav" class="navbar sticky-top justify-content-start navbar-expand-md frosted-white shadow mb-4">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="/">instantiator.dev</a>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav">
+        
+        
+        <li class="nav-item">
+          <a class="nav-link " href="/">
+            
+             Home
+          </a>
+        </li>
+        
+        <li class="nav-item">
+          <a class="nav-link " href="/post/">
+            
+             All posts
+          </a>
+        </li>
+        
+        <li class="nav-item">
+          <a class="nav-link " href="/categories/tool/">
+            
+             Tools
+          </a>
+        </li>
+        
+        <li class="nav-item">
+          <a class="nav-link " href="/categories/tutorial/">
+            
+             Tutorials
+          </a>
+        </li>
+        
+        <li class="nav-item">
+          <a class="nav-link " href="/categories/article/">
+            
+             Articles
+          </a>
+        </li>
+        
+        <li class="nav-item">
+          <a class="nav-link " href="/about/">
+            
+             About
+          </a>
+        </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+<div class="container-fluid">
+
+<div class="row align-items-start">
+    <div class="col col-lg-3 d-none d-lg-block">
+      <div class="row mb-2">
+    <div class="col-3 col-lg-12 d-flex flex-column align-items-center">
+        <img 
+            src="/lewis/profile.jpg" alt="profile picture" 
+            class="mb-4 mt-4 img-thumbnail" 
+            style="border-radius: 50%; max-width: 200px; width: 100%;" />
+    </div>
+    <div class="col d-flex flex-column align-items-center">
+        <h3 class="mb-4"><a href="/">instantiator.dev</a></h3>
+        
+        <div style="text-align: center;" class="mb-4">
+            <p>tech, volunteers, public safety, collective intelligence, articles, tools, code and ideas</p>
+        </div>
+
+        <div class="d-flex flex-row justify-content-evenly align-self-stretch mb-4">
+        
+            <a href="https://mastodon.social/@instantiator" rel="me" aria-label="Mastodon">
+                <i data-feather="user" aria-hidden="true"></i>
+            </a>
+            
+            <a href="https://github.com/instantiator" rel="me" aria-label="GitHub">
+                <i data-feather="github" aria-hidden="true"></i>
+            </a>
+            
+            <a href="https://www.linkedin.com/in/lewiswestbury" rel="me" aria-label="LinkedIn">
+                <i data-feather="linkedin" aria-hidden="true"></i>
+            </a>
+            
+            <a href="https://www.escapethereview.co.uk/profile/?user_id=11" rel="me" aria-label="Escape the Review">
+                <i data-feather="crosshair" aria-hidden="true"></i>
+            </a>
+            
+            <a href="https://icgames.net" rel="me" aria-label="International Consensus Games">
+                <i data-feather="target" aria-hidden="true"></i>
+            </a>
+            
+            <a href="https://instantiator.dev/index.xml" rel="me" aria-label="RSS">
+                <i data-feather="rss" aria-hidden="true"></i>
+            </a>
+            
+        </div>
+        <div>
+            <span class="text-body-secondary fw-lighter">
+                &copy; Lewis Westbury  2024 
+            </span>
         </div>
     </div>
-    <ul class="social-links">
-        
-            <li>
-                <a href="https://mastodon.social/@instantiator" rel="me" aria-label="Mastodon">
-                    <i class="fab fa-mastodon fa-2x" aria-hidden="true"></i>
-                </a>
-            </li>
-        
-            <li>
-                <a href="https://twitter.com/instantiator" rel="me" aria-label="Twitter">
-                    <i class="fab fa-twitter fa-2x" aria-hidden="true"></i>
-                </a>
-            </li>
-        
-            <li>
-                <a href="https://github.com/instantiator" rel="me" aria-label="GitHub">
-                    <i class="fab fa-github fa-2x" aria-hidden="true"></i>
-                </a>
-            </li>
-        
-            <li>
-                <a href="https://www.linkedin.com/in/lewiswestbury" rel="me" aria-label="LinkedIn">
-                    <i class="fab fa-linkedin fa-2x" aria-hidden="true"></i>
-                </a>
-            </li>
-        
-            <li>
-                <a href="https://www.escapethereview.co.uk/profile/?user_id=11" rel="me" aria-label="Escape the Review">
-                    <i class="fas fa-dungeon fa-2x" aria-hidden="true"></i>
-                </a>
-            </li>
-        
-            <li>
-                <a href="https://icgames.net" rel="me" aria-label="International Consensus Games">
-                    <i class="fas fa-chess-knight fa-2x" aria-hidden="true"></i>
-                </a>
-            </li>
-        
-            <li>
-                <a href="https://instantiator.dev/index.xml" rel="me" aria-label="RSS">
-                    <i class="fas fa-rss fa-2x" aria-hidden="true"></i>
-                </a>
-            </li>
-        
-    </ul>
-    <div class="footer">
-        <div class="by_farbox">&copy; Lewis Westbury  2024 </div>
-    </div>
-</div>
-<div class="main">
-    <div class="page-top  animated fadeInDown ">
-    <a role="button" class="navbar-burger" data-target="navMenu" aria-label="menu" aria-expanded="false">
-        <span aria-hidden="true"></span>
-        <span aria-hidden="true"></span>
-        <span aria-hidden="true"></span>
-    </a>
-    <ul class="nav" id="navMenu">
-        
-        
-            
-            <li><a 
-                   href="/"
-                        
-                   title="">Home</a></li>
-        
-            
-            <li><a 
-                   href="/post/"
-                        
-                   title="">All posts</a></li>
-        
-            
-            <li><a 
-                   href="/categories/tool/"
-                        
-                   title="">Tools</a></li>
-        
-            
-            <li><a 
-                   href="/categories/tutorial/"
-                        
-                   title="">Tutorials</a></li>
-        
-            
-            <li><a 
-                   href="/categories/article/"
-                        
-                   title="">Articles</a></li>
-        
-            
-            <li><a 
-                   href="/about/"
-                        
-                   title="">About</a></li>
-        
-        
-        
-            <li class="theme-switch-item">
-                <a class="theme-switch" title="Switch Theme">
-                    <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
-                </a>
-            </li>
-        
-    </ul>
-</div>
+</div>    
 
-    <div class="autopagerize_page_element">
-        <div class="content">
-    <div class="post  animated fadeInDown ">
-        <div class="post-content">
-            
-           <img class="post-thumbnail" src="https://github.com/instantiator/flipper-zero-experimental-apps/raw/main/resistors/.flipcorg/banner.png" alt="Thumbnail image">
-            
-            <div class="post-title">
-                <h3>Building an app for Flipper Zero, part 2: A simple user interface</h3>
-                
-                    <div class="info">
-                        <em class="fas fa-calendar-day"></em>
-                        <span class="date"> 
-                                                2023-05-05
-                                           </span>
-                        <em class="fas fa-stopwatch"></em>
-                        <span class="reading-time">13-minute read</span>
-                    </div>
-                
-            </div>
+
+
+    </div>
+    <div class="col-lg" style="overflow-x: hidden;">
+        <div id="post-content">
+            <h2>Building an app for Flipper Zero, part 2: A simple user interface</h1>
+             
+<i data-feather="calendar"></i>
+<time datetime="2023-05-05">2023-05-05</time>
+
+<br/>
+<i data-feather="tag"></i>
+
+
+<a class="badge bg-secondary" href="https://instantiator.dev/tags/flipperzero">FlipperZero</a>
+
+
+<a class="badge bg-secondary" href="https://instantiator.dev/tags/flipper">flipper</a>
+
+
+<a class="badge bg-secondary" href="https://instantiator.dev/tags/app">app</a>
+
+
+<a class="badge bg-secondary" href="https://instantiator.dev/tags/plugin">plugin</a>
+
+
+<a class="badge bg-secondary" href="https://instantiator.dev/tags/coding">coding</a>
+
+
+<a class="badge bg-secondary" href="https://instantiator.dev/tags/c">c</a>
+
+
+<a class="badge bg-secondary" href="https://instantiator.dev/tags/clang">clang</a>
+
+
+<a class="badge bg-secondary" href="https://instantiator.dev/tags/ufbt">ufbt</a>
+
+
+<a class="badge bg-secondary" href="https://instantiator.dev/tags/community">community</a>
+
+
+<a class="badge bg-secondary" href="https://instantiator.dev/tags/project">project</a>
+
+
+<a class="badge bg-secondary" href="https://instantiator.dev/tags/ui">ui</a>
+
+
+<a class="badge bg-secondary" href="https://instantiator.dev/tags/gui">gui</a>
+
+
+<a class="badge bg-secondary" href="https://instantiator.dev/tags/user-interface">user interface</a>
+
+
+<a class="badge bg-secondary" href="https://instantiator.dev/tags/graphics">graphics</a>
+
+
+<a class="badge bg-secondary" href="https://instantiator.dev/tags/view">view</a>
+
+
+<a class="badge bg-secondary" href="https://instantiator.dev/tags/scene">scene</a>
+
+
 
             <p>In this part, we&rsquo;ll build a simple user interface for a Flipper Zero app.</p>
 <p>The Flipper Zero is a digital signals multi-tool device, with some fun applications. It has an infrared module, a sub-GHz radio, RFID and NFC capability, iButton, USB, a screen, input controls, and GPIO pins. It&rsquo;s small enough to fit in your hand, and it can communicate with your home appliances, or help you to learn about the signals that fly around our world. It&rsquo;s also extremely customisable.</p>
@@ -266,81 +260,81 @@
 <p>Views are managed by a <code>ViewDispatcher</code> (with a number of <code>view_dispatcher_</code> prefixed functions), called from the handler functions passed in to the <code>SceneManager</code>.</p>
 <p>To define all the scenes for your app, provide all the handler functions as a <a href="https://github.com/flipperdevices/flipperzero-firmware/blob/dev/applications/services/gui/scene_manager.h#L42"><code>SceneManagerHandlers</code></a> <code>struct</code> to the <a href="https://github.com/flipperdevices/flipperzero-firmware/blob/dev/applications/services/gui/scene_manager.h#L77"><code>scene_manager_alloc</code></a> function.</p>
 <p>Scenes are indexed numerically, and so it&rsquo;s helpful to create an enum to track their indices, eg.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl"><span class="k">typedef</span> <span class="k">enum</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">    <span class="n">TestAppScene_MainMenu</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">    <span class="n">TestAppScene_FirstPopup</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">    <span class="n">TestAppScene_SecondPopup</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">    <span class="n">TestAppScene_count</span>
-</span></span><span class="line"><span class="cl"><span class="p">}</span> <span class="n">TestAppScene</span><span class="p">;</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#66d9ef">typedef</span> <span style="color:#66d9ef">enum</span> {
+</span></span><span style="display:flex;"><span>    TestAppScene_MainMenu,
+</span></span><span style="display:flex;"><span>    TestAppScene_FirstPopup,
+</span></span><span style="display:flex;"><span>    TestAppScene_SecondPopup,
+</span></span><span style="display:flex;"><span>    TestAppScene_count
+</span></span><span style="display:flex;"><span>} TestAppScene;
 </span></span></code></pre></div><p><em>NB. That <code>TestAppScene_count</code> value at the end of the enum is a handy way to safely obtain the size of the <code>enum</code> even if you change its contents later. Just ensure it&rsquo;s always the last item.</em></p>
 <p>Views can be reused, and so there may be fewer views than scenes, eg.:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl"><span class="k">typedef</span> <span class="k">enum</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">    <span class="n">TestAppView_Menu</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">    <span class="n">TestAppView_Popup</span>
-</span></span><span class="line"><span class="cl"><span class="p">}</span> <span class="n">TestAppScene</span><span class="p">;</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#66d9ef">typedef</span> <span style="color:#66d9ef">enum</span> {
+</span></span><span style="display:flex;"><span>    TestAppView_Menu,
+</span></span><span style="display:flex;"><span>    TestAppView_Popup
+</span></span><span style="display:flex;"><span>} TestAppScene;
 </span></span></code></pre></div><h2 id="initialising-the-app">Initialising the app</h2>
 <p>With these enums defined, we&rsquo;re ready to set up the main <code>struct</code> containing the app&rsquo;s state, and then go on to allocate and initialise everything.</p>
 <p>In the tutorial app, this takes place in the <code>test_app_init</code> function, which goes on to call out to functions that will initialise the scene manager, and view dispatcher:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl"><span class="n">TestApp</span><span class="o">*</span> <span class="n">app</span> <span class="o">=</span> <span class="nf">malloc</span><span class="p">(</span><span class="k">sizeof</span><span class="p">(</span><span class="n">TestApp</span><span class="p">));</span>
-</span></span><span class="line"><span class="cl"><span class="nf">test_app_scene_manager_init</span><span class="p">(</span><span class="n">app</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl"><span class="nf">test_app_view_dispatcher_init</span><span class="p">(</span><span class="n">app</span><span class="p">);</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span>TestApp<span style="color:#f92672">*</span> app <span style="color:#f92672">=</span> <span style="color:#a6e22e">malloc</span>(<span style="color:#66d9ef">sizeof</span>(TestApp));
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">test_app_scene_manager_init</span>(app);
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">test_app_view_dispatcher_init</span>(app);
 </span></span></code></pre></div><h2 id="setting-up-the-scene-manager">Setting up the scene manager</h2>
 <p><code>test_app_scene_manager_init</code> is reasonably simple. It allocates memory for a <code>SceneManager</code>.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl"><span class="n">app</span><span class="o">-&gt;</span><span class="n">scene_manager</span> <span class="o">=</span> <span class="nf">scene_manager_alloc</span><span class="p">(</span><span class="o">&amp;</span><span class="n">test_app_scene_event_handlers</span><span class="p">,</span> <span class="n">app</span><span class="p">);</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span>app<span style="color:#f92672">-&gt;</span>scene_manager <span style="color:#f92672">=</span> <span style="color:#a6e22e">scene_manager_alloc</span>(<span style="color:#f92672">&amp;</span>test_app_scene_event_handlers, app);
 </span></span></code></pre></div><p>The second parameter is simply the context, passed back to the active scene&rsquo;s handler methods when they are called. The first parameter, <code>SceneManagerHandlers* test_app_scene_event_handlers</code> has already been defined above. It&rsquo;s a collection of all the <code>on_enter</code>, <code>on_exit</code>, and <code>on_event</code> handler functions for all the scenes:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl"><span class="cm">/** collection of all scene on_enter handlers - in the same order as their enum */</span>
-</span></span><span class="line"><span class="cl"><span class="kt">void</span> <span class="p">(</span><span class="o">*</span><span class="k">const</span> <span class="n">test_app_scene_on_enter_handlers</span><span class="p">[])(</span><span class="kt">void</span><span class="o">*</span><span class="p">)</span> <span class="o">=</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">    <span class="n">test_app_scene_on_enter_main_menu</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">    <span class="n">test_app_scene_on_enter_popup_one</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">    <span class="n">test_app_scene_on_enter_popup_two</span><span class="p">};</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="cm">/** collection of all scene on event handlers - in the same order as their enum */</span>
-</span></span><span class="line"><span class="cl"><span class="kt">bool</span> <span class="p">(</span><span class="o">*</span><span class="k">const</span> <span class="n">test_app_scene_on_event_handlers</span><span class="p">[])(</span><span class="kt">void</span><span class="o">*</span><span class="p">,</span> <span class="n">SceneManagerEvent</span><span class="p">)</span> <span class="o">=</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">    <span class="n">test_app_scene_on_event_main_menu</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">    <span class="n">test_app_scene_on_event_popup_one</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">    <span class="n">test_app_scene_on_event_popup_two</span><span class="p">};</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="cm">/** collection of all scene on exit handlers - in the same order as their enum */</span>
-</span></span><span class="line"><span class="cl"><span class="kt">void</span> <span class="p">(</span><span class="o">*</span><span class="k">const</span> <span class="n">test_app_scene_on_exit_handlers</span><span class="p">[])(</span><span class="kt">void</span><span class="o">*</span><span class="p">)</span> <span class="o">=</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">    <span class="n">test_app_scene_on_exit_main_menu</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">    <span class="n">test_app_scene_on_exit_popup_one</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">    <span class="n">test_app_scene_on_exit_popup_two</span><span class="p">};</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="cm">/** collection of all on_enter, on_event, on_exit handlers */</span>
-</span></span><span class="line"><span class="cl"><span class="k">const</span> <span class="n">SceneManagerHandlers</span> <span class="n">test_app_scene_event_handlers</span> <span class="o">=</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">    <span class="p">.</span><span class="n">on_enter_handlers</span> <span class="o">=</span> <span class="n">test_app_scene_on_enter_handlers</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">    <span class="p">.</span><span class="n">on_event_handlers</span> <span class="o">=</span> <span class="n">test_app_scene_on_event_handlers</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">    <span class="p">.</span><span class="n">on_exit_handlers</span> <span class="o">=</span> <span class="n">test_app_scene_on_exit_handlers</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">    <span class="p">.</span><span class="n">scene_num</span> <span class="o">=</span> <span class="n">TestAppScene_count</span><span class="p">};</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#75715e">/** collection of all scene on_enter handlers - in the same order as their enum */</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">void</span> (<span style="color:#f92672">*</span><span style="color:#66d9ef">const</span> test_app_scene_on_enter_handlers[])(<span style="color:#66d9ef">void</span><span style="color:#f92672">*</span>) <span style="color:#f92672">=</span> {
+</span></span><span style="display:flex;"><span>    test_app_scene_on_enter_main_menu,
+</span></span><span style="display:flex;"><span>    test_app_scene_on_enter_popup_one,
+</span></span><span style="display:flex;"><span>    test_app_scene_on_enter_popup_two};
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">/** collection of all scene on event handlers - in the same order as their enum */</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">bool</span> (<span style="color:#f92672">*</span><span style="color:#66d9ef">const</span> test_app_scene_on_event_handlers[])(<span style="color:#66d9ef">void</span><span style="color:#f92672">*</span>, SceneManagerEvent) <span style="color:#f92672">=</span> {
+</span></span><span style="display:flex;"><span>    test_app_scene_on_event_main_menu,
+</span></span><span style="display:flex;"><span>    test_app_scene_on_event_popup_one,
+</span></span><span style="display:flex;"><span>    test_app_scene_on_event_popup_two};
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">/** collection of all scene on exit handlers - in the same order as their enum */</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">void</span> (<span style="color:#f92672">*</span><span style="color:#66d9ef">const</span> test_app_scene_on_exit_handlers[])(<span style="color:#66d9ef">void</span><span style="color:#f92672">*</span>) <span style="color:#f92672">=</span> {
+</span></span><span style="display:flex;"><span>    test_app_scene_on_exit_main_menu,
+</span></span><span style="display:flex;"><span>    test_app_scene_on_exit_popup_one,
+</span></span><span style="display:flex;"><span>    test_app_scene_on_exit_popup_two};
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">/** collection of all on_enter, on_event, on_exit handlers */</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">const</span> SceneManagerHandlers test_app_scene_event_handlers <span style="color:#f92672">=</span> {
+</span></span><span style="display:flex;"><span>    .on_enter_handlers <span style="color:#f92672">=</span> test_app_scene_on_enter_handlers,
+</span></span><span style="display:flex;"><span>    .on_event_handlers <span style="color:#f92672">=</span> test_app_scene_on_event_handlers,
+</span></span><span style="display:flex;"><span>    .on_exit_handlers <span style="color:#f92672">=</span> test_app_scene_on_exit_handlers,
+</span></span><span style="display:flex;"><span>    .scene_num <span style="color:#f92672">=</span> TestAppScene_count};
 </span></span></code></pre></div><h2 id="setting-up-the-view-dispatcher">Setting up the view dispatcher</h2>
 <p><code>test_app_view_dispatcher_init</code> has a little more to do.</p>
 <h3 id="allocate-the-dispatcher">Allocate the dispatcher</h3>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl"><span class="n">app</span><span class="o">-&gt;</span><span class="n">view_dispatcher</span> <span class="o">=</span> <span class="nf">view_dispatcher_alloc</span><span class="p">();</span>
-</span></span><span class="line"><span class="cl"><span class="nf">view_dispatcher_enable_queue</span><span class="p">(</span><span class="n">app</span><span class="o">-&gt;</span><span class="n">view_dispatcher</span><span class="p">);</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span>app<span style="color:#f92672">-&gt;</span>view_dispatcher <span style="color:#f92672">=</span> <span style="color:#a6e22e">view_dispatcher_alloc</span>();
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">view_dispatcher_enable_queue</span>(app<span style="color:#f92672">-&gt;</span>view_dispatcher);
 </span></span></code></pre></div><h3 id="allocate-individual-views">Allocate individual views</h3>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl"><span class="n">app</span><span class="o">-&gt;</span><span class="n">menu</span> <span class="o">=</span> <span class="nf">menu_alloc</span><span class="p">();</span>
-</span></span><span class="line"><span class="cl"><span class="n">app</span><span class="o">-&gt;</span><span class="n">popup</span> <span class="o">=</span> <span class="nf">popup_alloc</span><span class="p">();</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span>app<span style="color:#f92672">-&gt;</span>menu <span style="color:#f92672">=</span> <span style="color:#a6e22e">menu_alloc</span>();
+</span></span><span style="display:flex;"><span>app<span style="color:#f92672">-&gt;</span>popup <span style="color:#f92672">=</span> <span style="color:#a6e22e">popup_alloc</span>();
 </span></span></code></pre></div><h3 id="pass-events-from-the-view-to-the-scene">Pass events from the view to the scene</h3>
 <p>The views themselves initially handle events and navigation, but we want to pass those to the scene manager so that they&rsquo;re available to the active scene&rsquo;s handler functions.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl"><span class="c1">// assign callback that pass events from views to the scene manager
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nf">view_dispatcher_set_event_callback_context</span><span class="p">(</span><span class="n">app</span><span class="o">-&gt;</span><span class="n">view_dispatcher</span><span class="p">,</span> <span class="n">app</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl"><span class="nf">view_dispatcher_set_custom_event_callback</span><span class="p">(</span>
-</span></span><span class="line"><span class="cl">    <span class="n">app</span><span class="o">-&gt;</span><span class="n">view_dispatcher</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">    <span class="n">test_app_scene_manager_custom_event_callback</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl"><span class="nf">view_dispatcher_set_navigation_event_callback</span><span class="p">(</span>
-</span></span><span class="line"><span class="cl">    <span class="n">app</span><span class="o">-&gt;</span><span class="n">view_dispatcher</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">    <span class="n">test_app_scene_manager_navigation_event_callback</span><span class="p">);</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#75715e">// assign callback that pass events from views to the scene manager
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#a6e22e">view_dispatcher_set_event_callback_context</span>(app<span style="color:#f92672">-&gt;</span>view_dispatcher, app);
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">view_dispatcher_set_custom_event_callback</span>(
+</span></span><span style="display:flex;"><span>    app<span style="color:#f92672">-&gt;</span>view_dispatcher,
+</span></span><span style="display:flex;"><span>    test_app_scene_manager_custom_event_callback);
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">view_dispatcher_set_navigation_event_callback</span>(
+</span></span><span style="display:flex;"><span>    app<span style="color:#f92672">-&gt;</span>view_dispatcher,
+</span></span><span style="display:flex;"><span>    test_app_scene_manager_navigation_event_callback);
 </span></span></code></pre></div><h3 id="register-views-with-the-dispatcher">Register views with the dispatcher</h3>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl"><span class="c1">// add views to the dispatcher, indexed by their enum value
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nf">view_dispatcher_add_view</span><span class="p">(</span>
-</span></span><span class="line"><span class="cl">    <span class="n">app</span><span class="o">-&gt;</span><span class="n">view_dispatcher</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">    <span class="n">TestAppView_Menu</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">    <span class="nf">menu_get_view</span><span class="p">(</span><span class="n">app</span><span class="o">-&gt;</span><span class="n">menu</span><span class="p">));</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="nf">view_dispatcher_add_view</span><span class="p">(</span>
-</span></span><span class="line"><span class="cl">    <span class="n">app</span><span class="o">-&gt;</span><span class="n">view_dispatcher</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">    <span class="n">TestAppView_Popup</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">    <span class="nf">popup_get_view</span><span class="p">(</span><span class="n">app</span><span class="o">-&gt;</span><span class="n">popup</span><span class="p">));</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#75715e">// add views to the dispatcher, indexed by their enum value
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#a6e22e">view_dispatcher_add_view</span>(
+</span></span><span style="display:flex;"><span>    app<span style="color:#f92672">-&gt;</span>view_dispatcher,
+</span></span><span style="display:flex;"><span>    TestAppView_Menu,
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">menu_get_view</span>(app<span style="color:#f92672">-&gt;</span>menu));
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">view_dispatcher_add_view</span>(
+</span></span><span style="display:flex;"><span>    app<span style="color:#f92672">-&gt;</span>view_dispatcher,
+</span></span><span style="display:flex;"><span>    TestAppView_Popup,
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">popup_get_view</span>(app<span style="color:#f92672">-&gt;</span>popup));
 </span></span></code></pre></div><h2 id="defining-the-scenes">Defining the scenes</h2>
 <p>With all the structure to support scenes in place, the scene functions will complete the test app. Each scene has 3 functions:</p>
 <ul>
@@ -358,22 +352,22 @@
 <h3 id="on-entering-the-main-menu-scene">On entering the main menu scene</h3>
 <p>When entering a scene, the <code>test_app_scene_on_enter_main_menu</code> function is called. This is responsible for setting up the scene, by initiating the view for the scene (and any other resources it needs), and then instructing the view dispatcher to switch to the appropriate view, with a call to: <code>view_dispatcher_switch_to_view</code></p>
 <p>First, the menu view is reset:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl"><span class="nf">menu_reset</span><span class="p">(</span><span class="n">app</span><span class="o">-&gt;</span><span class="n">menu</span><span class="p">);</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#a6e22e">menu_reset</span>(app<span style="color:#f92672">-&gt;</span>menu);
 </span></span></code></pre></div><p>Then each menu item is added. Each is given an id from <code>TestAppMenuSelection</code> - this is used in <code>test_app_menu_callback_main_menu</code> to identify the user&rsquo;s selection:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl"><span class="nf">menu_add_item</span><span class="p">(</span>
-</span></span><span class="line"><span class="cl">    <span class="n">app</span><span class="o">-&gt;</span><span class="n">menu</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">    <span class="s">&#34;First popup&#34;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">    <span class="nb">NULL</span><span class="p">,</span> <span class="c1">// previously: &amp;I_one,
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="n">TestAppMenuSelection_One</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">    <span class="n">test_app_menu_callback_main_menu</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">    <span class="n">app</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl"><span class="nf">menu_add_item</span><span class="p">(</span>
-</span></span><span class="line"><span class="cl">    <span class="n">app</span><span class="o">-&gt;</span><span class="n">menu</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">    <span class="s">&#34;Second popup&#34;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">    <span class="nb">NULL</span><span class="p">,</span> <span class="c1">// previously: &amp;I_two,
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="n">TestAppMenuSelection_Two</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">    <span class="n">test_app_menu_callback_main_menu</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">    <span class="n">app</span><span class="p">);</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#a6e22e">menu_add_item</span>(
+</span></span><span style="display:flex;"><span>    app<span style="color:#f92672">-&gt;</span>menu,
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;First popup&#34;</span>,
+</span></span><span style="display:flex;"><span>    NULL, <span style="color:#75715e">// previously: &amp;I_one,
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    TestAppMenuSelection_One,
+</span></span><span style="display:flex;"><span>    test_app_menu_callback_main_menu,
+</span></span><span style="display:flex;"><span>    app);
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">menu_add_item</span>(
+</span></span><span style="display:flex;"><span>    app<span style="color:#f92672">-&gt;</span>menu,
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;Second popup&#34;</span>,
+</span></span><span style="display:flex;"><span>    NULL, <span style="color:#75715e">// previously: &amp;I_two,
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    TestAppMenuSelection_Two,
+</span></span><span style="display:flex;"><span>    test_app_menu_callback_main_menu,
+</span></span><span style="display:flex;"><span>    app);
 </span></span></code></pre></div><p>The last 3 values passed into the menu indicate what action to take:</p>
 <ul>
 <li><code>test_app_menu_callback_main_menu</code>  - this is the callback function to invoke if the user selects this item</li>
@@ -381,7 +375,7 @@
 <li><code>app</code> - this is the context to provide to the callback function</li>
 </ul>
 <p>Finally the view dispatcher is instructed to switch to this view:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl"><span class="nf">view_dispatcher_switch_to_view</span><span class="p">(</span><span class="n">app</span><span class="o">-&gt;</span><span class="n">view_dispatcher</span><span class="p">,</span> <span class="n">TestAppView_Menu</span><span class="p">);</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#a6e22e">view_dispatcher_switch_to_view</span>(app<span style="color:#f92672">-&gt;</span>view_dispatcher, TestAppView_Menu);
 </span></span></code></pre></div><h3 id="errata">Errata</h3>
 <p>In the first iteration of this code, <code>menu_add_item</code> was provided with pointers to icons generated by the build process (<code>&amp;I_one</code>, <code>&amp;I_two</code>).</p>
 <p>These icons are static - ie. they don&rsquo;t have multiple frames and their frame rate is initialised to <code>0</code>. Unfortunately, the menu module always tries to animate them, and expects a non-zero frame rate.</p>
@@ -398,48 +392,48 @@
 <p><code>SceneManagerEventTypeCustom</code> is the type of event that the <code>test_app_menu_callback_main_menu</code> function creates when it invokes <code>scene_manager_handle_custom_event</code>.</p>
 <p><code>event.event</code> contains the value from <code>TestAppEvent</code> that was passed in, ie. <code>TestAppEvent_ShowPopupOne</code> or <code>TestAppEvent_ShowPopupTwo</code>. These events should be reasonably clear - they are instructions to switch the scene, using <code>scene_manager_next_scene</code>.</p>
 <p>This logic is handled in two nested switch statements:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl"><span class="kt">bool</span> <span class="n">consumed</span> <span class="o">=</span> <span class="nb">false</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl"><span class="k">switch</span><span class="p">(</span><span class="n">event</span><span class="p">.</span><span class="n">type</span><span class="p">)</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl"><span class="k">case</span> <span class="nl">SceneManagerEventTypeCustom</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">    <span class="k">switch</span><span class="p">(</span><span class="n">event</span><span class="p">.</span><span class="n">event</span><span class="p">)</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">    <span class="k">case</span> <span class="nl">TestAppEvent_ShowPopupOne</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">        <span class="nf">scene_manager_next_scene</span><span class="p">(</span><span class="n">app</span><span class="o">-&gt;</span><span class="n">scene_manager</span><span class="p">,</span> <span class="n">TestAppScene_FirstPopup</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">        <span class="n">consumed</span> <span class="o">=</span> <span class="nb">true</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">        <span class="k">break</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">    <span class="k">case</span> <span class="nl">TestAppEvent_ShowPopupTwo</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">        <span class="nf">scene_manager_next_scene</span><span class="p">(</span><span class="n">app</span><span class="o">-&gt;</span><span class="n">scene_manager</span><span class="p">,</span> <span class="n">TestAppScene_SecondPopup</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">        <span class="n">consumed</span> <span class="o">=</span> <span class="nb">true</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">        <span class="k">break</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">    <span class="p">}</span>
-</span></span><span class="line"><span class="cl">    <span class="k">break</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl"><span class="k">default</span><span class="o">:</span> <span class="c1">// eg. SceneManagerEventTypeBack, SceneManagerEventTypeTick
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="n">consumed</span> <span class="o">=</span> <span class="nb">false</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">    <span class="k">break</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl"><span class="p">}</span>
-</span></span><span class="line"><span class="cl"><span class="k">return</span> <span class="n">consumed</span><span class="p">;</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#66d9ef">bool</span> consumed <span style="color:#f92672">=</span> false;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">switch</span>(event.type) {
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">case</span> SceneManagerEventTypeCustom:
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">switch</span>(event.event) {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">case</span> TestAppEvent_ShowPopupOne:
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">scene_manager_next_scene</span>(app<span style="color:#f92672">-&gt;</span>scene_manager, TestAppScene_FirstPopup);
+</span></span><span style="display:flex;"><span>        consumed <span style="color:#f92672">=</span> true;
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">break</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">case</span> TestAppEvent_ShowPopupTwo:
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">scene_manager_next_scene</span>(app<span style="color:#f92672">-&gt;</span>scene_manager, TestAppScene_SecondPopup);
+</span></span><span style="display:flex;"><span>        consumed <span style="color:#f92672">=</span> true;
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">break</span>;
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">break</span>;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">default</span><span style="color:#f92672">:</span> <span style="color:#75715e">// eg. SceneManagerEventTypeBack, SceneManagerEventTypeTick
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    consumed <span style="color:#f92672">=</span> false;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">break</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">return</span> consumed;
 </span></span></code></pre></div><h3 id="exiting-the-main-menu-scene">Exiting the main menu scene</h3>
 <p>Finally, the <code>test_app_scene_on_exit_main_menu</code> function very simply clears up the menu, using <code>menu_reset</code>.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl"><span class="n">TestApp</span><span class="o">*</span> <span class="n">app</span> <span class="o">=</span> <span class="n">context</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl"><span class="nf">menu_reset</span><span class="p">(</span><span class="n">app</span><span class="o">-&gt;</span><span class="n">menu</span><span class="p">);</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span>TestApp<span style="color:#f92672">*</span> app <span style="color:#f92672">=</span> context;
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">menu_reset</span>(app<span style="color:#f92672">-&gt;</span>menu);
 </span></span></code></pre></div><p><em>NB. This does not free the menu&rsquo;s memory allocation, but it does clear away the menu items and content of the menu.</em></p>
 <p>Although we also do this reset when entering the menu scene, it&rsquo;s good practise to clear up a resource on exit to ensure that it&rsquo;s not occupying space when not in use.</p>
 <h3 id="the-popup-scenes">The popup scenes</h3>
 <p>The popup scenes, <code>TestAppScene_FirstPopup</code> and <code>TestAppScene_SecondPopup</code>, are much simpler than the menu scene.</p>
 <p>The most complex part of each is their <code>_on_enter</code> function, that sets up the popup. eg. <code>test_app_scene_on_enter_popup_one</code> resets the popup, and adds several pieces of content (the context, header, icon, and text), before finally instructing the view dispatcher to switch to the popup view, with a call to: <code>view_dispatcher_switch_to_view</code></p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl"><span class="nf">popup_reset</span><span class="p">(</span><span class="n">app</span><span class="o">-&gt;</span><span class="n">popup</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl"><span class="nf">popup_set_context</span><span class="p">(</span><span class="n">app</span><span class="o">-&gt;</span><span class="n">popup</span><span class="p">,</span> <span class="n">app</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl"><span class="nf">popup_set_header</span><span class="p">(</span><span class="n">app</span><span class="o">-&gt;</span><span class="n">popup</span><span class="p">,</span> <span class="s">&#34;Popup One&#34;</span><span class="p">,</span> <span class="mi">64</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="n">AlignCenter</span><span class="p">,</span> <span class="n">AlignTop</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl"><span class="nf">popup_set_icon</span><span class="p">(</span><span class="n">app</span><span class="o">-&gt;</span><span class="n">popup</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">I_cvc_36x36</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl"><span class="nf">popup_set_text</span><span class="p">(</span><span class="n">app</span><span class="o">-&gt;</span><span class="n">popup</span><span class="p">,</span> <span class="s">&#34;One! One popup. Ah ah ah...&#34;</span><span class="p">,</span> <span class="mi">64</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="n">AlignLeft</span><span class="p">,</span> <span class="n">AlignTop</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl"><span class="nf">view_dispatcher_switch_to_view</span><span class="p">(</span><span class="n">app</span><span class="o">-&gt;</span><span class="n">view_dispatcher</span><span class="p">,</span> <span class="n">TestAppView_Popup</span><span class="p">);</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#a6e22e">popup_reset</span>(app<span style="color:#f92672">-&gt;</span>popup);
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">popup_set_context</span>(app<span style="color:#f92672">-&gt;</span>popup, app);
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">popup_set_header</span>(app<span style="color:#f92672">-&gt;</span>popup, <span style="color:#e6db74">&#34;Popup One&#34;</span>, <span style="color:#ae81ff">64</span>, <span style="color:#ae81ff">10</span>, AlignCenter, AlignTop);
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">popup_set_icon</span>(app<span style="color:#f92672">-&gt;</span>popup, <span style="color:#ae81ff">10</span>, <span style="color:#ae81ff">10</span>, <span style="color:#f92672">&amp;</span>I_cvc_36x36);
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">popup_set_text</span>(app<span style="color:#f92672">-&gt;</span>popup, <span style="color:#e6db74">&#34;One! One popup. Ah ah ah...&#34;</span>, <span style="color:#ae81ff">64</span>, <span style="color:#ae81ff">20</span>, AlignLeft, AlignTop);
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">view_dispatcher_switch_to_view</span>(app<span style="color:#f92672">-&gt;</span>view_dispatcher, TestAppView_Popup);
 </span></span></code></pre></div><p>Neither popup scene handles any events - just returning <code>false</code> in their <code>_on_event</code> functions and leaving it to the scene manager to do the right thing.</p>
 <p><em>NB. Popups can ordinarily handle use inputs, often giving users a choice between a couple of options. This tutorial does not, for the sake of simplicity.</em></p>
 <p>Finally, each popup&rsquo;s <code>_on_exit</code> function simply clears away the content, with another call to <code>popup_reset</code>.</p>
 <h3 id="errata-1">Errata</h3>
 <p>The code block that sets up the popup previously contained this line:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl"><span class="nf">view_set_context</span><span class="p">(</span><span class="nf">popup_get_view</span><span class="p">(</span><span class="n">app</span><span class="o">-&gt;</span><span class="n">popup</span><span class="p">),</span> <span class="n">app</span><span class="p">);</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#a6e22e">view_set_context</span>(<span style="color:#a6e22e">popup_get_view</span>(app<span style="color:#f92672">-&gt;</span>popup), app);
 </span></span></code></pre></div><p>That&rsquo;s incorrect. The intention is to set the callback context, so that the <code>_on_event</code> callback would get our <code>app</code> as the context parameter. However, <em>this</em> is the popup&rsquo;s method to set its callback context:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl"><span class="nf">popup_set_context</span><span class="p">(</span><span class="n">app</span><span class="o">-&gt;</span><span class="n">popup</span><span class="p">,</span> <span class="n">app</span><span class="p">);</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#a6e22e">popup_set_context</span>(app<span style="color:#f92672">-&gt;</span>popup, app);
 </span></span></code></pre></div><p>It&rsquo;s easier to think of it like this: The_view is <em>inside</em> the popup, so its callback context should be the popup. It&rsquo;s created by the popup, and its context it set automatically, so we don&rsquo;t need to adjust the view&rsquo;s context.</p>
 <h2 id="graphics">Graphics</h2>
 <p>In a few places, the code refers to <code>Icon</code> pointers, prefixed with <code>I_</code>. These are created automatically by <code>ufbt</code> during the build process, from resources found in the <code>images/</code> directory.</p>
@@ -456,37 +450,37 @@
 <li><a href="https://github.com/instantiator/flipper-zero-tutorial-app">instantiator/flipper-zero-tutorial-app</a></li>
 </ul>
 <p>Now, you can build the application:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ ufbt
-</span></span><span class="line"><span class="cl">scons: Entering directory <span class="sb">`</span>/Users/lewiswestbury/.ufbt/current/scripts/ufbt<span class="err">&#39;</span>
-</span></span><span class="line"><span class="cl">        CC      /Users/lewiswestbury/src/personal/test_app/test_app.c
-</span></span><span class="line"><span class="cl">        CDB     /Users/lewiswestbury/src/personal/test_app/.vscode/compile_commands.json
-</span></span><span class="line"><span class="cl">        LINK    /Users/lewiswestbury/.ufbt/build/test_app_d.elf
-</span></span><span class="line"><span class="cl">        INSTALL /Users/lewiswestbury/src/personal/test_app/dist/debug/test_app_d.elf
-</span></span><span class="line"><span class="cl">        APPMETA /Users/lewiswestbury/.ufbt/build/test_app.fap
-</span></span><span class="line"><span class="cl">        FAP     /Users/lewiswestbury/.ufbt/build/test_app.fap
-</span></span><span class="line"><span class="cl">        INSTALL /Users/lewiswestbury/src/personal/test_app/dist/test_app.fap
-</span></span><span class="line"><span class="cl">        APPCHK  /Users/lewiswestbury/.ufbt/build/test_app.fap
-</span></span><span class="line"><span class="cl">                Target: 7, API: 26.0
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ ufbt
+</span></span><span style="display:flex;"><span>scons: Entering directory <span style="color:#e6db74">`</span>/Users/lewiswestbury/.ufbt/current/scripts/ufbt<span style="color:#960050;background-color:#1e0010">&#39;</span>
+</span></span><span style="display:flex;"><span>        CC      /Users/lewiswestbury/src/personal/test_app/test_app.c
+</span></span><span style="display:flex;"><span>        CDB     /Users/lewiswestbury/src/personal/test_app/.vscode/compile_commands.json
+</span></span><span style="display:flex;"><span>        LINK    /Users/lewiswestbury/.ufbt/build/test_app_d.elf
+</span></span><span style="display:flex;"><span>        INSTALL /Users/lewiswestbury/src/personal/test_app/dist/debug/test_app_d.elf
+</span></span><span style="display:flex;"><span>        APPMETA /Users/lewiswestbury/.ufbt/build/test_app.fap
+</span></span><span style="display:flex;"><span>        FAP     /Users/lewiswestbury/.ufbt/build/test_app.fap
+</span></span><span style="display:flex;"><span>        INSTALL /Users/lewiswestbury/src/personal/test_app/dist/test_app.fap
+</span></span><span style="display:flex;"><span>        APPCHK  /Users/lewiswestbury/.ufbt/build/test_app.fap
+</span></span><span style="display:flex;"><span>                Target: 7, API: 26.0
 </span></span></code></pre></div><p>Provided <code>ufbt</code> and your Flipper agree on the firmware version, you can deploy it to your Flipper to try it out:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ ufbt launch
-</span></span><span class="line"><span class="cl">scons: Entering directory <span class="sb">`</span>/Users/lewiswestbury/.ufbt/current/scripts/ufbt<span class="err">&#39;</span>
-</span></span><span class="line"><span class="cl">python3 <span class="s2">&#34;/Users/lewiswestbury/.ufbt/current/scripts/runfap.py&#34;</span> -s /Users/lewiswestbury/.ufbt/build/test_app.fap -t /ext/apps/Examples/test_app.fap
-</span></span><span class="line"><span class="cl">        APPCHK  /Users/lewiswestbury/.ufbt/build/test_app.fap
-</span></span><span class="line"><span class="cl">                Target: 7, API: 26.0
-</span></span><span class="line"><span class="cl">2023-05-06 23:38:36,824 <span class="o">[</span>INFO<span class="o">]</span> Using flip_Akurisau on /dev/cu.usbmodemflip_Akurisau1
-</span></span><span class="line"><span class="cl">2023-05-06 23:38:36,877 <span class="o">[</span>INFO<span class="o">]</span> Installing <span class="s2">&#34;/Users/lewiswestbury/.ufbt/build/test_app.fap&#34;</span> to /ext/apps/Examples/test_app.fap
-</span></span><span class="line"><span class="cl">2023-05-06 23:38:36,916 <span class="o">[</span>INFO<span class="o">]</span> Sending <span class="s2">&#34;/Users/lewiswestbury/.ufbt/build/test_app.fap&#34;</span> to <span class="s2">&#34;/ext/apps/Examples/test_app.fap&#34;</span>
-</span></span><span class="line"><span class="cl">100%, chunk <span class="m">1</span> of <span class="m">1</span>
-</span></span><span class="line"><span class="cl">2023-05-06 23:38:37,108 <span class="o">[</span>INFO<span class="o">]</span> Launching app: <span class="s2">&#34;Applications&#34;</span> /ext/apps/Examples/test_app.fap
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ ufbt launch
+</span></span><span style="display:flex;"><span>scons: Entering directory <span style="color:#e6db74">`</span>/Users/lewiswestbury/.ufbt/current/scripts/ufbt<span style="color:#960050;background-color:#1e0010">&#39;</span>
+</span></span><span style="display:flex;"><span>python3 <span style="color:#e6db74">&#34;/Users/lewiswestbury/.ufbt/current/scripts/runfap.py&#34;</span> -s /Users/lewiswestbury/.ufbt/build/test_app.fap -t /ext/apps/Examples/test_app.fap
+</span></span><span style="display:flex;"><span>        APPCHK  /Users/lewiswestbury/.ufbt/build/test_app.fap
+</span></span><span style="display:flex;"><span>                Target: 7, API: 26.0
+</span></span><span style="display:flex;"><span>2023-05-06 23:38:36,824 <span style="color:#f92672">[</span>INFO<span style="color:#f92672">]</span> Using flip_Akurisau on /dev/cu.usbmodemflip_Akurisau1
+</span></span><span style="display:flex;"><span>2023-05-06 23:38:36,877 <span style="color:#f92672">[</span>INFO<span style="color:#f92672">]</span> Installing <span style="color:#e6db74">&#34;/Users/lewiswestbury/.ufbt/build/test_app.fap&#34;</span> to /ext/apps/Examples/test_app.fap
+</span></span><span style="display:flex;"><span>2023-05-06 23:38:36,916 <span style="color:#f92672">[</span>INFO<span style="color:#f92672">]</span> Sending <span style="color:#e6db74">&#34;/Users/lewiswestbury/.ufbt/build/test_app.fap&#34;</span> to <span style="color:#e6db74">&#34;/ext/apps/Examples/test_app.fap&#34;</span>
+</span></span><span style="display:flex;"><span>100%, chunk <span style="color:#ae81ff">1</span> of <span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>2023-05-06 23:38:37,108 <span style="color:#f92672">[</span>INFO<span style="color:#f92672">]</span> Launching app: <span style="color:#e6db74">&#34;Applications&#34;</span> /ext/apps/Examples/test_app.fap
 </span></span></code></pre></div>
 <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
   <iframe src="https://www.youtube.com/embed/Lkau7hTrkLE" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
 </div>
 
 <p>If your firmware and <code>ufbt</code> don&rsquo;t agree, your Flipper will tell you about it. You can update the SDK you&rsquo;re building against with:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">ufbt update --channel<span class="o">=[</span>dev<span class="p">|</span>rc<span class="p">|</span>release<span class="o">]</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>ufbt update --channel<span style="color:#f92672">=[</span>dev|rc|release<span style="color:#f92672">]</span>
 </span></span></code></pre></div><p>You can change the firmware on your device using the qFlipper app, or:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">ufbt flash_usb
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>ufbt flash_usb
 </span></span></code></pre></div><p>(Swap for <code>ufbt flash</code> if you&rsquo;re using an ST link.)</p>
 <h2 id="putting-it-all-together">Putting it all together</h2>
 <p>This walk-through has hopefully covered everything required to initiate and launch a simple UI for a Flipper Zero app.</p>
@@ -498,40 +492,16 @@
 <li>Infrared - how to encode, send, receive, and decode messages</li>
 <li>Options for publishing your app</li>
 </ul>
-</div>
-        <div class="post-footer">
-            <div class="info">
-                <span class="separator"><a class="category" href="/categories/tutorial/">tutorial</a></span>
-                <span class="separator"><a class="tag" href="/tags/flipperzero/">FlipperZero</a><a class="tag" href="/tags/flipper/">flipper</a><a class="tag" href="/tags/app/">app</a><a class="tag" href="/tags/plugin/">plugin</a><a class="tag" href="/tags/coding/">coding</a><a class="tag" href="/tags/c/">c</a><a class="tag" href="/tags/clang/">clang</a><a class="tag" href="/tags/ufbt/">ufbt</a><a class="tag" href="/tags/community/">community</a><a class="tag" href="/tags/project/">project</a><a class="tag" href="/tags/ui/">ui</a><a class="tag" href="/tags/gui/">gui</a><a class="tag" href="/tags/user-interface/">user interface</a><a class="tag" href="/tags/graphics/">graphics</a><a class="tag" href="/tags/view/">view</a><a class="tag" href="/tags/scene/">scene</a></span>
-                
-                  <p>
-                    See also:
-                    <ul><li><a href="https://instantiator.dev/post/flipper-zero-app-tutorial-01/">Building an app for Flipper Zero, part 1: Getting started</a></li>
-                    </ul>
-                  </p>
-                
-
-            </div>
-        </div>
-
-        
-    </div>
-
 
         </div>
     </div>
 </div>
 
-<script type="text/javascript"
-        src="/js/medium-zoom.min.e1c6918cbaa90022a5612f0bd71c7bf3be6d036614c5729cebfe14f7b91fa4bc.js"
-        integrity="sha256-4caRjLqpACKlYS8L1xx7875tA2YUxXKc6/4U97kfpLw="
-        crossorigin="anonymous"></script>
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-SHE42ZWKEN"></script>
+
+        </div><script src="/js/bootstrap.min.js"></script>
+<script src="/js/feather.min.js"></script>
+<script src="/js/mastodon-timeline.umd.js"></script>
 <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-SHE42ZWKEN');
+  feather.replace();
 </script></body>
-
 </html>
