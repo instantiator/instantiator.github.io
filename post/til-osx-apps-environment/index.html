@@ -34,7 +34,6 @@ if (!doNotTrack) {
 
 
 
-
     
     <link rel="stylesheet"
         href="/css/markupHighlight.min.59c08a266e8a6489aab7cb3ace4259db920d0e8893682a44ef8401387af97664.css"
@@ -175,32 +174,39 @@ if (!doNotTrack) {
     </div>
     <div class="col-lg" style="overflow-x: hidden;">
         <div id="post-content">
-            <h2>TIL - shell environment variables aren&#39;t available to OS X apps</h1>
-             
-<i data-feather="calendar"></i>
-<time datetime="2021-11-12">2021-11-12</time>
+            <h2>TIL - shell environment variables aren&#39;t available to OS X apps</h2>
+            <div class="mt-2">
+                 
 
-<br/>
-<i data-feather="tag"></i>
+<div class="mb-2">
+    <i data-feather="calendar"></i>
+    <time datetime="2021-11-12">2021-11-12</time>
+</div>
+
+<div>
+    <i data-feather="tag"></i>
+    
+        
+        <a class="badge bg-secondary" href="https://instantiator.dev/tags/til">#TIL</a>
+    
+        
+        <a class="badge bg-secondary" href="https://instantiator.dev/tags/os-x">#OS X</a>
+    
+        
+        <a class="badge bg-secondary" href="https://instantiator.dev/tags/environment">#environment</a>
+    
+        
+        <a class="badge bg-secondary" href="https://instantiator.dev/tags/shell">#shell</a>
+    
+        
+        <a class="badge bg-secondary" href="https://instantiator.dev/tags/applications">#applications</a>
+    
+</div>
 
 
-<a class="badge bg-secondary" href="https://instantiator.dev/tags/til">TIL</a>
-
-
-<a class="badge bg-secondary" href="https://instantiator.dev/tags/os-x">OS X</a>
-
-
-<a class="badge bg-secondary" href="https://instantiator.dev/tags/environment">environment</a>
-
-
-<a class="badge bg-secondary" href="https://instantiator.dev/tags/shell">shell</a>
-
-
-<a class="badge bg-secondary" href="https://instantiator.dev/tags/applications">applications</a>
-
-
-
-            <p><em>Just recently I have been exploring a very strange issue: My application couldn&rsquo;t find a tool that was right where it should be&hellip;</em></p>
+            </div>
+            <div class="mt-4">
+                <p><em>Just recently I have been exploring a very strange issue: My application couldn&rsquo;t find a tool that was right where it should be&hellip;</em></p>
 <p>I&rsquo;m building a C# project that relies on a library called <a href="https://github.com/rosenbjerg/FFMpegCore">FFMpegCore</a>. In turn, FFMpegCore relies on <a href="https://www.ffmpeg.org/">ffmpeg</a> - a complete, cross-platform solution to record, convert and stream audio and video.</p>
 <p>I discovered, though, that when testing my code in Visual Studio I had to provide the full path to <code>ffmpeg</code> - even though the documentation and examples suggested that wasn&rsquo;t necessary.</p>
 <p>I dug into the code of FFMpegCore to see how it was trying to launch and use <code>ffmpeg</code>. It creates a process, providing parameters with <code>ProcessStartInfo</code> - and it explicitly sets the <code>UseShellExecute</code> option to <code>false</code>.</p>
@@ -231,7 +237,16 @@ if (!doNotTrack) {
 </span></span></code></pre></div><p>It is also possible to launch Visual Studio from the terminal, using the <code>open</code> command - so giving it visibility of your shell&rsquo;s <code>PATH</code>:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>open -n /Applications/Visual<span style="color:#ae81ff">\ </span>Studio.app
 </span></span></code></pre></div>
+            </div>
         </div>
+
+        <div class="post-footer">
+            <div class="info">
+                
+
+            </div>
+        </div>
+
     </div>
 </div>
 
