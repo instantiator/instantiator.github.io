@@ -41,3 +41,11 @@ a {
 .pagination-default {
     box-shadow: var(--bs-box-shadow)!important;
 }
+
+.bg-primary {
+    background-color: cadetblue !important;
+}
+.bg-secondary {
+    background-color: rgb(185, 185, 185) !important;
+    font-weight: normal;
+}
