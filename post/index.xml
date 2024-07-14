@@ -6,8 +6,15 @@
     <description>Recent content in Posts on instantiator.dev</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sat, 11 Nov 2023 11:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 14 Jul 2024 12:00:00 +0000</lastBuildDate>
     <atom:link href="https://instantiator.dev/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Dracula and the Epistolorean</title>
+      <link>https://instantiator.dev/post/draculorean/</link>
+      <pubDate>Sun, 14 Jul 2024 12:00:00 +0000</pubDate>
+      <guid>https://instantiator.dev/post/draculorean/</guid>
+      <description>What is the Epistolorean, and what has it got to do with Count Dracula?</description>
+    </item>
     <item>
       <title>Open Social Distributor</title>
       <link>https://instantiator.dev/post/open-social-distributor/</link>

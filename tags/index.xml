@@ -6,8 +6,127 @@
     <description>Recent content in Tags on instantiator.dev</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sat, 11 Nov 2023 11:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 14 Jul 2024 12:00:00 +0000</lastBuildDate>
     <atom:link href="https://instantiator.dev/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>.Net</title>
+      <link>https://instantiator.dev/tags/.net/</link>
+      <pubDate>Sun, 14 Jul 2024 12:00:00 +0000</pubDate>
+      <guid>https://instantiator.dev/tags/.net/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Books</title>
+      <link>https://instantiator.dev/tags/books/</link>
+      <pubDate>Sun, 14 Jul 2024 12:00:00 +0000</pubDate>
+      <guid>https://instantiator.dev/tags/books/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Bram</title>
+      <link>https://instantiator.dev/tags/bram/</link>
+      <pubDate>Sun, 14 Jul 2024 12:00:00 +0000</pubDate>
+      <guid>https://instantiator.dev/tags/bram/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>C#</title>
+      <link>https://instantiator.dev/tags/c</link>
+      <pubDate>Sun, 14 Jul 2024 12:00:00 +0000</pubDate>
+      <guid>https://instantiator.dev/tags/c</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Count Dracula</title>
+      <link>https://instantiator.dev/tags/count-dracula/</link>
+      <pubDate>Sun, 14 Jul 2024 12:00:00 +0000</pubDate>
+      <guid>https://instantiator.dev/tags/count-dracula/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Dotnet</title>
+      <link>https://instantiator.dev/tags/dotnet/</link>
+      <pubDate>Sun, 14 Jul 2024 12:00:00 +0000</pubDate>
+      <guid>https://instantiator.dev/tags/dotnet/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Dracula</title>
+      <link>https://instantiator.dev/tags/dracula/</link>
+      <pubDate>Sun, 14 Jul 2024 12:00:00 +0000</pubDate>
+      <guid>https://instantiator.dev/tags/dracula/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Epistolary</title>
+      <link>https://instantiator.dev/tags/epistolary/</link>
+      <pubDate>Sun, 14 Jul 2024 12:00:00 +0000</pubDate>
+      <guid>https://instantiator.dev/tags/epistolary/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Epistolorean</title>
+      <link>https://instantiator.dev/tags/epistolorean/</link>
+      <pubDate>Sun, 14 Jul 2024 12:00:00 +0000</pubDate>
+      <guid>https://instantiator.dev/tags/epistolorean/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Literature</title>
+      <link>https://instantiator.dev/tags/literature/</link>
+      <pubDate>Sun, 14 Jul 2024 12:00:00 +0000</pubDate>
+      <guid>https://instantiator.dev/tags/literature/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Pi</title>
+      <link>https://instantiator.dev/tags/pi/</link>
+      <pubDate>Sun, 14 Jul 2024 12:00:00 +0000</pubDate>
+      <guid>https://instantiator.dev/tags/pi/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Project</title>
+      <link>https://instantiator.dev/tags/project/</link>
+      <pubDate>Sun, 14 Jul 2024 12:00:00 +0000</pubDate>
+      <guid>https://instantiator.dev/tags/project/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Raspberry-Pi</title>
+      <link>https://instantiator.dev/tags/raspberry-pi/</link>
+      <pubDate>Sun, 14 Jul 2024 12:00:00 +0000</pubDate>
+      <guid>https://instantiator.dev/tags/raspberry-pi/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Rpi</title>
+      <link>https://instantiator.dev/tags/rpi/</link>
+      <pubDate>Sun, 14 Jul 2024 12:00:00 +0000</pubDate>
+      <guid>https://instantiator.dev/tags/rpi/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Service</title>
+      <link>https://instantiator.dev/tags/service/</link>
+      <pubDate>Sun, 14 Jul 2024 12:00:00 +0000</pubDate>
+      <guid>https://instantiator.dev/tags/service/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Stoker</title>
+      <link>https://instantiator.dev/tags/stoker/</link>
+      <pubDate>Sun, 14 Jul 2024 12:00:00 +0000</pubDate>
+      <guid>https://instantiator.dev/tags/stoker/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Subscription</title>
+      <link>https://instantiator.dev/tags/subscription/</link>
+      <pubDate>Sun, 14 Jul 2024 12:00:00 +0000</pubDate>
+      <guid>https://instantiator.dev/tags/subscription/</guid>
+      <description></description>
+    </item>
     <item>
       <title>Discord</title>
       <link>https://instantiator.dev/tags/discord/</link>
@@ -296,13 +415,6 @@
       <description></description>
     </item>
     <item>
-      <title>Dotnet</title>
-      <link>https://instantiator.dev/tags/dotnet/</link>
-      <pubDate>Sun, 16 Jul 2023 10:00:00 +0000</pubDate>
-      <guid>https://instantiator.dev/tags/dotnet/</guid>
-      <description></description>
-    </item>
-    <item>
       <title>Hammer</title>
       <link>https://instantiator.dev/tags/hammer/</link>
       <pubDate>Sun, 16 Jul 2023 10:00:00 +0000</pubDate>
@@ -464,13 +576,6 @@
       <description></description>
     </item>
     <item>
-      <title>Project</title>
-      <link>https://instantiator.dev/tags/project/</link>
-      <pubDate>Fri, 05 May 2023 21:00:00 +0000</pubDate>
-      <guid>https://instantiator.dev/tags/project/</guid>
-      <description></description>
-    </item>
-    <item>
       <title>Scene</title>
       <link>https://instantiator.dev/tags/scene/</link>
       <pubDate>Fri, 05 May 2023 21:00:00 +0000</pubDate>
@@ -576,13 +681,6 @@
       <description></description>
     </item>
     <item>
-      <title>.Net</title>
-      <link>https://instantiator.dev/tags/.net/</link>
-      <pubDate>Mon, 17 Apr 2023 21:00:00 +0000</pubDate>
-      <guid>https://instantiator.dev/tags/.net/</guid>
-      <description></description>
-    </item>
-    <item>
       <title>AI</title>
       <link>https://instantiator.dev/tags/ai/</link>
       <pubDate>Mon, 17 Apr 2023 21:00:00 +0000</pubDate>
@@ -601,13 +699,6 @@
       <link>https://instantiator.dev/tags/artificialintelligence/</link>
       <pubDate>Mon, 17 Apr 2023 21:00:00 +0000</pubDate>
       <guid>https://instantiator.dev/tags/artificialintelligence/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>C#</title>
-      <link>https://instantiator.dev/tags/c</link>
-      <pubDate>Mon, 17 Apr 2023 21:00:00 +0000</pubDate>
-      <guid>https://instantiator.dev/tags/c</guid>
       <description></description>
     </item>
     <item>
@@ -2057,13 +2148,6 @@
       <link>https://instantiator.dev/tags/qos/</link>
       <pubDate>Fri, 14 Jun 2013 00:00:00 +0000</pubDate>
       <guid>https://instantiator.dev/tags/qos/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Service</title>
-      <link>https://instantiator.dev/tags/service/</link>
-      <pubDate>Fri, 14 Jun 2013 00:00:00 +0000</pubDate>
-      <guid>https://instantiator.dev/tags/service/</guid>
       <description></description>
     </item>
     <item>
