@@ -1,23 +1,37 @@
+:root {
+    color-scheme: light dark;
+    --light-text: rgb(40,44,55);
+    --dark-text: white;
+    --card-bg-dark: rgb(45,49,60);
+    --card-body-bg-dark: rgb(40,44,55);
+    --bg-dark: rgb(30,33,40);
+    --anchor-color: cadetblue;
+}
+  
+body {
+    background-color: light-dark(white, var(--bg-dark));
+    color: light-dark(var(--light-text), var(--dark-text));
+}
 
 .frosted-white {
-    background-color: rgba(255, 255, 255, 0.5);
+    background-color: light-dark(rgba(255, 255, 255, 0.5), rgba(40, 44, 55, 0.5));
     -webkit-backdrop-filter: blur(5px);
     backdrop-filter: blur(5px);
 }
 
 a {
     text-decoration: none;
-    color: cadetblue;
+    color: var(--anchor-color);
 }
 
 .mt-post a { 
     text-decoration: none !important;
-    color: cadetblue !important;
+    color: var(--anchor-color) !important;
 }
 
 .nav-link {
     text-decoration: none;
-    color: cadetblue;
+    color: var(--anchor-color);
 }
 
 .nav-link-active {
@@ -42,10 +56,28 @@ a {
     box-shadow: var(--bs-box-shadow)!important;
 }
 
+.navbar-brand {
+    color: light-dark(var(--light-text), var(--dark-text));
+}
+
 .bg-primary {
-    background-color: cadetblue !important;
+    background-color: var(--anchor-color) !important;
 }
 .bg-secondary {
-    background-color: rgb(185, 185, 185) !important;
+    background-color: light-dark(rgb(185, 185, 185), rgb(70,70,70)) !important;
     font-weight: normal;
+}
+
+.card {
+    color: light-dark(var(--light-text), var(--dark-text)) !important;
+    background: light-dark(var(--bs-card-bg), var(--card-bg-dark)) !important;
+}
+.card-body {
+    background: light-dark(var(--bs-card-bg), var(--card-body-bg-dark)) !important;
+}
+
+.list-group-item {
+    color: light-dark(var(--bs-list-group-color), var(--dark-text)) !important;
+    background: light-dark(var(--bs-list-group-bg), var(--card-bg-dark)) !important;
+    border-color: light-dark(var(--bs-list-group-border-color), var(--bg-dark)) !important;
 }
