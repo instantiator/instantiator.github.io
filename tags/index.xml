@@ -9,6 +9,20 @@
     <lastBuildDate>Sat, 24 Aug 2024 12:00:00 +0000</lastBuildDate>
     <atom:link href="https://instantiator.dev/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>Authors</title>
+      <link>https://instantiator.dev/tags/authors/</link>
+      <pubDate>Sat, 24 Aug 2024 12:00:00 +0000</pubDate>
+      <guid>https://instantiator.dev/tags/authors/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Books</title>
+      <link>https://instantiator.dev/tags/books/</link>
+      <pubDate>Sat, 24 Aug 2024 12:00:00 +0000</pubDate>
+      <guid>https://instantiator.dev/tags/books/</guid>
+      <description></description>
+    </item>
+    <item>
       <title>Calendar</title>
       <link>https://instantiator.dev/tags/calendar/</link>
       <pubDate>Sat, 24 Aug 2024 12:00:00 +0000</pubDate>
@@ -30,10 +44,31 @@
       <description></description>
     </item>
     <item>
+      <title>Fantasy</title>
+      <link>https://instantiator.dev/tags/fantasy/</link>
+      <pubDate>Sat, 24 Aug 2024 12:00:00 +0000</pubDate>
+      <guid>https://instantiator.dev/tags/fantasy/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Films</title>
+      <link>https://instantiator.dev/tags/films/</link>
+      <pubDate>Sat, 24 Aug 2024 12:00:00 +0000</pubDate>
+      <guid>https://instantiator.dev/tags/films/</guid>
+      <description></description>
+    </item>
+    <item>
       <title>Fun</title>
       <link>https://instantiator.dev/tags/fun/</link>
       <pubDate>Sat, 24 Aug 2024 12:00:00 +0000</pubDate>
       <guid>https://instantiator.dev/tags/fun/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Future</title>
+      <link>https://instantiator.dev/tags/future/</link>
+      <pubDate>Sat, 24 Aug 2024 12:00:00 +0000</pubDate>
+      <guid>https://instantiator.dev/tags/future/</guid>
       <description></description>
     </item>
     <item>
@@ -72,17 +107,17 @@
       <description></description>
     </item>
     <item>
+      <title>Science-Fiction</title>
+      <link>https://instantiator.dev/tags/science-fiction/</link>
+      <pubDate>Sat, 24 Aug 2024 12:00:00 +0000</pubDate>
+      <guid>https://instantiator.dev/tags/science-fiction/</guid>
+      <description></description>
+    </item>
+    <item>
       <title>.Net</title>
       <link>https://instantiator.dev/tags/.net/</link>
       <pubDate>Sun, 14 Jul 2024 12:00:00 +0000</pubDate>
       <guid>https://instantiator.dev/tags/.net/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Books</title>
-      <link>https://instantiator.dev/tags/books/</link>
-      <pubDate>Sun, 14 Jul 2024 12:00:00 +0000</pubDate>
-      <guid>https://instantiator.dev/tags/books/</guid>
       <description></description>
     </item>
     <item>

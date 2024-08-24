@@ -1,26 +1,19 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Books on instantiator.dev</title>
-    <link>https://instantiator.dev/tags/books/</link>
-    <description>Recent content in Books on instantiator.dev</description>
+    <title>Fantasy on instantiator.dev</title>
+    <link>https://instantiator.dev/tags/fantasy/</link>
+    <description>Recent content in Fantasy on instantiator.dev</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <lastBuildDate>Sat, 24 Aug 2024 12:00:00 +0000</lastBuildDate>
-    <atom:link href="https://instantiator.dev/tags/books/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://instantiator.dev/tags/fantasy/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>In this house we celebrate...</title>
       <link>https://instantiator.dev/post/in-this-house-we-celebrate/</link>
       <pubDate>Sat, 24 Aug 2024 12:00:00 +0000</pubDate>
       <guid>https://instantiator.dev/post/in-this-house-we-celebrate/</guid>
       <description>An alternative calendar for the geek in your heart&amp;hellip;&#xA;In this house we celebrate&amp;hellip; Here&amp;rsquo;s a fun alternative celebration calendar.</description>
-    </item>
-    <item>
-      <title>Dracula and the Epistolorean</title>
-      <link>https://instantiator.dev/post/draculorean/</link>
-      <pubDate>Sun, 14 Jul 2024 12:00:00 +0000</pubDate>
-      <guid>https://instantiator.dev/post/draculorean/</guid>
-      <description>What is The Epistolorean, and what has it got to do with Count Dracula?</description>
     </item>
   </channel>
 </rss>
