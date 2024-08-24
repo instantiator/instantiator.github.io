@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en"><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
+    <link rel="stylesheet" type="text/css" href="/css/mastodon-timeline.min.css">
+    
+    
+    <title>instantiator.dev | Configuring your Docker build</title>
+    
+    
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-SHE42ZWKEN"></script>
+<script>
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+	gtag('config', 'G-SHE42ZWKEN', { 'anonymize_ip': false });
+}
+</script>
+
+    <meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="http://localhost:1313/epistolorean/draculorean-poster.png" /><meta name="twitter:title" content="Configuring your Docker build"/>
+<meta name="twitter:description" content="Build environments and testing into your docker build process to keep errors out of your product."/>
+
+    <meta property="og:title" content="Configuring your Docker build" />
+<meta property="og:description" content="Build environments and testing into your docker build process to keep errors out of your product." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://localhost:1313/post/docker-build-patterns/" /><meta property="og:image" content="http://localhost:1313/epistolorean/draculorean-poster.png" /><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2024-08-24T12:00:00+00:00" />
+<meta property="article:modified_time" content="2024-08-24T12:00:00+00:00" /><meta property="og:site_name" content="instantiator.dev" />
+
+
+
+    
+    <link rel="stylesheet"
+        href="/css/markupHighlight.min.59c08a266e8a6489aab7cb3ace4259db920d0e8893682a44ef8401387af97664.css"
+        integrity="sha256-WcCKJm6KZImqt8s6zkJZ25INDoiTaCpE74QBOHr5dmQ="
+        crossorigin="anonymous"
+        type="text/css">
+
+    </head><body><nav id="nav" class="navbar sticky-top justify-content-start navbar-expand-md frosted-white shadow mb-4">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="/">instantiator.dev</a>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav">
+        
+        
+        <li class="nav-item">
+          <a class="nav-link " href="/">
+            
+             Home
+          </a>
+        </li>
+        
+        <li class="nav-item">
+          <a class="nav-link " href="/post/">
+            
+             All posts
+          </a>
+        </li>
+        
+        <li class="nav-item">
+          <a class="nav-link " href="/categories/tool/">
+            
+             Tools
+          </a>
+        </li>
+        
+        <li class="nav-item">
+          <a class="nav-link " href="/categories/tutorial/">
+            
+             Tutorials
+          </a>
+        </li>
+        
+        <li class="nav-item">
+          <a class="nav-link " href="/categories/article/">
+            
+             Articles
+          </a>
+        </li>
+        
+        <li class="nav-item">
+          <a class="nav-link " href="/about/">
+            
+             About
+          </a>
+        </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+<div class="container-fluid">
+
+<div class="row align-items-start">
+    <div class="col col-lg-3 d-none d-lg-block">
+      <div class="row mb-2">
+    <div class="col-3 col-lg-12 d-flex flex-column align-items-center">
+        <img 
+            src="/lewis/profile.jpg" alt="profile picture" 
+            class="mb-4 mt-4 img-thumbnail" 
+            style="border-radius: 50%; max-width: 200px; width: 100%;" />
+    </div>
+    <div class="col d-flex flex-column align-items-center">
+        <h3 class="mb-4"><a href="/">instantiator.dev</a></h3>
+        
+        <div style="text-align: center;" class="mb-4">
+            <p>tech, volunteers, public safety, collective intelligence, articles, tools, code and ideas</p>
+        </div>
+
+        <div class="d-flex flex-row justify-content-evenly align-self-stretch mb-4">
+            
+            <a href="https://mastodon.social/@instantiator" rel="me" aria-label="Mastodon" alt="Mastodon" target="_blank">
+                
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 418 512" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M433 179.11c0-97.2-63.71-125.7-63.71-125.7-62.52-28.7-228.56-28.4-290.48 0 0 0-63.72 28.5-63.72 125.7 0 115.7-6.6 259.4 105.63 289.1 40.51 10.7 75.32 13 103.33 11.4 50.81-2.8 79.32-18.1 79.32-18.1l-1.7-36.9s-36.31 11.4-77.12 10.1c-40.41-1.4-83-4.4-89.63-54a102.54 102.54 0 0 1-.9-13.9c85.63 20.9 158.65 9.1 178.75 6.7 56.12-6.7 105-41.3 111.23-72.9 9.8-49.8 9-121.5 9-121.5zm-75.12 125.2h-46.63v-114.2c0-49.7-64-51.6-64 6.9v62.5h-46.33V197c0-58.5-64-56.6-64-6.9v114.2H90.19c0-122.1-5.2-147.9 18.41-175 25.9-28.9 79.82-30.8 103.83 6.1l11.6 19.5 11.6-19.5c24.11-37.1 78.12-34.8 103.83-6.1 23.71 27.3 18.4 53 18.4 175z"></path></svg> 
+                
+            </a>
+            
+            <a href="https://github.com/instantiator" rel="me" aria-label="GitHub" alt="GitHub" target="_blank">
+                
+                <i data-feather="github" aria-hidden="true"></i>
+                
+            </a>
+            
+            <a href="https://www.linkedin.com/in/lewiswestbury" rel="me" aria-label="LinkedIn" alt="LinkedIn" target="_blank">
+                
+                <i data-feather="linkedin" aria-hidden="true"></i>
+                
+            </a>
+            
+            <a href="https://instantiator.dev/index.xml" rel="me" aria-label="RSS" alt="RSS" target="_blank">
+                
+                <i data-feather="rss" aria-hidden="true"></i>
+                
+            </a>
+            
+        </div>
+
+        <div class="d-flex flex-row justify-content-evenly align-self-stretch mb-4">
+            <ul>
+            
+                <li><a href="https://epistolorean.club" rel="me" aria-label="The Epistolorean" target="_blank">The Epistolorean</a></li>
+            
+                <li><a href="https://icgames.net" rel="me" aria-label="International Consensus Games" target="_blank">International Consensus Games</a></li>
+            
+                <li><a href="https://www.escapethereview.co.uk/profile/?user_id=11" rel="me" aria-label="Escape the Review profile" target="_blank">Escape the Review profile</a></li>
+            
+            </ul>
+        </div>
+
+        <div>
+            <span class="text-body-secondary fw-lighter">
+                &copy; Lewis Westbury  2024 
+            </span>
+        </div>
+    </div>
+</div>    
+
+
+
+    </div>
+    <div class="col-lg" style="overflow-x: hidden;">
+        <div id="post-content">
+            <h2 style="display: inline-block;">Configuring your Docker build</h2>
+                
+                    
+                        
+                        <a class="badge bg-primary" href="http://localhost:1313/categories/article">article</a>
+                    
+                
+            <div class="mt-2">
+                 
+
+<div class="mb-2">
+    <i data-feather="calendar"></i>
+    <time datetime="2024-08-24">2024-08-24</time>
+</div>
+
+<div>
+    <i data-feather="tag"></i>
+    
+        
+        <a class="badge bg-secondary" href="http://localhost:1313/tags/docker">#docker</a>
+    
+        
+        <a class="badge bg-secondary" href="http://localhost:1313/tags/container">#container</a>
+    
+        
+        <a class="badge bg-secondary" href="http://localhost:1313/tags/containerization">#containerization</a>
+    
+        
+        <a class="badge bg-secondary" href="http://localhost:1313/tags/testing">#testing</a>
+    
+        
+        <a class="badge bg-secondary" href="http://localhost:1313/tags/unit-testing">#unit-testing</a>
+    
+        
+        <a class="badge bg-secondary" href="http://localhost:1313/tags/tests">#tests</a>
+    
+</div>
+
+
+            </div>
+            <div class="mt-4">
+                <p>Build environments and testing into your docker build process to keep errors out of your product.</p>
+<h1 id="docker-build-patterns">Docker build patterns</h1>
+<p><a href="../draculorean/">The Epistolorean</a> is a containerized service, running on a Raspberry Pi.</p>
+<p>It&rsquo;s built using <a href="https://docs.docker.com/compose/">Docker Compose</a> - a way to define applications as interconnected containers.</p>
+<p>To keep it safe, it has:</p>
+<ul>
+<li>A number of different environments</li>
+<li>A wide selection of unit tests to prove that it&rsquo;s behaving as desired</li>
+</ul>
+<h2 id="why-environments">Why environments</h2>
+<p>Environments help to ensure that a new version of the application is tested and safe, by allowing us to run tests against it and use it in a safe environment without real data before promoting a version into production. You can think of them as separate running instances of your product.</p>
+<p>For small projects, you&rsquo;ll probably find 3 main environments:</p>
+<table>
+<thead>
+<tr>
+<th>Environment</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Development</td>
+<td>Each developer often has their own development environment. It means they can experiment with features without interrupting the shared code base that&rsquo;s being tested.</td>
+</tr>
+<tr>
+<td>Testing</td>
+<td>This is a shared environment, also referred to as <em>integration.</em> It&rsquo;s where code from developers is integrated and tested to ensure it&rsquo;s safe for production.</td>
+</tr>
+<tr>
+<td>Production</td>
+<td>This is the released product and it&rsquo;s where the real, live, data lives.</td>
+</tr>
+</tbody>
+</table>
+<p>Building 3 separate versions of your application could lead to a lot of duplicated code, and potentially big differences between your environments. This is best avoided, as your testing environment should be as close as possible to your production environment.</p>
+<p>Docker Compose allows you to combine files to define an application, you can exploit this to declare the different application environments.</p>
+<h3 id="example">Example</h3>
+<p>Consider this simple application from the Epistolorean. Docker Compose works with yaml files that define individual services within the application.</p>
+<p>Read more here:</p>
+<ul>
+<li><a href="/"></a></li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">version</span>: <span style="color:#e6db74">&#34;3.8&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># the basic service is partially defined here: epistolorean-service</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># environment variables are provided in the dev, int and prod compose yaml</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">services</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">epistolorean-service</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">depends_on</span>:
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">database</span>:
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">condition</span>: <span style="color:#ae81ff">service_healthy</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">healthcheck</span>:
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">test</span>: <span style="color:#ae81ff">bash -c &#34;[ -f /tmp/health.ready ]&#34;</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">interval</span>: <span style="color:#ae81ff">5s</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">timeout</span>: <span style="color:#ae81ff">10s</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">retries</span>: <span style="color:#ae81ff">12</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">build</span>:
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">context</span>: <span style="color:#ae81ff">.</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">dockerfile</span>: <span style="color:#ae81ff">Epistolorean.Service/Dockerfile</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">restart</span>: <span style="color:#ae81ff">unless-stopped</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">database</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">image</span>: <span style="color:#e6db74">&#34;postgres:latest&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">expose</span>:
+</span></span><span style="display:flex;"><span>      - <span style="color:#e6db74">&#34;${DB_PORT}&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">ports</span>:
+</span></span><span style="display:flex;"><span>      - <span style="color:#e6db74">&#34;${DB_PORT}:${DB_PORT}&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">command</span>: <span style="color:#e6db74">&#34;-p ${DB_PORT}&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">healthcheck</span>:
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">test</span>: [<span style="color:#e6db74">&#34;CMD&#34;</span>, <span style="color:#e6db74">&#34;pg_isready&#34;</span>, <span style="color:#e6db74">&#34;-U&#34;</span>, <span style="color:#e6db74">&#34;${POSTGRES_USER}&#34;</span>, <span style="color:#e6db74">&#34;-d&#34;</span>, <span style="color:#e6db74">&#34;${POSTGRES_DB}&#34;</span>, <span style="color:#e6db74">&#34;-p&#34;</span>, <span style="color:#e6db74">&#34;${DB_PORT}&#34;</span>]
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">interval</span>: <span style="color:#ae81ff">5s</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">timeout</span>: <span style="color:#ae81ff">10s</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">retries</span>: <span style="color:#ae81ff">12</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">restart</span>: <span style="color:#ae81ff">unless-stopped</span>
+</span></span></code></pre></div>
+            </div>
+        </div>
+
+        <div class="post-footer">
+            <div class="info">
+                
+
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+        </div><script src="/js/bootstrap.min.js"></script>
+<script src="/js/feather.min.js"></script>
+<script src="/js/mastodon-timeline.umd.js"></script>
+<script>
+  feather.replace();
+</script></body>
+</html>

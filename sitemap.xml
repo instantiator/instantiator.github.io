@@ -3,12 +3,51 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://instantiator.dev/</loc>
-    <lastmod>2024-07-14T12:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://instantiator.dev/tags/.net/</loc>
-    <lastmod>2024-07-14T12:00:00+00:00</lastmod>
+    <lastmod>2024-08-24T12:00:00+00:00</lastmod>
   </url><url>
     <loc>https://instantiator.dev/categories/article/</loc>
+    <lastmod>2024-08-24T12:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://instantiator.dev/tags/calendar/</loc>
+    <lastmod>2024-08-24T12:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://instantiator.dev/categories/</loc>
+    <lastmod>2024-08-24T12:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://instantiator.dev/tags/celebration/</loc>
+    <lastmod>2024-08-24T12:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://instantiator.dev/tags/event/</loc>
+    <lastmod>2024-08-24T12:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://instantiator.dev/tags/fun/</loc>
+    <lastmod>2024-08-24T12:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://instantiator.dev/tags/geek/</loc>
+    <lastmod>2024-08-24T12:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://instantiator.dev/tags/geeky/</loc>
+    <lastmod>2024-08-24T12:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://instantiator.dev/post/in-this-house-we-celebrate/</loc>
+    <lastmod>2024-08-24T12:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://instantiator.dev/tags/nerd/</loc>
+    <lastmod>2024-08-24T12:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://instantiator.dev/post/</loc>
+    <lastmod>2024-08-24T12:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://instantiator.dev/tags/reminder/</loc>
+    <lastmod>2024-08-24T12:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://instantiator.dev/tags/sci-fi/</loc>
+    <lastmod>2024-08-24T12:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://instantiator.dev/tags/</loc>
+    <lastmod>2024-08-24T12:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://instantiator.dev/tags/.net/</loc>
     <lastmod>2024-07-14T12:00:00+00:00</lastmod>
   </url><url>
     <loc>https://instantiator.dev/tags/books/</loc>
@@ -18,9 +57,6 @@
     <lastmod>2024-07-14T12:00:00+00:00</lastmod>
   </url><url>
     <loc>https://instantiator.dev/tags/c</loc>
-    <lastmod>2024-07-14T12:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://instantiator.dev/categories/</loc>
     <lastmod>2024-07-14T12:00:00+00:00</lastmod>
   </url><url>
     <loc>https://instantiator.dev/tags/count-dracula/</loc>
@@ -50,9 +86,6 @@
     <loc>https://instantiator.dev/tags/pi/</loc>
     <lastmod>2024-07-14T12:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://instantiator.dev/post/</loc>
-    <lastmod>2024-07-14T12:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://instantiator.dev/tags/project/</loc>
     <lastmod>2024-07-14T12:00:00+00:00</lastmod>
   </url><url>
@@ -69,9 +102,6 @@
     <lastmod>2024-07-14T12:00:00+00:00</lastmod>
   </url><url>
     <loc>https://instantiator.dev/tags/subscription/</loc>
-    <lastmod>2024-07-14T12:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://instantiator.dev/tags/</loc>
     <lastmod>2024-07-14T12:00:00+00:00</lastmod>
   </url><url>
     <loc>https://instantiator.dev/tags/vampire/</loc>
@@ -609,9 +639,6 @@
     <lastmod>2022-04-18T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://instantiator.dev/tags/cryptography/</loc>
-    <lastmod>2021-12-14T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://instantiator.dev/tags/fun/</loc>
     <lastmod>2021-12-14T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://instantiator.dev/tags/polynomial/</loc>
