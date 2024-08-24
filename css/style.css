@@ -5,7 +5,8 @@
     --card-bg-dark: rgb(45,49,60);
     --card-body-bg-dark: rgb(40,44,55);
     --bg-dark: rgb(30,33,40);
-    --anchor-color: cadetblue;
+    --anchor-color: rgb(95, 158, 160);
+    --anchor-color-disabled: rgba(95, 158, 160, 0.25)
 }
   
 body {
@@ -80,4 +81,15 @@ a {
     color: light-dark(var(--bs-list-group-color), var(--dark-text)) !important;
     background: light-dark(var(--bs-list-group-bg), var(--card-bg-dark)) !important;
     border-color: light-dark(var(--bs-list-group-border-color), var(--bg-dark)) !important;
+}
+
+.page-link {
+    background-color: light-dark(var(--bs-pagination-bg), var(--card-bg-dark)) !important;
+    color: var(--anchor-color) !important;
+    border-color: light-dark(var(--bs-pagination-border-color), var(--bg-dark)) !important;
+}
+
+.disabled>.page-link {
+    /* var(--bs-pagination-disabled-color) */
+    color: var(--anchor-color-disabled) !important;
 }
