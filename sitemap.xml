@@ -3,10 +3,76 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://instantiator.dev/</loc>
-    <lastmod>2024-08-24T12:00:00+00:00</lastmod>
+    <lastmod>2024-09-01T12:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://instantiator.dev/tags/.net/</loc>
+    <lastmod>2024-09-01T12:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://instantiator.dev/tags/actions/</loc>
+    <lastmod>2024-09-01T12:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://instantiator.dev/tags/app/</loc>
+    <lastmod>2024-09-01T12:00:00+00:00</lastmod>
   </url><url>
     <loc>https://instantiator.dev/categories/article/</loc>
-    <lastmod>2024-08-24T12:00:00+00:00</lastmod>
+    <lastmod>2024-09-01T12:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://instantiator.dev/categories/</loc>
+    <lastmod>2024-09-01T12:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://instantiator.dev/tags/ci/</loc>
+    <lastmod>2024-09-01T12:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://instantiator.dev/tags/collaborative/</loc>
+    <lastmod>2024-09-01T12:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://instantiator.dev/tags/collective-intelligence/</loc>
+    <lastmod>2024-09-01T12:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://instantiator.dev/tags/communities/</loc>
+    <lastmod>2024-09-01T12:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://instantiator.dev/tags/data/</loc>
+    <lastmod>2024-09-01T12:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://instantiator.dev/tags/gha/</loc>
+    <lastmod>2024-09-01T12:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://instantiator.dev/tags/github/</loc>
+    <lastmod>2024-09-01T12:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://instantiator.dev/tags/list/</loc>
+    <lastmod>2024-09-01T12:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://instantiator.dev/tags/listsky/</loc>
+    <lastmod>2024-09-01T12:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://instantiator.dev/post/listsky/</loc>
+    <lastmod>2024-09-01T12:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://instantiator.dev/tags/open/</loc>
+    <lastmod>2024-09-01T12:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://instantiator.dev/tags/organise/</loc>
+    <lastmod>2024-09-01T12:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://instantiator.dev/tags/people/</loc>
+    <lastmod>2024-09-01T12:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://instantiator.dev/post/</loc>
+    <lastmod>2024-09-01T12:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://instantiator.dev/tags/repository/</loc>
+    <lastmod>2024-09-01T12:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://instantiator.dev/tags/</loc>
+    <lastmod>2024-09-01T12:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://instantiator.dev/tags/tool/</loc>
+    <lastmod>2024-09-01T12:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://instantiator.dev/categories/tool/</loc>
+    <lastmod>2024-09-01T12:00:00+00:00</lastmod>
   </url><url>
     <loc>https://instantiator.dev/tags/authors/</loc>
     <lastmod>2024-08-24T12:00:00+00:00</lastmod>
@@ -15,9 +81,6 @@
     <lastmod>2024-08-24T12:00:00+00:00</lastmod>
   </url><url>
     <loc>https://instantiator.dev/tags/calendar/</loc>
-    <lastmod>2024-08-24T12:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://instantiator.dev/categories/</loc>
     <lastmod>2024-08-24T12:00:00+00:00</lastmod>
   </url><url>
     <loc>https://instantiator.dev/tags/celebration/</loc>
@@ -50,9 +113,6 @@
     <loc>https://instantiator.dev/tags/nerd/</loc>
     <lastmod>2024-08-24T12:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://instantiator.dev/post/</loc>
-    <lastmod>2024-08-24T12:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://instantiator.dev/tags/reminder/</loc>
     <lastmod>2024-08-24T12:00:00+00:00</lastmod>
   </url><url>
@@ -61,12 +121,6 @@
   </url><url>
     <loc>https://instantiator.dev/tags/science-fiction/</loc>
     <lastmod>2024-08-24T12:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://instantiator.dev/tags/</loc>
-    <lastmod>2024-08-24T12:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://instantiator.dev/tags/.net/</loc>
-    <lastmod>2024-07-14T12:00:00+00:00</lastmod>
   </url><url>
     <loc>https://instantiator.dev/tags/bram/</loc>
     <lastmod>2024-07-14T12:00:00+00:00</lastmod>
@@ -158,9 +212,6 @@
     <loc>https://instantiator.dev/tags/thread/</loc>
     <lastmod>2023-11-11T11:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://instantiator.dev/categories/tool/</loc>
-    <lastmod>2023-11-11T11:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://instantiator.dev/categories/hack/</loc>
     <lastmod>2023-09-12T00:00:00+00:00</lastmod>
   </url><url>
@@ -174,9 +225,6 @@
     <lastmod>2023-09-12T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://instantiator.dev/tags/react/</loc>
-    <lastmod>2023-09-12T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://instantiator.dev/tags/repository/</loc>
     <lastmod>2023-09-12T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://instantiator.dev/tags/reveal/</loc>
@@ -248,9 +296,6 @@
     <loc>https://instantiator.dev/tags/social-network/</loc>
     <lastmod>2023-07-18T17:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://instantiator.dev/tags/tool/</loc>
-    <lastmod>2023-07-18T17:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://instantiator.dev/tags/convert/</loc>
     <lastmod>2023-07-16T10:00:00+00:00</lastmod>
   </url><url>
@@ -258,9 +303,6 @@
     <lastmod>2023-07-16T10:00:00+00:00</lastmod>
   </url><url>
     <loc>https://instantiator.dev/tags/csv/</loc>
-    <lastmod>2023-07-16T10:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://instantiator.dev/tags/data/</loc>
     <lastmod>2023-07-16T10:00:00+00:00</lastmod>
   </url><url>
     <loc>https://instantiator.dev/tags/datascience/</loc>
@@ -310,9 +352,6 @@
   </url><url>
     <loc>https://instantiator.dev/post/world-server/</loc>
     <lastmod>2023-07-02T13:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://instantiator.dev/tags/app/</loc>
-    <lastmod>2023-05-05T21:00:00+00:00</lastmod>
   </url><url>
     <loc>https://instantiator.dev/post/flipper-zero-app-tutorial-02/</loc>
     <lastmod>2023-05-05T21:00:00+00:00</lastmod>
