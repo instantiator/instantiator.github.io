@@ -200,7 +200,7 @@
 
 
   </div>
-  <div class="col-xl-3 col-lg-8">
+  <div class="col-xl-4 col-lg-8">
     <div class="d-flex flex-column gap-2">
       
       
@@ -843,27 +843,28 @@ I have underway will be suspended when it does.</p></p>
 
     </div>
   </div>
-  <div class="col-xl-4 col-lg-6 col-sm-12">
+  <div class="col-xl-3 col-lg-6 col-sm-12">
     
 <div class="card mb-2">
-    <div class="card-header p-2">
-        <a href="https://bsky.app/profile/instantiator.bsky.social" target="_blank">instantiator.bsky.social</a>
-    </div>
-    <div class="card-body p-2" style="overflow-x: scroll;">
-        <bsky-embed
-            username="instantiator.bsky.social"
-            limit="10"
-            link-target="_blank"
-            link-image="true"
-            load-more="true"
-            disable-styles="false"
-            custom-styles="article { padding-left: 0.25rem !important; padding-right: 0.25rem !important; padding-top: 0.5rem !important; padding-bottom: 0.5rem !important; }"
-            >
+  <div class="card-header p-2">
+    <a href="https://bsky.app/profile/instantiator.bsky.social" target="_blank">instantiator.bsky.social</a>
+  </div>
+  <div class="card-body p-2">
+      <bsky-embed
+        username="instantiator.bsky.social"
+        limit="10"
+        link-target="_blank"
+        link-image="true"
+        load-more="true"
+        disable-styles="false"
+        custom-styles="div.w-full { font-size: 0.95em; overflow-wrap: break-word; width: '100%'; overflow-x: hidden; } article { padding-left: 0.25rem !important; padding-right: 0.25rem !important; padding-top: 0.5rem !important; padding-bottom: 0.5rem !important; }"
+      >
       </bsky-embed>
-    </div>
+  </div>
 </div>
 
 <script type="module" src="https://cdn.jsdelivr.net/npm/bsky-embed/dist/bsky-embed.es.js" async></script>
+
 
   </div>
   <div class="col-xl-3 col-lg-6 col-sm-12">
@@ -875,7 +876,7 @@ I have underway will be suspended when it does.</p></p>
     <div class="card-body p-2" style="overflow-x: scroll;">
         <div id="mt-container" class="mt-container">
             <style>div.mt-body article { padding: 0 !important; padding-top: 0.5rem !important; padding-bottom: 0.5rem !important; }</style>
-            <div class="mt-body" role="feed" style="padding: 0 !important;">
+            <div class="mt-body" role="feed" style="padding: 0 !important; font-size: 0.95em !important;">
                 <div class="mt-loading-spinner"></div>
             </div>
         </div>
@@ -892,7 +893,8 @@ window.addEventListener("load", () => {
     hidePinnedPosts: false,
     hideReplies: true,
     maxNbPostFetch: 20,
-    maxNbPostShow: 10
+    maxNbPostShow: 10,
+    markdownBlockquote: true
   });
 });
 </script>
