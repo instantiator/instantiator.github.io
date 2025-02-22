@@ -5,8 +5,8 @@
     --card-bg-dark: rgb(45,49,60);
     --card-body-bg-dark: rgb(40,44,55);
     --bg-dark: rgb(30,33,40);
-    --anchor-color: rgb(95, 158, 160);
-    --anchor-color-disabled: rgba(95, 158, 160, 0.25)
+    --anchor-color: rgb(95, 158, 160) !important;
+    --anchor-color-disabled: rgba(95, 158, 160, 0.25) !important;
 }
   
 body {
@@ -25,7 +25,7 @@ body {
 }
 
 a {
-    text-decoration: none;
+    text-decoration: none !important;
     color: var(--anchor-color);
 }
 
