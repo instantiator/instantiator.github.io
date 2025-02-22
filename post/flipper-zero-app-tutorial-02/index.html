@@ -10,29 +10,43 @@
     <title>instantiator.dev | Building an app for Flipper Zero, part 2: A simple user interface</title>
     
     
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-SHE42ZWKEN"></script>
-<script>
-var doNotTrack = false;
-if (!doNotTrack) {
-	window.dataLayer = window.dataLayer || [];
-	function gtag(){dataLayer.push(arguments);}
-	gtag('js', new Date());
-	gtag('config', 'G-SHE42ZWKEN', { 'anonymize_ip': false });
-}
-</script>
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-SHE42ZWKEN"></script>
+      <script>
+        var doNotTrack = false;
+        if ( false ) {
+          var dnt = (navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack);
+          var doNotTrack = (dnt == "1" || dnt == "yes");
+        }
+        if (!doNotTrack) {
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-SHE42ZWKEN');
+        }
+      </script>
+    
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://github.com/instantiator/flipper-zero-experimental-apps/raw/main/resistors/.flipcorg/banner.png">
+  <meta name="twitter:title" content="Building an app for Flipper Zero, part 2: A simple user interface">
+  <meta name="twitter:description" content="In this part, we’ll build a simple user interface for a Flipper Zero app.">
 
-    <meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:image" content="https://github.com/instantiator/flipper-zero-experimental-apps/raw/main/resistors/.flipcorg/banner.png" /><meta name="twitter:title" content="Building an app for Flipper Zero, part 2: A simple user interface"/>
-<meta name="twitter:description" content="In this part, we&rsquo;ll build a simple user interface for a Flipper Zero app."/>
-
-    <meta property="og:title" content="Building an app for Flipper Zero, part 2: A simple user interface" />
-<meta property="og:description" content="In this part, we&rsquo;ll build a simple user interface for a Flipper Zero app." />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://instantiator.dev/post/flipper-zero-app-tutorial-02/" /><meta property="og:image" content="https://github.com/instantiator/flipper-zero-experimental-apps/raw/main/resistors/.flipcorg/banner.png" /><meta property="article:section" content="post" />
-<meta property="article:published_time" content="2023-05-05T21:00:00+00:00" />
-<meta property="article:modified_time" content="2023-05-05T21:00:00+00:00" /><meta property="og:site_name" content="instantiator.dev" />
-<meta property="og:see_also" content="https://instantiator.dev/post/flipper-zero-app-tutorial-01/" />
-
+    <meta property="og:url" content="https://instantiator.dev/post/flipper-zero-app-tutorial-02/">
+  <meta property="og:site_name" content="instantiator.dev">
+  <meta property="og:title" content="Building an app for Flipper Zero, part 2: A simple user interface">
+  <meta property="og:description" content="In this part, we’ll build a simple user interface for a Flipper Zero app.">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="post">
+    <meta property="article:published_time" content="2023-05-05T21:00:00+00:00">
+    <meta property="article:modified_time" content="2023-05-05T21:00:00+00:00">
+    <meta property="article:tag" content="FlipperZero">
+    <meta property="article:tag" content="Flipper">
+    <meta property="article:tag" content="App">
+    <meta property="article:tag" content="Plugin">
+    <meta property="article:tag" content="Coding">
+    <meta property="article:tag" content="C">
+    <meta property="og:image" content="https://github.com/instantiator/flipper-zero-experimental-apps/raw/main/resistors/.flipcorg/banner.png">
+      <meta property="og:see_also" content="https://instantiator.dev/post/flipper-zero-app-tutorial-01/">
 
 
     
@@ -309,8 +323,7 @@ if (!doNotTrack) {
 <h2 id="scenes-and-views">Scenes and views</h2>
 <p>A user interface is broken down into views, each of which is a visual component (such as a menu, popup, file browser, or text input&hellip;)</p>
 <blockquote>
-<p>For a guide to the various components, I recommend Brodan&rsquo;s <a href="https://brodan.biz/blog/a-visual-guide-to-flipper-zero-gui-components/">Visual Guide to Flipper Zero GUI Modules</a>. The most adaptable of these is the <code>Widget</code> view, which deserve a tutorial of its own. For an example of its use, see the resistor editing scene in the Resistance Calculator app: <a href="https://github.com/instantiator/flipper-zero-experimental-apps/blob/main/resistors/src/scene_edit.c">scene_edit.c </a></p>
-</blockquote>
+<p>For a guide to the various components, I recommend Brodan&rsquo;s <a href="https://brodan.biz/blog/a-visual-guide-to-flipper-zero-gui-components/">Visual Guide to Flipper Zero GUI Modules</a>. The most adaptable of these is the <code>Widget</code> view, which deserve a tutorial of its own. For an example of its use, see the resistor editing scene in the Resistance Calculator app: <a href="https://github.com/instantiator/flipper-zero-experimental-apps/blob/main/resistors/src/scene_edit.c">scene_edit.c </a></p></blockquote>
 <p>We&rsquo;ll take a look at a the <code>Menu</code> and <code>Popup</code> components in a little more detail as a part of this tutorial.</p>
 <p>Scenes are a layer of abstraction above views, allowing you to define a number of scene handler functions - responsible for rendering the view on entering a scene, destroying it on exit, and responding to events while the scene is active.</p>
 <h2 id="scenemanager-and-viewdispatcher"><code>SceneManager</code> and <code>ViewDispatcher</code></h2>
@@ -405,8 +418,7 @@ if (!doNotTrack) {
 <p>The menu view itself has an additional callback of its own:</p>
 <p><code>test_app_menu_callback_main_menu</code> is provided with a value from <code>TestAppMenuSelection</code> indicating the selection that the user made. This is then used to determine which event from <code>TestAppEvent</code> to send to the scene&rsquo;s custom event handler function with a call to <code>scene_manager_handle_custom_event</code>.</p>
 <blockquote>
-<p>Sending events on to the scene manager, rather than handling them in the menu&rsquo;s callback, is good practise - ensuring that the <em>active</em> scene is sent the event, and that the scene&rsquo;s <code>_on_event</code> handler is the place where actions are initiated. This pattern ensures that your application&rsquo;s decision-making logic for each scene is easy to locate.</p>
-</blockquote>
+<p>Sending events on to the scene manager, rather than handling them in the menu&rsquo;s callback, is good practise - ensuring that the <em>active</em> scene is sent the event, and that the scene&rsquo;s <code>_on_event</code> handler is the place where actions are initiated. This pattern ensures that your application&rsquo;s decision-making logic for each scene is easy to locate.</p></blockquote>
 <h3 id="on-entering-the-main-menu-scene">On entering the main menu scene</h3>
 <p>When entering a scene, the <code>test_app_scene_on_enter_main_menu</code> function is called. This is responsible for setting up the scene, by initiating the view for the scene (and any other resources it needs), and then instructing the view dispatcher to switch to the appropriate view, with a call to: <code>view_dispatcher_switch_to_view</code></p>
 <p>First, the menu view is reset:</p>
@@ -530,10 +542,9 @@ if (!doNotTrack) {
 </span></span><span style="display:flex;"><span>2023-05-06 23:38:36,916 <span style="color:#f92672">[</span>INFO<span style="color:#f92672">]</span> Sending <span style="color:#e6db74">&#34;/Users/lewiswestbury/.ufbt/build/test_app.fap&#34;</span> to <span style="color:#e6db74">&#34;/ext/apps/Examples/test_app.fap&#34;</span>
 </span></span><span style="display:flex;"><span>100%, chunk <span style="color:#ae81ff">1</span> of <span style="color:#ae81ff">1</span>
 </span></span><span style="display:flex;"><span>2023-05-06 23:38:37,108 <span style="color:#f92672">[</span>INFO<span style="color:#f92672">]</span> Launching app: <span style="color:#e6db74">&#34;Applications&#34;</span> /ext/apps/Examples/test_app.fap
-</span></span></code></pre></div>
-<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-  <iframe src="https://www.youtube.com/embed/Lkau7hTrkLE" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
-</div>
+</span></span></code></pre></div><div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+      <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/Lkau7hTrkLE?autoplay=0&amp;controls=1&amp;end=0&amp;loop=0&amp;mute=0&amp;start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"></iframe>
+    </div>
 
 <p>If your firmware and <code>ufbt</code> don&rsquo;t agree, your Flipper will tell you about it. You can update the SDK you&rsquo;re building against with:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>ufbt update --channel<span style="color:#f92672">=[</span>dev|rc|release<span style="color:#f92672">]</span>

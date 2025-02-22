@@ -4,7 +4,7 @@
     <title>Docker Compose on instantiator.dev</title>
     <link>https://instantiator.dev/tags/docker-compose/</link>
     <description>Recent content in Docker Compose on instantiator.dev</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo</generator>
     <language>en</language>
     <lastBuildDate>Sun, 02 Jul 2023 13:00:00 +0000</lastBuildDate>
     <atom:link href="https://instantiator.dev/tags/docker-compose/index.xml" rel="self" type="application/rss+xml" />
@@ -13,7 +13,7 @@
       <link>https://instantiator.dev/post/world-server/</link>
       <pubDate>Sun, 02 Jul 2023 13:00:00 +0000</pubDate>
       <guid>https://instantiator.dev/post/world-server/</guid>
-      <description>A quick guide to running your own tile server, with a geo database populated from OpenStreetMap data.</description>
+      <description>&lt;p&gt;A quick guide to running your own tile server, with a geo database populated from &lt;a href=&#34;https://www.openstreetmap.org/&#34;&gt;OpenStreetMap&lt;/a&gt; data.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

@@ -10,28 +10,42 @@
     <title>instantiator.dev | Building AI into your application with Semantic Kernel</title>
     
     
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-SHE42ZWKEN"></script>
-<script>
-var doNotTrack = false;
-if (!doNotTrack) {
-	window.dataLayer = window.dataLayer || [];
-	function gtag(){dataLayer.push(arguments);}
-	gtag('js', new Date());
-	gtag('config', 'G-SHE42ZWKEN', { 'anonymize_ip': false });
-}
-</script>
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-SHE42ZWKEN"></script>
+      <script>
+        var doNotTrack = false;
+        if ( false ) {
+          var dnt = (navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack);
+          var doNotTrack = (dnt == "1" || dnt == "yes");
+        }
+        if (!doNotTrack) {
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-SHE42ZWKEN');
+        }
+      </script>
+    
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://instantiator.dev/sk/sk-logo.png">
+  <meta name="twitter:title" content="Building AI into your application with Semantic Kernel">
+  <meta name="twitter:description" content="This is a quick guide to some of the features of the Semantic Kernel, a Software Development Kit that simplifies integration of language models into your own applications.">
 
-    <meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:image" content="https://instantiator.dev/sk/sk-logo.png" /><meta name="twitter:title" content="Building AI into your application with Semantic Kernel"/>
-<meta name="twitter:description" content="This is a quick guide to some of the features of the Semantic Kernel, a Software Development Kit that simplifies integration of language models into your own applications."/>
-
-    <meta property="og:title" content="Building AI into your application with Semantic Kernel" />
-<meta property="og:description" content="This is a quick guide to some of the features of the Semantic Kernel, a Software Development Kit that simplifies integration of language models into your own applications." />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://instantiator.dev/post/you-too-can-llm/" /><meta property="og:image" content="https://instantiator.dev/sk/sk-logo.png" /><meta property="article:section" content="post" />
-<meta property="article:published_time" content="2023-04-17T21:00:00+00:00" />
-<meta property="article:modified_time" content="2023-04-17T21:00:00+00:00" /><meta property="og:site_name" content="instantiator.dev" />
-
+    <meta property="og:url" content="https://instantiator.dev/post/you-too-can-llm/">
+  <meta property="og:site_name" content="instantiator.dev">
+  <meta property="og:title" content="Building AI into your application with Semantic Kernel">
+  <meta property="og:description" content="This is a quick guide to some of the features of the Semantic Kernel, a Software Development Kit that simplifies integration of language models into your own applications.">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="post">
+    <meta property="article:published_time" content="2023-04-17T21:00:00+00:00">
+    <meta property="article:modified_time" content="2023-04-17T21:00:00+00:00">
+    <meta property="article:tag" content="GPT">
+    <meta property="article:tag" content="LargeLanguageModel">
+    <meta property="article:tag" content="LLM">
+    <meta property="article:tag" content="Semantic-Kernel">
+    <meta property="article:tag" content="Sdk">
+    <meta property="article:tag" content="C#">
+    <meta property="og:image" content="https://instantiator.dev/sk/sk-logo.png">
 
 
     
@@ -281,7 +295,7 @@ if (!doNotTrack) {
                 <p>This is a quick guide to some of the features of the Semantic Kernel, a Software Development Kit that simplifies integration of language models into your own applications.</p>
 <h1 id="the-semantic-kernel">The Semantic Kernel</h1>
 <p>The Semantic Kernel is in pre-release, and that means it&rsquo;s not complete, and has plenty of improvements coming. Nevertheless, it&rsquo;s a nice tool for interacting with the Large Language Models (LLMs) available from OpenAI, and Azure OpenAI. You can add it to your .NET projects as a library through NuGet, and once installed it makes the complex business of interacting with these APIs simple.</p>
-<p><img alt="A flow representing the Semantic Kernel&rsquo;s process. An Ask is fed into the Kernel, which then uses the Planner to conduct a number of steps marked S, M, and C. These, then lead to a Get request which is passed off to an LLM API." src="/sk/sk-flow.png"></p>
+<p><img src="/sk/sk-flow.png" alt="A flow representing the Semantic Kernel’s process. An Ask is fed into the Kernel, which then uses the Planner to conduct a number of steps marked S, M, and C. These, then lead to a Get request which is passed off to an LLM API."></p>
 <p>I work in C# but Semantic Kernel has support for several languages: C#, Python, and I&rsquo;m given to understand Java (soon!)</p>
 <h2 id="concepts">Concepts</h2>
 <p>The Semantic Kernel understands two kinds of operation:</p>
@@ -434,16 +448,13 @@ if (!doNotTrack) {
 <p>As with all other applications for Machine Learning, using Large Language Models to solve problems comes with hurdles and caveats.</p>
 <p>Take the time to read the <a href="https://learn.microsoft.com/en-us/semantic-kernel/responsibleai">Responsible AI Transparency Note</a> provided with the Semantic Kernel documentation.</p>
 <blockquote>
-<p>An AI system includes not only the technology, but also the people who will use it, the people who will be affected by it, and the environment in which it is deployed. Creating a system that is fit for its intended purpose requires an understanding of how the technology works, what its capabilities and limitations are, and how to achieve the best performance.</p>
-</blockquote>
+<p>An AI system includes not only the technology, but also the people who will use it, the people who will be affected by it, and the environment in which it is deployed. Creating a system that is fit for its intended purpose requires an understanding of how the technology works, what its capabilities and limitations are, and how to achieve the best performance.</p></blockquote>
 <p>Think hard about how you will apply artificial intelligence and machine learning to your problems, and don&rsquo;t be afraid to speak out if you see a risk to any users. Aim to build tools that help everyone equally, and take the time to eliminate bias wherever it may creep in.</p>
 <p><a href="https://leaddev.com/tech/lets-mitigate-bias-tech">Let&rsquo;s mitigate bias in tech</a> by Leslie Chapman is a good read.</p>
 <blockquote>
-<p>Try this exercise: gather ten people and have each one put together a list of what they think a truly diverse pool of users looks like. Then compare notes. I bet everyone has someone that they’ve missed on that list.</p>
-</blockquote>
+<p>Try this exercise: gather ten people and have each one put together a list of what they think a truly diverse pool of users looks like. Then compare notes. I bet everyone has someone that they’ve missed on that list.</p></blockquote>
 <blockquote>
-<p>No company sets out to create a product that’s going to be called “racist” – but it happens over and over again. You can be the voice that helps your company avoid that from ever taking place.</p>
-</blockquote>
+<p>No company sets out to create a product that’s going to be called “racist” – but it happens over and over again. You can be the voice that helps your company avoid that from ever taking place.</p></blockquote>
 
             </div>
         </div>

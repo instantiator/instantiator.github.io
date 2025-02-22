@@ -10,28 +10,42 @@
     <title>instantiator.dev | Secrets With Friends</title>
     
     
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-SHE42ZWKEN"></script>
-<script>
-var doNotTrack = false;
-if (!doNotTrack) {
-	window.dataLayer = window.dataLayer || [];
-	function gtag(){dataLayer.push(arguments);}
-	gtag('js', new Date());
-	gtag('config', 'G-SHE42ZWKEN', { 'anonymize_ip': false });
-}
-</script>
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-SHE42ZWKEN"></script>
+      <script>
+        var doNotTrack = false;
+        if ( false ) {
+          var dnt = (navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack);
+          var doNotTrack = (dnt == "1" || dnt == "yes");
+        }
+        if (!doNotTrack) {
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-SHE42ZWKEN');
+        }
+      </script>
+    
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://instantiator.dev/dps/key-splitting.png">
+  <meta name="twitter:title" content="Secrets With Friends">
+  <meta name="twitter:description" content="It’s possible to share a secret amongst a group of people so that only some of them are needed to reconstruct it…">
 
-    <meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:image" content="https://instantiator.dev/dps/key-splitting.png" /><meta name="twitter:title" content="Secrets With Friends"/>
-<meta name="twitter:description" content="It&rsquo;s possible to share a secret amongst a group of people so that only some of them are needed to reconstruct it&hellip;"/>
-
-    <meta property="og:title" content="Secrets With Friends" />
-<meta property="og:description" content="It&rsquo;s possible to share a secret amongst a group of people so that only some of them are needed to reconstruct it&hellip;" />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://instantiator.dev/post/secrets-with-friends/" /><meta property="og:image" content="https://instantiator.dev/dps/key-splitting.png" /><meta property="article:section" content="post" />
-<meta property="article:published_time" content="2021-12-14T00:00:00+00:00" />
-<meta property="article:modified_time" content="2021-12-14T00:00:00+00:00" /><meta property="og:site_name" content="instantiator.dev" />
-
+    <meta property="og:url" content="https://instantiator.dev/post/secrets-with-friends/">
+  <meta property="og:site_name" content="instantiator.dev">
+  <meta property="og:title" content="Secrets With Friends">
+  <meta property="og:description" content="It’s possible to share a secret amongst a group of people so that only some of them are needed to reconstruct it…">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="post">
+    <meta property="article:published_time" content="2021-12-14T00:00:00+00:00">
+    <meta property="article:modified_time" content="2021-12-14T00:00:00+00:00">
+    <meta property="article:tag" content="Cryptography">
+    <meta property="article:tag" content="Fun">
+    <meta property="article:tag" content="Secrets">
+    <meta property="article:tag" content="Sharing">
+    <meta property="article:tag" content="Trust">
+    <meta property="article:tag" content="SSSS">
+    <meta property="og:image" content="https://instantiator.dev/dps/key-splitting.png">
 
 
     
@@ -245,8 +259,7 @@ if (!doNotTrack) {
                 <p><em>It&rsquo;s possible to share a secret amongst a group of people so that only some of them are needed to reconstruct it&hellip;</em></p>
 <h1 id="secrets-with-friends">Secrets with Friends</h1>
 <blockquote>
-<p>Why would you even want to do that?</p>
-</blockquote>
+<p>Why would you even want to do that?</p></blockquote>
 <p>There are plenty of use cases for splitting secrets amongst different parties - so that no individual can uncover it alone. <a href="https://instantiator.dev/post/dead-person-switch/">Dead Person Switches</a> (the topic of my dissertation) might use this technique, and could be applied to:</p>
 <ul>
 <li>Protecting a whistleblower&rsquo;s secret</li>
@@ -254,13 +267,13 @@ if (!doNotTrack) {
 <li>Distribution of wealth after death</li>
 </ul>
 <p>More generally, it&rsquo;s desirable to be able to distribute fragments of a secret to an arbitrary number of people, and require that a subset of them be present to reconstruct it. This is known as a <code>K</code> of <code>N</code> distribution scheme.</p>
-<p><img alt="A key split amongst 3 people" src="/dps/key-splitting.png" title="A key split amongst 3 people"></p>
+<p><img src="/dps/key-splitting.png" alt="A key split amongst 3 people" title="A key split amongst 3 people"></p>
 <p>Using a <code>K</code> of <code>N</code> scheme allows us to prevent an individual from reconstructing the secret alone, but provides some resilience against a number of people being unable or unwilling to cooperate when it is time to uncover the secret.</p>
 <h2 id="shamirs-secret-sharing-scheme">Shamir&rsquo;s Secret Sharing Scheme</h2>
 <p>Shamir&rsquo;s Secret Sharing Scheme (SSSS) is a commonly used <code>K</code> of <code>N</code> threshold scheme. A secret can be divided into <code>N</code> fragments, of which only <code>K</code> are required to reconstruct it.</p>
 <p>In <a href="https://blog.lopp.net/fifteen-men-on-a-dead-man-s-switch/">15 Men on a Dead Man&rsquo;s Switch</a>, Jameson Lopp describes a method for encrypting and storing secrets, and distributing fragments of the decryption key to a number of trusted people, using SSSS to generate the fragments.</p>
 <p>A number of implementations of SSSS exist, including a unix tool which simplifies the process of dividing a secret into fragments. Jameson also suggests using a passphrase, and as the unix tool supports application of SSSS to secrets of up to 128 ASCII characters, this allows for the use of a <a href="https://xkcd.com/936/">strong passphrase</a>.</p>
-<p><img alt="Password Strength, XKCD comic" src="https://imgs.xkcd.com/comics/password_strength.png" title="Password Strength, XKCD comic"></p>
+<p><img src="https://imgs.xkcd.com/comics/password_strength.png" alt="Password Strength, XKCD comic" title="Password Strength, XKCD comic"></p>
 <h2 id="how-to-use-ssss">How to use SSSS</h2>
 <p>You can install SSSS on your Mac using <a href="https://brew.sh/">homebrew</a>:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>brew install ssss
@@ -285,34 +298,34 @@ if (!doNotTrack) {
 <h2 id="how-does-it-work">How does it work?</h2>
 <p>SSSS relies on the notion that <code>K</code> points can define a polynomial curve of degree <code>K-1</code>.</p>
 <table>
-<thead>
-<tr>
-<th>Points</th>
-<th>Polynomial curve</th>
-<th>Polynomial degree</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>2</td>
-<td>Line</td>
-<td>1</td>
-</tr>
-<tr>
-<td>3</td>
-<td>Parabola</td>
-<td>2</td>
-</tr>
-<tr>
-<td>4</td>
-<td>Cubic curve</td>
-<td>3</td>
-</tr>
-</tbody>
+  <thead>
+      <tr>
+          <th>Points</th>
+          <th>Polynomial curve</th>
+          <th>Polynomial degree</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>2</td>
+          <td>Line</td>
+          <td>1</td>
+      </tr>
+      <tr>
+          <td>3</td>
+          <td>Parabola</td>
+          <td>2</td>
+      </tr>
+      <tr>
+          <td>4</td>
+          <td>Cubic curve</td>
+          <td>3</td>
+      </tr>
+  </tbody>
 </table>
 <p><strong>If a specific polynomial curve is the secret,</strong> then a minimum of <code>K</code> points are required to reconstruct the original curve, and the degree of the polynomial defines <code>K</code>.</p>
 <p>For instance, here there are 2 parabolas (polynomials of degree 2), and given only 2 points it is not possible to distinguish them (or any other number of parabolas that pass through these points). However, by providing a third point, they can be disambiguated - and only 1 parabola will match a given set of 3 points.</p>
-<p><img alt="Parabolas" src="/dps/ssss-parabolas.png" title="Parabolas"></p>
+<p><img src="/dps/ssss-parabolas.png" alt="Parabolas" title="Parabolas"></p>
 <p>A subject can select <code>N</code> points from the curve, and give those to <code>N</code> trusted contacts. <code>N</code> can be arbitrarily large, provided it is larger than <code>K</code>, and so <code>K</code> of the <code>N</code> distributed points can be used to reconstruct the curve.</p>
 
             </div>

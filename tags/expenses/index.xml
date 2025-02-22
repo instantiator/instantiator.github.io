@@ -4,7 +4,7 @@
     <title>Expenses on instantiator.dev</title>
     <link>https://instantiator.dev/tags/expenses/</link>
     <description>Recent content in Expenses on instantiator.dev</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo</generator>
     <language>en</language>
     <lastBuildDate>Fri, 22 Sep 2017 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://instantiator.dev/tags/expenses/index.xml" rel="self" type="application/rss+xml" />
@@ -13,7 +13,7 @@
       <link>https://instantiator.dev/post/project-costs/</link>
       <pubDate>Fri, 22 Sep 2017 00:00:00 +0000</pubDate>
       <guid>https://instantiator.dev/post/project-costs/</guid>
-      <description>This article was originally posted to Medium.&#xA;Why are some projects so expensive?</description>
+      <description>&lt;p&gt;&lt;em&gt;This article was originally posted to Medium.&lt;/em&gt;&lt;/p&gt;&#xA;&lt;h1 id=&#34;why-are-some-projects-so-expensive-need-they-be&#34;&gt;Why are some projects so expensive? Need they be?&lt;/h1&gt;&#xA;&lt;p&gt;&lt;em&gt;This article is adapted from a response I gave to &lt;a href=&#34;https://www.reddit.com/r/coding/comments/6wvupz/how_i_replicated_an_86_million_project_in_57/&#34;&gt;the Reddit post&lt;/a&gt; for the Medium article &lt;a href=&#34;https://medium.com/@taitems/how-i-replicated-an-86-million-project-in-57-lines-of-code-277031330ee9&#34;&gt;How I replicated an $86 million project in 57 lines of code&lt;/a&gt; in &lt;a href=&#34;https://reddit.com/r/coding&#34;&gt;r/coding&lt;/a&gt; by &lt;a href=&#34;https://medium.com/@taitems&#34;&gt;Tait Brown&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

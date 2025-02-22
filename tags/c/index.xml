@@ -4,7 +4,7 @@
     <title>C on instantiator.dev</title>
     <link>https://instantiator.dev/tags/c/</link>
     <description>Recent content in C on instantiator.dev</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo</generator>
     <language>en</language>
     <lastBuildDate>Fri, 05 May 2023 21:00:00 +0000</lastBuildDate>
     <atom:link href="https://instantiator.dev/tags/c/index.xml" rel="self" type="application/rss+xml" />
@@ -13,14 +13,14 @@
       <link>https://instantiator.dev/post/flipper-zero-app-tutorial-02/</link>
       <pubDate>Fri, 05 May 2023 21:00:00 +0000</pubDate>
       <guid>https://instantiator.dev/post/flipper-zero-app-tutorial-02/</guid>
-      <description>In this part, we&amp;rsquo;ll build a simple user interface for a Flipper Zero app.</description>
+      <description>&lt;p&gt;In this part, we&amp;rsquo;ll build a simple user interface for a Flipper Zero app.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Building an app for Flipper Zero, part 1: Getting started</title>
       <link>https://instantiator.dev/post/flipper-zero-app-tutorial-01/</link>
       <pubDate>Fri, 05 May 2023 09:00:00 +0000</pubDate>
       <guid>https://instantiator.dev/post/flipper-zero-app-tutorial-01/</guid>
-      <description>FlipperZero is a digital signals multi-tool. Here&amp;rsquo;s a short guide to the basics of building an app for it&amp;hellip;</description>
+      <description>&lt;p&gt;FlipperZero is a digital signals multi-tool. Here&amp;rsquo;s a short guide to the basics of building an app for it&amp;hellip;&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

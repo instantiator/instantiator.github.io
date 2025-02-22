@@ -4,7 +4,7 @@
     <title>3D on instantiator.dev</title>
     <link>https://instantiator.dev/tags/3d/</link>
     <description>Recent content in 3D on instantiator.dev</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo</generator>
     <language>en</language>
     <lastBuildDate>Wed, 18 Jan 2023 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://instantiator.dev/tags/3d/index.xml" rel="self" type="application/rss+xml" />
@@ -13,14 +13,14 @@
       <link>https://instantiator.dev/post/printing-3d-crosswords/</link>
       <pubDate>Wed, 18 Jan 2023 00:00:00 +0000</pubDate>
       <guid>https://instantiator.dev/post/printing-3d-crosswords/</guid>
-      <description>A tool to design 3D printed crossword puzzles.&#xA;Generating 3D crossword models I&amp;rsquo;ve been working on a tool to generate crossword designs using OpenSCAD.</description>
+      <description>&lt;p&gt;A tool to design 3D printed crossword puzzles.&lt;/p&gt;&#xA;&lt;h1 id=&#34;generating-3d-crossword-models&#34;&gt;Generating 3D crossword models&lt;/h1&gt;&#xA;&lt;p&gt;I&amp;rsquo;ve been working on a tool to generate crossword designs using OpenSCAD. The output is an STL file that you can use with your favourite slicer and send to a 3D printer. It&amp;rsquo;s open source, and you&amp;rsquo;re free to plunder it for tips, techniques, or to generate your own&amp;hellip;&lt;/p&gt;</description>
     </item>
     <item>
       <title>Text adventures in 3D</title>
       <link>https://instantiator.dev/post/text-adventures-3d/</link>
       <pubDate>Tue, 29 Oct 2013 00:00:00 +0000</pubDate>
       <guid>https://instantiator.dev/post/text-adventures-3d/</guid>
-      <description>This is a necropost, resurrected from an old blog.&#xA;Educational games It&amp;rsquo;s time to take a look at a project from almost a decade ago!</description>
+      <description>&lt;p&gt;&lt;em&gt;This is a necropost, resurrected from an old blog.&lt;/em&gt;&lt;/p&gt;&#xA;&lt;h1 id=&#34;educational-games&#34;&gt;Educational games&lt;/h1&gt;&#xA;&lt;p&gt;It&amp;rsquo;s time to take a look at a project from almost a decade ago! Source code, screenshots, documentation and (old!) binaries are now available in the &lt;a href=&#34;https://github.com/instantiator/openbook-v2&#34;&gt;instantiator/openbook-v2&lt;/a&gt; GitHub repository.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

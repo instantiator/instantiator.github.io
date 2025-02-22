@@ -4,7 +4,7 @@
     <title>8-Bit on instantiator.dev</title>
     <link>https://instantiator.dev/tags/8-bit/</link>
     <description>Recent content in 8-Bit on instantiator.dev</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo</generator>
     <language>en</language>
     <lastBuildDate>Wed, 04 Jan 2023 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://instantiator.dev/tags/8-bit/index.xml" rel="self" type="application/rss+xml" />
@@ -13,7 +13,7 @@
       <link>https://instantiator.dev/post/8-bit-supercomputer/</link>
       <pubDate>Wed, 04 Jan 2023 00:00:00 +0000</pubDate>
       <guid>https://instantiator.dev/post/8-bit-supercomputer/</guid>
-      <description>It took me 3 weeks to complete the day 11 puzzle for Advent of Code on a BBC Micro this year, and you&amp;rsquo;d be hard pressed to describe my solution as &amp;ldquo;proportionate&amp;rdquo; or &amp;ldquo;necessary&amp;rdquo;&amp;hellip;</description>
+      <description>&lt;p&gt;It took me 3 weeks to complete the day 11 puzzle for Advent of Code on a BBC Micro this year, and you&amp;rsquo;d be hard pressed to describe my solution as &amp;ldquo;proportionate&amp;rdquo; or &amp;ldquo;necessary&amp;rdquo;&amp;hellip;&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

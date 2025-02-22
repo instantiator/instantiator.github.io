@@ -4,16 +4,23 @@
     <title>Infrastructure on instantiator.dev</title>
     <link>https://instantiator.dev/tags/infrastructure/</link>
     <description>Recent content in Infrastructure on instantiator.dev</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo</generator>
     <language>en</language>
-    <lastBuildDate>Sat, 25 May 2013 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 22 Feb 2025 11:00:00 +0000</lastBuildDate>
     <atom:link href="https://instantiator.dev/tags/infrastructure/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Bucket List - the bucket that wouldn&#39;t die</title>
+      <link>https://instantiator.dev/post/emptying-s3-buckets/</link>
+      <pubDate>Sat, 22 Feb 2025 11:00:00 +0000</pubDate>
+      <guid>https://instantiator.dev/post/emptying-s3-buckets/</guid>
+      <description>&lt;p&gt;&lt;em&gt;In which I present a short 3-act play about emptying a bucket, and a handy script to make it easy.&lt;/em&gt;&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Hack Highlight #1: Secure evidence recording</title>
       <link>https://instantiator.dev/post/htp1-highlight-1-secure-evidence-recorder/</link>
       <pubDate>Sat, 25 May 2013 00:00:00 +0000</pubDate>
       <guid>https://instantiator.dev/post/htp1-highlight-1-secure-evidence-recorder/</guid>
-      <description>This is a necropost, resurrected from an old blog. To find out more about Hack the Police events, civic tech, and policing technology, visit: Police Rewired</description>
+      <description>&lt;p&gt;&lt;em&gt;This is a necropost, resurrected from an old blog. To find out more about Hack the Police events, civic tech, and policing technology, visit: &lt;a href=&#34;https://policerewired.org&#34;&gt;Police Rewired&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

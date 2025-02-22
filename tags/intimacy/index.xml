@@ -4,7 +4,7 @@
     <title>Intimacy on instantiator.dev</title>
     <link>https://instantiator.dev/tags/intimacy/</link>
     <description>Recent content in Intimacy on instantiator.dev</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo</generator>
     <language>en</language>
     <lastBuildDate>Sun, 26 Nov 2017 13:00:00 +0000</lastBuildDate>
     <atom:link href="https://instantiator.dev/tags/intimacy/index.xml" rel="self" type="application/rss+xml" />
@@ -13,7 +13,7 @@
       <link>https://instantiator.dev/post/touch-pairing/</link>
       <pubDate>Sun, 26 Nov 2017 13:00:00 +0000</pubDate>
       <guid>https://instantiator.dev/post/touch-pairing/</guid>
-      <description>Touch pairing is an exploration of intimacy and closeness at a distance, from Sex Tech Hack 2017.</description>
+      <description>&lt;p&gt;&lt;em&gt;Touch pairing is an exploration of intimacy and closeness at a distance, from Sex Tech Hack 2017.&lt;/em&gt;&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

@@ -10,29 +10,43 @@
     <title>instantiator.dev | Building an app for Flipper Zero, part 1: Getting started</title>
     
     
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-SHE42ZWKEN"></script>
-<script>
-var doNotTrack = false;
-if (!doNotTrack) {
-	window.dataLayer = window.dataLayer || [];
-	function gtag(){dataLayer.push(arguments);}
-	gtag('js', new Date());
-	gtag('config', 'G-SHE42ZWKEN', { 'anonymize_ip': false });
-}
-</script>
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-SHE42ZWKEN"></script>
+      <script>
+        var doNotTrack = false;
+        if ( false ) {
+          var dnt = (navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack);
+          var doNotTrack = (dnt == "1" || dnt == "yes");
+        }
+        if (!doNotTrack) {
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-SHE42ZWKEN');
+        }
+      </script>
+    
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://github.com/instantiator/flipper-zero-experimental-apps/raw/main/resistors/.flipcorg/banner.png">
+  <meta name="twitter:title" content="Building an app for Flipper Zero, part 1: Getting started">
+  <meta name="twitter:description" content="FlipperZero is a digital signals multi-tool. Here’s a short guide to the basics of building an app for it…">
 
-    <meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:image" content="https://github.com/instantiator/flipper-zero-experimental-apps/raw/main/resistors/.flipcorg/banner.png" /><meta name="twitter:title" content="Building an app for Flipper Zero, part 1: Getting started"/>
-<meta name="twitter:description" content="FlipperZero is a digital signals multi-tool. Here&rsquo;s a short guide to the basics of building an app for it&hellip;"/>
-
-    <meta property="og:title" content="Building an app for Flipper Zero, part 1: Getting started" />
-<meta property="og:description" content="FlipperZero is a digital signals multi-tool. Here&rsquo;s a short guide to the basics of building an app for it&hellip;" />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://instantiator.dev/post/flipper-zero-app-tutorial-01/" /><meta property="og:image" content="https://github.com/instantiator/flipper-zero-experimental-apps/raw/main/resistors/.flipcorg/banner.png" /><meta property="article:section" content="post" />
-<meta property="article:published_time" content="2023-05-05T09:00:00+00:00" />
-<meta property="article:modified_time" content="2023-05-05T09:00:00+00:00" /><meta property="og:site_name" content="instantiator.dev" />
-<meta property="og:see_also" content="https://instantiator.dev/post/flipper-zero-app-tutorial-02/" />
-
+    <meta property="og:url" content="https://instantiator.dev/post/flipper-zero-app-tutorial-01/">
+  <meta property="og:site_name" content="instantiator.dev">
+  <meta property="og:title" content="Building an app for Flipper Zero, part 1: Getting started">
+  <meta property="og:description" content="FlipperZero is a digital signals multi-tool. Here’s a short guide to the basics of building an app for it…">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="post">
+    <meta property="article:published_time" content="2023-05-05T09:00:00+00:00">
+    <meta property="article:modified_time" content="2023-05-05T09:00:00+00:00">
+    <meta property="article:tag" content="FlipperZero">
+    <meta property="article:tag" content="Flipper">
+    <meta property="article:tag" content="App">
+    <meta property="article:tag" content="Plugin">
+    <meta property="article:tag" content="Coding">
+    <meta property="article:tag" content="C">
+    <meta property="og:image" content="https://github.com/instantiator/flipper-zero-experimental-apps/raw/main/resistors/.flipcorg/banner.png">
+      <meta property="og:see_also" content="https://instantiator.dev/post/flipper-zero-app-tutorial-02/">
 
 
     
@@ -263,11 +277,10 @@ if (!doNotTrack) {
 <h1 id="lets-build-an-app-for-flipper-zero">Let&rsquo;s build an app for Flipper Zero</h1>
 <p>Flipper Zero features several apps built directly into the firmware, but you can also create and install external apps onto the SD card which are then available through the Applications menu.</p>
 <h2 id="resistance-is-futile">Resistance is futile</h2>
-<p>With the help of several folks from the Flipper dev community, I recently built <a href="https://flipc.org/instantiator/flipper-zero-experimental-apps?branch=main&root=resistors">an app to calculate the value of resistors</a> by decoding the coloured bands on them.</p>
-
+<p>With the help of several folks from the Flipper dev community, I recently built <a href="https://flipc.org/instantiator/flipper-zero-experimental-apps?branch=main&amp;root=resistors">an app to calculate the value of resistors</a> by decoding the coloured bands on them.</p>
 <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-  <iframe src="https://www.youtube.com/embed/mCpjn93I1Sw" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
-</div>
+      <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/mCpjn93I1Sw?autoplay=0&amp;controls=1&amp;end=0&amp;loop=0&amp;mute=0&amp;start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"></iframe>
+    </div>
 
 <p>More detail and source code at:</p>
 <ul>
@@ -384,7 +397,7 @@ if (!doNotTrack) {
 </span></span></code></pre></div><p><code>ufbt</code> will also flash through an ST-link if you have that available:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>ufbt flash
 </span></span></code></pre></div><p>The <strong>qFlipper</strong> application also supports this:</p>
-<p><img alt="the qFlipper app showing the firmware view and the big green update button" src="/f0-tutorial/qflipper-update.png"></p>
+<p><img src="/f0-tutorial/qflipper-update.png" alt="the qFlipper app showing the firmware view and the big green update button"></p>
 <h3 id="create-a-skeleton-app">Create a skeleton app</h3>
 <p><code>ufbt create</code> will create a nice working environment for your app. Give your app a simple id, eg. <code>test_app</code> - you&rsquo;ll be able to change this later. Provide an id for the application, with the <code>APPID=</code> option.</p>
 <p><em>NB. I recommend using characters from the simple set of <code>a-zA-Z0-9_</code>. Restrict yourself to characters that can appear in a C function name, or you may end up having to rename the main function, and the entrypoint in your application manifest before you can build.</em></p>
@@ -406,7 +419,7 @@ if (!doNotTrack) {
 <li><code>ufbt-test.png</code> - a 10x10 1-bit png icon for the app</li>
 <li><code>images/</code> - a directory where you can place 1-bit png icons</li>
 </ul>
-<p><img alt="A screenshot of visual studio code showing a terminal with ufbt create, and the application manifest it has created" src="/f0-tutorial/ufbt-create.png"></p>
+<p><img src="/f0-tutorial/ufbt-create.png" alt="A screenshot of visual studio code showing a terminal with ufbt create, and the application manifest it has created"></p>
 <h3 id="test-a-build">Test a build</h3>
 <p>With no other options, <code>ufbt</code> will build your app.</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ ufbt 

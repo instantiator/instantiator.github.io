@@ -4,7 +4,7 @@
     <title>Distributed on instantiator.dev</title>
     <link>https://instantiator.dev/tags/distributed/</link>
     <description>Recent content in Distributed on instantiator.dev</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo</generator>
     <language>en</language>
     <lastBuildDate>Thu, 08 Dec 2022 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://instantiator.dev/tags/distributed/index.xml" rel="self" type="application/rss+xml" />
@@ -13,14 +13,14 @@
       <link>https://instantiator.dev/post/icgames-net/</link>
       <pubDate>Thu, 08 Dec 2022 00:00:00 +0000</pubDate>
       <guid>https://instantiator.dev/post/icgames-net/</guid>
-      <description>Consensus Chess is going through some beta testing on Mastodon, and you can play today!</description>
+      <description>&lt;p&gt;Consensus Chess is going through some beta testing on Mastodon, and you can play today!&lt;/p&gt;</description>
     </item>
     <item>
       <title>International Consensus Games (WIP)</title>
       <link>https://instantiator.dev/post/consensus-games/</link>
       <pubDate>Thu, 10 Nov 2022 00:00:00 +0000</pubDate>
       <guid>https://instantiator.dev/post/consensus-games/</guid>
-      <description>I&amp;rsquo;ve been working on a pet project recently: Consensus games are a fun new way to play together through social media&amp;hellip;</description>
+      <description>&lt;p&gt;I&amp;rsquo;ve been working on a pet project recently: Consensus games are a fun new way to play together through social media&amp;hellip;&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

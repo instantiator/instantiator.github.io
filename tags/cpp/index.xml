@@ -4,7 +4,7 @@
     <title>Cpp on instantiator.dev</title>
     <link>https://instantiator.dev/tags/cpp/</link>
     <description>Recent content in Cpp on instantiator.dev</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo</generator>
     <language>en</language>
     <lastBuildDate>Tue, 29 Oct 2013 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://instantiator.dev/tags/cpp/index.xml" rel="self" type="application/rss+xml" />
@@ -13,7 +13,7 @@
       <link>https://instantiator.dev/post/text-adventures-3d/</link>
       <pubDate>Tue, 29 Oct 2013 00:00:00 +0000</pubDate>
       <guid>https://instantiator.dev/post/text-adventures-3d/</guid>
-      <description>This is a necropost, resurrected from an old blog.&#xA;Educational games It&amp;rsquo;s time to take a look at a project from almost a decade ago!</description>
+      <description>&lt;p&gt;&lt;em&gt;This is a necropost, resurrected from an old blog.&lt;/em&gt;&lt;/p&gt;&#xA;&lt;h1 id=&#34;educational-games&#34;&gt;Educational games&lt;/h1&gt;&#xA;&lt;p&gt;It&amp;rsquo;s time to take a look at a project from almost a decade ago! Source code, screenshots, documentation and (old!) binaries are now available in the &lt;a href=&#34;https://github.com/instantiator/openbook-v2&#34;&gt;instantiator/openbook-v2&lt;/a&gt; GitHub repository.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

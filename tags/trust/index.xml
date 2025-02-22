@@ -4,7 +4,7 @@
     <title>Trust on instantiator.dev</title>
     <link>https://instantiator.dev/tags/trust/</link>
     <description>Recent content in Trust on instantiator.dev</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo</generator>
     <language>en</language>
     <lastBuildDate>Tue, 14 Dec 2021 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://instantiator.dev/tags/trust/index.xml" rel="self" type="application/rss+xml" />
@@ -13,14 +13,14 @@
       <link>https://instantiator.dev/post/secrets-with-friends/</link>
       <pubDate>Tue, 14 Dec 2021 00:00:00 +0000</pubDate>
       <guid>https://instantiator.dev/post/secrets-with-friends/</guid>
-      <description>It&amp;rsquo;s possible to share a secret amongst a group of people so that only some of them are needed to reconstruct it&amp;hellip;</description>
+      <description>&lt;p&gt;&lt;em&gt;It&amp;rsquo;s possible to share a secret amongst a group of people so that only some of them are needed to reconstruct it&amp;hellip;&lt;/em&gt;&lt;/p&gt;</description>
     </item>
     <item>
       <title>3 excellent ways to build trust with your users</title>
       <link>https://instantiator.dev/post/3-ways-build-trust/</link>
       <pubDate>Wed, 11 Oct 2017 00:00:00 +0000</pubDate>
       <guid>https://instantiator.dev/post/3-ways-build-trust/</guid>
-      <description>This article was originally posted to Medium.&#xA;3 excellent ways to build trust with your users I don’t see why it needs that permission!</description>
+      <description>&lt;p&gt;&lt;em&gt;This article was originally posted to Medium.&lt;/em&gt;&lt;/p&gt;&#xA;&lt;h1 id=&#34;3-excellent-ways-to-build-trust-with-your-users&#34;&gt;3 excellent ways to build trust with your users&lt;/h1&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;I don’t see why it needs that permission!&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

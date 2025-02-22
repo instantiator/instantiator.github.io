@@ -4,7 +4,7 @@
     <title>Programming on instantiator.dev</title>
     <link>https://instantiator.dev/tags/programming/</link>
     <description>Recent content in Programming on instantiator.dev</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo</generator>
     <language>en</language>
     <lastBuildDate>Sun, 03 Jan 2021 15:00:00 +0000</lastBuildDate>
     <atom:link href="https://instantiator.dev/tags/programming/index.xml" rel="self" type="application/rss+xml" />
@@ -13,7 +13,7 @@
       <link>https://instantiator.dev/post/what-language/</link>
       <pubDate>Sun, 03 Jan 2021 15:00:00 +0000</pubDate>
       <guid>https://instantiator.dev/post/what-language/</guid>
-      <description>Anyone can code. This is a short exploration of the choices for coding beginners out there.</description>
+      <description>&lt;h1 id=&#34;anyone-can-code&#34;&gt;Anyone can code.&lt;/h1&gt;&#xA;&lt;p&gt;This is a short exploration of the choices for coding beginners out there.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

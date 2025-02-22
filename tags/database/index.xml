@@ -4,7 +4,7 @@
     <title>Database on instantiator.dev</title>
     <link>https://instantiator.dev/tags/database/</link>
     <description>Recent content in Database on instantiator.dev</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo</generator>
     <language>en</language>
     <lastBuildDate>Sun, 08 Jan 2023 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://instantiator.dev/tags/database/index.xml" rel="self" type="application/rss+xml" />
@@ -13,7 +13,7 @@
       <link>https://instantiator.dev/post/rocketship-template/</link>
       <pubDate>Sun, 08 Jan 2023 00:00:00 +0000</pubDate>
       <guid>https://instantiator.dev/post/rocketship-template/</guid>
-      <description>Presenting a simple template to develop, publish, and test a simple C# service backend on AWS, with serverless Lambda functions, supported by DynamoDb, behind an API Gateway, and protected by Cognito auth.</description>
+      <description>&lt;p&gt;Presenting a simple template to develop, publish, and test a simple C# service backend on AWS, with serverless Lambda functions, supported by DynamoDb, behind an API Gateway, and protected by Cognito auth.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

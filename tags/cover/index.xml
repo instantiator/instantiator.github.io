@@ -4,7 +4,7 @@
     <title>Cover on instantiator.dev</title>
     <link>https://instantiator.dev/tags/cover/</link>
     <description>Recent content in Cover on instantiator.dev</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo</generator>
     <language>en</language>
     <lastBuildDate>Thu, 17 Jun 2021 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://instantiator.dev/tags/cover/index.xml" rel="self" type="application/rss+xml" />
@@ -13,7 +13,7 @@
       <link>https://instantiator.dev/post/markdown-thesis-template/</link>
       <pubDate>Thu, 17 Jun 2021 00:00:00 +0000</pubDate>
       <guid>https://instantiator.dev/post/markdown-thesis-template/</guid>
-      <description>The things I&amp;rsquo;ll do to avoid learning LaTeX&amp;hellip;&#xA;Do you prefer Markdown to LaTeX?</description>
+      <description>&lt;blockquote&gt;&#xA;&lt;p&gt;The things I&amp;rsquo;ll do to avoid learning LaTeX&amp;hellip;&lt;/p&gt;&lt;/blockquote&gt;&#xA;&lt;p&gt;Do you prefer Markdown to LaTeX?&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

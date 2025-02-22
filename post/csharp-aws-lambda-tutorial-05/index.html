@@ -10,29 +10,46 @@
     <title>instantiator.dev | Building an AWS Lambda in C#, part 5: S3</title>
     
     
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-SHE42ZWKEN"></script>
-<script>
-var doNotTrack = false;
-if (!doNotTrack) {
-	window.dataLayer = window.dataLayer || [];
-	function gtag(){dataLayer.push(arguments);}
-	gtag('js', new Date());
-	gtag('config', 'G-SHE42ZWKEN', { 'anonymize_ip': false });
-}
-</script>
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-SHE42ZWKEN"></script>
+      <script>
+        var doNotTrack = false;
+        if ( false ) {
+          var dnt = (navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack);
+          var doNotTrack = (dnt == "1" || dnt == "yes");
+        }
+        if (!doNotTrack) {
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-SHE42ZWKEN');
+        }
+      </script>
+    
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://instantiator.dev/csharp-aws-lambda-tutorial/000-heading-img.png">
+  <meta name="twitter:title" content="Building an AWS Lambda in C#, part 5: S3">
+  <meta name="twitter:description" content="In previous parts, we’ve built a Lambda that can query the OpenWeather API, using a secret key; and in this part we’ll extend it to write that data to S3.">
 
-    <meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:image" content="https://instantiator.dev/csharp-aws-lambda-tutorial/000-heading-img.png" /><meta name="twitter:title" content="Building an AWS Lambda in C#, part 5: S3"/>
-<meta name="twitter:description" content="In previous parts, we&rsquo;ve built a Lambda that can query the OpenWeather API, using a secret key; and in this part we&rsquo;ll extend it to write that data to S3."/>
-
-    <meta property="og:title" content="Building an AWS Lambda in C#, part 5: S3" />
-<meta property="og:description" content="In previous parts, we&rsquo;ve built a Lambda that can query the OpenWeather API, using a secret key; and in this part we&rsquo;ll extend it to write that data to S3." />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://instantiator.dev/post/csharp-aws-lambda-tutorial-05/" /><meta property="og:image" content="https://instantiator.dev/csharp-aws-lambda-tutorial/000-heading-img.png" /><meta property="article:section" content="post" />
-<meta property="article:published_time" content="2021-04-19T18:00:00+00:00" />
-<meta property="article:modified_time" content="2021-04-19T18:00:00+00:00" /><meta property="og:site_name" content="instantiator.dev" />
-<meta property="og:see_also" content="https://instantiator.dev/post/csharp-aws-lambda-tutorial-06/" /><meta property="og:see_also" content="https://instantiator.dev/post/csharp-aws-lambda-tutorial-04/" /><meta property="og:see_also" content="https://instantiator.dev/post/csharp-aws-lambda-tutorial-03/" /><meta property="og:see_also" content="https://instantiator.dev/post/csharp-aws-lambda-tutorial-02/" /><meta property="og:see_also" content="https://instantiator.dev/post/csharp-aws-lambda-tutorial-01/" />
-
+    <meta property="og:url" content="https://instantiator.dev/post/csharp-aws-lambda-tutorial-05/">
+  <meta property="og:site_name" content="instantiator.dev">
+  <meta property="og:title" content="Building an AWS Lambda in C#, part 5: S3">
+  <meta property="og:description" content="In previous parts, we’ve built a Lambda that can query the OpenWeather API, using a secret key; and in this part we’ll extend it to write that data to S3.">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="post">
+    <meta property="article:published_time" content="2021-04-19T18:00:00+00:00">
+    <meta property="article:modified_time" content="2021-04-19T18:00:00+00:00">
+    <meta property="article:tag" content="Coding">
+    <meta property="article:tag" content="C#">
+    <meta property="article:tag" content=".Net">
+    <meta property="article:tag" content="AWS">
+    <meta property="article:tag" content="Lambda">
+    <meta property="og:image" content="https://instantiator.dev/csharp-aws-lambda-tutorial/000-heading-img.png">
+      <meta property="og:see_also" content="https://instantiator.dev/post/csharp-aws-lambda-tutorial-06/">
+      <meta property="og:see_also" content="https://instantiator.dev/post/csharp-aws-lambda-tutorial-04/">
+      <meta property="og:see_also" content="https://instantiator.dev/post/csharp-aws-lambda-tutorial-03/">
+      <meta property="og:see_also" content="https://instantiator.dev/post/csharp-aws-lambda-tutorial-02/">
+      <meta property="og:see_also" content="https://instantiator.dev/post/csharp-aws-lambda-tutorial-01/">
 
 
     
@@ -250,7 +267,7 @@ if (!doNotTrack) {
 <li>Visit the S3 service in AWS console</li>
 <li>Tap <code>Create bucket</code></li>
 </ul>
-<p><img alt="Create an S3 bucket" src="/csharp-aws-lambda-tutorial/010-create-s3-bucket.png"></p>
+<p><img src="/csharp-aws-lambda-tutorial/010-create-s3-bucket.png" alt="Create an S3 bucket"></p>
 <ul>
 <li>Give your bucket a <strong>name</strong>, eg. <code>sample-lambda-storage</code></li>
 <li>Check the <strong>region</strong>, and other defaults, look right to you</li>
@@ -267,7 +284,7 @@ if (!doNotTrack) {
 <li>Click the name of your new bucket (sample-lambda-storage).</li>
 <li>Choose the <strong>Permissions</strong> tab.</li>
 </ul>
-<p><img alt="S3 bucket permissions" src="/csharp-aws-lambda-tutorial/011-s3-bucket-permissions.png"></p>
+<p><img src="/csharp-aws-lambda-tutorial/011-s3-bucket-permissions.png" alt="S3 bucket permissions"></p>
 <ul>
 <li>Scroll down to the <strong>Bucket policy</strong> section.</li>
 <li>Tap <code>Edit</code></li>
@@ -307,7 +324,7 @@ if (!doNotTrack) {
 </span></span></code></pre></div><ul>
 <li>Substitute <code>&lt;YOUR ACCOUNT NUMBER&gt;</code> with your numeric 12-digit AWS account number.</li>
 </ul>
-<p><img alt="Bucket policy (set)" src="/csharp-aws-lambda-tutorial/013-s3-bucket-policy-set.png"></p>
+<p><img src="/csharp-aws-lambda-tutorial/013-s3-bucket-policy-set.png" alt="Bucket policy (set)"></p>
 <p>There are a few things to note about this policy:</p>
 <ul>
 <li>
@@ -316,8 +333,7 @@ if (!doNotTrack) {
 <li>
 <p>It&rsquo;s broken down into 2 statements, each of which has an <strong>Sid</strong>, which ought to be unique, too.</p>
 <blockquote>
-<p>NB. The policy generator helps to create unique values for these IDs. We&rsquo;re using simpler values (<code>statement-1</code>, <code>statement-2</code>) for the sake of visibility. You could also give them meaningful names.</p>
-</blockquote>
+<p>NB. The policy generator helps to create unique values for these IDs. We&rsquo;re using simpler values (<code>statement-1</code>, <code>statement-2</code>) for the sake of visibility. You could also give them meaningful names.</p></blockquote>
 </li>
 <li>
 <p>The first statement permits our Lambda to see a list of all objects in the bucket.</p>
@@ -341,14 +357,13 @@ if (!doNotTrack) {
 <p>This policy is broken into two statements because, as you can see above, the first statement applies to a slightly different <strong>Resource</strong> (the bucket itself) than the second (items inside the bucket).</p>
 <p>These are a simple set of permissions, and will do for our project.</p>
 <blockquote>
-<p>There are some other permissions you could grant. It&rsquo;s even possible to permit <code>PutObject</code> without <code>GetObject</code> (and this might allow you to create a process that can submit data without ever being able to leak data from a bucket).</p>
-</blockquote>
+<p>There are some other permissions you could grant. It&rsquo;s even possible to permit <code>PutObject</code> without <code>GetObject</code> (and this might allow you to create a process that can submit data without ever being able to leak data from a bucket).</p></blockquote>
 <h3 id="using-the-aws-library-to-get-and-put-to-s3">Using the AWS library to get and put to S3</h3>
 <p>Now that you&rsquo;ve created and configured the bucket, we can update our Lambda to make use of it.</p>
 <ul>
 <li>Open up the solution in your .NET IDE, and add the nuget package: <code>AWSSDK.S3</code></li>
 </ul>
-<p><img alt="Adding the AWS SDK for S3 in Nuget" src="/csharp-aws-lambda-tutorial/014-add-aws-sdk-s3-nuget.png"></p>
+<p><img src="/csharp-aws-lambda-tutorial/014-add-aws-sdk-s3-nuget.png" alt="Adding the AWS SDK for S3 in Nuget"></p>
 <p>With this package, the Lambda will be able to perform <code>PutObject</code> and <code>GetObject</code> operations against your new S3 bucket.</p>
 <p>Now open up <code>Function.cs</code> and add a new method to your <code>Function</code> class:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-csharp" data-lang="csharp"><span style="display:flex;"><span><span style="color:#66d9ef">private</span> <span style="color:#66d9ef">async</span> Task&lt;<span style="color:#66d9ef">bool</span>&gt; PutToS3Async(<span style="color:#66d9ef">string</span> bucket, <span style="color:#66d9ef">string</span> key, <span style="color:#66d9ef">string</span> content, ILambdaContext context)
@@ -415,7 +430,7 @@ if (!doNotTrack) {
 </ul>
 <p>The output has changed, and is now a simple string telling us if it succeeded or not. Here&rsquo;s a sample response:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>Successfully stored weather data: sample-lambda-storage:weather_637545441697515760.json
-</span></span></code></pre></div><p><img alt="Test write to S3" src="/csharp-aws-lambda-tutorial/015-test-write-to-s3.png"></p>
+</span></span></code></pre></div><p><img src="/csharp-aws-lambda-tutorial/015-test-write-to-s3.png" alt="Test write to S3"></p>
 <p>The real work of the Lambda has shifted to storing the weather data it retrieve in the <code>sample-lambda-storage</code> bucket. Let&rsquo;s check there:</p>
 <ul>
 <li>Visit the S3 service in the AWS console.</li>
@@ -423,7 +438,7 @@ if (!doNotTrack) {
 <li>You should see your file listed there.</li>
 <li>Check the box next to it, tap the <code>Actions</code> button, and choose <code>Download</code></li>
 </ul>
-<p><img alt="Download the file from S3" src="/csharp-aws-lambda-tutorial/016-download-file-from-s3.png"></p>
+<p><img src="/csharp-aws-lambda-tutorial/016-download-file-from-s3.png" alt="Download the file from S3"></p>
 <p>You can now take a peek at the file itself to make sure it&rsquo;s the JSON data you&rsquo;re expecting. It&rsquo;ll look like rather a lot of JSON, all on the same line:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span>{<span style="color:#f92672">&#34;coord&#34;</span>:{<span style="color:#f92672">&#34;lon&#34;</span>:<span style="color:#ae81ff">-0.1257</span>,<span style="color:#f92672">&#34;lat&#34;</span>:<span style="color:#ae81ff">51.5085</span>},<span style="color:#f92672">&#34;weather&#34;</span>:[{<span style="color:#f92672">&#34;id&#34;</span>:<span style="color:#ae81ff">804</span>,<span style="color:#f92672">&#34;main&#34;</span>:<span style="color:#e6db74">&#34;Clouds&#34;</span>,<span style="color:#f92672">&#34;description&#34;</span>:<span style="color:#e6db74">&#34;overcast clouds&#34;</span>,<span style="color:#f92672">&#34;icon&#34;</span>:<span style="color:#e6db74">&#34;04n&#34;</span>}],<span style="color:#f92672">&#34;base&#34;</span>:<span style="color:#e6db74">&#34;stations&#34;</span>,<span style="color:#f92672">&#34;main&#34;</span>:{<span style="color:#f92672">&#34;temp&#34;</span>:<span style="color:#ae81ff">284.86</span>,<span style="color:#f92672">&#34;feels_like&#34;</span>:<span style="color:#ae81ff">284.07</span>,<span style="color:#f92672">&#34;temp_min&#34;</span>:<span style="color:#ae81ff">284.15</span>,<span style="color:#f92672">&#34;temp_max&#34;</span>:<span style="color:#ae81ff">285.93</span>,<span style="color:#f92672">&#34;pressure&#34;</span>:<span style="color:#ae81ff">1018</span>,<span style="color:#f92672">&#34;humidity&#34;</span>:<span style="color:#ae81ff">76</span>},<span style="color:#f92672">&#34;visibility&#34;</span>:<span style="color:#ae81ff">6000</span>,<span style="color:#f92672">&#34;wind&#34;</span>:{<span style="color:#f92672">&#34;speed&#34;</span>:<span style="color:#ae81ff">3.6</span>,<span style="color:#f92672">&#34;deg&#34;</span>:<span style="color:#ae81ff">90</span>},<span style="color:#f92672">&#34;clouds&#34;</span>:{<span style="color:#f92672">&#34;all&#34;</span>:<span style="color:#ae81ff">95</span>},<span style="color:#f92672">&#34;dt&#34;</span>:<span style="color:#ae81ff">1618947215</span>,<span style="color:#f92672">&#34;sys&#34;</span>:{<span style="color:#f92672">&#34;type&#34;</span>:<span style="color:#ae81ff">1</span>,<span style="color:#f92672">&#34;id&#34;</span>:<span style="color:#ae81ff">1414</span>,<span style="color:#f92672">&#34;country&#34;</span>:<span style="color:#e6db74">&#34;GB&#34;</span>,<span style="color:#f92672">&#34;sunrise&#34;</span>:<span style="color:#ae81ff">1618894425</span>,<span style="color:#f92672">&#34;sunset&#34;</span>:<span style="color:#ae81ff">1618945477</span>},<span style="color:#f92672">&#34;timezone&#34;</span>:<span style="color:#ae81ff">3600</span>,<span style="color:#f92672">&#34;id&#34;</span>:<span style="color:#ae81ff">2643743</span>,<span style="color:#f92672">&#34;name&#34;</span>:<span style="color:#e6db74">&#34;London&#34;</span>,<span style="color:#f92672">&#34;cod&#34;</span>:<span style="color:#ae81ff">200</span>}
 </span></span></code></pre></div><p>If you wanted to, you could reformat it to make it a little more readable, or use it in another service, or another Lambda.</p>

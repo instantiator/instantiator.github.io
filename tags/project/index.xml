@@ -4,7 +4,7 @@
     <title>Project on instantiator.dev</title>
     <link>https://instantiator.dev/tags/project/</link>
     <description>Recent content in Project on instantiator.dev</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo</generator>
     <language>en</language>
     <lastBuildDate>Sun, 14 Jul 2024 12:00:00 +0000</lastBuildDate>
     <atom:link href="https://instantiator.dev/tags/project/index.xml" rel="self" type="application/rss+xml" />
@@ -13,42 +13,42 @@
       <link>https://instantiator.dev/post/draculorean/</link>
       <pubDate>Sun, 14 Jul 2024 12:00:00 +0000</pubDate>
       <guid>https://instantiator.dev/post/draculorean/</guid>
-      <description>What is The Epistolorean, and what has it got to do with Count Dracula?</description>
+      <description>&lt;p&gt;What is &lt;strong&gt;&lt;a href=&#34;https://epistolorean.club/&#34;&gt;The Epistolorean&lt;/a&gt;&lt;/strong&gt;, and what has it got to do with Count Dracula?&lt;/p&gt;</description>
     </item>
     <item>
       <title>Building an app for Flipper Zero, part 2: A simple user interface</title>
       <link>https://instantiator.dev/post/flipper-zero-app-tutorial-02/</link>
       <pubDate>Fri, 05 May 2023 21:00:00 +0000</pubDate>
       <guid>https://instantiator.dev/post/flipper-zero-app-tutorial-02/</guid>
-      <description>In this part, we&amp;rsquo;ll build a simple user interface for a Flipper Zero app.</description>
+      <description>&lt;p&gt;In this part, we&amp;rsquo;ll build a simple user interface for a Flipper Zero app.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Building an app for Flipper Zero, part 1: Getting started</title>
       <link>https://instantiator.dev/post/flipper-zero-app-tutorial-01/</link>
       <pubDate>Fri, 05 May 2023 09:00:00 +0000</pubDate>
       <guid>https://instantiator.dev/post/flipper-zero-app-tutorial-01/</guid>
-      <description>FlipperZero is a digital signals multi-tool. Here&amp;rsquo;s a short guide to the basics of building an app for it&amp;hellip;</description>
+      <description>&lt;p&gt;FlipperZero is a digital signals multi-tool. Here&amp;rsquo;s a short guide to the basics of building an app for it&amp;hellip;&lt;/p&gt;</description>
     </item>
     <item>
       <title>International Consensus Chess is in public beta!</title>
       <link>https://instantiator.dev/post/icgames-net/</link>
       <pubDate>Thu, 08 Dec 2022 00:00:00 +0000</pubDate>
       <guid>https://instantiator.dev/post/icgames-net/</guid>
-      <description>Consensus Chess is going through some beta testing on Mastodon, and you can play today!</description>
+      <description>&lt;p&gt;Consensus Chess is going through some beta testing on Mastodon, and you can play today!&lt;/p&gt;</description>
     </item>
     <item>
       <title>International Consensus Games (WIP)</title>
       <link>https://instantiator.dev/post/consensus-games/</link>
       <pubDate>Thu, 10 Nov 2022 00:00:00 +0000</pubDate>
       <guid>https://instantiator.dev/post/consensus-games/</guid>
-      <description>I&amp;rsquo;ve been working on a pet project recently: Consensus games are a fun new way to play together through social media&amp;hellip;</description>
+      <description>&lt;p&gt;I&amp;rsquo;ve been working on a pet project recently: Consensus games are a fun new way to play together through social media&amp;hellip;&lt;/p&gt;</description>
     </item>
     <item>
       <title>A friendly face for the victims of burglary</title>
       <link>https://instantiator.dev/post/burglary-bot/</link>
       <pubDate>Sat, 23 Feb 2019 00:00:00 +0000</pubDate>
       <guid>https://instantiator.dev/post/burglary-bot/</guid>
-      <description>This is a necropost, resurrected from an old blog. To find out more about Hack the Police events, civic tech, and policing technology, visit: Police Rewired</description>
+      <description>&lt;p&gt;&lt;em&gt;This is a necropost, resurrected from an old blog. To find out more about Hack the Police events, civic tech, and policing technology, visit: &lt;a href=&#34;https://policerewired.org&#34;&gt;Police Rewired&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

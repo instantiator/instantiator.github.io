@@ -4,7 +4,7 @@
     <title>Yaml on instantiator.dev</title>
     <link>https://instantiator.dev/tags/yaml/</link>
     <description>Recent content in Yaml on instantiator.dev</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo</generator>
     <language>en</language>
     <lastBuildDate>Mon, 04 Jan 2021 17:30:00 +0000</lastBuildDate>
     <atom:link href="https://instantiator.dev/tags/yaml/index.xml" rel="self" type="application/rss+xml" />
@@ -13,7 +13,7 @@
       <link>https://instantiator.dev/post/q/</link>
       <pubDate>Mon, 04 Jan 2021 17:30:00 +0000</pubDate>
       <guid>https://instantiator.dev/post/q/</guid>
-      <description>There are a many ways to peek inside a data file and reason about its contents.</description>
+      <description>&lt;p&gt;There are a many ways to peek inside a data file and reason about its contents.&#xA;This post is about a triplet of simple, easily available tools that&#xA;I&amp;rsquo;ve found handy for searching and querying common data file formats.&#xA;You might too&amp;hellip;&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

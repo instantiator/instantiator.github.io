@@ -4,7 +4,7 @@
     <title>Source on instantiator.dev</title>
     <link>https://instantiator.dev/tags/source/</link>
     <description>Recent content in Source on instantiator.dev</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo</generator>
     <language>en</language>
     <lastBuildDate>Fri, 29 May 2015 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://instantiator.dev/tags/source/index.xml" rel="self" type="application/rss+xml" />
@@ -13,7 +13,7 @@
       <link>https://instantiator.dev/post/np-drive-stamper/</link>
       <pubDate>Fri, 29 May 2015 00:00:00 +0000</pubDate>
       <guid>https://instantiator.dev/post/np-drive-stamper/</guid>
-      <description>This is a necropost, resurrected from an old blog.&#xA;Drive Stamper Drive Stamper is one of the first projects I released into the wild, and helped me to kick off my old blog in 2011.</description>
+      <description>&lt;p&gt;&lt;em&gt;This is a necropost, resurrected from an old blog.&lt;/em&gt;&lt;/p&gt;&#xA;&lt;h1 id=&#34;drive-stamper&#34;&gt;Drive Stamper&lt;/h1&gt;&#xA;&lt;p&gt;Drive Stamper is one of the first projects I released into the wild, and helped me to kick off my old blog in 2011.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

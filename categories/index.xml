@@ -4,10 +4,17 @@
     <title>Categories on instantiator.dev</title>
     <link>https://instantiator.dev/categories/</link>
     <description>Recent content in Categories on instantiator.dev</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 01 Sep 2024 12:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 22 Feb 2025 11:00:00 +0000</lastBuildDate>
     <atom:link href="https://instantiator.dev/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Tutorial</title>
+      <link>https://instantiator.dev/categories/tutorial/</link>
+      <pubDate>Sat, 22 Feb 2025 11:00:00 +0000</pubDate>
+      <guid>https://instantiator.dev/categories/tutorial/</guid>
+      <description></description>
+    </item>
     <item>
       <title>Article</title>
       <link>https://instantiator.dev/categories/article/</link>
@@ -34,13 +41,6 @@
       <link>https://instantiator.dev/categories/template/</link>
       <pubDate>Tue, 12 Sep 2023 00:00:00 +0000</pubDate>
       <guid>https://instantiator.dev/categories/template/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Tutorial</title>
-      <link>https://instantiator.dev/categories/tutorial/</link>
-      <pubDate>Tue, 12 Sep 2023 00:00:00 +0000</pubDate>
-      <guid>https://instantiator.dev/categories/tutorial/</guid>
       <description></description>
     </item>
     <item>

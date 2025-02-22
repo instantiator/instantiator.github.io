@@ -4,7 +4,7 @@
     <title>DSA on instantiator.dev</title>
     <link>https://instantiator.dev/tags/dsa/</link>
     <description>Recent content in DSA on instantiator.dev</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo</generator>
     <language>en</language>
     <lastBuildDate>Wed, 28 Apr 2021 16:00:00 +0000</lastBuildDate>
     <atom:link href="https://instantiator.dev/tags/dsa/index.xml" rel="self" type="application/rss+xml" />
@@ -13,7 +13,7 @@
       <link>https://instantiator.dev/post/referral-data-standards/</link>
       <pubDate>Wed, 28 Apr 2021 16:00:00 +0000</pubDate>
       <guid>https://instantiator.dev/post/referral-data-standards/</guid>
-      <description>The Data Standards Authority are holding an open challenge to discover and set a new data standard for vulnerable people services.</description>
+      <description>&lt;p&gt;The Data Standards Authority are holding an &lt;a href=&#34;https://dataingovernment.blog.gov.uk/2021/04/28/vulnerable-people-services-data-standard/&#34;&gt;open challenge&lt;/a&gt; to discover and set a new data standard for vulnerable people services.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

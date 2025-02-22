@@ -4,7 +4,7 @@
     <title>Dump on instantiator.dev</title>
     <link>https://instantiator.dev/tags/dump/</link>
     <description>Recent content in Dump on instantiator.dev</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo</generator>
     <language>en</language>
     <lastBuildDate>Thu, 20 Apr 2023 17:30:00 +0000</lastBuildDate>
     <atom:link href="https://instantiator.dev/tags/dump/index.xml" rel="self" type="application/rss+xml" />
@@ -13,7 +13,7 @@
       <link>https://instantiator.dev/post/netflix-history/</link>
       <pubDate>Thu, 20 Apr 2023 17:30:00 +0000</pubDate>
       <guid>https://instantiator.dev/post/netflix-history/</guid>
-      <description>Exploring your personal Netflix viewing history&amp;hellip;&#xA;What you see is a visualisation of everything I&amp;rsquo;ved watched since 2012.</description>
+      <description>&lt;p&gt;&lt;em&gt;Exploring your personal Netflix viewing history&amp;hellip;&lt;/em&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://instantiator.dev/netflix/netflix-visualisation.png&#34; alt=&#34;A visualisation of my Netflix viewing for the past decade. Cells are filled if I watched a show in a given month.&#34;&gt;&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

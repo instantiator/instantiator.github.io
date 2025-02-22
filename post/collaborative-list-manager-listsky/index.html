@@ -10,28 +10,43 @@
     <title>instantiator.dev | Managing lists on BlueSky collaboratively</title>
     
     
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-SHE42ZWKEN"></script>
-<script>
-var doNotTrack = false;
-if (!doNotTrack) {
-	window.dataLayer = window.dataLayer || [];
-	function gtag(){dataLayer.push(arguments);}
-	gtag('js', new Date());
-	gtag('config', 'G-SHE42ZWKEN', { 'anonymize_ip': false });
-}
-</script>
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-SHE42ZWKEN"></script>
+      <script>
+        var doNotTrack = false;
+        if ( false ) {
+          var dnt = (navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack);
+          var doNotTrack = (dnt == "1" || dnt == "yes");
+        }
+        if (!doNotTrack) {
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-SHE42ZWKEN');
+        }
+      </script>
+    
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://instantiator.dev/listsky-img/listsky-poster-1.png">
+  <meta name="twitter:title" content="Managing lists on BlueSky collaboratively">
+  <meta name="twitter:description" content="ListSky is a new tool for collaboratively managing lists of social accounts.">
 
-    <meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:image" content="https://instantiator.dev/listsky-img/listsky-poster-1.png" /><meta name="twitter:title" content="Managing lists on BlueSky collaboratively"/>
-<meta name="twitter:description" content="ListSky is a new tool for collaboratively managing lists of social accounts."/>
-
-    <meta property="og:title" content="Managing lists on BlueSky collaboratively" />
-<meta property="og:description" content="ListSky is a new tool for collaboratively managing lists of social accounts." />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://instantiator.dev/post/collaborative-list-manager-listsky/" /><meta property="og:image" content="https://instantiator.dev/listsky-img/listsky-poster-1.png" /><meta property="og:image" content="https://instantiator.dev/listsky-img/listsky-poster-2.png" /><meta property="article:section" content="post" />
-<meta property="article:published_time" content="2024-09-01T12:00:00+00:00" />
-<meta property="article:modified_time" content="2024-09-01T12:00:00+00:00" /><meta property="og:site_name" content="instantiator.dev" />
-
+    <meta property="og:url" content="https://instantiator.dev/post/collaborative-list-manager-listsky/">
+  <meta property="og:site_name" content="instantiator.dev">
+  <meta property="og:title" content="Managing lists on BlueSky collaboratively">
+  <meta property="og:description" content="ListSky is a new tool for collaboratively managing lists of social accounts.">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="post">
+    <meta property="article:published_time" content="2024-09-01T12:00:00+00:00">
+    <meta property="article:modified_time" content="2024-09-01T12:00:00+00:00">
+    <meta property="article:tag" content="List">
+    <meta property="article:tag" content="ListSky">
+    <meta property="article:tag" content="Communities">
+    <meta property="article:tag" content="Collaborative">
+    <meta property="article:tag" content="Collective Intelligence">
+    <meta property="article:tag" content="Data">
+    <meta property="og:image" content="https://instantiator.dev/listsky-img/listsky-poster-1.png">
+    <meta property="og:image" content="https://instantiator.dev/listsky-img/listsky-poster-2.png">
 
 
     
@@ -287,18 +302,18 @@ if (!doNotTrack) {
 <p>You can see all the lists that ListSky currently manages at: <a href="https://instantiator.dev/listsky">https://instantiator.dev/listsky</a>, or visit <a href="https://bsky.app/profile/listsky.bsky.social">ListSky</a> on BlueSky to see and follow all the lists.</p>
 <p>I&rsquo;m currently using it to seed a list of accounts working in Collective Intelligence - that&rsquo;s researchers, practitioners, organisations, communities and bots that have anything to do with CI or CI projects. I&rsquo;m excited to grow that list!</p>
 <table>
-<thead>
-<tr>
-<th>An overview of lists</th>
-<th>Collective Intelligentsia</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><img src="/listsky-img/01-overview.png"></td>
-<td><img src="/listsky-img/02-ci-list.png"></td>
-</tr>
-</tbody>
+  <thead>
+      <tr>
+          <th>An overview of lists</th>
+          <th>Collective Intelligentsia</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><img src="/listsky-img/01-overview.png" alt=""></td>
+          <td><img src="/listsky-img/02-ci-list.png" alt=""></td>
+      </tr>
+  </tbody>
 </table>
 <h2 id="how-is-it-collective">How is it collective?</h2>
 <p>Anyone can submit an addition or update to a list by creating an issue on GitHub or, if you want to flex your skills, by creating a pull request. That gets reviewed by the list owner. If it&rsquo;s approved, ListSky automatically updates its public lists and the BlueSky lists it maintains.</p>

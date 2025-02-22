@@ -4,7 +4,7 @@
     <title>Repository on instantiator.dev</title>
     <link>https://instantiator.dev/tags/repository/</link>
     <description>Recent content in Repository on instantiator.dev</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo</generator>
     <language>en</language>
     <lastBuildDate>Sun, 01 Sep 2024 12:00:00 +0000</lastBuildDate>
     <atom:link href="https://instantiator.dev/tags/repository/index.xml" rel="self" type="application/rss+xml" />
@@ -13,14 +13,14 @@
       <link>https://instantiator.dev/post/collaborative-list-manager-listsky/</link>
       <pubDate>Sun, 01 Sep 2024 12:00:00 +0000</pubDate>
       <guid>https://instantiator.dev/post/collaborative-list-manager-listsky/</guid>
-      <description>ListSky is a new tool for collaboratively managing lists of social accounts.</description>
+      <description>&lt;p&gt;&lt;em&gt;ListSky is a new tool for collaboratively managing lists of social accounts.&lt;/em&gt;&lt;/p&gt;</description>
     </item>
     <item>
       <title>Reveal in React</title>
       <link>https://instantiator.dev/post/reveal-in-react/</link>
       <pubDate>Tue, 12 Sep 2023 00:00:00 +0000</pubDate>
       <guid>https://instantiator.dev/post/reveal-in-react/</guid>
-      <description>What if your UI was a slide show?&#xA;Reveal in React TLDR: Here&amp;rsquo;s a template repository for a NextJS app with a Reveal slide show UI: instantiator/reveal-on-next</description>
+      <description>&lt;p&gt;What if your UI was a slide show?&lt;/p&gt;&#xA;&lt;h1 id=&#34;reveal-in-react&#34;&gt;Reveal in React&lt;/h1&gt;&#xA;&lt;p&gt;&lt;strong&gt;TLDR:&lt;/strong&gt; Here&amp;rsquo;s a template repository for a NextJS app with a Reveal slide show UI: &lt;a href=&#34;https://github.com/instantiator/reveal-on-next&#34;&gt;instantiator/reveal-on-next&lt;/a&gt;&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

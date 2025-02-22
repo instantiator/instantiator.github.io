@@ -4,7 +4,7 @@
     <title>Game on instantiator.dev</title>
     <link>https://instantiator.dev/tags/game/</link>
     <description>Recent content in Game on instantiator.dev</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo</generator>
     <language>en</language>
     <lastBuildDate>Thu, 08 Dec 2022 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://instantiator.dev/tags/game/index.xml" rel="self" type="application/rss+xml" />
@@ -13,21 +13,21 @@
       <link>https://instantiator.dev/post/icgames-net/</link>
       <pubDate>Thu, 08 Dec 2022 00:00:00 +0000</pubDate>
       <guid>https://instantiator.dev/post/icgames-net/</guid>
-      <description>Consensus Chess is going through some beta testing on Mastodon, and you can play today!</description>
+      <description>&lt;p&gt;Consensus Chess is going through some beta testing on Mastodon, and you can play today!&lt;/p&gt;</description>
     </item>
     <item>
       <title>International Consensus Games (WIP)</title>
       <link>https://instantiator.dev/post/consensus-games/</link>
       <pubDate>Thu, 10 Nov 2022 00:00:00 +0000</pubDate>
       <guid>https://instantiator.dev/post/consensus-games/</guid>
-      <description>I&amp;rsquo;ve been working on a pet project recently: Consensus games are a fun new way to play together through social media&amp;hellip;</description>
+      <description>&lt;p&gt;I&amp;rsquo;ve been working on a pet project recently: Consensus games are a fun new way to play together through social media&amp;hellip;&lt;/p&gt;</description>
     </item>
     <item>
       <title>Wriggler</title>
       <link>https://instantiator.dev/post/wriggler/</link>
       <pubDate>Mon, 23 Apr 2018 00:00:00 +0000</pubDate>
       <guid>https://instantiator.dev/post/wriggler/</guid>
-      <description>This is a necropost, resurrected from an old blog.&#xA;Wriggler It was 1998 and I was 17.</description>
+      <description>&lt;p&gt;&lt;em&gt;This is a necropost, resurrected from an old blog.&lt;/em&gt;&lt;/p&gt;&#xA;&lt;h1 id=&#34;wriggler&#34;&gt;Wriggler&lt;/h1&gt;&#xA;&lt;p&gt;It was 1998 and I was 17. My tool of choice was QBasic and this is a game I wrote based on a concept I stole from another game called Wriggler.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

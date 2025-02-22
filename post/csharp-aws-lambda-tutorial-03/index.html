@@ -10,29 +10,46 @@
     <title>instantiator.dev | Building an AWS Lambda in C#, part 3: APIs and secrets</title>
     
     
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-SHE42ZWKEN"></script>
-<script>
-var doNotTrack = false;
-if (!doNotTrack) {
-	window.dataLayer = window.dataLayer || [];
-	function gtag(){dataLayer.push(arguments);}
-	gtag('js', new Date());
-	gtag('config', 'G-SHE42ZWKEN', { 'anonymize_ip': false });
-}
-</script>
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-SHE42ZWKEN"></script>
+      <script>
+        var doNotTrack = false;
+        if ( false ) {
+          var dnt = (navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack);
+          var doNotTrack = (dnt == "1" || dnt == "yes");
+        }
+        if (!doNotTrack) {
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-SHE42ZWKEN');
+        }
+      </script>
+    
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://instantiator.dev/csharp-aws-lambda-tutorial/000-heading-img.png">
+  <meta name="twitter:title" content="Building an AWS Lambda in C#, part 3: APIs and secrets">
+  <meta name="twitter:description" content="In part 2, we build a Lambda function, deployed and invoked it; and in this part, we’ll extend it to communicate with an API using a secret key.">
 
-    <meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:image" content="https://instantiator.dev/csharp-aws-lambda-tutorial/000-heading-img.png" /><meta name="twitter:title" content="Building an AWS Lambda in C#, part 3: APIs and secrets"/>
-<meta name="twitter:description" content="In part 2, we build a Lambda function, deployed and invoked it; and in this part, we&rsquo;ll extend it to communicate with an API using a secret key."/>
-
-    <meta property="og:title" content="Building an AWS Lambda in C#, part 3: APIs and secrets" />
-<meta property="og:description" content="In part 2, we build a Lambda function, deployed and invoked it; and in this part, we&rsquo;ll extend it to communicate with an API using a secret key." />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://instantiator.dev/post/csharp-aws-lambda-tutorial-03/" /><meta property="og:image" content="https://instantiator.dev/csharp-aws-lambda-tutorial/000-heading-img.png" /><meta property="article:section" content="post" />
-<meta property="article:published_time" content="2021-04-17T18:00:00+00:00" />
-<meta property="article:modified_time" content="2021-04-17T18:00:00+00:00" /><meta property="og:site_name" content="instantiator.dev" />
-<meta property="og:see_also" content="https://instantiator.dev/post/csharp-aws-lambda-tutorial-06/" /><meta property="og:see_also" content="https://instantiator.dev/post/csharp-aws-lambda-tutorial-05/" /><meta property="og:see_also" content="https://instantiator.dev/post/csharp-aws-lambda-tutorial-04/" /><meta property="og:see_also" content="https://instantiator.dev/post/csharp-aws-lambda-tutorial-02/" /><meta property="og:see_also" content="https://instantiator.dev/post/csharp-aws-lambda-tutorial-01/" />
-
+    <meta property="og:url" content="https://instantiator.dev/post/csharp-aws-lambda-tutorial-03/">
+  <meta property="og:site_name" content="instantiator.dev">
+  <meta property="og:title" content="Building an AWS Lambda in C#, part 3: APIs and secrets">
+  <meta property="og:description" content="In part 2, we build a Lambda function, deployed and invoked it; and in this part, we’ll extend it to communicate with an API using a secret key.">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="post">
+    <meta property="article:published_time" content="2021-04-17T18:00:00+00:00">
+    <meta property="article:modified_time" content="2021-04-17T18:00:00+00:00">
+    <meta property="article:tag" content="Coding">
+    <meta property="article:tag" content="C#">
+    <meta property="article:tag" content=".Net">
+    <meta property="article:tag" content="AWS">
+    <meta property="article:tag" content="Lambda">
+    <meta property="og:image" content="https://instantiator.dev/csharp-aws-lambda-tutorial/000-heading-img.png">
+      <meta property="og:see_also" content="https://instantiator.dev/post/csharp-aws-lambda-tutorial-06/">
+      <meta property="og:see_also" content="https://instantiator.dev/post/csharp-aws-lambda-tutorial-05/">
+      <meta property="og:see_also" content="https://instantiator.dev/post/csharp-aws-lambda-tutorial-04/">
+      <meta property="og:see_also" content="https://instantiator.dev/post/csharp-aws-lambda-tutorial-02/">
+      <meta property="og:see_also" content="https://instantiator.dev/post/csharp-aws-lambda-tutorial-01/">
 
 
     
@@ -256,21 +273,18 @@ if (!doNotTrack) {
 <p>AWS Lambda has some facilities that allow us to manage secrets, and to provide them to our code as environment variables. We can also provide those environment variables locally when testing.</p>
 <p>You can provide environment variables to the Lambda through the AWS web interface.</p>
 <blockquote>
-<p>NB. If you&rsquo;d rather do it from the command line, you can use the <code>--environment-variables</code> option to provide the various secrets when you deploy your lambda. Provide them as key/value pairs in this format: <code>&lt;key1&gt;=&lt;value1&gt;;&lt;key2&gt;=&lt;value2&gt;</code> etc.</p>
-</blockquote>
+<p>NB. If you&rsquo;d rather do it from the command line, you can use the <code>--environment-variables</code> option to provide the various secrets when you deploy your lambda. Provide them as key/value pairs in this format: <code>&lt;key1&gt;=&lt;value1&gt;;&lt;key2&gt;=&lt;value2&gt;</code> etc.</p></blockquote>
 <blockquote>
-<p>You could also add an <code>environment-variables</code> key in the <code>aws-lambda-tools-default.json</code> file inside your project, but be careful not to include your secrets in code you then share to a public repository!</p>
-</blockquote>
+<p>You could also add an <code>environment-variables</code> key in the <code>aws-lambda-tools-default.json</code> file inside your project, but be careful not to include your secrets in code you then share to a public repository!</p></blockquote>
 <p>The sample project relies on manual (click-ops) configuration of the secrets through the AWS console, so that they don&rsquo;t have to be included in the deploy script or json configuration files.</p>
 <blockquote>
-<p>NB. You could also do something a little more advanced, like placing your secrets in the <strong>Parameter Store</strong> (found in the <strong>AWS Systems Manager</strong>). That&rsquo;s a little too complex for this example, and likely more useful for secrets that are regularly modified or those that might need to be shared between different services. For our purposes, environment variables provided by the Lambda service will do just fine.</p>
-</blockquote>
+<p>NB. You could also do something a little more advanced, like placing your secrets in the <strong>Parameter Store</strong> (found in the <strong>AWS Systems Manager</strong>). That&rsquo;s a little too complex for this example, and likely more useful for secrets that are regularly modified or those that might need to be shared between different services. For our purposes, environment variables provided by the Lambda service will do just fine.</p></blockquote>
 <h4 id="adding-the-weather-api-key-as-a-secret">Adding the weather API key as a secret</h4>
 <ul>
 <li>Visit the <strong>Lambda service</strong> in the AWS console.</li>
 <li>Click into your <strong>SampleLambaFunction</strong> from the list of functions.</li>
 </ul>
-<p><img alt="Lambda list on AWS" src="/csharp-aws-lambda-tutorial/005-lambda-listed.png"></p>
+<p><img src="/csharp-aws-lambda-tutorial/005-lambda-listed.png" alt="Lambda list on AWS"></p>
 <ul>
 <li>Choose the <strong>Configuration</strong> tab</li>
 <li>Choose <strong>Environment variables</strong> from the configuration options</li>
@@ -284,15 +298,14 @@ if (!doNotTrack) {
 <h4 id="providing-the-weather-api-key-locally">Providing the weather API key locally</h4>
 <p>When testing your Lambda locally, you&rsquo;ll also need the environment variable set.</p>
 <p>If testing from your IDE, you&rsquo;ll need to create a <strong>Run Configuration</strong> in the settings for the <strong>SampleLambdaFunction.Tests</strong> project, and provide the <strong>Environment Variable</strong> <code>WEATHER_API_KEY</code> there.</p>
-<p><img alt="Run configuration" src="/csharp-aws-lambda-tutorial/003.5-run-configuration.png"></p>
+<p><img src="/csharp-aws-lambda-tutorial/003.5-run-configuration.png" alt="Run configuration"></p>
 <p>If testing from the terminal, you&rsquo;ll need to ensure you&rsquo;ve exported the environment variable first:</p>
 <pre tabindex="0"><code>export WEATHER_API_KEY=&#39;the-weather-api-key-goes-here&#39;
 dotnet test
 </code></pre><h4 id="reading-the-weather-data">Reading the weather data</h4>
 <p>Let&rsquo;s modify the Lambda to read weather data. We&rsquo;ll configure the Lambda to accept a string as input, with the name of a city.</p>
 <blockquote>
-<p>NB. It is often dangerous to accept unconstrained strings as inputs, especially if you&rsquo;re going to copy them into URLs or database queries. <strong>Don&rsquo;t do this in production!</strong></p>
-</blockquote>
+<p>NB. It is often dangerous to accept unconstrained strings as inputs, especially if you&rsquo;re going to copy them into URLs or database queries. <strong>Don&rsquo;t do this in production!</strong></p></blockquote>
 <p>The URL of the weather API we&rsquo;re going to use is:</p>
 <pre tabindex="0"><code class="language-url" data-lang="url">https://api.openweathermap.org/data/2.5/weather?q={city name}&amp;appid={API key}
 </code></pre><p>First, we&rsquo;ll take a look at the output we get from this endpoint - with a simple update to our Lambda:</p>
@@ -325,8 +338,7 @@ dotnet test
 <li>As you can see, the function should return the full response it received from the OpenWeather API.</li>
 </ul>
 <blockquote>
-<p>NB. <code>HttpClient</code> isn&rsquo;t the only way to make HTTP requests. If you&rsquo;re looking for a library to build queries that can map query content and responses between JSON and C# object classes, I highly recommend <a href="https://restsharp.dev/">RestSharp</a>. It&rsquo;s pleasant to use, and makes complex things simple.</p>
-</blockquote>
+<p>NB. <code>HttpClient</code> isn&rsquo;t the only way to make HTTP requests. If you&rsquo;re looking for a library to build queries that can map query content and responses between JSON and C# object classes, I highly recommend <a href="https://restsharp.dev/">RestSharp</a>. It&rsquo;s pleasant to use, and makes complex things simple.</p></blockquote>
 <p>Before we can build the entire solution, note that the local test won&rsquo;t compile - as we&rsquo;ve changed the footprint of the <code>FunctionHandler</code> method. You can update that test quickly now with something that passes (although it&rsquo;s not hugely informative):</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-csharp" data-lang="csharp"><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">FunctionTest</span>
 </span></span><span style="display:flex;"><span>{

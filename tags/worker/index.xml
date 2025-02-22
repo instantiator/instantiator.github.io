@@ -4,7 +4,7 @@
     <title>Worker on instantiator.dev</title>
     <link>https://instantiator.dev/tags/worker/</link>
     <description>Recent content in Worker on instantiator.dev</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo</generator>
     <language>en</language>
     <lastBuildDate>Thu, 10 Nov 2022 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://instantiator.dev/tags/worker/index.xml" rel="self" type="application/rss+xml" />
@@ -13,7 +13,7 @@
       <link>https://instantiator.dev/post/consensus-games/</link>
       <pubDate>Thu, 10 Nov 2022 00:00:00 +0000</pubDate>
       <guid>https://instantiator.dev/post/consensus-games/</guid>
-      <description>I&amp;rsquo;ve been working on a pet project recently: Consensus games are a fun new way to play together through social media&amp;hellip;</description>
+      <description>&lt;p&gt;I&amp;rsquo;ve been working on a pet project recently: Consensus games are a fun new way to play together through social media&amp;hellip;&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

@@ -4,7 +4,7 @@
     <title>App on instantiator.dev</title>
     <link>https://instantiator.dev/tags/app/</link>
     <description>Recent content in App on instantiator.dev</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo</generator>
     <language>en</language>
     <lastBuildDate>Sun, 01 Sep 2024 12:00:00 +0000</lastBuildDate>
     <atom:link href="https://instantiator.dev/tags/app/index.xml" rel="self" type="application/rss+xml" />
@@ -13,42 +13,42 @@
       <link>https://instantiator.dev/post/collaborative-list-manager-listsky/</link>
       <pubDate>Sun, 01 Sep 2024 12:00:00 +0000</pubDate>
       <guid>https://instantiator.dev/post/collaborative-list-manager-listsky/</guid>
-      <description>ListSky is a new tool for collaboratively managing lists of social accounts.</description>
+      <description>&lt;p&gt;&lt;em&gt;ListSky is a new tool for collaboratively managing lists of social accounts.&lt;/em&gt;&lt;/p&gt;</description>
     </item>
     <item>
       <title>Building an app for Flipper Zero, part 2: A simple user interface</title>
       <link>https://instantiator.dev/post/flipper-zero-app-tutorial-02/</link>
       <pubDate>Fri, 05 May 2023 21:00:00 +0000</pubDate>
       <guid>https://instantiator.dev/post/flipper-zero-app-tutorial-02/</guid>
-      <description>In this part, we&amp;rsquo;ll build a simple user interface for a Flipper Zero app.</description>
+      <description>&lt;p&gt;In this part, we&amp;rsquo;ll build a simple user interface for a Flipper Zero app.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Building an app for Flipper Zero, part 1: Getting started</title>
       <link>https://instantiator.dev/post/flipper-zero-app-tutorial-01/</link>
       <pubDate>Fri, 05 May 2023 09:00:00 +0000</pubDate>
       <guid>https://instantiator.dev/post/flipper-zero-app-tutorial-01/</guid>
-      <description>FlipperZero is a digital signals multi-tool. Here&amp;rsquo;s a short guide to the basics of building an app for it&amp;hellip;</description>
+      <description>&lt;p&gt;FlipperZero is a digital signals multi-tool. Here&amp;rsquo;s a short guide to the basics of building an app for it&amp;hellip;&lt;/p&gt;</description>
     </item>
     <item>
       <title>Why are some projects so expensive?</title>
       <link>https://instantiator.dev/post/project-costs/</link>
       <pubDate>Fri, 22 Sep 2017 00:00:00 +0000</pubDate>
       <guid>https://instantiator.dev/post/project-costs/</guid>
-      <description>This article was originally posted to Medium.&#xA;Why are some projects so expensive?</description>
+      <description>&lt;p&gt;&lt;em&gt;This article was originally posted to Medium.&lt;/em&gt;&lt;/p&gt;&#xA;&lt;h1 id=&#34;why-are-some-projects-so-expensive-need-they-be&#34;&gt;Why are some projects so expensive? Need they be?&lt;/h1&gt;&#xA;&lt;p&gt;&lt;em&gt;This article is adapted from a response I gave to &lt;a href=&#34;https://www.reddit.com/r/coding/comments/6wvupz/how_i_replicated_an_86_million_project_in_57/&#34;&gt;the Reddit post&lt;/a&gt; for the Medium article &lt;a href=&#34;https://medium.com/@taitems/how-i-replicated-an-86-million-project-in-57-lines-of-code-277031330ee9&#34;&gt;How I replicated an $86 million project in 57 lines of code&lt;/a&gt; in &lt;a href=&#34;https://reddit.com/r/coding&#34;&gt;r/coding&lt;/a&gt; by &lt;a href=&#34;https://medium.com/@taitems&#34;&gt;Tait Brown&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;</description>
     </item>
     <item>
       <title>Hack Highlight #4: How did we do?</title>
       <link>https://instantiator.dev/post/htp1-highlight-4-how-did-we-do/</link>
       <pubDate>Fri, 14 Jun 2013 00:00:00 +0000</pubDate>
       <guid>https://instantiator.dev/post/htp1-highlight-4-how-did-we-do/</guid>
-      <description>This is a necropost, resurrected from an old blog. To find out more about Hack the Police events, civic tech, and policing technology, visit: Police Rewired</description>
+      <description>&lt;p&gt;&lt;em&gt;This is a necropost, resurrected from an old blog. To find out more about Hack the Police events, civic tech, and policing technology, visit: &lt;a href=&#34;https://policerewired.org&#34;&gt;Police Rewired&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;</description>
     </item>
     <item>
       <title>Hack Highlight #1: Secure evidence recording</title>
       <link>https://instantiator.dev/post/htp1-highlight-1-secure-evidence-recorder/</link>
       <pubDate>Sat, 25 May 2013 00:00:00 +0000</pubDate>
       <guid>https://instantiator.dev/post/htp1-highlight-1-secure-evidence-recorder/</guid>
-      <description>This is a necropost, resurrected from an old blog. To find out more about Hack the Police events, civic tech, and policing technology, visit: Police Rewired</description>
+      <description>&lt;p&gt;&lt;em&gt;This is a necropost, resurrected from an old blog. To find out more about Hack the Police events, civic tech, and policing technology, visit: &lt;a href=&#34;https://policerewired.org&#34;&gt;Police Rewired&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

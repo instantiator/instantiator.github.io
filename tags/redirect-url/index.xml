@@ -4,7 +4,7 @@
     <title>Redirect Url on instantiator.dev</title>
     <link>https://instantiator.dev/tags/redirect-url/</link>
     <description>Recent content in Redirect Url on instantiator.dev</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo</generator>
     <language>en</language>
     <lastBuildDate>Tue, 18 Jul 2023 17:00:00 +0000</lastBuildDate>
     <atom:link href="https://instantiator.dev/tags/redirect-url/index.xml" rel="self" type="application/rss+xml" />
@@ -13,7 +13,7 @@
       <link>https://instantiator.dev/post/playing-with-oauth/</link>
       <pubDate>Tue, 18 Jul 2023 17:00:00 +0000</pubDate>
       <guid>https://instantiator.dev/post/playing-with-oauth/</guid>
-      <description>OAuth Token Explorer is a tool to explore authentication and authorisation on behalf of a user.</description>
+      <description>&lt;p&gt;&lt;em&gt;OAuth Token Explorer is a tool to explore authentication and authorisation on behalf of a user.&lt;/em&gt;&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

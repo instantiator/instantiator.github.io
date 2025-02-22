@@ -10,30 +10,46 @@
     <title>instantiator.dev | Wriggler</title>
     
     
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-SHE42ZWKEN"></script>
-<script>
-var doNotTrack = false;
-if (!doNotTrack) {
-	window.dataLayer = window.dataLayer || [];
-	function gtag(){dataLayer.push(arguments);}
-	gtag('js', new Date());
-	gtag('config', 'G-SHE42ZWKEN', { 'anonymize_ip': false });
-}
-</script>
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-SHE42ZWKEN"></script>
+      <script>
+        var doNotTrack = false;
+        if ( false ) {
+          var dnt = (navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack);
+          var doNotTrack = (dnt == "1" || dnt == "yes");
+        }
+        if (!doNotTrack) {
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-SHE42ZWKEN');
+        }
+      </script>
+    
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://instantiator.dev/necro-images/qbasic-wriggler-01.png">
+  <meta name="twitter:title" content="Wriggler">
+  <meta name="twitter:description" content="This is a necropost, resurrected from an old blog.
+Wriggler It was 1998 and I was 17. My tool of choice was QBasic and this is a game I wrote based on a concept I stole from another game called Wriggler.">
 
-    <meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:image" content="https://instantiator.dev/necro-images/qbasic-wriggler-01.png" /><meta name="twitter:title" content="Wriggler"/>
-<meta name="twitter:description" content="This is a necropost, resurrected from an old blog.
-Wriggler It was 1998 and I was 17."/>
-
-    <meta property="og:title" content="Wriggler" />
-<meta property="og:description" content="This is a necropost, resurrected from an old blog.
-Wriggler It was 1998 and I was 17." />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://instantiator.dev/post/wriggler/" /><meta property="og:image" content="https://instantiator.dev/necro-images/qbasic-wriggler-01.png" /><meta property="og:image" content="https://instantiator.dev/necro-images/qbasic-wriggler-02.png" /><meta property="og:image" content="https://instantiator.dev/necro-images/qbasic-wriggler-03.png" /><meta property="article:section" content="post" />
-<meta property="article:published_time" content="2018-04-23T00:00:00+00:00" />
-<meta property="article:modified_time" content="2018-04-23T00:00:00+00:00" /><meta property="og:site_name" content="instantiator.dev" />
-
+    <meta property="og:url" content="https://instantiator.dev/post/wriggler/">
+  <meta property="og:site_name" content="instantiator.dev">
+  <meta property="og:title" content="Wriggler">
+  <meta property="og:description" content="This is a necropost, resurrected from an old blog.
+Wriggler It was 1998 and I was 17. My tool of choice was QBasic and this is a game I wrote based on a concept I stole from another game called Wriggler.">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="post">
+    <meta property="article:published_time" content="2018-04-23T00:00:00+00:00">
+    <meta property="article:modified_time" content="2018-04-23T00:00:00+00:00">
+    <meta property="article:tag" content="Coding">
+    <meta property="article:tag" content="Qbasic">
+    <meta property="article:tag" content="Game">
+    <meta property="article:tag" content="Wriggler">
+    <meta property="article:tag" content="1998">
+    <meta property="article:tag" content="Amstrad">
+    <meta property="og:image" content="https://instantiator.dev/necro-images/qbasic-wriggler-01.png">
+    <meta property="og:image" content="https://instantiator.dev/necro-images/qbasic-wriggler-02.png">
+    <meta property="og:image" content="https://instantiator.dev/necro-images/qbasic-wriggler-03.png">
 
 
     
@@ -275,10 +291,9 @@ Wriggler It was 1998 and I was 17." />
 </p>
 <p>I fired it up once again to make a playthrough video. The game features some pretty old-school beep/boop sound effects, which really hit me right in the nostalgias!</p>
 <p><strong>Warning, this playthrough video contains spoilers for The Puzzle&hellip;</strong></p>
-
 <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-  <iframe src="https://www.youtube.com/embed/IMtjw2OJrKs" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
-</div>
+      <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/IMtjw2OJrKs?autoplay=0&amp;controls=1&amp;end=0&amp;loop=0&amp;mute=0&amp;start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"></iframe>
+    </div>
 
 <p>I don&rsquo;t suppose there&rsquo;s much to be learned from my code, but you can see it all on Github if that&rsquo;s your groove and you&rsquo;re welcome to have a tinker. I had some success running it with <a href="https://www.dosbox.com/">DOSBox</a>.</p>
 <ul>
@@ -288,7 +303,7 @@ Wriggler It was 1998 and I was 17." />
 <p>I remember very little about the actual coding, but it seems like I also wrote some tools to edit the sprites in the game, and to design the rooms in the level. I stopped development roughly around the time I ran out of disk space it seems, and in the last moment of the game you see a teleporter system that I never actually finished. Early mentions of it are commented out in the code, which tells me it wasn&rsquo;t working the last time I showed the game to someone.</p>
 <p>It&rsquo;s always fun digging up old projects. I can&rsquo;t believe how far I got with this one!</p>
 <p><em>I&rsquo;m hoping I&rsquo;ll be able to find some more amongst the dusty old floppies I&rsquo;ve dug up so far&hellip;</em></p>
-<p>You can <a href="https://en.wikipedia.org/wiki/Wriggler_(video_game)">find out more about the original Wriggler</a> at Wikipedia, and <a href="https://www.youtube.com/watch?v=02Kh076wja8">see it in action in this video</a>.</p>
+<p>You can <a href="https://en.wikipedia.org/wiki/Wriggler_%28video_game%29">find out more about the original Wriggler</a> at Wikipedia, and <a href="https://www.youtube.com/watch?v=02Kh076wja8">see it in action in this video</a>.</p>
 <figure><img src="/necro-images/amstrad-wriggler-00.png" width="300px">
 </figure>
 

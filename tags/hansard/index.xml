@@ -4,7 +4,7 @@
     <title>Hansard on instantiator.dev</title>
     <link>https://instantiator.dev/tags/hansard/</link>
     <description>Recent content in Hansard on instantiator.dev</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo</generator>
     <language>en</language>
     <lastBuildDate>Sat, 08 Dec 2012 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://instantiator.dev/tags/hansard/index.xml" rel="self" type="application/rss+xml" />
@@ -13,7 +13,7 @@
       <link>https://instantiator.dev/post/champion/</link>
       <pubDate>Sat, 08 Dec 2012 00:00:00 +0000</pubDate>
       <guid>https://instantiator.dev/post/champion/</guid>
-      <description>This is a necropost, resurrected from an old blog.&#xA;The hack The Parliamentary Hack, recently featured in the Independent, was an interesting event.</description>
+      <description>&lt;p&gt;&lt;em&gt;This is a necropost, resurrected from an old blog.&lt;/em&gt;&lt;/p&gt;&#xA;&lt;h1 id=&#34;the-hack&#34;&gt;The hack&lt;/h1&gt;&#xA;&lt;p&gt;The Parliamentary Hack, recently &lt;a href=&#34;http://www.independent.co.uk/life-style/gadgets-and-tech/features/parliament-2012-how-to-hack-the-house-of-commons-without-anyone-even-trying-to-stop-you-8386762.html&#34;&gt;featured in the Independent&lt;/a&gt;, was an interesting event. Almost every age group was represented and the event was a hive of activity from the word go.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

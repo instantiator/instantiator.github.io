@@ -2,88 +2,88 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>C# on instantiator.dev</title>
-    <link>https://instantiator.dev/tags/c</link>
+    <link>https://instantiator.dev/tags/c%23/</link>
     <description>Recent content in C# on instantiator.dev</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo</generator>
     <language>en</language>
     <lastBuildDate>Sun, 14 Jul 2024 12:00:00 +0000</lastBuildDate>
-    <atom:link href="https://instantiator.dev/tags/c" rel="self" type="application/rss+xml" />
+    <atom:link href="https://instantiator.dev/tags/c%23/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Dracula and the Epistolorean</title>
       <link>https://instantiator.dev/post/draculorean/</link>
       <pubDate>Sun, 14 Jul 2024 12:00:00 +0000</pubDate>
       <guid>https://instantiator.dev/post/draculorean/</guid>
-      <description>What is The Epistolorean, and what has it got to do with Count Dracula?</description>
+      <description>&lt;p&gt;What is &lt;strong&gt;&lt;a href=&#34;https://epistolorean.club/&#34;&gt;The Epistolorean&lt;/a&gt;&lt;/strong&gt;, and what has it got to do with Count Dracula?&lt;/p&gt;</description>
     </item>
     <item>
       <title>Building AI into your application with Semantic Kernel</title>
       <link>https://instantiator.dev/post/you-too-can-llm/</link>
       <pubDate>Mon, 17 Apr 2023 21:00:00 +0000</pubDate>
       <guid>https://instantiator.dev/post/you-too-can-llm/</guid>
-      <description>This is a quick guide to some of the features of the Semantic Kernel, a Software Development Kit that simplifies integration of language models into your own applications.</description>
+      <description>&lt;p&gt;This is a quick guide to some of the features of the Semantic Kernel, a Software Development Kit that simplifies integration of language models into your own applications.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Building an AWS Lambda in C#, part 6: Triggers</title>
       <link>https://instantiator.dev/post/csharp-aws-lambda-tutorial-06/</link>
       <pubDate>Tue, 20 Apr 2021 18:00:00 +0000</pubDate>
       <guid>https://instantiator.dev/post/csharp-aws-lambda-tutorial-06/</guid>
-      <description>In part 5, we amended our Lambda to write to an S3 bucket; and in this part, we&amp;rsquo;ll explore triggers to run it regularly.</description>
+      <description>&lt;p&gt;In part 5, we amended our Lambda to write to an S3 bucket; and in this part, we&amp;rsquo;ll explore triggers to run it regularly.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Building an AWS Lambda in C#, part 5: S3</title>
       <link>https://instantiator.dev/post/csharp-aws-lambda-tutorial-05/</link>
       <pubDate>Mon, 19 Apr 2021 18:00:00 +0000</pubDate>
       <guid>https://instantiator.dev/post/csharp-aws-lambda-tutorial-05/</guid>
-      <description>In previous parts, we&amp;rsquo;ve built a Lambda that can query the OpenWeather API, using a secret key; and in this part we&amp;rsquo;ll extend it to write that data to S3.</description>
+      <description>&lt;p&gt;In previous parts, we&amp;rsquo;ve built a Lambda that can query the OpenWeather API, using a secret key; and in this part we&amp;rsquo;ll extend it to write that data to S3.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Building an AWS Lambda in C#, part 4: Logs</title>
       <link>https://instantiator.dev/post/csharp-aws-lambda-tutorial-04/</link>
       <pubDate>Sun, 18 Apr 2021 18:00:00 +0000</pubDate>
       <guid>https://instantiator.dev/post/csharp-aws-lambda-tutorial-04/</guid>
-      <description>In part 3, we extended our Lambda to communicate with an API, using a secret key; and in this part, we&amp;rsquo;ll explore the logs created when the Lambda runs.</description>
+      <description>&lt;p&gt;In part 3, we extended our Lambda to communicate with an API, using a secret key; and in this part, we&amp;rsquo;ll explore the logs created when the Lambda runs.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Building an AWS Lambda in C#, part 3: APIs and secrets</title>
       <link>https://instantiator.dev/post/csharp-aws-lambda-tutorial-03/</link>
       <pubDate>Sat, 17 Apr 2021 18:00:00 +0000</pubDate>
       <guid>https://instantiator.dev/post/csharp-aws-lambda-tutorial-03/</guid>
-      <description>In part 2, we build a Lambda function, deployed and invoked it; and in this part, we&amp;rsquo;ll extend it to communicate with an API using a secret key.</description>
+      <description>&lt;p&gt;In part 2, we build a Lambda function, deployed and invoked it; and in this part, we&amp;rsquo;ll extend it to communicate with an API using a secret key.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Building an AWS Lambda in C#, part 2: Build, deploy and invoke</title>
       <link>https://instantiator.dev/post/csharp-aws-lambda-tutorial-02/</link>
       <pubDate>Fri, 16 Apr 2021 18:00:00 +0000</pubDate>
       <guid>https://instantiator.dev/post/csharp-aws-lambda-tutorial-02/</guid>
-      <description>In part 1, we set up the basic infrastructure to support a new Lambda function on AWS; and n this part, we&amp;rsquo;ll build a Lambda function, deploy it to AWS, and invoke it with some input.</description>
+      <description>&lt;p&gt;In part 1, we set up the basic infrastructure to support a new Lambda function on AWS; and n this part, we&amp;rsquo;ll build a Lambda function, deploy it to AWS, and invoke it with some input.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Building an AWS Lambda in C#, part 1: AWS</title>
       <link>https://instantiator.dev/post/csharp-aws-lambda-tutorial-01/</link>
       <pubDate>Thu, 15 Apr 2021 18:00:00 +0000</pubDate>
       <guid>https://instantiator.dev/post/csharp-aws-lambda-tutorial-01/</guid>
-      <description>At first glance, Amazon Web Services (AWS) can seem impenetrably complex, but it&amp;rsquo;s not so bad once you&amp;rsquo;ve found your way around it&amp;hellip;</description>
+      <description>&lt;p&gt;At first glance, Amazon Web Services (AWS) can seem impenetrably complex, but it&amp;rsquo;s not so bad once you&amp;rsquo;ve found your way around it&amp;hellip;&lt;/p&gt;</description>
     </item>
     <item>
       <title>Policing data interventions</title>
       <link>https://instantiator.dev/post/policing-data-intervention/</link>
       <pubDate>Tue, 05 Mar 2019 00:00:00 +0000</pubDate>
       <guid>https://instantiator.dev/post/policing-data-intervention/</guid>
-      <description>This is a necropost, resurrected from an old blog. To find out more about Hack the Police events, civic tech, and policing technology, visit: Police Rewired</description>
+      <description>&lt;p&gt;&lt;em&gt;This is a necropost, resurrected from an old blog. To find out more about Hack the Police events, civic tech, and policing technology, visit: &lt;a href=&#34;https://policerewired.org&#34;&gt;Police Rewired&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;</description>
     </item>
     <item>
       <title>A friendly face for the victims of burglary</title>
       <link>https://instantiator.dev/post/burglary-bot/</link>
       <pubDate>Sat, 23 Feb 2019 00:00:00 +0000</pubDate>
       <guid>https://instantiator.dev/post/burglary-bot/</guid>
-      <description>This is a necropost, resurrected from an old blog. To find out more about Hack the Police events, civic tech, and policing technology, visit: Police Rewired</description>
+      <description>&lt;p&gt;&lt;em&gt;This is a necropost, resurrected from an old blog. To find out more about Hack the Police events, civic tech, and policing technology, visit: &lt;a href=&#34;https://policerewired.org&#34;&gt;Police Rewired&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;</description>
     </item>
     <item>
       <title>Drive Stamper</title>
       <link>https://instantiator.dev/post/np-drive-stamper/</link>
       <pubDate>Fri, 29 May 2015 00:00:00 +0000</pubDate>
       <guid>https://instantiator.dev/post/np-drive-stamper/</guid>
-      <description>This is a necropost, resurrected from an old blog.&#xA;Drive Stamper Drive Stamper is one of the first projects I released into the wild, and helped me to kick off my old blog in 2011.</description>
+      <description>&lt;p&gt;&lt;em&gt;This is a necropost, resurrected from an old blog.&lt;/em&gt;&lt;/p&gt;&#xA;&lt;h1 id=&#34;drive-stamper&#34;&gt;Drive Stamper&lt;/h1&gt;&#xA;&lt;p&gt;Drive Stamper is one of the first projects I released into the wild, and helped me to kick off my old blog in 2011.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

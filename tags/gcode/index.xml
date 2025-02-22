@@ -4,7 +4,7 @@
     <title>Gcode on instantiator.dev</title>
     <link>https://instantiator.dev/tags/gcode/</link>
     <description>Recent content in Gcode on instantiator.dev</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo</generator>
     <language>en</language>
     <lastBuildDate>Wed, 18 Jan 2023 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://instantiator.dev/tags/gcode/index.xml" rel="self" type="application/rss+xml" />
@@ -13,7 +13,7 @@
       <link>https://instantiator.dev/post/printing-3d-crosswords/</link>
       <pubDate>Wed, 18 Jan 2023 00:00:00 +0000</pubDate>
       <guid>https://instantiator.dev/post/printing-3d-crosswords/</guid>
-      <description>A tool to design 3D printed crossword puzzles.&#xA;Generating 3D crossword models I&amp;rsquo;ve been working on a tool to generate crossword designs using OpenSCAD.</description>
+      <description>&lt;p&gt;A tool to design 3D printed crossword puzzles.&lt;/p&gt;&#xA;&lt;h1 id=&#34;generating-3d-crossword-models&#34;&gt;Generating 3D crossword models&lt;/h1&gt;&#xA;&lt;p&gt;I&amp;rsquo;ve been working on a tool to generate crossword designs using OpenSCAD. The output is an STL file that you can use with your favourite slicer and send to a 3D printer. It&amp;rsquo;s open source, and you&amp;rsquo;re free to plunder it for tips, techniques, or to generate your own&amp;hellip;&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

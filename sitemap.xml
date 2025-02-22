@@ -3,7 +3,61 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://instantiator.dev/</loc>
-    <lastmod>2024-09-01T12:00:00+00:00</lastmod>
+    <lastmod>2025-02-22T11:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://instantiator.dev/tags/amazon-web-services/</loc>
+    <lastmod>2025-02-22T11:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://instantiator.dev/tags/aws/</loc>
+    <lastmod>2025-02-22T11:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://instantiator.dev/tags/aws-cli/</loc>
+    <lastmod>2025-02-22T11:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://instantiator.dev/tags/bash/</loc>
+    <lastmod>2025-02-22T11:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://instantiator.dev/tags/bucket/</loc>
+    <lastmod>2025-02-22T11:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://instantiator.dev/post/emptying-s3-buckets/</loc>
+    <lastmod>2025-02-22T11:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://instantiator.dev/categories/</loc>
+    <lastmod>2025-02-22T11:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://instantiator.dev/tags/cli/</loc>
+    <lastmod>2025-02-22T11:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://instantiator.dev/tags/coding/</loc>
+    <lastmod>2025-02-22T11:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://instantiator.dev/tags/delete/</loc>
+    <lastmod>2025-02-22T11:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://instantiator.dev/tags/empty/</loc>
+    <lastmod>2025-02-22T11:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://instantiator.dev/tags/infrastructure/</loc>
+    <lastmod>2025-02-22T11:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://instantiator.dev/post/</loc>
+    <lastmod>2025-02-22T11:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://instantiator.dev/tags/s3/</loc>
+    <lastmod>2025-02-22T11:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://instantiator.dev/tags/script/</loc>
+    <lastmod>2025-02-22T11:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://instantiator.dev/tags/shell/</loc>
+    <lastmod>2025-02-22T11:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://instantiator.dev/tags/</loc>
+    <lastmod>2025-02-22T11:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://instantiator.dev/categories/tutorial/</loc>
+    <lastmod>2025-02-22T11:00:00+00:00</lastmod>
   </url><url>
     <loc>https://instantiator.dev/tags/.net/</loc>
     <lastmod>2024-09-01T12:00:00+00:00</lastmod>
@@ -15,9 +69,6 @@
     <lastmod>2024-09-01T12:00:00+00:00</lastmod>
   </url><url>
     <loc>https://instantiator.dev/categories/article/</loc>
-    <lastmod>2024-09-01T12:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://instantiator.dev/categories/</loc>
     <lastmod>2024-09-01T12:00:00+00:00</lastmod>
   </url><url>
     <loc>https://instantiator.dev/tags/ci/</loc>
@@ -59,13 +110,7 @@
     <loc>https://instantiator.dev/tags/people/</loc>
     <lastmod>2024-09-01T12:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://instantiator.dev/post/</loc>
-    <lastmod>2024-09-01T12:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://instantiator.dev/tags/repository/</loc>
-    <lastmod>2024-09-01T12:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://instantiator.dev/tags/</loc>
     <lastmod>2024-09-01T12:00:00+00:00</lastmod>
   </url><url>
     <loc>https://instantiator.dev/tags/tool/</loc>
@@ -125,7 +170,7 @@
     <loc>https://instantiator.dev/tags/bram/</loc>
     <lastmod>2024-07-14T12:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://instantiator.dev/tags/c</loc>
+    <loc>https://instantiator.dev/tags/c%23/</loc>
     <lastmod>2024-07-14T12:00:00+00:00</lastmod>
   </url><url>
     <loc>https://instantiator.dev/tags/count-dracula/</loc>
@@ -245,9 +290,6 @@
     <loc>https://instantiator.dev/categories/template/</loc>
     <lastmod>2023-09-12T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://instantiator.dev/categories/tutorial/</loc>
-    <lastmod>2023-09-12T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://instantiator.dev/tags/typescript/</loc>
     <lastmod>2023-09-12T00:00:00+00:00</lastmod>
   </url><url>
@@ -360,9 +402,6 @@
     <lastmod>2023-05-05T21:00:00+00:00</lastmod>
   </url><url>
     <loc>https://instantiator.dev/tags/clang/</loc>
-    <lastmod>2023-05-05T21:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://instantiator.dev/tags/coding/</loc>
     <lastmod>2023-05-05T21:00:00+00:00</lastmod>
   </url><url>
     <loc>https://instantiator.dev/tags/community/</loc>
@@ -549,9 +588,6 @@
     <lastmod>2023-01-15T09:00:00-07:00</lastmod>
   </url><url>
     <loc>https://instantiator.dev/tags/auth/</loc>
-    <lastmod>2023-01-08T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://instantiator.dev/tags/aws/</loc>
     <lastmod>2023-01-08T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://instantiator.dev/tags/cognito/</loc>
@@ -801,9 +837,6 @@
     <lastmod>2021-11-12T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://instantiator.dev/tags/os-x/</loc>
-    <lastmod>2021-11-12T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://instantiator.dev/tags/shell/</loc>
     <lastmod>2021-11-12T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://instantiator.dev/tags/til/</loc>
@@ -1293,9 +1326,6 @@
     <lastmod>2013-05-25T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://instantiator.dev/post/htp1-highlight-1-secure-evidence-recorder/</loc>
-    <lastmod>2013-05-25T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://instantiator.dev/tags/infrastructure/</loc>
     <lastmod>2013-05-25T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://instantiator.dev/tags/photography/</loc>

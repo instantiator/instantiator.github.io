@@ -10,28 +10,42 @@
     <title>instantiator.dev | Querying data files with terminal tools</title>
     
     
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-SHE42ZWKEN"></script>
-<script>
-var doNotTrack = false;
-if (!doNotTrack) {
-	window.dataLayer = window.dataLayer || [];
-	function gtag(){dataLayer.push(arguments);}
-	gtag('js', new Date());
-	gtag('config', 'G-SHE42ZWKEN', { 'anonymize_ip': false });
-}
-</script>
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-SHE42ZWKEN"></script>
+      <script>
+        var doNotTrack = false;
+        if ( false ) {
+          var dnt = (navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack);
+          var doNotTrack = (dnt == "1" || dnt == "yes");
+        }
+        if (!doNotTrack) {
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-SHE42ZWKEN');
+        }
+      </script>
+    
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://instantiator.dev/lewis/default-image.png">
+  <meta name="twitter:title" content="Querying data files with terminal tools">
+  <meta name="twitter:description" content="There are a many ways to peek inside a data file and reason about its contents. This post is about a triplet of simple, easily available tools that I’ve found handy for searching and querying common data file formats. You might too…">
 
-    <meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:image" content="https://instantiator.dev/lewis/default-image.png" /><meta name="twitter:title" content="Querying data files with terminal tools"/>
-<meta name="twitter:description" content="There are a many ways to peek inside a data file and reason about its contents."/>
-
-    <meta property="og:title" content="Querying data files with terminal tools" />
-<meta property="og:description" content="There are a many ways to peek inside a data file and reason about its contents." />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://instantiator.dev/post/q/" /><meta property="og:image" content="https://instantiator.dev/lewis/default-image.png" /><meta property="article:section" content="post" />
-<meta property="article:published_time" content="2021-01-04T17:30:00+00:00" />
-<meta property="article:modified_time" content="2021-01-04T17:30:00+00:00" /><meta property="og:site_name" content="instantiator.dev" />
-
+    <meta property="og:url" content="https://instantiator.dev/post/q/">
+  <meta property="og:site_name" content="instantiator.dev">
+  <meta property="og:title" content="Querying data files with terminal tools">
+  <meta property="og:description" content="There are a many ways to peek inside a data file and reason about its contents. This post is about a triplet of simple, easily available tools that I’ve found handy for searching and querying common data file formats. You might too…">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="post">
+    <meta property="article:published_time" content="2021-01-04T17:30:00+00:00">
+    <meta property="article:modified_time" content="2021-01-04T17:30:00+00:00">
+    <meta property="article:tag" content="Linux">
+    <meta property="article:tag" content="OS X">
+    <meta property="article:tag" content="Tool">
+    <meta property="article:tag" content="Data">
+    <meta property="article:tag" content="Json">
+    <meta property="article:tag" content="Yaml">
+    <meta property="og:image" content="https://instantiator.dev/lewis/default-image.png">
 
 
     
@@ -250,30 +264,30 @@ This post is about a triplet of simple, easily available tools that
 I&rsquo;ve found handy for searching and querying common data file formats.
 You might too&hellip;</p>
 <table>
-<thead>
-<tr>
-<th>format</th>
-<th>tool</th>
-<th>notes</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>CSV</td>
-<td><code>q</code></td>
-<td>Query CSV files with SQL-like SELECT statements.</td>
-</tr>
-<tr>
-<td>JSON</td>
-<td><code>jq</code></td>
-<td>Look inside JSON files.</td>
-</tr>
-<tr>
-<td>YAML</td>
-<td><code>yq</code></td>
-<td>Look inside YAML files.</td>
-</tr>
-</tbody>
+  <thead>
+      <tr>
+          <th>format</th>
+          <th>tool</th>
+          <th>notes</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>CSV</td>
+          <td><code>q</code></td>
+          <td>Query CSV files with SQL-like SELECT statements.</td>
+      </tr>
+      <tr>
+          <td>JSON</td>
+          <td><code>jq</code></td>
+          <td>Look inside JSON files.</td>
+      </tr>
+      <tr>
+          <td>YAML</td>
+          <td><code>yq</code></td>
+          <td>Look inside YAML files.</td>
+      </tr>
+  </tbody>
 </table>
 <p>If you&rsquo;re on OS X, they&rsquo;re each available through <a href="https://brew.sh/">homebrew</a>:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>brew install q jq yq

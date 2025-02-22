@@ -10,31 +10,45 @@
     <title>instantiator.dev | We&#39;re only human</title>
     
     
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-SHE42ZWKEN"></script>
-<script>
-var doNotTrack = false;
-if (!doNotTrack) {
-	window.dataLayer = window.dataLayer || [];
-	function gtag(){dataLayer.push(arguments);}
-	gtag('js', new Date());
-	gtag('config', 'G-SHE42ZWKEN', { 'anonymize_ip': false });
-}
-</script>
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-SHE42ZWKEN"></script>
+      <script>
+        var doNotTrack = false;
+        if ( false ) {
+          var dnt = (navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack);
+          var doNotTrack = (dnt == "1" || dnt == "yes");
+        }
+        if (!doNotTrack) {
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-SHE42ZWKEN');
+        }
+      </script>
+    
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://instantiator.dev/covid-19/covid-groups-map.png">
+  <meta name="twitter:title" content="We&#39;re only human">
+  <meta name="twitter:description" content="Cleaning up data from volunteer groups across the UK.
+We’re only human In the previous post, we took a tour of the open data available that tells the story of volunteerism across the UK since the coronavirus crisis began.">
 
-    <meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:image" content="https://instantiator.dev/covid-19/covid-groups-map.png" /><meta name="twitter:title" content="We&#39;re only human"/>
-<meta name="twitter:description" content="Cleaning up data from volunteer groups across the UK.
-We&rsquo;re only human In the previous post, we took a tour of the open data available that tells the story of volunteerism across the UK since the coronavirus crisis began."/>
-
-    <meta property="og:title" content="We&#39;re only human" />
-<meta property="og:description" content="Cleaning up data from volunteer groups across the UK.
-We&rsquo;re only human In the previous post, we took a tour of the open data available that tells the story of volunteerism across the UK since the coronavirus crisis began." />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://instantiator.dev/post/covid-volunteer-data/" /><meta property="og:image" content="https://instantiator.dev/covid-19/covid-groups-map.png" /><meta property="article:section" content="post" />
-<meta property="article:published_time" content="2020-04-24T00:00:00+00:00" />
-<meta property="article:modified_time" content="2020-04-24T00:00:00+00:00" /><meta property="og:site_name" content="instantiator.dev" />
-<meta property="og:see_also" content="https://instantiator.dev/post/look-for-the-helpers/" />
-
+    <meta property="og:url" content="https://instantiator.dev/post/covid-volunteer-data/">
+  <meta property="og:site_name" content="instantiator.dev">
+  <meta property="og:title" content="We&#39;re only human">
+  <meta property="og:description" content="Cleaning up data from volunteer groups across the UK.
+We’re only human In the previous post, we took a tour of the open data available that tells the story of volunteerism across the UK since the coronavirus crisis began.">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="post">
+    <meta property="article:published_time" content="2020-04-24T00:00:00+00:00">
+    <meta property="article:modified_time" content="2020-04-24T00:00:00+00:00">
+    <meta property="article:tag" content="Covid-19">
+    <meta property="article:tag" content="Volunteering">
+    <meta property="article:tag" content="Community">
+    <meta property="article:tag" content="Aid">
+    <meta property="article:tag" content="Mutual Aid">
+    <meta property="article:tag" content="Open Data">
+    <meta property="og:image" content="https://instantiator.dev/covid-19/covid-groups-map.png">
+      <meta property="og:see_also" content="https://instantiator.dev/post/look-for-the-helpers/">
 
 
     
@@ -249,7 +263,7 @@ We&rsquo;re only human In the previous post, we took a tour of the open data ava
 <h1 id="were-only-human">We&rsquo;re only human</h1>
 <p>In the previous post, we took a tour of the open data available that tells the story of volunteerism across the UK since the coronavirus crisis began.</p>
 <p>Since the beginning of the year, thousands of groups have registered, and an order of magnitude more individual volunteers have carried out acts of kindness for people in self-isolation.</p>
-<p><img alt="Covid groups map" src="/covid-19/covid-groups-map.png"></p>
+<p><img src="/covid-19/covid-groups-map.png" alt="Covid groups map"></p>
 <p>Volunteers and organisers are, quite frankly, inspirational. Driven by any number of different value systems, they are helping people for little or no recognition or reward.</p>
 <p>Volunteers have provided all the data we’ve seen in the previous article and this, of course, comes with a degree of human error. Cleaning up the registered group information has been challenging for a number of reasons&hellip;</p>
 <p>The data we are looking at for this article is the combined and cleaned data set collated and shared through <a href="https://policerewired.org">Police Rewired</a>:</p>
@@ -284,9 +298,9 @@ We&rsquo;re only human In the previous post, we took a tour of the open data ava
 <li>Dates are recorded one way before a certain date and another way afterwards. The registration system isn’t generating a mix of both.</li>
 </ul>
 <p>The process applied (and shown below) would not have been anywhere near as simple without the kind help of a good friend called Sam. The <em>no future dates</em> constraint is far more helpful than I had assumed!</p>
-<p><img alt="Reasoning about dates" src="/covid-19/date-reasoning.png"></p>
+<p><img src="/covid-19/date-reasoning.png" alt="Reasoning about dates"></p>
 <p>Having completed our initial round of interpretation, only a few hundred dates remain ambiguous. Good enough! We can now plot the unambiguous data we have…</p>
-<p><img alt="Unambiguous date formats" src="/covid-19/unambiguous-date-formats.png"></p>
+<p><img src="/covid-19/unambiguous-date-formats.png" alt="Unambiguous date formats"></p>
 <p>NB. the spike in UK format dates on the right comes from local council hubs data imported on 10th April. Remove that, and it’s pretty clear that the switch-over to US date format happens around 28th March.</p>
 <p>This means we can interpret every date after the 28th as a US date, including the 4 days of ambiguous dates found in the first pass (1st to 4th April), giving us a near-complete set of unambiguous dates.</p>
 <h3 id="updates-and-duplicates-look-like-registrations">Updates and duplicates look like registrations</h3>
@@ -311,8 +325,7 @@ We&rsquo;re only human In the previous post, we took a tour of the open data ava
 <h3 id="addresses-vary-wildly-for-the-same-place">Addresses vary wildly for the same place</h3>
 <p>There are so many different ways to describe a location, and addresses are really only a very loosely defined way of doing it. So how can we spot when two people mean the same place, but have written it differently?</p>
 <blockquote>
-<p>📌 “100–104, The High Street, Townsville” and 📌 “The Old Post, High Street, Townsville” might not seem easily comparable. Now mix in some post codes, start to reorder parts of the address, remove the street name, and add a few typos…</p>
-</blockquote>
+<p>📌 “100–104, The High Street, Townsville” and 📌 “The Old Post, High Street, Townsville” might not seem easily comparable. Now mix in some post codes, start to reorder parts of the address, remove the street name, and add a few typos…</p></blockquote>
 <p>This is a huge problem, and not one easily solved by a lone data scientist with a spreadsheet. <em>(I guess I’m a data scientist now?)</em></p>
 <p>However, as the data is going to be plotted on a map, an answer presents itself. We will need to <a href="https://en.wikipedia.org/wiki/Geocoding">geocode</a> the provided address to get a latitude and longitude for each group.</p>
 <p>Geocoders (such as the Google Maps Geocoding API) must resolve addresses to points on a map every day, and as they do so they quantise their results to the positions of real buildings and landmarks. By first geocoding, and then comparing the resulting coordinates, we can pass the language problem over to an organisation with resources to resolve and match addresses in almost any form they are presented.</p>
@@ -331,7 +344,7 @@ We&rsquo;re only human In the previous post, we took a tour of the open data ava
 <h3 id="are-all-the-links-really-for-volunteer-groups">Are all the links really for volunteer groups?</h3>
 <p>Having run these processes what we are left with is almost a clean data set. There are just a few other wrinkles to iron out, and for this we need to understand a little bit more about the data itself.</p>
 <p>In the previous post, we explored the URLs provided for each volunteer group — matching on aspects of them to determine which tools they represented.</p>
-<p><img alt="Groups by tool" src="/covid-19/group-organisation-tools.png"></p>
+<p><img src="/covid-19/group-organisation-tools.png" alt="Groups by tool"></p>
 <p>A group of links worth filtering through manually are the organisations that appear on facebook (perhaps churches, schools, community centres, etc.) — many of which will be legitimately taking part in local volunteering efforts.</p>
 <p>Some facebook links, however, may have been miscategorised or listed by opportunists hoping to raise the profile of their personal or business accounts.</p>
 <p>Facebook links have some clues that help us to identify whether they point to a group, and by and large the groups are likely to be appropriately listed.</p>
@@ -352,7 +365,7 @@ We&rsquo;re only human In the previous post, we took a tour of the open data ava
 <h2 id="police-rewired">Police Rewired</h2>
 <p><a href="https://policerewired.org">Police Rewired</a> is a group for volunteer professionals, students, academics, developers, designers, and creative problem-solvers who want to develop tools and work on projects in public safety and crime.</p>
 <p>If you’d like to take part, or you’re already working on a voluntary project in public safety, we’d love to hear from you!</p>
-<p><img alt="Police Rewired poster" src="/police-rewired/police-rewired-poster.png"></p>
+<p><img src="/police-rewired/police-rewired-poster.png" alt="Police Rewired poster"></p>
 
             </div>
         </div>

@@ -4,7 +4,7 @@
     <title>AI on instantiator.dev</title>
     <link>https://instantiator.dev/tags/ai/</link>
     <description>Recent content in AI on instantiator.dev</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo</generator>
     <language>en</language>
     <lastBuildDate>Mon, 17 Apr 2023 21:00:00 +0000</lastBuildDate>
     <atom:link href="https://instantiator.dev/tags/ai/index.xml" rel="self" type="application/rss+xml" />
@@ -13,7 +13,7 @@
       <link>https://instantiator.dev/post/you-too-can-llm/</link>
       <pubDate>Mon, 17 Apr 2023 21:00:00 +0000</pubDate>
       <guid>https://instantiator.dev/post/you-too-can-llm/</guid>
-      <description>This is a quick guide to some of the features of the Semantic Kernel, a Software Development Kit that simplifies integration of language models into your own applications.</description>
+      <description>&lt;p&gt;This is a quick guide to some of the features of the Semantic Kernel, a Software Development Kit that simplifies integration of language models into your own applications.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

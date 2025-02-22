@@ -4,7 +4,7 @@
     <title>Tool on instantiator.dev</title>
     <link>https://instantiator.dev/categories/tool/</link>
     <description>Recent content in Tool on instantiator.dev</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo</generator>
     <language>en</language>
     <lastBuildDate>Sun, 01 Sep 2024 12:00:00 +0000</lastBuildDate>
     <atom:link href="https://instantiator.dev/categories/tool/index.xml" rel="self" type="application/rss+xml" />
@@ -13,91 +13,91 @@
       <link>https://instantiator.dev/post/collaborative-list-manager-listsky/</link>
       <pubDate>Sun, 01 Sep 2024 12:00:00 +0000</pubDate>
       <guid>https://instantiator.dev/post/collaborative-list-manager-listsky/</guid>
-      <description>ListSky is a new tool for collaboratively managing lists of social accounts.</description>
+      <description>&lt;p&gt;&lt;em&gt;ListSky is a new tool for collaboratively managing lists of social accounts.&lt;/em&gt;&lt;/p&gt;</description>
     </item>
     <item>
       <title>Open Social Distributor</title>
       <link>https://instantiator.dev/post/open-social-distributor/</link>
       <pubDate>Sat, 11 Nov 2023 11:00:00 +0000</pubDate>
       <guid>https://instantiator.dev/post/open-social-distributor/</guid>
-      <description>How to use Open Social Distributor to post threads and messages across multiple social networks at once.</description>
+      <description>&lt;p&gt;&lt;em&gt;How to use Open Social Distributor to post threads and messages across multiple social networks at once.&lt;/em&gt;&lt;/p&gt;</description>
     </item>
     <item>
       <title>Reveal in React</title>
       <link>https://instantiator.dev/post/reveal-in-react/</link>
       <pubDate>Tue, 12 Sep 2023 00:00:00 +0000</pubDate>
       <guid>https://instantiator.dev/post/reveal-in-react/</guid>
-      <description>What if your UI was a slide show?&#xA;Reveal in React TLDR: Here&amp;rsquo;s a template repository for a NextJS app with a Reveal slide show UI: instantiator/reveal-on-next</description>
+      <description>&lt;p&gt;What if your UI was a slide show?&lt;/p&gt;&#xA;&lt;h1 id=&#34;reveal-in-react&#34;&gt;Reveal in React&lt;/h1&gt;&#xA;&lt;p&gt;&lt;strong&gt;TLDR:&lt;/strong&gt; Here&amp;rsquo;s a template repository for a NextJS app with a Reveal slide show UI: &lt;a href=&#34;https://github.com/instantiator/reveal-on-next&#34;&gt;instantiator/reveal-on-next&lt;/a&gt;&lt;/p&gt;</description>
     </item>
     <item>
       <title>Exploring OAuth</title>
       <link>https://instantiator.dev/post/playing-with-oauth/</link>
       <pubDate>Tue, 18 Jul 2023 17:00:00 +0000</pubDate>
       <guid>https://instantiator.dev/post/playing-with-oauth/</guid>
-      <description>OAuth Token Explorer is a tool to explore authentication and authorisation on behalf of a user.</description>
+      <description>&lt;p&gt;&lt;em&gt;OAuth Token Explorer is a tool to explore authentication and authorisation on behalf of a user.&lt;/em&gt;&lt;/p&gt;</description>
     </item>
     <item>
       <title>Hammering JSON into CSV</title>
       <link>https://instantiator.dev/post/hammer-json-into-csv/</link>
       <pubDate>Sun, 16 Jul 2023 10:00:00 +0000</pubDate>
       <guid>https://instantiator.dev/post/hammer-json-into-csv/</guid>
-      <description>json-to-smart-csv is a tool to help build CSV records from arbitrary JSON&amp;hellip;</description>
+      <description>&lt;p&gt;&lt;em&gt;json-to-smart-csv is a tool to help build CSV records from arbitrary JSON&amp;hellip;&lt;/em&gt;&lt;/p&gt;</description>
     </item>
     <item>
       <title>Your own map server</title>
       <link>https://instantiator.dev/post/world-server/</link>
       <pubDate>Sun, 02 Jul 2023 13:00:00 +0000</pubDate>
       <guid>https://instantiator.dev/post/world-server/</guid>
-      <description>A quick guide to running your own tile server, with a geo database populated from OpenStreetMap data.</description>
+      <description>&lt;p&gt;A quick guide to running your own tile server, with a geo database populated from &lt;a href=&#34;https://www.openstreetmap.org/&#34;&gt;OpenStreetMap&lt;/a&gt; data.&lt;/p&gt;</description>
     </item>
     <item>
       <title>3D puzzle print: a crossword generation tool</title>
       <link>https://instantiator.dev/post/printing-3d-crosswords/</link>
       <pubDate>Wed, 18 Jan 2023 00:00:00 +0000</pubDate>
       <guid>https://instantiator.dev/post/printing-3d-crosswords/</guid>
-      <description>A tool to design 3D printed crossword puzzles.&#xA;Generating 3D crossword models I&amp;rsquo;ve been working on a tool to generate crossword designs using OpenSCAD.</description>
+      <description>&lt;p&gt;A tool to design 3D printed crossword puzzles.&lt;/p&gt;&#xA;&lt;h1 id=&#34;generating-3d-crossword-models&#34;&gt;Generating 3D crossword models&lt;/h1&gt;&#xA;&lt;p&gt;I&amp;rsquo;ve been working on a tool to generate crossword designs using OpenSCAD. The output is an STL file that you can use with your favourite slicer and send to a 3D printer. It&amp;rsquo;s open source, and you&amp;rsquo;re free to plunder it for tips, techniques, or to generate your own&amp;hellip;&lt;/p&gt;</description>
     </item>
     <item>
       <title>The rocketship template 🚀</title>
       <link>https://instantiator.dev/post/rocketship-template/</link>
       <pubDate>Sun, 08 Jan 2023 00:00:00 +0000</pubDate>
       <guid>https://instantiator.dev/post/rocketship-template/</guid>
-      <description>Presenting a simple template to develop, publish, and test a simple C# service backend on AWS, with serverless Lambda functions, supported by DynamoDb, behind an API Gateway, and protected by Cognito auth.</description>
+      <description>&lt;p&gt;Presenting a simple template to develop, publish, and test a simple C# service backend on AWS, with serverless Lambda functions, supported by DynamoDb, behind an API Gateway, and protected by Cognito auth.&lt;/p&gt;</description>
     </item>
     <item>
       <title>International Consensus Chess is in public beta!</title>
       <link>https://instantiator.dev/post/icgames-net/</link>
       <pubDate>Thu, 08 Dec 2022 00:00:00 +0000</pubDate>
       <guid>https://instantiator.dev/post/icgames-net/</guid>
-      <description>Consensus Chess is going through some beta testing on Mastodon, and you can play today!</description>
+      <description>&lt;p&gt;Consensus Chess is going through some beta testing on Mastodon, and you can play today!&lt;/p&gt;</description>
     </item>
     <item>
       <title>A template thesis to simplify your write-up</title>
       <link>https://instantiator.dev/post/markdown-thesis-template/</link>
       <pubDate>Thu, 17 Jun 2021 00:00:00 +0000</pubDate>
       <guid>https://instantiator.dev/post/markdown-thesis-template/</guid>
-      <description>The things I&amp;rsquo;ll do to avoid learning LaTeX&amp;hellip;&#xA;Do you prefer Markdown to LaTeX?</description>
+      <description>&lt;blockquote&gt;&#xA;&lt;p&gt;The things I&amp;rsquo;ll do to avoid learning LaTeX&amp;hellip;&lt;/p&gt;&lt;/blockquote&gt;&#xA;&lt;p&gt;Do you prefer Markdown to LaTeX?&lt;/p&gt;</description>
     </item>
     <item>
       <title>Querying data files with terminal tools</title>
       <link>https://instantiator.dev/post/q/</link>
       <pubDate>Mon, 04 Jan 2021 17:30:00 +0000</pubDate>
       <guid>https://instantiator.dev/post/q/</guid>
-      <description>There are a many ways to peek inside a data file and reason about its contents.</description>
+      <description>&lt;p&gt;There are a many ways to peek inside a data file and reason about its contents.&#xA;This post is about a triplet of simple, easily available tools that&#xA;I&amp;rsquo;ve found handy for searching and querying common data file formats.&#xA;You might too&amp;hellip;&lt;/p&gt;</description>
     </item>
     <item>
       <title>Keeping jobs alive with caffeine</title>
       <link>https://instantiator.dev/post/caffeine/</link>
       <pubDate>Sat, 02 Jan 2021 19:00:00 +0000</pubDate>
       <guid>https://instantiator.dev/post/caffeine/</guid>
-      <description>My Mac likes to go to sleep to save power, and that means any long-running processes I have underway will be suspended when it does.</description>
+      <description>&lt;p&gt;My Mac likes to go to sleep to save power, and that means any long-running processes&#xA;I have underway will be suspended when it does.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Drive Stamper</title>
       <link>https://instantiator.dev/post/np-drive-stamper/</link>
       <pubDate>Fri, 29 May 2015 00:00:00 +0000</pubDate>
       <guid>https://instantiator.dev/post/np-drive-stamper/</guid>
-      <description>This is a necropost, resurrected from an old blog.&#xA;Drive Stamper Drive Stamper is one of the first projects I released into the wild, and helped me to kick off my old blog in 2011.</description>
+      <description>&lt;p&gt;&lt;em&gt;This is a necropost, resurrected from an old blog.&lt;/em&gt;&lt;/p&gt;&#xA;&lt;h1 id=&#34;drive-stamper&#34;&gt;Drive Stamper&lt;/h1&gt;&#xA;&lt;p&gt;Drive Stamper is one of the first projects I released into the wild, and helped me to kick off my old blog in 2011.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

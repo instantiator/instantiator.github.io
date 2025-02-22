@@ -4,7 +4,7 @@
     <title>API on instantiator.dev</title>
     <link>https://instantiator.dev/tags/api/</link>
     <description>Recent content in API on instantiator.dev</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo</generator>
     <language>en</language>
     <lastBuildDate>Mon, 17 Apr 2023 21:00:00 +0000</lastBuildDate>
     <atom:link href="https://instantiator.dev/tags/api/index.xml" rel="self" type="application/rss+xml" />
@@ -13,14 +13,14 @@
       <link>https://instantiator.dev/post/you-too-can-llm/</link>
       <pubDate>Mon, 17 Apr 2023 21:00:00 +0000</pubDate>
       <guid>https://instantiator.dev/post/you-too-can-llm/</guid>
-      <description>This is a quick guide to some of the features of the Semantic Kernel, a Software Development Kit that simplifies integration of language models into your own applications.</description>
+      <description>&lt;p&gt;This is a quick guide to some of the features of the Semantic Kernel, a Software Development Kit that simplifies integration of language models into your own applications.&lt;/p&gt;</description>
     </item>
     <item>
       <title>The rocketship template 🚀</title>
       <link>https://instantiator.dev/post/rocketship-template/</link>
       <pubDate>Sun, 08 Jan 2023 00:00:00 +0000</pubDate>
       <guid>https://instantiator.dev/post/rocketship-template/</guid>
-      <description>Presenting a simple template to develop, publish, and test a simple C# service backend on AWS, with serverless Lambda functions, supported by DynamoDb, behind an API Gateway, and protected by Cognito auth.</description>
+      <description>&lt;p&gt;Presenting a simple template to develop, publish, and test a simple C# service backend on AWS, with serverless Lambda functions, supported by DynamoDb, behind an API Gateway, and protected by Cognito auth.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

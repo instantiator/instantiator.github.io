@@ -4,7 +4,7 @@
     <title>Convert on instantiator.dev</title>
     <link>https://instantiator.dev/tags/convert/</link>
     <description>Recent content in Convert on instantiator.dev</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo</generator>
     <language>en</language>
     <lastBuildDate>Sun, 16 Jul 2023 10:00:00 +0000</lastBuildDate>
     <atom:link href="https://instantiator.dev/tags/convert/index.xml" rel="self" type="application/rss+xml" />
@@ -13,7 +13,7 @@
       <link>https://instantiator.dev/post/hammer-json-into-csv/</link>
       <pubDate>Sun, 16 Jul 2023 10:00:00 +0000</pubDate>
       <guid>https://instantiator.dev/post/hammer-json-into-csv/</guid>
-      <description>json-to-smart-csv is a tool to help build CSV records from arbitrary JSON&amp;hellip;</description>
+      <description>&lt;p&gt;&lt;em&gt;json-to-smart-csv is a tool to help build CSV records from arbitrary JSON&amp;hellip;&lt;/em&gt;&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

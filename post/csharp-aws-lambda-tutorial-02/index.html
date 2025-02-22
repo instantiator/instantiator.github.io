@@ -10,29 +10,46 @@
     <title>instantiator.dev | Building an AWS Lambda in C#, part 2: Build, deploy and invoke</title>
     
     
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-SHE42ZWKEN"></script>
-<script>
-var doNotTrack = false;
-if (!doNotTrack) {
-	window.dataLayer = window.dataLayer || [];
-	function gtag(){dataLayer.push(arguments);}
-	gtag('js', new Date());
-	gtag('config', 'G-SHE42ZWKEN', { 'anonymize_ip': false });
-}
-</script>
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-SHE42ZWKEN"></script>
+      <script>
+        var doNotTrack = false;
+        if ( false ) {
+          var dnt = (navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack);
+          var doNotTrack = (dnt == "1" || dnt == "yes");
+        }
+        if (!doNotTrack) {
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-SHE42ZWKEN');
+        }
+      </script>
+    
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://instantiator.dev/csharp-aws-lambda-tutorial/000-heading-img.png">
+  <meta name="twitter:title" content="Building an AWS Lambda in C#, part 2: Build, deploy and invoke">
+  <meta name="twitter:description" content="In part 1, we set up the basic infrastructure to support a new Lambda function on AWS; and n this part, we’ll build a Lambda function, deploy it to AWS, and invoke it with some input.">
 
-    <meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:image" content="https://instantiator.dev/csharp-aws-lambda-tutorial/000-heading-img.png" /><meta name="twitter:title" content="Building an AWS Lambda in C#, part 2: Build, deploy and invoke"/>
-<meta name="twitter:description" content="In part 1, we set up the basic infrastructure to support a new Lambda function on AWS; and n this part, we&rsquo;ll build a Lambda function, deploy it to AWS, and invoke it with some input."/>
-
-    <meta property="og:title" content="Building an AWS Lambda in C#, part 2: Build, deploy and invoke" />
-<meta property="og:description" content="In part 1, we set up the basic infrastructure to support a new Lambda function on AWS; and n this part, we&rsquo;ll build a Lambda function, deploy it to AWS, and invoke it with some input." />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://instantiator.dev/post/csharp-aws-lambda-tutorial-02/" /><meta property="og:image" content="https://instantiator.dev/csharp-aws-lambda-tutorial/000-heading-img.png" /><meta property="article:section" content="post" />
-<meta property="article:published_time" content="2021-04-16T18:00:00+00:00" />
-<meta property="article:modified_time" content="2021-04-16T18:00:00+00:00" /><meta property="og:site_name" content="instantiator.dev" />
-<meta property="og:see_also" content="https://instantiator.dev/post/csharp-aws-lambda-tutorial-06/" /><meta property="og:see_also" content="https://instantiator.dev/post/csharp-aws-lambda-tutorial-05/" /><meta property="og:see_also" content="https://instantiator.dev/post/csharp-aws-lambda-tutorial-04/" /><meta property="og:see_also" content="https://instantiator.dev/post/csharp-aws-lambda-tutorial-03/" /><meta property="og:see_also" content="https://instantiator.dev/post/csharp-aws-lambda-tutorial-01/" />
-
+    <meta property="og:url" content="https://instantiator.dev/post/csharp-aws-lambda-tutorial-02/">
+  <meta property="og:site_name" content="instantiator.dev">
+  <meta property="og:title" content="Building an AWS Lambda in C#, part 2: Build, deploy and invoke">
+  <meta property="og:description" content="In part 1, we set up the basic infrastructure to support a new Lambda function on AWS; and n this part, we’ll build a Lambda function, deploy it to AWS, and invoke it with some input.">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="post">
+    <meta property="article:published_time" content="2021-04-16T18:00:00+00:00">
+    <meta property="article:modified_time" content="2021-04-16T18:00:00+00:00">
+    <meta property="article:tag" content="Coding">
+    <meta property="article:tag" content="C#">
+    <meta property="article:tag" content=".Net">
+    <meta property="article:tag" content="AWS">
+    <meta property="article:tag" content="Lambda">
+    <meta property="og:image" content="https://instantiator.dev/csharp-aws-lambda-tutorial/000-heading-img.png">
+      <meta property="og:see_also" content="https://instantiator.dev/post/csharp-aws-lambda-tutorial-06/">
+      <meta property="og:see_also" content="https://instantiator.dev/post/csharp-aws-lambda-tutorial-05/">
+      <meta property="og:see_also" content="https://instantiator.dev/post/csharp-aws-lambda-tutorial-04/">
+      <meta property="og:see_also" content="https://instantiator.dev/post/csharp-aws-lambda-tutorial-03/">
+      <meta property="og:see_also" content="https://instantiator.dev/post/csharp-aws-lambda-tutorial-01/">
 
 
     
@@ -273,8 +290,7 @@ if (!doNotTrack) {
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>dotnet new lambda.EmptyFunction --name SampleLambdaFunction
 </span></span></code></pre></div><p>In fact, this has created two projects: one for the lambda, and the other to test it.</p>
 <blockquote>
-<p>You may wish to move the projects around into a structure that makes sense to you. Now is a good time for that. (I usually prefer to have all my projects in directories directly inside the main solution directory - but I&rsquo;ve accepted the <code>src/</code> and <code>test/</code> directories that the template provides this time.)</p>
-</blockquote>
+<p>You may wish to move the projects around into a structure that makes sense to you. Now is a good time for that. (I usually prefer to have all my projects in directories directly inside the main solution directory - but I&rsquo;ve accepted the <code>src/</code> and <code>test/</code> directories that the template provides this time.)</p></blockquote>
 <ul>
 <li>Fire up your favourite .NET IDE (Visual Studio, or Visual Studio Code are both good recommendations) and create a new Solution in your solution folder.</li>
 <li>Add both the existing projects to your solution.</li>
@@ -307,9 +323,8 @@ if (!doNotTrack) {
 <p>See <code>test-a-string.sh</code> (in the sample project), or use the invocation below:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>dotnet lambda invoke-function SampleLambdaFunction --profile sample-admin --region eu-west-2 --payload <span style="color:#e6db74">&#39;a rather lower-case string&#39;</span>
 </span></span></code></pre></div><blockquote>
-<p>NB. There are plenty of ways to invoke a Lambda function. I&rsquo;d recommend reading a little more about how it&rsquo;s done at: <a href="https://docs.aws.amazon.com/lambda/latest/dg/lambda-invocation.html">Invoking functions</a></p>
-</blockquote>
-<p><img alt="Testing the Lambda" src="/csharp-aws-lambda-tutorial/006-test-a-string.png"></p>
+<p>NB. There are plenty of ways to invoke a Lambda function. I&rsquo;d recommend reading a little more about how it&rsquo;s done at: <a href="https://docs.aws.amazon.com/lambda/latest/dg/lambda-invocation.html">Invoking functions</a></p></blockquote>
+<p><img src="/csharp-aws-lambda-tutorial/006-test-a-string.png" alt="Testing the Lambda"></p>
 <p>In the output, you should see a response, with your input string upper-cased:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>A RATHER LOWER-CASE STRING
 </span></span></code></pre></div><h4 id="conclusion">Conclusion</h4>

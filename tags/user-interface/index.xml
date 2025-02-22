@@ -4,7 +4,7 @@
     <title>User Interface on instantiator.dev</title>
     <link>https://instantiator.dev/tags/user-interface/</link>
     <description>Recent content in User Interface on instantiator.dev</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo</generator>
     <language>en</language>
     <lastBuildDate>Fri, 05 May 2023 21:00:00 +0000</lastBuildDate>
     <atom:link href="https://instantiator.dev/tags/user-interface/index.xml" rel="self" type="application/rss+xml" />
@@ -13,7 +13,7 @@
       <link>https://instantiator.dev/post/flipper-zero-app-tutorial-02/</link>
       <pubDate>Fri, 05 May 2023 21:00:00 +0000</pubDate>
       <guid>https://instantiator.dev/post/flipper-zero-app-tutorial-02/</guid>
-      <description>In this part, we&amp;rsquo;ll build a simple user interface for a Flipper Zero app.</description>
+      <description>&lt;p&gt;In this part, we&amp;rsquo;ll build a simple user interface for a Flipper Zero app.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

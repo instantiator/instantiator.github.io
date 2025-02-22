@@ -10,28 +10,42 @@
     <title>instantiator.dev | Rainbow paws</title>
     
     
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-SHE42ZWKEN"></script>
-<script>
-var doNotTrack = false;
-if (!doNotTrack) {
-	window.dataLayer = window.dataLayer || [];
-	function gtag(){dataLayer.push(arguments);}
-	gtag('js', new Date());
-	gtag('config', 'G-SHE42ZWKEN', { 'anonymize_ip': false });
-}
-</script>
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-SHE42ZWKEN"></script>
+      <script>
+        var doNotTrack = false;
+        if ( false ) {
+          var dnt = (navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack);
+          var doNotTrack = (dnt == "1" || dnt == "yes");
+        }
+        if (!doNotTrack) {
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-SHE42ZWKEN');
+        }
+      </script>
+    
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://instantiator.dev/bbcmicrobot/rainbow-paws.png">
+  <meta name="twitter:title" content="Rainbow paws">
+  <meta name="twitter:description" content="_Art is fun and hard and messy and complicated and like every other trade it’s full of people who are earnestly showing you what they created (sprinkled with a few jokers)._">
 
-    <meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:image" content="https://instantiator.dev/bbcmicrobot/rainbow-paws.png" /><meta name="twitter:title" content="Rainbow paws"/>
-<meta name="twitter:description" content="_Art is fun and hard and messy and complicated and like every other trade it&rsquo;s full of people who are earnestly showing you what they created (sprinkled with a few jokers)."/>
-
-    <meta property="og:title" content="Rainbow paws" />
-<meta property="og:description" content="_Art is fun and hard and messy and complicated and like every other trade it&rsquo;s full of people who are earnestly showing you what they created (sprinkled with a few jokers)." />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://instantiator.dev/post/rainbow-paws/" /><meta property="og:image" content="https://instantiator.dev/bbcmicrobot/rainbow-paws.png" /><meta property="article:section" content="post" />
-<meta property="article:published_time" content="2021-11-13T00:00:00+00:00" />
-<meta property="article:modified_time" content="2021-11-13T00:00:00+00:00" /><meta property="og:site_name" content="instantiator.dev" />
-
+    <meta property="og:url" content="https://instantiator.dev/post/rainbow-paws/">
+  <meta property="og:site_name" content="instantiator.dev">
+  <meta property="og:title" content="Rainbow paws">
+  <meta property="og:description" content="_Art is fun and hard and messy and complicated and like every other trade it’s full of people who are earnestly showing you what they created (sprinkled with a few jokers)._">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="post">
+    <meta property="article:published_time" content="2021-11-13T00:00:00+00:00">
+    <meta property="article:modified_time" content="2021-11-13T00:00:00+00:00">
+    <meta property="article:tag" content="Retro Computing">
+    <meta property="article:tag" content="Graphics">
+    <meta property="article:tag" content="BASIC">
+    <meta property="article:tag" content="BBC Micro">
+    <meta property="article:tag" content="Geometry">
+    <meta property="article:tag" content="Rotation">
+    <meta property="og:image" content="https://instantiator.dev/bbcmicrobot/rainbow-paws.png">
 
 
     
@@ -248,7 +262,7 @@ if (!doNotTrack) {
 
             </div>
             <div class="mt-4">
-                <p>_Art is fun and hard and messy and complicated and like every other trade it&rsquo;s full of people who are earnestly showing you what they created (sprinkled with <a href="https://en.wikipedia.org/wiki/Take_the_Money_and_Run_(artwork)">a few jokers</a>)._</p>
+                <p>_Art is fun and hard and messy and complicated and like every other trade it&rsquo;s full of people who are earnestly showing you what they created (sprinkled with <a href="https://en.wikipedia.org/wiki/Take_the_Money_and_Run_%28artwork%29">a few jokers</a>)._</p>
 <p>I still like to pretend I don&rsquo;t really know art when I see it, but I think I appreciate the effort people put into their work. There are ways to recognise that. You could know a little about the medium, or you could ask the creator to talk about their work and listen for the passion to shine through.</p>
 <p>This is sometimes very clear when visiting escape room venues. If you&rsquo;re fortunate enough to meet the owner of a venue, and they choose to walk you through the game afterwards - telling you how it works, how it was made, and what they were thinking of when they designed the puzzles - you&rsquo;ll know that the game you&rsquo;ve just played was special, a labour of love.</p>
 <h2 id="the-cat-with-rainbow-coloured-paws">The Cat with Rainbow Coloured Paws</h2>
@@ -263,7 +277,7 @@ if (!doNotTrack) {
 <p>BASIC is a pretty verbose language, although lots of the commands have abbreviations. Lots of the instructions are English words, and so to help fit as much as possible into a single tweet, people do something called <a href="https://blog.mousefingers.com/post/bbc/bbc_golf/">Code Golfing</a> (hat tip <a href="https://twitter.com/P_Malin">@P_Malin</a>) - it&rsquo;s artful, trying to squeeze as much meaning as possible into as little text as possible.</p>
 <p>So what am I doing here? Rainbow Paws barely scratches the surface of code golfing, but it does illustrate some fun techniques in graphics.</p>
 <p>Each paw is created from 5 circles, representing half of the main pad and two toes, mirrored to make a complete paw (saving vital space in the tweet for the rest of the code).</p>
-<p><img alt="Each paw from the example above - but the circles are just outlines so you can see where they lay" src="/bbcmicrobot/raw-paws.png"></p>
+<p><img src="/bbcmicrobot/raw-paws.png" alt="Each paw from the example above - but the circles are just outlines so you can see where they lay"></p>
 <p>And each paw is drawn at a slight angle. So how do you rotate things? This is <del>geometry</del> computer graphics 101&hellip;</p>
 <h2 id="2d-rotation-around-a-point">2D rotation around a point</h2>
 <p>The steps are pretty straightforward:</p>

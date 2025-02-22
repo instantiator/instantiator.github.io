@@ -10,28 +10,42 @@
     <title>instantiator.dev | Dracula and the Epistolorean</title>
     
     
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-SHE42ZWKEN"></script>
-<script>
-var doNotTrack = false;
-if (!doNotTrack) {
-	window.dataLayer = window.dataLayer || [];
-	function gtag(){dataLayer.push(arguments);}
-	gtag('js', new Date());
-	gtag('config', 'G-SHE42ZWKEN', { 'anonymize_ip': false });
-}
-</script>
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-SHE42ZWKEN"></script>
+      <script>
+        var doNotTrack = false;
+        if ( false ) {
+          var dnt = (navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack);
+          var doNotTrack = (dnt == "1" || dnt == "yes");
+        }
+        if (!doNotTrack) {
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-SHE42ZWKEN');
+        }
+      </script>
+    
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://instantiator.dev/epistolorean/draculorean-poster.png">
+  <meta name="twitter:title" content="Dracula and the Epistolorean">
+  <meta name="twitter:description" content="What is The Epistolorean, and what has it got to do with Count Dracula?">
 
-    <meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:image" content="https://instantiator.dev/epistolorean/draculorean-poster.png" /><meta name="twitter:title" content="Dracula and the Epistolorean"/>
-<meta name="twitter:description" content="What is The Epistolorean, and what has it got to do with Count Dracula?"/>
-
-    <meta property="og:title" content="Dracula and the Epistolorean" />
-<meta property="og:description" content="What is The Epistolorean, and what has it got to do with Count Dracula?" />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://instantiator.dev/post/draculorean/" /><meta property="og:image" content="https://instantiator.dev/epistolorean/draculorean-poster.png" /><meta property="article:section" content="post" />
-<meta property="article:published_time" content="2024-07-14T12:00:00+00:00" />
-<meta property="article:modified_time" content="2024-07-14T12:00:00+00:00" /><meta property="og:site_name" content="instantiator.dev" />
-
+    <meta property="og:url" content="https://instantiator.dev/post/draculorean/">
+  <meta property="og:site_name" content="instantiator.dev">
+  <meta property="og:title" content="Dracula and the Epistolorean">
+  <meta property="og:description" content="What is The Epistolorean, and what has it got to do with Count Dracula?">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="post">
+    <meta property="article:published_time" content="2024-07-14T12:00:00+00:00">
+    <meta property="article:modified_time" content="2024-07-14T12:00:00+00:00">
+    <meta property="article:tag" content="Project">
+    <meta property="article:tag" content="C#">
+    <meta property="article:tag" content=".Net">
+    <meta property="article:tag" content="Dotnet">
+    <meta property="article:tag" content="Pi">
+    <meta property="article:tag" content="Rpi">
+    <meta property="og:image" content="https://instantiator.dev/epistolorean/draculorean-poster.png">
 
 
     
@@ -287,7 +301,7 @@ if (!doNotTrack) {
 <p>I recently completed building <strong><a href="https://epistolorean.club/">The Epistolorean</a></strong>, a service that breaks up epistolary books by entry, so that you can subscribe to them by email over time, receiving entries from the characters as they write them in the story. That&rsquo;s an email for each journal entry, or letter in the book - and sent as and when they would have been sent if the story were happening in real time.</p>
 <p>If you&rsquo;d like to know more about the project, and find out when it&rsquo;s ready for you to try, <strong><a href="https://epistolorean.club/">visit the site</a></strong> and sign up to hear more.</p>
 <h2 id="the-draculorean">The Draculorean</h2>
-<p><img alt="The Draculorean" src="/epistolorean/draculorean-poster.png" title="A Delorean about to time travel, leaving trails of fire behind it, along a dark gothic street lit by old iron street lamps. Books lie by the side of the road, lit by candles. Castle dracula looms over the background, and bats in the sky are silhouetted in front of the moon... It's a real mood piece!"></p>
+<p><img src="/epistolorean/draculorean-poster.png" alt="The Draculorean" title="A Delorean about to time travel, leaving trails of fire behind it, along a dark gothic street lit by old iron street lamps. Books lie by the side of the road, lit by candles. Castle dracula looms over the background, and bats in the sky are silhouetted in front of the moon... It&#39;s a real mood piece!"></p>
 <p>Dracula, for instance, begins in early May and (nearly) ends in November (if you don&rsquo;t include the final entry, dated 7 years later). Although Bram doesn&rsquo;t state the year, it&rsquo;s thought to be a contemporary writing, and the events of the book can be placed in the year 1897 without too many contradictions.</p>
 <p>I particularly enjoyed reading Dracula. It has a sly villain with a dastardly plan, and clever protagonists who (almost) always do the smart thing. It takes place in Transylvania, England, and a dozen places in between, and it offers us moments of sadness, disgust, despair, action, hope, excitement and the thrill of the chase!</p>
 <p>The Draculorean is a subscription to Bram Stoker&rsquo;s Dracula, and has been running since May of this year amongst a small group of friends and testers. (It needn&rsquo;t start then, though - it could start at any time of the year, and still track elapsed time in the story.)</p>
@@ -303,10 +317,10 @@ if (!doNotTrack) {
 <h2 id="technical-ambitions">Technical ambitions</h2>
 <p><strong><a href="https://epistolorean.club/">The Episolorean</a></strong> is a containerised .NET Background Service, running in <a href="https://www.docker.com/">Docker</a> on a <a href="https://www.raspberrypi.org/">Raspberry Pi</a>. It&rsquo;s tiny, consumes very few resources, and sits quite happily on my shelf.</p>
 <p>The service itself is built and deployed using <a href="https://docs.docker.com/compose/">Docker Compose</a>, and shares a composition with its <a href="https://www.postgresql.org/">postgresql</a> database. It has a connection to an external <a href="https://en.wikipedia.org/wiki/Simple_Mail_Transfer_Protocol">SMTP</a> service to send email, and a command-line interface (CLI) on the server can manage the service by altering the contents of the database.</p>
-<p><img alt="Epistolorean architecture (now)" src="/epistolorean/2024-07-epistolorean-arch-now.png" title="A diagram illustrating the composition of the Epistolorean Service, described above."></p>
+<p><img src="/epistolorean/2024-07-epistolorean-arch-now.png" alt="Epistolorean architecture (now)" title="A diagram illustrating the composition of the Epistolorean Service, described above."></p>
 <p>The next step for this project are accompanying services that allow subscriptions to be managed through a web application. I&rsquo;ve been considering <a href="https://www.shopify.com/uk">Shopify</a>, as it offers subscription-based products and <a href="https://shopify.dev/docs/api/admin-rest/2024-01/resources/webhook">web-hooks</a> to share details of subscriptions and cancellations.</p>
 <p>Without a static IP, it&rsquo;ll need a dynamic DNS service like <a href="https://www.noip.com/">noip</a> to be discoverable and remain connected.</p>
-<p><img alt="Epistolorean architecture (ambition)" src="/epistolorean/2024-07-epistolorean-arch-ambition.png" title="A diagram illustrating the composition of the Epistolorean Service, incorporating an external third party service (Shopify) with web hooks, and use of a dynamic DNS service to make the Epistolorean discoverable."></p>
+<p><img src="/epistolorean/2024-07-epistolorean-arch-ambition.png" alt="Epistolorean architecture (ambition)" title="A diagram illustrating the composition of the Epistolorean Service, incorporating an external third party service (Shopify) with web hooks, and use of a dynamic DNS service to make the Epistolorean discoverable."></p>
 <p>All of this is yet to come! Sign up to hear when it&rsquo;s ready:</p>
 <ul>
 <li><strong><a href="https://epistolorean.club/">The Epistolorean</a></strong></li>

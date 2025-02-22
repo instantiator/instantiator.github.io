@@ -10,28 +10,42 @@
     <title>instantiator.dev | Dead Person Switches - secrets from beyond the grave</title>
     
     
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-SHE42ZWKEN"></script>
-<script>
-var doNotTrack = false;
-if (!doNotTrack) {
-	window.dataLayer = window.dataLayer || [];
-	function gtag(){dataLayer.push(arguments);}
-	gtag('js', new Date());
-	gtag('config', 'G-SHE42ZWKEN', { 'anonymize_ip': false });
-}
-</script>
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-SHE42ZWKEN"></script>
+      <script>
+        var doNotTrack = false;
+        if ( false ) {
+          var dnt = (navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack);
+          var doNotTrack = (dnt == "1" || dnt == "yes");
+        }
+        if (!doNotTrack) {
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-SHE42ZWKEN');
+        }
+      </script>
+    
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://instantiator.dev/dps/stone.jpg">
+  <meta name="twitter:title" content="Dead Person Switches - secrets from beyond the grave">
+  <meta name="twitter:description" content="More commonly known as a Dead Man’s Switch, a Dead Person Switch (DPS) is a system that can hold a secret on behalf of a person, and govern its release should they become unavailable.">
 
-    <meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:image" content="https://instantiator.dev/dps/stone.jpg" /><meta name="twitter:title" content="Dead Person Switches - secrets from beyond the grave"/>
-<meta name="twitter:description" content="More commonly known as a Dead Man&rsquo;s Switch, a Dead Person Switch (DPS) is a system that can hold a secret on behalf of a person, and govern its release should they become unavailable."/>
-
-    <meta property="og:title" content="Dead Person Switches - secrets from beyond the grave" />
-<meta property="og:description" content="More commonly known as a Dead Man&rsquo;s Switch, a Dead Person Switch (DPS) is a system that can hold a secret on behalf of a person, and govern its release should they become unavailable." />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://instantiator.dev/post/dead-person-switch/" /><meta property="og:image" content="https://instantiator.dev/dps/stone.jpg" /><meta property="article:section" content="post" />
-<meta property="article:published_time" content="2021-11-30T00:00:00+00:00" />
-<meta property="article:modified_time" content="2021-11-30T00:00:00+00:00" /><meta property="og:site_name" content="instantiator.dev" />
-
+    <meta property="og:url" content="https://instantiator.dev/post/dead-person-switch/">
+  <meta property="og:site_name" content="instantiator.dev">
+  <meta property="og:title" content="Dead Person Switches - secrets from beyond the grave">
+  <meta property="og:description" content="More commonly known as a Dead Man’s Switch, a Dead Person Switch (DPS) is a system that can hold a secret on behalf of a person, and govern its release should they become unavailable.">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="post">
+    <meta property="article:published_time" content="2021-11-30T00:00:00+00:00">
+    <meta property="article:modified_time" content="2021-11-30T00:00:00+00:00">
+    <meta property="article:tag" content="Research">
+    <meta property="article:tag" content="MSc">
+    <meta property="article:tag" content="Computer Science">
+    <meta property="article:tag" content="Journalism">
+    <meta property="article:tag" content="Academia">
+    <meta property="article:tag" content="Investigative Journalism">
+    <meta property="og:image" content="https://instantiator.dev/dps/stone.jpg">
 
 
     
@@ -285,7 +299,7 @@ if (!doNotTrack) {
 <p>Little formal work exists on the topic, although time-release cryptography (related) is an active field of research.</p>
 <h2 id="how-do-you-build-a-dps">How do you build a DPS?</h2>
 <p>A simple, very high level representation for a Dead Person Switch might look like this:</p>
-<p><img alt="High level diagram representing a DPS" src="/dps/dps-threat-model-scoping.png" title="High level diagram representing a DPS"></p>
+<p><img src="/dps/dps-threat-model-scoping.png" alt="High level diagram representing a DPS" title="High level diagram representing a DPS"></p>
 <p>This seems simple enough, but hides a number of underlying questions - particularly around how such a system can hope to keep the subject&rsquo;s secret safe&hellip;</p>
 <h3 id="a-cryptographic-conundrum">A cryptographic conundrum</h3>
 <p><em>Could you use encryption to protect the secret inside a DPS?</em></p>
@@ -328,13 +342,13 @@ if (!doNotTrack) {
 </ol>
 <h3 id="classic-design">Classic design</h3>
 <p>Designing a DPS using the principles of secure design gave me a strong baseline which I could then compare with existing systems, and the more exotic proposed designs. I presented a (fairly) simple microservice architecture design - clearly illustrating the various components, and easy to reason with.</p>
-<p><img alt="A classic microservice architecture design for a DPS" src="/dps/microservices.png" title="A classic microservice architecture design"></p>
+<p><img src="/dps/microservices.png" alt="A classic microservice architecture design for a DPS" title="A classic microservice architecture design"></p>
 <p>This has all the strengths and weaknesses of current cloud services. It can be protected from outsiders through access control mechanisms, but has strong vulnerabilities to insiders (including staff at the cloud service provider), legal constraints, and denial of service attacks.</p>
 <h3 id="dapps">dApps</h3>
 <p>dApps show a lot of promise. Networks that can execute smart contracts (such as Ethereum) offer a number of guarantees around availability and reliability that are very important to a DPS. However, smart contracts alone are not enough - it&rsquo;s important to be able to store, protect, and retrieve secrets. Smart contracts cannot keep secrets, as they are execute in a VM that runs on any participating node in their network.</p>
 <p>Some solutions hide the subject&rsquo;s secret key in another service. This transfers the risk with the key, and relies on strong controls to protect the new service.</p>
 <p>A number of networks, such as the <a href="https://scrt.network/">SECRET</a> network, have formed in recent years that can support <em>secret contracts</em> - smart contracts that are able to protect their state and inputs from observation by the nodes that execute them. At current time, this is achievable through <a href="https://en.wikipedia.org/wiki/Trusted_execution_environment">Trusted Execution Environments</a> (TEE). Enclaves inside a CPU (such as Intel&rsquo;s <a href="https://en.wikipedia.org/wiki/Software_Guard_Extensions">SGX</a>) can protect the confidentiality of secrets, and prove the integrity of their results. Networks such as SECRET execute secret contracts in TEE enclaves on their nodes.</p>
-<p><img alt="Activation flow for a DPS composed of a smart contract and secret contract" src="/dps/smart-and-secret-contract-flow.png" title="Activation flow for a DPS composed of a smart contract and secret contract"></p>
+<p><img src="/dps/smart-and-secret-contract-flow.png" alt="Activation flow for a DPS composed of a smart contract and secret contract" title="Activation flow for a DPS composed of a smart contract and secret contract"></p>
 <p>A design that incorporates a smart contract and secret contract could prove a very promising solution.</p>
 <h3 id="witness-encryption">Witness encryption</h3>
 <p><a href="https://eprint.iacr.org/2013/258.pdf">Witness encryption</a> is a particularly interesting area of research - offering encryption schemes that do not rely on a given key to decrypt a secret. The provision of a <em>witness</em>, something that conforms to a set of rules (described by a mapping in an NP language), can be used in place of a key.</p>
@@ -353,7 +367,7 @@ if (!doNotTrack) {
 <p><strong>This is a very exciting idea!</strong> A passive blob of data that can be distributed publicly protects your secret while you are alive, but becomes easy to decrypt after death. The caveat, of course, is that this is predicated on assumption and speculation. It may prove possible, but there may also be good reasons why such conditions do not lend themselves to witness encryption schemes.</p>
 <h2 id="conclusions">Conclusions</h2>
 <p>I was able to evaluate the existing systems and proposed designs against the requirements for a DPS, giving each a score per requirement. Here&rsquo;s a matrix of it for reference:</p>
-<p><img alt="A matrix showing 12 existing DPS solutions, and 3 proposed designs - each with their scores per requirement" src="/dps/matrix.png" title="Scores for all designs"></p>
+<p><img src="/dps/matrix.png" alt="A matrix showing 12 existing DPS solutions, and 3 proposed designs - each with their scores per requirement" title="Scores for all designs"></p>
 <p><strong>It&rsquo;s pretty clear that the existing systems each have strengths and weaknesses, and that none were consistently strong across the board.</strong></p>
 <p><strong>The proposed designs represent distinct approaches to the implementation of a DPS, and certainly seem to meet more of the requirements.</strong></p>
 <p>Of the proposed designs, I concluded that the <em>dApp</em> design is the strongest that can currently be implemented.</p>

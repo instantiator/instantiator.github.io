@@ -4,7 +4,7 @@
     <title>OpenData on instantiator.dev</title>
     <link>https://instantiator.dev/tags/opendata/</link>
     <description>Recent content in OpenData on instantiator.dev</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo</generator>
     <language>en</language>
     <lastBuildDate>Thu, 23 Apr 2020 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://instantiator.dev/tags/opendata/index.xml" rel="self" type="application/rss+xml" />
@@ -13,7 +13,7 @@
       <link>https://instantiator.dev/post/look-for-the-helpers/</link>
       <pubDate>Thu, 23 Apr 2020 00:00:00 +0000</pubDate>
       <guid>https://instantiator.dev/post/look-for-the-helpers/</guid>
-      <description>What can we learn about grass-roots COVID-19 volunteer groups from open data?</description>
+      <description>&lt;p&gt;What can we learn about grass-roots COVID-19 volunteer groups from open data?&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

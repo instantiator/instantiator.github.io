@@ -10,30 +10,44 @@
     <title>instantiator.dev | 3D puzzle print: a crossword generation tool</title>
     
     
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-SHE42ZWKEN"></script>
-<script>
-var doNotTrack = false;
-if (!doNotTrack) {
-	window.dataLayer = window.dataLayer || [];
-	function gtag(){dataLayer.push(arguments);}
-	gtag('js', new Date());
-	gtag('config', 'G-SHE42ZWKEN', { 'anonymize_ip': false });
-}
-</script>
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-SHE42ZWKEN"></script>
+      <script>
+        var doNotTrack = false;
+        if ( false ) {
+          var dnt = (navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack);
+          var doNotTrack = (dnt == "1" || dnt == "yes");
+        }
+        if (!doNotTrack) {
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-SHE42ZWKEN');
+        }
+      </script>
+    
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://instantiator.dev/crossword-prints/sample-print-clarbert.jpeg">
+  <meta name="twitter:title" content="3D puzzle print: a crossword generation tool">
+  <meta name="twitter:description" content="A tool to design 3D printed crossword puzzles.
+Generating 3D crossword models I’ve been working on a tool to generate crossword designs using OpenSCAD. The output is an STL file that you can use with your favourite slicer and send to a 3D printer. It’s open source, and you’re free to plunder it for tips, techniques, or to generate your own…">
 
-    <meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:image" content="https://instantiator.dev/crossword-prints/sample-print-clarbert.jpeg" /><meta name="twitter:title" content="3D puzzle print: a crossword generation tool"/>
-<meta name="twitter:description" content="A tool to design 3D printed crossword puzzles.
-Generating 3D crossword models I&rsquo;ve been working on a tool to generate crossword designs using OpenSCAD."/>
-
-    <meta property="og:title" content="3D puzzle print: a crossword generation tool" />
-<meta property="og:description" content="A tool to design 3D printed crossword puzzles.
-Generating 3D crossword models I&rsquo;ve been working on a tool to generate crossword designs using OpenSCAD." />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://instantiator.dev/post/printing-3d-crosswords/" /><meta property="og:image" content="https://instantiator.dev/crossword-prints/sample-print-clarbert.jpeg" /><meta property="article:section" content="post" />
-<meta property="article:published_time" content="2023-01-18T00:00:00+00:00" />
-<meta property="article:modified_time" content="2023-01-18T00:00:00+00:00" /><meta property="og:site_name" content="instantiator.dev" />
-
+    <meta property="og:url" content="https://instantiator.dev/post/printing-3d-crosswords/">
+  <meta property="og:site_name" content="instantiator.dev">
+  <meta property="og:title" content="3D puzzle print: a crossword generation tool">
+  <meta property="og:description" content="A tool to design 3D printed crossword puzzles.
+Generating 3D crossword models I’ve been working on a tool to generate crossword designs using OpenSCAD. The output is an STL file that you can use with your favourite slicer and send to a 3D printer. It’s open source, and you’re free to plunder it for tips, techniques, or to generate your own…">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="post">
+    <meta property="article:published_time" content="2023-01-18T00:00:00+00:00">
+    <meta property="article:modified_time" content="2023-01-18T00:00:00+00:00">
+    <meta property="article:tag" content="SCAD">
+    <meta property="article:tag" content="STL">
+    <meta property="article:tag" content="3D">
+    <meta property="article:tag" content="3D-Printing">
+    <meta property="article:tag" content="Design">
+    <meta property="article:tag" content="SnapMaker">
+    <meta property="og:image" content="https://instantiator.dev/crossword-prints/sample-print-clarbert.jpeg">
 
 
     
@@ -275,28 +289,28 @@ Generating 3D crossword models I&rsquo;ve been working on a tool to generate cro
 <li><a href="https://github.com/instantiator/crossword-generator-scad">instantiator/crossword-generator-scad</a></li>
 </ul>
 <p>With minimal effort, you can probably create prints better than this&hellip;</p>
-<p><img src="/crossword-prints/sample-print-clarbert.jpeg"></p>
+<p><img src="/crossword-prints/sample-print-clarbert.jpeg" alt=""></p>
 <h2 id="whats-openscad">What&rsquo;s OpenSCAD?</h2>
 <p><a href="https://openscad.org/">OpenSCAD</a> is freely available software for creating solid 3D CAD objects. A SCAD file contains definitions that describe the object you want to create - and OpenSCAD can use that to generate an STL model.</p>
-<p><img alt="OpenSCAD screenshot" src="https://openscad.org/assets/img/screenshot.png"></p>
+<p><img src="https://openscad.org/assets/img/screenshot.png" alt="OpenSCAD screenshot"></p>
 <p>OpenSCAD is a neat solution for expressing complex designs, and yes - I&rsquo;m aware there are many other cool ways to achieve this with sophisticated design packages and other tools.</p>
 <h2 id="how-does-the-crossword-generator-work">How does the crossword generator work?</h2>
 <p>The <code>ScadGenerator</code> directory contains the code for a C# application that combines your input CSV with a SCAD <a href="https://github.com/instantiator/crossword-generator-scad/blob/main/templates/crossword-template.scad">crossword template</a> for the crossword, and a set of variables contained in <a href="https://github.com/instantiator/crossword-generator-scad/blob/main/templates/crossword-default-values-18x20.csv">another CSV</a> file. What it produces ought to be a valid SCAD file defining the crossword in the shape you defined.</p>
 <p>The <code>generate-crossword.sh</code> script builds and executes this application in a Docker container for you.</p>
 <p>The output SCAD file it generates is then fed into the <a href="https://hub.docker.com/r/openscad/openscad">openscad/openscad</a> Docker image itself, which is used to generate an STL model from your SCAD definition.</p>
 <table>
-<thead>
-<tr>
-<th>Test cells (STL)</th>
-<th>A crossword design (STL)</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><img alt="A 3D design showing a small flat base, that&rsquo;s 3 by 1. The first position is blank, so it&rsquo;s just the base. The other 2 positions have grid cells elevated over them, each with a stubby little circle printed inside the grid cell. The 3rd position grid walls are printed slightly higher than the other - they represent a highlighted cell. " src="/crossword-prints/preview-test-cells.png"></td>
-<td><img alt="A full crossword printed in the same way. There&rsquo;s a large, flat, 11x9 base plate, and then on top of it a crossword grid is elevated. In each cell of the crossword is another stubby little circle. Some cells have higher walls than others - they are highlighted cells." src="/crossword-prints/preview-clarbert-crossword.png"></td>
-</tr>
-</tbody>
+  <thead>
+      <tr>
+          <th>Test cells (STL)</th>
+          <th>A crossword design (STL)</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><img src="/crossword-prints/preview-test-cells.png" alt="A 3D design showing a small flat base, that’s 3 by 1. The first position is blank, so it’s just the base. The other 2 positions have grid cells elevated over them, each with a stubby little circle printed inside the grid cell. The 3rd position grid walls are printed slightly higher than the other - they represent a highlighted cell. "></td>
+          <td><img src="/crossword-prints/preview-clarbert-crossword.png" alt="A full crossword printed in the same way. There’s a large, flat, 11x9 base plate, and then on top of it a crossword grid is elevated. In each cell of the crossword is another stubby little circle. Some cells have higher walls than others - they are highlighted cells."></td>
+      </tr>
+  </tbody>
 </table>
 <h2 id="how-do-i-use-it">How do I use it?</h2>
 <ul>

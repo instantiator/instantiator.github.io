@@ -4,7 +4,7 @@
     <title>Burglary on instantiator.dev</title>
     <link>https://instantiator.dev/tags/burglary/</link>
     <description>Recent content in Burglary on instantiator.dev</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo</generator>
     <language>en</language>
     <lastBuildDate>Sat, 23 Feb 2019 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://instantiator.dev/tags/burglary/index.xml" rel="self" type="application/rss+xml" />
@@ -13,7 +13,7 @@
       <link>https://instantiator.dev/post/burglary-bot/</link>
       <pubDate>Sat, 23 Feb 2019 00:00:00 +0000</pubDate>
       <guid>https://instantiator.dev/post/burglary-bot/</guid>
-      <description>This is a necropost, resurrected from an old blog. To find out more about Hack the Police events, civic tech, and policing technology, visit: Police Rewired</description>
+      <description>&lt;p&gt;&lt;em&gt;This is a necropost, resurrected from an old blog. To find out more about Hack the Police events, civic tech, and policing technology, visit: &lt;a href=&#34;https://policerewired.org&#34;&gt;Police Rewired&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

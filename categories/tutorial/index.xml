@@ -4,135 +4,142 @@
     <title>Tutorial on instantiator.dev</title>
     <link>https://instantiator.dev/categories/tutorial/</link>
     <description>Recent content in Tutorial on instantiator.dev</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 12 Sep 2023 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 22 Feb 2025 11:00:00 +0000</lastBuildDate>
     <atom:link href="https://instantiator.dev/categories/tutorial/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Bucket List - the bucket that wouldn&#39;t die</title>
+      <link>https://instantiator.dev/post/emptying-s3-buckets/</link>
+      <pubDate>Sat, 22 Feb 2025 11:00:00 +0000</pubDate>
+      <guid>https://instantiator.dev/post/emptying-s3-buckets/</guid>
+      <description>&lt;p&gt;&lt;em&gt;In which I present a short 3-act play about emptying a bucket, and a handy script to make it easy.&lt;/em&gt;&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Reveal in React</title>
       <link>https://instantiator.dev/post/reveal-in-react/</link>
       <pubDate>Tue, 12 Sep 2023 00:00:00 +0000</pubDate>
       <guid>https://instantiator.dev/post/reveal-in-react/</guid>
-      <description>What if your UI was a slide show?&#xA;Reveal in React TLDR: Here&amp;rsquo;s a template repository for a NextJS app with a Reveal slide show UI: instantiator/reveal-on-next</description>
+      <description>&lt;p&gt;What if your UI was a slide show?&lt;/p&gt;&#xA;&lt;h1 id=&#34;reveal-in-react&#34;&gt;Reveal in React&lt;/h1&gt;&#xA;&lt;p&gt;&lt;strong&gt;TLDR:&lt;/strong&gt; Here&amp;rsquo;s a template repository for a NextJS app with a Reveal slide show UI: &lt;a href=&#34;https://github.com/instantiator/reveal-on-next&#34;&gt;instantiator/reveal-on-next&lt;/a&gt;&lt;/p&gt;</description>
     </item>
     <item>
       <title>Your own map server</title>
       <link>https://instantiator.dev/post/world-server/</link>
       <pubDate>Sun, 02 Jul 2023 13:00:00 +0000</pubDate>
       <guid>https://instantiator.dev/post/world-server/</guid>
-      <description>A quick guide to running your own tile server, with a geo database populated from OpenStreetMap data.</description>
+      <description>&lt;p&gt;A quick guide to running your own tile server, with a geo database populated from &lt;a href=&#34;https://www.openstreetmap.org/&#34;&gt;OpenStreetMap&lt;/a&gt; data.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Building an app for Flipper Zero, part 2: A simple user interface</title>
       <link>https://instantiator.dev/post/flipper-zero-app-tutorial-02/</link>
       <pubDate>Fri, 05 May 2023 21:00:00 +0000</pubDate>
       <guid>https://instantiator.dev/post/flipper-zero-app-tutorial-02/</guid>
-      <description>In this part, we&amp;rsquo;ll build a simple user interface for a Flipper Zero app.</description>
+      <description>&lt;p&gt;In this part, we&amp;rsquo;ll build a simple user interface for a Flipper Zero app.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Building an app for Flipper Zero, part 1: Getting started</title>
       <link>https://instantiator.dev/post/flipper-zero-app-tutorial-01/</link>
       <pubDate>Fri, 05 May 2023 09:00:00 +0000</pubDate>
       <guid>https://instantiator.dev/post/flipper-zero-app-tutorial-01/</guid>
-      <description>FlipperZero is a digital signals multi-tool. Here&amp;rsquo;s a short guide to the basics of building an app for it&amp;hellip;</description>
+      <description>&lt;p&gt;FlipperZero is a digital signals multi-tool. Here&amp;rsquo;s a short guide to the basics of building an app for it&amp;hellip;&lt;/p&gt;</description>
     </item>
     <item>
       <title>A Netflixstory - analyse your Netflix watch history</title>
       <link>https://instantiator.dev/post/netflix-history/</link>
       <pubDate>Thu, 20 Apr 2023 17:30:00 +0000</pubDate>
       <guid>https://instantiator.dev/post/netflix-history/</guid>
-      <description>Exploring your personal Netflix viewing history&amp;hellip;&#xA;What you see is a visualisation of everything I&amp;rsquo;ved watched since 2012.</description>
+      <description>&lt;p&gt;&lt;em&gt;Exploring your personal Netflix viewing history&amp;hellip;&lt;/em&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://instantiator.dev/netflix/netflix-visualisation.png&#34; alt=&#34;A visualisation of my Netflix viewing for the past decade. Cells are filled if I watched a show in a given month.&#34;&gt;&lt;/p&gt;</description>
     </item>
     <item>
       <title>Building AI into your application with Semantic Kernel</title>
       <link>https://instantiator.dev/post/you-too-can-llm/</link>
       <pubDate>Mon, 17 Apr 2023 21:00:00 +0000</pubDate>
       <guid>https://instantiator.dev/post/you-too-can-llm/</guid>
-      <description>This is a quick guide to some of the features of the Semantic Kernel, a Software Development Kit that simplifies integration of language models into your own applications.</description>
+      <description>&lt;p&gt;This is a quick guide to some of the features of the Semantic Kernel, a Software Development Kit that simplifies integration of language models into your own applications.&lt;/p&gt;</description>
     </item>
     <item>
       <title>The rocketship template 🚀</title>
       <link>https://instantiator.dev/post/rocketship-template/</link>
       <pubDate>Sun, 08 Jan 2023 00:00:00 +0000</pubDate>
       <guid>https://instantiator.dev/post/rocketship-template/</guid>
-      <description>Presenting a simple template to develop, publish, and test a simple C# service backend on AWS, with serverless Lambda functions, supported by DynamoDb, behind an API Gateway, and protected by Cognito auth.</description>
+      <description>&lt;p&gt;Presenting a simple template to develop, publish, and test a simple C# service backend on AWS, with serverless Lambda functions, supported by DynamoDb, behind an API Gateway, and protected by Cognito auth.&lt;/p&gt;</description>
     </item>
     <item>
       <title>TIL - shell environment variables aren&#39;t available to OS X apps</title>
       <link>https://instantiator.dev/post/til-osx-apps-environment/</link>
       <pubDate>Fri, 12 Nov 2021 00:00:00 +0000</pubDate>
       <guid>https://instantiator.dev/post/til-osx-apps-environment/</guid>
-      <description>Just recently I have been exploring a very strange issue: My application couldn&amp;rsquo;t find a tool that was right where it should be&amp;hellip;</description>
+      <description>&lt;p&gt;&lt;em&gt;Just recently I have been exploring a very strange issue: My application couldn&amp;rsquo;t find a tool that was right where it should be&amp;hellip;&lt;/em&gt;&lt;/p&gt;</description>
     </item>
     <item>
       <title>Building an AWS Lambda in C#, part 6: Triggers</title>
       <link>https://instantiator.dev/post/csharp-aws-lambda-tutorial-06/</link>
       <pubDate>Tue, 20 Apr 2021 18:00:00 +0000</pubDate>
       <guid>https://instantiator.dev/post/csharp-aws-lambda-tutorial-06/</guid>
-      <description>In part 5, we amended our Lambda to write to an S3 bucket; and in this part, we&amp;rsquo;ll explore triggers to run it regularly.</description>
+      <description>&lt;p&gt;In part 5, we amended our Lambda to write to an S3 bucket; and in this part, we&amp;rsquo;ll explore triggers to run it regularly.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Building an AWS Lambda in C#, part 5: S3</title>
       <link>https://instantiator.dev/post/csharp-aws-lambda-tutorial-05/</link>
       <pubDate>Mon, 19 Apr 2021 18:00:00 +0000</pubDate>
       <guid>https://instantiator.dev/post/csharp-aws-lambda-tutorial-05/</guid>
-      <description>In previous parts, we&amp;rsquo;ve built a Lambda that can query the OpenWeather API, using a secret key; and in this part we&amp;rsquo;ll extend it to write that data to S3.</description>
+      <description>&lt;p&gt;In previous parts, we&amp;rsquo;ve built a Lambda that can query the OpenWeather API, using a secret key; and in this part we&amp;rsquo;ll extend it to write that data to S3.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Building an AWS Lambda in C#, part 4: Logs</title>
       <link>https://instantiator.dev/post/csharp-aws-lambda-tutorial-04/</link>
       <pubDate>Sun, 18 Apr 2021 18:00:00 +0000</pubDate>
       <guid>https://instantiator.dev/post/csharp-aws-lambda-tutorial-04/</guid>
-      <description>In part 3, we extended our Lambda to communicate with an API, using a secret key; and in this part, we&amp;rsquo;ll explore the logs created when the Lambda runs.</description>
+      <description>&lt;p&gt;In part 3, we extended our Lambda to communicate with an API, using a secret key; and in this part, we&amp;rsquo;ll explore the logs created when the Lambda runs.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Building an AWS Lambda in C#, part 3: APIs and secrets</title>
       <link>https://instantiator.dev/post/csharp-aws-lambda-tutorial-03/</link>
       <pubDate>Sat, 17 Apr 2021 18:00:00 +0000</pubDate>
       <guid>https://instantiator.dev/post/csharp-aws-lambda-tutorial-03/</guid>
-      <description>In part 2, we build a Lambda function, deployed and invoked it; and in this part, we&amp;rsquo;ll extend it to communicate with an API using a secret key.</description>
+      <description>&lt;p&gt;In part 2, we build a Lambda function, deployed and invoked it; and in this part, we&amp;rsquo;ll extend it to communicate with an API using a secret key.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Building an AWS Lambda in C#, part 2: Build, deploy and invoke</title>
       <link>https://instantiator.dev/post/csharp-aws-lambda-tutorial-02/</link>
       <pubDate>Fri, 16 Apr 2021 18:00:00 +0000</pubDate>
       <guid>https://instantiator.dev/post/csharp-aws-lambda-tutorial-02/</guid>
-      <description>In part 1, we set up the basic infrastructure to support a new Lambda function on AWS; and n this part, we&amp;rsquo;ll build a Lambda function, deploy it to AWS, and invoke it with some input.</description>
+      <description>&lt;p&gt;In part 1, we set up the basic infrastructure to support a new Lambda function on AWS; and n this part, we&amp;rsquo;ll build a Lambda function, deploy it to AWS, and invoke it with some input.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Building an AWS Lambda in C#, part 1: AWS</title>
       <link>https://instantiator.dev/post/csharp-aws-lambda-tutorial-01/</link>
       <pubDate>Thu, 15 Apr 2021 18:00:00 +0000</pubDate>
       <guid>https://instantiator.dev/post/csharp-aws-lambda-tutorial-01/</guid>
-      <description>At first glance, Amazon Web Services (AWS) can seem impenetrably complex, but it&amp;rsquo;s not so bad once you&amp;rsquo;ve found your way around it&amp;hellip;</description>
+      <description>&lt;p&gt;At first glance, Amazon Web Services (AWS) can seem impenetrably complex, but it&amp;rsquo;s not so bad once you&amp;rsquo;ve found your way around it&amp;hellip;&lt;/p&gt;</description>
     </item>
     <item>
       <title>Querying data files with terminal tools</title>
       <link>https://instantiator.dev/post/q/</link>
       <pubDate>Mon, 04 Jan 2021 17:30:00 +0000</pubDate>
       <guid>https://instantiator.dev/post/q/</guid>
-      <description>There are a many ways to peek inside a data file and reason about its contents.</description>
+      <description>&lt;p&gt;There are a many ways to peek inside a data file and reason about its contents.&#xA;This post is about a triplet of simple, easily available tools that&#xA;I&amp;rsquo;ve found handy for searching and querying common data file formats.&#xA;You might too&amp;hellip;&lt;/p&gt;</description>
     </item>
     <item>
       <title>Choosing your first coding language</title>
       <link>https://instantiator.dev/post/what-language/</link>
       <pubDate>Sun, 03 Jan 2021 15:00:00 +0000</pubDate>
       <guid>https://instantiator.dev/post/what-language/</guid>
-      <description>Anyone can code. This is a short exploration of the choices for coding beginners out there.</description>
+      <description>&lt;h1 id=&#34;anyone-can-code&#34;&gt;Anyone can code.&lt;/h1&gt;&#xA;&lt;p&gt;This is a short exploration of the choices for coding beginners out there.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Keeping jobs alive with caffeine</title>
       <link>https://instantiator.dev/post/caffeine/</link>
       <pubDate>Sat, 02 Jan 2021 19:00:00 +0000</pubDate>
       <guid>https://instantiator.dev/post/caffeine/</guid>
-      <description>My Mac likes to go to sleep to save power, and that means any long-running processes I have underway will be suspended when it does.</description>
+      <description>&lt;p&gt;My Mac likes to go to sleep to save power, and that means any long-running processes&#xA;I have underway will be suspended when it does.&lt;/p&gt;</description>
     </item>
     <item>
       <title>How to donate your laptop safely</title>
       <link>https://instantiator.dev/post/donate-your-laptop-safely/</link>
       <pubDate>Sat, 01 Feb 2020 00:00:00 +0000</pubDate>
       <guid>https://instantiator.dev/post/donate-your-laptop-safely/</guid>
-      <description>A friend is helping out with a community project and asked for some laptops.</description>
+      <description>&lt;p&gt;A friend is helping out with a community project and asked for some laptops. I rustled up some old kit and gave it a refresh. You can too!&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

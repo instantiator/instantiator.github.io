@@ -4,7 +4,7 @@
     <title>Mutual Aid on instantiator.dev</title>
     <link>https://instantiator.dev/tags/mutual-aid/</link>
     <description>Recent content in Mutual Aid on instantiator.dev</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo</generator>
     <language>en</language>
     <lastBuildDate>Fri, 24 Apr 2020 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://instantiator.dev/tags/mutual-aid/index.xml" rel="self" type="application/rss+xml" />
@@ -13,7 +13,7 @@
       <link>https://instantiator.dev/post/covid-volunteer-data/</link>
       <pubDate>Fri, 24 Apr 2020 00:00:00 +0000</pubDate>
       <guid>https://instantiator.dev/post/covid-volunteer-data/</guid>
-      <description>Cleaning up data from volunteer groups across the UK.&#xA;We&amp;rsquo;re only human In the previous post, we took a tour of the open data available that tells the story of volunteerism across the UK since the coronavirus crisis began.</description>
+      <description>&lt;p&gt;Cleaning up data from volunteer groups across the UK.&lt;/p&gt;&#xA;&lt;h1 id=&#34;were-only-human&#34;&gt;We&amp;rsquo;re only human&lt;/h1&gt;&#xA;&lt;p&gt;In the previous post, we took a tour of the open data available that tells the story of volunteerism across the UK since the coronavirus crisis began.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

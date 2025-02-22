@@ -4,10 +4,101 @@
     <title>Tags on instantiator.dev</title>
     <link>https://instantiator.dev/tags/</link>
     <description>Recent content in Tags on instantiator.dev</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 01 Sep 2024 12:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 22 Feb 2025 11:00:00 +0000</lastBuildDate>
     <atom:link href="https://instantiator.dev/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Amazon-Web-Services</title>
+      <link>https://instantiator.dev/tags/amazon-web-services/</link>
+      <pubDate>Sat, 22 Feb 2025 11:00:00 +0000</pubDate>
+      <guid>https://instantiator.dev/tags/amazon-web-services/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>AWS</title>
+      <link>https://instantiator.dev/tags/aws/</link>
+      <pubDate>Sat, 22 Feb 2025 11:00:00 +0000</pubDate>
+      <guid>https://instantiator.dev/tags/aws/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Aws-Cli</title>
+      <link>https://instantiator.dev/tags/aws-cli/</link>
+      <pubDate>Sat, 22 Feb 2025 11:00:00 +0000</pubDate>
+      <guid>https://instantiator.dev/tags/aws-cli/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Bash</title>
+      <link>https://instantiator.dev/tags/bash/</link>
+      <pubDate>Sat, 22 Feb 2025 11:00:00 +0000</pubDate>
+      <guid>https://instantiator.dev/tags/bash/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Bucket</title>
+      <link>https://instantiator.dev/tags/bucket/</link>
+      <pubDate>Sat, 22 Feb 2025 11:00:00 +0000</pubDate>
+      <guid>https://instantiator.dev/tags/bucket/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Cli</title>
+      <link>https://instantiator.dev/tags/cli/</link>
+      <pubDate>Sat, 22 Feb 2025 11:00:00 +0000</pubDate>
+      <guid>https://instantiator.dev/tags/cli/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Coding</title>
+      <link>https://instantiator.dev/tags/coding/</link>
+      <pubDate>Sat, 22 Feb 2025 11:00:00 +0000</pubDate>
+      <guid>https://instantiator.dev/tags/coding/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Delete</title>
+      <link>https://instantiator.dev/tags/delete/</link>
+      <pubDate>Sat, 22 Feb 2025 11:00:00 +0000</pubDate>
+      <guid>https://instantiator.dev/tags/delete/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Empty</title>
+      <link>https://instantiator.dev/tags/empty/</link>
+      <pubDate>Sat, 22 Feb 2025 11:00:00 +0000</pubDate>
+      <guid>https://instantiator.dev/tags/empty/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Infrastructure</title>
+      <link>https://instantiator.dev/tags/infrastructure/</link>
+      <pubDate>Sat, 22 Feb 2025 11:00:00 +0000</pubDate>
+      <guid>https://instantiator.dev/tags/infrastructure/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>S3</title>
+      <link>https://instantiator.dev/tags/s3/</link>
+      <pubDate>Sat, 22 Feb 2025 11:00:00 +0000</pubDate>
+      <guid>https://instantiator.dev/tags/s3/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Script</title>
+      <link>https://instantiator.dev/tags/script/</link>
+      <pubDate>Sat, 22 Feb 2025 11:00:00 +0000</pubDate>
+      <guid>https://instantiator.dev/tags/script/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Shell</title>
+      <link>https://instantiator.dev/tags/shell/</link>
+      <pubDate>Sat, 22 Feb 2025 11:00:00 +0000</pubDate>
+      <guid>https://instantiator.dev/tags/shell/</guid>
+      <description></description>
+    </item>
     <item>
       <title>.Net</title>
       <link>https://instantiator.dev/tags/.net/</link>
@@ -241,9 +332,9 @@
     </item>
     <item>
       <title>C#</title>
-      <link>https://instantiator.dev/tags/c</link>
+      <link>https://instantiator.dev/tags/c%23/</link>
       <pubDate>Sun, 14 Jul 2024 12:00:00 +0000</pubDate>
-      <guid>https://instantiator.dev/tags/c</guid>
+      <guid>https://instantiator.dev/tags/c%23/</guid>
       <description></description>
     </item>
     <item>
@@ -723,13 +814,6 @@
       <description></description>
     </item>
     <item>
-      <title>Coding</title>
-      <link>https://instantiator.dev/tags/coding/</link>
-      <pubDate>Fri, 05 May 2023 21:00:00 +0000</pubDate>
-      <guid>https://instantiator.dev/tags/coding/</guid>
-      <description></description>
-    </item>
-    <item>
       <title>Community</title>
       <link>https://instantiator.dev/tags/community/</link>
       <pubDate>Fri, 05 May 2023 21:00:00 +0000</pubDate>
@@ -1098,13 +1182,6 @@
       <link>https://instantiator.dev/tags/auth/</link>
       <pubDate>Sun, 08 Jan 2023 00:00:00 +0000</pubDate>
       <guid>https://instantiator.dev/tags/auth/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>AWS</title>
-      <link>https://instantiator.dev/tags/aws/</link>
-      <pubDate>Sun, 08 Jan 2023 00:00:00 +0000</pubDate>
-      <guid>https://instantiator.dev/tags/aws/</guid>
       <description></description>
     </item>
     <item>
@@ -1602,13 +1679,6 @@
       <link>https://instantiator.dev/tags/os-x/</link>
       <pubDate>Fri, 12 Nov 2021 00:00:00 +0000</pubDate>
       <guid>https://instantiator.dev/tags/os-x/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Shell</title>
-      <link>https://instantiator.dev/tags/shell/</link>
-      <pubDate>Fri, 12 Nov 2021 00:00:00 +0000</pubDate>
-      <guid>https://instantiator.dev/tags/shell/</guid>
       <description></description>
     </item>
     <item>
@@ -2449,13 +2519,6 @@
       <link>https://instantiator.dev/tags/evidence/</link>
       <pubDate>Sat, 25 May 2013 00:00:00 +0000</pubDate>
       <guid>https://instantiator.dev/tags/evidence/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Infrastructure</title>
-      <link>https://instantiator.dev/tags/infrastructure/</link>
-      <pubDate>Sat, 25 May 2013 00:00:00 +0000</pubDate>
-      <guid>https://instantiator.dev/tags/infrastructure/</guid>
       <description></description>
     </item>
     <item>

@@ -10,30 +10,44 @@
     <title>instantiator.dev | Why are some projects so expensive?</title>
     
     
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-SHE42ZWKEN"></script>
-<script>
-var doNotTrack = false;
-if (!doNotTrack) {
-	window.dataLayer = window.dataLayer || [];
-	function gtag(){dataLayer.push(arguments);}
-	gtag('js', new Date());
-	gtag('config', 'G-SHE42ZWKEN', { 'anonymize_ip': false });
-}
-</script>
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-SHE42ZWKEN"></script>
+      <script>
+        var doNotTrack = false;
+        if ( false ) {
+          var dnt = (navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack);
+          var doNotTrack = (dnt == "1" || dnt == "yes");
+        }
+        if (!doNotTrack) {
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-SHE42ZWKEN');
+        }
+      </script>
+    
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://instantiator.dev/necro-images/project-costs-anpr-1.jpeg">
+  <meta name="twitter:title" content="Why are some projects so expensive?">
+  <meta name="twitter:description" content="This article was originally posted to Medium.
+Why are some projects so expensive? Need they be? This article is adapted from a response I gave to the Reddit post for the Medium article How I replicated an $86 million project in 57 lines of code in r/coding by Tait Brown">
 
-    <meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:image" content="https://instantiator.dev/necro-images/project-costs-anpr-1.jpeg" /><meta name="twitter:title" content="Why are some projects so expensive?"/>
-<meta name="twitter:description" content="This article was originally posted to Medium.
-Why are some projects so expensive?"/>
-
-    <meta property="og:title" content="Why are some projects so expensive?" />
-<meta property="og:description" content="This article was originally posted to Medium.
-Why are some projects so expensive?" />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://instantiator.dev/post/project-costs/" /><meta property="og:image" content="https://instantiator.dev/necro-images/project-costs-anpr-1.jpeg" /><meta property="article:section" content="post" />
-<meta property="article:published_time" content="2017-09-22T00:00:00+00:00" />
-<meta property="article:modified_time" content="2017-09-22T00:00:00+00:00" /><meta property="og:site_name" content="instantiator.dev" />
-
+    <meta property="og:url" content="https://instantiator.dev/post/project-costs/">
+  <meta property="og:site_name" content="instantiator.dev">
+  <meta property="og:title" content="Why are some projects so expensive?">
+  <meta property="og:description" content="This article was originally posted to Medium.
+Why are some projects so expensive? Need they be? This article is adapted from a response I gave to the Reddit post for the Medium article How I replicated an $86 million project in 57 lines of code in r/coding by Tait Brown">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="post">
+    <meta property="article:published_time" content="2017-09-22T00:00:00+00:00">
+    <meta property="article:modified_time" content="2017-09-22T00:00:00+00:00">
+    <meta property="article:tag" content="Costs">
+    <meta property="article:tag" content="Estimates">
+    <meta property="article:tag" content="Expenses">
+    <meta property="article:tag" content="ANPR">
+    <meta property="article:tag" content="App">
+    <meta property="article:tag" content="Developer">
+    <meta property="og:image" content="https://instantiator.dev/necro-images/project-costs-anpr-1.jpeg">
 
 
     
@@ -248,7 +262,7 @@ Why are some projects so expensive?" />
 <h1 id="why-are-some-projects-so-expensive-need-they-be">Why are some projects so expensive? Need they be?</h1>
 <p><em>This article is adapted from a response I gave to <a href="https://www.reddit.com/r/coding/comments/6wvupz/how_i_replicated_an_86_million_project_in_57/">the Reddit post</a> for the Medium article <a href="https://medium.com/@taitems/how-i-replicated-an-86-million-project-in-57-lines-of-code-277031330ee9">How I replicated an $86 million project in 57 lines of code</a> in <a href="https://reddit.com/r/coding">r/coding</a> by <a href="https://medium.com/@taitems">Tait Brown</a></em></p>
 <p>Tait’s article demonstrates an <a href="https://en.wikipedia.org/wiki/Automatic_number-plate_recognition_in_the_United_Kingdom">ANPR</a> app that can read number plates and compare them against an internally held database.</p>
-<p><img alt="the ANPR app looks impressive" src="/necro-images/project-costs-anpr-1.jpeg"></p>
+<p><img src="/necro-images/project-costs-anpr-1.jpeg" alt="the ANPR app looks impressive"></p>
 <p>The app itself works with a video feed from the phone’s camera to process a video stream in real time. It’s impressive to look at — and all the more so, as he comments that he wrote it in 57 lines of code.</p>
 <p>First off, despite comments that appeared on the reddit post about his ego, and a little name-calling, it <em>isn’t</em> arrogant to demonstrate a working ANPR app that can operate on a live video feed. Nor is it arrogant to ask why a <em>similar looking</em> project should cost as much as $86 million.</p>
 <p>It is fair to say that any working solution to a problem like this cannot be as simple as a mobile app that can do ANPR. From a developer perspective that seems to be the hard problem, and a developer’s instincts will tell her that that ought to be the most expensive part. It’s easy to overlook everything else that’s required to support and assure a solution like this&hellip;</p>
@@ -261,8 +275,7 @@ Why are some projects so expensive?" />
 <h2 id="so-whats-the-real-question-here">So what’s the real question here?</h2>
 <p>Here’s the one I’ve chosen to answer.</p>
 <blockquote>
-<p>What are the features that push a project from a working tool such as mine, all the way to an $86 million project? What can’t I see?</p>
-</blockquote>
+<p>What are the features that push a project from a working tool such as mine, all the way to an $86 million project? What can’t I see?</p></blockquote>
 <p><strong>Here’s what I think is missing.</strong> If we can identify all the parts of the machine, and it sums to $1,000,000 or over, then (ignoring a fiddle-factor of 86) perhaps we can say “yes, this needs to be expensive”&hellip;</p>
 <ul>
 <li>

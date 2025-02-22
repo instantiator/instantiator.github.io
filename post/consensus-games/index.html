@@ -10,28 +10,42 @@
     <title>instantiator.dev | International Consensus Games (WIP)</title>
     
     
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-SHE42ZWKEN"></script>
-<script>
-var doNotTrack = false;
-if (!doNotTrack) {
-	window.dataLayer = window.dataLayer || [];
-	function gtag(){dataLayer.push(arguments);}
-	gtag('js', new Date());
-	gtag('config', 'G-SHE42ZWKEN', { 'anonymize_ip': false });
-}
-</script>
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-SHE42ZWKEN"></script>
+      <script>
+        var doNotTrack = false;
+        if ( false ) {
+          var dnt = (navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack);
+          var doNotTrack = (dnt == "1" || dnt == "yes");
+        }
+        if (!doNotTrack) {
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-SHE42ZWKEN');
+        }
+      </script>
+    
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://instantiator.dev/consensus/pieces_dream.png">
+  <meta name="twitter:title" content="International Consensus Games (WIP)">
+  <meta name="twitter:description" content="I’ve been working on a pet project recently: Consensus games are a fun new way to play together through social media…">
 
-    <meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:image" content="https://instantiator.dev/consensus/pieces_dream.png" /><meta name="twitter:title" content="International Consensus Games (WIP)"/>
-<meta name="twitter:description" content="I&rsquo;ve been working on a pet project recently: Consensus games are a fun new way to play together through social media&hellip;"/>
-
-    <meta property="og:title" content="International Consensus Games (WIP)" />
-<meta property="og:description" content="I&rsquo;ve been working on a pet project recently: Consensus games are a fun new way to play together through social media&hellip;" />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://instantiator.dev/post/consensus-games/" /><meta property="og:image" content="https://instantiator.dev/consensus/pieces_dream.png" /><meta property="article:section" content="post" />
-<meta property="article:published_time" content="2022-11-10T00:00:00+00:00" />
-<meta property="article:modified_time" content="2022-11-10T00:00:00+00:00" /><meta property="og:site_name" content="instantiator.dev" />
-
+    <meta property="og:url" content="https://instantiator.dev/post/consensus-games/">
+  <meta property="og:site_name" content="instantiator.dev">
+  <meta property="og:title" content="International Consensus Games (WIP)">
+  <meta property="og:description" content="I’ve been working on a pet project recently: Consensus games are a fun new way to play together through social media…">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="post">
+    <meta property="article:published_time" content="2022-11-10T00:00:00+00:00">
+    <meta property="article:modified_time" content="2022-11-10T00:00:00+00:00">
+    <meta property="article:tag" content="Game">
+    <meta property="article:tag" content="Consensus">
+    <meta property="article:tag" content="Distributed">
+    <meta property="article:tag" content="Voting">
+    <meta property="article:tag" content="Social">
+    <meta property="article:tag" content="Twitter">
+    <meta property="og:image" content="https://instantiator.dev/consensus/pieces_dream.png">
 
 
     
@@ -356,7 +370,7 @@ white to play, both sides can castle to both sides
 <p>All services currently share a single database - a handy shortcut for managing shared games (for now).</p>
 <p>When ready, I expect to be able to run the whole thing on a <a href="https://www.raspberrypi.com/">Raspberry Pi</a> from home.</p>
 <p>This is Colossus, my Raspberry Pi stack&hellip; <a href="https://en.wikipedia.org/wiki/Colossus_computer">Its namesake</a> was a World War II computer designed for cryptanalysis of German ciphers. It was the size of your living room, and weighed 5 tonnes.</p>
-<p><img alt="This is colossus" src="/consensus/colossus.jpg" title="This is colossus - 4 Raspberry Pi computers, stacked one atop the other."></p>
+<p><img src="/consensus/colossus.jpg" alt="This is colossus" title="This is colossus - 4 Raspberry Pi computers, stacked one atop the other."></p>
 <h2 id="performance">Performance</h2>
 <p>After MVP I may consider giving each node its own database instance. There aren&rsquo;t too many benefits to that for now - but should we find that the database is the bottleneck, it could help to break things up.</p>
 <p>Similarly, a fully serverless architecture could remove all performance concerns, although that would require a 3rd party host and right now I&rsquo;m motivated to save on costs by constraining myself to technologies I can operate from my pi stack. (I thought about using localstack - I&rsquo;m not sure if it&rsquo;s really production ready.)</p>

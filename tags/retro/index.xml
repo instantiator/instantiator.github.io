@@ -4,7 +4,7 @@
     <title>Retro on instantiator.dev</title>
     <link>https://instantiator.dev/tags/retro/</link>
     <description>Recent content in Retro on instantiator.dev</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo</generator>
     <language>en</language>
     <lastBuildDate>Wed, 04 Jan 2023 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://instantiator.dev/tags/retro/index.xml" rel="self" type="application/rss+xml" />
@@ -13,21 +13,21 @@
       <link>https://instantiator.dev/post/8-bit-supercomputer/</link>
       <pubDate>Wed, 04 Jan 2023 00:00:00 +0000</pubDate>
       <guid>https://instantiator.dev/post/8-bit-supercomputer/</guid>
-      <description>It took me 3 weeks to complete the day 11 puzzle for Advent of Code on a BBC Micro this year, and you&amp;rsquo;d be hard pressed to describe my solution as &amp;ldquo;proportionate&amp;rdquo; or &amp;ldquo;necessary&amp;rdquo;&amp;hellip;</description>
+      <description>&lt;p&gt;It took me 3 weeks to complete the day 11 puzzle for Advent of Code on a BBC Micro this year, and you&amp;rsquo;d be hard pressed to describe my solution as &amp;ldquo;proportionate&amp;rdquo; or &amp;ldquo;necessary&amp;rdquo;&amp;hellip;&lt;/p&gt;</description>
     </item>
     <item>
       <title>Hello, World!</title>
       <link>https://instantiator.dev/post/hello-world/</link>
       <pubDate>Fri, 01 Jan 2021 22:00:00 +0000</pubDate>
       <guid>https://instantiator.dev/post/hello-world/</guid>
-      <description>I learned to code on a computer called the BBC Micro, released by the BBC in 1981.</description>
+      <description>&lt;p&gt;I learned to code on a computer called the BBC Micro, released by the BBC in 1981. I was also released in 1981, and I have a bit of a bond with these 8-bit wonders.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Wriggler</title>
       <link>https://instantiator.dev/post/wriggler/</link>
       <pubDate>Mon, 23 Apr 2018 00:00:00 +0000</pubDate>
       <guid>https://instantiator.dev/post/wriggler/</guid>
-      <description>This is a necropost, resurrected from an old blog.&#xA;Wriggler It was 1998 and I was 17.</description>
+      <description>&lt;p&gt;&lt;em&gt;This is a necropost, resurrected from an old blog.&lt;/em&gt;&lt;/p&gt;&#xA;&lt;h1 id=&#34;wriggler&#34;&gt;Wriggler&lt;/h1&gt;&#xA;&lt;p&gt;It was 1998 and I was 17. My tool of choice was QBasic and this is a game I wrote based on a concept I stole from another game called Wriggler.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

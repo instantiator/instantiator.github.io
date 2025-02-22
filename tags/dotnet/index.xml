@@ -4,7 +4,7 @@
     <title>Dotnet on instantiator.dev</title>
     <link>https://instantiator.dev/tags/dotnet/</link>
     <description>Recent content in Dotnet on instantiator.dev</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo</generator>
     <language>en</language>
     <lastBuildDate>Sun, 14 Jul 2024 12:00:00 +0000</lastBuildDate>
     <atom:link href="https://instantiator.dev/tags/dotnet/index.xml" rel="self" type="application/rss+xml" />
@@ -13,28 +13,28 @@
       <link>https://instantiator.dev/post/draculorean/</link>
       <pubDate>Sun, 14 Jul 2024 12:00:00 +0000</pubDate>
       <guid>https://instantiator.dev/post/draculorean/</guid>
-      <description>What is The Epistolorean, and what has it got to do with Count Dracula?</description>
+      <description>&lt;p&gt;What is &lt;strong&gt;&lt;a href=&#34;https://epistolorean.club/&#34;&gt;The Epistolorean&lt;/a&gt;&lt;/strong&gt;, and what has it got to do with Count Dracula?&lt;/p&gt;</description>
     </item>
     <item>
       <title>Hammering JSON into CSV</title>
       <link>https://instantiator.dev/post/hammer-json-into-csv/</link>
       <pubDate>Sun, 16 Jul 2023 10:00:00 +0000</pubDate>
       <guid>https://instantiator.dev/post/hammer-json-into-csv/</guid>
-      <description>json-to-smart-csv is a tool to help build CSV records from arbitrary JSON&amp;hellip;</description>
+      <description>&lt;p&gt;&lt;em&gt;json-to-smart-csv is a tool to help build CSV records from arbitrary JSON&amp;hellip;&lt;/em&gt;&lt;/p&gt;</description>
     </item>
     <item>
       <title>3D puzzle print: a crossword generation tool</title>
       <link>https://instantiator.dev/post/printing-3d-crosswords/</link>
       <pubDate>Wed, 18 Jan 2023 00:00:00 +0000</pubDate>
       <guid>https://instantiator.dev/post/printing-3d-crosswords/</guid>
-      <description>A tool to design 3D printed crossword puzzles.&#xA;Generating 3D crossword models I&amp;rsquo;ve been working on a tool to generate crossword designs using OpenSCAD.</description>
+      <description>&lt;p&gt;A tool to design 3D printed crossword puzzles.&lt;/p&gt;&#xA;&lt;h1 id=&#34;generating-3d-crossword-models&#34;&gt;Generating 3D crossword models&lt;/h1&gt;&#xA;&lt;p&gt;I&amp;rsquo;ve been working on a tool to generate crossword designs using OpenSCAD. The output is an STL file that you can use with your favourite slicer and send to a 3D printer. It&amp;rsquo;s open source, and you&amp;rsquo;re free to plunder it for tips, techniques, or to generate your own&amp;hellip;&lt;/p&gt;</description>
     </item>
     <item>
       <title>The rocketship template 🚀</title>
       <link>https://instantiator.dev/post/rocketship-template/</link>
       <pubDate>Sun, 08 Jan 2023 00:00:00 +0000</pubDate>
       <guid>https://instantiator.dev/post/rocketship-template/</guid>
-      <description>Presenting a simple template to develop, publish, and test a simple C# service backend on AWS, with serverless Lambda functions, supported by DynamoDb, behind an API Gateway, and protected by Cognito auth.</description>
+      <description>&lt;p&gt;Presenting a simple template to develop, publish, and test a simple C# service backend on AWS, with serverless Lambda functions, supported by DynamoDb, behind an API Gateway, and protected by Cognito auth.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>
