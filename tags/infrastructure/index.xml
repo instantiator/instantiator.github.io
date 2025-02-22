@@ -13,7 +13,7 @@
       <link>https://instantiator.dev/post/emptying-s3-buckets/</link>
       <pubDate>Sat, 22 Feb 2025 11:00:00 +0000</pubDate>
       <guid>https://instantiator.dev/post/emptying-s3-buckets/</guid>
-      <description>&lt;p&gt;&lt;em&gt;When the time comes to delete an S3 bucket, it&amp;rsquo;s important to know that they can&amp;rsquo;t be deleted while they contain content. Here&amp;rsquo;s what you can do about it&amp;hellip;&lt;/em&gt;&lt;/p&gt;</description>
+      <description>&lt;p&gt;&lt;em&gt;When the time comes to delete an old S3 bucket, it&amp;rsquo;s important to know that they can&amp;rsquo;t be deleted while they contain content. Here&amp;rsquo;s what you can do about it from the CLI&amp;hellip;&lt;/em&gt;&lt;/p&gt;</description>
     </item>
     <item>
       <title>Hack Highlight #1: Secure evidence recording</title>
