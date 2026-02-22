@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>.Net on instantiator.dev</title>
+    <title>.NET on instantiator.dev</title>
     <link>https://instantiator.dev/tags/.net/</link>
-    <description>Recent content in .Net on instantiator.dev</description>
+    <description>Recent content in .NET on instantiator.dev</description>
     <generator>Hugo</generator>
     <language>en</language>
     <lastBuildDate>Sun, 01 Sep 2024 12:00:00 +0000</lastBuildDate>
