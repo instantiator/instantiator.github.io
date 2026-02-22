@@ -13,7 +13,7 @@
       <script async src="https://www.googletagmanager.com/gtag/js?id=G-SHE42ZWKEN"></script>
       <script>
         var doNotTrack = false;
-        if ( false ) {
+        if ( true ) {
           var dnt = (navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack);
           var doNotTrack = (dnt == "1" || dnt == "yes");
         }
@@ -202,7 +202,7 @@
 
         <div>
             <span class="text-body-secondary fw-lighter" style="font-size: 0.8rem;">
-                &copy; Lewis Westbury  2025 
+                &copy; Lewis Westbury  2026 
             </span>
         </div>
     </div>
@@ -279,7 +279,7 @@
 <h2 id="resistance-is-futile">Resistance is futile</h2>
 <p>With the help of several folks from the Flipper dev community, I recently built <a href="https://flipc.org/instantiator/flipper-zero-experimental-apps?branch=main&amp;root=resistors">an app to calculate the value of resistors</a> by decoding the coloured bands on them.</p>
 <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-      <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/mCpjn93I1Sw?autoplay=0&amp;controls=1&amp;end=0&amp;loop=0&amp;mute=0&amp;start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"></iframe>
+      <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/mCpjn93I1Sw?autoplay=0&amp;controls=1&amp;end=0&amp;loop=0&amp;mute=0&amp;start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"></iframe>
     </div>
 
 <p>More detail and source code at:</p>
@@ -326,7 +326,7 @@
 <h3 id="namespaces">Namespaces</h3>
 <p>C doesn&rsquo;t have objects or enforced namespaces, so as soon as you&rsquo;re writing something reasonably complex I recommend you start naming things carefully, so that it&rsquo;s absolutely clear what&rsquo;s what.</p>
 <p>For instance, <code>enums</code> are named in code, but this is a thin veil over integers, and you can use <code>enum</code> values as integers anywhere in the code. I recommend giving <code>enum</code> values distinct names prefixed with the name of the <code>enum</code> type itself, eg.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#66d9ef">typedef</span> <span style="color:#66d9ef">enum</span> {
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#66d9ef">typedef</span> <span style="color:#66d9ef">enum</span> {
 </span></span><span style="display:flex;"><span>    TagEventTypeInput,
 </span></span><span style="display:flex;"><span>    TagEventTypeSubGhzDataDetected,
 </span></span><span style="display:flex;"><span>    TagEventTypeInfraredMessage,
@@ -368,9 +368,9 @@
 <p>In this simple scenario, it&rsquo;s probably easier just to reorder your functions.</p>
 <p>As soon as you want to start defining a group or library of functions and structures that are all linked, you&rsquo;ll want to place them into a separate <code>.c</code> file and then create a header file you can use to define the interface (the methods you&rsquo;re sharing with other <code>.c</code> files).</p>
 <p>As a rule of thumb, if you want to include a header file from your own code, use inverted commas:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#75715e">#include</span> <span style="color:#75715e">&#34;my_lib.h&#34;</span><span style="color:#75715e">
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#75715e">#include</span> <span style="color:#75715e">&#34;my_lib.h&#34;</span><span style="color:#75715e">
 </span></span></span></code></pre></div><p>If you want to include a library header (eg. from the firmware), use angle brackets:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;gui/gui.h&gt;</span><span style="color:#75715e">
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;gui/gui.h&gt;</span><span style="color:#75715e">
 </span></span></span></code></pre></div><p>The good news is that <code>ufbt</code> is smart. It will find all your <code>.c</code> code files, and compile them in a sensible order. (The days of having to list all your code files for <code>gcc</code> are a long distant nightmare&hellip;)</p>
 <h3 id="firmware-headers">Firmware headers</h3>
 <p>A lot of this tutorial will use the <a href="https://github.com/flipperdevices/flipperzero-firmware/tree/dev/applications/services/gui">gui libraries</a> made available through the <a href="https://github.com/flipperdevices/flipperzero-firmware">official firmware</a>. If you ever need to figure out how something works, it&rsquo;s definitely worth taking a look.</p>
@@ -378,12 +378,12 @@
 <p>You&rsquo;ll also see some header files that end with the suffix <code>_i.h</code>. These are <em>internal</em> headers. This means that their content is not made available to app developers. You <em>shouldn&rsquo;t</em> need anything in them, although occasionally you may see something in there you&rsquo;d like to use. Try searching to see if it&rsquo;s called as a part of another function. There&rsquo;s often a good reason why a function has not been exposed to app developers. If you still think you need it, you can always raise the question on Discord.</p>
 <h2 id="setting-up-your-environment">Setting up your environment</h2>
 <p>First, create the directory you want to work in, open a terminal, and navigate to that directory.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ mkdir test_app
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ mkdir test_app
 </span></span><span style="display:flex;"><span>$ cd test_app
 </span></span></code></pre></div><p>I often open a terminal in Visual Studio Code, as it&rsquo;s easiest to work in a single tool and see what&rsquo;s happening as I go.</p>
 <h3 id="fetch-the-flipperzero-firmware">Fetch the FlipperZero firmware</h3>
 <p>Update <code>ufbt</code> to collect the Software Development Kit (SDK) for the current firmware. You can specify the firmware channel using the <code>--channel=[dev|rc|release]</code> option.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ ufbt update --channel<span style="color:#f92672">=</span>dev
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ ufbt update --channel<span style="color:#f92672">=</span>dev
 </span></span><span style="display:flex;"><span>13:36:51.062 <span style="color:#f92672">[</span>I<span style="color:#f92672">]</span> Deploying SDK <span style="color:#66d9ef">for</span> f7
 </span></span><span style="display:flex;"><span>13:36:51.062 <span style="color:#f92672">[</span>I<span style="color:#f92672">]</span> Fetching version info <span style="color:#66d9ef">for</span> UpdateChannel.DEV from https://update.flipperzero.one/firmware/directory.json
 </span></span><span style="display:flex;"><span>13:36:51.201 <span style="color:#f92672">[</span>I<span style="color:#f92672">]</span> Using version: a7d1ec03
@@ -393,16 +393,16 @@
 </span></span></code></pre></div><p><em>NB. I recommend working against the <code>dev</code> channel firmware. It enables quite a lot of safeguards to help catch certain kinds of mistakes early (you&rsquo;ll see theses as <code>furi_assert</code> assertions in firmware code, and you can use them yourself).</em></p>
 <p><em>NNB. If a <code>furi_assert</code> fails (ie. the assertion isn&rsquo;t true), it will hang your program. It can sometimes be quite difficult to identify or locate the problem, particularly if you haven&rsquo;t tried to debug your code yet, but at least you&rsquo;ll know there&rsquo;s an issue. I&rsquo;ll cover debugging in a future tutorial (once I have the supporting hardware). In the meantime, you could check out <a href="https://www.youtube.com/@MrDerekJamison">Derek Jamison</a>&rsquo;s guide on YouTube: <a href="https://youtu.be/CLsLZO15S44">Flipper Zero: Debugging FURI_ASSERT failures</a></em></p>
 <p>Your Flipper&rsquo;s firmware should match the firmware you&rsquo;re working against, or the app won&rsquo;t launch. You can use <code>ufbt</code> to flash the firmware on your Flipper:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>ufbt flash_usb
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>ufbt flash_usb
 </span></span></code></pre></div><p><code>ufbt</code> will also flash through an ST-link if you have that available:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>ufbt flash
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>ufbt flash
 </span></span></code></pre></div><p>The <strong>qFlipper</strong> application also supports this:</p>
 <p><img src="/f0-tutorial/qflipper-update.png" alt="the qFlipper app showing the firmware view and the big green update button"></p>
 <h3 id="create-a-skeleton-app">Create a skeleton app</h3>
 <p><code>ufbt create</code> will create a nice working environment for your app. Give your app a simple id, eg. <code>test_app</code> - you&rsquo;ll be able to change this later. Provide an id for the application, with the <code>APPID=</code> option.</p>
 <p><em>NB. I recommend using characters from the simple set of <code>a-zA-Z0-9_</code>. Restrict yourself to characters that can appear in a C function name, or you may end up having to rename the main function, and the entrypoint in your application manifest before you can build.</em></p>
 <p>Running for the first time, it&rsquo;ll warn that the <code>application.fam</code> file doesn&rsquo;t exist (and then create one for you):</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ ufbt create APPID<span style="color:#f92672">=</span>test_app
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ ufbt create APPID<span style="color:#f92672">=</span>test_app
 </span></span><span style="display:flex;"><span>scons: Entering directory <span style="color:#e6db74">`</span>/Users/lewiswestbury/.ufbt/current/scripts/ufbt<span style="color:#e6db74">&#39;
 </span></span></span><span style="display:flex;"><span><span style="color:#e6db74">
 </span></span></span><span style="display:flex;"><span><span style="color:#e6db74">fbt: warning: Folder app: manifest application.fam is missing
@@ -422,7 +422,7 @@
 <p><img src="/f0-tutorial/ufbt-create.png" alt="A screenshot of visual studio code showing a terminal with ufbt create, and the application manifest it has created"></p>
 <h3 id="test-a-build">Test a build</h3>
 <p>With no other options, <code>ufbt</code> will build your app.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ ufbt 
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ ufbt 
 </span></span><span style="display:flex;"><span>scons: Entering directory <span style="color:#e6db74">`</span>/Users/lewiswestbury/.ufbt/current/scripts/ufbt<span style="color:#960050;background-color:#1e0010">&#39;</span>
 </span></span><span style="display:flex;"><span>        ICONS   /Users/lewiswestbury/.ufbt/build/test_app/test_app_icons.c
 </span></span><span style="display:flex;"><span>        CDB     /Users/lewiswestbury/src/test_app/.vscode/compile_commands.json
@@ -439,7 +439,7 @@
 <p>You can change the directory for the app, by altering the <code>fap_category</code> entry in <code>application.fam</code>.</p>
 <h3 id="visual-studio-integration">Visual Studio integration</h3>
 <p>Visual Studio Code can support some nice shortcuts to make your life easer, and <code>ufbt</code> can install them.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ ufbt vscode_dist
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ ufbt vscode_dist
 </span></span><span style="display:flex;"><span>scons: Entering directory <span style="color:#e6db74">`</span>/Users/lewiswestbury/.ufbt/current/scripts/ufbt<span style="color:#e6db74">&#39;
 </span></span></span><span style="display:flex;"><span><span style="color:#e6db74">Creating &#39;</span>/Users/lewiswestbury/src/test_app/.vscode/c_cpp_properties.json<span style="color:#e6db74">&#39;
 </span></span></span><span style="display:flex;"><span><span style="color:#e6db74">Creating &#39;</span>/Users/lewiswestbury/src/test_app/.vscode/extensions.json<span style="color:#e6db74">&#39;

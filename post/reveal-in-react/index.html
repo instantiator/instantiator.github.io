@@ -13,7 +13,7 @@
       <script async src="https://www.googletagmanager.com/gtag/js?id=G-SHE42ZWKEN"></script>
       <script>
         var doNotTrack = false;
-        if ( false ) {
+        if ( true ) {
           var dnt = (navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack);
           var doNotTrack = (dnt == "1" || dnt == "yes");
         }
@@ -203,7 +203,7 @@ Reveal in React TLDR: Here’s a template repository for a NextJS app with a Rev
 
         <div>
             <span class="text-body-secondary fw-lighter" style="font-size: 0.8rem;">
-                &copy; Lewis Westbury  2025 
+                &copy; Lewis Westbury  2026 
             </span>
         </div>
     </div>
@@ -308,7 +308,7 @@ Reveal in React TLDR: Here’s a template repository for a NextJS app with a Rev
 </li>
 <li>
 <p>Install dependencies and run the dev server:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>npm install
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>npm install
 </span></span><span style="display:flex;"><span>npm run dev
 </span></span></code></pre></div></li>
 </ul>
@@ -316,19 +316,19 @@ Reveal in React TLDR: Here’s a template repository for a NextJS app with a Rev
 <h2 id="build-your-own">Build your own</h2>
 <p>The following notes outline the approach I took to embedding Reveal in a Next/React application&hellip;</p>
 <h3 id="install-node-and-npx">Install node and npx</h3>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>brew install node
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>brew install node
 </span></span><span style="display:flex;"><span>npm install -g npx
 </span></span></code></pre></div><h3 id="create-the-app">Create the app</h3>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>npx create-next-app@latest
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>npx create-next-app@latest
 </span></span></code></pre></div><h3 id="install-revealjs">Install <code>reveal.js</code></h3>
 <p>There are a few react-reveal packages that wrap Reveal for React/Next applications, but they&rsquo;re a little out of date now (the latest was last updated 3 years ago), and aren&rsquo;t really suited to Next or server-side rendering without some extra work.</p>
 <p>Install <code>reveal.js</code> directly:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>npm install reveal.js
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>npm install reveal.js
 </span></span></code></pre></div><h3 id="create-a-presentation-component">Create a presentation component</h3>
 <p><strong>See:</strong> <a href="https://github.com/instantiator/reveal-on-next/blob/main/components/Presentation.tsx"><code>components/Presentation.tsx</code></a></p>
 <p><code>reveal.js</code> will only run in a browser environment, as it needs access to client specific javascript objects, such as <code>navigator</code>. It also needs to be able to see the <code>div</code> elements with <code>reveal</code> and <code>slides</code> CSS classes, as soon as it is created. This code forces Next to only invoke it in a browser&hellip;</p>
 <p>This is an invocation for Next - telling it that the component needs client-side rendering:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-tsx" data-lang="tsx"><span style="display:flex;"><span><span style="color:#e6db74">&#34;use client&#34;</span>;
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-tsx" data-lang="tsx"><span style="display:flex;"><span><span style="color:#e6db74">&#34;use client&#34;</span>;
 </span></span></code></pre></div><p><code>Reveal</code> is only created inside a <code>useEffect</code> - which is called when the page and divs are ready.</p>
 <p>The <code>embedded</code> option is set to true - and this helps to incorporate other layout and elements alongside the presentation. As the presentation no longer automatically fills the page, the <code>reveal</code> <code>div</code> will need to have its size specified in CSS&hellip;</p>
 <p><em>NB. The configuration also includes multiplex information and dependencies. See below for more information.</em></p>
@@ -341,7 +341,7 @@ Reveal in React TLDR: Here’s a template repository for a NextJS app with a Rev
 <li>Zero <code>margin</code> and <code>padding</code> on <code>html</code> and <code>body</code>. This removes any whitespace around the edges of the page.</li>
 <li>Set <code>body</code> to <code>display: flex</code> (in column direction). This allows us to resize the presentation to fit below any layout above it.</li>
 </ul>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-css" data-lang="css"><span style="display:flex;"><span><span style="color:#f92672">html</span><span style="color:#f92672">,</span> <span style="color:#f92672">body</span> {
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-css" data-lang="css"><span style="display:flex;"><span><span style="color:#f92672">html</span><span style="color:#f92672">,</span> <span style="color:#f92672">body</span> {
 </span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">max-width</span>: <span style="color:#ae81ff">100</span><span style="color:#66d9ef">vw</span>;
 </span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">overflow-x</span>: <span style="color:#66d9ef">hidden</span>;
 </span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">height</span>: <span style="color:#ae81ff">100</span><span style="color:#66d9ef">%</span>;
@@ -361,9 +361,9 @@ Reveal in React TLDR: Here’s a template repository for a NextJS app with a Rev
 <li><a href="https://github.com/instantiator/reveal-on-next/blob/main/app/slides/client/page.tsx"><code>app/slides/client/page.tsx</code></a></li>
 </ul>
 <p>As shown in both <code>page.tsx</code> files, <code>dynamic</code> can be used to import the <code>Presentation</code> element dynamically, with <code>ssr: false</code> to prevent server-side rendering:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-tsx" data-lang="tsx"><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">Presentation</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">dynamic</span>(() <span style="color:#f92672">=&gt;</span> <span style="color:#66d9ef">import</span>(<span style="color:#e6db74">&#39;../../../components/Presentation&#39;</span>), { <span style="color:#a6e22e">ssr</span>: <span style="color:#66d9ef">false</span> });
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-tsx" data-lang="tsx"><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">Presentation</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">dynamic</span>(() <span style="color:#f92672">=&gt;</span> <span style="color:#66d9ef">import</span>(<span style="color:#e6db74">&#39;../../../components/Presentation&#39;</span>), { <span style="color:#a6e22e">ssr</span>: <span style="color:#66d9ef">false</span> });
 </span></span></code></pre></div><p>Both of these pages are simple, returning a component that renders the <code>Presentation</code>:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-tsx" data-lang="tsx"><span style="display:flex;"><span><span style="color:#66d9ef">export</span> <span style="color:#66d9ef">default</span> <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">Controller() {</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-tsx" data-lang="tsx"><span style="display:flex;"><span><span style="color:#66d9ef">export</span> <span style="color:#66d9ef">default</span> <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">Controller() {</span>
 </span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> (
 </span></span><span style="display:flex;"><span>        &lt;<span style="color:#f92672">Presentation</span> 
 </span></span><span style="display:flex;"><span>            <span style="color:#a6e22e">role</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;controller&#34;</span> 
@@ -374,7 +374,7 @@ Reveal in React TLDR: Here’s a template repository for a NextJS app with a Rev
 </span></span><span style="display:flex;"><span>}
 </span></span></code></pre></div><h2 id="remote-content">Remote content</h2>
 <p>The <a href="https://github.com/instantiator/reveal-on-next/blob/main/components/presentation.tsx"><code>Presentation</code></a> element has a <code>src</code> parameter, and this is passed to an internal <a href="https://github.com/instantiator/reveal-on-next/blob/main/components/PresentationContent.tsx"><code>PresentationContent</code></a> element which uses the <a href="https://swr.vercel.app/">SWR</a> library to fetch the content. This content is then enriched (React elements are created where needed inside it), and then rendered inside the <code>Presentation</code>.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>npm install swr
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>npm install swr
 </span></span></code></pre></div><h3 id="dynamically-creating-react-elements">Dynamically creating React elements</h3>
 <p>Some of the content is regular HTML, but some of the elements are React components. There are a number of packages that might help us convert the HTML and manage React components:</p>
 <table>
@@ -400,9 +400,9 @@ Reveal in React TLDR: Here’s a template repository for a NextJS app with a Rev
   </tbody>
 </table>
 <p>Install <code>html-react-parser</code></p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>npm install html-react-parser
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>npm install html-react-parser
 </span></span></code></pre></div><p><strong>NB.</strong> <code>html-react-parser</code> is simple to use, but not XSS-safe, and should be used with caution. <code>PresentationContent</code> manages replacement of individual React elements by type:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-tsx" data-lang="tsx"><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">options</span> <span style="color:#f92672">=</span> {
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-tsx" data-lang="tsx"><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">options</span> <span style="color:#f92672">=</span> {
 </span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">replace</span><span style="color:#f92672">:</span> (<span style="color:#a6e22e">domNode</span>: <span style="color:#66d9ef">any</span>) <span style="color:#f92672">=&gt;</span> {
 </span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">domNode</span> <span style="color:#66d9ef">instanceof</span> <span style="color:#a6e22e">Element</span> <span style="color:#f92672">&amp;&amp;</span> <span style="color:#a6e22e">domNode</span>.<span style="color:#a6e22e">attribs</span>) {
 </span></span><span style="display:flex;"><span>      <span style="color:#66d9ef">switch</span> (<span style="color:#a6e22e">domNode</span>.<span style="color:#a6e22e">tagName</span>) {
@@ -426,7 +426,7 @@ Reveal in React TLDR: Here’s a template repository for a NextJS app with a Rev
 </span></span><span style="display:flex;"><span>  },
 </span></span><span style="display:flex;"><span>};
 </span></span></code></pre></div><p>Here, <a href="https://github.com/instantiator/reveal-on-next/blob/main/components/Question.tsx"><code>Question</code></a> also incorporates a <code>Rating</code> element, from: <a href="https://www.npmjs.com/package/react-rating">react-rating</a></p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>npm install react-rating
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>npm install react-rating
 </span></span></code></pre></div><h2 id="multiplexing-1">Multiplexing</h2>
 <p>Multiplexing allows a controller presentation to send its state to client presentations on other devices (ie. to allow them to follow along).</p>
 <p>There are 3 components:</p>
@@ -438,7 +438,7 @@ Reveal in React TLDR: Here’s a template repository for a NextJS app with a Rev
 <p><em>*Sometimes referred to as a master presentation.</em></p>
 <h3 id="the-server">The server</h3>
 <p>This demo uses the server at: <a href="https://reveal-multiplex.glitch.me/">https://reveal-multiplex.glitch.me/</a></p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-tsx" data-lang="tsx"><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">SOCKET_IO_SERVER</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;https://reveal-multiplex.glitch.me/&#34;</span>;
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-tsx" data-lang="tsx"><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">SOCKET_IO_SERVER</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;https://reveal-multiplex.glitch.me/&#34;</span>;
 </span></span></code></pre></div><ul>
 <li>To test locally, you could also run your own server.</li>
 <li>A production system should host its own server.</li>
@@ -446,7 +446,7 @@ Reveal in React TLDR: Here’s a template repository for a NextJS app with a Rev
 </ul>
 <h3 id="client-and-controller">Client and controller</h3>
 <p>Install the multiplex plugin:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>npm install reveal-multiplex
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>npm install reveal-multiplex
 </span></span></code></pre></div><p>The Presentation component in <a href="https://github.com/instantiator/reveal-on-next/blob/main/components/Presentation.tsx"><code>Presentation.tsx</code></a> accepts several parameters:</p>
 <ul>
 <li>
@@ -463,7 +463,7 @@ Reveal in React TLDR: Here’s a template repository for a NextJS app with a Rev
 </li>
 </ul>
 <p>The multiplex plugin is configured during initialization of Reveal:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-tsx" data-lang="tsx"><span style="display:flex;"><span><span style="color:#a6e22e">multiplex</span><span style="color:#f92672">:</span> {
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-tsx" data-lang="tsx"><span style="display:flex;"><span><span style="color:#a6e22e">multiplex</span><span style="color:#f92672">:</span> {
 </span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">secret</span>: <span style="color:#66d9ef">secret</span>,
 </span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">id</span>: <span style="color:#66d9ef">id</span>,
 </span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">url</span>: <span style="color:#66d9ef">SOCKET_IO_SERVER</span>
@@ -474,28 +474,28 @@ Reveal in React TLDR: Here’s a template repository for a NextJS app with a Rev
 </span></span><span style="display:flex;"><span>    { <span style="color:#a6e22e">src</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;https://reveal-multiplex.glitch.me/client.js&#39;</span>, <span style="color:#66d9ef">async</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">true</span> },
 </span></span><span style="display:flex;"><span>]
 </span></span></code></pre></div><p>Because these dependencies rely on being able to find <code>Reveal</code> as a global variable, we also add this, just before initialization:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-tsx" data-lang="tsx"><span style="display:flex;"><span>window.<span style="color:#a6e22e">Reveal</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">reveal</span>;
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-tsx" data-lang="tsx"><span style="display:flex;"><span>window.<span style="color:#a6e22e">Reveal</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">reveal</span>;
 </span></span></code></pre></div><h2 id="static-builds">Static builds</h2>
 <h3 id="fix-compiler-issues">Fix compiler issues</h3>
 <p>Not all imports agree on the version of React to use, and this can lead to difficulties with imported elements (such as the <code>Rating</code> element used in <a href="https://github.com/instantiator/reveal-on-next/blob/main/components/Question.tsx"><code>Question.tsx</code></a>). In <a href="https://github.com/instantiator/reveal-on-next/blob/main/tsconfig.json"><code>tsconfig.json</code></a> add the following to <code>$.compilerOptions.paths</code> to enforce use of the same version:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-jsonc" data-lang="jsonc"><span style="display:flex;"><span>{
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-jsonc" data-lang="jsonc"><span style="display:flex;"><span>{
 </span></span><span style="display:flex;"><span>    <span style="color:#75715e">// ...
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#f92672">&#34;compilerOptions&#34;</span>: {
+</span></span></span><span style="display:flex;"><span>    <span style="color:#f92672">&#34;compilerOptions&#34;</span>: {
 </span></span><span style="display:flex;"><span>        <span style="color:#f92672">&#34;paths&#34;</span>: [
 </span></span><span style="display:flex;"><span>            <span style="color:#75715e">// ...
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>            <span style="color:#e6db74">&#34;react&#34;</span><span style="color:#960050;background-color:#1e0010">:</span> [<span style="color:#e6db74">&#34;./node_modules/@types/react&#34;</span>]
+</span></span></span><span style="display:flex;"><span>            <span style="color:#e6db74">&#34;react&#34;</span><span style="color:#960050;background-color:#1e0010">:</span> [<span style="color:#e6db74">&#34;./node_modules/@types/react&#34;</span>]
 </span></span><span style="display:flex;"><span>        ]
 </span></span><span style="display:flex;"><span>    } 
 </span></span><span style="display:flex;"><span>}
 </span></span></code></pre></div><p>In <a href="https://github.com/instantiator/reveal-on-next/blob/main/components/Presentation.tsx"><code>Presentation.tsx</code></a>, <code>window.Reveal</code> is explicitly set to ensure that it is available to the multiplexing scripts imported as dependencies of <code>Reveal</code>.</p>
 <p>TypeScript is strict during a production build, and rejects this as it thinks <code>Reveal</code> is already the name of the module. To instruct the compiler to overlook TypeScript errors, precede the line with <code>// @ts-ignore</code>, as here:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-tsx" data-lang="tsx"><span style="display:flex;"><span><span style="color:#75715e">// @ts-ignore
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>window.<span style="color:#a6e22e">Reveal</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">reveal</span>;
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-tsx" data-lang="tsx"><span style="display:flex;"><span><span style="color:#75715e">// @ts-ignore
+</span></span></span><span style="display:flex;"><span>window.<span style="color:#a6e22e">Reveal</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">reveal</span>;
 </span></span></code></pre></div><h3 id="build-and-export-the-project">Build and export the project</h3>
 <p>Modify <a href="https://github.com/instantiator/reveal-on-next/blob/main/next.config.js"><code>next.config.js</code></a> to set <code>output</code> to <code>export</code>:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">nextConfig</span> <span style="color:#f92672">=</span> { <span style="color:#a6e22e">output</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;export&#34;</span> };
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">nextConfig</span> <span style="color:#f92672">=</span> { <span style="color:#a6e22e">output</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;export&#34;</span> };
 </span></span></code></pre></div><p>Build the project:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>npx next build
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>npx next build
 </span></span></code></pre></div><p>Static output is put into the <code>out</code> directory by default.</p>
 <h2 id="hosting-on-github-pages">Hosting on GitHub pages</h2>
 <p><a href="https://pages.github.com/">GitHub Pages</a> can serve the static content either from the root directory of a repository, or from the <code>docs/</code> directory. You can place the output from <code>out</code> into another repository, and serve it from there by enabling GitHub Pages.</p>

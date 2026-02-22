@@ -13,7 +13,7 @@
       <script async src="https://www.googletagmanager.com/gtag/js?id=G-SHE42ZWKEN"></script>
       <script>
         var doNotTrack = false;
-        if ( false ) {
+        if ( true ) {
           var dnt = (navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack);
           var doNotTrack = (dnt == "1" || dnt == "yes");
         }
@@ -201,7 +201,7 @@
 
         <div>
             <span class="text-body-secondary fw-lighter" style="font-size: 0.8rem;">
-                &copy; Lewis Westbury  2025 
+                &copy; Lewis Westbury  2026 
             </span>
         </div>
     </div>
@@ -300,15 +300,15 @@
 <p>For this project, we&rsquo;ll use data from <a href="https://download.geofabrik.de/europe/great-britain.html">Great Britain</a>.</p>
 <h2 id="getting-started">Getting started</h2>
 <p>First, clone the project code to your machine:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>$ git clone https://github.com/instantiator/world-server.git
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>$ git clone https://github.com/instantiator/world-server.git
 </span></span></code></pre></div><h3 id="downloading-the-data">Downloading the data</h3>
 <p>The <code>update-data.sh</code> script is a simple way to fetch the data from GEOFABRIK.</p>
 <p>If you&rsquo;re going to fetch an area other than Great Britain, you&rsquo;ll want to modify these variables in the script:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>DATA_PATH<span style="color:#f92672">=</span>europe
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>DATA_PATH<span style="color:#f92672">=</span>europe
 </span></span><span style="display:flex;"><span>DATA_FILE<span style="color:#f92672">=</span>great-britain-lastest.osm.pbf
 </span></span><span style="display:flex;"><span>BACKUP_FILE<span style="color:#f92672">=</span>great-britain-lastest.osm.pbf.backup
 </span></span></code></pre></div><p><code>DATA_PATH</code> and <code>DATA_FILE</code> are composed into a GEOFABRIK url. Run the script to download your chosen data into the <code>data/</code> directory:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>$ ./update-data.sh
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>$ ./update-data.sh
 </span></span></code></pre></div><h3 id="launching-the-servers">Launching the servers</h3>
 <p><code>compose.yaml</code> defines a Docker Compose application that combines and connects:</p>
 <ul>
@@ -346,12 +346,12 @@
   </tbody>
 </table>
 <p>Ensure that Docker is running on your system, and launch the application:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>$ ./run-server.sh
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>$ ./run-server.sh
 </span></span></code></pre></div><h3 id="import-the-data">Import the data</h3>
 <p>Use the <code>import-data.sh</code> script to import the data you previously downloaded into your PostGIS database, using <code>osm2pgsql</code>.</p>
 <p>By default it&rsquo;ll import <code>data/great-britain-latest.osm.pbf</code>, using <code>scripts/import-campsites.lua</code> to filter the data.</p>
 <p>Configure the import with these parameters:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>Import data from a provided .osm.pbf file into a local postgis database.
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>Import data from a provided .osm.pbf file into a local postgis database.
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>Options:
 </span></span><span style="display:flex;"><span>    -d &lt;path&gt;     --data &lt;path&gt;       Specify the .osm.pbf data source
@@ -364,9 +364,10 @@
 </span></span><span style="display:flex;"><span>    -d data/great-britain-latest.osm.pbf
 </span></span><span style="display:flex;"><span>    -s scripts/import-campsites.lua
 </span></span></code></pre></div><blockquote>
-<p>NB. If you specify the <code>--all</code> parameter, no filtering script will be used, and the entire dataset will be imported. This can take a long time!</p></blockquote>
+<p>NB. If you specify the <code>--all</code> parameter, no filtering script will be used, and the entire dataset will be imported. This can take a long time!</p>
+</blockquote>
 <p>To use the defaults, which will import campsite data from Great Britain, run the script with no options:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>$ ./import-data.sh
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>$ ./import-data.sh
 </span></span></code></pre></div><h4 id="import-filtering">Import filtering</h4>
 <p><code>osm2pgsql</code> supports the use of a Lua script to control the import - effectively configuring the database table to import to, and providing functions to filter the import.</p>
 <p>See: <a href="https://osm2pgsql.org/doc/manual.html#the-flex-output">The Flex Output</a></p>
@@ -395,7 +396,7 @@
 <ol>
 <li>Create tables for the database:</li>
 </ol>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-lua" data-lang="lua"><span style="display:flex;"><span><span style="color:#66d9ef">local</span> tables <span style="color:#f92672">=</span> {}
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-lua" data-lang="lua"><span style="display:flex;"><span><span style="color:#66d9ef">local</span> tables <span style="color:#f92672">=</span> {}
 </span></span><span style="display:flex;"><span>tables.campsites_all <span style="color:#f92672">=</span> osm2pgsql.define_table {
 </span></span><span style="display:flex;"><span>  name <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;campsites_all&#34;</span>,
 </span></span><span style="display:flex;"><span>  <span style="color:#75715e">-- This will generate a column &#34;osm_id INT8&#34; for the id, and a column</span>
@@ -415,7 +416,7 @@
 <ol start="2">
 <li>A function to remove uninteresting tags from the data:</li>
 </ol>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-lua" data-lang="lua"><span style="display:flex;"><span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">clean_tags</span>(tags)
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-lua" data-lang="lua"><span style="display:flex;"><span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">clean_tags</span>(tags)
 </span></span><span style="display:flex;"><span>  tags.odbl <span style="color:#f92672">=</span> <span style="color:#66d9ef">nil</span>
 </span></span><span style="display:flex;"><span>  tags[<span style="color:#e6db74">&#39;source:ref&#39;</span>] <span style="color:#f92672">=</span> <span style="color:#66d9ef">nil</span>
 </span></span><span style="display:flex;"><span>  <span style="color:#75715e">-- tags.created_by = nil</span>
@@ -428,7 +429,7 @@
 <ol start="3">
 <li>A function to indicate if a given feature looks like a campsite. This is the core of the filtering:</li>
 </ol>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-lua" data-lang="lua"><span style="display:flex;"><span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">looks_like_a_campsite</span>(object)
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-lua" data-lang="lua"><span style="display:flex;"><span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">looks_like_a_campsite</span>(object)
 </span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">return</span> object.tags.tourism <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;camp_site&#39;</span> <span style="color:#f92672">or</span> object.tags.tourism <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;camp_pitch&#39;</span> <span style="color:#f92672">or</span> object.tags.tourism <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;caravan_site&#39;</span>
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">end</span>
 </span></span></code></pre></div><ul>
@@ -437,7 +438,7 @@
 <ol start="4">
 <li>A function to insert a feature into the database:</li>
 </ol>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-lua" data-lang="lua"><span style="display:flex;"><span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">process</span>(object, geometry)
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-lua" data-lang="lua"><span style="display:flex;"><span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">process</span>(object, geometry)
 </span></span><span style="display:flex;"><span>  tables.campsites_all:insert({
 </span></span><span style="display:flex;"><span>      type <span style="color:#f92672">=</span> object.type,
 </span></span><span style="display:flex;"><span>      name <span style="color:#f92672">=</span> object.tags.name,
@@ -451,7 +452,7 @@
 <ol start="5">
 <li>Override <code>osm2pgsql.process_node</code> to process <strong>node</strong> features:</li>
 </ol>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-lua" data-lang="lua"><span style="display:flex;"><span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">osm2pgsql</span>.<span style="color:#a6e22e">process_node</span>(object)
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-lua" data-lang="lua"><span style="display:flex;"><span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">osm2pgsql</span>.<span style="color:#a6e22e">process_node</span>(object)
 </span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">if</span> clean_tags(object.tags) <span style="color:#66d9ef">then</span>
 </span></span><span style="display:flex;"><span>      <span style="color:#66d9ef">return</span>
 </span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">end</span>
@@ -468,7 +469,7 @@
 <ol start="6">
 <li>Override <code>osm2pgsql.process_way</code> to process <strong>way</strong> features:</li>
 </ol>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-lua" data-lang="lua"><span style="display:flex;"><span><span style="color:#75715e">-- Called for every way in the input</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-lua" data-lang="lua"><span style="display:flex;"><span><span style="color:#75715e">-- Called for every way in the input</span>
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">osm2pgsql</span>.<span style="color:#a6e22e">process_way</span>(object)
 </span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">if</span> clean_tags(object.tags) <span style="color:#66d9ef">then</span>
 </span></span><span style="display:flex;"><span>      <span style="color:#66d9ef">return</span>
@@ -486,7 +487,7 @@
 <ol start="7">
 <li>Override <code>osm2pgsql.process_relation</code> to process <strong>relation</strong> features:</li>
 </ol>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-lua" data-lang="lua"><span style="display:flex;"><span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">osm2pgsql</span>.<span style="color:#a6e22e">process_relation</span>(object)
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-lua" data-lang="lua"><span style="display:flex;"><span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">osm2pgsql</span>.<span style="color:#a6e22e">process_relation</span>(object)
 </span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">if</span> looks_like_a_campsite(object) <span style="color:#66d9ef">then</span>
 </span></span><span style="display:flex;"><span>      process(object, object:as_geometrycollection())
 </span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">end</span>
@@ -518,7 +519,8 @@
 <h2 id="security">Security</h2>
 <p>There are a few security issues to be aware of&hellip;</p>
 <blockquote>
-<p><em>The application is assumed to be running on your personal machine and exposed, at most, to your local home network. In order to use it in any other context, you will need to take some precautionary steps&hellip;</em></p></blockquote>
+<p><em>The application is assumed to be running on your personal machine and exposed, at most, to your local home network. In order to use it in any other context, you will need to take some precautionary steps&hellip;</em></p>
+</blockquote>
 <p><strong>The default database password is published in the code repository.</strong> This means it is not safe. Do not use this password in production. Modify the values found in: <code>config/word-server.env</code> and do not commit those values to your repository if public.</p>
 <p><strong>The tile server runs over HTTP by default.</strong> Do not expose this tile server to the internet! Put it behind <a href="https://www.nginx.com/">NGINX</a> or another suitable proxy.</p>
 <p>It is also possible to <a href="https://github.com/CrunchyData/pg_tileserv#configuration-file">configure</a> <code>pg_tileserv</code> to support SSL certificates.</p>

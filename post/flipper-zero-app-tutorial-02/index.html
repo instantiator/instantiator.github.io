@@ -13,7 +13,7 @@
       <script async src="https://www.googletagmanager.com/gtag/js?id=G-SHE42ZWKEN"></script>
       <script>
         var doNotTrack = false;
-        if ( false ) {
+        if ( true ) {
           var dnt = (navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack);
           var doNotTrack = (dnt == "1" || dnt == "yes");
         }
@@ -202,7 +202,7 @@
 
         <div>
             <span class="text-body-secondary fw-lighter" style="font-size: 0.8rem;">
-                &copy; Lewis Westbury  2025 
+                &copy; Lewis Westbury  2026 
             </span>
         </div>
     </div>
@@ -323,7 +323,8 @@
 <h2 id="scenes-and-views">Scenes and views</h2>
 <p>A user interface is broken down into views, each of which is a visual component (such as a menu, popup, file browser, or text input&hellip;)</p>
 <blockquote>
-<p>For a guide to the various components, I recommend Brodan&rsquo;s <a href="https://brodan.biz/blog/a-visual-guide-to-flipper-zero-gui-components/">Visual Guide to Flipper Zero GUI Modules</a>. The most adaptable of these is the <code>Widget</code> view, which deserve a tutorial of its own. For an example of its use, see the resistor editing scene in the Resistance Calculator app: <a href="https://github.com/instantiator/flipper-zero-experimental-apps/blob/main/resistors/src/scene_edit.c">scene_edit.c </a></p></blockquote>
+<p>For a guide to the various components, I recommend Brodan&rsquo;s <a href="https://brodan.biz/blog/a-visual-guide-to-flipper-zero-gui-components/">Visual Guide to Flipper Zero GUI Modules</a>. The most adaptable of these is the <code>Widget</code> view, which deserve a tutorial of its own. For an example of its use, see the resistor editing scene in the Resistance Calculator app: <a href="https://github.com/instantiator/flipper-zero-experimental-apps/blob/main/resistors/src/scene_edit.c">scene_edit.c </a></p>
+</blockquote>
 <p>We&rsquo;ll take a look at a the <code>Menu</code> and <code>Popup</code> components in a little more detail as a part of this tutorial.</p>
 <p>Scenes are a layer of abstraction above views, allowing you to define a number of scene handler functions - responsible for rendering the view on entering a scene, destroying it on exit, and responding to events while the scene is active.</p>
 <h2 id="scenemanager-and-viewdispatcher"><code>SceneManager</code> and <code>ViewDispatcher</code></h2>
@@ -331,7 +332,7 @@
 <p>Views are managed by a <code>ViewDispatcher</code> (with a number of <code>view_dispatcher_</code> prefixed functions), called from the handler functions passed in to the <code>SceneManager</code>.</p>
 <p>To define all the scenes for your app, provide all the handler functions as a <a href="https://github.com/flipperdevices/flipperzero-firmware/blob/dev/applications/services/gui/scene_manager.h#L42"><code>SceneManagerHandlers</code></a> <code>struct</code> to the <a href="https://github.com/flipperdevices/flipperzero-firmware/blob/dev/applications/services/gui/scene_manager.h#L77"><code>scene_manager_alloc</code></a> function.</p>
 <p>Scenes are indexed numerically, and so it&rsquo;s helpful to create an enum to track their indices, eg.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#66d9ef">typedef</span> <span style="color:#66d9ef">enum</span> {
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#66d9ef">typedef</span> <span style="color:#66d9ef">enum</span> {
 </span></span><span style="display:flex;"><span>    TestAppScene_MainMenu,
 </span></span><span style="display:flex;"><span>    TestAppScene_FirstPopup,
 </span></span><span style="display:flex;"><span>    TestAppScene_SecondPopup,
@@ -339,21 +340,21 @@
 </span></span><span style="display:flex;"><span>} TestAppScene;
 </span></span></code></pre></div><p><em>NB. That <code>TestAppScene_count</code> value at the end of the enum is a handy way to safely obtain the size of the <code>enum</code> even if you change its contents later. Just ensure it&rsquo;s always the last item.</em></p>
 <p>Views can be reused, and so there may be fewer views than scenes, eg.:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#66d9ef">typedef</span> <span style="color:#66d9ef">enum</span> {
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#66d9ef">typedef</span> <span style="color:#66d9ef">enum</span> {
 </span></span><span style="display:flex;"><span>    TestAppView_Menu,
 </span></span><span style="display:flex;"><span>    TestAppView_Popup
 </span></span><span style="display:flex;"><span>} TestAppScene;
 </span></span></code></pre></div><h2 id="initialising-the-app">Initialising the app</h2>
 <p>With these enums defined, we&rsquo;re ready to set up the main <code>struct</code> containing the app&rsquo;s state, and then go on to allocate and initialise everything.</p>
 <p>In the tutorial app, this takes place in the <code>test_app_init</code> function, which goes on to call out to functions that will initialise the scene manager, and view dispatcher:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span>TestApp<span style="color:#f92672">*</span> app <span style="color:#f92672">=</span> <span style="color:#a6e22e">malloc</span>(<span style="color:#66d9ef">sizeof</span>(TestApp));
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-c" data-lang="c"><span style="display:flex;"><span>TestApp<span style="color:#f92672">*</span> app <span style="color:#f92672">=</span> <span style="color:#a6e22e">malloc</span>(<span style="color:#66d9ef">sizeof</span>(TestApp));
 </span></span><span style="display:flex;"><span><span style="color:#a6e22e">test_app_scene_manager_init</span>(app);
 </span></span><span style="display:flex;"><span><span style="color:#a6e22e">test_app_view_dispatcher_init</span>(app);
 </span></span></code></pre></div><h2 id="setting-up-the-scene-manager">Setting up the scene manager</h2>
 <p><code>test_app_scene_manager_init</code> is reasonably simple. It allocates memory for a <code>SceneManager</code>.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span>app<span style="color:#f92672">-&gt;</span>scene_manager <span style="color:#f92672">=</span> <span style="color:#a6e22e">scene_manager_alloc</span>(<span style="color:#f92672">&amp;</span>test_app_scene_event_handlers, app);
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-c" data-lang="c"><span style="display:flex;"><span>app<span style="color:#f92672">-&gt;</span>scene_manager <span style="color:#f92672">=</span> <span style="color:#a6e22e">scene_manager_alloc</span>(<span style="color:#f92672">&amp;</span>test_app_scene_event_handlers, app);
 </span></span></code></pre></div><p>The second parameter is simply the context, passed back to the active scene&rsquo;s handler methods when they are called. The first parameter, <code>SceneManagerHandlers* test_app_scene_event_handlers</code> has already been defined above. It&rsquo;s a collection of all the <code>on_enter</code>, <code>on_exit</code>, and <code>on_event</code> handler functions for all the scenes:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#75715e">/** collection of all scene on_enter handlers - in the same order as their enum */</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#75715e">/** collection of all scene on_enter handlers - in the same order as their enum */</span>
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">void</span> (<span style="color:#f92672">*</span><span style="color:#66d9ef">const</span> test_app_scene_on_enter_handlers[])(<span style="color:#66d9ef">void</span><span style="color:#f92672">*</span>) <span style="color:#f92672">=</span> {
 </span></span><span style="display:flex;"><span>    test_app_scene_on_enter_main_menu,
 </span></span><span style="display:flex;"><span>    test_app_scene_on_enter_popup_one,
@@ -380,15 +381,15 @@
 </span></span></code></pre></div><h2 id="setting-up-the-view-dispatcher">Setting up the view dispatcher</h2>
 <p><code>test_app_view_dispatcher_init</code> has a little more to do.</p>
 <h3 id="allocate-the-dispatcher">Allocate the dispatcher</h3>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span>app<span style="color:#f92672">-&gt;</span>view_dispatcher <span style="color:#f92672">=</span> <span style="color:#a6e22e">view_dispatcher_alloc</span>();
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-c" data-lang="c"><span style="display:flex;"><span>app<span style="color:#f92672">-&gt;</span>view_dispatcher <span style="color:#f92672">=</span> <span style="color:#a6e22e">view_dispatcher_alloc</span>();
 </span></span><span style="display:flex;"><span><span style="color:#a6e22e">view_dispatcher_enable_queue</span>(app<span style="color:#f92672">-&gt;</span>view_dispatcher);
 </span></span></code></pre></div><h3 id="allocate-individual-views">Allocate individual views</h3>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span>app<span style="color:#f92672">-&gt;</span>menu <span style="color:#f92672">=</span> <span style="color:#a6e22e">menu_alloc</span>();
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-c" data-lang="c"><span style="display:flex;"><span>app<span style="color:#f92672">-&gt;</span>menu <span style="color:#f92672">=</span> <span style="color:#a6e22e">menu_alloc</span>();
 </span></span><span style="display:flex;"><span>app<span style="color:#f92672">-&gt;</span>popup <span style="color:#f92672">=</span> <span style="color:#a6e22e">popup_alloc</span>();
 </span></span></code></pre></div><h3 id="pass-events-from-the-view-to-the-scene">Pass events from the view to the scene</h3>
 <p>The views themselves initially handle events and navigation, but we want to pass those to the scene manager so that they&rsquo;re available to the active scene&rsquo;s handler functions.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#75715e">// assign callback that pass events from views to the scene manager
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#a6e22e">view_dispatcher_set_event_callback_context</span>(app<span style="color:#f92672">-&gt;</span>view_dispatcher, app);
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#75715e">// assign callback that pass events from views to the scene manager
+</span></span></span><span style="display:flex;"><span><span style="color:#a6e22e">view_dispatcher_set_event_callback_context</span>(app<span style="color:#f92672">-&gt;</span>view_dispatcher, app);
 </span></span><span style="display:flex;"><span><span style="color:#a6e22e">view_dispatcher_set_custom_event_callback</span>(
 </span></span><span style="display:flex;"><span>    app<span style="color:#f92672">-&gt;</span>view_dispatcher,
 </span></span><span style="display:flex;"><span>    test_app_scene_manager_custom_event_callback);
@@ -396,8 +397,8 @@
 </span></span><span style="display:flex;"><span>    app<span style="color:#f92672">-&gt;</span>view_dispatcher,
 </span></span><span style="display:flex;"><span>    test_app_scene_manager_navigation_event_callback);
 </span></span></code></pre></div><h3 id="register-views-with-the-dispatcher">Register views with the dispatcher</h3>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#75715e">// add views to the dispatcher, indexed by their enum value
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#a6e22e">view_dispatcher_add_view</span>(
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#75715e">// add views to the dispatcher, indexed by their enum value
+</span></span></span><span style="display:flex;"><span><span style="color:#a6e22e">view_dispatcher_add_view</span>(
 </span></span><span style="display:flex;"><span>    app<span style="color:#f92672">-&gt;</span>view_dispatcher,
 </span></span><span style="display:flex;"><span>    TestAppView_Menu,
 </span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">menu_get_view</span>(app<span style="color:#f92672">-&gt;</span>menu));
@@ -418,24 +419,25 @@
 <p>The menu view itself has an additional callback of its own:</p>
 <p><code>test_app_menu_callback_main_menu</code> is provided with a value from <code>TestAppMenuSelection</code> indicating the selection that the user made. This is then used to determine which event from <code>TestAppEvent</code> to send to the scene&rsquo;s custom event handler function with a call to <code>scene_manager_handle_custom_event</code>.</p>
 <blockquote>
-<p>Sending events on to the scene manager, rather than handling them in the menu&rsquo;s callback, is good practise - ensuring that the <em>active</em> scene is sent the event, and that the scene&rsquo;s <code>_on_event</code> handler is the place where actions are initiated. This pattern ensures that your application&rsquo;s decision-making logic for each scene is easy to locate.</p></blockquote>
+<p>Sending events on to the scene manager, rather than handling them in the menu&rsquo;s callback, is good practise - ensuring that the <em>active</em> scene is sent the event, and that the scene&rsquo;s <code>_on_event</code> handler is the place where actions are initiated. This pattern ensures that your application&rsquo;s decision-making logic for each scene is easy to locate.</p>
+</blockquote>
 <h3 id="on-entering-the-main-menu-scene">On entering the main menu scene</h3>
 <p>When entering a scene, the <code>test_app_scene_on_enter_main_menu</code> function is called. This is responsible for setting up the scene, by initiating the view for the scene (and any other resources it needs), and then instructing the view dispatcher to switch to the appropriate view, with a call to: <code>view_dispatcher_switch_to_view</code></p>
 <p>First, the menu view is reset:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#a6e22e">menu_reset</span>(app<span style="color:#f92672">-&gt;</span>menu);
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#a6e22e">menu_reset</span>(app<span style="color:#f92672">-&gt;</span>menu);
 </span></span></code></pre></div><p>Then each menu item is added. Each is given an id from <code>TestAppMenuSelection</code> - this is used in <code>test_app_menu_callback_main_menu</code> to identify the user&rsquo;s selection:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#a6e22e">menu_add_item</span>(
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#a6e22e">menu_add_item</span>(
 </span></span><span style="display:flex;"><span>    app<span style="color:#f92672">-&gt;</span>menu,
 </span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;First popup&#34;</span>,
 </span></span><span style="display:flex;"><span>    NULL, <span style="color:#75715e">// previously: &amp;I_one,
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    TestAppMenuSelection_One,
+</span></span></span><span style="display:flex;"><span>    TestAppMenuSelection_One,
 </span></span><span style="display:flex;"><span>    test_app_menu_callback_main_menu,
 </span></span><span style="display:flex;"><span>    app);
 </span></span><span style="display:flex;"><span><span style="color:#a6e22e">menu_add_item</span>(
 </span></span><span style="display:flex;"><span>    app<span style="color:#f92672">-&gt;</span>menu,
 </span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;Second popup&#34;</span>,
 </span></span><span style="display:flex;"><span>    NULL, <span style="color:#75715e">// previously: &amp;I_two,
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    TestAppMenuSelection_Two,
+</span></span></span><span style="display:flex;"><span>    TestAppMenuSelection_Two,
 </span></span><span style="display:flex;"><span>    test_app_menu_callback_main_menu,
 </span></span><span style="display:flex;"><span>    app);
 </span></span></code></pre></div><p>The last 3 values passed into the menu indicate what action to take:</p>
@@ -445,7 +447,7 @@
 <li><code>app</code> - this is the context to provide to the callback function</li>
 </ul>
 <p>Finally the view dispatcher is instructed to switch to this view:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#a6e22e">view_dispatcher_switch_to_view</span>(app<span style="color:#f92672">-&gt;</span>view_dispatcher, TestAppView_Menu);
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#a6e22e">view_dispatcher_switch_to_view</span>(app<span style="color:#f92672">-&gt;</span>view_dispatcher, TestAppView_Menu);
 </span></span></code></pre></div><h3 id="errata">Errata</h3>
 <p>In the first iteration of this code, <code>menu_add_item</code> was provided with pointers to icons generated by the build process (<code>&amp;I_one</code>, <code>&amp;I_two</code>).</p>
 <p>These icons are static - ie. they don&rsquo;t have multiple frames and their frame rate is initialised to <code>0</code>. Unfortunately, the menu module always tries to animate them, and expects a non-zero frame rate.</p>
@@ -462,7 +464,7 @@
 <p><code>SceneManagerEventTypeCustom</code> is the type of event that the <code>test_app_menu_callback_main_menu</code> function creates when it invokes <code>scene_manager_handle_custom_event</code>.</p>
 <p><code>event.event</code> contains the value from <code>TestAppEvent</code> that was passed in, ie. <code>TestAppEvent_ShowPopupOne</code> or <code>TestAppEvent_ShowPopupTwo</code>. These events should be reasonably clear - they are instructions to switch the scene, using <code>scene_manager_next_scene</code>.</p>
 <p>This logic is handled in two nested switch statements:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#66d9ef">bool</span> consumed <span style="color:#f92672">=</span> false;
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#66d9ef">bool</span> consumed <span style="color:#f92672">=</span> false;
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">switch</span>(event.type) {
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">case</span> SceneManagerEventTypeCustom:
 </span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">switch</span>(event.event) {
@@ -477,20 +479,20 @@
 </span></span><span style="display:flex;"><span>    }
 </span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">break</span>;
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">default</span><span style="color:#f92672">:</span> <span style="color:#75715e">// eg. SceneManagerEventTypeBack, SceneManagerEventTypeTick
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    consumed <span style="color:#f92672">=</span> false;
+</span></span></span><span style="display:flex;"><span>    consumed <span style="color:#f92672">=</span> false;
 </span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">break</span>;
 </span></span><span style="display:flex;"><span>}
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">return</span> consumed;
 </span></span></code></pre></div><h3 id="exiting-the-main-menu-scene">Exiting the main menu scene</h3>
 <p>Finally, the <code>test_app_scene_on_exit_main_menu</code> function very simply clears up the menu, using <code>menu_reset</code>.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span>TestApp<span style="color:#f92672">*</span> app <span style="color:#f92672">=</span> context;
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-c" data-lang="c"><span style="display:flex;"><span>TestApp<span style="color:#f92672">*</span> app <span style="color:#f92672">=</span> context;
 </span></span><span style="display:flex;"><span><span style="color:#a6e22e">menu_reset</span>(app<span style="color:#f92672">-&gt;</span>menu);
 </span></span></code></pre></div><p><em>NB. This does not free the menu&rsquo;s memory allocation, but it does clear away the menu items and content of the menu.</em></p>
 <p>Although we also do this reset when entering the menu scene, it&rsquo;s good practise to clear up a resource on exit to ensure that it&rsquo;s not occupying space when not in use.</p>
 <h3 id="the-popup-scenes">The popup scenes</h3>
 <p>The popup scenes, <code>TestAppScene_FirstPopup</code> and <code>TestAppScene_SecondPopup</code>, are much simpler than the menu scene.</p>
 <p>The most complex part of each is their <code>_on_enter</code> function, that sets up the popup. eg. <code>test_app_scene_on_enter_popup_one</code> resets the popup, and adds several pieces of content (the context, header, icon, and text), before finally instructing the view dispatcher to switch to the popup view, with a call to: <code>view_dispatcher_switch_to_view</code></p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#a6e22e">popup_reset</span>(app<span style="color:#f92672">-&gt;</span>popup);
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#a6e22e">popup_reset</span>(app<span style="color:#f92672">-&gt;</span>popup);
 </span></span><span style="display:flex;"><span><span style="color:#a6e22e">popup_set_context</span>(app<span style="color:#f92672">-&gt;</span>popup, app);
 </span></span><span style="display:flex;"><span><span style="color:#a6e22e">popup_set_header</span>(app<span style="color:#f92672">-&gt;</span>popup, <span style="color:#e6db74">&#34;Popup One&#34;</span>, <span style="color:#ae81ff">64</span>, <span style="color:#ae81ff">10</span>, AlignCenter, AlignTop);
 </span></span><span style="display:flex;"><span><span style="color:#a6e22e">popup_set_icon</span>(app<span style="color:#f92672">-&gt;</span>popup, <span style="color:#ae81ff">10</span>, <span style="color:#ae81ff">10</span>, <span style="color:#f92672">&amp;</span>I_cvc_36x36);
@@ -501,9 +503,9 @@
 <p>Finally, each popup&rsquo;s <code>_on_exit</code> function simply clears away the content, with another call to <code>popup_reset</code>.</p>
 <h3 id="errata-1">Errata</h3>
 <p>The code block that sets up the popup previously contained this line:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#a6e22e">view_set_context</span>(<span style="color:#a6e22e">popup_get_view</span>(app<span style="color:#f92672">-&gt;</span>popup), app);
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#a6e22e">view_set_context</span>(<span style="color:#a6e22e">popup_get_view</span>(app<span style="color:#f92672">-&gt;</span>popup), app);
 </span></span></code></pre></div><p>That&rsquo;s incorrect. The intention is to set the callback context, so that the <code>_on_event</code> callback would get our <code>app</code> as the context parameter. However, <em>this</em> is the popup&rsquo;s method to set its callback context:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#a6e22e">popup_set_context</span>(app<span style="color:#f92672">-&gt;</span>popup, app);
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#a6e22e">popup_set_context</span>(app<span style="color:#f92672">-&gt;</span>popup, app);
 </span></span></code></pre></div><p>It&rsquo;s easier to think of it like this: The_view is <em>inside</em> the popup, so its callback context should be the popup. It&rsquo;s created by the popup, and its context it set automatically, so we don&rsquo;t need to adjust the view&rsquo;s context.</p>
 <h2 id="graphics">Graphics</h2>
 <p>In a few places, the code refers to <code>Icon</code> pointers, prefixed with <code>I_</code>. These are created automatically by <code>ufbt</code> during the build process, from resources found in the <code>images/</code> directory.</p>
@@ -520,7 +522,7 @@
 <li><a href="https://github.com/instantiator/flipper-zero-tutorial-app">instantiator/flipper-zero-tutorial-app</a></li>
 </ul>
 <p>Now, you can build the application:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ ufbt
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ ufbt
 </span></span><span style="display:flex;"><span>scons: Entering directory <span style="color:#e6db74">`</span>/Users/lewiswestbury/.ufbt/current/scripts/ufbt<span style="color:#960050;background-color:#1e0010">&#39;</span>
 </span></span><span style="display:flex;"><span>        CC      /Users/lewiswestbury/src/personal/test_app/test_app.c
 </span></span><span style="display:flex;"><span>        CDB     /Users/lewiswestbury/src/personal/test_app/.vscode/compile_commands.json
@@ -532,7 +534,7 @@
 </span></span><span style="display:flex;"><span>        APPCHK  /Users/lewiswestbury/.ufbt/build/test_app.fap
 </span></span><span style="display:flex;"><span>                Target: 7, API: 26.0
 </span></span></code></pre></div><p>Provided <code>ufbt</code> and your Flipper agree on the firmware version, you can deploy it to your Flipper to try it out:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ ufbt launch
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ ufbt launch
 </span></span><span style="display:flex;"><span>scons: Entering directory <span style="color:#e6db74">`</span>/Users/lewiswestbury/.ufbt/current/scripts/ufbt<span style="color:#960050;background-color:#1e0010">&#39;</span>
 </span></span><span style="display:flex;"><span>python3 <span style="color:#e6db74">&#34;/Users/lewiswestbury/.ufbt/current/scripts/runfap.py&#34;</span> -s /Users/lewiswestbury/.ufbt/build/test_app.fap -t /ext/apps/Examples/test_app.fap
 </span></span><span style="display:flex;"><span>        APPCHK  /Users/lewiswestbury/.ufbt/build/test_app.fap
@@ -543,13 +545,13 @@
 </span></span><span style="display:flex;"><span>100%, chunk <span style="color:#ae81ff">1</span> of <span style="color:#ae81ff">1</span>
 </span></span><span style="display:flex;"><span>2023-05-06 23:38:37,108 <span style="color:#f92672">[</span>INFO<span style="color:#f92672">]</span> Launching app: <span style="color:#e6db74">&#34;Applications&#34;</span> /ext/apps/Examples/test_app.fap
 </span></span></code></pre></div><div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-      <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/Lkau7hTrkLE?autoplay=0&amp;controls=1&amp;end=0&amp;loop=0&amp;mute=0&amp;start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"></iframe>
+      <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/Lkau7hTrkLE?autoplay=0&amp;controls=1&amp;end=0&amp;loop=0&amp;mute=0&amp;start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"></iframe>
     </div>
 
 <p>If your firmware and <code>ufbt</code> don&rsquo;t agree, your Flipper will tell you about it. You can update the SDK you&rsquo;re building against with:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>ufbt update --channel<span style="color:#f92672">=[</span>dev|rc|release<span style="color:#f92672">]</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>ufbt update --channel<span style="color:#f92672">=[</span>dev|rc|release<span style="color:#f92672">]</span>
 </span></span></code></pre></div><p>You can change the firmware on your device using the qFlipper app, or:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>ufbt flash_usb
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>ufbt flash_usb
 </span></span></code></pre></div><p>(Swap for <code>ufbt flash</code> if you&rsquo;re using an ST link.)</p>
 <h2 id="putting-it-all-together">Putting it all together</h2>
 <p>This walk-through has hopefully covered everything required to initiate and launch a simple UI for a Flipper Zero app.</p>

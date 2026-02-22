@@ -13,7 +13,7 @@
       <script async src="https://www.googletagmanager.com/gtag/js?id=G-SHE42ZWKEN"></script>
       <script>
         var doNotTrack = false;
-        if ( false ) {
+        if ( true ) {
           var dnt = (navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack);
           var doNotTrack = (dnt == "1" || dnt == "yes");
         }
@@ -42,7 +42,7 @@
     <meta property="article:tag" content="Coding">
     <meta property="article:tag" content="C#">
     <meta property="article:tag" content=".Net">
-    <meta property="article:tag" content="AWS">
+    <meta property="article:tag" content="Aws">
     <meta property="article:tag" content="Lambda">
     <meta property="og:image" content="https://instantiator.dev/csharp-aws-lambda-tutorial/000-heading-img.png">
       <meta property="og:see_also" content="https://instantiator.dev/post/csharp-aws-lambda-tutorial-06/">
@@ -205,7 +205,7 @@
 
         <div>
             <span class="text-body-secondary fw-lighter" style="font-size: 0.8rem;">
-                &copy; Lewis Westbury  2025 
+                &copy; Lewis Westbury  2026 
             </span>
         </div>
     </div>
@@ -267,16 +267,16 @@
 <li>The <a href="https://docs.microsoft.com/en-us/dotnet/core/tools/">.NET CLI</a></li>
 </ul>
 <p>We&rsquo;ll work from a basic template for the .NET CLI, which you&rsquo;ll need to install:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>dotnet new -i Amazon.Lambda.Templates
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>dotnet new -i Amazon.Lambda.Templates
 </span></span></code></pre></div><p>To push updates from your machine to the AWS Lambda service, you&rsquo;ll also need the Amazon Lambda tools for the .NET CLI:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>dotnet tool install -g Amazon.Lambda.Tools
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>dotnet tool install -g Amazon.Lambda.Tools
 </span></span></code></pre></div><h3 id="prerequisite-tokens">Prerequisite tokens</h3>
 <p>Your administrator account has an <strong>access key id</strong>, and a <strong>secret access key</strong>. You&rsquo;ll need both to set up an AWS profile locally, and you should be able to retrieve them from the IAM service in the AWS console.</p>
 <p>While you&rsquo;re in the console, note down the region you&rsquo;ve been working in, eg. <code>eu-west-2</code></p>
 <h3 id="creating-a-local-aws-profile">Creating a local AWS profile</h3>
 <p>A profile for the AWS CLI contains enough credentials and information to be able to perform actions on AWS on behalf of a particular IAM user.</p>
 <p>The AWS CLI offers an interactive way to configure a new profile. You can name the profile anything, but it&rsquo;s often helpful to name it after the user it represents, ie. <strong>sample-admin</strong></p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>aws configure --profile sample-admin
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>aws configure --profile sample-admin
 </span></span></code></pre></div><p>Provide details as requested, including the <strong>access key id</strong>, <strong>secret access key</strong>, and <strong>region</strong> from above.</p>
 <p>If you&rsquo; need to inspect your credentials, you&rsquo;ll find them in these files:</p>
 <ul>
@@ -287,10 +287,11 @@
 <h3 id="create-a-lambda-solution-from-a-template">Create a Lambda solution from a template</h3>
 <p>Before jumping into your favourite IDE, we&rsquo;ll use the .NET CLI to create a project from the template we installed earlier.</p>
 <p>Create a new folder for the whole solution and, from there, run:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>dotnet new lambda.EmptyFunction --name SampleLambdaFunction
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>dotnet new lambda.EmptyFunction --name SampleLambdaFunction
 </span></span></code></pre></div><p>In fact, this has created two projects: one for the lambda, and the other to test it.</p>
 <blockquote>
-<p>You may wish to move the projects around into a structure that makes sense to you. Now is a good time for that. (I usually prefer to have all my projects in directories directly inside the main solution directory - but I&rsquo;ve accepted the <code>src/</code> and <code>test/</code> directories that the template provides this time.)</p></blockquote>
+<p>You may wish to move the projects around into a structure that makes sense to you. Now is a good time for that. (I usually prefer to have all my projects in directories directly inside the main solution directory - but I&rsquo;ve accepted the <code>src/</code> and <code>test/</code> directories that the template provides this time.)</p>
+</blockquote>
 <ul>
 <li>Fire up your favourite .NET IDE (Visual Studio, or Visual Studio Code are both good recommendations) and create a new Solution in your solution folder.</li>
 <li>Add both the existing projects to your solution.</li>
@@ -298,7 +299,7 @@
 </ul>
 <h4 id="examine-the-template-lambda">Examine the template Lambda</h4>
 <p>Inside the <code>SampleLambdaFunction</code> project is a file called <code>Function.cs</code> - this contains the entry point for your Lambda:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-csharp" data-lang="csharp"><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">string</span> FunctionHandler(<span style="color:#66d9ef">string</span> input, ILambdaContext context)
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-csharp" data-lang="csharp"><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">string</span> FunctionHandler(<span style="color:#66d9ef">string</span> input, ILambdaContext context)
 </span></span></code></pre></div><p>As you can see, this method has 2 parameters:</p>
 <ul>
 <li><code>input</code> - This is a string by default, but you could exchange it for any object.</li>
@@ -307,26 +308,27 @@
 <p>The template Lambda accepts a string as input. If you need to, you can specify a regular class for your input. AWS  will accept JSON and deserialize it into an object for you.</p>
 <blockquote>
 <p>Note that C# serializes and deserializes objects using public properties, so if you&rsquo;re replacing that <code>string</code> with an object of your own, make sure the values you want to see mapped to and from JSON are public properties, ie.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-csharp" data-lang="csharp"><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">int</span> Number { <span style="color:#66d9ef">get</span>; <span style="color:#66d9ef">set</span>; }
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-csharp" data-lang="csharp"><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">int</span> Number { <span style="color:#66d9ef">get</span>; <span style="color:#66d9ef">set</span>; }
 </span></span></code></pre></div></blockquote>
 <p>The template Lambda function returns an uppercased version of the string passed in.</p>
 <p>You could also adjust the return type of this function and return an object class. If you do, the AWS libraries will serialize it and return it as a JSON string.</p>
 <h3 id="deploy-and-test-the-template-lambda">Deploy and test the template Lambda</h3>
 <p>To deploy the Lambda using the CLI, we&rsquo;ll use the dotnet lambda tool that you installed earlier, from the terminal. First build, and then deploy the lambda.</p>
 <p>See <code>deploy.sh</code> (in the sample project), or use the invocation below:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>dotnet build
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>dotnet build
 </span></span><span style="display:flex;"><span>pushd src/SampleLambdaFunction
 </span></span><span style="display:flex;"><span>dotnet lambda deploy-function --profile sample-admin --region eu-west-2 SampleLambdaFunction --function-role sample-lambda-role
 </span></span><span style="display:flex;"><span>popd
 </span></span></code></pre></div><p><em>You could also achieve this directly from Visual Studio with a little configuration. The sample Lambda project&rsquo;s <code>Readme.md</code> has some information about that.</em></p>
 <p>Having succesfully deployed it, you can test it with the dotnet lambda tool, too.</p>
 <p>See <code>test-a-string.sh</code> (in the sample project), or use the invocation below:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>dotnet lambda invoke-function SampleLambdaFunction --profile sample-admin --region eu-west-2 --payload <span style="color:#e6db74">&#39;a rather lower-case string&#39;</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>dotnet lambda invoke-function SampleLambdaFunction --profile sample-admin --region eu-west-2 --payload <span style="color:#e6db74">&#39;a rather lower-case string&#39;</span>
 </span></span></code></pre></div><blockquote>
-<p>NB. There are plenty of ways to invoke a Lambda function. I&rsquo;d recommend reading a little more about how it&rsquo;s done at: <a href="https://docs.aws.amazon.com/lambda/latest/dg/lambda-invocation.html">Invoking functions</a></p></blockquote>
+<p>NB. There are plenty of ways to invoke a Lambda function. I&rsquo;d recommend reading a little more about how it&rsquo;s done at: <a href="https://docs.aws.amazon.com/lambda/latest/dg/lambda-invocation.html">Invoking functions</a></p>
+</blockquote>
 <p><img src="/csharp-aws-lambda-tutorial/006-test-a-string.png" alt="Testing the Lambda"></p>
 <p>In the output, you should see a response, with your input string upper-cased:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>A RATHER LOWER-CASE STRING
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>A RATHER LOWER-CASE STRING
 </span></span></code></pre></div><h4 id="conclusion">Conclusion</h4>
 <p>Congratulations! You&rsquo;ve built a Lambda that runs on AWS infrastructure. You sent it a message, it did some work, and returned a response.</p>
 <p>In the next part, we&rsquo;ll enhance the Lambda to collect data from an API, and provide it with a secret API key to do so.</p>

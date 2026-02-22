@@ -13,7 +13,7 @@
       <script async src="https://www.googletagmanager.com/gtag/js?id=G-SHE42ZWKEN"></script>
       <script>
         var doNotTrack = false;
-        if ( false ) {
+        if ( true ) {
           var dnt = (navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack);
           var doNotTrack = (dnt == "1" || dnt == "yes");
         }
@@ -42,7 +42,7 @@
     <meta property="article:tag" content="Coding">
     <meta property="article:tag" content="C#">
     <meta property="article:tag" content=".Net">
-    <meta property="article:tag" content="AWS">
+    <meta property="article:tag" content="Aws">
     <meta property="article:tag" content="Lambda">
     <meta property="og:image" content="https://instantiator.dev/csharp-aws-lambda-tutorial/000-heading-img.png">
       <meta property="og:see_also" content="https://instantiator.dev/post/csharp-aws-lambda-tutorial-05/">
@@ -205,7 +205,7 @@
 
         <div>
             <span class="text-body-secondary fw-lighter" style="font-size: 0.8rem;">
-                &copy; Lewis Westbury  2025 
+                &copy; Lewis Westbury  2026 
             </span>
         </div>
     </div>
@@ -287,7 +287,8 @@
 </ul>
 <p><img src="/csharp-aws-lambda-tutorial/018-trigger-target.png" alt="Trigger target"></p>
 <blockquote>
-<p>Correction to the screenshot above: you must enclose <code>&quot;London, UK&quot;</code> in quotation marks in order for it to be accepted as a JSON string.</p></blockquote>
+<p>Correction to the screenshot above: you must enclose <code>&quot;London, UK&quot;</code> in quotation marks in order for it to be accepted as a JSON string.</p>
+</blockquote>
 <ul>
 <li>Finally, click <code>Create</code> to create your trigger.</li>
 </ul>
@@ -314,9 +315,11 @@
 <li>Tap <code>Edit</code> to modify it, and head down to the <strong>Define pattern</strong> section.</li>
 </ul>
 <blockquote>
-<p>You can read more about <a href="https://docs.aws.amazon.com/lambda/latest/dg/services-cloudwatchevents-expressions.html">scheduling expressions</a> to figure out the best for your use.</p></blockquote>
+<p>You can read more about <a href="https://docs.aws.amazon.com/lambda/latest/dg/services-cloudwatchevents-expressions.html">scheduling expressions</a> to figure out the best for your use.</p>
+</blockquote>
 <blockquote>
-<p>Cron expressions are pretty nuanced, and you can learn about their syntax in the <a href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/events/ScheduledEvents.html">Schedule Expressions for Rules</a> documentation.</p></blockquote>
+<p>Cron expressions are pretty nuanced, and you can learn about their syntax in the <a href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/events/ScheduledEvents.html">Schedule Expressions for Rules</a> documentation.</p>
+</blockquote>
 <p>We&rsquo;re going to use one of the example cron strings:</p>
 <pre tabindex="0"><code class="language-cron" data-lang="cron">15 12 * * ? *
 </code></pre><p>This can be interpreted as a set of positional parameters:</p>
@@ -357,7 +360,8 @@
 <h4 id="where-next">Where next?</h4>
 <p>There are plenty of other services your Lambda could interact with, and AWS provide a number of <code>AWSSDK.*</code> nuget library packages to help you communicate with other AWS services, too.</p>
 <blockquote>
-<p>For instance, you might consider establishing a database in RDS and then storing the temperature information for your chosen city there so that you can access it and reason about it.</p></blockquote>
+<p>For instance, you might consider establishing a database in RDS and then storing the temperature information for your chosen city there so that you can access it and reason about it.</p>
+</blockquote>
 <p>Hopefully this tutorial has given you a little more information and experience than the usual &ldquo;hello world&rdquo; examples, and hopefully some insights into how you could build useful tools using AWS and .NET technologies.</p>
 
             </div>

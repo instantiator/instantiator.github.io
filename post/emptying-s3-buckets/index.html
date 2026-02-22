@@ -13,7 +13,7 @@
       <script async src="https://www.googletagmanager.com/gtag/js?id=G-SHE42ZWKEN"></script>
       <script>
         var doNotTrack = false;
-        if ( false ) {
+        if ( true ) {
           var dnt = (navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack);
           var doNotTrack = (dnt == "1" || dnt == "yes");
         }
@@ -41,7 +41,7 @@
     <meta property="article:modified_time" content="2025-02-22T11:00:00+00:00">
     <meta property="article:tag" content="Coding">
     <meta property="article:tag" content="Infrastructure">
-    <meta property="article:tag" content="AWS">
+    <meta property="article:tag" content="Aws">
     <meta property="article:tag" content="Amazon-Web-Services">
     <meta property="article:tag" content="S3">
     <meta property="article:tag" content="Bucket">
@@ -201,7 +201,7 @@
 
         <div>
             <span class="text-body-secondary fw-lighter" style="font-size: 0.8rem;">
-                &copy; Lewis Westbury  2025 
+                &copy; Lewis Westbury  2026 
             </span>
         </div>
     </div>
@@ -282,7 +282,8 @@
 <li><a href="https://gist.github.com/instantiator/093b1727b1cf16e77dfa3218d1957610"><code>empty-bucket.sh</code></a></li>
 </ul>
 <blockquote>
-<p>This script is built around some solutions <a href="https://stackoverflow.com/a/61123579">presented</a> on StackOverflow. I&rsquo;m extremely grateful to the author, <a href="https://stackoverflow.com/users/5174358/alexandre-hamon">Alexandre Hamon</a>, for openly sharing his solution way back in 2020. I&rsquo;ve built on it to develop a full script with a nice interface, but it wouldn&rsquo;t have been possible without the ability to learn from others - especially in cases like these where official documentation falls short.</p></blockquote>
+<p>This script is built around some solutions <a href="https://stackoverflow.com/a/61123579">presented</a> on StackOverflow. I&rsquo;m extremely grateful to the author, <a href="https://stackoverflow.com/users/5174358/alexandre-hamon">Alexandre Hamon</a>, for openly sharing his solution way back in 2020. I&rsquo;ve built on it to develop a full script with a nice interface, but it wouldn&rsquo;t have been possible without the ability to learn from others - especially in cases like these where official documentation falls short.</p>
+</blockquote>
 <h2 id="-bucket-list">🎭 Bucket List</h2>
 <p><em>A 3-act autobiographical play about a man who wants to delete a bucket.</em></p>
 <h3 id="dramatis-personae">Dramatis personae</h3>
@@ -300,7 +301,7 @@ AWS   ... ... ... villain     ... ... a counter-deletion revolutionary
 <p>Using the AWS CLI from a shell prompt, it&rsquo;s a little harder!</p>
 <h2 id="deleting-objects">Deleting objects</h2>
 <p>You can delete every object from a regular S3 bucket with the <code>rm</code> command:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>aws s3 rm s3://<span style="color:#e6db74">${</span>BUCKET<span style="color:#e6db74">}</span> --region <span style="color:#e6db74">${</span>REGION<span style="color:#e6db74">}</span> --recursive
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>aws s3 rm s3://<span style="color:#e6db74">${</span>BUCKET<span style="color:#e6db74">}</span> --region <span style="color:#e6db74">${</span>REGION<span style="color:#e6db74">}</span> --recursive
 </span></span></code></pre></div><p>The <code>--region</code> parameter is optional, provided you can reach and control your bucket from your default region. Otherwise provide a value of your own.</p>
 <p>The <code>--recursive</code> parameter indicates that everything in the bucket should be deleted.</p>
 <p>However, that&rsquo;s not enough - this leaves behind:</p>
@@ -311,20 +312,20 @@ AWS   ... ... ... villain     ... ... a counter-deletion revolutionary
 <p>If you want to delete the bucket, you&rsquo;re going to have to remove all of those too&hellip;</p>
 <h2 id="deleting-previous-versions">Deleting previous versions</h2>
 <p>You can find every version of every object in a bucket with a <code>list-object-versions</code> request like this:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>aws s3api list-object-versions --bucket $BUCKET --max-items <span style="color:#ae81ff">500</span> --query<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;{Objects: Versions[0:500].{Key:Key,VersionId:VersionId}}&#39;</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>aws s3api list-object-versions --bucket $BUCKET --max-items <span style="color:#ae81ff">500</span> --query<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;{Objects: Versions[0:500].{Key:Key,VersionId:VersionId}}&#39;</span>
 </span></span></code></pre></div><p>This returns the first 500 records - which is plenty to handle at a time. <a href="https://docs.aws.amazon.com/cli/latest/reference/s3api/list-object-versions.html"><code>list-object-versions</code></a> is a paginated query. You may need to call it again after deletion if there are more records to delete.</p>
 <p>The <code>--query</code> on the end extracts the first 500 results as a map of JSON objects of the form: <code>{ Key, VersionId }</code></p>
 <p>With this information, you can then initiate a deletion of those versions with a <code>delete-objects</code> request like this:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>aws s3api delete-objects --bucket $BUCKET --delete <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">${</span>VERSIONS_TO_DELETE<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span> --query <span style="color:#e6db74">&#39;length(Deleted[*] || `[]` )&#39;</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>aws s3api delete-objects --bucket $BUCKET --delete <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">${</span>VERSIONS_TO_DELETE<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span> --query <span style="color:#e6db74">&#39;length(Deleted[*] || `[]` )&#39;</span>
 </span></span></code></pre></div><p>The <code>--query</code> on the end, here, extracts either the number of items found in <code>$.Deleted</code> in the result JSON, or <code>0</code> (the length of <code>[]</code>) if <code>Deleted</code> isn&rsquo;t found.</p>
 <p>That&rsquo;s pretty simple - if the result is greater than <code>0</code>, you should fetch info about the next batch of versions and delete those. This can be executed as a loop, as illustrated by the script in <a href="https://gist.github.com/instantiator/093b1727b1cf16e77dfa3218d1957610">this gist</a>.</p>
 <h2 id="deleting-deletion-records">Deleting deletion records</h2>
 <p>Ironically, even after you&rsquo;ve deleted every version of every object in the bucket, the bucket still isn&rsquo;t empty! There are deletion records that must be &hellip; deleted &hellip; before you can declare the bucket truly empty. <em>Fortunately, deleting a deletion record doesn&rsquo;t create more deletion records.</em></p>
 <p>You can find every deletion record in a bucket with a <code>list-object-versions</code> request like this:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>aws s3api list-object-versions --bucket <span style="color:#e6db74">${</span>BUCKET<span style="color:#e6db74">}</span> --max-items <span style="color:#ae81ff">500</span> --query<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;{Objects: DeleteMarkers[0:500].{Key:Key,VersionId:VersionId}}&#39;</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>aws s3api list-object-versions --bucket <span style="color:#e6db74">${</span>BUCKET<span style="color:#e6db74">}</span> --max-items <span style="color:#ae81ff">500</span> --query<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;{Objects: DeleteMarkers[0:500].{Key:Key,VersionId:VersionId}}&#39;</span>
 </span></span></code></pre></div><p>You can see that this is very similar to the object versions query above, except that it&rsquo;s looking for <code>DeleteMarkers</code>.</p>
 <p>The same <code>delete-objects</code> query above can be used to delete those markers, and again - it returns the number of items deleted by use of the <code>--query</code> parameter:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>aws s3api delete-objects --bucket <span style="color:#e6db74">${</span>BUCKET<span style="color:#e6db74">}</span> --delete <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">${</span>DELETION_RECORDS_TO_DELETE<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span> --query <span style="color:#e6db74">&#39;length(Deleted[*] || `[]` )&#39;</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>aws s3api delete-objects --bucket <span style="color:#e6db74">${</span>BUCKET<span style="color:#e6db74">}</span> --delete <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">${</span>DELETION_RECORDS_TO_DELETE<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span> --query <span style="color:#e6db74">&#39;length(Deleted[*] || `[]` )&#39;</span>
 </span></span></code></pre></div><p>That&rsquo;s pretty simple - if the result is greater than <code>0</code>, you should fetch info about the next batch of markers and delete those. This can be executed as a loop, as illustrated by the script in <a href="https://gist.github.com/instantiator/093b1727b1cf16e77dfa3218d1957610">this gist</a>.</p>
 <h2 id="making-it-easy">Making it easy</h2>
 <p>I&rsquo;ve done my best to make this simple - and I&rsquo;ve popped the whole of this into a single script, which you can find in this gist:</p>

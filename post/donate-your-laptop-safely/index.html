@@ -13,7 +13,7 @@
       <script async src="https://www.googletagmanager.com/gtag/js?id=G-SHE42ZWKEN"></script>
       <script>
         var doNotTrack = false;
-        if ( false ) {
+        if ( true ) {
           var dnt = (navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack);
           var doNotTrack = (dnt == "1" || dnt == "yes");
         }
@@ -201,7 +201,7 @@
 
         <div>
             <span class="text-body-secondary fw-lighter" style="font-size: 0.8rem;">
-                &copy; Lewis Westbury  2025 
+                &copy; Lewis Westbury  2026 
             </span>
         </div>
     </div>
@@ -294,14 +294,14 @@ The Ubuntu CD image (ISO) works when run from a CD or a USB pen drive. These ins
 <p><img src="/necro-images/donate-laptop-wipe-1.jpeg" alt="terminal"></p>
 <h3 id="install-nwipe">Install nwipe</h3>
 <p>In the terminal, type the following commands to find and install nwipe — a tool for erasing disks securely:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo add-apt-repository universe
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo add-apt-repository universe
 </span></span><span style="display:flex;"><span>sudo apt-get update
 </span></span><span style="display:flex;"><span>sudo apt-get install nwipe
 </span></span></code></pre></div><p>NB. <code>sudo</code> is to ensure that you have full root (administration) privileges when you execute the commands that follow. You may be asked for your password.</p>
 <p><code>apt-get</code> is the package manager on Ubuntu — it is responsible for installing new software. These commands first make sure that a repository of software called universe is available to you. Then they make sure that Ubuntu has read that repository’s catalog, and then they install nwipe from that store.</p>
 <h3 id="use-nwipe-to-erase-the-disk">Use nwipe to erase the disk</h3>
 <p>To run nwipe, type:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo nwipe
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo nwipe
 </span></span></code></pre></div><p><code>nwipe</code>’s screen shows the devices that are available to be wiped, and allows you to select which you’d like to choose.</p>
 <p><img src="/necro-images/donate-laptop-wipe-2.jpeg" alt="nwipe"></p>
 <p>You can use the arrow keys to move up and down, and the space bar to select or deselect a disk.</p>

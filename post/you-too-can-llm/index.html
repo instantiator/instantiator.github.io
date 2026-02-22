@@ -13,7 +13,7 @@
       <script async src="https://www.googletagmanager.com/gtag/js?id=G-SHE42ZWKEN"></script>
       <script>
         var doNotTrack = false;
-        if ( false ) {
+        if ( true ) {
           var dnt = (navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack);
           var doNotTrack = (dnt == "1" || dnt == "yes");
         }
@@ -201,7 +201,7 @@
 
         <div>
             <span class="text-body-secondary fw-lighter" style="font-size: 0.8rem;">
-                &copy; Lewis Westbury  2025 
+                &copy; Lewis Westbury  2026 
             </span>
         </div>
     </div>
@@ -318,10 +318,10 @@
 <h3 id="configuration">Configuration</h3>
 <p>Everything starts in <a href="https://github.com/instantiator/semantic-kernel-experiment/blob/main/SKE/Program.cs"><code>SKE.Program.Main()</code></a> - the entrypoint for this console application.</p>
 <p>First, it retrieves config from the <code>.env</code> and <code>.secret.env</code> files, and uses that config to build the kernel.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-csharp" data-lang="csharp"><span style="display:flex;"><span><span style="color:#75715e">// configure and create the semantic kernel</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-csharp" data-lang="csharp"><span style="display:flex;"><span><span style="color:#75715e">// configure and create the semantic kernel</span>
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">var</span> config = RetrieveConfiguration();
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">var</span> kernel = BuildAndConfigureKernel(config);
-</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-csharp" data-lang="csharp"><span style="display:flex;"><span><span style="color:#66d9ef">private</span> <span style="color:#66d9ef">static</span> IKernel BuildAndConfigureKernel(IConfigurationRoot config)
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-csharp" data-lang="csharp"><span style="display:flex;"><span><span style="color:#66d9ef">private</span> <span style="color:#66d9ef">static</span> IKernel BuildAndConfigureKernel(IConfigurationRoot config)
 </span></span><span style="display:flex;"><span>{
 </span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">var</span> kernel = Kernel.Builder.Build();
 </span></span><span style="display:flex;"><span>    kernel.Config.AddOpenAITextCompletionService(
@@ -333,7 +333,7 @@
 </span></span></code></pre></div><p>The Kernel configuration is pretty simple - it just wants to know the service and text completion model it should be using, and an API key to be permitted to access it.</p>
 <h3 id="skills">Skills</h3>
 <p>The Kernel is then used to import the skills defined in the project, and the Planner - a special skill provided by Semantic Kernel.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-csharp" data-lang="csharp"><span style="display:flex;"><span><span style="color:#75715e">// import defined skills, and the planner</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-csharp" data-lang="csharp"><span style="display:flex;"><span><span style="color:#75715e">// import defined skills, and the planner</span>
 </span></span><span style="display:flex;"><span>kernel.ImportAllSemanticSkills(<span style="color:#e6db74">&#34;Skills&#34;</span>);
 </span></span><span style="display:flex;"><span>kernel.ImportAllNativeSkills();
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">var</span> planner = kernel.ImportPlannerSkill();
@@ -341,7 +341,7 @@
 <h4 id="semantic-functions">Semantic functions</h4>
 <p>Semantic Functions are imported from their position in the skills directory tree. Each Skill has its own directory, and each function has a directory within there.</p>
 <p>In this solution, all Skills are grouped inside the <code>Skills</code> directory:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-csharp" data-lang="csharp"><span style="display:flex;"><span>kernel.ImportSemanticSkillFromDirectory(scanDirectory, skill);
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-csharp" data-lang="csharp"><span style="display:flex;"><span>kernel.ImportSemanticSkillFromDirectory(scanDirectory, skill);
 </span></span></code></pre></div><p>Each Skill contains two files:</p>
 <ul>
 <li><code>skprompt.txt</code> - the instructions for a text completion model that represent this capability</li>
@@ -350,14 +350,14 @@
 <p><code>config.json</code> is optional, however of all the information in that file, the <a href="https://github.com/instantiator/semantic-kernel-experiment/blob/main/SKE/Skills/MeaningSkill/ReverseMeaningFunction/config.json#L4">description</a> text is important for the Planner, as it needs it to understand what the function does.</p>
 <p>eg.</p>
 <p><code>skprompt.txt</code></p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>Reverse the meaning of the following, giving the opposite effect to the original intention.
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>Reverse the meaning of the following, giving the opposite effect to the original intention.
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>---Begin Text---
 </span></span><span style="display:flex;"><span>{{$input}}
 </span></span><span style="display:flex;"><span>---End Text---
 </span></span></code></pre></div><p>and</p>
 <p><code>config.json</code></p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span>{
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-json" data-lang="json"><span style="display:flex;"><span>{
 </span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;schema&#34;</span>: <span style="color:#ae81ff">1</span>,
 </span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;type&#34;</span>: <span style="color:#e6db74">&#34;completion&#34;</span>,
 </span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;description&#34;</span>: <span style="color:#e6db74">&#34;Reverse the meaning of the text&#34;</span>,
@@ -381,9 +381,9 @@
 </span></span></code></pre></div><h4 id="native-functions">Native functions</h4>
 <p>Conversely, Native functions are imported by providing an object from a class containing a number of methods marked with the <code>[SKFunction]</code> annotation.</p>
 <p>In this solution, they are detected by reflection - and then each class identified as a Skill is instantiated and imported:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-csharp" data-lang="csharp"><span style="display:flex;"><span>kernel.ImportSkill(skillObject!, type.Name!);
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-csharp" data-lang="csharp"><span style="display:flex;"><span>kernel.ImportSkill(skillObject!, type.Name!);
 </span></span></code></pre></div><p>In this solution we define a simple native function:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-csharp" data-lang="csharp"><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">CharacterManipulationSkill</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-csharp" data-lang="csharp"><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">CharacterManipulationSkill</span>
 </span></span><span style="display:flex;"><span>{
 </span></span><span style="display:flex;"><span><span style="color:#a6e22e">    [SKFunction(&#34;Return the text in all uppercase (aka capitals)&#34;)]</span>
 </span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">string</span> Uppercase(<span style="color:#66d9ef">string</span> input)
@@ -392,25 +392,25 @@
 </span></span></code></pre></div><p>It&rsquo;s pretty clear what it does to you or I by inspection of the code. Note that the <code>SKFunction</code> annotation contains a description of the function as its parameter. The Planner needs this to understand the function, so that it can incorporate it into any plans.</p>
 <h4 id="the-planner">The planner</h4>
 <p>Finally, the Planner itself is imported:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-csharp" data-lang="csharp"><span style="display:flex;"><span>kernel.ImportSkill(<span style="color:#66d9ef">new</span> PlannerSkill(kernel));
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-csharp" data-lang="csharp"><span style="display:flex;"><span>kernel.ImportSkill(<span style="color:#66d9ef">new</span> PlannerSkill(kernel));
 </span></span></code></pre></div><p>This is interesting - the <code>PlannerSkill</code> is passed an instance of the Kernel, and I believe that&rsquo;s because it need to be able to learn which Skills the Kernel has imported, in order to be able to reason about them.</p>
 <h3 id="creating-a-plan">Creating a plan</h3>
 <p>Once configured and with all the skills available to the Planner, the code goes on to prepare an ask - a plain language request for the Kernel.</p>
 <p>This solution uses a very simple, fixed ask to help illustrate how the skills can be used together:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-csharp" data-lang="csharp"><span style="display:flex;"><span><span style="color:#75715e">// provide a simple input and ask as an example</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-csharp" data-lang="csharp"><span style="display:flex;"><span><span style="color:#75715e">// provide a simple input and ask as an example</span>
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">var</span> input = <span style="color:#e6db74">&#34;Yesterday I went to the London Prompt Engineers jam at Newspeak House. Brilliant to meet folks who want to experiment with the new technologies, and a great opportunity to muck out with Semantic Kernel. Can&#39;t recommend highly enough!&#34;</span>;
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">var</span> ask = <span style="color:#e6db74">$&#34;Reverse the following and then deliver it as cockney rhyming slag in all caps: {input}&#34;</span>;
 </span></span></code></pre></div><p>WIth the ask constructed, the Planner can be invoked to create a plan:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-csharp" data-lang="csharp"><span style="display:flex;"><span><span style="color:#75715e">// create plan for the given ask</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-csharp" data-lang="csharp"><span style="display:flex;"><span><span style="color:#75715e">// create plan for the given ask</span>
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">var</span> plan = <span style="color:#66d9ef">await</span> kernel.CreatePlanAsync(planner, ask);
 </span></span></code></pre></div><p>Again, this takes place in an extension method - this time it&rsquo;s an async invocation, as the Kernel will be making calls to the remote LLM to complete the plan:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-csharp" data-lang="csharp"><span style="display:flex;"><span><span style="color:#66d9ef">await</span> kernel.RunAsync(ask, planner[<span style="color:#e6db74">&#34;CreatePlan&#34;</span>]);
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-csharp" data-lang="csharp"><span style="display:flex;"><span><span style="color:#66d9ef">await</span> kernel.RunAsync(ask, planner[<span style="color:#e6db74">&#34;CreatePlan&#34;</span>]);
 </span></span></code></pre></div><h3 id="executing-the-plan">Executing the plan</h3>
 <p>Finally, the Kernel is asked to execute the plan:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-csharp" data-lang="csharp"><span style="display:flex;"><span><span style="color:#75715e">// execute the plan</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-csharp" data-lang="csharp"><span style="display:flex;"><span><span style="color:#75715e">// execute the plan</span>
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">var</span> result = <span style="color:#66d9ef">await</span> kernel.ExecutePlanAsync(planner, plan);
 </span></span></code></pre></div><p>Again, this is covered in an extension method, but this conceals quite a bit of complexity:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-csharp" data-lang="csharp"><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">async</span> Task&lt;<span style="color:#66d9ef">string?</span>&gt; ExecutePlanAsync(<span style="color:#66d9ef">this</span> IKernel kernel, IDictionary&lt;<span style="color:#66d9ef">string</span>, ISKFunction&gt; planner, SKContext plan, <span style="color:#66d9ef">int</span> maxSteps = <span style="color:#ae81ff">10</span>)
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-csharp" data-lang="csharp"><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">async</span> Task&lt;<span style="color:#66d9ef">string?</span>&gt; ExecutePlanAsync(<span style="color:#66d9ef">this</span> IKernel kernel, IDictionary&lt;<span style="color:#66d9ef">string</span>, ISKFunction&gt; planner, SKContext plan, <span style="color:#66d9ef">int</span> maxSteps = <span style="color:#ae81ff">10</span>)
 </span></span><span style="display:flex;"><span>{
 </span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">string?</span> result = <span style="color:#66d9ef">null</span>;
 </span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">var</span> executionResults = plan;
@@ -418,14 +418,14 @@
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">int</span> step = <span style="color:#ae81ff">1</span>;
 </span></span></code></pre></div><p>After a little set up, it starts a <code>while</code> loop - which will stop when the plan is complete, or has exceeded the maximum number of permissible steps&hellip;</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-csharp" data-lang="csharp"><span style="display:flex;"><span>    <span style="color:#66d9ef">while</span> (!executionResults.Variables.ToPlan().IsComplete &amp;&amp; step &lt; maxSteps)
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-csharp" data-lang="csharp"><span style="display:flex;"><span>    <span style="color:#66d9ef">while</span> (!executionResults.Variables.ToPlan().IsComplete &amp;&amp; step &lt; maxSteps)
 </span></span><span style="display:flex;"><span>    {
 </span></span></code></pre></div><p>It executes the next step found in the plan (stored in <code>executionResults</code>). These execution results double as the output from executing a step, and information about execution of the plan itself.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-csharp" data-lang="csharp"><span style="display:flex;"><span>        <span style="color:#75715e">// execute the next step found in execution results</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-csharp" data-lang="csharp"><span style="display:flex;"><span>        <span style="color:#75715e">// execute the next step found in execution results</span>
 </span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">var</span> results = <span style="color:#66d9ef">await</span> kernel.RunAsync(executionResults.Variables, planner[<span style="color:#e6db74">&#34;ExecutePlan&#34;</span>]);
 </span></span></code></pre></div><p>Then, assuming that the execution was successful, the output from the current step is captured in <code>result</code>, and also added to the <code>partialResults</code> list (mainly for debugging purposes).</p>
 <p>If execution failed, this is where the method throws a <code>PlanExecutionException</code>, which contains all the debugging information available right now.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-csharp" data-lang="csharp"><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> (results.Variables.ToPlan().IsSuccessful)
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-csharp" data-lang="csharp"><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> (results.Variables.ToPlan().IsSuccessful)
 </span></span><span style="display:flex;"><span>        {
 </span></span><span style="display:flex;"><span>            result = results.Variables.ToPlan().Result;
 </span></span><span style="display:flex;"><span>            partialResults.Add(result);
@@ -435,26 +435,29 @@
 </span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">throw</span> <span style="color:#66d9ef">new</span> PlanExecutionException(<span style="color:#e6db74">$&#34;Step {step} execution failed.&#34;</span>, plan, step, partialResults);
 </span></span><span style="display:flex;"><span>        }
 </span></span></code></pre></div><p>Finally, <code>results</code> from the current step&rsquo;s execution are put into <code>executionResults</code>, which will be used to provide the next step of the plan when the loop iterates.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-csharp" data-lang="csharp"><span style="display:flex;"><span>        <span style="color:#75715e">// iterate - using the execution results as the input for the next step</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-csharp" data-lang="csharp"><span style="display:flex;"><span>        <span style="color:#75715e">// iterate - using the execution results as the input for the next step</span>
 </span></span><span style="display:flex;"><span>        executionResults = results;
 </span></span><span style="display:flex;"><span>        step++;
 </span></span><span style="display:flex;"><span>    }
 </span></span></code></pre></div><p>When the loop has completed, if it has not thrown an exception, then there should be a final result in <code>result</code>&hellip;</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-csharp" data-lang="csharp"><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> result;
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-csharp" data-lang="csharp"><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> result;
 </span></span><span style="display:flex;"><span>}
 </span></span></code></pre></div><p>The final line of <code>Program.Main</code> prints this final result to the console:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-csharp" data-lang="csharp"><span style="display:flex;"><span>Console.WriteLine(<span style="color:#e6db74">$&#34;Result:\n\n{result}&#34;</span>);
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-csharp" data-lang="csharp"><span style="display:flex;"><span>Console.WriteLine(<span style="color:#e6db74">$&#34;Result:\n\n{result}&#34;</span>);
 </span></span></code></pre></div><h2 id="doing-it-right">Doing it right</h2>
 <p>As with all other applications for Machine Learning, using Large Language Models to solve problems comes with hurdles and caveats.</p>
 <p>Take the time to read the <a href="https://learn.microsoft.com/en-us/semantic-kernel/responsibleai">Responsible AI Transparency Note</a> provided with the Semantic Kernel documentation.</p>
 <blockquote>
-<p>An AI system includes not only the technology, but also the people who will use it, the people who will be affected by it, and the environment in which it is deployed. Creating a system that is fit for its intended purpose requires an understanding of how the technology works, what its capabilities and limitations are, and how to achieve the best performance.</p></blockquote>
+<p>An AI system includes not only the technology, but also the people who will use it, the people who will be affected by it, and the environment in which it is deployed. Creating a system that is fit for its intended purpose requires an understanding of how the technology works, what its capabilities and limitations are, and how to achieve the best performance.</p>
+</blockquote>
 <p>Think hard about how you will apply artificial intelligence and machine learning to your problems, and don&rsquo;t be afraid to speak out if you see a risk to any users. Aim to build tools that help everyone equally, and take the time to eliminate bias wherever it may creep in.</p>
 <p><a href="https://leaddev.com/tech/lets-mitigate-bias-tech">Let&rsquo;s mitigate bias in tech</a> by Leslie Chapman is a good read.</p>
 <blockquote>
-<p>Try this exercise: gather ten people and have each one put together a list of what they think a truly diverse pool of users looks like. Then compare notes. I bet everyone has someone that they’ve missed on that list.</p></blockquote>
+<p>Try this exercise: gather ten people and have each one put together a list of what they think a truly diverse pool of users looks like. Then compare notes. I bet everyone has someone that they’ve missed on that list.</p>
+</blockquote>
 <blockquote>
-<p>No company sets out to create a product that’s going to be called “racist” – but it happens over and over again. You can be the voice that helps your company avoid that from ever taking place.</p></blockquote>
+<p>No company sets out to create a product that’s going to be called “racist” – but it happens over and over again. You can be the voice that helps your company avoid that from ever taking place.</p>
+</blockquote>
 
             </div>
         </div>

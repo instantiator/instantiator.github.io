@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Application on instantiator.dev</title>
+    <link>https://instantiator.dev/tags/application/</link>
+    <description>Recent content in Application on instantiator.dev</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Tue, 28 Oct 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://instantiator.dev/tags/application/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Conversational deliberation, at scale</title>
+      <link>https://instantiator.dev/post/cci-zg-deliberation-at-scale/</link>
+      <pubDate>Tue, 28 Oct 2025 00:00:00 +0000</pubDate>
+      <guid>https://instantiator.dev/post/cci-zg-deliberation-at-scale/</guid>
+      <description>&lt;p&gt;&lt;em&gt;Reproduced from a recently published &lt;a href=&#34;https://www.linkedin.com/pulse/conversational-deliberation-scale-lewis-westbury-4uk6e/?trackingId=lQdZf5QJS42DfdPBKXhJaQ%3D%3D&#34;&gt;LinkedIn article&lt;/a&gt;.&lt;/em&gt;&lt;/p&gt;&#xA;&lt;h1 id=&#34;conversational-deliberation-at-scale&#34;&gt;Conversational deliberation, at scale&lt;/h1&gt;&#xA;&lt;p&gt;I&amp;rsquo;ve been leading a software development team at the &lt;a href=&#34;https://www.nesta.org.uk/project/centre-collective-intelligence/&#34;&gt;Centre for Collective Intelligence&lt;/a&gt; at &lt;a href=&#34;https://www.nesta.org.uk&#34;&gt;Nesta&lt;/a&gt; for a couple of years now, and I&amp;rsquo;m lucky enough to work with, and have worked with, some brilliant people. Amongst the things we&amp;rsquo;re good at is the process of designing and running deliberative workshops.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

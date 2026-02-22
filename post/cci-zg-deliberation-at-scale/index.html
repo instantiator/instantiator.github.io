@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
+    <link rel="stylesheet" type="text/css" href="/css/mastodon-timeline.min.css">
+    
+    
+    <title>instantiator.dev | Conversational deliberation, at scale</title>
+    
+    
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-SHE42ZWKEN"></script>
+      <script>
+        var doNotTrack = false;
+        if ( true ) {
+          var dnt = (navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack);
+          var doNotTrack = (dnt == "1" || dnt == "yes");
+        }
+        if (!doNotTrack) {
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-SHE42ZWKEN');
+        }
+      </script>
+    
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://instantiator.dev/cci/zg-laptop.png">
+  <meta name="twitter:title" content="Conversational deliberation, at scale">
+  <meta name="twitter:description" content="Reproduced from a recently published LinkedIn article.
+Conversational deliberation, at scale I’ve been leading a software development team at the Centre for Collective Intelligence at Nesta for a couple of years now, and I’m lucky enough to work with, and have worked with, some brilliant people. Amongst the things we’re good at is the process of designing and running deliberative workshops.">
+
+    <meta property="og:url" content="https://instantiator.dev/post/cci-zg-deliberation-at-scale/">
+  <meta property="og:site_name" content="instantiator.dev">
+  <meta property="og:title" content="Conversational deliberation, at scale">
+  <meta property="og:description" content="Reproduced from a recently published LinkedIn article.
+Conversational deliberation, at scale I’ve been leading a software development team at the Centre for Collective Intelligence at Nesta for a couple of years now, and I’m lucky enough to work with, and have worked with, some brilliant people. Amongst the things we’re good at is the process of designing and running deliberative workshops.">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="post">
+    <meta property="article:published_time" content="2025-10-28T00:00:00+00:00">
+    <meta property="article:modified_time" content="2025-10-28T00:00:00+00:00">
+    <meta property="article:tag" content="CCI">
+    <meta property="article:tag" content="CI">
+    <meta property="article:tag" content="CollectiveIntelligence">
+    <meta property="article:tag" content="Zeitgeist">
+    <meta property="article:tag" content="Nesta">
+    <meta property="article:tag" content="Deliberation">
+    <meta property="og:image" content="https://instantiator.dev/cci/zg-laptop.png">
+    <meta property="og:image" content="https://instantiator.dev/cci/zg-card.jpeg">
+
+
+    
+    <link rel="stylesheet"
+        href="/css/markupHighlight.min.59c08a266e8a6489aab7cb3ace4259db920d0e8893682a44ef8401387af97664.css"
+        integrity="sha256-WcCKJm6KZImqt8s6zkJZ25INDoiTaCpE74QBOHr5dmQ="
+        crossorigin="anonymous"
+        type="text/css">
+
+    </head><body><nav id="nav" class="navbar sticky-top justify-content-start navbar-expand-md frosted-white shadow mb-4">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="/">instantiator.dev</a>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav">
+        
+        
+        <li class="nav-item">
+          <a class="nav-link " href="/">
+            
+             Home
+          </a>
+        </li>
+        
+        <li class="nav-item">
+          <a class="nav-link " href="/post/">
+            
+             All posts
+          </a>
+        </li>
+        
+        <li class="nav-item">
+          <a class="nav-link " href="/categories/tool/">
+            
+             Tools
+          </a>
+        </li>
+        
+        <li class="nav-item">
+          <a class="nav-link " href="/categories/tutorial/">
+            
+             Tutorials
+          </a>
+        </li>
+        
+        <li class="nav-item">
+          <a class="nav-link " href="/categories/article/">
+            
+             Articles
+          </a>
+        </li>
+        
+        <li class="nav-item">
+          <a class="nav-link " href="/about/">
+            
+             About
+          </a>
+        </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+<div class="container-fluid">
+
+<div class="row align-items-start">
+    <div class="col col-lg-3 d-none d-lg-block">
+      <div class="row mb-2">
+    <div class="col-3 col-lg-12 d-flex flex-column align-items-center">
+        <img 
+            src="/lewis/profile.jpg" alt="profile picture" 
+            class="mb-4 mt-4 img-thumbnail" 
+            style="border-radius: 50%; max-width: 200px; width: 100%;" />
+    </div>
+    <div class="col d-flex flex-column align-items-center">
+        <h3 class="mb-4"><a href="/">instantiator.dev</a></h3>
+        
+        <div style="text-align: center;" class="mb-4">
+            <p style="font-size: 0.8rem;">tech, volunteers, public safety, collective intelligence, articles, tools, code and ideas</p>
+        </div>
+
+        <div class="d-flex flex-row justify-content-evenly align-self-stretch mb-4">
+            
+            <a href="https://mastodon.social/@instantiator" rel="me" aria-label="Mastodon account" alt="Mastodon account" target="_blank">
+                
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 418 512" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M433 179.11c0-97.2-63.71-125.7-63.71-125.7-62.52-28.7-228.56-28.4-290.48 0 0 0-63.72 28.5-63.72 125.7 0 115.7-6.6 259.4 105.63 289.1 40.51 10.7 75.32 13 103.33 11.4 50.81-2.8 79.32-18.1 79.32-18.1l-1.7-36.9s-36.31 11.4-77.12 10.1c-40.41-1.4-83-4.4-89.63-54a102.54 102.54 0 0 1-.9-13.9c85.63 20.9 158.65 9.1 178.75 6.7 56.12-6.7 105-41.3 111.23-72.9 9.8-49.8 9-121.5 9-121.5zm-75.12 125.2h-46.63v-114.2c0-49.7-64-51.6-64 6.9v62.5h-46.33V197c0-58.5-64-56.6-64-6.9v114.2H90.19c0-122.1-5.2-147.9 18.41-175 25.9-28.9 79.82-30.8 103.83 6.1l11.6 19.5 11.6-19.5c24.11-37.1 78.12-34.8 103.83-6.1 23.71 27.3 18.4 53 18.4 175z"></path></svg> 
+                
+            </a>
+            
+            <a href="https://bsky.app/profile/instantiator.bsky.social" rel="me" aria-label="BlueSky account" alt="BlueSky account" target="_blank">
+                
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 600 530" fill="currentColor" stroke="currentColor" version="1.1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="m135.72 44.03c66.496 49.921 138.02 151.14 164.28 205.46 26.262-54.316 97.782-155.54 164.28-205.46 47.98-36.021 125.72-63.892 125.72 24.795 0 17.712-10.155 148.79-16.111 170.07-20.703 73.984-96.144 92.854-163.25 81.433 117.3 19.964 147.14 86.092 82.697 152.22-122.39 125.59-175.91-31.511-189.63-71.766-2.514-7.3797-3.6904-10.832-3.7077-7.8964-0.0174-2.9357-1.1937 0.51669-3.7077 7.8964-13.714 40.255-67.233 197.36-189.63 71.766-64.444-66.128-34.605-132.26 82.697-152.22-67.108 11.421-142.55-7.4491-163.25-81.433-5.9562-21.282-16.111-152.36-16.111-170.07 0-88.687 77.742-60.816 125.72-24.795z"/>
+                </svg>
+                
+            </a>
+            
+            <a href="https://github.com/instantiator" rel="me" aria-label="GitHub account" alt="GitHub account" target="_blank">
+                
+                <i data-feather="github" aria-hidden="true"></i>
+                
+            </a>
+            
+            <a href="https://www.linkedin.com/in/lewiswestbury" rel="me" aria-label="LinkedIn account" alt="LinkedIn account" target="_blank">
+                
+                <i data-feather="linkedin" aria-hidden="true"></i>
+                
+            </a>
+            
+            <a href="https://calendar.google.com/calendar/embed?src=ad7606dfb0580dc089629dff9be0d9fc0db19d296a7d72864c1b338f4dd896a4%40group.calendar.google.com&amp;ctz=Europe%2FLondon" rel="me" aria-label="Celebrations calendar" alt="Celebrations calendar" target="_blank">
+                
+                <i data-feather="calendar" aria-hidden="true"></i>
+                
+            </a>
+            
+            <a href="https://instantiator.dev/index.xml" rel="me" aria-label="RSS" alt="RSS" target="_blank">
+                
+                <i data-feather="rss" aria-hidden="true"></i>
+                
+            </a>
+            
+        </div>
+
+        <div class="d-flex flex-row justify-content-evenly align-self-stretch mb-4" style="font-size: 0.8rem;">
+            <ul style="padding-inline-start: 0;">
+            
+                <li><a href="https://instantiator.dev/presence" rel="me" aria-label="Presence" target="_blank">Presence</a> (tool) (in dev)</li>
+            
+                <li><a href="https://instantiator.dev/listsky/" rel="me" aria-label="ListSky" target="_blank">ListSky</a> (tool) (in dev)</li>
+            
+                <li><a href="https://epistolorean.club" rel="me" aria-label="The Epistolorean" target="_blank">The Epistolorean</a> (service)</li>
+            
+                <li><a href="https://icgames.net" rel="me" aria-label="Consensus Games" target="_blank">Consensus Games</a> (service) (in dev)</li>
+            
+                <li><a href="https://instantiator.dev/json-to-smart-csv/" rel="me" aria-label="JSON to Smart CSV" target="_blank">JSON to Smart CSV</a> (tool)</li>
+            
+                <li><a href="https://www.escapethereview.co.uk/profile/?user_id=11" rel="me" aria-label="Escape the Review" target="_blank">Escape the Review</a> (profile)</li>
+            
+                <li><a href="https://calendar.google.com/calendar/embed?src=ad7606dfb0580dc089629dff9be0d9fc0db19d296a7d72864c1b338f4dd896a4%40group.calendar.google.com&amp;ctz=Europe%2FLondon" rel="me" aria-label="In this house..." target="_blank">In this house...</a> (calendar)</li>
+            
+            </ul>
+        </div>
+
+        <div>
+            <span class="text-body-secondary fw-lighter" style="font-size: 0.8rem;">
+                &copy; Lewis Westbury  2026 
+            </span>
+        </div>
+    </div>
+</div>    
+
+
+
+    </div>
+    <div class="col-lg" style="overflow-x: hidden;">
+        <div id="post-content">
+            <h2 style="display: inline-block;">Conversational deliberation, at scale</h2>
+                
+                    
+                        
+                        <a class="badge bg-primary" href="https://instantiator.dev/categories/article">article</a>
+                    
+                
+            <div class="mt-2">
+                 
+
+<div class="mb-2">
+    <i data-feather="calendar"></i>
+    <time datetime="2025-10-28">2025-10-28</time>
+</div>
+
+<div>
+    <i data-feather="tag"></i>
+    
+        
+        <a class="badge bg-secondary" href="https://instantiator.dev/tags/cci">#CCI</a>
+    
+        
+        <a class="badge bg-secondary" href="https://instantiator.dev/tags/ci">#CI</a>
+    
+        
+        <a class="badge bg-secondary" href="https://instantiator.dev/tags/collectiveintelligence">#CollectiveIntelligence</a>
+    
+        
+        <a class="badge bg-secondary" href="https://instantiator.dev/tags/zeitgeist">#Zeitgeist</a>
+    
+        
+        <a class="badge bg-secondary" href="https://instantiator.dev/tags/nesta">#Nesta</a>
+    
+        
+        <a class="badge bg-secondary" href="https://instantiator.dev/tags/deliberation">#deliberation</a>
+    
+        
+        <a class="badge bg-secondary" href="https://instantiator.dev/tags/application">#application</a>
+    
+        
+        <a class="badge bg-secondary" href="https://instantiator.dev/tags/software">#software</a>
+    
+        
+        <a class="badge bg-secondary" href="https://instantiator.dev/tags/polling">#polling</a>
+    
+        
+        <a class="badge bg-secondary" href="https://instantiator.dev/tags/app">#app</a>
+    
+</div>
+
+
+            </div>
+            <div class="mt-4">
+                <p><em>Reproduced from a recently published <a href="https://www.linkedin.com/pulse/conversational-deliberation-scale-lewis-westbury-4uk6e/?trackingId=lQdZf5QJS42DfdPBKXhJaQ%3D%3D">LinkedIn article</a>.</em></p>
+<h1 id="conversational-deliberation-at-scale">Conversational deliberation, at scale</h1>
+<p>I&rsquo;ve been leading a software development team at the <a href="https://www.nesta.org.uk/project/centre-collective-intelligence/">Centre for Collective Intelligence</a> at <a href="https://www.nesta.org.uk">Nesta</a> for a couple of years now, and I&rsquo;m lucky enough to work with, and have worked with, some brilliant people. Amongst the things we&rsquo;re good at is the process of designing and running deliberative workshops.</p>
+<p><strong>Deliberation and polling are both collective intelligence techniques and, together, they offer rich insights into what people want (and more importantly why).</strong></p>
+<p><strong>There are many forms of deliberation,</strong> and it&rsquo;s a bit of an overloaded term. For instance, there are online processes such as free-text statement voting (of which the most famous example is pol.is), or forum tools that allow people to start threads and reply to each others comments.</p>
+<p><strong>Our workshops deliver <em>conversational</em> deliberation.</strong> That&rsquo;s people talking together, explaining how they feel and discussing the issues that affect them. The closest established research technique might be a focus group.</p>
+<p>We poll during our workshops which, as you&rsquo;d expect, tells you how people feel about the policies and products we&rsquo;re testing. The beauty of mixing polls with deliberation is that our researchers can dig into &ldquo;the why&rdquo;. Asking people to talk it through with each other creates a space for insightful conversations. From that, we can learn why people feel the way they do about policies and products, and what&rsquo;s important to them.</p>
+<p>Because we&rsquo;re often asking people to discuss complex issues, we also deliver rich stimulus in the form of narrated videos, animations, and talking heads, informing and educating with relatable characters and scenarios. This gives people knowledge and time to respond, so they can give a considered opinion, rather than an instinctive reaction.</p>
+<p><strong>To allow us to scale this process from a few dozen groups to thousands of participants, we developed <a href="https://zg-app.com">Zeitgeist</a>.</strong> It&rsquo;s a tool that allows us to run workshops consistently with a rich experience that integrates videos, polling, and the ability to capture deliberation transcripts for analysis.</p>
+<p><img src="/cci/zg-card.jpeg" alt="Zeitgeist social card" title="A social media card. Text reads: &#39;Zeitgeist. Scalable public deliberation, data-driven insights and more engaging public participation.&#39;"></p>
+<p><strong>Meeting people where they are</strong> is important, and Zeitgeist allows us to run workshops in-person or remotely, with the same content and the same experience every time for every participant. This means that we can scale quickly with remote participants, but still meet the needs of those with technical and accessibility issues who would much rather come to their local library.</p>
+<p><strong>Deliberations</strong> are at the heart of the process, and where we find the richest insights. Because we can link our participants opinions to their polling choices, we can start to answer questions like &ldquo;Why did people feel so strongly about the policy?&rdquo;, or &ldquo;What could we do to make this change welcome?&rdquo;</p>
+<p>We&rsquo;ve been working with local government and broader agencies to develop engagements that help them to understand what people want and need, as well as larger, more central government groups.</p>
+<blockquote>
+<p>We&rsquo;ve recently published the analysis from our work on an AI Social Readiness Label for Consult, an AI assistance tool for consultations by <a href="https://i.ai/">i.AI</a> - the UK Government&rsquo;s Incubator for Artificial Intelligence: <a href="https://www.nesta.org.uk/report/ai-sral-consult/">How does the public feel about AI analysing UK government consultation responses?</a></p>
+</blockquote>
+<p>Find out more: <a href="https://www.nesta.org.uk/project-updates/the-ai-social-readiness-process/">The AI Social Readiness process</a></p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/o-LkpkklZOc?si=tbyY6WjIivUa4R53" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<p>We also delivered The Situation Room, a series of workshops about coastal erosion, flooding, and water management with the <a href="https://www.catchmenttocoast.uk/">Catchment to Coast</a> programme. Focussed in Southend, we worked with hundreds of local residents to draw up a set of priorities for policies to manage the environment around them.</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/4blG9wulcxs?si=vWuJDyRni8vZrqjy" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<p>Over the course of our time refining and optimising deliberative workshops, we&rsquo;ve tackled a wide range of issues and using Zeitgeist we can deliver a seamless experience for our participants. Instead of bouncing between video calls, slide decks, polling apps, expert witnesses and videos Zeitgeist offers a simple interface that delivers content and interactive elements as they&rsquo;re needed.</p>
+<p>I&rsquo;ll be developing a series of more technical articles reflecting on that process, including some of the technical obstacles to scaling and the solutions we&rsquo;ve selected.</p>
+<h2 id="interested-we-can-help-you">Interested? We can help you</h2>
+<p><strong>Find out more about how <a href="https://zg-app.com/">Zeitgeist</a> and deliberative workshops can help you make the best decisions.</strong></p>
+<p>If you&rsquo;d like to work with us, or find out more, you can reach us through our <strong><a href="https://zg-app.com/contact">Zeitgeist contact form</a></strong> or drop us an email at: <a href="mailto:collective.intelligence@nesta.org.uk">collective.intelligence@nesta.org.uk</a></p>
+
+            </div>
+        </div>
+
+        <div class="post-footer">
+            <div class="info">
+                
+
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+        </div><script src="/js/bootstrap.min.js"></script>
+<script src="/js/feather.min.js"></script>
+<script src="/js/mastodon-timeline.umd.js"></script>
+<script>
+  feather.replace();
+</script></body>
+</html>

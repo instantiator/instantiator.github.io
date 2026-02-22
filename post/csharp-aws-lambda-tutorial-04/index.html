@@ -13,7 +13,7 @@
       <script async src="https://www.googletagmanager.com/gtag/js?id=G-SHE42ZWKEN"></script>
       <script>
         var doNotTrack = false;
-        if ( false ) {
+        if ( true ) {
           var dnt = (navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack);
           var doNotTrack = (dnt == "1" || dnt == "yes");
         }
@@ -42,7 +42,7 @@
     <meta property="article:tag" content="Coding">
     <meta property="article:tag" content="C#">
     <meta property="article:tag" content=".Net">
-    <meta property="article:tag" content="AWS">
+    <meta property="article:tag" content="Aws">
     <meta property="article:tag" content="Lambda">
     <meta property="og:image" content="https://instantiator.dev/csharp-aws-lambda-tutorial/000-heading-img.png">
       <meta property="og:see_also" content="https://instantiator.dev/post/csharp-aws-lambda-tutorial-06/">
@@ -205,7 +205,7 @@
 
         <div>
             <span class="text-body-secondary fw-lighter" style="font-size: 0.8rem;">
-                &copy; Lewis Westbury  2025 
+                &copy; Lewis Westbury  2026 
             </span>
         </div>
     </div>
@@ -261,7 +261,8 @@
 </ul>
 <h2 id="part-4-viewing-the-logs">Part 4: Viewing the logs</h2>
 <blockquote>
-<p>This is going to be a short section - logs are easy to find and analyse in AWS.</p></blockquote>
+<p>This is going to be a short section - logs are easy to find and analyse in AWS.</p>
+</blockquote>
 <p>Logs in are collated by the <strong>CloudWatch</strong> service, and are grouped into <strong>log groups</strong>, describing the source of the logs. Inside each log group, each instance or session of the source service is then discoverable as a separate <strong>log stream</strong>.</p>
 <p>By default, your <strong>SampleLambdaFunction</strong> Lambda has created a <strong>log group</strong> with the same name: <strong>SampleLambdaFunction</strong></p>
 <p>To find your logs:</p>

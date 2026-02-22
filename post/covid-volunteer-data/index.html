@@ -13,7 +13,7 @@
       <script async src="https://www.googletagmanager.com/gtag/js?id=G-SHE42ZWKEN"></script>
       <script>
         var doNotTrack = false;
-        if ( false ) {
+        if ( true ) {
           var dnt = (navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack);
           var doNotTrack = (dnt == "1" || dnt == "yes");
         }
@@ -204,7 +204,7 @@ We’re only human In the previous post, we took a tour of the open data availab
 
         <div>
             <span class="text-body-secondary fw-lighter" style="font-size: 0.8rem;">
-                &copy; Lewis Westbury  2025 
+                &copy; Lewis Westbury  2026 
             </span>
         </div>
     </div>
@@ -325,7 +325,8 @@ We’re only human In the previous post, we took a tour of the open data availab
 <h3 id="addresses-vary-wildly-for-the-same-place">Addresses vary wildly for the same place</h3>
 <p>There are so many different ways to describe a location, and addresses are really only a very loosely defined way of doing it. So how can we spot when two people mean the same place, but have written it differently?</p>
 <blockquote>
-<p>📌 “100–104, The High Street, Townsville” and 📌 “The Old Post, High Street, Townsville” might not seem easily comparable. Now mix in some post codes, start to reorder parts of the address, remove the street name, and add a few typos…</p></blockquote>
+<p>📌 “100–104, The High Street, Townsville” and 📌 “The Old Post, High Street, Townsville” might not seem easily comparable. Now mix in some post codes, start to reorder parts of the address, remove the street name, and add a few typos…</p>
+</blockquote>
 <p>This is a huge problem, and not one easily solved by a lone data scientist with a spreadsheet. <em>(I guess I’m a data scientist now?)</em></p>
 <p>However, as the data is going to be plotted on a map, an answer presents itself. We will need to <a href="https://en.wikipedia.org/wiki/Geocoding">geocode</a> the provided address to get a latitude and longitude for each group.</p>
 <p>Geocoders (such as the Google Maps Geocoding API) must resolve addresses to points on a map every day, and as they do so they quantise their results to the positions of real buildings and landmarks. By first geocoding, and then comparing the resulting coordinates, we can pass the language problem over to an organisation with resources to resolve and match addresses in almost any form they are presented.</p>
