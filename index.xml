@@ -6,8 +6,29 @@
     <description>Recent content on instantiator.dev</description>
     <generator>Hugo</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 28 Oct 2025 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 21 Apr 2026 19:00:00 +0000</lastBuildDate>
     <atom:link href="https://instantiator.dev/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Manage rich video experiences in your webapp like a pro</title>
+      <link>https://instantiator.dev/post/video-playback-like-a-pro/</link>
+      <pubDate>Tue, 21 Apr 2026 19:00:00 +0000</pubDate>
+      <guid>https://instantiator.dev/post/video-playback-like-a-pro/</guid>
+      <description>&lt;p&gt;&lt;em&gt;Browsers rule with an iron fist when it comes to the things your web app is allowed to do, and video playback is a complex topic. This post breaks down some advanced solutions for developers implementing embedded video.&lt;/em&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>About</title>
+      <link>https://instantiator.dev/about/</link>
+      <pubDate>Tue, 21 Apr 2026 00:00:00 +0000</pubDate>
+      <guid>https://instantiator.dev/about/</guid>
+      <description>&lt;p&gt;I am a tech lead and senior software developer. My career reflects my passion for public service and volunteerism.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Discounts</title>
+      <link>https://instantiator.dev/discount-codes/</link>
+      <pubDate>Tue, 21 Apr 2026 00:00:00 +0000</pubDate>
+      <guid>https://instantiator.dev/discount-codes/</guid>
+      <description>&lt;div style=&#34;display: flex; flex-direction: row; gap: 1em; align-items: stretch; flex-wrap: wrap;&#34;&gt;&#xA;  &lt;a href=&#34;https://uk.huel.com/?huelraf=REF-LEWISW4944&#34; target=&#34;_blank&#34;&gt;&#xA;    &lt;div style=&#34;border: solid 1px #808080; background: #efefef; border-radius: 1em; padding: 1em;font-weight: bold; height: 100%&#34;&gt;&#xA;      £20 off your next order of Huel&#xA;      &lt;br/&gt;&lt;code&gt;REF-LEWISW4944&lt;/code&gt;&#xA;    &lt;/div&gt;&#xA;  &lt;/a&gt;&#xA;  &lt;a href=&#34;http://rwrd.io/2z6jzcl?c&#34; target=&#34;_blank&#34;&gt;&#xA;    &lt;div style=&#34;border: solid 1px #808080; background: #efefef; border-radius: 1em; padding: 1em; font-weight: bold;height: 100%&#34;&gt;&#xA;      €50 off your first Fairphone&#xA;      or Fairbuds XL&#xA;    &lt;/div&gt;&#xA;  &lt;/a&gt;&#xA;&lt;/div&gt;</description>
+    </item>
     <item>
       <title>Conversational deliberation, at scale</title>
       <link>https://instantiator.dev/post/cci-zg-deliberation-at-scale/</link>
@@ -154,13 +175,6 @@
       <pubDate>Thu, 08 Dec 2022 00:00:00 +0000</pubDate>
       <guid>https://instantiator.dev/post/icgames-net/</guid>
       <description>&lt;p&gt;Consensus Chess is going through some beta testing on Mastodon, and you can play today!&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>About</title>
-      <link>https://instantiator.dev/about/</link>
-      <pubDate>Wed, 23 Nov 2022 00:00:00 +0000</pubDate>
-      <guid>https://instantiator.dev/about/</guid>
-      <description>&lt;p&gt;I am a tech lead and senior software developer. My career reflects my passion for public service and volunteerism.&lt;/p&gt;</description>
     </item>
     <item>
       <title>International Consensus Games (WIP)</title>

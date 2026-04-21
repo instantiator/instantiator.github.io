@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
+    <link rel="stylesheet" type="text/css" href="/css/mastodon-timeline.min.css">
+    
+    
+    <title>instantiator.dev | Manage rich video experiences in your webapp like a pro</title>
+    
+    
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-SHE42ZWKEN"></script>
+      <script>
+        var doNotTrack = false;
+        if ( true ) {
+          var dnt = (navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack);
+          var doNotTrack = (dnt == "1" || dnt == "yes");
+        }
+        if (!doNotTrack) {
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-SHE42ZWKEN');
+        }
+      </script>
+    
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://instantiator.dev/cci/play-button.png">
+  <meta name="twitter:title" content="Manage rich video experiences in your webapp like a pro">
+  <meta name="twitter:description" content="Browsers rule with an iron fist when it comes to the things your web app is allowed to do, and video playback is a complex topic. This post breaks down some advanced solutions for developers implementing embedded video.">
+
+    <meta property="og:url" content="https://instantiator.dev/post/video-playback-like-a-pro/">
+  <meta property="og:site_name" content="instantiator.dev">
+  <meta property="og:title" content="Manage rich video experiences in your webapp like a pro">
+  <meta property="og:description" content="Browsers rule with an iron fist when it comes to the things your web app is allowed to do, and video playback is a complex topic. This post breaks down some advanced solutions for developers implementing embedded video.">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="post">
+    <meta property="article:published_time" content="2026-04-21T19:00:00+00:00">
+    <meta property="article:modified_time" content="2026-04-21T19:00:00+00:00">
+    <meta property="article:tag" content="Video">
+    <meta property="article:tag" content="Audio">
+    <meta property="article:tag" content="Html5">
+    <meta property="article:tag" content="Howto">
+    <meta property="article:tag" content="Technical">
+    <meta property="article:tag" content="Synchronise">
+    <meta property="og:image" content="https://instantiator.dev/cci/play-button.png">
+    <meta property="og:image" content="https://instantiator.dev/cci/zg-card.jpeg">
+
+
+    
+    <link rel="stylesheet"
+        href="/css/markupHighlight.min.b065fb7a8dabca50671d98ea7e8a42aed4027206ee1cf5a12e53d781afa4b03c.css"
+        integrity="sha256-sGX7eo2rylBnHZjqfopCrtQCcgbuHPWhLlPXga&#43;ksDw="
+        crossorigin="anonymous"
+        type="text/css">
+
+    </head><body><nav id="nav" class="navbar sticky-top justify-content-start navbar-expand-md frosted-white shadow mb-4">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="/">instantiator.dev</a>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav">
+        
+        
+        <li class="nav-item">
+          <a class="nav-link " href="/">
+            
+             Home
+          </a>
+        </li>
+        
+        <li class="nav-item">
+          <a class="nav-link " href="/post/">
+            
+             All posts
+          </a>
+        </li>
+        
+        <li class="nav-item">
+          <a class="nav-link " href="/categories/tool/">
+            
+             Tools
+          </a>
+        </li>
+        
+        <li class="nav-item">
+          <a class="nav-link " href="/categories/tutorial/">
+            
+             Tutorials
+          </a>
+        </li>
+        
+        <li class="nav-item">
+          <a class="nav-link " href="/categories/article/">
+            
+             Articles
+          </a>
+        </li>
+        
+        <li class="nav-item">
+          <a class="nav-link " href="/discounts/">
+            
+             Discounts
+          </a>
+        </li>
+        
+        <li class="nav-item">
+          <a class="nav-link " href="/about/">
+            
+             About
+          </a>
+        </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+<div class="container-fluid">
+
+<div class="row align-items-start">
+    <div class="col col-lg-3 d-none d-lg-block">
+      <div class="row mb-2">
+    <div class="col-3 col-lg-12 d-flex flex-column align-items-center">
+        <img 
+            src="/lewis/profile.jpg" alt="profile picture" 
+            class="mb-4 mt-4 img-thumbnail" 
+            style="border-radius: 50%; max-width: 200px; width: 100%;" />
+    </div>
+    <div class="col d-flex flex-column align-items-center">
+        <h3 class="mb-4"><a href="/">instantiator.dev</a></h3>
+        
+        <div style="text-align: center;" class="mb-4">
+            <p style="font-size: 0.8rem;">tech, volunteers, public safety, collective intelligence, articles, tools, code and ideas</p>
+        </div>
+
+        <div class="d-flex flex-row justify-content-evenly align-self-stretch mb-4">
+            
+            <a href="https://mastodon.social/@instantiator" rel="me" aria-label="Mastodon account" alt="Mastodon account" target="_blank">
+                
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 418 512" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M433 179.11c0-97.2-63.71-125.7-63.71-125.7-62.52-28.7-228.56-28.4-290.48 0 0 0-63.72 28.5-63.72 125.7 0 115.7-6.6 259.4 105.63 289.1 40.51 10.7 75.32 13 103.33 11.4 50.81-2.8 79.32-18.1 79.32-18.1l-1.7-36.9s-36.31 11.4-77.12 10.1c-40.41-1.4-83-4.4-89.63-54a102.54 102.54 0 0 1-.9-13.9c85.63 20.9 158.65 9.1 178.75 6.7 56.12-6.7 105-41.3 111.23-72.9 9.8-49.8 9-121.5 9-121.5zm-75.12 125.2h-46.63v-114.2c0-49.7-64-51.6-64 6.9v62.5h-46.33V197c0-58.5-64-56.6-64-6.9v114.2H90.19c0-122.1-5.2-147.9 18.41-175 25.9-28.9 79.82-30.8 103.83 6.1l11.6 19.5 11.6-19.5c24.11-37.1 78.12-34.8 103.83-6.1 23.71 27.3 18.4 53 18.4 175z"></path></svg> 
+                
+            </a>
+            
+            <a href="https://bsky.app/profile/instantiator.bsky.social" rel="me" aria-label="BlueSky account" alt="BlueSky account" target="_blank">
+                
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 600 530" fill="currentColor" stroke="currentColor" version="1.1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="m135.72 44.03c66.496 49.921 138.02 151.14 164.28 205.46 26.262-54.316 97.782-155.54 164.28-205.46 47.98-36.021 125.72-63.892 125.72 24.795 0 17.712-10.155 148.79-16.111 170.07-20.703 73.984-96.144 92.854-163.25 81.433 117.3 19.964 147.14 86.092 82.697 152.22-122.39 125.59-175.91-31.511-189.63-71.766-2.514-7.3797-3.6904-10.832-3.7077-7.8964-0.0174-2.9357-1.1937 0.51669-3.7077 7.8964-13.714 40.255-67.233 197.36-189.63 71.766-64.444-66.128-34.605-132.26 82.697-152.22-67.108 11.421-142.55-7.4491-163.25-81.433-5.9562-21.282-16.111-152.36-16.111-170.07 0-88.687 77.742-60.816 125.72-24.795z"/>
+                </svg>
+                
+            </a>
+            
+            <a href="https://github.com/instantiator" rel="me" aria-label="GitHub account" alt="GitHub account" target="_blank">
+                
+                <i data-feather="github" aria-hidden="true"></i>
+                
+            </a>
+            
+            <a href="https://www.linkedin.com/in/lewiswestbury" rel="me" aria-label="LinkedIn account" alt="LinkedIn account" target="_blank">
+                
+                <i data-feather="linkedin" aria-hidden="true"></i>
+                
+            </a>
+            
+            <a href="https://calendar.google.com/calendar/embed?src=ad7606dfb0580dc089629dff9be0d9fc0db19d296a7d72864c1b338f4dd896a4%40group.calendar.google.com&amp;ctz=Europe%2FLondon" rel="me" aria-label="Celebrations calendar" alt="Celebrations calendar" target="_blank">
+                
+                <i data-feather="calendar" aria-hidden="true"></i>
+                
+            </a>
+            
+            <a href="https://instantiator.dev/index.xml" rel="me" aria-label="RSS" alt="RSS" target="_blank">
+                
+                <i data-feather="rss" aria-hidden="true"></i>
+                
+            </a>
+            
+        </div>
+
+        <div class="d-flex flex-row justify-content-evenly align-self-stretch mb-4" style="font-size: 0.8rem;">
+            <ul style="padding-inline-start: 0;">
+            
+                <li><a href="https://instantiator.dev/presence" rel="me" aria-label="Presence" target="_blank">Presence</a> (tool) (in dev)</li>
+            
+                <li><a href="https://instantiator.dev/listsky/" rel="me" aria-label="ListSky" target="_blank">ListSky</a> (tool) (in dev)</li>
+            
+                <li><a href="https://epistolorean.club" rel="me" aria-label="The Epistolorean" target="_blank">The Epistolorean</a> (service)</li>
+            
+                <li><a href="https://icgames.net" rel="me" aria-label="Consensus Games" target="_blank">Consensus Games</a> (service) (in dev)</li>
+            
+                <li><a href="https://instantiator.dev/json-to-smart-csv/" rel="me" aria-label="JSON to Smart CSV" target="_blank">JSON to Smart CSV</a> (tool)</li>
+            
+                <li><a href="https://www.escapethereview.co.uk/profile/?user_id=11" rel="me" aria-label="Escape the Review" target="_blank">Escape the Review</a> (profile)</li>
+            
+                <li><a href="https://calendar.google.com/calendar/embed?src=ad7606dfb0580dc089629dff9be0d9fc0db19d296a7d72864c1b338f4dd896a4%40group.calendar.google.com&amp;ctz=Europe%2FLondon" rel="me" aria-label="In this house..." target="_blank">In this house...</a> (calendar)</li>
+            
+            </ul>
+        </div>
+
+        <div>
+            <span class="text-body-secondary fw-lighter" style="font-size: 0.8rem;">
+                &copy; Lewis Westbury  2026 
+            </span>
+        </div>
+    </div>
+</div>    
+
+
+
+    </div>
+    <div class="col-lg" style="overflow-x: hidden;">
+        <div id="post-content">
+            <h2 style="display: inline-block;">Manage rich video experiences in your webapp like a pro</h2>
+                
+                    
+                        
+                        <a class="badge bg-primary" href="https://instantiator.dev/categories/tutorial">tutorial</a>
+                    
+                
+            <div class="mt-2">
+                 
+
+<div class="mb-2">
+    <i data-feather="calendar"></i>
+    <time datetime="2026-04-21">2026-04-21</time>
+</div>
+
+<div>
+    <i data-feather="tag"></i>
+    
+        
+        <a class="badge bg-secondary" href="https://instantiator.dev/tags/video">#video</a>
+    
+        
+        <a class="badge bg-secondary" href="https://instantiator.dev/tags/audio">#audio</a>
+    
+        
+        <a class="badge bg-secondary" href="https://instantiator.dev/tags/html5">#html5</a>
+    
+        
+        <a class="badge bg-secondary" href="https://instantiator.dev/tags/howto">#howto</a>
+    
+        
+        <a class="badge bg-secondary" href="https://instantiator.dev/tags/technical">#technical</a>
+    
+        
+        <a class="badge bg-secondary" href="https://instantiator.dev/tags/synchronise">#synchronise</a>
+    
+        
+        <a class="badge bg-secondary" href="https://instantiator.dev/tags/timing">#timing</a>
+    
+        
+        <a class="badge bg-secondary" href="https://instantiator.dev/tags/browser">#browser</a>
+    
+        
+        <a class="badge bg-secondary" href="https://instantiator.dev/tags/permissions">#permissions</a>
+    
+        
+        <a class="badge bg-secondary" href="https://instantiator.dev/tags/deliberation">#deliberation</a>
+    
+        
+        <a class="badge bg-secondary" href="https://instantiator.dev/tags/cci">#cci</a>
+    
+        
+        <a class="badge bg-secondary" href="https://instantiator.dev/tags/collective-intelligence">#collective-intelligence</a>
+    
+        
+        <a class="badge bg-secondary" href="https://instantiator.dev/tags/ci">#ci</a>
+    
+        
+        <a class="badge bg-secondary" href="https://instantiator.dev/tags/zeitgeist">#zeitgeist</a>
+    
+        
+        <a class="badge bg-secondary" href="https://instantiator.dev/tags/zg">#zg</a>
+    
+</div>
+
+
+            </div>
+            <div class="mt-4">
+                <p><em>Browsers rule with an iron fist when it comes to the things your web app is allowed to do, and video playback is a complex topic. This post breaks down some advanced solutions for developers implementing embedded video.</em></p>
+<h1 id="managing-rich-video-experiences-in-your-web-app-like-a-pro">Managing rich video experiences in your web app like a pro</h1>
+<p>Developing web apps with embedded video content means you can offer your users a rich experience, and HTML5’s <code>&lt;video&gt;</code> element offers a lot of capabilities that used to be very difficult to implement.</p>
+<p>There are still some aspects that are complex for developers, though - particularly in cases where video playback must be triggered by a remote event, or automatically played, rather than in response to a user’s click:</p>
+<ul>
+<li>How to understand if the browser will permit the video to play</li>
+<li>How to work within those constraints to get permission to play video</li>
+<li>How to minimise the risk that video will buffer during playback</li>
+<li>How to manage resources when you have a lot of videos to play</li>
+<li>How to synchronise video playback across multiple devices</li>
+</ul>
+<p>At Nesta’s <a href="https://www.nesta.org.uk/project/centre-collective-intelligence/">Centre for Collective Intelligence</a>, we needed to address all of these problems as we built <a href="https://zg-app.com">Zeitgeist</a>, our application to deliver <a href="https://instantiator.dev/post/cci-zg-deliberation-at-scale/">deliberative workshops</a> at scale. The stimuli for these workshops (often in the form of videos) is a core part of the user experience, and a key reason why our workshops are reported so enjoyable by participants.</p>
+<p><a href="https://zg-app.com"><img src="/cci/zg-card.jpeg" alt="Zeitgeist - scalable public deliberation, data-driven insights, and more engaging public participation" title="A small poster for Zeitgeist - a digital product that delivers scalable public engagements"></a></p>
+<p>It’s important to get video implementation right, and there are a surprising number of pitfalls.</p>
+<p>For most use cases, a good video component for your chosen framework is the best option but, even then, awareness of the issues will help you debug and problem solve differences in experience between your users.</p>
+<p>You may have custom needs, a design that doesn’t fit any existing video playback component, or playback issues on specific devices. This is a technical post with advice to help you to understand what’s going on, and how you can best craft a good experience for your users…</p>
+<h2 id="playing-video-programmatically">Playing video programmatically</h2>
+<p>Here’s a simple rule to get started: If your video is silent or muted, you can autoplay a video or initiate play programmatically without any extra steps. If your video has an audio track, most browsers require a user gesture for this.</p>
+<h3 id="concepts">Concepts</h3>
+<p>Browsers each manage video playback permission with their own variant on some common rules. There are some common concepts shared between them.</p>
+<h4 id="activation-and-user-gestures">Activation and user gestures</h4>
+<p>There are two key ways that some restricted APIs are activated by browsers.</p>
+<ul>
+<li><a href="https://developer.mozilla.org/en-US/docs/Glossary/Sticky_activation"><strong>Sticky activation</strong></a><strong>.</strong> After sticky activation, a restricted API is enabled, and remains enabled for the duration of the user’s session on your page.</li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Glossary/Transient_activation"><strong>Transient activation</strong></a><strong>.</strong> This is available only for a short time after activation (eg. a second or so after the user clicks on your page, or performs another gesture).</li>
+</ul>
+<h4 id="autoplay">Autoplay</h4>
+<p>Autoplay, or programmatic play, of <strong>videos with sound</strong> is governed by <strong>sticky activation</strong>.</p>
+<p>The autoplay policy of the browser governs both the <strong><code>autoplay</code></strong> property of a video, and any attempts to play it by invoking the <strong><code>play()</code></strong> function on the element programmatically.</p>
+<p>Each browser has its own definition of user gestures, activation requirements, and the transient window of opportunity…</p>
+<table>
+  <thead>
+      <tr>
+          <th>Policy</th>
+          <th>Autoplay policy</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><strong>All browsers</strong></td>
+          <td><strong>Autoplay is permitted if</strong> the video is muted</td>
+      </tr>
+      <tr>
+          <td><strong><a href="https://developer.mozilla.org/en-US/docs/Web/Media/Guides/Autoplay#autoplay_availability">MDN general autoplay description</a></strong></td>
+          <td><strong>Autoplay is likely to be permitted if</strong> the audio is muted or volume is set to <code>0</code> the user has interacted with the site the site has been allowlisted the autoplay permissions policy has been granted by an <code>&lt;iframe&gt;</code></td>
+      </tr>
+      <tr>
+          <td><a href="https://developer.chrome.com/blog/autoplay"><strong>Chrome autoplay policy</strong></a></td>
+          <td><strong>Autoplay is permitted if</strong> the user has installed this app as a PWA, or the user has interacted with the domain (eg. clicked on the page), or the user has crossed the Media Engagement Index (MEI) threshold <strong>The MEI threshold is crossed if</strong> the user has previously played more than 7s of audio or video with sound on the domain, and the tab with the video is active, and the video element itself is rendered at larger than 200x140px</td>
+      </tr>
+      <tr>
+          <td><a href="https://developer.apple.com/documentation/webkit/delivering-video-content-for-safari"><strong>Delivering video content for Safari</strong></a></td>
+          <td><strong>Autoplay is permitted if</strong> the video element has the <code>playsinline</code> attribute (iOS) the video element itself has played video with sound before the site itself has been allow-listed by browser settings</td>
+      </tr>
+      <tr>
+          <td></td>
+          <td></td>
+      </tr>
+  </tbody>
+</table>
+<h3 id="testing-for-autoplay">Testing for autoplay</h3>
+<p>There’s no guarantee that playback will succeed. The best advice seems to be, when programmatically playing video, to catch any errors thrown. If the <strong><code>play</code></strong> function throws, your code should fail gracefully.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-ts" data-lang="ts"><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">promise</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">videoRef</span>.<span style="color:#a6e22e">current</span>.<span style="color:#a6e22e">play</span>();
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">promise</span> <span style="color:#f92672">!==</span> <span style="color:#66d9ef">undefined</span>) {
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">promise</span>.<span style="color:#66d9ef">catch</span>(<span style="color:#a6e22e">error</span> <span style="color:#f92672">=&gt;</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// Playback has started
+</span></span></span><span style="display:flex;"><span>  }).<span style="color:#a6e22e">then</span>(() <span style="color:#f92672">=&gt;</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// Playback has failed
+</span></span></span><span style="display:flex;"><span>  });
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>or, asynchronously:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-ts" data-lang="ts"><span style="display:flex;"><span><span style="color:#66d9ef">try</span> {
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">await</span> <span style="color:#a6e22e">videoRef</span>.<span style="color:#a6e22e">current</span>.<span style="color:#a6e22e">play</span>();
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">// Playback has started
+</span></span></span><span style="display:flex;"><span>} <span style="color:#66d9ef">catch</span> (<span style="color:#a6e22e">err</span>: <span style="color:#66d9ef">any</span>) {
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">// Playback has failed
+</span></span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h3 id="getting-sticky-permissions">Getting sticky permissions</h3>
+<p>Our application needs to play video at certain times, and governed by its own events. It’s sensitive to timing, and so when video is required to play, we need to maximise the likelihood that the browser will permit this.</p>
+<p>As browsers are fickle and grant permissions according to their own policies, it’s possible that the user may not have the sticky permission at time of playback. We take some steps to improve the odds…</p>
+<p>Prior to video playback, we initiate a short test of the play function. We initiate a very short play and pause cycle. If the video does not play, then we know additional permissions are required.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-ts" data-lang="ts"><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">testPlayback</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">useCallback</span>(()<span style="color:#f92672">:</span> <span style="color:#a6e22e">Promise</span>&lt;<span style="color:#f92672">void</span>&gt; <span style="color:#f92672">=&gt;</span> {
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">try</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">await</span> <span style="color:#a6e22e">myVideoElement</span>.<span style="color:#a6e22e">play</span>();
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// Playback has succeeded
+</span></span></span><span style="display:flex;"><span>  } <span style="color:#66d9ef">catch</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// Playback has failed
+</span></span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">getStickyActivation</span>();
+</span></span><span style="display:flex;"><span>  } <span style="color:#66d9ef">finally</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">myVideoElement</span>.<span style="color:#a6e22e">pause</span>();
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>}, []);
+</span></span></code></pre></div><p>To obtain that sticky activation, we ask the user to click a button to indicate they wish video to play when the time is right. We then <em>repeat</em> the play/pause test off the back of their click. As we are in the short window of opportunity right after the user’s click, a transient activation makes the playback function available. The playback itself should then be sufficient for a sticky activation.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-ts" data-lang="ts"><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">getStickyActivation</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">useCallback</span>(() <span style="color:#f92672">=&gt;</span> {
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">// Show a dialog with a button, asking the user if they wish to permit video playback.
+</span></span></span><span style="display:flex;"><span>  <span style="color:#75715e">// The &#39;allow&#39; button calls testPlayback() again.
+</span></span></span><span style="display:flex;"><span>  <span style="color:#75715e">// The &#39;deny&#39; button fails gracefully.
+</span></span></span><span style="display:flex;"><span>}, []);
+</span></span></code></pre></div><p>NB. This is a simple pseudocode example, and there are some further considerations…</p>
+<h4 id="caveats">Caveats</h4>
+<p>Some older browsers have been reported to return the <strong><code>play</code></strong> function as <strong><code>undefined</code></strong> until activated. This feels like a simple workaround to limit access to certain APIs until permissions are available. Be aware of it! The code above would fail in this circumstance - and may need an additional check to ensure that <strong><code>myVideoElement.play !== undefined</code></strong> - and should immediately move to <strong><code>getStickyActivation()</code></strong> if that’s the case.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-ts" data-lang="ts"><span style="display:flex;"><span><span style="color:#66d9ef">try</span> {
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">videoRef</span>.<span style="color:#a6e22e">current</span><span style="color:#f92672">?</span>.<span style="color:#a6e22e">play</span> <span style="color:#f92672">===</span> <span style="color:#66d9ef">undefined</span>) {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">throw</span> <span style="color:#66d9ef">new</span> Error(<span style="color:#e6db74">&#34;play function not available&#34;</span>);
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">await</span> <span style="color:#a6e22e">videoRef</span>.<span style="color:#a6e22e">current</span>.<span style="color:#a6e22e">play</span>();
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">// Playback has started
+</span></span></span><span style="display:flex;"><span>} <span style="color:#66d9ef">catch</span> (<span style="color:#a6e22e">err</span>: <span style="color:#66d9ef">any</span>) {
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">// Playback has failed
+</span></span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>It’s possible that, despite the user interaction, playback could still be denied by the browser. If this happens, the above example would show the user a seemingly endless set of dialogs, until they choose the deny option. It’s a good idea to fail gracefully, let the user know what’s happened, and have a fallback option…</p>
+<h4 id="fallback">Fallback</h4>
+<p>A graceful solution might be to revert to silent video (ie. apply the <code>muted</code> attribute to the video element) if the sticky activation does not succeed after the second attempt. This would guarantee that playback succeeds, as all browsers support autoplay for muted videos (or videos with no audio track).</p>
+<p>In our case, our videos all feature subtitles, meaning that silent playback is an option (acceptable, if undesirable for most users).</p>
+<h2 id="caching-and-resource-management">Caching and resource management</h2>
+<p>Users don’t enjoy interrupted video. Especially when working with time sensitive video playback, you’ll likely want to know when the video is ready to play.</p>
+<h3 id="preload">Preload</h3>
+<p>Video elements don’t automatically load by default, but you can ask them to with the <code>preload</code> attribute on the <strong><code>&lt;video&gt;</code></strong> element.</p>
+<p>NB. <strong><code>preload</code></strong> is just a browser hint, not a guarantee. However, it seems to be widely observed.</p>
+<ul>
+<li>Use <strong><code>preload=”auto”</code></strong> to hint that video content should be loaded immediately</li>
+<li>Use <strong><code>preload=”metadata”</code></strong> to hint that video metadata should be loaded immediately</li>
+<li>Use <strong><code>preload=”none”</code></strong> if the video does not need to be loaded immediately</li>
+</ul>
+<h3 id="video-readiness-events">Video readiness events</h3>
+<p>The <strong><code>&lt;video&gt;</code></strong> element emits a number of different <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/video#events">events</a>, and these can be used to gauge the state of readiness for playback:</p>
+<ul>
+<li><strong><code>canplay</code></strong> indicates that the video will be able to play (although it may not be fully loaded)</li>
+<li><strong><code>canplaythrough</code></strong> indicates that the browser <em>estimates</em> that it will be able to play to the end of the video without stopping to buffer (although this isn’t a guarantee!)</li>
+</ul>
+<p>This example illustrates a simple approach to safely subscribe to the <strong><code>canplaythrough</code></strong> event in a React application component, registering a callback function as the recipient (and updating this registration when the callback function updates):</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-ts" data-lang="ts"><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">onReadyToPlay</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">useCallback</span>(() <span style="color:#f92672">=&gt;</span> {
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">// Video is ready to play, update the system and the UI
+</span></span></span><span style="display:flex;"><span>], []);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">useEffect</span>(() <span style="color:#f92672">=&gt;</span> {
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">videoRef</span>.<span style="color:#a6e22e">current</span>.<span style="color:#a6e22e">addEventListener</span>(<span style="color:#e6db74">&#34;canplaythrough&#34;</span>, <span style="color:#a6e22e">onReadyToPlay</span>);
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">return</span> () <span style="color:#f92672">=&gt;</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">videoRef</span>.<span style="color:#a6e22e">current</span>.<span style="color:#a6e22e">removeEventListener</span>(<span style="color:#e6db74">&#34;canplaythrough&#34;</span>);
+</span></span><span style="display:flex;"><span>  };
+</span></span><span style="display:flex;"><span>}, [<span style="color:#a6e22e">onReadyToPlay</span>]);
+</span></span></code></pre></div><p>There are also a number of useful events available from the <strong><code>&lt;video&gt;</code></strong> element itself to help monitor playback, including <strong><code>ended</code></strong>, <strong><code>pause</code></strong>, <strong><code>play</code></strong>, <strong><code>playing</code></strong>, and <strong><code>progress</code></strong>.</p>
+<h3 id="unload-video">Unload video</h3>
+<p>Cached video takes up valuable memory and, on devices with limited resources, can interfere with performance. Our experimentation with modest tablet devices showed that after pre-loading several videos, subsequent video content <em>failed</em> to load - and it’s likely the browser was protecting the remaining resources it had.</p>
+<p>Space and resources can be cleared by unloading videos after they are no longer required. Unloading isn’t trivial. The best approach seems to be to remove any <code>src</code> information, and then instruct the element to reload.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-ts" data-lang="ts"><span style="display:flex;"><span><span style="color:#a6e22e">videoRef</span>.<span style="color:#a6e22e">current</span>.<span style="color:#a6e22e">pause</span>();
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">videoRef</span>.<span style="color:#a6e22e">current</span>.<span style="color:#a6e22e">removeAttribute</span>(<span style="color:#e6db74">&#39;src&#39;</span>); <span style="color:#75715e">// empty source
+</span></span></span><span style="display:flex;"><span><span style="color:#a6e22e">videoRef</span>.<span style="color:#a6e22e">current</span>.<span style="color:#a6e22e">videoElement</span>.<span style="color:#a6e22e">load</span>();
+</span></span></code></pre></div><h2 id="synchronising-video-playback">Synchronising video playback</h2>
+<p>Our application has a strong requirement for well-synchronized video playback. We may have multiple clients, and each must play back their video at the same time. When those clients are not in the same room, we can tolerate a degree of variation in playback time (perhaps up to a second or so).</p>
+<p>When they are in the same room, though, it becomes more important. Our application client mute playback on most devices, and a single client becomes responsible for the audio track.</p>
+<p>Users, as we instinctively recognise, are very sensitive to the synchronisation of video and audio, particularly when lip-sync is visible on screen. Differences of only a couple of hundred milliseconds look wrong, and greater differences can cause feelings of disassociation or difficulty focusing on content. We noted that for videos where lip-sync failures are clear to our users, they started to look away from the screen in order to be able to listen to the speech.</p>
+<p><strong>Getting this right requires careful synchronisation!</strong></p>
+<p>In a native application, this would be trivial: Using a shared NTP service, all clients can agree a shared <em>server time</em> (and so recognise the delta between their own clock and server time).</p>
+<p>Of course, it’s possible to synchronise the operating system clocks between devices, using NTP, and if that’s an option for you I suggest you take it. We do not have control of all our users&rsquo; devices, so we needed an alternative.</p>
+<p>Our application runs in client web browsers, and for better or worse (it’s worse!) NTP is unavailable in that environment because it relies on the inspection of UDP packets. Web browsers are built on TCP and don’t make UDP communication available.</p>
+<h3 id="the-basics">The basics</h3>
+<p>Because our client interactions are moderated by a server, we are able to initiate playback at <em>approximately</em> the same time by issuing WebSocket messages to all clients in a session. This isn’t close enough, but it makes a good start to build on.</p>
+<p>So how can we improve on it?</p>
+<h3 id="getting-server-time">Getting server time</h3>
+<p>It’s important to note that we don’t actually need the <em>correct</em> time. The video playback clients need a shared time that they can use to control playback.</p>
+<p>The <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/Date">HTTP <code>Date</code> header</a> is a simple way to review the current time on any server, and included in every response from all our endpoints, but it’s not sufficient: It is only accurate to a single second, and that’s not sufficient.</p>
+<p>A better solution involves a simple endpoint that can respond with the full server time - including the milliseconds on the clock. This is accurate enough that (caveats below) it could be used to play back video sufficiently synchronised for a good user experience.</p>
+<h3 id="code-server-time-endpoint">Code: Server time endpoint</h3>
+<p>We implemented this as a lambda function, written in Typescript and running on the NodeJS runtime, served through API Gateway. Acknowledging caveats, again, it has been sufficient for our needs.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-ts" data-lang="ts"><span style="display:flex;"><span><span style="color:#66d9ef">import</span> { <span style="color:#a6e22e">APIGatewayProxyHandler</span>, <span style="color:#a6e22e">APIGatewayProxyResult</span> } <span style="color:#66d9ef">from</span> <span style="color:#e6db74">&#34;aws-lambda&#34;</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">const</span> { <span style="color:#a6e22e">WEBAPP_BASE_URL</span> } <span style="color:#f92672">=</span> <span style="color:#a6e22e">process</span>.<span style="color:#a6e22e">env</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">ALL_HEADERS</span> <span style="color:#f92672">=</span> {
+</span></span><span style="display:flex;"><span>  <span style="color:#e6db74">&#34;Access-Control-Allow-Origin&#34;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">`</span><span style="color:#e6db74">${</span><span style="color:#a6e22e">WEBAPP_BASE_URL</span><span style="color:#e6db74">}</span><span style="color:#e6db74">`</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#e6db74">&#34;Access-Control-Allow-Methods&#34;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;OPTIONS,GET&#34;</span>,
+</span></span><span style="display:flex;"><span>};
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">export</span> <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">handler</span>: <span style="color:#66d9ef">APIGatewayProxyHandler</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">async</span> (<span style="color:#a6e22e">_event</span>: <span style="color:#66d9ef">any</span>, <span style="color:#a6e22e">_context</span>: <span style="color:#66d9ef">any</span>)<span style="color:#f92672">:</span> <span style="color:#a6e22e">Promise</span>&lt;<span style="color:#f92672">APIGatewayProxyResult</span>&gt; <span style="color:#f92672">=&gt;</span> {
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">info</span> <span style="color:#f92672">=</span> { <span style="color:#a6e22e">timestamp</span>: <span style="color:#66d9ef">Date.now</span>() };
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">response</span>: <span style="color:#66d9ef">APIGatewayProxyResult</span> <span style="color:#f92672">=</span> { 
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">statusCode</span>: <span style="color:#66d9ef">200</span>, 
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">body</span>: <span style="color:#66d9ef">JSON.stringify</span>(<span style="color:#a6e22e">info</span>), 
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">headers</span>: <span style="color:#66d9ef">ALL_HEADERS</span> 
+</span></span><span style="display:flex;"><span>  };
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">response</span>;
+</span></span><span style="display:flex;"><span>};
+</span></span></code></pre></div><h3 id="caveat-cold-starts">Caveat: Cold-starts</h3>
+<p>Lambda functions (even on the NodeJS runtime) do experience cold starts. For some runtimes, this can create a delay of several seconds. The NodeJS / Typescript experience is much better than that, and these delays are well below a second.</p>
+<p>However, to avoid this risk, each client reaches out to the endpoint more than once - so reducing the likelihood it will encounter a cold start.</p>
+<h3 id="caveat-round-trip-time">Caveat: Round-trip time</h3>
+<p>Round-trip times can also impact the accuracy of this solution. When the server’s lambda creates a timestamp for the response, that is at the moment it has received the request. Clients won’t receive that immediately, as there’s the return journey for the response to consider.</p>
+<p>This makes it difficult to know with certainty how long it has taken between the timestamp being written to the response, and the moment it is received on the client.</p>
+<p>Assuming that the outgoing and returning routes are the same for packets, and that there aren’t significant changes in internet traffic during the request, clients can estimate when the timestamp was written by placing it half-way between the moment the request was sent, and the moment the response was received. Provided the request / response cycle is short enough, this is adequate for our purposes.</p>
+<p>We further improve on this by making the request several times - and making use of the answer from the shortest request duration.</p>
+<h3 id="the-full-process">The full process</h3>
+<ol>
+<li>Request server time several times to allow for cold-starts and variation in the round-trip duration</li>
+<li>Record the start and end time of each round-trip request</li>
+<li>Take the timestamp from the shortest round-trip, and place it half-way between request and response time on the client</li>
+</ol>
+<p>We do this while the user initially loads the application, and it meets our needs. Each client can then use the timestamp from the server to calculate a delta between their own clock’s time, and server time.</p>
+<h3 id="code-server-time-calculation">Code: Server time calculation</h3>
+<p>This client code illustrates how you might manage the process inside a provider - which can make <strong><code>toServerTime</code></strong> and <strong><code>fromServerTime</code></strong> functions available to the rest of your application.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-ts" data-lang="ts"><span style="display:flex;"><span><span style="color:#75715e">/** A delay between attempts to retrieve the server time. */</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">PERIOD_ms</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">1000</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">/** 
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"> * A function that calculates the best server time delta over several attempts.
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"> * NB. getServerTime is not implemented in this illustrative example.
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"> */</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">getServerTimeDelta</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">async</span> ()<span style="color:#f92672">:</span> <span style="color:#a6e22e">Promise</span>&lt;<span style="color:#f92672">number</span>&gt; <span style="color:#f92672">=&gt;</span> {
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">bestRoundTripTime_ms</span>: <span style="color:#66d9ef">number</span> <span style="color:#f92672">|</span> <span style="color:#66d9ef">undefined</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">undefined</span>;
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">bestDelta_ms</span>: <span style="color:#66d9ef">number</span> <span style="color:#f92672">|</span> <span style="color:#66d9ef">undefined</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">undefined</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">// Makes 4 attempts to retrieve the server time
+</span></span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">i</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; <span style="color:#a6e22e">i</span> <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">4</span>; <span style="color:#a6e22e">i</span><span style="color:#f92672">++</span>) {
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// introduce a short delay between attempts
+</span></span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">i</span> <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">0</span>) {
+</span></span><span style="display:flex;"><span>      <span style="color:#66d9ef">await</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">Promise</span>((<span style="color:#a6e22e">resolve</span>) <span style="color:#f92672">=&gt;</span> <span style="color:#a6e22e">setTimeout</span>(<span style="color:#a6e22e">resolve</span>, <span style="color:#a6e22e">PERIOD_ms</span>));
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// retrieve the server time
+</span></span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">sent</span> <span style="color:#f92672">=</span> Date.<span style="color:#a6e22e">now</span>();
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">response</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">await</span> <span style="color:#a6e22e">getServerTime</span>());
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">received</span> <span style="color:#f92672">=</span> Date.<span style="color:#a6e22e">now</span>();
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// if this is a shortest roundtrip, calculate the delta
+</span></span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">roundTripTime_ms</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">received</span> <span style="color:#f92672">-</span> <span style="color:#a6e22e">sent</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">bestRoundTripTime_ms</span> <span style="color:#f92672">===</span> <span style="color:#66d9ef">undefined</span> <span style="color:#f92672">||</span> <span style="color:#a6e22e">roundTripTime_ms</span> <span style="color:#f92672">&lt;</span> <span style="color:#a6e22e">bestRoundTripTime_ms</span>) {
+</span></span><span style="display:flex;"><span>      <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">midMoment_localTime_ms</span> <span style="color:#f92672">=</span> (<span style="color:#a6e22e">sent</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">received</span>) <span style="color:#f92672">/</span> <span style="color:#ae81ff">2</span>;
+</span></span><span style="display:flex;"><span>      <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">delta_ms</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">response</span>.<span style="color:#a6e22e">timestamp</span> <span style="color:#f92672">-</span> <span style="color:#a6e22e">midMoment_localTime_ms</span>;
+</span></span><span style="display:flex;"><span>      <span style="color:#a6e22e">bestRoundTripTime_ms</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">roundTripTime_ms</span>;
+</span></span><span style="display:flex;"><span>      <span style="color:#a6e22e">bestDelta_ms</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">delta_ms</span>;
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">// bestDelta_ms is the delta between local and server time
+</span></span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">bestDelta_ms</span>; 
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">interface</span> <span style="color:#a6e22e">ServerTimeContextData</span> {
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">toServerTime</span><span style="color:#f92672">:</span> (<span style="color:#a6e22e">localTime</span>: <span style="color:#66d9ef">number</span>) <span style="color:#f92672">=&gt;</span> <span style="color:#66d9ef">number</span>;
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">fromServerTime</span><span style="color:#f92672">:</span> (<span style="color:#a6e22e">serverTime</span>: <span style="color:#66d9ef">number</span>) <span style="color:#f92672">=&gt;</span> <span style="color:#66d9ef">number</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">/** A context that provides toServerTime and fromServerTime */</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">export</span> <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">ServerTimeContext</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">createContext</span>&lt;<span style="color:#f92672">ServerTimeContextData</span>&gt;(<span style="color:#66d9ef">undefined</span><span style="color:#f92672">!</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">/** A simple hook to access toServerTime and fromServerTime */</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">export</span> <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">useServerTime</span> <span style="color:#f92672">=</span> () <span style="color:#f92672">=&gt;</span> {
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">context</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">useContext</span>(<span style="color:#a6e22e">ServerTimeContext</span>);
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">context</span> <span style="color:#f92672">===</span> <span style="color:#66d9ef">undefined</span>) { 
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">throw</span> <span style="color:#66d9ef">new</span> Error(<span style="color:#e6db74">&#34;useServerTime must be called from within a ServerTimeProvider&#34;</span>); 
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">context</span>;
+</span></span><span style="display:flex;"><span>};
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">/** Responsible for calculating a delta between local and server time. */</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">export</span> <span style="color:#66d9ef">default</span> <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">ServerTimeProvider</span> <span style="color:#f92672">=</span> ({ <span style="color:#a6e22e">children</span> }<span style="color:#f92672">:</span> { <span style="color:#a6e22e">children</span>: <span style="color:#66d9ef">ReactNode</span> }) <span style="color:#f92672">=&gt;</span> {
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">// store the delta between local and server time
+</span></span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">const</span> [<span style="color:#a6e22e">bestDelta</span>, <span style="color:#a6e22e">setBestDelta</span>] <span style="color:#f92672">=</span> <span style="color:#a6e22e">useState</span>&lt;<span style="color:#f92672">number</span> <span style="color:#960050;background-color:#1e0010">|</span> <span style="color:#a6e22e">undefined</span>&gt;(<span style="color:#66d9ef">undefined</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">// Inititalise server time data once when this provider is rendered
+</span></span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">useEffect</span>(() <span style="color:#f92672">=&gt;</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">init</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">async</span> () <span style="color:#f92672">=&gt;</span> {
+</span></span><span style="display:flex;"><span>      <span style="color:#a6e22e">setBestDelta</span>(<span style="color:#66d9ef">await</span> <span style="color:#a6e22e">getServerTimeDelta</span>());
+</span></span><span style="display:flex;"><span>    };
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">init</span>();
+</span></span><span style="display:flex;"><span>  }, []);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">/** Calculates server time from local time */</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">toServerTime</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">useCallback</span>((<span style="color:#a6e22e">localTime</span>: <span style="color:#66d9ef">number</span>) <span style="color:#f92672">=&gt;</span> { 
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">localTime</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">bestDelta</span>; 
+</span></span><span style="display:flex;"><span>  }, [<span style="color:#a6e22e">bestDelta</span>]);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">/** Calculates local time from server time */</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">fromServerTime</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">useCallback</span>((<span style="color:#a6e22e">serverTime</span>: <span style="color:#66d9ef">number</span>) <span style="color:#f92672">=&gt;</span> { 
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">serverTime</span> <span style="color:#f92672">-</span> <span style="color:#a6e22e">bestDelta</span>; 
+</span></span><span style="display:flex;"><span>  }, [<span style="color:#a6e22e">bestDelta</span>]);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">return</span> (&lt;&gt;
+</span></span><span style="display:flex;"><span>    {<span style="color:#a6e22e">bestDelta</span> <span style="color:#f92672">!==</span> <span style="color:#66d9ef">undefined</span> <span style="color:#f92672">&amp;&amp;</span>
+</span></span><span style="display:flex;"><span>      &lt;<span style="color:#f92672">ServerTimeContext.Provider</span> <span style="color:#a6e22e">value</span><span style="color:#f92672">=</span>{{<span style="color:#a6e22e">toServerTime</span>, <span style="color:#a6e22e">fromServerTime</span>}}&gt;
+</span></span><span style="display:flex;"><span>        {<span style="color:#a6e22e">children</span>}
+</span></span><span style="display:flex;"><span>      &lt;/<span style="color:#f92672">ServerTimeContext.Provider</span>&gt;}
+</span></span><span style="display:flex;"><span>  &lt;/&gt;);
+</span></span><span style="display:flex;"><span>};
+</span></span></code></pre></div><h3 id="agreed-playback-time">Agreed playback time</h3>
+<p>Finally, playback events can be scheduled by the server and distributed to clients by web socket connection. These are often scheduled a second or two in the future to allow all clients an opportunity to receive the “initiate playback” event before playback should begin.</p>
+<p>Each client then uses its <strong><code>fromServerTime</code></strong> function to calculate when the playback should begin according to the time included in the event. It then delays playback until that moment to ensure that it begins at the prescribed time.</p>
+<p>In situations where the start has already been missed (perhaps because the client did not receive the web socket message until after the scheduled start time), the client may also need to modify the start position within the video to account for missed time.</p>
+<h3 id="caveat-final-calculations">Caveat: final calculations</h3>
+<p>The <strong><code>&lt;video&gt;</code></strong> element’s <strong><code>play</code></strong> function returns a promise, and that promise <em>should</em> resolve when playback has begun. This is not guaranteed to take a known amount of time, and so although playback is initiated at the right time (per the processes outlined above) there may still need to be a final adjustment after playback has actually begun.</p>
+<p>On return from playback, a comparison can be made between the current time and the expected start time. This can then be added to the current video’s playback position to adjust for the time spent starting playback.</p>
+<h3 id="code-video-playback">Code: Video playback</h3>
+<p>This code is illustrative of a client video component, and is heavily simplified. For instance, there’s no error handling for cases where playback does not begin…</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-ts" data-lang="ts"><span style="display:flex;"><span><span style="color:#a6e22e">executePlaybackRequest</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">async</span> (<span style="color:#a6e22e">request</span>: <span style="color:#66d9ef">PlaybackRequest</span>)<span style="color:#f92672">:</span> <span style="color:#a6e22e">Promise</span>&lt;<span style="color:#f92672">void</span>&gt; <span style="color:#f92672">=&gt;</span> {
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">// calculate the requested start time for the local clock, and delay until then
+</span></span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">localStartTime</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">toLocalTime</span>(<span style="color:#a6e22e">request</span>.<span style="color:#a6e22e">serverStartTime</span>);
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">delay</span> <span style="color:#f92672">=</span> Math.<span style="color:#a6e22e">max</span>(<span style="color:#a6e22e">localStartTime</span> <span style="color:#f92672">-</span> Date.<span style="color:#a6e22e">now</span>(), <span style="color:#ae81ff">0</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">// offset the start position of the video if required
+</span></span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">startPositionOffset</span> <span style="color:#f92672">=</span> Math.<span style="color:#a6e22e">abs</span>(Math.<span style="color:#a6e22e">min</span>(<span style="color:#a6e22e">localStartTime</span> <span style="color:#f92672">-</span> Date.<span style="color:#a6e22e">now</span>(), <span style="color:#ae81ff">0</span>));
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">videoRef</span>.<span style="color:#a6e22e">current</span>.<span style="color:#a6e22e">position</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">startPositionOffset</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">// wait until the start time and play the video
+</span></span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">await</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">Promise</span>((<span style="color:#a6e22e">resolve</span>) <span style="color:#f92672">=&gt;</span> <span style="color:#a6e22e">setTimeout</span>(<span style="color:#a6e22e">resolve</span>, <span style="color:#a6e22e">delay</span>));
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">startPlay</span> <span style="color:#f92672">=</span> Date.<span style="color:#a6e22e">now</span>();
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">await</span> <span style="color:#a6e22e">videoRef</span>.<span style="color:#a6e22e">current</span>.<span style="color:#a6e22e">play</span>();
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">// skip forward the time spent starting the video playback
+</span></span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">startingDuration</span> <span style="color:#f92672">=</span> Date.<span style="color:#a6e22e">now</span>() <span style="color:#f92672">-</span> <span style="color:#a6e22e">startPlay</span>;
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">videoRef</span>.<span style="color:#a6e22e">current</span>.<span style="color:#a6e22e">position</span> <span style="color:#f92672">+=</span> <span style="color:#a6e22e">startingDuration</span>;
+</span></span><span style="display:flex;"><span>};
+</span></span></code></pre></div><h2 id="in-summary">In summary</h2>
+<p>Thanks so much for reading to the end! I hope this post has been helpful to you. With a little effort, you can build some great user experiences with the <strong><code>&lt;video&gt;</code></strong> element.</p>
+<p>At Nesta’s <a href="https://www.nesta.org.uk/project/centre-collective-intelligence/">Centre for Collective Intelligence</a>, we have used these techniques to develop <a href="https://zg-app.com">Zeitgeist</a>, an application to deliver deliberative workshops at scale. We’ve worked hard to elevate the user experience, and in doing so it seems right to share back what we’ve learned.</p>
+<p>If you’d like to learn more about how deliberative workshops can help you get to the heart of what matters most, reach out to us at: <a href="mailto:collective.intelligence@nesta.org.uk">collective.intelligence@nesta.org.uk</a></p>
+
+            </div>
+        </div>
+
+        <div class="post-footer">
+            <div class="info">
+                
+
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+        </div><script src="/js/bootstrap.min.js"></script>
+<script src="/js/feather.min.js"></script>
+<script src="/js/mastodon-timeline.umd.js"></script>
+<script>
+  feather.replace();
+</script></body>
+</html>
