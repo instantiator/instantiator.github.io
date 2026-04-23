@@ -291,6 +291,7 @@
                 <p><em>Browsers rule with an iron fist when it comes to the things your web app is allowed to do, and video playback is a complex topic. This post breaks down some advanced solutions for developers implementing embedded video.</em></p>
 <h1 id="managing-rich-video-experiences-in-your-web-app-like-a-pro">Managing rich video experiences in your web app like a pro</h1>
 <p>Developing web apps with embedded video content means you can offer your users a rich experience, and HTML5’s <code>&lt;video&gt;</code> element offers a lot of capabilities that used to be very difficult to implement.</p>
+<img src="/cci/play-button.png" alt="A small poster for this article showing a play button on an abstract background" style="float: left; margin-right: 2em; margin-bottom: 2em; max-width: 25%;" />
 <p>There are still some aspects that are complex for developers, though - particularly in cases where video playback must be triggered by a remote event, or automatically played, rather than in response to a user’s click:</p>
 <ul>
 <li>How to understand if the browser will permit the video to play</li>
@@ -299,8 +300,10 @@
 <li>How to manage resources when you have a lot of videos to play</li>
 <li>How to synchronise video playback across multiple devices</li>
 </ul>
+<div style="clear: left;"></div>
+<h2 id="our-challenge">Our challenge</h2>
+<p><a href="https://zg-app.com" target="_blank"><img src="/cci/zg-card.jpeg" alt="A small poster for Zeitgeist - a digital product that delivers scalable public engagements" style="float: right; margin-left: 2em; margin-bottom: 2em; max-width: 25%;" ></a></p>
 <p>At Nesta’s <a href="https://www.nesta.org.uk/project/centre-collective-intelligence/">Centre for Collective Intelligence</a>, we needed to address all of these problems as we built <a href="https://zg-app.com">Zeitgeist</a>, our application to deliver <a href="https://instantiator.dev/post/cci-zg-deliberation-at-scale/">deliberative workshops</a> at scale. The stimuli for these workshops (often in the form of videos) is a core part of the user experience, and a key reason why our workshops are reported so enjoyable by participants.</p>
-<p><a href="https://zg-app.com"><img src="/cci/zg-card.jpeg" alt="Zeitgeist - scalable public deliberation, data-driven insights, and more engaging public participation" title="A small poster for Zeitgeist - a digital product that delivers scalable public engagements"></a></p>
 <p>It’s important to get video implementation right, and there are a surprising number of pitfalls.</p>
 <p>For most use cases, a good video component for your chosen framework is the best option but, even then, awareness of the issues will help you debug and problem solve differences in experience between your users.</p>
 <p>You may have custom needs, a design that doesn’t fit any existing video playback component, or playback issues on specific devices. This is a technical post with advice to help you to understand what’s going on, and how you can best craft a good experience for your users…</p>
