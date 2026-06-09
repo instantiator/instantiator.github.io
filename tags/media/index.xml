@@ -1,19 +1,24 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Media on instantiator.dev</title>
-    <link>https://instantiator.dev/tags/media/</link>
-    <description>Recent content in Media on instantiator.dev</description>
-    <generator>Hugo</generator>
-    <language>en</language>
-    <lastBuildDate>Sat, 11 Nov 2023 11:00:00 +0000</lastBuildDate>
-    <atom:link href="https://instantiator.dev/tags/media/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Open Social Distributor</title>
-      <link>https://instantiator.dev/post/open-social-distributor/</link>
-      <pubDate>Sat, 11 Nov 2023 11:00:00 +0000</pubDate>
-      <guid>https://instantiator.dev/post/open-social-distributor/</guid>
-      <description>&lt;p&gt;&lt;em&gt;How to use Open Social Distributor to post threads and messages across multiple social networks at once.&lt;/em&gt;&lt;/p&gt;</description>
-    </item>
-  </channel>
+	<channel>
+		<title>Media on instantiator.dev</title>
+		<link>https://instantiator.dev/tags/media/</link>
+		<description>Recent content in Media on instantiator.dev</description>
+		<generator>Hugo</generator>
+		<language>en</language>
+		
+		
+		
+		
+			<lastBuildDate>Sat, 11 Nov 2023 11:00:00 +0000</lastBuildDate>
+		
+			<atom:link href="https://instantiator.dev/tags/media/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>Open Social Distributor</title>
+				<link>https://instantiator.dev/post/open-social-distributor/</link>
+				<pubDate>Sat, 11 Nov 2023 11:00:00 +0000</pubDate>
+				<guid>https://instantiator.dev/post/open-social-distributor/</guid>
+				<description>&lt;p&gt;&lt;em&gt;How to use Open Social Distributor to post threads and messages across multiple social networks at once.&lt;/em&gt;&lt;/p&gt;</description>
+			</item>
+	</channel>
 </rss>

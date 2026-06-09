@@ -1,26 +1,31 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Video on instantiator.dev</title>
-    <link>https://instantiator.dev/tags/video/</link>
-    <description>Recent content in Video on instantiator.dev</description>
-    <generator>Hugo</generator>
-    <language>en</language>
-    <lastBuildDate>Tue, 21 Apr 2026 19:00:00 +0000</lastBuildDate>
-    <atom:link href="https://instantiator.dev/tags/video/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Manage rich video experiences in your webapp like a pro</title>
-      <link>https://instantiator.dev/post/video-playback-like-a-pro/</link>
-      <pubDate>Tue, 21 Apr 2026 19:00:00 +0000</pubDate>
-      <guid>https://instantiator.dev/post/video-playback-like-a-pro/</guid>
-      <description>&lt;p&gt;&lt;em&gt;Browsers rule with an iron fist when it comes to the things your web app is allowed to do, and video playback is a complex topic. This post breaks down some advanced solutions for developers implementing embedded video.&lt;/em&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Being a better witness</title>
-      <link>https://instantiator.dev/post/being-a-better-witness/</link>
-      <pubDate>Thu, 28 Mar 2019 00:00:00 +0000</pubDate>
-      <guid>https://instantiator.dev/post/being-a-better-witness/</guid>
-      <description>&lt;p&gt;&lt;em&gt;A couple of weeks ago I witnessed a stabbing&amp;hellip;&lt;/em&gt;&lt;/p&gt;&#xA;&lt;h1 id=&#34;being-a-better-witness&#34;&gt;Being a better witness&lt;/h1&gt;&#xA;&lt;p&gt;&lt;strong&gt;I didn’t know it was a stabbing at the time.&lt;/strong&gt; I was walking to the gym when I heard some young men shouting. I could see a few of them in someone’s front garden behind a hedge, pushing and shoving. It sounded brutal. A little girl in school uniform ran past me up the road, and there were a few people from the street nearby, looking on — some of them were on the phone. I called the police and reported what I saw. By the time I’d told them everything I could see, everyone involved had fled down the road.&lt;/p&gt;</description>
-    </item>
-  </channel>
+	<channel>
+		<title>Video on instantiator.dev</title>
+		<link>https://instantiator.dev/tags/video/</link>
+		<description>Recent content in Video on instantiator.dev</description>
+		<generator>Hugo</generator>
+		<language>en</language>
+		
+		
+		
+		
+			<lastBuildDate>Tue, 21 Apr 2026 19:00:00 +0000</lastBuildDate>
+		
+			<atom:link href="https://instantiator.dev/tags/video/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>Manage rich video experiences in your webapp like a pro</title>
+				<link>https://instantiator.dev/post/video-playback-like-a-pro/</link>
+				<pubDate>Tue, 21 Apr 2026 19:00:00 +0000</pubDate>
+				<guid>https://instantiator.dev/post/video-playback-like-a-pro/</guid>
+				<description>&lt;p&gt;&lt;em&gt;Browsers rule with an iron fist when it comes to the things your web app is allowed to do, and video playback is a complex topic. This post breaks down some advanced solutions for developers implementing embedded video.&lt;/em&gt;&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>Being a better witness</title>
+				<link>https://instantiator.dev/post/being-a-better-witness/</link>
+				<pubDate>Thu, 28 Mar 2019 00:00:00 +0000</pubDate>
+				<guid>https://instantiator.dev/post/being-a-better-witness/</guid>
+				<description>&lt;p&gt;&lt;em&gt;A couple of weeks ago I witnessed a stabbing&amp;hellip;&lt;/em&gt;&lt;/p&gt;&#xA;&lt;h1 id=&#34;being-a-better-witness&#34;&gt;Being a better witness&lt;/h1&gt;&#xA;&lt;p&gt;&lt;strong&gt;I didn’t know it was a stabbing at the time.&lt;/strong&gt; I was walking to the gym when I heard some young men shouting. I could see a few of them in someone’s front garden behind a hedge, pushing and shoving. It sounded brutal. A little girl in school uniform ran past me up the road, and there were a few people from the street nearby, looking on — some of them were on the phone. I called the police and reported what I saw. By the time I’d told them everything I could see, everyone involved had fled down the road.&lt;/p&gt;</description>
+			</item>
+	</channel>
 </rss>

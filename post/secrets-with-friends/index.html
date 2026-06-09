@@ -25,27 +25,27 @@
         }
       </script>
     
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:image" content="https://instantiator.dev/dps/key-splitting.png">
-  <meta name="twitter:title" content="Secrets With Friends">
-  <meta name="twitter:description" content="It’s possible to share a secret amongst a group of people so that only some of them are needed to reconstruct it…">
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:image" content="https://instantiator.dev/dps/key-splitting.png">
+	<meta name="twitter:title" content="Secrets With Friends">
+	<meta name="twitter:description" content="It’s possible to share a secret amongst a group of people so that only some of them are needed to reconstruct it…">
 
     <meta property="og:url" content="https://instantiator.dev/post/secrets-with-friends/">
-  <meta property="og:site_name" content="instantiator.dev">
-  <meta property="og:title" content="Secrets With Friends">
-  <meta property="og:description" content="It’s possible to share a secret amongst a group of people so that only some of them are needed to reconstruct it…">
-  <meta property="og:locale" content="en">
-  <meta property="og:type" content="article">
-    <meta property="article:section" content="post">
-    <meta property="article:published_time" content="2021-12-14T00:00:00+00:00">
-    <meta property="article:modified_time" content="2021-12-14T00:00:00+00:00">
-    <meta property="article:tag" content="Cryptography">
-    <meta property="article:tag" content="Fun">
-    <meta property="article:tag" content="Secrets">
-    <meta property="article:tag" content="Sharing">
-    <meta property="article:tag" content="Trust">
-    <meta property="article:tag" content="SSSS">
-    <meta property="og:image" content="https://instantiator.dev/dps/key-splitting.png">
+	<meta property="og:site_name" content="instantiator.dev">
+	<meta property="og:title" content="Secrets With Friends">
+	<meta property="og:description" content="It’s possible to share a secret amongst a group of people so that only some of them are needed to reconstruct it…">
+	<meta property="og:locale" content="en">
+	<meta property="og:type" content="article">
+		<meta property="article:section" content="post">
+		<meta property="article:published_time" content="2021-12-14T00:00:00+00:00">
+		<meta property="article:modified_time" content="2021-12-14T00:00:00+00:00">
+		<meta property="article:tag" content="Cryptography">
+		<meta property="article:tag" content="Fun">
+		<meta property="article:tag" content="Secrets">
+		<meta property="article:tag" content="Sharing">
+		<meta property="article:tag" content="Trust">
+		<meta property="article:tag" content="SSSS">
+		<meta property="og:image" content="https://instantiator.dev/dps/key-splitting.png">
 
 
     
@@ -308,30 +308,30 @@
 <h2 id="how-does-it-work">How does it work?</h2>
 <p>SSSS relies on the notion that <code>K</code> points can define a polynomial curve of degree <code>K-1</code>.</p>
 <table>
-  <thead>
-      <tr>
-          <th>Points</th>
-          <th>Polynomial curve</th>
-          <th>Polynomial degree</th>
-      </tr>
-  </thead>
-  <tbody>
-      <tr>
-          <td>2</td>
-          <td>Line</td>
-          <td>1</td>
-      </tr>
-      <tr>
-          <td>3</td>
-          <td>Parabola</td>
-          <td>2</td>
-      </tr>
-      <tr>
-          <td>4</td>
-          <td>Cubic curve</td>
-          <td>3</td>
-      </tr>
-  </tbody>
+	<thead>
+			<tr>
+					<th>Points</th>
+					<th>Polynomial curve</th>
+					<th>Polynomial degree</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td>2</td>
+					<td>Line</td>
+					<td>1</td>
+			</tr>
+			<tr>
+					<td>3</td>
+					<td>Parabola</td>
+					<td>2</td>
+			</tr>
+			<tr>
+					<td>4</td>
+					<td>Cubic curve</td>
+					<td>3</td>
+			</tr>
+	</tbody>
 </table>
 <p><strong>If a specific polynomial curve is the secret,</strong> then a minimum of <code>K</code> points are required to reconstruct the original curve, and the degree of the polynomial defines <code>K</code>.</p>
 <p>For instance, here there are 2 parabolas (polynomials of degree 2), and given only 2 points it is not possible to distinguish them (or any other number of parabolas that pass through these points). However, by providing a third point, they can be disambiguated - and only 1 parabola will match a given set of 3 points.</p>

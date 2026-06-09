@@ -1,54 +1,59 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Tool on instantiator.dev</title>
-    <link>https://instantiator.dev/tags/tool/</link>
-    <description>Recent content in Tool on instantiator.dev</description>
-    <generator>Hugo</generator>
-    <language>en</language>
-    <lastBuildDate>Sun, 01 Sep 2024 12:00:00 +0000</lastBuildDate>
-    <atom:link href="https://instantiator.dev/tags/tool/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Managing lists on BlueSky collaboratively</title>
-      <link>https://instantiator.dev/post/collaborative-list-manager-listsky/</link>
-      <pubDate>Sun, 01 Sep 2024 12:00:00 +0000</pubDate>
-      <guid>https://instantiator.dev/post/collaborative-list-manager-listsky/</guid>
-      <description>&lt;p&gt;&lt;em&gt;ListSky is a new tool for collaboratively managing lists of social accounts.&lt;/em&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Exploring OAuth</title>
-      <link>https://instantiator.dev/post/playing-with-oauth/</link>
-      <pubDate>Tue, 18 Jul 2023 17:00:00 +0000</pubDate>
-      <guid>https://instantiator.dev/post/playing-with-oauth/</guid>
-      <description>&lt;p&gt;&lt;em&gt;OAuth Token Explorer is a tool to explore authentication and authorisation on behalf of a user.&lt;/em&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Hammering JSON into CSV</title>
-      <link>https://instantiator.dev/post/hammer-json-into-csv/</link>
-      <pubDate>Sun, 16 Jul 2023 10:00:00 +0000</pubDate>
-      <guid>https://instantiator.dev/post/hammer-json-into-csv/</guid>
-      <description>&lt;p&gt;&lt;em&gt;json-to-smart-csv is a tool to help build CSV records from arbitrary JSON&amp;hellip;&lt;/em&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Querying data files with terminal tools</title>
-      <link>https://instantiator.dev/post/q/</link>
-      <pubDate>Mon, 04 Jan 2021 17:30:00 +0000</pubDate>
-      <guid>https://instantiator.dev/post/q/</guid>
-      <description>&lt;p&gt;There are a many ways to peek inside a data file and reason about its contents.&#xA;This post is about a triplet of simple, easily available tools that&#xA;I&amp;rsquo;ve found handy for searching and querying common data file formats.&#xA;You might too&amp;hellip;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Keeping jobs alive with caffeine</title>
-      <link>https://instantiator.dev/post/caffeine/</link>
-      <pubDate>Sat, 02 Jan 2021 19:00:00 +0000</pubDate>
-      <guid>https://instantiator.dev/post/caffeine/</guid>
-      <description>&lt;p&gt;My Mac likes to go to sleep to save power, and that means any long-running processes&#xA;I have underway will be suspended when it does.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Drive Stamper</title>
-      <link>https://instantiator.dev/post/np-drive-stamper/</link>
-      <pubDate>Fri, 29 May 2015 00:00:00 +0000</pubDate>
-      <guid>https://instantiator.dev/post/np-drive-stamper/</guid>
-      <description>&lt;p&gt;&lt;em&gt;This is a necropost, resurrected from an old blog.&lt;/em&gt;&lt;/p&gt;&#xA;&lt;h1 id=&#34;drive-stamper&#34;&gt;Drive Stamper&lt;/h1&gt;&#xA;&lt;p&gt;Drive Stamper is one of the first projects I released into the wild, and helped me to kick off my old blog in 2011.&lt;/p&gt;</description>
-    </item>
-  </channel>
+	<channel>
+		<title>Tool on instantiator.dev</title>
+		<link>https://instantiator.dev/tags/tool/</link>
+		<description>Recent content in Tool on instantiator.dev</description>
+		<generator>Hugo</generator>
+		<language>en</language>
+		
+		
+		
+		
+			<lastBuildDate>Sun, 01 Sep 2024 12:00:00 +0000</lastBuildDate>
+		
+			<atom:link href="https://instantiator.dev/tags/tool/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>Managing lists on BlueSky collaboratively</title>
+				<link>https://instantiator.dev/post/collaborative-list-manager-listsky/</link>
+				<pubDate>Sun, 01 Sep 2024 12:00:00 +0000</pubDate>
+				<guid>https://instantiator.dev/post/collaborative-list-manager-listsky/</guid>
+				<description>&lt;p&gt;&lt;em&gt;ListSky is a new tool for collaboratively managing lists of social accounts.&lt;/em&gt;&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>Exploring OAuth</title>
+				<link>https://instantiator.dev/post/playing-with-oauth/</link>
+				<pubDate>Tue, 18 Jul 2023 17:00:00 +0000</pubDate>
+				<guid>https://instantiator.dev/post/playing-with-oauth/</guid>
+				<description>&lt;p&gt;&lt;em&gt;OAuth Token Explorer is a tool to explore authentication and authorisation on behalf of a user.&lt;/em&gt;&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>Hammering JSON into CSV</title>
+				<link>https://instantiator.dev/post/hammer-json-into-csv/</link>
+				<pubDate>Sun, 16 Jul 2023 10:00:00 +0000</pubDate>
+				<guid>https://instantiator.dev/post/hammer-json-into-csv/</guid>
+				<description>&lt;p&gt;&lt;em&gt;json-to-smart-csv is a tool to help build CSV records from arbitrary JSON&amp;hellip;&lt;/em&gt;&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>Querying data files with terminal tools</title>
+				<link>https://instantiator.dev/post/q/</link>
+				<pubDate>Mon, 04 Jan 2021 17:30:00 +0000</pubDate>
+				<guid>https://instantiator.dev/post/q/</guid>
+				<description>&lt;p&gt;There are a many ways to peek inside a data file and reason about its contents.&#xA;This post is about a triplet of simple, easily available tools that&#xA;I&amp;rsquo;ve found handy for searching and querying common data file formats.&#xA;You might too&amp;hellip;&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>Keeping jobs alive with caffeine</title>
+				<link>https://instantiator.dev/post/caffeine/</link>
+				<pubDate>Sat, 02 Jan 2021 19:00:00 +0000</pubDate>
+				<guid>https://instantiator.dev/post/caffeine/</guid>
+				<description>&lt;p&gt;My Mac likes to go to sleep to save power, and that means any long-running processes&#xA;I have underway will be suspended when it does.&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>Drive Stamper</title>
+				<link>https://instantiator.dev/post/np-drive-stamper/</link>
+				<pubDate>Fri, 29 May 2015 00:00:00 +0000</pubDate>
+				<guid>https://instantiator.dev/post/np-drive-stamper/</guid>
+				<description>&lt;p&gt;&lt;em&gt;This is a necropost, resurrected from an old blog.&lt;/em&gt;&lt;/p&gt;&#xA;&lt;h1 id=&#34;drive-stamper&#34;&gt;Drive Stamper&lt;/h1&gt;&#xA;&lt;p&gt;Drive Stamper is one of the first projects I released into the wild, and helped me to kick off my old blog in 2011.&lt;/p&gt;</description>
+			</item>
+	</channel>
 </rss>

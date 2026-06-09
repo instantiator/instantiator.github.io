@@ -1,19 +1,24 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Yaml on instantiator.dev</title>
-    <link>https://instantiator.dev/tags/yaml/</link>
-    <description>Recent content in Yaml on instantiator.dev</description>
-    <generator>Hugo</generator>
-    <language>en</language>
-    <lastBuildDate>Mon, 04 Jan 2021 17:30:00 +0000</lastBuildDate>
-    <atom:link href="https://instantiator.dev/tags/yaml/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Querying data files with terminal tools</title>
-      <link>https://instantiator.dev/post/q/</link>
-      <pubDate>Mon, 04 Jan 2021 17:30:00 +0000</pubDate>
-      <guid>https://instantiator.dev/post/q/</guid>
-      <description>&lt;p&gt;There are a many ways to peek inside a data file and reason about its contents.&#xA;This post is about a triplet of simple, easily available tools that&#xA;I&amp;rsquo;ve found handy for searching and querying common data file formats.&#xA;You might too&amp;hellip;&lt;/p&gt;</description>
-    </item>
-  </channel>
+	<channel>
+		<title>Yaml on instantiator.dev</title>
+		<link>https://instantiator.dev/tags/yaml/</link>
+		<description>Recent content in Yaml on instantiator.dev</description>
+		<generator>Hugo</generator>
+		<language>en</language>
+		
+		
+		
+		
+			<lastBuildDate>Mon, 04 Jan 2021 17:30:00 +0000</lastBuildDate>
+		
+			<atom:link href="https://instantiator.dev/tags/yaml/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>Querying data files with terminal tools</title>
+				<link>https://instantiator.dev/post/q/</link>
+				<pubDate>Mon, 04 Jan 2021 17:30:00 +0000</pubDate>
+				<guid>https://instantiator.dev/post/q/</guid>
+				<description>&lt;p&gt;There are a many ways to peek inside a data file and reason about its contents.&#xA;This post is about a triplet of simple, easily available tools that&#xA;I&amp;rsquo;ve found handy for searching and querying common data file formats.&#xA;You might too&amp;hellip;&lt;/p&gt;</description>
+			</item>
+	</channel>
 </rss>

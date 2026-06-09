@@ -1,26 +1,31 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Trust on instantiator.dev</title>
-    <link>https://instantiator.dev/tags/trust/</link>
-    <description>Recent content in Trust on instantiator.dev</description>
-    <generator>Hugo</generator>
-    <language>en</language>
-    <lastBuildDate>Tue, 14 Dec 2021 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://instantiator.dev/tags/trust/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Secrets With Friends</title>
-      <link>https://instantiator.dev/post/secrets-with-friends/</link>
-      <pubDate>Tue, 14 Dec 2021 00:00:00 +0000</pubDate>
-      <guid>https://instantiator.dev/post/secrets-with-friends/</guid>
-      <description>&lt;p&gt;&lt;em&gt;It&amp;rsquo;s possible to share a secret amongst a group of people so that only some of them are needed to reconstruct it&amp;hellip;&lt;/em&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>3 excellent ways to build trust with your users</title>
-      <link>https://instantiator.dev/post/3-ways-build-trust/</link>
-      <pubDate>Wed, 11 Oct 2017 00:00:00 +0000</pubDate>
-      <guid>https://instantiator.dev/post/3-ways-build-trust/</guid>
-      <description>&lt;p&gt;&lt;em&gt;This article was originally posted to Medium.&lt;/em&gt;&lt;/p&gt;&#xA;&lt;h1 id=&#34;3-excellent-ways-to-build-trust-with-your-users&#34;&gt;3 excellent ways to build trust with your users&lt;/h1&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;I don’t see why it needs that permission!&lt;/p&gt;</description>
-    </item>
-  </channel>
+	<channel>
+		<title>Trust on instantiator.dev</title>
+		<link>https://instantiator.dev/tags/trust/</link>
+		<description>Recent content in Trust on instantiator.dev</description>
+		<generator>Hugo</generator>
+		<language>en</language>
+		
+		
+		
+		
+			<lastBuildDate>Tue, 14 Dec 2021 00:00:00 +0000</lastBuildDate>
+		
+			<atom:link href="https://instantiator.dev/tags/trust/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>Secrets With Friends</title>
+				<link>https://instantiator.dev/post/secrets-with-friends/</link>
+				<pubDate>Tue, 14 Dec 2021 00:00:00 +0000</pubDate>
+				<guid>https://instantiator.dev/post/secrets-with-friends/</guid>
+				<description>&lt;p&gt;&lt;em&gt;It&amp;rsquo;s possible to share a secret amongst a group of people so that only some of them are needed to reconstruct it&amp;hellip;&lt;/em&gt;&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>3 excellent ways to build trust with your users</title>
+				<link>https://instantiator.dev/post/3-ways-build-trust/</link>
+				<pubDate>Wed, 11 Oct 2017 00:00:00 +0000</pubDate>
+				<guid>https://instantiator.dev/post/3-ways-build-trust/</guid>
+				<description>&lt;p&gt;&lt;em&gt;This article was originally posted to Medium.&lt;/em&gt;&lt;/p&gt;&#xA;&lt;h1 id=&#34;3-excellent-ways-to-build-trust-with-your-users&#34;&gt;3 excellent ways to build trust with your users&lt;/h1&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;I don’t see why it needs that permission!&lt;/p&gt;</description>
+			</item>
+	</channel>
 </rss>
