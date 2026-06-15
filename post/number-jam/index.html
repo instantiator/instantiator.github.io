@@ -303,7 +303,7 @@
 <p>Before posting the video, though, we needed to obscure our number plate. Privacy first!</p>
 <p>I asked Gemini to do it. Gemini, fairly enough, pointed out that this would require a subscription. That seemed a lot for one video. There didn&rsquo;t seem to be anything freely available or open source that could do this&hellip; <em>How hard could it be?</em></p>
 <h1 id="building-number-jam">Building <code>number-jam</code></h1>
-<p>I set about building <a href="https://github.com/instantiator/number-jam">number-jam</a> — a command line tool that detects and obscures number plates in videos.</p>
+<p>I set about building <a href="https://github.com/instantiator/number-jam">number-jam</a> - a command line tool that detects and obscures number plates in videos.</p>
 <p>In its simplest form, you can ask it to detect number plates in a video, and then use it to obscure them:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>npx number-jam detect --input source.mp4 | npx number-jam obscure --input source.mp4 --output output.mp4
 </span></span></code></pre></div><p>The tool has two verbs:</p>
@@ -313,7 +313,7 @@
 </ul>
 <p>Keeping them separate means you can inspect, store, or modify the detection data between steps.</p>
 <h2 id="the-challenge">The challenge</h2>
-<p>At its core is <a href="https://github.com/openalpr/openalpr">OpenALPR</a>, a well-known ANPR library — though not a well-maintained one.</p>
+<p>At its core is <a href="https://github.com/openalpr/openalpr">OpenALPR</a>, a well-known ANPR library (though it&rsquo;s not well-maintained).</p>
 <p>I found that its per-frame detection rate is patchy: a plate visible for ten seconds might only register in a handful of frames. To safely obscure a number plate it has to be fully hidden in every frame it appears in. OpenALPR alone isn&rsquo;t sufficient.</p>
 <p>So I explored ways to supplement it with other techniques:</p>
 <ul>
@@ -332,33 +332,64 @@
 <li>accept it or send it back with notes</li>
 </ul>
 <p>The development standards and rules live in <a href="https://github.com/instantiator/number-jam/tree/main/dev-environment"><code>dev-environment/</code></a> — a set of markdown files specifying coding standards, pre- and post-coding activities, and working style. <code>CLAUDE.md</code> points Claude Code to these at the start of every session.</p>
-<h2 id="learnings">Learnings</h2>
-<p>The standards aren&rsquo;t perfect — and that&rsquo;s instructive in itself. If you don&rsquo;t specify something clearly enough, cutting a corner is a perfectly reasonable response for a developer, or an AI. I steadily amended the rules as we worked to try to address this.</p>
+<h2 id="progress">Progress</h2>
+<p>Well, it&rsquo;s seems to be working! You can <a href="https://github.com/instantiator/number-jam#usage">use it</a> directly from <code>npm</code> (Node Package Manager) under Linux or Mac OS&hellip;</p>
+<h3 id="how-to-use-it">How to use it</h3>
+<p>For full usage instructions, see the <a href="https://github.com/instantiator/number-jam#usage">Usage</a> section of the README. Here&rsquo;s a quick summary&hellip;</p>
+<p>You&rsquo;ll need to install:</p>
+<ul>
+<li><a href="https://brew.sh/">Homebrew</a> (Mac OS only - for installing the other packages)</li>
+<li><a href="https://nodejs.org/">NodeJS</a> (<code>npm</code> holds the <code>number-jam</code> package)</li>
+<li><a href="https://www.docker.com/">Docker</a> (Docker Desktop on Mac OS)</li>
+</ul>
+<h3 id="linux">Linux</h3>
+<p>Install NodeJS and Docker from apt-get (Ubuntu / Debian).</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo apt-get install nodejs
+</span></span><span style="display:flex;"><span>sudo apt-get install docker.io <span style="color:#f92672">&amp;&amp;</span> sudo systemctl start docker
+</span></span></code></pre></div><p>Test <code>number-jam</code>.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>npx number-jam --help
+</span></span></code></pre></div><h3 id="mac-os">Mac OS</h3>
+<p>Install Homebrew.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>/bin/bash -c <span style="color:#e6db74">&#34;</span><span style="color:#66d9ef">$(</span>curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh<span style="color:#66d9ef">)</span><span style="color:#e6db74">&#34;</span>
+</span></span></code></pre></div><p>Install NodeJS and Docker from Homebrew.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>brew install node
+</span></span><span style="display:flex;"><span>brew install --cask docker-desktop
+</span></span></code></pre></div><p>Test <code>number-jam</code>.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>npx number-jam --help
+</span></span></code></pre></div><h2 id="learnings">Learnings</h2>
+<p>For solo devs, or people using coding assistants, it&rsquo;s difficult to manage a consistent process. A lot of GitHub pull-request code review workflows assume you&rsquo;re working in a team, and they are great for that environment. When you are the repository owner, branch protections and code review requirements can start to feel like overheads. They&rsquo;re not - and they can protect you from silly mistakes, especially when you gate your changes on passing tests.</p>
+<p>My <a href="https://github.com/instantiator/dev-environment">coding standards</a> aren&rsquo;t perfect — and that&rsquo;s useful information. If you don&rsquo;t specify something clearly enough, cutting a corner is a perfectly reasonable response for a developer, or an AI. I steadily amended the rules as we worked to try to address this.</p>
 <p>A few things stood out:</p>
 <p><strong>Review pressure.</strong> Coding assistants produce a lot of code very quickly, but it also means less time to review each piece. it&rsquo;s easy to get overwhelmed. For a low-risk personal tool, I could lean on tests and documentation when I didn&rsquo;t have the bandwidth. (I don&rsquo;t have the time to become an expert in video processing.) <em>For production code, you need to slow down if you want your project to be safe and reliable.</em></p>
-<p><strong>Dependency versions.</strong> Libraries and GitHub Actions tended to come out behind their latest versions — training data has a cutoff. This matters for security. <em>Enable Dependabot, or make <code>npm audit</code> part of your workflow.</em></p>
 <p><strong>Small tasks review better.</strong> Breaking work into smaller pieces makes it much easier to spot problems. Large tasks produced large changesets, which are hard to reason about. It&rsquo;s much easier to miss something important if you allow things to get out of hand. <em>I&rsquo;m sure I missed things.</em></p>
-<p><strong>Tests aren&rsquo;t always adequate.</strong> The code was surprisingly fragile at times - even with the tests I&rsquo;d described in the task, and in the coding standards. That means that further changes could break established functionality.</p>
+<p><strong>Dependency versions.</strong> Libraries and GitHub Actions tended to come out behind their latest versions, as more often than not you&rsquo;re working with an AI model that doesn&rsquo;t have up-to-the-minute training data. The cut-off point means that it may assume older library versions. This matters for security and stability. Older versions are more likely to have known vulnerabilities or to be actively exploited. <em>Enable Dependabot, or make <code>npm audit</code> part of your workflow, so you have visibility of packages at risk and what you can do about it.</em></p>
+<p><strong>Tests are essential, but aren&rsquo;t always adequate.</strong> Testing is vitally important: Your coding assistants tackle the task you give them, but they can only look at so much of the project (and your intent) without overwhelming themselves or losing things from their context.</p>
+<p>The code was surprisingly fragile at times - even with the tests I&rsquo;d described in the task, and in the coding standards. When code is fragile, it means that further changes have a good chance of break established functionality. Without a test suite, you and your coding assistants won&rsquo;t know if a change you make to one part of the code will affect other parts of the application&rsquo;s functionality. Ask for tests for everything, and learn a little about testing&hellip;</p>
 <ul>
 <li>There were times I had to ask for specific additional tests to cover specific behaviours.</li>
 <li>An AI doesn&rsquo;t always reason carefully about what&rsquo;s <em>missing</em> from a test suite.</li>
 </ul>
-<p>There are some things that are <em>hard</em> to test automatically. For instance</p>
+<p>There are some things that were particularly <em>hard</em> to test automatically. For instance:</p>
 <ul>
 <li>several changes regressed the ability to obscure number plates properly, and led to flickery or unreliable output</li>
 <li>the &lsquo;obscuring polygons&rsquo; floated near the edges of the screen as plates entered and exited, and we had quite a bit of work to do to ensure that there weren&rsquo;t gaps in coverage</li>
 </ul>
-<p>It was hard to explain what was wrong (although it helped to be able to share screenshots), and I had to do quite a lot of manual testing to establish that things were working.</p>
-<p>On the other hand, it was also good to be able to talk the problem through, and the AI had more suggestions than I could have made alone. (I wasn&rsquo;t so sure about snapping polygons to the edge of the frame, but it made the case.)</p>
+<p>It was hard to explain what was wrong (although it helped to be able to share screenshots), and I had to do quite a lot of manual testing to establish whether things were working. This felt like a weakness in my process: I hadn&rsquo;t invested enough time on high level tests that examined the outputs from the process to ensure they worked. With tests like that, it would have been possible to ask for changes and ensure that the tests were run after every change, to catch issues and iterate on them.</p>
+<p>Although this felt like a shortcoming of the approach, it was good to be able to talk the problem through, and the AI assistant had more suggestions than I could have thought of alone. (I wasn&rsquo;t so sure about snapping polygons to the edge of the frame, but it made the case and it was right.)</p>
+<p>AI coding assistants seem to be particularly good at <em>unit testing</em> and, whilst that&rsquo;s only a part of a good testing strategy, having a few hundred unit tests under the belt, and built into an automated test suite, is reassuring!</p>
 <p><strong>Documentation drift.</strong> A literal-minded developer could update one documented instance of something that has changed, without propagating the change to every other place it appears. That&rsquo;s something a human reviewer might catch — but only if they&rsquo;re looking for it.</p>
 <p><strong>It&rsquo;s a bit lonely.</strong> Working in a small team is a more social experience, and leads to fewer omissions. Talking things through is good for the project, and good for me. Being able to go faster is a bit of a double-edged sword, for the reasons I&rsquo;ve already mentioned.</p>
-<p><strong>The counter-arguments:</strong> I built more than I could have managed alone, and faster than a small team might have moved.</p>
-<p>AI coding assistants seem to be particularly good at <em>unit testing</em> and, whilst that&rsquo;s only a part of a good testing strategy, having a few hundred unit tests under the belt, and built into an automated test suite, is reassuring!</p>
-<p><em>Overall, I still much prefer working as part of a team.</em></p>
+<p><strong>The counter-arguments.</strong> In collaboration, I was able to lead the development of a more complex tool than I could have managed alone, and did so faster than a small team might have moved. This is a good thing. Now I have a useful tool that I can share.</p>
+<p><strong>Overall.</strong> I think it&rsquo;s worth having some good knowledge about key aspects of software development in order to get started. That&rsquo;s where I think essential software development skills are going to move in future. Knowing what to ask for, what shape it should take, which libraries you trust, and the standards you need from your code make all the difference to quality, stability, security and user experience.</p>
+<p><em>I still much prefer working as part of a team.</em></p>
 <hr>
 <p>If you need to obscure a number plate in a video, you&rsquo;re welcome to use it - it&rsquo;s free and open source:</p>
 <ul>
 <li><a href="https://github.com/instantiator/number-jam">instantiator/number-jam</a></li>
+</ul>
+<p>If you&rsquo;d like to borrow the coding standards and processes I&rsquo;ve been working on, I recommend including this repository in your project as a <a href="https://git-scm.com/book/en/v2/Git-Tools-Submodules">git submodule</a>:</p>
+<ul>
+<li><a href="https://github.com/instantiator/dev-environment">instantiator/dev-environment</a></li>
 </ul>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>npx number-jam --help
 </span></span></code></pre></div><div class="footnotes" role="doc-endnotes">
