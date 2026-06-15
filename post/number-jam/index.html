@@ -339,13 +339,25 @@
 <p><strong>Review pressure.</strong> Coding assistants produce a lot of code very quickly, but it also means less time to review each piece. it&rsquo;s easy to get overwhelmed. For a low-risk personal tool, I could lean on tests and documentation when I didn&rsquo;t have the bandwidth. (I don&rsquo;t have the time to become an expert in video processing.) <em>For production code, you need to slow down if you want your project to be safe and reliable.</em></p>
 <p><strong>Dependency versions.</strong> Libraries and GitHub Actions tended to come out behind their latest versions — training data has a cutoff. This matters for security. <em>Enable Dependabot, or make <code>npm audit</code> part of your workflow.</em></p>
 <p><strong>Small tasks review better.</strong> Breaking work into smaller pieces makes it much easier to spot problems. Large tasks produced large changesets, which are hard to reason about. It&rsquo;s much easier to miss something important if you allow things to get out of hand. <em>I&rsquo;m sure I missed things.</em></p>
-<p><strong>Tests aren&rsquo;t always adequate.</strong> The code was surprisingly fragile at times - even with the tests I&rsquo;d described in the task, and in the coding standards. That means that further changes could break established functionality. There were times I had to ask for specific additional tests to cover specific behaviours. An AI doesn&rsquo;t always reason carefully about what&rsquo;s <em>missing</em> from a test suite.</p>
+<p><strong>Tests aren&rsquo;t always adequate.</strong> The code was surprisingly fragile at times - even with the tests I&rsquo;d described in the task, and in the coding standards. That means that further changes could break established functionality.</p>
+<ul>
+<li>There were times I had to ask for specific additional tests to cover specific behaviours.</li>
+<li>An AI doesn&rsquo;t always reason carefully about what&rsquo;s <em>missing</em> from a test suite.</li>
+</ul>
+<p>There are some things that are <em>hard</em> to test automatically. For instance</p>
+<ul>
+<li>several changes regressed the ability to obscure number plates properly, and led to flickery or unreliable output</li>
+<li>the &lsquo;obscuring polygons&rsquo; floated near the edges of the screen as plates entered and exited, and we had quite a bit of work to do to ensure that there weren&rsquo;t gaps in coverage</li>
+</ul>
+<p>It was hard to explain what was wrong (although it helped to be able to share screenshots), and I had to do quite a lot of manual testing to establish that things were working.</p>
+<p>On the other hand, it was also good to be able to talk the problem through, and the AI had more suggestions than I could have made alone. (I wasn&rsquo;t so sure about snapping polygons to the edge of the frame, but it made the case.)</p>
 <p><strong>Documentation drift.</strong> A literal-minded developer could update one documented instance of something that has changed, without propagating the change to every other place it appears. That&rsquo;s something a human reviewer might catch — but only if they&rsquo;re looking for it.</p>
 <p><strong>It&rsquo;s a bit lonely.</strong> Working in a small team is a more social experience, and leads to fewer omissions. Talking things through is good for the project, and good for me. Being able to go faster is a bit of a double-edged sword, for the reasons I&rsquo;ve already mentioned.</p>
 <p><strong>The counter-arguments:</strong> I built more than I could have managed alone, and faster than a small team might have moved.</p>
-<p>Overlal, I still much prefer working as part of a team.</p>
+<p>AI coding assistants seem to be particularly good at <em>unit testing</em> and, whilst that&rsquo;s only a part of a good testing strategy, having a few hundred unit tests under the belt, and built into an automated test suite, is reassuring!</p>
+<p><em>Overall, I still much prefer working as part of a team.</em></p>
 <hr>
-<p>If you need to obscure a number plate in a video, you&rsquo;re welcome to use it:</p>
+<p>If you need to obscure a number plate in a video, you&rsquo;re welcome to use it - it&rsquo;s free and open source:</p>
 <ul>
 <li><a href="https://github.com/instantiator/number-jam">instantiator/number-jam</a></li>
 </ul>
