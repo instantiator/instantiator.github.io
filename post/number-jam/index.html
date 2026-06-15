@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
+    <link rel="stylesheet" type="text/css" href="/css/mastodon-timeline.min.css">
+    
+    
+    <title>instantiator.dev | Experimental development with number-jam: a number plate obscurer</title>
+    
+    
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-SHE42ZWKEN"></script>
+      <script>
+        var doNotTrack = false;
+        if ( true ) {
+          var dnt = (navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack);
+          var doNotTrack = (dnt == "1" || dnt == "yes");
+        }
+        if (!doNotTrack) {
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-SHE42ZWKEN');
+        }
+      </script>
+    
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:image" content="https://img.youtube.com/vi/cXMizTx0x60/0.jpg">
+	<meta name="twitter:title" content="Experimental development with number-jam: a number plate obscurer">
+	<meta name="twitter:description" content="number-jam detects, tracks, and obscures vehicle number plates in video clips — and was an experiment in AI-assisted development.">
+
+    <meta property="og:url" content="https://instantiator.dev/post/number-jam/">
+	<meta property="og:site_name" content="instantiator.dev">
+	<meta property="og:title" content="Experimental development with number-jam: a number plate obscurer">
+	<meta property="og:description" content="number-jam detects, tracks, and obscures vehicle number plates in video clips — and was an experiment in AI-assisted development.">
+	<meta property="og:locale" content="en">
+	<meta property="og:type" content="article">
+		<meta property="article:section" content="post">
+		<meta property="article:published_time" content="2026-06-15T10:00:00+00:00">
+		<meta property="article:modified_time" content="2026-06-15T10:00:00+00:00">
+		<meta property="article:tag" content="Number-Jam">
+		<meta property="article:tag" content="ANPR">
+		<meta property="article:tag" content="OpenALPR">
+		<meta property="article:tag" content="Video">
+		<meta property="article:tag" content="Privacy">
+		<meta property="article:tag" content="AI">
+		<meta property="og:image" content="https://img.youtube.com/vi/cXMizTx0x60/0.jpg">
+
+
+    
+    <link rel="stylesheet"
+        href="/css/markupHighlight.min.b065fb7a8dabca50671d98ea7e8a42aed4027206ee1cf5a12e53d781afa4b03c.css"
+        integrity="sha256-sGX7eo2rylBnHZjqfopCrtQCcgbuHPWhLlPXga&#43;ksDw="
+        crossorigin="anonymous"
+        type="text/css">
+
+    </head><body><nav id="nav" class="navbar sticky-top justify-content-start navbar-expand-md frosted-white shadow mb-4">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="/">instantiator.dev</a>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav">
+        
+        
+        <li class="nav-item">
+          <a class="nav-link " href="/">
+            
+             Home
+          </a>
+        </li>
+        
+        <li class="nav-item">
+          <a class="nav-link " href="/post/">
+            
+             All posts
+          </a>
+        </li>
+        
+        <li class="nav-item">
+          <a class="nav-link " href="/categories/tool/">
+            
+             Tools
+          </a>
+        </li>
+        
+        <li class="nav-item">
+          <a class="nav-link " href="/categories/tutorial/">
+            
+             Tutorials
+          </a>
+        </li>
+        
+        <li class="nav-item">
+          <a class="nav-link " href="/categories/article/">
+            
+             Articles
+          </a>
+        </li>
+        
+        <li class="nav-item">
+          <a class="nav-link " href="/discounts/">
+            
+             Discounts
+          </a>
+        </li>
+        
+        <li class="nav-item">
+          <a class="nav-link " href="/about/">
+            
+             About
+          </a>
+        </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+<div class="container-fluid">
+
+<div class="row align-items-start">
+    <div class="col col-lg-3 d-none d-lg-block">
+      <div class="row mb-2">
+    <div class="col-3 col-lg-12 d-flex flex-column align-items-center">
+        <img 
+            src="/lewis/profile.jpg" alt="profile picture" 
+            class="mb-4 mt-4 img-thumbnail" 
+            style="border-radius: 50%; max-width: 200px; width: 100%;" />
+    </div>
+    <div class="col d-flex flex-column align-items-center">
+        <h3 class="mb-4"><a href="/">instantiator.dev</a></h3>
+        
+        <div style="text-align: center;" class="mb-4">
+            <p style="font-size: 0.8rem;">tech, volunteers, public safety, collective intelligence, articles, tools, code and ideas</p>
+        </div>
+
+        <div class="d-flex flex-row justify-content-evenly align-self-stretch mb-4">
+            
+            <a href="https://bsky.app/profile/instantiator.bsky.social" rel="me" aria-label="BlueSky account" alt="BlueSky account" target="_blank">
+                
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 600 530" fill="currentColor" stroke="currentColor" version="1.1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="m135.72 44.03c66.496 49.921 138.02 151.14 164.28 205.46 26.262-54.316 97.782-155.54 164.28-205.46 47.98-36.021 125.72-63.892 125.72 24.795 0 17.712-10.155 148.79-16.111 170.07-20.703 73.984-96.144 92.854-163.25 81.433 117.3 19.964 147.14 86.092 82.697 152.22-122.39 125.59-175.91-31.511-189.63-71.766-2.514-7.3797-3.6904-10.832-3.7077-7.8964-0.0174-2.9357-1.1937 0.51669-3.7077 7.8964-13.714 40.255-67.233 197.36-189.63 71.766-64.444-66.128-34.605-132.26 82.697-152.22-67.108 11.421-142.55-7.4491-163.25-81.433-5.9562-21.282-16.111-152.36-16.111-170.07 0-88.687 77.742-60.816 125.72-24.795z"/>
+                </svg>
+                
+            </a>
+            
+            <a href="https://mastodon.social/@instantiator" rel="me" aria-label="Mastodon account" alt="Mastodon account" target="_blank">
+                
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 418 512" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M433 179.11c0-97.2-63.71-125.7-63.71-125.7-62.52-28.7-228.56-28.4-290.48 0 0 0-63.72 28.5-63.72 125.7 0 115.7-6.6 259.4 105.63 289.1 40.51 10.7 75.32 13 103.33 11.4 50.81-2.8 79.32-18.1 79.32-18.1l-1.7-36.9s-36.31 11.4-77.12 10.1c-40.41-1.4-83-4.4-89.63-54a102.54 102.54 0 0 1-.9-13.9c85.63 20.9 158.65 9.1 178.75 6.7 56.12-6.7 105-41.3 111.23-72.9 9.8-49.8 9-121.5 9-121.5zm-75.12 125.2h-46.63v-114.2c0-49.7-64-51.6-64 6.9v62.5h-46.33V197c0-58.5-64-56.6-64-6.9v114.2H90.19c0-122.1-5.2-147.9 18.41-175 25.9-28.9 79.82-30.8 103.83 6.1l11.6 19.5 11.6-19.5c24.11-37.1 78.12-34.8 103.83-6.1 23.71 27.3 18.4 53 18.4 175z"></path></svg> 
+                
+            </a>
+            
+            <a href="https://github.com/instantiator" rel="me" aria-label="GitHub account" alt="GitHub account" target="_blank">
+                
+                <i data-feather="github" aria-hidden="true"></i>
+                
+            </a>
+            
+            <a href="https://www.linkedin.com/in/lewiswestbury" rel="me" aria-label="LinkedIn account" alt="LinkedIn account" target="_blank">
+                
+                <i data-feather="linkedin" aria-hidden="true"></i>
+                
+            </a>
+            
+            <a href="https://calendar.google.com/calendar/embed?src=ad7606dfb0580dc089629dff9be0d9fc0db19d296a7d72864c1b338f4dd896a4%40group.calendar.google.com&amp;ctz=Europe%2FLondon" rel="me" aria-label="Celebrations calendar" alt="Celebrations calendar" target="_blank">
+                
+                <i data-feather="calendar" aria-hidden="true"></i>
+                
+            </a>
+            
+            <a href="https://instantiator.dev/index.xml" rel="me" aria-label="RSS" alt="RSS" target="_blank">
+                
+                <i data-feather="rss" aria-hidden="true"></i>
+                
+            </a>
+            
+        </div>
+
+        <div class="d-flex flex-row justify-content-evenly align-self-stretch mb-4" style="font-size: 0.8rem;">
+            <ul style="padding-inline-start: 0;">
+            
+                <li><a href="https://instantiator.dev/presence" rel="me" aria-label="Presence" target="_blank">Presence</a> (tool) (in dev)</li>
+            
+                <li><a href="https://instantiator.dev/listsky/" rel="me" aria-label="ListSky" target="_blank">ListSky</a> (tool) (in dev)</li>
+            
+                <li><a href="https://epistolorean.club" rel="me" aria-label="The Epistolorean" target="_blank">The Epistolorean</a> (service)</li>
+            
+                <li><a href="https://icgames.net" rel="me" aria-label="Consensus Games" target="_blank">Consensus Games</a> (service) (in dev)</li>
+            
+                <li><a href="https://instantiator.dev/json-to-smart-csv/" rel="me" aria-label="JSON to Smart CSV" target="_blank">JSON to Smart CSV</a> (tool)</li>
+            
+                <li><a href="https://www.escapethereview.co.uk/profile/?user_id=11" rel="me" aria-label="Escape the Review" target="_blank">Escape the Review</a> (profile)</li>
+            
+                <li><a href="https://calendar.google.com/calendar/embed?src=ad7606dfb0580dc089629dff9be0d9fc0db19d296a7d72864c1b338f4dd896a4%40group.calendar.google.com&amp;ctz=Europe%2FLondon" rel="me" aria-label="In this house..." target="_blank">In this house...</a> (calendar)</li>
+            
+                <li><a href="https://calendar.app.google/9wYSR1cjEEdcS2zo7" rel="me" aria-label="A chat with Lewis" target="_blank">A chat with Lewis</a> (call)</li>
+            
+            </ul>
+        </div>
+
+        <div>
+            <span class="text-body-secondary fw-lighter" style="font-size: 0.8rem;">
+                &copy; Lewis Westbury  2026 
+            </span>
+        </div>
+    </div>
+</div>    
+
+
+
+    </div>
+    <div class="col-lg" style="overflow-x: hidden;">
+        <div id="post-content">
+            <h2 style="display: inline-block;">Experimental development with number-jam: a number plate obscurer</h2>
+                
+                    
+                        
+                        <a class="badge bg-primary" href="https://instantiator.dev/categories/tool">tool</a>
+                    
+                        
+                        <a class="badge bg-primary" href="https://instantiator.dev/categories/article">article</a>
+                    
+                
+            <div class="mt-2">
+                 
+
+<div class="mb-2">
+    <i data-feather="calendar"></i>
+    <time datetime="2026-06-15">2026-06-15</time>
+</div>
+
+<div>
+    <i data-feather="tag"></i>
+    
+        
+        <a class="badge bg-secondary" href="https://instantiator.dev/tags/number-jam">#number-jam</a>
+    
+        
+        <a class="badge bg-secondary" href="https://instantiator.dev/tags/anpr">#ANPR</a>
+    
+        
+        <a class="badge bg-secondary" href="https://instantiator.dev/tags/openalpr">#OpenALPR</a>
+    
+        
+        <a class="badge bg-secondary" href="https://instantiator.dev/tags/video">#video</a>
+    
+        
+        <a class="badge bg-secondary" href="https://instantiator.dev/tags/privacy">#privacy</a>
+    
+        
+        <a class="badge bg-secondary" href="https://instantiator.dev/tags/ai">#AI</a>
+    
+        
+        <a class="badge bg-secondary" href="https://instantiator.dev/tags/claudecode">#ClaudeCode</a>
+    
+        
+        <a class="badge bg-secondary" href="https://instantiator.dev/tags/typescript">#TypeScript</a>
+    
+        
+        <a class="badge bg-secondary" href="https://instantiator.dev/tags/tool">#tool</a>
+    
+        
+        <a class="badge bg-secondary" href="https://instantiator.dev/tags/cats">#cats</a>
+    
+        
+        <a class="badge bg-secondary" href="https://instantiator.dev/tags/vrm">#vrm</a>
+    
+        
+        <a class="badge bg-secondary" href="https://instantiator.dev/tags/registrationplate">#RegistrationPlate</a>
+    
+        
+        <a class="badge bg-secondary" href="https://instantiator.dev/tags/numberplate">#NumberPlate</a>
+    
+        
+        <a class="badge bg-secondary" href="https://instantiator.dev/tags/videoprocessing">#VideoProcessing</a>
+    
+</div>
+
+
+            </div>
+            <div class="mt-4">
+                <p><em><code>number-jam</code> detects, tracks, and obscures vehicle number plates in video clips — and was an experiment in AI-assisted development.</em></p>
+<h1 id="momos-psa">Momo&rsquo;s PSA</h1>
+<p>This is Momo, our cute little black cat, climbing into the wheel arch of our car while his sister, Suki, watches on&hellip;</p>
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+			<iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/cXMizTx0x60?autoplay=0&amp;controls=1&amp;end=0&amp;loop=0&amp;mute=0&amp;start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"></iframe>
+		</div>
+
+<p>We wanted to share this as a warning to other cat owners.</p>
+<blockquote>
+<p><strong>⚠️ Always check the wheel arches before you drive.</strong></p>
+</blockquote>
+<p>Before posting the video, though, we needed to obscure the number plate&hellip;</p>
+<p>I asked Gemini to do it. Gemini, fairly enough, pointed out that this would require a subscription. That seemed a lot for one video.</p>
+<p><em>How hard could it be?</em></p>
+<h1 id="building-number-jam">Building <code>number-jam</code></h1>
+<p>I set about building <a href="https://github.com/instantiator/number-jam">number-jam</a> — a command line tool that detects and obscures number plates in videos.</p>
+<p>In its simplest form, you can ask it to detect number plates in a video, and then use it to obscure them:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>npx number-jam detect --input source.mp4 | npx number-jam obscure --input source.mp4 --output output.mp4
+</span></span></code></pre></div><p>The tool has two verbs:</p>
+<ul>
+<li><code>detect</code> analyses the video and writes a JSON tracking document</li>
+<li><code>obscure</code> reads that document and renders the obscured output.</li>
+</ul>
+<p>Keeping them separate means you can inspect, store, or modify the detection data between steps.</p>
+<h2 id="the-challenge">The challenge</h2>
+<p>At its core is <a href="https://github.com/openalpr/openalpr">OpenALPR</a>, a well-known ANPR library — though not a well-maintained one.</p>
+<p>I found that its per-frame detection rate is patchy: a plate visible for ten seconds might only register in a handful of frames. To safely obscure a number plate it has to be fully hidden in every frame it appears in. OpenALPR alone isn&rsquo;t sufficient.</p>
+<p>So I explored ways to supplement it with other techniques:</p>
+<ul>
+<li><strong>Character scanning</strong> — Tesseract OCR<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup> runs in a region around each detected plate, catching any characters that OpenALPR missed</li>
+<li><strong>IOU<sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup> tracking and gap interpolation</strong> — links detections across frames and fills short gaps</li>
+<li><strong>SAD<sup id="fnref:3"><a href="#fn:3" class="footnote-ref" role="doc-noteref">3</a></sup> visual tracking</strong> — template matching tracks motion, to extends plate coverage before and after the ANPR detection window</li>
+<li><strong>Velocity extrapolation</strong> — when visual tracking ends, the tool extrapolates a little more motion using the plate&rsquo;s recent velocity</li>
+</ul>
+<p>The combination covers plates reliably through entry, exit, and the gaps in between.</p>
+<h2 id="ways-of-working">Ways of working</h2>
+<p>This project was also an experiment. I wanted to explore working with an AI coding assistant on a real, hands-on problem. I wanted a small development cycle:</p>
+<ul>
+<li>define a task (as you might write a KANBAN ticket)</li>
+<li>hand it to Claude Code</li>
+<li>review and manually test the output</li>
+<li>accept it or send it back with notes</li>
+</ul>
+<p>The development standards and rules live in <a href="https://github.com/instantiator/number-jam/tree/main/dev-environment"><code>dev-environment/</code></a> — a set of markdown files specifying coding standards, pre- and post-coding activities, and working style. <code>CLAUDE.md</code> points Claude Code to these at the start of every session.</p>
+<h2 id="learnings">Learnings</h2>
+<p>The standards aren&rsquo;t perfect — and that&rsquo;s instructive in itself. If you don&rsquo;t specify something clearly enough, cutting a corner is a perfectly reasonable response for a developer, or an AI. I steadily amended the rules as we worked to try to address this.</p>
+<p>A few things stood out:</p>
+<p><strong>Review pressure.</strong> Coding assistants produce a lot of code very quickly, but it also means less time to review each piece. it&rsquo;s easy to get overwhelmed. For a low-risk personal tool, I could lean on tests and documentation when I didn&rsquo;t have the bandwidth. (I don&rsquo;t have the time to become an expert in video processing.) <em>For production code, you need to slow down if you want your project to be safe and reliable.</em></p>
+<p><strong>Dependency versions.</strong> Libraries and GitHub Actions tended to come out behind their latest versions — training data has a cutoff. This matters for security. <em>Enable Dependabot, or make <code>npm audit</code> part of your workflow.</em></p>
+<p><strong>Small tasks review better.</strong> Breaking work into smaller pieces makes it much easier to spot problems. Large tasks produced large changesets, which are hard to reason about. It&rsquo;s much easier to miss something important if you allow things to get out of hand. <em>I&rsquo;m sure I missed things.</em></p>
+<p><strong>Tests aren&rsquo;t always adequate.</strong> The code was surprisingly fragile at times - even with the tests I&rsquo;d described in the task, and in the coding standards. That means that further changes could break established functionality. There were times I had to ask for specific additional tests to cover specific behaviours. An AI doesn&rsquo;t always reason carefully about what&rsquo;s <em>missing</em> from a test suite.</p>
+<p><strong>Documentation drift.</strong> A literal-minded developer could update one documented instance of something that has changed, without propagating the change to every other place it appears. That&rsquo;s something a human reviewer might catch — but only if they&rsquo;re looking for it.</p>
+<p><strong>It&rsquo;s a bit lonely.</strong> Working in a small team is a more social experience, and leads to fewer omissions. Talking things through is good for the project, and good for me. Being able to go faster is a bit of a double-edged sword, for the reasons I&rsquo;ve already mentioned.</p>
+<p><strong>The counter-arguments:</strong> I built more than I could have managed alone, and faster than a small team might have moved.</p>
+<p>Overlal, I still much prefer working as part of a team.</p>
+<hr>
+<p>If you need to obscure a number plate in a video, you&rsquo;re welcome to use it:</p>
+<ul>
+<li><a href="https://github.com/instantiator/number-jam">instantiator/number-jam</a></li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>npx number-jam --help
+</span></span></code></pre></div><div class="footnotes" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn:1">
+<p>Optical Character Recognition&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:2">
+<p>Intersection over Union&#160;<a href="#fnref:2" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:3">
+<p>Sum of Absolute Differences&#160;<a href="#fnref:3" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+</ol>
+</div>
+
+            </div>
+        </div>
+
+        <div class="post-footer">
+            <div class="info">
+                
+
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+        </div><script src="/js/bootstrap.min.js"></script>
+<script src="/js/feather.min.js"></script>
+<script src="/js/mastodon-timeline.umd.js"></script>
+<script>
+  feather.replace();
+</script></body>
+</html>

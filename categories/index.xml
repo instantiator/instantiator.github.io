@@ -10,28 +10,28 @@
 		
 		
 		
-			<lastBuildDate>Tue, 21 Apr 2026 19:00:00 +0000</lastBuildDate>
+			<lastBuildDate>Mon, 15 Jun 2026 10:00:00 +0000</lastBuildDate>
 		
 			<atom:link href="https://instantiator.dev/categories/index.xml" rel="self" type="application/rss+xml" />
 			<item>
-				<title>Tutorial</title>
-				<link>https://instantiator.dev/categories/tutorial/</link>
-				<pubDate>Tue, 21 Apr 2026 19:00:00 +0000</pubDate>
-				<guid>https://instantiator.dev/categories/tutorial/</guid>
-				<description></description>
-			</item>
-			<item>
 				<title>Article</title>
 				<link>https://instantiator.dev/categories/article/</link>
-				<pubDate>Tue, 28 Oct 2025 00:00:00 +0000</pubDate>
+				<pubDate>Mon, 15 Jun 2026 10:00:00 +0000</pubDate>
 				<guid>https://instantiator.dev/categories/article/</guid>
 				<description></description>
 			</item>
 			<item>
 				<title>Tool</title>
 				<link>https://instantiator.dev/categories/tool/</link>
-				<pubDate>Sun, 01 Sep 2024 12:00:00 +0000</pubDate>
+				<pubDate>Mon, 15 Jun 2026 10:00:00 +0000</pubDate>
 				<guid>https://instantiator.dev/categories/tool/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Tutorial</title>
+				<link>https://instantiator.dev/categories/tutorial/</link>
+				<pubDate>Tue, 21 Apr 2026 19:00:00 +0000</pubDate>
+				<guid>https://instantiator.dev/categories/tutorial/</guid>
 				<description></description>
 			</item>
 			<item>

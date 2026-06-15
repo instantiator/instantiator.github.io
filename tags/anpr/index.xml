@@ -10,9 +10,16 @@
 		
 		
 		
-			<lastBuildDate>Fri, 22 Sep 2017 00:00:00 +0000</lastBuildDate>
+			<lastBuildDate>Mon, 15 Jun 2026 10:00:00 +0000</lastBuildDate>
 		
 			<atom:link href="https://instantiator.dev/tags/anpr/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>Experimental development with number-jam: a number plate obscurer</title>
+				<link>https://instantiator.dev/post/number-jam/</link>
+				<pubDate>Mon, 15 Jun 2026 10:00:00 +0000</pubDate>
+				<guid>https://instantiator.dev/post/number-jam/</guid>
+				<description>&lt;p&gt;&lt;em&gt;&lt;code&gt;number-jam&lt;/code&gt; detects, tracks, and obscures vehicle number plates in video clips — and was an experiment in AI-assisted development.&lt;/em&gt;&lt;/p&gt;</description>
+			</item>
 			<item>
 				<title>Why are some projects so expensive?</title>
 				<link>https://instantiator.dev/post/project-costs/</link>

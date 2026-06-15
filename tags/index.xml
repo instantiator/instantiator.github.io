@@ -10,9 +10,107 @@
 		
 		
 		
-			<lastBuildDate>Tue, 21 Apr 2026 19:00:00 +0000</lastBuildDate>
+			<lastBuildDate>Mon, 15 Jun 2026 10:00:00 +0000</lastBuildDate>
 		
 			<atom:link href="https://instantiator.dev/tags/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>AI</title>
+				<link>https://instantiator.dev/tags/ai/</link>
+				<pubDate>Mon, 15 Jun 2026 10:00:00 +0000</pubDate>
+				<guid>https://instantiator.dev/tags/ai/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>ANPR</title>
+				<link>https://instantiator.dev/tags/anpr/</link>
+				<pubDate>Mon, 15 Jun 2026 10:00:00 +0000</pubDate>
+				<guid>https://instantiator.dev/tags/anpr/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Cats</title>
+				<link>https://instantiator.dev/tags/cats/</link>
+				<pubDate>Mon, 15 Jun 2026 10:00:00 +0000</pubDate>
+				<guid>https://instantiator.dev/tags/cats/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>ClaudeCode</title>
+				<link>https://instantiator.dev/tags/claudecode/</link>
+				<pubDate>Mon, 15 Jun 2026 10:00:00 +0000</pubDate>
+				<guid>https://instantiator.dev/tags/claudecode/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Number-Jam</title>
+				<link>https://instantiator.dev/tags/number-jam/</link>
+				<pubDate>Mon, 15 Jun 2026 10:00:00 +0000</pubDate>
+				<guid>https://instantiator.dev/tags/number-jam/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>NumberPlate</title>
+				<link>https://instantiator.dev/tags/numberplate/</link>
+				<pubDate>Mon, 15 Jun 2026 10:00:00 +0000</pubDate>
+				<guid>https://instantiator.dev/tags/numberplate/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>OpenALPR</title>
+				<link>https://instantiator.dev/tags/openalpr/</link>
+				<pubDate>Mon, 15 Jun 2026 10:00:00 +0000</pubDate>
+				<guid>https://instantiator.dev/tags/openalpr/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Privacy</title>
+				<link>https://instantiator.dev/tags/privacy/</link>
+				<pubDate>Mon, 15 Jun 2026 10:00:00 +0000</pubDate>
+				<guid>https://instantiator.dev/tags/privacy/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>RegistrationPlate</title>
+				<link>https://instantiator.dev/tags/registrationplate/</link>
+				<pubDate>Mon, 15 Jun 2026 10:00:00 +0000</pubDate>
+				<guid>https://instantiator.dev/tags/registrationplate/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Tool</title>
+				<link>https://instantiator.dev/tags/tool/</link>
+				<pubDate>Mon, 15 Jun 2026 10:00:00 +0000</pubDate>
+				<guid>https://instantiator.dev/tags/tool/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>TypeScript</title>
+				<link>https://instantiator.dev/tags/typescript/</link>
+				<pubDate>Mon, 15 Jun 2026 10:00:00 +0000</pubDate>
+				<guid>https://instantiator.dev/tags/typescript/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Video</title>
+				<link>https://instantiator.dev/tags/video/</link>
+				<pubDate>Mon, 15 Jun 2026 10:00:00 +0000</pubDate>
+				<guid>https://instantiator.dev/tags/video/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>VideoProcessing</title>
+				<link>https://instantiator.dev/tags/videoprocessing/</link>
+				<pubDate>Mon, 15 Jun 2026 10:00:00 +0000</pubDate>
+				<guid>https://instantiator.dev/tags/videoprocessing/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Vrm</title>
+				<link>https://instantiator.dev/tags/vrm/</link>
+				<pubDate>Mon, 15 Jun 2026 10:00:00 +0000</pubDate>
+				<guid>https://instantiator.dev/tags/vrm/</guid>
+				<description></description>
+			</item>
 			<item>
 				<title>Audio</title>
 				<link>https://instantiator.dev/tags/audio/</link>
@@ -35,14 +133,14 @@
 				<description></description>
 			</item>
 			<item>
-				<title>CI</title>
+				<title>Ci</title>
 				<link>https://instantiator.dev/tags/ci/</link>
 				<pubDate>Tue, 21 Apr 2026 19:00:00 +0000</pubDate>
 				<guid>https://instantiator.dev/tags/ci/</guid>
 				<description></description>
 			</item>
 			<item>
-				<title>Collective-Intelligence</title>
+				<title>Collective Intelligence</title>
 				<link>https://instantiator.dev/tags/collective-intelligence/</link>
 				<pubDate>Tue, 21 Apr 2026 19:00:00 +0000</pubDate>
 				<guid>https://instantiator.dev/tags/collective-intelligence/</guid>
@@ -95,13 +193,6 @@
 				<link>https://instantiator.dev/tags/timing/</link>
 				<pubDate>Tue, 21 Apr 2026 19:00:00 +0000</pubDate>
 				<guid>https://instantiator.dev/tags/timing/</guid>
-				<description></description>
-			</item>
-			<item>
-				<title>Video</title>
-				<link>https://instantiator.dev/tags/video/</link>
-				<pubDate>Tue, 21 Apr 2026 19:00:00 +0000</pubDate>
-				<guid>https://instantiator.dev/tags/video/</guid>
 				<description></description>
 			</item>
 			<item>
@@ -343,13 +434,6 @@
 				<description></description>
 			</item>
 			<item>
-				<title>Tool</title>
-				<link>https://instantiator.dev/tags/tool/</link>
-				<pubDate>Sun, 01 Sep 2024 12:00:00 +0000</pubDate>
-				<guid>https://instantiator.dev/tags/tool/</guid>
-				<description></description>
-			</item>
-			<item>
 				<title>Authors</title>
 				<link>https://instantiator.dev/tags/authors/</link>
 				<pubDate>Sat, 24 Aug 2024 12:00:00 +0000</pubDate>
@@ -476,7 +560,7 @@
 				<description></description>
 			</item>
 			<item>
-				<title>Dotnet</title>
+				<title>DotNet</title>
 				<link>https://instantiator.dev/tags/dotnet/</link>
 				<pubDate>Sun, 14 Jul 2024 12:00:00 +0000</pubDate>
 				<guid>https://instantiator.dev/tags/dotnet/</guid>
@@ -704,13 +788,6 @@
 				<link>https://instantiator.dev/tags/template/</link>
 				<pubDate>Tue, 12 Sep 2023 00:00:00 +0000</pubDate>
 				<guid>https://instantiator.dev/tags/template/</guid>
-				<description></description>
-			</item>
-			<item>
-				<title>TypeScript</title>
-				<link>https://instantiator.dev/tags/typescript/</link>
-				<pubDate>Tue, 12 Sep 2023 00:00:00 +0000</pubDate>
-				<guid>https://instantiator.dev/tags/typescript/</guid>
 				<description></description>
 			</item>
 			<item>
@@ -1092,14 +1169,7 @@
 				<description></description>
 			</item>
 			<item>
-				<title>AI</title>
-				<link>https://instantiator.dev/tags/ai/</link>
-				<pubDate>Mon, 17 Apr 2023 21:00:00 +0000</pubDate>
-				<guid>https://instantiator.dev/tags/ai/</guid>
-				<description></description>
-			</item>
-			<item>
-				<title>Api</title>
+				<title>API</title>
 				<link>https://instantiator.dev/tags/api/</link>
 				<pubDate>Mon, 17 Apr 2023 21:00:00 +0000</pubDate>
 				<guid>https://instantiator.dev/tags/api/</guid>
@@ -1806,7 +1876,7 @@
 				<description></description>
 			</item>
 			<item>
-				<title>Os X</title>
+				<title>OS X</title>
 				<link>https://instantiator.dev/tags/os-x/</link>
 				<pubDate>Fri, 12 Nov 2021 00:00:00 +0000</pubDate>
 				<guid>https://instantiator.dev/tags/os-x/</guid>
@@ -2426,13 +2496,6 @@
 				<link>https://instantiator.dev/tags/technical-debt/</link>
 				<pubDate>Thu, 05 Oct 2017 00:00:00 +0000</pubDate>
 				<guid>https://instantiator.dev/tags/technical-debt/</guid>
-				<description></description>
-			</item>
-			<item>
-				<title>ANPR</title>
-				<link>https://instantiator.dev/tags/anpr/</link>
-				<pubDate>Fri, 22 Sep 2017 00:00:00 +0000</pubDate>
-				<guid>https://instantiator.dev/tags/anpr/</guid>
 				<description></description>
 			</item>
 			<item>
