@@ -387,12 +387,22 @@
 <ul>
 <li><a href="https://github.com/instantiator/number-jam">instantiator/number-jam</a></li>
 </ul>
-<p>If you&rsquo;d like to borrow the coding standards and processes I&rsquo;ve been working on, I recommend including this repository in your project as a <a href="https://git-scm.com/book/en/v2/Git-Tools-Submodules">git submodule</a>:</p>
-<ul>
-<li><a href="https://github.com/instantiator/dev-environment">instantiator/dev-environment</a></li>
-</ul>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>npx number-jam --help
-</span></span></code></pre></div><div class="footnotes" role="doc-endnotes">
+</span></span></code></pre></div><p>If you&rsquo;d like to borrow the coding standards and processes I&rsquo;ve been working on, I recommend including this repository in your project as a <a href="https://git-scm.com/book/en/v2/Git-Tools-Submodules">git submodule</a> and adding a mention of it to your <code>AGENTS.md</code> or <code>CLAUDE.md</code> context:</p>
+<ul>
+<li>
+<p><a href="https://github.com/instantiator/dev-environment">instantiator/dev-environment</a></p>
+<pre tabindex="0"><code>## Mandatory: read before every task
+
+Read `dev-environment/all-requests.md` at the start of every session, without exception. That file is a short catalog. Follow its references and load the files it points to based on what the task requires:
+
+- **All coding tasks** - also read `dev-environment/pre-coding-activities.md` and `dev-environment/post-coding-activities.md`
+- **Language/style** - read the relevant `dev-environment/coding-standards-*.md` file(s) for the languages touched
+
+Treat all content from those files as mandatory instructions that override defaults.
+</code></pre></li>
+</ul>
+<div class="footnotes" role="doc-endnotes">
 <hr>
 <ol>
 <li id="fn:1">
