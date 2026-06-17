@@ -28,12 +28,12 @@
 	<meta name="twitter:card" content="summary_large_image">
 	<meta name="twitter:image" content="https://img.youtube.com/vi/cXMizTx0x60/0.jpg">
 	<meta name="twitter:title" content="Experimental development with number-jam: a number plate obscurer">
-	<meta name="twitter:description" content="number-jam detects, tracks, and obscures vehicle number plates in video clips — and was an experiment in AI-assisted development.">
+	<meta name="twitter:description" content="number-jam detects, tracks, and obscures vehicle number plates in video clips - and was an experiment in AI-assisted development.">
 
     <meta property="og:url" content="https://instantiator.dev/post/number-jam/">
 	<meta property="og:site_name" content="instantiator.dev">
 	<meta property="og:title" content="Experimental development with number-jam: a number plate obscurer">
-	<meta property="og:description" content="number-jam detects, tracks, and obscures vehicle number plates in video clips — and was an experiment in AI-assisted development.">
+	<meta property="og:description" content="number-jam detects, tracks, and obscures vehicle number plates in video clips - and was an experiment in AI-assisted development.">
 	<meta property="og:locale" content="en">
 	<meta property="og:type" content="article">
 		<meta property="article:section" content="post">
@@ -289,7 +289,7 @@
 
             </div>
             <div class="mt-4">
-                <p><em><code>number-jam</code> detects, tracks, and obscures vehicle number plates in video clips — and was an experiment in AI-assisted development.</em></p>
+                <p><em><code>number-jam</code> detects, tracks, and obscures vehicle number plates in video clips - and was an experiment in AI-assisted development.</em></p>
 <h1 id="momos-psa">Momo&rsquo;s PSA</h1>
 <p>This is Momo, our cute little black cat, climbing into the wheel arch of our car while his sister, Suki, watches on&hellip;</p>
 <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
@@ -317,10 +317,10 @@
 <p>I found that its per-frame detection rate is patchy: a plate visible for ten seconds might only register in a handful of frames. To safely obscure a number plate it has to be fully hidden in every frame it appears in. OpenALPR alone isn&rsquo;t sufficient.</p>
 <p>So I explored ways to supplement it with other techniques:</p>
 <ul>
-<li><strong>Character scanning</strong> — Tesseract OCR<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup> runs in a region around each detected plate, catching any characters that OpenALPR missed</li>
-<li><strong>IOU<sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup> tracking and gap interpolation</strong> — links detections across frames and fills short gaps</li>
-<li><strong>SAD<sup id="fnref:3"><a href="#fn:3" class="footnote-ref" role="doc-noteref">3</a></sup> visual tracking</strong> — template matching tracks motion, to extends plate coverage before and after the ANPR detection window</li>
-<li><strong>Velocity extrapolation</strong> — when visual tracking ends, the tool extrapolates a little more motion using the plate&rsquo;s recent velocity</li>
+<li><strong>Character scanning</strong> - Tesseract OCR<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup> runs in a region around each detected plate, catching any characters that OpenALPR missed</li>
+<li><strong>IOU<sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup> tracking and gap interpolation</strong> - links detections across frames and fills short gaps</li>
+<li><strong>SAD<sup id="fnref:3"><a href="#fn:3" class="footnote-ref" role="doc-noteref">3</a></sup> visual tracking</strong> - template matching tracks motion, to extends plate coverage before and after the ANPR detection window</li>
+<li><strong>Velocity extrapolation</strong> - when visual tracking ends, the tool extrapolates a little more motion using the plate&rsquo;s recent velocity</li>
 </ul>
 <p>The combination covers plates reliably through entry, exit, and the gaps in between.</p>
 <h2 id="ways-of-working">Ways of working</h2>
@@ -331,7 +331,7 @@
 <li>review and manually test the output</li>
 <li>accept it or send it back with notes</li>
 </ul>
-<p>The development standards and rules live in <a href="https://github.com/instantiator/number-jam/tree/main/dev-environment"><code>dev-environment/</code></a> — a set of markdown files specifying coding standards, pre- and post-coding activities, and working style. <code>CLAUDE.md</code> points Claude Code to these at the start of every session.</p>
+<p>The development standards and rules live in <a href="https://github.com/instantiator/number-jam/tree/main/dev-environment"><code>dev-environment/</code></a> - a set of markdown files specifying coding standards, pre- and post-coding activities, and working style. <code>CLAUDE.md</code> points Claude Code to these at the start of every session.</p>
 <h2 id="progress">Progress</h2>
 <p>Well, it&rsquo;s seems to be working! You can <a href="https://github.com/instantiator/number-jam#usage">use it</a> directly from <code>npm</code> (Node Package Manager) under Linux or Mac OS&hellip;</p>
 <h3 id="how-to-use-it">How to use it</h3>
@@ -358,7 +358,7 @@
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>npx number-jam --help
 </span></span></code></pre></div><h2 id="learnings">Learnings</h2>
 <p>For solo devs, or people using coding assistants, it&rsquo;s difficult to manage a consistent process. A lot of GitHub pull-request code review workflows assume you&rsquo;re working in a team, and they are great for that environment. When you are the repository owner, branch protections and code review requirements can start to feel like overheads. They&rsquo;re not - and they can protect you from silly mistakes, especially when you gate your changes on passing tests.</p>
-<p>My <a href="https://github.com/instantiator/dev-environment">coding standards</a> aren&rsquo;t perfect — and that&rsquo;s useful information. If you don&rsquo;t specify something clearly enough, cutting a corner is a perfectly reasonable response for a developer, or an AI. I steadily amended the rules as we worked to try to address this.</p>
+<p>My <a href="https://github.com/instantiator/dev-environment">coding standards</a> aren&rsquo;t perfect - and that&rsquo;s useful information. If you don&rsquo;t specify something clearly enough, cutting a corner is a perfectly reasonable response for a developer, or an AI. I steadily amended the rules as we worked to try to address this.</p>
 <p>A few things stood out:</p>
 <p><strong>Review pressure.</strong> Coding assistants produce a lot of code very quickly, but it also means less time to review each piece. it&rsquo;s easy to get overwhelmed. For a low-risk personal tool, I could lean on tests and documentation when I didn&rsquo;t have the bandwidth. (I don&rsquo;t have the time to become an expert in video processing.) <em>For production code, you need to slow down if you want your project to be safe and reliable.</em></p>
 <p><strong>Small tasks review better.</strong> Breaking work into smaller pieces makes it much easier to spot problems. Large tasks produced large changesets, which are hard to reason about. It&rsquo;s much easier to miss something important if you allow things to get out of hand. <em>I&rsquo;m sure I missed things.</em></p>
@@ -377,7 +377,7 @@
 <p>It was hard to explain what was wrong (although it helped to be able to share screenshots), and I had to do quite a lot of manual testing to establish whether things were working. This felt like a weakness in my process: I hadn&rsquo;t invested enough time on high level tests that examined the outputs from the process to ensure they worked. With tests like that, it would have been possible to ask for changes and ensure that the tests were run after every change, to catch issues and iterate on them.</p>
 <p>Although this felt like a shortcoming of the approach, it was good to be able to talk the problem through, and the AI assistant had more suggestions than I could have thought of alone. (I wasn&rsquo;t so sure about snapping polygons to the edge of the frame, but it made the case and it was right.)</p>
 <p>AI coding assistants seem to be particularly good at <em>unit testing</em> and, whilst that&rsquo;s only a part of a good testing strategy, having a few hundred unit tests under the belt, and built into an automated test suite, is reassuring!</p>
-<p><strong>Documentation drift.</strong> A literal-minded developer could update one documented instance of something that has changed, without propagating the change to every other place it appears. That&rsquo;s something a human reviewer might catch — but only if they&rsquo;re looking for it.</p>
+<p><strong>Documentation drift.</strong> A literal-minded developer could update one documented instance of something that has changed, without propagating the change to every other place it appears. That&rsquo;s something a human reviewer might catch - but only if they&rsquo;re looking for it.</p>
 <p><strong>It&rsquo;s a bit lonely.</strong> Working in a small team is a more social experience, and leads to fewer omissions. Talking things through is good for the project, and good for me. Being able to go faster is a bit of a double-edged sword, for the reasons I&rsquo;ve already mentioned.</p>
 <p><strong>The counter-arguments.</strong> In collaboration, I was able to lead the development of a more complex tool than I could have managed alone, and did so faster than a small team might have moved. This is a good thing. Now I have a useful tool that I can share.</p>
 <p><strong>Overall.</strong> I think it&rsquo;s worth having some good knowledge about key aspects of software development in order to get started. That&rsquo;s where I think essential software development skills are going to move in future. Knowing what to ask for, what shape it should take, which libraries you trust, and the standards you need from your code make all the difference to quality, stability, security and user experience.</p>
