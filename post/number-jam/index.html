@@ -324,16 +324,56 @@
 </ul>
 <p>The combination covers plates reliably through entry, exit, and the gaps in between.</p>
 <h2 id="ways-of-working">Ways of working</h2>
-<p>This project was also an experiment. I wanted to explore working with an AI coding assistant on a real, hands-on problem. I wanted a small development cycle:</p>
+<p><strong>This project was also an experiment.</strong> I wanted to explore working with an AI coding assistant on a real, hands-on problem. I wanted a small development cycle:</p>
 <ul>
 <li>define a task (as you might write a KANBAN ticket)</li>
-<li>hand it to Claude Code</li>
+<li>hand it to a coding assistant</li>
 <li>review and manually test the output</li>
 <li>accept it or send it back with notes</li>
 </ul>
-<p>The development standards and rules live in <a href="https://github.com/instantiator/number-jam/tree/main/dev-environment"><code>dev-environment/</code></a> - a set of markdown files specifying coding standards, pre- and post-coding activities, and working style. <code>CLAUDE.md</code> points Claude Code to these at the start of every session.</p>
+<h3 id="development-environment">Development environment</h3>
+<table>
+	<thead>
+			<tr>
+					<th>Tool</th>
+					<th>Choice</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td>IDE</td>
+					<td>Visual Studio Code</td>
+			</tr>
+			<tr>
+					<td>Coding assistant</td>
+					<td>Claude Code</td>
+			</tr>
+			<tr>
+					<td>Containerisation<sup id="fnref:4"><a href="#fn:4" class="footnote-ref" role="doc-noteref">4</a></sup></td>
+					<td>Docker</td>
+			</tr>
+			<tr>
+					<td>Development language</td>
+					<td>Typescript</td>
+			</tr>
+	</tbody>
+</table>
+<p>The development standards and rules I&rsquo;ve assembled for this project live in <a href="https://github.com/instantiator/dev-environment/">instantiator/dev-environment</a>. They&rsquo;re a set of markdown files specifying coding standards, pre- and post-coding activities, and working style. <code>CLAUDE.md</code> points Claude Code to these at the start of every session. They&rsquo;re included in the repository as a <a href="https://git-scm.com/book/en/v2/Git-Tools-Submodules">Git submodule</a>.</p>
 <h2 id="progress">Progress</h2>
-<p>Well, it&rsquo;s seems to be working! You can <a href="https://github.com/instantiator/number-jam#usage">use it</a> directly from <code>npm</code> (Node Package Manager) under Linux or Mac OS&hellip;</p>
+<p>Well, it&rsquo;s seems to be working! My first take on the development process: It evolved a little and seemed to go well for a small project, like this.</p>
+<p>Overall the project took several days<sup id="fnref:5"><a href="#fn:5" class="footnote-ref" role="doc-noteref">5</a></sup>. I was able to give the coding assistant tasks of a size that felt natural. They were on the larger-end of dev tasks I might assign to a developer in a small team. Here&rsquo;s the main loop&hellip;</p>
+<ul>
+<li>I kept a queue of tasks, and we worked on things one at a time</li>
+<li>Each task started in planning mode, and the assistant was encouraged to plan out the piece of work</li>
+<li>This created an early opportunity to spot assumptions and omissions</li>
+<li>I often asked for clarifications, tests, documentation, and sometimes asked for <em>tests first<sup id="fnref:6"><a href="#fn:6" class="footnote-ref" role="doc-noteref">6</a></sup></em></li>
+<li>We&rsquo;d revised the plan several times until I was satisfied</li>
+<li>After that we switched to editing mode, and I allowed it to implement the plan</li>
+<li>We tested afterwards - both automatically and manually</li>
+<li>We&rsquo;d iterate on the task, if something didn&rsquo;t work as expected</li>
+</ul>
+<p>The process evolved, but it seemed to work. Working on things one at a time made sense for this project: It&rsquo;s small enough that each change needed to be applied in series. Parallel working would have led to conflicts - and I wasn&rsquo;t quite ready to set up multiple agents that could collaborate in this way<sup id="fnref:7"><a href="#fn:7" class="footnote-ref" role="doc-noteref">7</a></sup>.</p>
+<p>You can <a href="https://github.com/instantiator/number-jam#usage">use <code>number-jam</code></a> directly from <code>npm</code> (Node Package Manager) under Linux or Mac OS&hellip;</p>
 <h3 id="how-to-use-it">How to use it</h3>
 <p>For full usage instructions, see the <a href="https://github.com/instantiator/number-jam#usage">Usage</a> section of the README. Here&rsquo;s a quick summary&hellip;</p>
 <p>You&rsquo;ll need to install:</p>
@@ -363,7 +403,7 @@
 <p><strong>Review pressure.</strong> Coding assistants produce a lot of code very quickly, but it also means less time to review each piece. it&rsquo;s easy to get overwhelmed. For a low-risk personal tool, I could lean on tests and documentation when I didn&rsquo;t have the bandwidth. (I don&rsquo;t have the time to become an expert in video processing.) <em>For production code, you need to slow down if you want your project to be safe and reliable.</em></p>
 <p><strong>Small tasks review better.</strong> Breaking work into smaller pieces makes it much easier to spot problems. Large tasks produced large changesets, which are hard to reason about. It&rsquo;s much easier to miss something important if you allow things to get out of hand. <em>I&rsquo;m sure I missed things.</em></p>
 <p><strong>Dependency versions.</strong> Libraries and GitHub Actions tended to come out behind their latest versions, as more often than not you&rsquo;re working with an AI model that doesn&rsquo;t have up-to-the-minute training data. The cut-off point means that it may assume older library versions. This matters for security and stability. Older versions are more likely to have known vulnerabilities or to be actively exploited. <em>Enable Dependabot, or make <code>npm audit</code> part of your workflow, so you have visibility of packages at risk and what you can do about it.</em></p>
-<p><strong>Tests are essential, but aren&rsquo;t always adequate.</strong> Testing is vitally important: Your coding assistants tackle the task you give them, but they can only look at so much of the project (and your intent) without overwhelming themselves or losing things from their context.</p>
+<p><strong>Tests are essential, but aren&rsquo;t always adequate.</strong> Testing is vitally important: Your coding assistants tackle the task you give them, but they can only look at so much of the project (and your intent) without overwhelming themselves or losing things from their context. Tests help to protect the project from that. Every test you write is a unit of desirable behaviour that your project won&rsquo;t allow you, or the coding assistant, to degrade or forget.</p>
 <p>The code was surprisingly fragile at times - even with the tests I&rsquo;d described in the task, and in the coding standards. When code is fragile, it means that further changes have a good chance of break established functionality. Without a test suite, you and your coding assistants won&rsquo;t know if a change you make to one part of the code will affect other parts of the application&rsquo;s functionality. Ask for tests for everything, and learn a little about testing&hellip;</p>
 <ul>
 <li>There were times I had to ask for specific additional tests to cover specific behaviours.</li>
@@ -377,13 +417,27 @@
 <p>It was hard to explain what was wrong (although it helped to be able to share screenshots), and I had to do quite a lot of manual testing to establish whether things were working. This felt like a weakness in my process: I hadn&rsquo;t invested enough time on high level tests that examined the outputs from the process to ensure they worked. With tests like that, it would have been possible to ask for changes and ensure that the tests were run after every change, to catch issues and iterate on them.</p>
 <p>Although this felt like a shortcoming of the approach, it was good to be able to talk the problem through, and the AI assistant had more suggestions than I could have thought of alone. (I wasn&rsquo;t so sure about snapping polygons to the edge of the frame, but it made the case and it was right.)</p>
 <p>AI coding assistants seem to be particularly good at <em>unit testing</em> and, whilst that&rsquo;s only a part of a good testing strategy, having a few hundred unit tests under the belt, and built into an automated test suite, is reassuring!</p>
-<p><strong>Documentation drift.</strong> A literal-minded developer could update one documented instance of something that has changed, without propagating the change to every other place it appears. That&rsquo;s something a human reviewer might catch - but only if they&rsquo;re looking for it.</p>
+<p><strong>Fail early and fail often.</strong> Writing tests helps with this, but you can go further. Coding assistants make mistakes, just as people do. They can overlook the contents of variables, or the nuances of data structures, and they can make wrong assumptions. <strong>Strongly typed languages</strong> prevent whole classes of mistakes like these<sup id="fnref:8"><a href="#fn:8" class="footnote-ref" role="doc-noteref">8</a></sup>, before the code even runs. By enforcing typing (my coding standards require strict typing under TypeScript, for example), the coding assistant is forced to use types correctly. This means it must leave clues for itself (and others!), in the form of classes, interfaces, and types, as it writes the code.</p>
+<p><strong>Unplanned development.</strong> There was a degree of learning-whilst-doing for me, particularly around techniques for video analysis. This led to plenty of iterations, because the coding assistant would make a plan to implement my initial ask, rather than challenging the assumptions behind it. The project grew organically and in unplanned ways as we tackled shortcomings in the initial approach.</p>
+<p><strong>Limited learning.</strong> Video analysis is a topic that I only have a basic vocabulary for. It&rsquo;s very specialist and, despite a couple of decades in software development, I would describe myself as a beginner. I could hold a technical conversation with the coding assistant, but I couldn&rsquo;t contribute to the fine detail. Talking things through was helpful, and I learned enough about techniques (eg. SAD<sup id="fnref1:3"><a href="#fn:3" class="footnote-ref" role="doc-noteref">3</a></sup>) to reason about when and where they should be applied, but I never really learned anything in-depth.</p>
+<p><strong>IDEs aren&rsquo;t where you learn.</strong> I think it&rsquo;s fair to say that a chat interface in an IDE isn&rsquo;t an optimal interface for learning in depth. Trying to learn about advanced video analysis techniques this way felt like reading a review thread on a pull request. It&rsquo;s not impossible to learn what you need, but it doesn&rsquo;t happen automatically. A series of lectures would be a better medium. As a result, I remained a manager and I didn&rsquo;t level-up. <em>I couldn&rsquo;t now write this application myself, alone.</em></p>
+<p><strong>Learning takes time.</strong> Coding assistants are all about going faster. If you want to improve yourself, you need to commit time to the problem. You need to read articles, text books, watch lectures, take part in coding challenges, and exercise your skills. You need permission to make mistakes and improve on your results. The domain of video analysis is, at the very least, the size of a module in an undergraduate degree. <em>Decide if you need to improve your own skills, and commit time to it if you do. You may decide it&rsquo;s not necessary for low-risk projects. If you&rsquo;re doing this for a living, it becomes a lot more important.</em></p>
+<p><strong>Limited creativity.</strong> Sometimes the coding assistant made good suggestions. Sometimes my own suggestions were better. It has access to patterns and expertise from some very advanced projects, but it also has some surprising gaps: It doesn&rsquo;t follow established development behaviours, nor will it reason about architecture unless you walk it through the problem or give it enough context about your plans for the project. It won&rsquo;t speculate. <em>Watch out for designs that don&rsquo;t anticipate what&rsquo;s coming next.</em></p>
+<p><strong>Preventable technical debt.</strong> This kept creeping in, and I attribute a lot of it to the assistant&rsquo;s design choices. Reviewing plans is an essential skill. Asking for plans is good, and the plans themselves are often well-structured and explicit about how to solve a problem. It&rsquo;s easy to trust that more than you should, though. I found details in the plans, plenty of times, that could have resulted in duplicated code, long, involved processes, special cases. Keeping the code clean and readable<sup id="fnref:9"><a href="#fn:9" class="footnote-ref" role="doc-noteref">9</a></sup> is important - not just for humans, but also to prevent the assistant from tying itself up in knots, too.</p>
+<p><strong>Documentation drift.</strong> A literal-minded developer could update one documented instance of something that has changed, without propagating the change to every other place it appears. That&rsquo;s the experience I had with this coding assistant. It happened a few times when I asked for documentation changes. That&rsquo;s something a human reviewer might catch - but only if they&rsquo;re looking for it. <em>Be explicit about documentation improvements.</em></p>
 <p><strong>It&rsquo;s a bit lonely.</strong> Working in a small team is a more social experience, and leads to fewer omissions. Talking things through is good for the project, and good for me. Being able to go faster is a bit of a double-edged sword, for the reasons I&rsquo;ve already mentioned.</p>
-<p><strong>The counter-arguments.</strong> In collaboration, I was able to lead the development of a more complex tool than I could have managed alone, and did so faster than a small team might have moved. This is a good thing. Now I have a useful tool that I can share.</p>
-<p><strong>Overall.</strong> I think it&rsquo;s worth having some good knowledge about key aspects of software development in order to get started. That&rsquo;s where I think essential software development skills are going to move in future. Knowing what to ask for, what shape it should take, which libraries you trust, and the standards you need from your code make all the difference to quality, stability, security and user experience.</p>
+<h3 id="the-counter-arguments">The counter-arguments</h3>
+<p>Complaints aside, I was able to lead the development of a more complex tool than I could have managed alone, and did so faster than a small team might have moved. This is a good thing. Now I have a useful tool that I can share. If that&rsquo;s what&rsquo;s important, then this gets you to a result much quicker.</p>
+<p>As a developer I was able to manage the quality of the outputs. If you had a degree of knowledge - perhaps you&rsquo;re a domain expert in the tool you&rsquo;re building, perhaps you have development experience, or perhaps you&rsquo;ve coached and managed junior developers - then you&rsquo;ll be able to build something more easily reused and maintained.</p>
+<h3 id="how-to-do-better">How to do better</h3>
+<p>It&rsquo;s absolutely worth opening up and reading the internal dialog your coding assistant generates as it reasons about your requests. It&rsquo;s helpful to see how you could be clearer and more explicit with your requests, and it&rsquo;s an opportunity to learn about the strengths and weaknesses of these models. They can consume a lot of time and effort barking up wrong trees, until eventually closing down avenues of enquiry or settling on a solution. You can offer corrections as they reason. Learning to guide coding assistants towards better outcomes more efficiently will save you time and money.</p>
+<h3 id="overall">Overall</h3>
+<p>I think it&rsquo;s worth having some good knowledge about key aspects of software development in order to get started. That&rsquo;s where I think essential software development skills are going to move in future. Knowing what to ask for, what shape it should take, which libraries you&rsquo;re going to trust (and why), and the standards you need from your code make a difference to the quality, stability, security, maintability, and user experience of your product.</p>
+<p>The human equivalent, for this project, would have been to hire a video analysis specialist with limited real-world experience in application design, who had never really worked in a team coding environment, and had limited experience presenting knowledge. There are often specialists like this in software development teams. They&rsquo;re always well supported and managed. A develoment process, task management tooling, wider team, delivery manager, product manager, senior developer, and technical lead make up a framework that helps to keep quality high, and the code maintainable.</p>
+<p>The project would have taken longer and been more expensive to implement, perhaps, with a purely human team, right now<sup id="fnref:10"><a href="#fn:10" class="footnote-ref" role="doc-noteref">10</a></sup>. It would also have led to higher quality code, and a more maintainble solution. If you&rsquo;re running a business, that&rsquo;s important: Past a certain point, technical debt can significantly reduce your productivity.</p>
 <p><em>I still much prefer working as part of a team.</em></p>
 <hr>
-<p>If you need to obscure a number plate in a video, you&rsquo;re welcome to use it - it&rsquo;s free and open source:</p>
+<p>If you need to obscure a number plate in a video, you&rsquo;re welcome to use <code>number-jam</code>. It&rsquo;s free and open source:</p>
 <ul>
 <li>
 <p><a href="https://github.com/instantiator/number-jam">instantiator/number-jam</a></p>
@@ -414,7 +468,28 @@ Treat all content from those files as mandatory instructions that override defau
 <p>Intersection over Union&#160;<a href="#fnref:2" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
 </li>
 <li id="fn:3">
-<p>Sum of Absolute Differences&#160;<a href="#fnref:3" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+<p>Sum of Absolute Differences&#160;<a href="#fnref:3" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a>&#160;<a href="#fnref1:3" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:4">
+<p>This particular project needed to containerise OpenALPR - a license plate recognition library that hasn&rsquo;t been maintained for some time. Containerisation means that we can give the old code a reliable environment to run in. I considered containerising the tool itself, but didn&rsquo;t go that far.&#160;<a href="#fnref:4" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:5">
+<p>Significantly faster than I&rsquo;d have been able to achieve alone, or with another person.&#160;<a href="#fnref:5" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:6">
+<p>I&rsquo;d often ask for tests first in cases where a previous attempt had failed to achieve what we needed, and where the tests it had implemented hadn&rsquo;t prevented it from making that mistake. A good example: It struggled to get the code to obscure video correct, but its first attempt at unit and integration tests for that all passed. We had to write additional tests to automatically spot errors I could easily see in the output video.&#160;<a href="#fnref:6" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:7">
+<p>Multiple agents working on individual branches, following common git pull request, review, and merge patterns might be a good experiment. It would also have sent the cost skyrocketing and, for a small project like this, would have had limited benefits (and a lot of additional overheads).&#160;<a href="#fnref:7" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:8">
+<p>I could wax lyrical about the benefits of working in strongly typed languages. I really should, sometime.&#160;<a href="#fnref:8" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:9">
+<p>The code often came out messy, and had to be improved for simplicity and readability. If you were feeling uncharitable you might think that this was a dark pattern, built to further your dependence on a coding assistant. To me, it feels like an unintended side-effect. There&rsquo;s little incentive for the big providers to fix it. &ldquo;Never attribute to malice that which is adequately explained by stupidity.&rdquo; (<a href="https://en.wikipedia.org/wiki/Hanlon%27s_razor">Hanlon&rsquo;s razor</a>)&#160;<a href="#fnref:9" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:10">
+<p>That said, the utility of new tools is often heavily subsidised, so I do suspect that the cost of using AI assistants is going to rise. That might balance out the equation, a little.&#160;<a href="#fnref:10" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
 </li>
 </ol>
 </div>
