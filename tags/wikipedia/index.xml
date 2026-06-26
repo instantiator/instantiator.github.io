@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>Wikipedia on instantiator.dev</title>
+		<link>https://instantiator.dev/tags/wikipedia/</link>
+		<description>Recent content in Wikipedia on instantiator.dev</description>
+		<generator>Hugo</generator>
+		<language>en</language>
+		
+		
+		
+		
+			<lastBuildDate>Sun, 21 Jun 2026 00:00:00 +0000</lastBuildDate>
+		
+			<atom:link href="https://instantiator.dev/tags/wikipedia/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>Free art should be free</title>
+				<link>https://instantiator.dev/post/free-art-should-be-free/</link>
+				<pubDate>Sun, 21 Jun 2026 00:00:00 +0000</pubDate>
+				<guid>https://instantiator.dev/post/free-art-should-be-free/</guid>
+				<description>&lt;p&gt;When it&amp;rsquo;s not being a television with a very awkward user interface, the Samsung Frame 55&amp;quot; is touted as being optimised for art. Imagine spending money on it, just to learn that if you want to access the art itself you need to buy a subscription.&lt;/p&gt;</description>
+			</item>
+	</channel>
+</rss>

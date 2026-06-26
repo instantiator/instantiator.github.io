@@ -3,18 +3,72 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://instantiator.dev/</loc>
-    <lastmod>2026-06-15T10:00:00+00:00</lastmod>
+    <lastmod>2026-06-26T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://instantiator.dev/tags/ai/</loc>
-    <lastmod>2026-06-15T10:00:00+00:00</lastmod>
+    <lastmod>2026-06-26T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://instantiator.dev/tags/anpr/</loc>
-    <lastmod>2026-06-15T10:00:00+00:00</lastmod>
+    <loc>https://instantiator.dev/tags/amusing/</loc>
+    <lastmod>2026-06-26T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://instantiator.dev/categories/article/</loc>
-    <lastmod>2026-06-15T10:00:00+00:00</lastmod>
+    <lastmod>2026-06-26T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://instantiator.dev/categories/</loc>
+    <lastmod>2026-06-26T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://instantiator.dev/tags/funny/</loc>
+    <lastmod>2026-06-26T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://instantiator.dev/tags/helloworld/</loc>
+    <lastmod>2026-06-26T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://instantiator.dev/post/</loc>
+    <lastmod>2026-06-26T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://instantiator.dev/post/say-hello-world-and-nothing-else/</loc>
+    <lastmod>2026-06-26T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://instantiator.dev/tags/silly/</loc>
+    <lastmod>2026-06-26T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://instantiator.dev/tags/</loc>
+    <lastmod>2026-06-26T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://instantiator.dev/tags/art/</loc>
+    <lastmod>2026-06-21T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://instantiator.dev/tags/download/</loc>
+    <lastmod>2026-06-21T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://instantiator.dev/tags/free/</loc>
+    <lastmod>2026-06-21T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://instantiator.dev/post/free-art-should-be-free/</loc>
+    <lastmod>2026-06-21T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://instantiator.dev/tags/free-art/</loc>
+    <lastmod>2026-06-21T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://instantiator.dev/categories/hack/</loc>
+    <lastmod>2026-06-21T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://instantiator.dev/tags/scrappy/</loc>
+    <lastmod>2026-06-21T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://instantiator.dev/tags/scripts/</loc>
+    <lastmod>2026-06-21T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://instantiator.dev/categories/tool/</loc>
+    <lastmod>2026-06-21T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://instantiator.dev/tags/wikimedia/</loc>
+    <lastmod>2026-06-21T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://instantiator.dev/tags/wikipedia/</loc>
+    <lastmod>2026-06-21T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://instantiator.dev/tags/anpr/</loc>
     <lastmod>2026-06-15T10:00:00+00:00</lastmod>
   </url><url>
     <loc>https://instantiator.dev/tags/cats/</loc>
@@ -35,19 +89,10 @@
     <loc>https://instantiator.dev/tags/openalpr/</loc>
     <lastmod>2026-06-15T10:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://instantiator.dev/post/</loc>
-    <lastmod>2026-06-15T10:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://instantiator.dev/tags/privacy/</loc>
     <lastmod>2026-06-15T10:00:00+00:00</lastmod>
   </url><url>
     <loc>https://instantiator.dev/tags/registrationplate/</loc>
-    <lastmod>2026-06-15T10:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://instantiator.dev/tags/</loc>
-    <lastmod>2026-06-15T10:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://instantiator.dev/categories/tool/</loc>
     <lastmod>2026-06-15T10:00:00+00:00</lastmod>
   </url><url>
     <loc>https://instantiator.dev/tags/tool/</loc>
@@ -362,9 +407,6 @@
     <loc>https://instantiator.dev/tags/thread/</loc>
     <lastmod>2023-11-11T11:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://instantiator.dev/categories/hack/</loc>
-    <lastmod>2023-09-12T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://instantiator.dev/tags/javascript/</loc>
     <lastmod>2023-09-12T00:00:00+00:00</lastmod>
   </url><url>
@@ -552,9 +594,6 @@
     <lastmod>2023-05-05T09:00:00+00:00</lastmod>
   </url><url>
     <loc>https://instantiator.dev/post/netflix-history/</loc>
-    <lastmod>2023-04-20T17:30:00+00:00</lastmod>
-  </url><url>
-    <loc>https://instantiator.dev/tags/download/</loc>
     <lastmod>2023-04-20T17:30:00+00:00</lastmod>
   </url><url>
     <loc>https://instantiator.dev/tags/dump/</loc>

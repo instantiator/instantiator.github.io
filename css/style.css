@@ -97,3 +97,11 @@ a {
     /* var(--bs-pagination-disabled-color) */
     color: var(--anchor-color-disabled) !important;
 }
+
+blockquote {
+    border-left: 4px solid rgb(95, 158, 160);
+    padding-left: 1rem;
+    margin-left: 0.5rem;
+    color: light-dark(var(--bs-secondary-color), rgba(255,255,255,0.7));
+    font-style: italic;
+}

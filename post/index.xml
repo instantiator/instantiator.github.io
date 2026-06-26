@@ -10,9 +10,23 @@
 		
 		
 		
-			<lastBuildDate>Mon, 15 Jun 2026 10:00:00 +0000</lastBuildDate>
+			<lastBuildDate>Fri, 26 Jun 2026 00:00:00 +0000</lastBuildDate>
 		
 			<atom:link href="https://instantiator.dev/post/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>Say hello world and nothing else</title>
+				<link>https://instantiator.dev/post/say-hello-world-and-nothing-else/</link>
+				<pubDate>Fri, 26 Jun 2026 00:00:00 +0000</pubDate>
+				<guid>https://instantiator.dev/post/say-hello-world-and-nothing-else/</guid>
+				<description>&lt;p&gt;&lt;em&gt;An unintentionally hilarious one-act play by Google&amp;rsquo;s Gemma 4.&lt;/em&gt;&lt;/p&gt;&#xA;&lt;h1 id=&#34;say-hello-world-and-nothing-else&#34;&gt;Say Hello World and Nothing Else&lt;/h1&gt;&#xA;&lt;p&gt;Honestly, it&amp;rsquo;s a marvel that technology and statistical methods have come so far. It&amp;rsquo;s still quite amusing to see their internal monologues&amp;hellip;&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>Free art should be free</title>
+				<link>https://instantiator.dev/post/free-art-should-be-free/</link>
+				<pubDate>Sun, 21 Jun 2026 00:00:00 +0000</pubDate>
+				<guid>https://instantiator.dev/post/free-art-should-be-free/</guid>
+				<description>&lt;p&gt;When it&amp;rsquo;s not being a television with a very awkward user interface, the Samsung Frame 55&amp;quot; is touted as being optimised for art. Imagine spending money on it, just to learn that if you want to access the art itself you need to buy a subscription.&lt;/p&gt;</description>
+			</item>
 			<item>
 				<title>Experimental development with number-jam: a number plate obscurer</title>
 				<link>https://instantiator.dev/post/number-jam/</link>

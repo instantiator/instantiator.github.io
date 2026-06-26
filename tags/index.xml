@@ -10,14 +10,98 @@
 		
 		
 		
-			<lastBuildDate>Mon, 15 Jun 2026 10:00:00 +0000</lastBuildDate>
+			<lastBuildDate>Fri, 26 Jun 2026 00:00:00 +0000</lastBuildDate>
 		
 			<atom:link href="https://instantiator.dev/tags/index.xml" rel="self" type="application/rss+xml" />
 			<item>
 				<title>AI</title>
 				<link>https://instantiator.dev/tags/ai/</link>
-				<pubDate>Mon, 15 Jun 2026 10:00:00 +0000</pubDate>
+				<pubDate>Fri, 26 Jun 2026 00:00:00 +0000</pubDate>
 				<guid>https://instantiator.dev/tags/ai/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Amusing</title>
+				<link>https://instantiator.dev/tags/amusing/</link>
+				<pubDate>Fri, 26 Jun 2026 00:00:00 +0000</pubDate>
+				<guid>https://instantiator.dev/tags/amusing/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Funny</title>
+				<link>https://instantiator.dev/tags/funny/</link>
+				<pubDate>Fri, 26 Jun 2026 00:00:00 +0000</pubDate>
+				<guid>https://instantiator.dev/tags/funny/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>HelloWorld</title>
+				<link>https://instantiator.dev/tags/helloworld/</link>
+				<pubDate>Fri, 26 Jun 2026 00:00:00 +0000</pubDate>
+				<guid>https://instantiator.dev/tags/helloworld/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Silly</title>
+				<link>https://instantiator.dev/tags/silly/</link>
+				<pubDate>Fri, 26 Jun 2026 00:00:00 +0000</pubDate>
+				<guid>https://instantiator.dev/tags/silly/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Art</title>
+				<link>https://instantiator.dev/tags/art/</link>
+				<pubDate>Sun, 21 Jun 2026 00:00:00 +0000</pubDate>
+				<guid>https://instantiator.dev/tags/art/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Download</title>
+				<link>https://instantiator.dev/tags/download/</link>
+				<pubDate>Sun, 21 Jun 2026 00:00:00 +0000</pubDate>
+				<guid>https://instantiator.dev/tags/download/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Free</title>
+				<link>https://instantiator.dev/tags/free/</link>
+				<pubDate>Sun, 21 Jun 2026 00:00:00 +0000</pubDate>
+				<guid>https://instantiator.dev/tags/free/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Free-Art</title>
+				<link>https://instantiator.dev/tags/free-art/</link>
+				<pubDate>Sun, 21 Jun 2026 00:00:00 +0000</pubDate>
+				<guid>https://instantiator.dev/tags/free-art/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Scrappy</title>
+				<link>https://instantiator.dev/tags/scrappy/</link>
+				<pubDate>Sun, 21 Jun 2026 00:00:00 +0000</pubDate>
+				<guid>https://instantiator.dev/tags/scrappy/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Scripts</title>
+				<link>https://instantiator.dev/tags/scripts/</link>
+				<pubDate>Sun, 21 Jun 2026 00:00:00 +0000</pubDate>
+				<guid>https://instantiator.dev/tags/scripts/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Wikimedia</title>
+				<link>https://instantiator.dev/tags/wikimedia/</link>
+				<pubDate>Sun, 21 Jun 2026 00:00:00 +0000</pubDate>
+				<guid>https://instantiator.dev/tags/wikimedia/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Wikipedia</title>
+				<link>https://instantiator.dev/tags/wikipedia/</link>
+				<pubDate>Sun, 21 Jun 2026 00:00:00 +0000</pubDate>
+				<guid>https://instantiator.dev/tags/wikipedia/</guid>
 				<description></description>
 			</item>
 			<item>
@@ -126,14 +210,14 @@
 				<description></description>
 			</item>
 			<item>
-				<title>CCI</title>
+				<title>Cci</title>
 				<link>https://instantiator.dev/tags/cci/</link>
 				<pubDate>Tue, 21 Apr 2026 19:00:00 +0000</pubDate>
 				<guid>https://instantiator.dev/tags/cci/</guid>
 				<description></description>
 			</item>
 			<item>
-				<title>Ci</title>
+				<title>CI</title>
 				<link>https://instantiator.dev/tags/ci/</link>
 				<pubDate>Tue, 21 Apr 2026 19:00:00 +0000</pubDate>
 				<guid>https://instantiator.dev/tags/ci/</guid>
@@ -259,7 +343,7 @@
 				<description></description>
 			</item>
 			<item>
-				<title>AWS</title>
+				<title>Aws</title>
 				<link>https://instantiator.dev/tags/aws/</link>
 				<pubDate>Sat, 22 Feb 2025 11:00:00 +0000</pubDate>
 				<guid>https://instantiator.dev/tags/aws/</guid>
@@ -343,7 +427,7 @@
 				<description></description>
 			</item>
 			<item>
-				<title>.NET</title>
+				<title>.Net</title>
 				<link>https://instantiator.dev/tags/.net/</link>
 				<pubDate>Sun, 01 Sep 2024 12:00:00 +0000</pubDate>
 				<guid>https://instantiator.dev/tags/.net/</guid>
@@ -560,7 +644,7 @@
 				<description></description>
 			</item>
 			<item>
-				<title>Dotnet</title>
+				<title>DotNet</title>
 				<link>https://instantiator.dev/tags/dotnet/</link>
 				<pubDate>Sun, 14 Jul 2024 12:00:00 +0000</pubDate>
 				<guid>https://instantiator.dev/tags/dotnet/</guid>
@@ -791,7 +875,7 @@
 				<description></description>
 			</item>
 			<item>
-				<title>UI</title>
+				<title>Ui</title>
 				<link>https://instantiator.dev/tags/ui/</link>
 				<pubDate>Tue, 12 Sep 2023 00:00:00 +0000</pubDate>
 				<guid>https://instantiator.dev/tags/ui/</guid>
@@ -1106,13 +1190,6 @@
 				<description></description>
 			</item>
 			<item>
-				<title>Download</title>
-				<link>https://instantiator.dev/tags/download/</link>
-				<pubDate>Thu, 20 Apr 2023 17:30:00 +0000</pubDate>
-				<guid>https://instantiator.dev/tags/download/</guid>
-				<description></description>
-			</item>
-			<item>
 				<title>Dump</title>
 				<link>https://instantiator.dev/tags/dump/</link>
 				<pubDate>Thu, 20 Apr 2023 17:30:00 +0000</pubDate>
@@ -1253,7 +1330,7 @@
 				<description></description>
 			</item>
 			<item>
-				<title>Software-Development</title>
+				<title>Software Development</title>
 				<link>https://instantiator.dev/tags/software-development/</link>
 				<pubDate>Mon, 17 Apr 2023 21:00:00 +0000</pubDate>
 				<guid>https://instantiator.dev/tags/software-development/</guid>
