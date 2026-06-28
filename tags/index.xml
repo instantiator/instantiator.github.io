@@ -14,7 +14,7 @@
 		
 			<atom:link href="https://instantiator.dev/tags/index.xml" rel="self" type="application/rss+xml" />
 			<item>
-				<title>AI</title>
+				<title>Ai</title>
 				<link>https://instantiator.dev/tags/ai/</link>
 				<pubDate>Fri, 26 Jun 2026 00:00:00 +0000</pubDate>
 				<guid>https://instantiator.dev/tags/ai/</guid>
@@ -210,7 +210,7 @@
 				<description></description>
 			</item>
 			<item>
-				<title>Cci</title>
+				<title>CCI</title>
 				<link>https://instantiator.dev/tags/cci/</link>
 				<pubDate>Tue, 21 Apr 2026 19:00:00 +0000</pubDate>
 				<guid>https://instantiator.dev/tags/cci/</guid>
@@ -343,7 +343,7 @@
 				<description></description>
 			</item>
 			<item>
-				<title>Aws</title>
+				<title>AWS</title>
 				<link>https://instantiator.dev/tags/aws/</link>
 				<pubDate>Sat, 22 Feb 2025 11:00:00 +0000</pubDate>
 				<guid>https://instantiator.dev/tags/aws/</guid>
@@ -427,7 +427,7 @@
 				<description></description>
 			</item>
 			<item>
-				<title>.Net</title>
+				<title>.NET</title>
 				<link>https://instantiator.dev/tags/.net/</link>
 				<pubDate>Sun, 01 Sep 2024 12:00:00 +0000</pubDate>
 				<guid>https://instantiator.dev/tags/.net/</guid>
@@ -644,7 +644,7 @@
 				<description></description>
 			</item>
 			<item>
-				<title>Dotnet</title>
+				<title>DotNet</title>
 				<link>https://instantiator.dev/tags/dotnet/</link>
 				<pubDate>Sun, 14 Jul 2024 12:00:00 +0000</pubDate>
 				<guid>https://instantiator.dev/tags/dotnet/</guid>
@@ -875,7 +875,7 @@
 				<description></description>
 			</item>
 			<item>
-				<title>UI</title>
+				<title>Ui</title>
 				<link>https://instantiator.dev/tags/ui/</link>
 				<pubDate>Tue, 12 Sep 2023 00:00:00 +0000</pubDate>
 				<guid>https://instantiator.dev/tags/ui/</guid>
@@ -980,7 +980,7 @@
 				<description></description>
 			</item>
 			<item>
-				<title>CSharp</title>
+				<title>Csharp</title>
 				<link>https://instantiator.dev/tags/csharp/</link>
 				<pubDate>Sun, 16 Jul 2023 10:00:00 +0000</pubDate>
 				<guid>https://instantiator.dev/tags/csharp/</guid>
@@ -1330,7 +1330,7 @@
 				<description></description>
 			</item>
 			<item>
-				<title>Software Development</title>
+				<title>Software-Development</title>
 				<link>https://instantiator.dev/tags/software-development/</link>
 				<pubDate>Mon, 17 Apr 2023 21:00:00 +0000</pubDate>
 				<guid>https://instantiator.dev/tags/software-development/</guid>
