@@ -10,9 +10,16 @@
 		
 		
 		
-			<lastBuildDate>Fri, 26 Jun 2026 00:00:00 +0000</lastBuildDate>
+			<lastBuildDate>Fri, 17 Jul 2026 00:00:00 +0000</lastBuildDate>
 		
 			<atom:link href="https://instantiator.dev/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>Free AI-assisted coding tools 1: Getting started</title>
+				<link>https://instantiator.dev/post/prototyping-opencode-tutorial-001-dev-environment/</link>
+				<pubDate>Fri, 17 Jul 2026 00:00:00 +0000</pubDate>
+				<guid>https://instantiator.dev/post/prototyping-opencode-tutorial-001-dev-environment/</guid>
+				<description>&lt;p&gt;&lt;em&gt;A short tutorial to help you set up a lightweight AI assisted coding environment, with free tools. It&amp;rsquo;s a modest solution but, if you have a computer, you can get started for nothing.&lt;/em&gt;&lt;/p&gt;</description>
+			</item>
 			<item>
 				<title>Say hello world and nothing else</title>
 				<link>https://instantiator.dev/post/say-hello-world-and-nothing-else/</link>

@@ -51,6 +51,35 @@ a {
 #post-content img {
     max-width: 100%;
     height: auto;
+    border-radius: 0.5em;
+}
+
+#post-content table {
+    border: 1px solid rgb(95, 158, 160);
+    border-radius: 0.5em;
+    border-collapse: separate;
+    border-spacing: 0;
+    overflow: hidden;
+    width: 100%;
+    margin-bottom: 1em;
+}
+
+#post-content th {
+    font-weight: bold;
+    border-bottom: 2px solid rgb(95, 158, 160);
+    padding: 0.5em 0.75em;
+}
+
+#post-content td {
+    padding: 0.5em 0.75em;
+}
+
+#post-content tbody tr:nth-child(odd) {
+    background-color: transparent;
+}
+
+#post-content tbody tr:nth-child(even) {
+    background-color: rgba(95, 158, 160, 0.15);
 }
 
 #post-content pre {

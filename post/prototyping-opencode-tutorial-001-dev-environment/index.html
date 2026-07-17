@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
+    <link rel="stylesheet" type="text/css" href="/css/mastodon-timeline.min.css">
+    
+    
+    <title>instantiator.dev | Free AI-assisted coding tools 1: Getting started</title>
+    
+    
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-SHE42ZWKEN"></script>
+      <script>
+        var doNotTrack = false;
+        if ( true ) {
+          var dnt = (navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack);
+          var doNotTrack = (dnt == "1" || dnt == "yes");
+        }
+        if (!doNotTrack) {
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-SHE42ZWKEN');
+        }
+      </script>
+    
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:image" content="https://instantiator.dev/opencode-tutorial/opencode-interface.png">
+	<meta name="twitter:title" content="Free AI-assisted coding tools 1: Getting started">
+	<meta name="twitter:description" content="A short tutorial to help you set up a lightweight AI assisted coding environment, with free tools. It’s a modest solution but, if you have a computer, you can get started for nothing.">
+
+    <meta property="og:url" content="https://instantiator.dev/post/prototyping-opencode-tutorial-001-dev-environment/">
+	<meta property="og:site_name" content="instantiator.dev">
+	<meta property="og:title" content="Free AI-assisted coding tools 1: Getting started">
+	<meta property="og:description" content="A short tutorial to help you set up a lightweight AI assisted coding environment, with free tools. It’s a modest solution but, if you have a computer, you can get started for nothing.">
+	<meta property="og:locale" content="en">
+	<meta property="og:type" content="article">
+		<meta property="article:section" content="post">
+		<meta property="article:published_time" content="2026-07-17T00:00:00+00:00">
+		<meta property="article:modified_time" content="2026-07-17T00:00:00+00:00">
+		<meta property="article:tag" content="Tutorial">
+		<meta property="article:tag" content="Data-Science">
+		<meta property="article:tag" content="Setup">
+		<meta property="article:tag" content="Vscode">
+		<meta property="article:tag" content="Opencode">
+		<meta property="og:image" content="https://instantiator.dev/opencode-tutorial/opencode-interface.png">
+
+
+    
+    <link rel="stylesheet"
+        href="/css/markupHighlight.min.b065fb7a8dabca50671d98ea7e8a42aed4027206ee1cf5a12e53d781afa4b03c.css"
+        integrity="sha256-sGX7eo2rylBnHZjqfopCrtQCcgbuHPWhLlPXga&#43;ksDw="
+        crossorigin="anonymous"
+        type="text/css">
+
+    </head><body><nav id="nav" class="navbar sticky-top justify-content-start navbar-expand-md frosted-white shadow mb-4">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="/">instantiator.dev</a>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav">
+        
+        
+        <li class="nav-item">
+          <a class="nav-link " href="/">
+            
+             Home
+          </a>
+        </li>
+        
+        <li class="nav-item">
+          <a class="nav-link " href="/post/">
+            
+             All posts
+          </a>
+        </li>
+        
+        <li class="nav-item">
+          <a class="nav-link " href="/categories/tool/">
+            
+             Tools
+          </a>
+        </li>
+        
+        <li class="nav-item">
+          <a class="nav-link " href="/categories/tutorial/">
+            
+             Tutorials
+          </a>
+        </li>
+        
+        <li class="nav-item">
+          <a class="nav-link " href="/categories/article/">
+            
+             Articles
+          </a>
+        </li>
+        
+        <li class="nav-item">
+          <a class="nav-link " href="/discounts/">
+            
+             Discounts
+          </a>
+        </li>
+        
+        <li class="nav-item">
+          <a class="nav-link " href="/about/">
+            
+             About
+          </a>
+        </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+<div class="container-fluid">
+
+<div class="row align-items-start">
+    <div class="col col-lg-3 d-none d-lg-block">
+      <div class="row mb-2">
+    <div class="col-3 col-lg-12 d-flex flex-column align-items-center">
+        <img 
+            src="/lewis/profile.jpg" alt="profile picture" 
+            class="mb-4 mt-4 img-thumbnail" 
+            style="border-radius: 50%; max-width: 200px; width: 100%;" />
+    </div>
+    <div class="col d-flex flex-column align-items-center">
+        <h3 class="mb-4"><a href="/">instantiator.dev</a></h3>
+        
+        <div style="text-align: center;" class="mb-4">
+            <p style="font-size: 0.8rem;">tech, volunteers, public safety, collective intelligence, articles, tools, code and ideas</p>
+        </div>
+
+        <div class="d-flex flex-row justify-content-evenly align-self-stretch mb-4">
+            
+            <a href="https://bsky.app/profile/instantiator.bsky.social" rel="me" aria-label="BlueSky account" alt="BlueSky account" target="_blank">
+                
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 600 530" fill="currentColor" stroke="currentColor" version="1.1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="m135.72 44.03c66.496 49.921 138.02 151.14 164.28 205.46 26.262-54.316 97.782-155.54 164.28-205.46 47.98-36.021 125.72-63.892 125.72 24.795 0 17.712-10.155 148.79-16.111 170.07-20.703 73.984-96.144 92.854-163.25 81.433 117.3 19.964 147.14 86.092 82.697 152.22-122.39 125.59-175.91-31.511-189.63-71.766-2.514-7.3797-3.6904-10.832-3.7077-7.8964-0.0174-2.9357-1.1937 0.51669-3.7077 7.8964-13.714 40.255-67.233 197.36-189.63 71.766-64.444-66.128-34.605-132.26 82.697-152.22-67.108 11.421-142.55-7.4491-163.25-81.433-5.9562-21.282-16.111-152.36-16.111-170.07 0-88.687 77.742-60.816 125.72-24.795z"/>
+                </svg>
+                
+            </a>
+            
+            <a href="https://mastodon.social/@instantiator" rel="me" aria-label="Mastodon account" alt="Mastodon account" target="_blank">
+                
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 418 512" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M433 179.11c0-97.2-63.71-125.7-63.71-125.7-62.52-28.7-228.56-28.4-290.48 0 0 0-63.72 28.5-63.72 125.7 0 115.7-6.6 259.4 105.63 289.1 40.51 10.7 75.32 13 103.33 11.4 50.81-2.8 79.32-18.1 79.32-18.1l-1.7-36.9s-36.31 11.4-77.12 10.1c-40.41-1.4-83-4.4-89.63-54a102.54 102.54 0 0 1-.9-13.9c85.63 20.9 158.65 9.1 178.75 6.7 56.12-6.7 105-41.3 111.23-72.9 9.8-49.8 9-121.5 9-121.5zm-75.12 125.2h-46.63v-114.2c0-49.7-64-51.6-64 6.9v62.5h-46.33V197c0-58.5-64-56.6-64-6.9v114.2H90.19c0-122.1-5.2-147.9 18.41-175 25.9-28.9 79.82-30.8 103.83 6.1l11.6 19.5 11.6-19.5c24.11-37.1 78.12-34.8 103.83-6.1 23.71 27.3 18.4 53 18.4 175z"></path></svg> 
+                
+            </a>
+            
+            <a href="https://github.com/instantiator" rel="me" aria-label="GitHub account" alt="GitHub account" target="_blank">
+                
+                <i data-feather="github" aria-hidden="true"></i>
+                
+            </a>
+            
+            <a href="https://www.linkedin.com/in/lewiswestbury" rel="me" aria-label="LinkedIn account" alt="LinkedIn account" target="_blank">
+                
+                <i data-feather="linkedin" aria-hidden="true"></i>
+                
+            </a>
+            
+            <a href="https://calendar.google.com/calendar/embed?src=ad7606dfb0580dc089629dff9be0d9fc0db19d296a7d72864c1b338f4dd896a4%40group.calendar.google.com&amp;ctz=Europe%2FLondon" rel="me" aria-label="Celebrations calendar" alt="Celebrations calendar" target="_blank">
+                
+                <i data-feather="calendar" aria-hidden="true"></i>
+                
+            </a>
+            
+            <a href="https://instantiator.dev/index.xml" rel="me" aria-label="RSS" alt="RSS" target="_blank">
+                
+                <i data-feather="rss" aria-hidden="true"></i>
+                
+            </a>
+            
+        </div>
+
+        <div class="d-flex flex-row justify-content-evenly align-self-stretch mb-4" style="font-size: 0.8rem;">
+            <ul style="padding-inline-start: 0;">
+            
+                <li><a href="https://instantiator.dev/presence" rel="me" aria-label="Presence" target="_blank">Presence</a> (tool) (in dev)</li>
+            
+                <li><a href="https://instantiator.dev/listsky/" rel="me" aria-label="ListSky" target="_blank">ListSky</a> (tool) (in dev)</li>
+            
+                <li><a href="https://epistolorean.club" rel="me" aria-label="The Epistolorean" target="_blank">The Epistolorean</a> (service)</li>
+            
+                <li><a href="https://icgames.net" rel="me" aria-label="Consensus Games" target="_blank">Consensus Games</a> (service) (in dev)</li>
+            
+                <li><a href="https://instantiator.dev/json-to-smart-csv/" rel="me" aria-label="JSON to Smart CSV" target="_blank">JSON to Smart CSV</a> (tool)</li>
+            
+                <li><a href="https://www.escapethereview.co.uk/profile/?user_id=11" rel="me" aria-label="Escape the Review" target="_blank">Escape the Review</a> (profile)</li>
+            
+                <li><a href="https://calendar.google.com/calendar/embed?src=ad7606dfb0580dc089629dff9be0d9fc0db19d296a7d72864c1b338f4dd896a4%40group.calendar.google.com&amp;ctz=Europe%2FLondon" rel="me" aria-label="In this house..." target="_blank">In this house...</a> (calendar)</li>
+            
+                <li><a href="https://calendar.app.google/9wYSR1cjEEdcS2zo7" rel="me" aria-label="A chat with Lewis" target="_blank">A chat with Lewis</a> (call)</li>
+            
+            </ul>
+        </div>
+
+        <div>
+            <span class="text-body-secondary fw-lighter" style="font-size: 0.8rem;">
+                &copy; Lewis Westbury  2026 
+            </span>
+        </div>
+    </div>
+</div>    
+
+
+
+    </div>
+    <div class="col-lg" style="overflow-x: hidden;">
+        <div id="post-content">
+            <h2 style="display: inline-block;">Free AI-assisted coding tools 1: Getting started</h2>
+                
+                    
+                        
+                        <a class="badge bg-primary" href="https://instantiator.dev/categories/tutorial">tutorial</a>
+                    
+                
+            <div class="mt-2">
+                 
+
+<div class="mb-2">
+    <i data-feather="calendar"></i>
+    <time datetime="2026-07-17">2026-07-17</time>
+</div>
+
+<div>
+    <i data-feather="tag"></i>
+    
+        
+        <a class="badge bg-secondary" href="https://instantiator.dev/tags/tutorial">#tutorial</a>
+    
+        
+        <a class="badge bg-secondary" href="https://instantiator.dev/tags/data-science">#data-science</a>
+    
+        
+        <a class="badge bg-secondary" href="https://instantiator.dev/tags/setup">#setup</a>
+    
+        
+        <a class="badge bg-secondary" href="https://instantiator.dev/tags/vscode">#vscode</a>
+    
+        
+        <a class="badge bg-secondary" href="https://instantiator.dev/tags/opencode">#opencode</a>
+    
+</div>
+
+
+            </div>
+            <div class="mt-4">
+                <p><em>A short tutorial to help you set up a lightweight AI assisted coding environment, with free tools. It&rsquo;s a modest solution but, if you have a computer, you can get started for nothing.</em></p>
+<h2 id="free-tools">Free tools</h2>
+<ul>
+<li>Visual Studio Code</li>
+<li>OpenCode</li>
+<li>Python</li>
+</ul>
+<p>I&rsquo;ve picked these tools because they are free, widely used, and cross-platform. Together they give you a code editor, a terminal, and an AI coding assistant. You may have a preference for different products, and that&rsquo;s ok. Most products will work together, so there&rsquo;s no <em>need</em> to stick to the recipe here exactly.</p>
+<blockquote>
+<p>I opted for <a href="https://www.python.org/">Python</a><sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup> as the primary language, and I&rsquo;ve hinted at using the <a href="https://streamlit.io/">Streamlit</a> framework. Python is popular amongst data scientists, and Streamlit offers simple ways to build a user interface. There are plenty of plugins and support for other languages and frameworks. In a future post, I&rsquo;ll discuss how you might choose a language and framework to work with.</p>
+</blockquote>
+<h2 id="1-visual-studio-code">1. Visual Studio Code</h2>
+<p><a href="https://code.visualstudio.com/">Visual Studio Code</a> is a free code editor and IDE<sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup> from Microsoft. IDEs can manage whole projects, not just code files. They often have built in tools that can build, test, and highlight your code, and showing warnings and errors. Visual Studio Code has an extensive plug-in/extensions system with just about everything you might need.</p>
+<h3 id="installation">Installation</h3>
+<ol>
+<li>Visit: <a href="https://code.visualstudio.com/">code.visualstudio.com</a></li>
+<li>Download the version for your computer</li>
+<li>Run the installer and follow the prompts</li>
+</ol>
+<h3 id="useful-extensions">Useful extensions</h3>
+<p>To install an extension, click the Extensions icon in the sidebar (or press <code>Ctrl</code> + <code>Shift</code> + <code>x</code> / <code>Cmd</code> + <code>Shift</code> + <code>x</code>). Search for the extension you want, and install it with the &ldquo;install&rdquo; button.</p>
+<table>
+	<thead>
+			<tr>
+					<th>Extension</th>
+					<th>What it does</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td><strong>Python</strong> (Microsoft)</td>
+					<td>Highlighting, linting, and debugging for Python files</td>
+			</tr>
+	</tbody>
+</table>
+<p>Some optional extensions you may wish to install at a future date&hellip;</p>
+<table>
+	<thead>
+			<tr>
+					<th>Extension</th>
+					<th>What it does</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td><strong>Jupyter</strong> (Microsoft)</td>
+					<td>Runs Jupyter notebooks inside VS Code</td>
+			</tr>
+			<tr>
+					<td><strong>GitLens</strong></td>
+					<td>Adds information about Git repositories, so you can see who changed what and when</td>
+			</tr>
+	</tbody>
+</table>
+<blockquote>
+<p><a href="https://jupyter.org/">Jupyter</a> notebooks offer a nice way to prototype and run simple data processing pipelines.</p>
+</blockquote>
+<p>Of these, I&rsquo;d suggest installing the <strong>Python</strong> extension now, and return to the others (or explore the wider catalog of extensions) when you need them.</p>
+<h2 id="2-opencode">2. OpenCode</h2>
+<p><a href="https://opencode.ai">OpenCode</a> is a free, open-source AI coding assistant that runs in your terminal. Really it&rsquo;s a harness, and you can attach it to any LLM provider out there. This means you can use paid for, free, and even models running locally on your machine. It can help you write code, examine the code in your project, fix errors, etc.</p>
+<p>It&rsquo;s one of several different products that do this - and each major provider has their own. For instance, Anthropic provide Claude Code, and Google provide Gemini CLI.</p>
+<p>OpenCode also comes with a Visual Studio integration.</p>
+<h3 id="installation-1">Installation</h3>
+<p>There are several different ways<sup id="fnref:3"><a href="#fn:3" class="footnote-ref" role="doc-noteref">3</a></sup> to install OpenCode. For our purposes, I suggest installing it as a VS Code extension.</p>
+<p>Follow the instructions at: <a href="https://opencode.ai/docs/ide/">https://opencode.ai/docs/ide/</a></p>
+<p>To check it&rsquo;s installed, open OpenCode inside VS Code:</p>
+<ul>
+<li>Press <code>Cmd</code> + <code>Shift</code> + <code>Esc</code>, or</li>
+<li>Press <code>Cmd</code> + <code>Shift</code> + <code>p</code> (opens the palette), type and select &ldquo;Open opencode&rdquo;</li>
+</ul>
+<blockquote>
+<p>💡 Get used to opening the palette in VS Code. It&rsquo;s a very useful way to launch a lot of different tools.</p>
+</blockquote>
+<p>You should see the OpenCode interface. By default, it&rsquo;s ready to use - with the (free) Big Pickle model provided by OpenCode Zen selected.</p>
+<p><img src="/opencode-tutorial/opencode-interface.png" alt="OpenCode interface" title="A screenshot of the OpenCode interface. It shows the words &#39;open code&#39; and a prompt where you can type. The hint text says &#39;Ask anything... Fix broken tests.&#39;"></p>
+<h3 id="picking-a-model">Picking a model</h3>
+<p>OpenCode can use different AI models. Some models are free. There are benefits and drawbacks to working with different providers and models. This is a fast-moving situation, but here are some general principles:</p>
+<p><strong>Free model providers often reserve the right to retrain their models using your code.</strong> This means you should be careful. If your code is private, or you need to include secrets or private keys in your code base, there&rsquo;s a chance that will leak into the wider model. In those cases, I don&rsquo;t recommend using it.</p>
+<p><strong>Free models are often constrained by usage.</strong> (Actually, so are paid models.) You&rsquo;re likely to get a smaller quota from a free model.</p>
+<p><strong>Free models may not perform as well as paid models.</strong> Some, like Big Pickle, are easily good enough for getting started, though.</p>
+<h3 id="opencode-zen-free-models">OpenCode Zen free models</h3>
+<p>OpenCode supports many providers, and comes with its own provider called <strong>OpenCode Zen</strong>. This has a curated selection models, tested and verified by the OpenCode team. Several models on Zen are free to use. These are the easiest way to get started.</p>
+<p>The free models available through OpenCode Zen are:</p>
+<table>
+	<thead>
+			<tr>
+					<th>Model</th>
+					<th>Model ID</th>
+					<th>Context</th>
+					<th>Notes</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td><strong>Big Pickle</strong></td>
+					<td><code>opencode/big-pickle</code></td>
+					<td>200K</td>
+					<td>A model optimised for coding tasks. It&rsquo;s free for a limited time while the team collects feedback.</td>
+			</tr>
+			<tr>
+					<td><strong>DeepSeek V4 Flash Free</strong></td>
+					<td><code>opencode/deepseek-v4-flash-free</code></td>
+					<td>1M</td>
+					<td>A fast, long-context model from DeepSeek. It has a 1 million token context window with up to 384K output tokens. It&rsquo;s free for a limited time.</td>
+			</tr>
+			<tr>
+					<td><strong>MiMo-V2.5 Free</strong></td>
+					<td><code>opencode/mimo-v2.5-free</code></td>
+					<td>1M</td>
+					<td>A strong reasoning model from Xiaomi. It&rsquo;s free for a limited time.</td>
+			</tr>
+			<tr>
+					<td><strong>North Mini Code Free</strong></td>
+					<td><code>opencode/north-mini-code-free</code></td>
+					<td>256K</td>
+					<td>A code-focused model from Cohere. It&rsquo;s free for a limited time.</td>
+			</tr>
+			<tr>
+					<td><strong>Nemotron 3 Ultra Free</strong></td>
+					<td><code>opencode/nemotron-3-ultra-free</code></td>
+					<td>1M</td>
+					<td>A large model from NVIDIA. It&rsquo;s free for trial use only.</td>
+			</tr>
+	</tbody>
+</table>
+<blockquote>
+<p>⚠️ <strong>For all of these models, be careful with sensitive or confidential information.</strong></p>
+</blockquote>
+<p>If your needs go beyond basic prototyping, you may wish to consider a paid provider<sup id="fnref:4"><a href="#fn:4" class="footnote-ref" role="doc-noteref">4</a></sup>. In those cases, you&rsquo;ll want to compare OpenCode Zen with the other available providers (Anthropic, Google, etc.)</p>
+<p><strong>Big Pickle</strong> is the default model. It is good for general-purpose coding and prototyping.</p>
+<h4 id="how-to-change-the-model">How to change the model</h4>
+<p>When OpenCode starts, run the <code>/models</code> command to see available models. Select one of the free models listed above. You can also set a default in your OpenCode config:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-json" data-lang="json"><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;$schema&#34;</span>: <span style="color:#e6db74">&#34;https://opencode.ai/config.json&#34;</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;model&#34;</span>: <span style="color:#e6db74">&#34;opencode/big-pickle&#34;</span>
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><blockquote>
+<p>💡 I recommend leaving it with Big Pickle to get started.</p>
+</blockquote>
+<h4 id="free-quotas-and-limits">Free quotas and limits</h4>
+<p>The free models come with rate limits. The exact limits are not officially published and may change, but based on community reports they are roughly:</p>
+<table>
+	<thead>
+			<tr>
+					<th>Limit</th>
+					<th>Approximate value</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td>Requests per day</td>
+					<td>~100–200</td>
+			</tr>
+			<tr>
+					<td>Requests per 5 hours</td>
+					<td>~200 (for Big Pickle)</td>
+			</tr>
+			<tr>
+					<td>Token context</td>
+					<td>200K (Big Pickle) up to 1M (DeepSeek, MiMo, Nemotron)</td>
+			</tr>
+	</tbody>
+</table>
+<p>You should be ok to do a few hours of prototyping and then return to continue later. OpenCode can warn you about quota, and after it&rsquo;s exhausted it should tell you when you can pick up again. You can wait a few hours, switch to another free model, or add a payment to continue as you were.</p>
+<h4 id="tokens">Tokens</h4>
+<p>Tokens are the basic unit of communication to and from LLMs. Each token is a word, concept, or part of a word. Coding agents can use many tokens as they need to read whole files, search your project, run things and test the outputs of those runs, and keep hold of a good amount of conversation history.</p>
+<p>For simplicity, quotas here are discussed in numbers of requests, rather than tokens. Your mileage may vary depending on how complex the tasks are you&rsquo;re handing out.</p>
+<h4 id="if-you-want-more-power">If you want more power</h4>
+<p>If you have an API key from OpenAI, Anthropic, or Google, you can use it with OpenCode to access their most capable paid models. These may handle complex tasks much better, and paid tiers often do not use your data for model training. (I recommend checking rather than assuming.)</p>
+<h2 id="summary">Summary</h2>
+<table>
+	<thead>
+			<tr>
+					<th>Tool</th>
+					<th>What it is</th>
+					<th>Why you need it</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td>VS Code</td>
+					<td>Code editor</td>
+					<td>Where you write and edit your code</td>
+			</tr>
+			<tr>
+					<td>OpenCode</td>
+					<td>AI coding assistant</td>
+					<td>Helps you write, understand, and debug code</td>
+			</tr>
+			<tr>
+					<td>Python extension</td>
+					<td>VS Code plugin</td>
+					<td>Makes working with Python files easier</td>
+			</tr>
+			<tr>
+					<td>A model (e.g. Big Pickle)</td>
+					<td>AI brain</td>
+					<td>Powers OpenCode&rsquo;s ability to help you</td>
+			</tr>
+	</tbody>
+</table>
+<p>Great - hopefully you&rsquo;ve got VS Code and OpenCode working together. In the next tutorial, we&rsquo;ll look at <strong>git</strong> and how to use it to work on your project safely, track your changes, and collaborate with others&hellip;</p>
+<div class="footnotes" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn:1">
+<p>Python isn&rsquo;t really my first choice language for anything - but personal tastes differ. Python is sensitive to indenting and whitespace and I find that frustrating. It&rsquo;s also not a <a href="https://en.wikipedia.org/wiki/Type_system">strongly-typed</a> language, and that feels like a weakness. Type systems protect code from a whole class of mistakes. However, it has been widely adopted by the data science and AI communities - and there are some good libraries for this kind of work.&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:2">
+<p>Integrated Development Environment&#160;<a href="#fnref:2" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:3">
+<p>If you want to install other variants (OpenCode Desktop, OpenCode Terminal, etc.), see: <a href="https://opencode.ai/download">https://opencode.ai/download</a>&#160;<a href="#fnref:3" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:4">
+<p><strong>Why not a local model?</strong> Whilst it&rsquo;s pretty amazing that you can run a model on your own computer, these aren&rsquo;t really ready for heavy-duty usage yet. Consumer laptops aren&rsquo;t really built to do this. They can run all the software you currently use, but would need a chunk more memory and computing power to run powerful LLMs. Local models run slowly, and have a small context window (ie. they won&rsquo;t be able to reason about much at a time - a bit like <a href="https://en.wikipedia.org/wiki/The_Magical_Number_Seven,_Plus_or_Minus_Two">Miller&rsquo;s Magic Number</a>).&#160;<a href="#fnref:4" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+</ol>
+</div>
+
+            </div>
+        </div>
+
+        <div class="post-footer">
+            <div class="info">
+                
+                  <p>
+                    See also:
+                    <ul>
+                    </ul>
+                  </p>
+                
+
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+        </div><script src="/js/bootstrap.min.js"></script>
+<script src="/js/feather.min.js"></script>
+<script src="/js/mastodon-timeline.umd.js"></script>
+<script>
+  feather.replace();
+</script></body>
+</html>

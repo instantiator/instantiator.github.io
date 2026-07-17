@@ -3,7 +3,43 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://instantiator.dev/</loc>
-    <lastmod>2026-06-26T00:00:00+00:00</lastmod>
+    <lastmod>2026-07-17T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://instantiator.dev/categories/</loc>
+    <lastmod>2026-07-17T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://instantiator.dev/tags/data-science/</loc>
+    <lastmod>2026-07-17T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://instantiator.dev/post/prototyping-opencode-tutorial-001-dev-environment/</loc>
+    <lastmod>2026-07-17T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://instantiator.dev/tags/opencode/</loc>
+    <lastmod>2026-07-17T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://instantiator.dev/post/</loc>
+    <lastmod>2026-07-17T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://instantiator.dev/series/prototyping-opencode-tutorial/</loc>
+    <lastmod>2026-07-17T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://instantiator.dev/series/</loc>
+    <lastmod>2026-07-17T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://instantiator.dev/tags/setup/</loc>
+    <lastmod>2026-07-17T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://instantiator.dev/tags/</loc>
+    <lastmod>2026-07-17T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://instantiator.dev/categories/tutorial/</loc>
+    <lastmod>2026-07-17T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://instantiator.dev/tags/tutorial/</loc>
+    <lastmod>2026-07-17T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://instantiator.dev/tags/vscode/</loc>
+    <lastmod>2026-07-17T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://instantiator.dev/tags/ai/</loc>
     <lastmod>2026-06-26T00:00:00+00:00</lastmod>
@@ -14,25 +50,16 @@
     <loc>https://instantiator.dev/categories/article/</loc>
     <lastmod>2026-06-26T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://instantiator.dev/categories/</loc>
-    <lastmod>2026-06-26T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://instantiator.dev/tags/funny/</loc>
     <lastmod>2026-06-26T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://instantiator.dev/tags/helloworld/</loc>
     <lastmod>2026-06-26T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://instantiator.dev/post/</loc>
-    <lastmod>2026-06-26T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://instantiator.dev/post/say-hello-world-and-nothing-else/</loc>
     <lastmod>2026-06-26T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://instantiator.dev/tags/silly/</loc>
-    <lastmod>2026-06-26T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://instantiator.dev/tags/</loc>
     <lastmod>2026-06-26T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://instantiator.dev/tags/art/</loc>
@@ -147,9 +174,6 @@
     <lastmod>2026-04-21T19:00:00+00:00</lastmod>
   </url><url>
     <loc>https://instantiator.dev/tags/timing/</loc>
-    <lastmod>2026-04-21T19:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://instantiator.dev/categories/tutorial/</loc>
     <lastmod>2026-04-21T19:00:00+00:00</lastmod>
   </url><url>
     <loc>https://instantiator.dev/tags/zeitgeist/</loc>
@@ -570,9 +594,6 @@
     <lastmod>2023-05-05T21:00:00+00:00</lastmod>
   </url><url>
     <loc>https://instantiator.dev/tags/scene/</loc>
-    <lastmod>2023-05-05T21:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://instantiator.dev/series/</loc>
     <lastmod>2023-05-05T21:00:00+00:00</lastmod>
   </url><url>
     <loc>https://instantiator.dev/tags/ufbt/</loc>

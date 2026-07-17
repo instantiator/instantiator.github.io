@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>Setup on instantiator.dev</title>
+		<link>https://instantiator.dev/tags/setup/</link>
+		<description>Recent content in Setup on instantiator.dev</description>
+		<generator>Hugo</generator>
+		<language>en</language>
+		
+		
+		
+		
+			<lastBuildDate>Fri, 17 Jul 2026 00:00:00 +0000</lastBuildDate>
+		
+			<atom:link href="https://instantiator.dev/tags/setup/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>Free AI-assisted coding tools 1: Getting started</title>
+				<link>https://instantiator.dev/post/prototyping-opencode-tutorial-001-dev-environment/</link>
+				<pubDate>Fri, 17 Jul 2026 00:00:00 +0000</pubDate>
+				<guid>https://instantiator.dev/post/prototyping-opencode-tutorial-001-dev-environment/</guid>
+				<description>&lt;p&gt;&lt;em&gt;A short tutorial to help you set up a lightweight AI assisted coding environment, with free tools. It&amp;rsquo;s a modest solution but, if you have a computer, you can get started for nothing.&lt;/em&gt;&lt;/p&gt;</description>
+			</item>
+	</channel>
+</rss>
