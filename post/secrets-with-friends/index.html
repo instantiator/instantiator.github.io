@@ -307,32 +307,34 @@
 </span></span></code></pre></div><p>In Jameson&rsquo;s example, the secret, which is fragmented using SSSS, is actually a key which can be used to decrypt something much larger.</p>
 <h2 id="how-does-it-work">How does it work?</h2>
 <p>SSSS relies on the notion that <code>K</code> points can define a polynomial curve of degree <code>K-1</code>.</p>
+<div class="table-scroll">
 <table>
-	<thead>
-			<tr>
-					<th>Points</th>
-					<th>Polynomial curve</th>
-					<th>Polynomial degree</th>
-			</tr>
-	</thead>
-	<tbody>
-			<tr>
-					<td>2</td>
-					<td>Line</td>
-					<td>1</td>
-			</tr>
-			<tr>
-					<td>3</td>
-					<td>Parabola</td>
-					<td>2</td>
-			</tr>
-			<tr>
-					<td>4</td>
-					<td>Cubic curve</td>
-					<td>3</td>
-			</tr>
-	</tbody>
+<thead>
+<tr>
+  <th>Points</th>
+  <th>Polynomial curve</th>
+  <th>Polynomial degree</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>2</td>
+  <td>Line</td>
+  <td>1</td>
+</tr>
+<tr>
+  <td>3</td>
+  <td>Parabola</td>
+  <td>2</td>
+</tr>
+<tr>
+  <td>4</td>
+  <td>Cubic curve</td>
+  <td>3</td>
+</tr>
+</tbody>
 </table>
+</div>
 <p><strong>If a specific polynomial curve is the secret,</strong> then a minimum of <code>K</code> points are required to reconstruct the original curve, and the degree of the polynomial defines <code>K</code>.</p>
 <p>For instance, here there are 2 parabolas (polynomials of degree 2), and given only 2 points it is not possible to distinguish them (or any other number of parabolas that pass through these points). However, by providing a third point, they can be disambiguated - and only 1 parabola will match a given set of 3 points.</p>
 <p><img src="/dps/ssss-parabolas.png" alt="Parabolas" title="Parabolas"></p>

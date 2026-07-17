@@ -292,75 +292,77 @@
 </ul>
 <h2 id="configuring-social-networks">Configuring social networks</h2>
 <p>The Open Social Distributor supports a number of different social networks. At time of writing, that includes Mastodon, Discord, Facebook, and LinkedIn.</p>
+<div class="table-scroll">
 <table>
-	<thead>
-			<tr>
-					<th>Network</th>
-					<th>Test</th>
-					<th>Post</th>
-					<th>Thread</th>
-					<th>Link</th>
-					<th>Tags</th>
-					<th>Images</th>
-			</tr>
-	</thead>
-	<tbody>
-			<tr>
-					<td>Console</td>
-					<td>✅</td>
-					<td>✅</td>
-					<td>✅</td>
-					<td>✅</td>
-					<td>✅</td>
-					<td>🆗</td>
-			</tr>
-			<tr>
-					<td>Mastodon</td>
-					<td>✅</td>
-					<td>✅</td>
-					<td>✅</td>
-					<td>✅</td>
-					<td>✅</td>
-					<td>✅</td>
-			</tr>
-			<tr>
-					<td>Discord</td>
-					<td>✅</td>
-					<td>✅</td>
-					<td>✅</td>
-					<td>✅</td>
-					<td>✅</td>
-					<td>✅</td>
-			</tr>
-			<tr>
-					<td>Facebook (page)</td>
-					<td>✅</td>
-					<td>✅</td>
-					<td>⌛️</td>
-					<td>✅</td>
-					<td>✅</td>
-					<td>✅</td>
-			</tr>
-			<tr>
-					<td>LinkedIn (org)</td>
-					<td>✅</td>
-					<td>✅</td>
-					<td>⌛️</td>
-					<td>✅</td>
-					<td>✅</td>
-					<td>✅</td>
-			</tr>
-			<tr>
-					<td>LinkedIn (member)</td>
-					<td>✅</td>
-					<td>✅</td>
-					<td>⌛️</td>
-					<td>✅</td>
-					<td>✅</td>
-					<td>✅</td>
-			</tr>
-	</tbody>
+<thead>
+<tr>
+  <th>Network</th>
+  <th>Test</th>
+  <th>Post</th>
+  <th>Thread</th>
+  <th>Link</th>
+  <th>Tags</th>
+  <th>Images</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>Console</td>
+  <td>✅</td>
+  <td>✅</td>
+  <td>✅</td>
+  <td>✅</td>
+  <td>✅</td>
+  <td>🆗</td>
+</tr>
+<tr>
+  <td>Mastodon</td>
+  <td>✅</td>
+  <td>✅</td>
+  <td>✅</td>
+  <td>✅</td>
+  <td>✅</td>
+  <td>✅</td>
+</tr>
+<tr>
+  <td>Discord</td>
+  <td>✅</td>
+  <td>✅</td>
+  <td>✅</td>
+  <td>✅</td>
+  <td>✅</td>
+  <td>✅</td>
+</tr>
+<tr>
+  <td>Facebook (page)</td>
+  <td>✅</td>
+  <td>✅</td>
+  <td>⌛️</td>
+  <td>✅</td>
+  <td>✅</td>
+  <td>✅</td>
+</tr>
+<tr>
+  <td>LinkedIn (org)</td>
+  <td>✅</td>
+  <td>✅</td>
+  <td>⌛️</td>
+  <td>✅</td>
+  <td>✅</td>
+  <td>✅</td>
+</tr>
+<tr>
+  <td>LinkedIn (member)</td>
+  <td>✅</td>
+  <td>✅</td>
+  <td>⌛️</td>
+  <td>✅</td>
+  <td>✅</td>
+  <td>✅</td>
+</tr>
+</tbody>
 </table>
+</div>
 <p>✅ = implemented, working
 ⌛️ = implemented, not fully tested yet</p>
 <h3 id="installation">Installation</h3>
@@ -415,72 +417,74 @@
 <h3 id="threads">Threads</h3>
 <p>If your message is longer than a message length for each social network, it will be reformatted into a thread. Threads have different meanings for different social networks.</p>
 <p>Some items (ie. tags, links) will either be moved to the first post, duplicated across all posts, or may be handled differently depending on the social network.</p>
+<div class="table-scroll">
 <table>
-	<thead>
-			<tr>
-					<th>Network</th>
-					<th>First post</th>
-					<th>Subsequent posts</th>
-					<th>Tags</th>
-					<th>Link</th>
-					<th>Images</th>
-					<th>Images per post</th>
-					<th>Image size limit</th>
-			</tr>
-	</thead>
-	<tbody>
-			<tr>
-					<td>Mastodon</td>
-					<td><code>500</code></td>
-					<td><code>500</code></td>
-					<td>All posts</td>
-					<td>First post</td>
-					<td>Front-loaded</td>
-					<td><code>4</code></td>
-					<td>TBC</td>
-			</tr>
-			<tr>
-					<td>Discord</td>
-					<td><code>2000</code></td>
-					<td><code>2000</code></td>
-					<td>First post</td>
-					<td>First post</td>
-					<td>First post</td>
-					<td><code>10</code></td>
-					<td>TBC</td>
-			</tr>
-			<tr>
-					<td>Facebook</td>
-					<td><code>63206</code></td>
-					<td><code>8000</code></td>
-					<td>First post</td>
-					<td>Special</td>
-					<td>First post</td>
-					<td><code>∞</code></td>
-					<td><code>10Mb</code></td>
-			</tr>
-			<tr>
-					<td>LinkedIn</td>
-					<td><code>3000</code></td>
-					<td><code>1250</code></td>
-					<td>First post</td>
-					<td>First post</td>
-					<td>First post</td>
-					<td><code>20</code></td>
-					<td>TBC</td>
-			</tr>
-			<tr>
-					<td>Twitter</td>
-					<td><code>280</code></td>
-					<td><code>280</code></td>
-					<td>All posts</td>
-					<td>First post</td>
-					<td>Front-loaded</td>
-					<td><code>4</code></td>
-					<td>TBC</td>
-			</tr>
-	</tbody>
+<thead>
+<tr>
+  <th>Network</th>
+  <th>First post</th>
+  <th>Subsequent posts</th>
+  <th>Tags</th>
+  <th>Link</th>
+  <th>Images</th>
+  <th>Images per post</th>
+  <th>Image size limit</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>Mastodon</td>
+  <td><code>500</code></td>
+  <td><code>500</code></td>
+  <td>All posts</td>
+  <td>First post</td>
+  <td>Front-loaded</td>
+  <td><code>4</code></td>
+  <td>TBC</td>
+</tr>
+<tr>
+  <td>Discord</td>
+  <td><code>2000</code></td>
+  <td><code>2000</code></td>
+  <td>First post</td>
+  <td>First post</td>
+  <td>First post</td>
+  <td><code>10</code></td>
+  <td>TBC</td>
+</tr>
+<tr>
+  <td>Facebook</td>
+  <td><code>63206</code></td>
+  <td><code>8000</code></td>
+  <td>First post</td>
+  <td>Special</td>
+  <td>First post</td>
+  <td><code>∞</code></td>
+  <td><code>10Mb</code></td>
+</tr>
+<tr>
+  <td>LinkedIn</td>
+  <td><code>3000</code></td>
+  <td><code>1250</code></td>
+  <td>First post</td>
+  <td>First post</td>
+  <td>First post</td>
+  <td><code>20</code></td>
+  <td>TBC</td>
+</tr>
+<tr>
+  <td>Twitter</td>
+  <td><code>280</code></td>
+  <td><code>280</code></td>
+  <td>All posts</td>
+  <td>First post</td>
+  <td>Front-loaded</td>
+  <td><code>4</code></td>
+  <td>TBC</td>
+</tr>
+</tbody>
 </table>
+</div>
 <p>Thread formatting is described fully in:</p>
 <ul>
 <li><a href="https://instantiator.dev/open-social-distributor/post-composition.html">Post composition</a></li>
@@ -501,28 +505,30 @@
 <li><a href="https://instantiator.dev/open-social-distributor/post-list-format.html">Post list format</a></li>
 </ul>
 <p>Some samples are available at:</p>
+<div class="table-scroll">
 <table>
-	<thead>
-			<tr>
-					<th>Sample</th>
-					<th>Description</th>
-			</tr>
-	</thead>
-	<tbody>
-			<tr>
-					<td><a href="https://github.com/instantiator/open-social-distributor/blob/main/open-social-distributor-app/sample-messages/blank-root.json">sample-messages/blank-root.json</a></td>
-					<td>Blank template</td>
-			</tr>
-			<tr>
-					<td><a href="https://github.com/instantiator/open-social-distributor/blob/main/open-social-distributor-app/sample-messages/single-message.jsonc">sample-messages/single-message.jsonc</a></td>
-					<td>A simple message, documented with comments</td>
-			</tr>
-			<tr>
-					<td><a href="https://github.com/instantiator/open-social-distributor/blob/main/open-social-distributor-app/sample-messages/release-announcement-v0.1.jsonc">sample-messages/release-announcement-v0.1.jsonc</a></td>
-					<td>The v0.1 release announcement post</td>
-			</tr>
-	</tbody>
+<thead>
+<tr>
+  <th>Sample</th>
+  <th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td><a href="https://github.com/instantiator/open-social-distributor/blob/main/open-social-distributor-app/sample-messages/blank-root.json">sample-messages/blank-root.json</a></td>
+  <td>Blank template</td>
+</tr>
+<tr>
+  <td><a href="https://github.com/instantiator/open-social-distributor/blob/main/open-social-distributor-app/sample-messages/single-message.jsonc">sample-messages/single-message.jsonc</a></td>
+  <td>A simple message, documented with comments</td>
+</tr>
+<tr>
+  <td><a href="https://github.com/instantiator/open-social-distributor/blob/main/open-social-distributor-app/sample-messages/release-announcement-v0.1.jsonc">sample-messages/release-announcement-v0.1.jsonc</a></td>
+  <td>The v0.1 release announcement post</td>
+</tr>
+</tbody>
 </table>
+</div>
 <h2 id="contributing">Contributing</h2>
 <p>The project is open source, and covered by the (very permissive) <a href="https://github.com/instantiator/open-social-distributor/blob/main/LICENSE">MIT license</a>.</p>
 <p>If you&rsquo;d to contribute, please read the <a href="https://github.com/instantiator/open-social-distributor/blob/main/CONTRIBUTING.md">contributors guide</a> and get stuck in! You&rsquo;re very welcome.</p>

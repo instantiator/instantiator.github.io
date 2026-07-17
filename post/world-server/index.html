@@ -336,24 +336,26 @@
 <li><code>world-server-db</code> is exposed on the port specified in <code>DB_PORT</code>.</li>
 </ul>
 <p>You shouldn&rsquo;t need to change much, but you may wish to change the password in a production environment (the default password provided is not a secret and should be treated with caution).</p>
+<div class="table-scroll">
 <table>
-	<thead>
-			<tr>
-					<th>To change</th>
-					<th>Modify environment variables</th>
-			</tr>
-	</thead>
-	<tbody>
-			<tr>
-					<td>The database password</td>
-					<td><code>POSTGRES_PASSWORD</code>, <code>DATABASE_URL</code>, <code>DATABASE_URL_LOCAL</code></td>
-			</tr>
-			<tr>
-					<td>The database name</td>
-					<td><code>POSTGRES_DB</code>, <code>DATABASE_URL</code>, <code>DATABASE_URL_LOCAL</code></td>
-			</tr>
-	</tbody>
+<thead>
+<tr>
+  <th>To change</th>
+  <th>Modify environment variables</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>The database password</td>
+  <td><code>POSTGRES_PASSWORD</code>, <code>DATABASE_URL</code>, <code>DATABASE_URL_LOCAL</code></td>
+</tr>
+<tr>
+  <td>The database name</td>
+  <td><code>POSTGRES_DB</code>, <code>DATABASE_URL</code>, <code>DATABASE_URL_LOCAL</code></td>
+</tr>
+</tbody>
 </table>
+</div>
 <p>Ensure that Docker is running on your system, and launch the application:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>$ ./run-server.sh
 </span></span></code></pre></div><h3 id="import-the-data">Import the data</h3>
@@ -509,20 +511,22 @@
 <ul>
 <li>Visit: <a href="http://localhost:7800">localhost:7800</a></li>
 </ul>
+<div class="table-scroll">
 <table>
-	<thead>
-			<tr>
-					<th><a href="http://localhost:7800">tables</a></th>
-					<th><a href="http://localhost:7800/public.campsites_all.html">map</a></th>
-			</tr>
-	</thead>
-	<tbody>
-			<tr>
-					<td><img src="/world-server/pg_tileserv-tables.png" alt=""></td>
-					<td><img src="/world-server/pg_tileserv-map.png" alt=""></td>
-			</tr>
-	</tbody>
+<thead>
+<tr>
+  <th><a href="http://localhost:7800">tables</a></th>
+  <th><a href="http://localhost:7800/public.campsites_all.html">map</a></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td><img src="/world-server/pg_tileserv-tables.png" alt=""></td>
+  <td><img src="/world-server/pg_tileserv-map.png" alt=""></td>
+</tr>
+</tbody>
 </table>
+</div>
 <h2 id="congratulations">Congratulations!</h2>
 <p>You have configured, launched and populated a GIS database paired with a tile server. Good luck applying it to your own project!</p>
 <h2 id="security">Security</h2>

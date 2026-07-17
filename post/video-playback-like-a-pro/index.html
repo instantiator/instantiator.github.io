@@ -323,36 +323,38 @@
 <p>Autoplay, or programmatic play, of <strong>videos with sound</strong> is governed by <strong>sticky activation</strong>.</p>
 <p>The autoplay policy of the browser governs both the <strong><code>autoplay</code></strong> property of a video, and any attempts to play it by invoking the <strong><code>play()</code></strong> function on the element programmatically.</p>
 <p>Each browser has its own definition of user gestures, activation requirements, and the transient window of opportunity…</p>
+<div class="table-scroll">
 <table>
-	<thead>
-			<tr>
-					<th>Policy</th>
-					<th>Autoplay policy</th>
-			</tr>
-	</thead>
-	<tbody>
-			<tr>
-					<td><strong>All browsers</strong></td>
-					<td><strong>Autoplay is permitted if</strong> the video is muted</td>
-			</tr>
-			<tr>
-					<td><strong><a href="https://developer.mozilla.org/en-US/docs/Web/Media/Guides/Autoplay#autoplay_availability">MDN general autoplay description</a></strong></td>
-					<td><strong>Autoplay is likely to be permitted if</strong> the audio is muted or volume is set to <code>0</code> the user has interacted with the site the site has been allowlisted the autoplay permissions policy has been granted by an <code>&lt;iframe&gt;</code></td>
-			</tr>
-			<tr>
-					<td><a href="https://developer.chrome.com/blog/autoplay"><strong>Chrome autoplay policy</strong></a></td>
-					<td><strong>Autoplay is permitted if</strong> the user has installed this app as a PWA, or the user has interacted with the domain (eg. clicked on the page), or the user has crossed the Media Engagement Index (MEI) threshold <strong>The MEI threshold is crossed if</strong> the user has previously played more than 7s of audio or video with sound on the domain, and the tab with the video is active, and the video element itself is rendered at larger than 200x140px</td>
-			</tr>
-			<tr>
-					<td><a href="https://developer.apple.com/documentation/webkit/delivering-video-content-for-safari"><strong>Delivering video content for Safari</strong></a></td>
-					<td><strong>Autoplay is permitted if</strong> the video element has the <code>playsinline</code> attribute (iOS) the video element itself has played video with sound before the site itself has been allow-listed by browser settings</td>
-			</tr>
-			<tr>
-					<td></td>
-					<td></td>
-			</tr>
-	</tbody>
+<thead>
+<tr>
+  <th>Policy</th>
+  <th>Autoplay policy</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td><strong>All browsers</strong></td>
+  <td><strong>Autoplay is permitted if</strong> the video is muted</td>
+</tr>
+<tr>
+  <td><strong><a href="https://developer.mozilla.org/en-US/docs/Web/Media/Guides/Autoplay#autoplay_availability">MDN general autoplay description</a></strong></td>
+  <td><strong>Autoplay is likely to be permitted if</strong> the audio is muted or volume is set to <code>0</code> the user has interacted with the site the site has been allowlisted the autoplay permissions policy has been granted by an <code>&lt;iframe&gt;</code></td>
+</tr>
+<tr>
+  <td><a href="https://developer.chrome.com/blog/autoplay"><strong>Chrome autoplay policy</strong></a></td>
+  <td><strong>Autoplay is permitted if</strong> the user has installed this app as a PWA, or the user has interacted with the domain (eg. clicked on the page), or the user has crossed the Media Engagement Index (MEI) threshold <strong>The MEI threshold is crossed if</strong> the user has previously played more than 7s of audio or video with sound on the domain, and the tab with the video is active, and the video element itself is rendered at larger than 200x140px</td>
+</tr>
+<tr>
+  <td><a href="https://developer.apple.com/documentation/webkit/delivering-video-content-for-safari"><strong>Delivering video content for Safari</strong></a></td>
+  <td><strong>Autoplay is permitted if</strong> the video element has the <code>playsinline</code> attribute (iOS) the video element itself has played video with sound before the site itself has been allow-listed by browser settings</td>
+</tr>
+<tr>
+  <td></td>
+  <td></td>
+</tr>
+</tbody>
 </table>
+</div>
 <h3 id="testing-for-autoplay">Testing for autoplay</h3>
 <p>There’s no guarantee that playback will succeed. The best advice seems to be, when programmatically playing video, to catch any errors thrown. The <code>play()</code> function on a <code>&lt;video&gt;</code> element returns a promise, and if that promise rejects, then your code should fail gracefully.</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-ts" data-lang="ts"><span style="display:flex;"><span><span style="color:#a6e22e">videoRef</span>.<span style="color:#a6e22e">current</span>.<span style="color:#a6e22e">play</span>()

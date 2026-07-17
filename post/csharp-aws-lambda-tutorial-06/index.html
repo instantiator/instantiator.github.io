@@ -41,7 +41,7 @@
 		<meta property="article:modified_time" content="2021-04-20T18:00:00+00:00">
 		<meta property="article:tag" content="Coding">
 		<meta property="article:tag" content="C#">
-		<meta property="article:tag" content=".Net">
+		<meta property="article:tag" content=".NET">
 		<meta property="article:tag" content="Aws">
 		<meta property="article:tag" content="Lambda">
 		<meta property="og:image" content="https://instantiator.dev/csharp-aws-lambda-tutorial/000-heading-img.png">
@@ -332,28 +332,30 @@
 <p>We&rsquo;re going to use one of the example cron strings:</p>
 <pre tabindex="0"><code class="language-cron" data-lang="cron">15 12 * * ? *
 </code></pre><p>This can be interpreted as a set of positional parameters:</p>
+<div class="table-scroll">
 <table>
-	<thead>
-			<tr>
-					<th>Minutes</th>
-					<th>Hours</th>
-					<th>Day of month</th>
-					<th>Month</th>
-					<th>Day of week</th>
-					<th>Year</th>
-			</tr>
-	</thead>
-	<tbody>
-			<tr>
-					<td>15</td>
-					<td>12</td>
-					<td>*</td>
-					<td>*</td>
-					<td>?</td>
-					<td>*</td>
-			</tr>
-	</tbody>
+<thead>
+<tr>
+  <th>Minutes</th>
+  <th>Hours</th>
+  <th>Day of month</th>
+  <th>Month</th>
+  <th>Day of week</th>
+  <th>Year</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>15</td>
+  <td>12</td>
+  <td>*</td>
+  <td>*</td>
+  <td>?</td>
+  <td>*</td>
+</tr>
+</tbody>
 </table>
+</div>
 <p>It will run at 12:15pm (UTC) every day.</p>
 <ul>
 <li>Select <strong>Cron expression</strong> and provide the expression: <code>15 12 * * ? *</code></li>

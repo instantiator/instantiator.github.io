@@ -307,20 +307,22 @@ Generating 3D crossword models I’ve been working on a tool to generate crosswo
 <p>The <code>ScadGenerator</code> directory contains the code for a C# application that combines your input CSV with a SCAD <a href="https://github.com/instantiator/crossword-generator-scad/blob/main/templates/crossword-template.scad">crossword template</a> for the crossword, and a set of variables contained in <a href="https://github.com/instantiator/crossword-generator-scad/blob/main/templates/crossword-default-values-18x20.csv">another CSV</a> file. What it produces ought to be a valid SCAD file defining the crossword in the shape you defined.</p>
 <p>The <code>generate-crossword.sh</code> script builds and executes this application in a Docker container for you.</p>
 <p>The output SCAD file it generates is then fed into the <a href="https://hub.docker.com/r/openscad/openscad">openscad/openscad</a> Docker image itself, which is used to generate an STL model from your SCAD definition.</p>
+<div class="table-scroll">
 <table>
-	<thead>
-			<tr>
-					<th>Test cells (STL)</th>
-					<th>A crossword design (STL)</th>
-			</tr>
-	</thead>
-	<tbody>
-			<tr>
-					<td><img src="/crossword-prints/preview-test-cells.png" alt="A 3D design showing a small flat base, that’s 3 by 1. The first position is blank, so it’s just the base. The other 2 positions have grid cells elevated over them, each with a stubby little circle printed inside the grid cell. The 3rd position grid walls are printed slightly higher than the other - they represent a highlighted cell. "></td>
-					<td><img src="/crossword-prints/preview-clarbert-crossword.png" alt="A full crossword printed in the same way. There’s a large, flat, 11x9 base plate, and then on top of it a crossword grid is elevated. In each cell of the crossword is another stubby little circle. Some cells have higher walls than others - they are highlighted cells."></td>
-			</tr>
-	</tbody>
+<thead>
+<tr>
+  <th>Test cells (STL)</th>
+  <th>A crossword design (STL)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td><img src="/crossword-prints/preview-test-cells.png" alt="A 3D design showing a small flat base, that’s 3 by 1. The first position is blank, so it’s just the base. The other 2 positions have grid cells elevated over them, each with a stubby little circle printed inside the grid cell. The 3rd position grid walls are printed slightly higher than the other - they represent a highlighted cell. "></td>
+  <td><img src="/crossword-prints/preview-clarbert-crossword.png" alt="A full crossword printed in the same way. There’s a large, flat, 11x9 base plate, and then on top of it a crossword grid is elevated. In each cell of the crossword is another stubby little circle. Some cells have higher walls than others - they are highlighted cells."></td>
+</tr>
+</tbody>
 </table>
+</div>
 <h2 id="how-do-i-use-it">How do I use it?</h2>
 <ul>
 <li>You&rsquo;ll need to have <a href="https://www.docker.com/products/docker-desktop/">Docker</a> installed on your machine.</li>

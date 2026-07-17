@@ -386,28 +386,30 @@ Reveal in React TLDR: Here’s a template repository for a NextJS app with a Rev
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>npm install swr
 </span></span></code></pre></div><h3 id="dynamically-creating-react-elements">Dynamically creating React elements</h3>
 <p>Some of the content is regular HTML, but some of the elements are React components. There are a number of packages that might help us convert the HTML and manage React components:</p>
+<div class="table-scroll">
 <table>
-	<thead>
-			<tr>
-					<th>Library</th>
-					<th>Last updated</th>
-			</tr>
-	</thead>
-	<tbody>
-			<tr>
-					<td><a href="https://www.npmjs.com/package/html-react-parser">html-react-parser</a></td>
-					<td>recently</td>
-			</tr>
-			<tr>
-					<td><a href="https://www.npmjs.com/package/html-to-react">html-to-react</a></td>
-					<td>recently</td>
-			</tr>
-			<tr>
-					<td><del><a href="https://www.npmjs.com/package/react-html-parser">react-html-parser</a></del></td>
-					<td>6 years ago</td>
-			</tr>
-	</tbody>
+<thead>
+<tr>
+  <th>Library</th>
+  <th>Last updated</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td><a href="https://www.npmjs.com/package/html-react-parser">html-react-parser</a></td>
+  <td>recently</td>
+</tr>
+<tr>
+  <td><a href="https://www.npmjs.com/package/html-to-react">html-to-react</a></td>
+  <td>recently</td>
+</tr>
+<tr>
+  <td><del><a href="https://www.npmjs.com/package/react-html-parser">react-html-parser</a></del></td>
+  <td>6 years ago</td>
+</tr>
+</tbody>
 </table>
+</div>
 <p>Install <code>html-react-parser</code></p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>npm install html-react-parser
 </span></span></code></pre></div><p><strong>NB.</strong> <code>html-react-parser</code> is simple to use, but not XSS-safe, and should be used with caution. <code>PresentationContent</code> manages replacement of individual React elements by type:</p>
