@@ -138,3 +138,7 @@ blockquote {
     color: light-dark(var(--bs-secondary-color), rgba(255,255,255,0.7));
     font-style: italic;
 }
+
+details {
+    margin-bottom: 1rem;
+}

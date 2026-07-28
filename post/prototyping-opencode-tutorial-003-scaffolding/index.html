@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
+    <link rel="stylesheet" type="text/css" href="/css/mastodon-timeline.min.css">
+    
+    
+    <title>instantiator.dev | Free AI-assisted coding tools 3: A basic prototype with Streamlit</title>
+    
+    
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-SHE42ZWKEN"></script>
+      <script>
+        var doNotTrack = false;
+        if ( true ) {
+          var dnt = (navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack);
+          var doNotTrack = (dnt == "1" || dnt == "yes");
+        }
+        if (!doNotTrack) {
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-SHE42ZWKEN');
+        }
+      </script>
+    
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:image" content="https://instantiator.dev/lewis/default-image.png">
+	<meta name="twitter:title" content="Free AI-assisted coding tools 3: A basic prototype with Streamlit">
+	<meta name="twitter:description" content="In earlier posts we set up a dev environment and a Git repository. Now we’ll create a small prototype from scratch using Streamlit.">
+
+    <meta property="og:url" content="https://instantiator.dev/post/prototyping-opencode-tutorial-003-scaffolding/">
+	<meta property="og:site_name" content="instantiator.dev">
+	<meta property="og:title" content="Free AI-assisted coding tools 3: A basic prototype with Streamlit">
+	<meta property="og:description" content="In earlier posts we set up a dev environment and a Git repository. Now we’ll create a small prototype from scratch using Streamlit.">
+	<meta property="og:locale" content="en">
+	<meta property="og:type" content="article">
+		<meta property="article:section" content="post">
+		<meta property="article:published_time" content="2026-07-28T12:00:00+00:00">
+		<meta property="article:modified_time" content="2026-07-28T12:00:00+00:00">
+		<meta property="article:tag" content="Tutorial">
+		<meta property="article:tag" content="Streamlit">
+		<meta property="article:tag" content="Python">
+		<meta property="article:tag" content="Data-Science">
+		<meta property="article:tag" content="Scaffolding">
+		<meta property="article:tag" content="Prototyping">
+		<meta property="og:image" content="https://instantiator.dev/lewis/default-image.png">
+			<meta property="og:see_also" content="https://instantiator.dev/post/prototyping-opencode-tutorial-002-git/">
+			<meta property="og:see_also" content="https://instantiator.dev/post/prototyping-opencode-tutorial-001-dev-environment/">
+
+
+    
+    <link rel="stylesheet"
+        href="/css/markupHighlight.min.b065fb7a8dabca50671d98ea7e8a42aed4027206ee1cf5a12e53d781afa4b03c.css"
+        integrity="sha256-sGX7eo2rylBnHZjqfopCrtQCcgbuHPWhLlPXga&#43;ksDw="
+        crossorigin="anonymous"
+        type="text/css">
+
+    </head><body><nav id="nav" class="navbar sticky-top justify-content-start navbar-expand-md frosted-white shadow mb-4">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="/">instantiator.dev</a>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav">
+        
+        
+        <li class="nav-item">
+          <a class="nav-link " href="/">
+            
+             Home
+          </a>
+        </li>
+        
+        <li class="nav-item">
+          <a class="nav-link " href="/post/">
+            
+             All posts
+          </a>
+        </li>
+        
+        <li class="nav-item">
+          <a class="nav-link " href="/categories/tool/">
+            
+             Tools
+          </a>
+        </li>
+        
+        <li class="nav-item">
+          <a class="nav-link " href="/categories/tutorial/">
+            
+             Tutorials
+          </a>
+        </li>
+        
+        <li class="nav-item">
+          <a class="nav-link " href="/categories/article/">
+            
+             Articles
+          </a>
+        </li>
+        
+        <li class="nav-item">
+          <a class="nav-link " href="/referrals/">
+            
+             Referrals
+          </a>
+        </li>
+        
+        <li class="nav-item">
+          <a class="nav-link " href="/about/">
+            
+             About
+          </a>
+        </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+<div class="container-fluid">
+
+<div class="row align-items-start">
+    <div class="col col-lg-3 d-none d-lg-block">
+      <div class="row mb-2">
+    <div class="col-3 col-lg-12 d-flex flex-column align-items-center">
+        <img 
+            src="/lewis/profile.jpg" alt="profile picture" 
+            class="mb-4 mt-4 img-thumbnail" 
+            style="border-radius: 50%; max-width: 200px; width: 100%;" />
+    </div>
+    <div class="col d-flex flex-column align-items-center">
+        <h3 class="mb-4"><a href="/">instantiator.dev</a></h3>
+        
+        <div style="text-align: center;" class="mb-4">
+            <p style="font-size: 0.8rem;">I'm a senior tech lead, writing about tech, volunteers, public safety, and collective intelligence. This blog contains articles, tools, code and ideas.</p>
+        </div>
+
+        <div class="d-flex flex-row justify-content-evenly align-self-stretch mb-4">
+            
+            <a href="https://bsky.app/profile/instantiator.bsky.social" rel="me" aria-label="BlueSky account" alt="BlueSky account" target="_blank">
+                
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 600 530" fill="currentColor" stroke="currentColor" version="1.1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="m135.72 44.03c66.496 49.921 138.02 151.14 164.28 205.46 26.262-54.316 97.782-155.54 164.28-205.46 47.98-36.021 125.72-63.892 125.72 24.795 0 17.712-10.155 148.79-16.111 170.07-20.703 73.984-96.144 92.854-163.25 81.433 117.3 19.964 147.14 86.092 82.697 152.22-122.39 125.59-175.91-31.511-189.63-71.766-2.514-7.3797-3.6904-10.832-3.7077-7.8964-0.0174-2.9357-1.1937 0.51669-3.7077 7.8964-13.714 40.255-67.233 197.36-189.63 71.766-64.444-66.128-34.605-132.26 82.697-152.22-67.108 11.421-142.55-7.4491-163.25-81.433-5.9562-21.282-16.111-152.36-16.111-170.07 0-88.687 77.742-60.816 125.72-24.795z"/>
+                </svg>
+                
+            </a>
+            
+            <a href="https://mastodon.social/@instantiator" rel="me" aria-label="Mastodon account" alt="Mastodon account" target="_blank">
+                
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 418 512" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M433 179.11c0-97.2-63.71-125.7-63.71-125.7-62.52-28.7-228.56-28.4-290.48 0 0 0-63.72 28.5-63.72 125.7 0 115.7-6.6 259.4 105.63 289.1 40.51 10.7 75.32 13 103.33 11.4 50.81-2.8 79.32-18.1 79.32-18.1l-1.7-36.9s-36.31 11.4-77.12 10.1c-40.41-1.4-83-4.4-89.63-54a102.54 102.54 0 0 1-.9-13.9c85.63 20.9 158.65 9.1 178.75 6.7 56.12-6.7 105-41.3 111.23-72.9 9.8-49.8 9-121.5 9-121.5zm-75.12 125.2h-46.63v-114.2c0-49.7-64-51.6-64 6.9v62.5h-46.33V197c0-58.5-64-56.6-64-6.9v114.2H90.19c0-122.1-5.2-147.9 18.41-175 25.9-28.9 79.82-30.8 103.83 6.1l11.6 19.5 11.6-19.5c24.11-37.1 78.12-34.8 103.83-6.1 23.71 27.3 18.4 53 18.4 175z"></path></svg> 
+                
+            </a>
+            
+            <a href="https://github.com/instantiator" rel="me" aria-label="GitHub account" alt="GitHub account" target="_blank">
+                
+                <i data-feather="github" aria-hidden="true"></i>
+                
+            </a>
+            
+            <a href="https://www.linkedin.com/in/lewiswestbury" rel="me" aria-label="LinkedIn account" alt="LinkedIn account" target="_blank">
+                
+                <i data-feather="linkedin" aria-hidden="true"></i>
+                
+            </a>
+            
+            <a href="https://calendar.google.com/calendar/embed?src=ad7606dfb0580dc089629dff9be0d9fc0db19d296a7d72864c1b338f4dd896a4%40group.calendar.google.com&amp;ctz=Europe%2FLondon" rel="me" aria-label="Celebrations calendar" alt="Celebrations calendar" target="_blank">
+                
+                <i data-feather="calendar" aria-hidden="true"></i>
+                
+            </a>
+            
+            <a href="https://instantiator.dev/index.xml" rel="me" aria-label="RSS" alt="RSS" target="_blank">
+                
+                <i data-feather="rss" aria-hidden="true"></i>
+                
+            </a>
+            
+        </div>
+
+        <div class="d-flex flex-row justify-content-evenly align-self-stretch mb-4" style="font-size: 0.8rem;">
+            <ul style="padding-inline-start: 0;">
+            
+                <li><a href="https://instantiator.dev/presence" rel="me" aria-label="Presence" target="_blank">Presence</a> (tool) (in dev)</li>
+            
+                <li><a href="https://instantiator.dev/listsky/" rel="me" aria-label="ListSky" target="_blank">ListSky</a> (tool) (in dev)</li>
+            
+                <li><a href="https://epistolorean.club" rel="me" aria-label="The Epistolorean" target="_blank">The Epistolorean</a> (service)</li>
+            
+                <li><a href="https://icgames.net" rel="me" aria-label="Consensus Games" target="_blank">Consensus Games</a> (service) (in dev)</li>
+            
+                <li><a href="https://instantiator.dev/json-to-smart-csv/" rel="me" aria-label="JSON to Smart CSV" target="_blank">JSON to Smart CSV</a> (tool)</li>
+            
+                <li><a href="https://www.escapethereview.co.uk/profile/?user_id=11" rel="me" aria-label="Escape the Review" target="_blank">Escape the Review</a> (profile)</li>
+            
+                <li><a href="https://calendar.google.com/calendar/embed?src=ad7606dfb0580dc089629dff9be0d9fc0db19d296a7d72864c1b338f4dd896a4%40group.calendar.google.com&amp;ctz=Europe%2FLondon" rel="me" aria-label="In this house..." target="_blank">In this house...</a> (calendar)</li>
+            
+                <li><a href="https://calendar.app.google/9wYSR1cjEEdcS2zo7" rel="me" aria-label="A chat with Lewis" target="_blank">A chat with Lewis</a> (call)</li>
+            
+            </ul>
+        </div>
+
+        <div>
+            <span class="text-body-secondary fw-lighter" style="font-size: 0.8rem;">
+                &copy; Lewis Westbury  2026 
+            </span>
+        </div>
+    </div>
+</div>    
+
+
+
+    </div>
+    <div class="col-lg" style="overflow-x: hidden;">
+        <div id="post-content">
+            <h2 style="display: inline-block;">Free AI-assisted coding tools 3: A basic prototype with Streamlit</h2>
+                
+                    
+                        
+                        <a class="badge bg-primary" href="https://instantiator.dev/categories/tutorial">tutorial</a>
+                    
+                
+            <div class="mt-2">
+                 
+
+<div class="mb-2">
+    <i data-feather="calendar"></i>
+    <time datetime="2026-07-28">2026-07-28</time>
+</div>
+
+<div>
+    <i data-feather="tag"></i>
+    
+        
+        <a class="badge bg-secondary" href="https://instantiator.dev/tags/tutorial">#tutorial</a>
+    
+        
+        <a class="badge bg-secondary" href="https://instantiator.dev/tags/streamlit">#streamlit</a>
+    
+        
+        <a class="badge bg-secondary" href="https://instantiator.dev/tags/python">#python</a>
+    
+        
+        <a class="badge bg-secondary" href="https://instantiator.dev/tags/data-science">#data-science</a>
+    
+        
+        <a class="badge bg-secondary" href="https://instantiator.dev/tags/scaffolding">#scaffolding</a>
+    
+        
+        <a class="badge bg-secondary" href="https://instantiator.dev/tags/prototyping">#prototyping</a>
+    
+        
+        <a class="badge bg-secondary" href="https://instantiator.dev/tags/prototype">#prototype</a>
+    
+        
+        <a class="badge bg-secondary" href="https://instantiator.dev/tags/ui">#ui</a>
+    
+</div>
+
+
+            </div>
+            <div class="mt-4">
+                <p>In earlier posts we set up a dev environment and a Git repository. Now we&rsquo;ll create a small prototype from scratch using <a href="https://streamlit.io">Streamlit</a>.</p>
+<h2 id="why-streamlit">Why Streamlit?</h2>
+<blockquote>
+<p>It&rsquo;s worth talking about Python for a moment. It&rsquo;s a popular choice for data science work.</p>
+<p>I&rsquo;ve worked in software development for a long time, but I&rsquo;m not a Python expert. Like every language, it has strengths and weaknesses.</p>
+<p>For data science, in particular, there are some versatile Python libraries that make it easy to manipulate and analyse large datasets. Because these libraries are popular, it helps data scientists and analysts to collaborate. Everybody speaks the same language.</p>
+<ul>
+<li><code>Pandas</code> is a library for working with datasets, managing tables of data as <code>DataFrames</code></li>
+<li><code>NumPy</code> is a library for performing operations on large amounts of data very efficiently</li>
+</ul>
+<p>For an introduction to both, see: <a href="https://www.codecademy.com/article/introduction-to-numpy-and-pandas">Introduction to Pandas and NumPy</a> (codecademy)</p>
+</blockquote>
+<img src="./streamlit-logo.svg" alt="The streamlit logo is a crown constructed from 3 triangles." style="height: 20vh; background: #ffffffaa; border-radius: 5px;" />
+<p><strong><a href="https://streamlit.io">Streamlit</a></strong> is an open-source Python framework for building data apps. It is:</p>
+<ul>
+<li><strong>Simple</strong> — you can just write plain Python, you don&rsquo;t need other languages like HTML, CSS, or javasript</li>
+<li><strong>Popular</strong> — there&rsquo;s a large user community</li>
+<li><strong>Well maintained</strong> — it&rsquo;s actively developed by a dedicated team and has open-source contributors</li>
+<li><strong>Well documented</strong> —  there are plenty of guides and tutorials for working with Streamlit</li>
+<li><strong>Fast to build with</strong> — you can create a running app very quickly</li>
+</ul>
+<p>Streamlit lets you build interactive web pages, linked to code that runs data processing, with very little effort. That makes it ideal for prototyping.</p>
+<p>Read more:</p>
+<ul>
+<li><a href="https://docs.streamlit.io/">Streamlit documentation</a></li>
+</ul>
+<h2 id="prerequisites">Prerequisites</h2>
+<p>In the previous tutorials, we set up your working environment. Please make sure you have:</p>
+<ul>
+<li>installed VS Code</li>
+<li>installed git</li>
+<li>cloned your repository and opened it in VS Code</li>
+</ul>
+<h3 id="installing-python">Installing Python</h3>
+<p>Streamlit needs Python 3.8 or later. Check if you have it installed with:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>python3 --version
+</span></span></code></pre></div><details>
+<summary> <b>Mac OS...</b> </summary>
+<p>macOS often comes with Python 3 pre-installed. If not, if you have Homebrew installed, you can install Python with:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>brew install python
+</span></span></code></pre></div><p>If not, you can download the installer from <a href="https://www.python.org/downloads/">python.org</a>.</p>
+</details>
+<details>
+<summary> <b>Windows...</b> </summary>
+<p>Download and install Python from <a href="https://www.python.org/downloads/">python.org</a>. Remember to choose <strong>&ldquo;Add Python to PATH&rdquo;</strong> during installation.</p>
+</details>
+<details>
+<summary> <b>Linux...</b> </summary>
+<p>Use one of these commands, depending on your system:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo apt install python3 python3-pip python3-venv    <span style="color:#75715e"># Debian / Ubuntu</span>
+</span></span><span style="display:flex;"><span>sudo dnf install python3 python3-pip python3-venv    <span style="color:#75715e"># Fedora</span>
+</span></span></code></pre></div></details>
+<h2 id="creating-a-simple-prototype">Creating a simple prototype</h2>
+<p>Open your project directory in VS Code, and then open a new terminal. This terminal will start in the project folder.</p>
+<h3 id="1-create-a-virtual-environment">1. Create a virtual environment</h3>
+<p>A virtual environment keeps your project&rsquo;s Python packages isolated from the rest of your system. Packages are libraries and tools, and it&rsquo;s good to keep each project separate so that if you need a specific version of a package for a particular project, that won&rsquo;t interfere with or break another project.</p>
+<p>If you are not currently in the project folder in your terminal (you should be if it&rsquo;s a new terminal), you can move to it with:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>cd ~/src/my-project
+</span></span></code></pre></div><p>Now create the virtual environment:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>python3 -m venv .venv
+</span></span></code></pre></div><p>Next, activate the environment.</p>
+<p>For Mac OS / Linux:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>source .venv/bin/activate
+</span></span></code></pre></div><p>For Windows:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bat" data-lang="bat"><span style="display:flex;"><span>.venv\Scripts\activate
+</span></span></code></pre></div><p>You&rsquo;ll know it&rsquo;s active because your terminal prompt will show <code>(.venv)</code> at the start.</p>
+<h3 id="2-install-streamlit">2. Install Streamlit</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>pip install streamlit
+</span></span></code></pre></div><p>This installs Streamlit and its dependencies into your virtual environment.</p>
+<div class="table-scroll">
+<table>
+<thead>
+<tr>
+  <th>Package</th>
+  <th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td><code>streamlit</code></td>
+  <td>The framework itself — handles the web UI and reruns your script on interaction</td>
+</tr>
+<tr>
+  <td><code>pandas</code></td>
+  <td>Data manipulation library — Streamlit uses this internally, and you&rsquo;ll use it for data work</td>
+</tr>
+<tr>
+  <td><code>numpy</code></td>
+  <td>Numerical computing — a dependency of many data science libraries</td>
+</tr>
+<tr>
+  <td><code>plotly</code> / <code>altair</code></td>
+  <td>Charting libraries — used for nice, interactive visualisations</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>You can see everything that was installed by running:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>pip list
+</span></span></code></pre></div><h3 id="3-create-the-application-file">3. Create the application file</h3>
+<p>Create a new file called <code>app.py</code> in the root of your repository with this content:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> streamlit <span style="color:#66d9ef">as</span> st
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>st<span style="color:#f92672">.</span>title(<span style="color:#e6db74">&#34;My Data Prototype&#34;</span>)
+</span></span><span style="display:flex;"><span>st<span style="color:#f92672">.</span>write(<span style="color:#e6db74">&#34;Hello! This is a blank starter app.&#34;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>name <span style="color:#f92672">=</span> st<span style="color:#f92672">.</span>text_input(<span style="color:#e6db74">&#34;Enter your name&#34;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">if</span> name:
+</span></span><span style="display:flex;"><span>    st<span style="color:#f92672">.</span>write(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;Welcome, </span><span style="color:#e6db74">{</span>name<span style="color:#e6db74">}</span><span style="color:#e6db74">!&#34;</span>)
+</span></span></code></pre></div><p>That&rsquo;s it — you have a working Streamlit app right there.</p>
+<h4 id="working-through-the-example">Working through the example&hellip;</h4>
+<p>It&rsquo;s a pretty simple application, but let&rsquo;s work through it line by line to see what it&rsquo;s doing.</p>
+<p>Streamlit allows you to define everything that&rsquo;s shown to the user with simple calls to functions that it provides.</p>
+<table>
+<tr><th>Python</th><th>What it does</th></tr>
+<tr>
+<td>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> streamlit <span style="color:#66d9ef">as</span> st
+</span></span></code></pre></div></td>
+<td>
+  This tells the application to use streamlit from the virtual environment, and to refer to it as `st` (making your code a little more concise!)
+</td>
+</tr>
+<tr>
+<td>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>st<span style="color:#f92672">.</span>title(<span style="color:#e6db74">&#34;My Data Prototype&#34;</span>)
+</span></span></code></pre></div></td>
+<td>
+  Sets the title of the page to "My Data Prototype".
+</td>
+</tr>
+<tr>
+<td>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>st<span style="color:#f92672">.</span>write(<span style="color:#e6db74">&#34;Hello! This is a blank starter app.&#34;</span>)
+</span></span></code></pre></div></td>
+<td>
+  This prints some wording to the page for the user to read:
+<blockquote>
+<p>&ldquo;Hello! This is a blank starter app.</p>
+</blockquote>
+</td>
+</tr>
+<tr>
+<td>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>name <span style="color:#f92672">=</span> st<span style="color:#f92672">.</span>text_input(<span style="color:#e6db74">&#34;Enter your name&#34;</span>)
+</span></span></code></pre></div></td>
+<td>
+  Streamlit shows a simple prompt for the user to fill in with text:
+<blockquote>
+<p>Enter your name</p>
+</blockquote>
+<p>When the user enters a value, this is put into the <code>name</code> variable, which is used in subsequent lines.</p>
+</td>
+</tr>
+<tr>
+<td>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">if</span> name:
+</span></span><span style="display:flex;"><span>    st<span style="color:#f92672">.</span>write(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;Welcome, </span><span style="color:#e6db74">{</span>name<span style="color:#e6db74">}</span><span style="color:#e6db74">!&#34;</span>)
+</span></span></code></pre></div></td>
+<td>
+  This is a call to the `write` function (just as we saw above), but it's wrapped in an `if` statement, and it uses the `name` variable.
+<p>Here&rsquo;s why:</p>
+<ul>
+<li>
+<p>Before the user has provided a value for <code>name</code>, there&rsquo;s nothing in it - so showing <code>&quot;Welcome, {name}!&quot;</code> on the page would actually show:</p>
+<blockquote>
+<p>Welcome, !</p>
+</blockquote>
+</li>
+<li>
+<p>To avoid this, we use an if-statement. The call to <code>st.write</code> only happens if there&rsquo;s a value for <code>name</code> - so if the user has provided anything, <em>then</em> the <code>write</code> function will be called.</p>
+<p>eg. with <code>Lewis</code> in <code>name</code>:</p>
+<blockquote>
+<p>Welcome, Lewis!</p>
+</blockquote>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+<p>There&rsquo;s plenty more to learn about Streamlit, but for now, it&rsquo;s helpful to understand what it&rsquo;s doing at a basic level.</p>
+<details>
+<summary> <b>What if the user changes the name they provide?</b> </summary>
+<p>When a value changes, Streamlit re-runs the application from the start. This means that the new value for <code>name</code> is picked up and used to update what&rsquo;s shown to the user in the UI.</p>
+<p>It&rsquo;s worth understanding this as there may be times when you don&rsquo;t wish to fully re-run everything (ie. if you have a complex calculation to perform).</p>
+</details>
+<h3 id="4-run-the-application">4. Run the application</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>streamlit run app.py
+</span></span></code></pre></div><p>A new tab will open in your browser showing your app at <code>http://localhost:8501</code>. (Streamlit will use port <code>8501</code> by default, but you can change that if you need.) Any changes you save to <code>app.py</code> will automatically be refreshed in the browser.</p>
+<h3 id="5-stop-the-application">5. Stop the application</h3>
+<p>Go back to the terminal where the app is running and press <code>Ctrl+C</code>. The app will stop.</p>
+<h2 id="saving-the-virtual-environment-from-git">Saving the virtual environment from Git</h2>
+<p>Your <code>.venv</code> folder contains thousands of files that Git shouldn&rsquo;t track. Whenever anybody else uses your project, they can initialise their own virtual environment, and this means you won&rsquo;t end up paying to store volumes of open source code in your git repository that anybody could retrieve for themselves.</p>
+<p>Create a <code>.gitignore</code> file to exclude it.</p>
+<p>You could create the file youeself, with a single line in it:</p>
+<pre tabindex="0"><code>.venv/
+</code></pre><p>or you could use a simple command in the terminal to create it:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>echo <span style="color:#e6db74">&#34;.venv/&#34;</span> &gt; .gitignore
+</span></span></code></pre></div><h2 id="making-your-first-commit">Making your first commit</h2>
+<p>Ok - you&rsquo;ve created a simple Streamlit app, and we&rsquo;re ready to push it to your repository for safe-keeping. For now, we&rsquo;ll work on the <code>main</code> branch - it&rsquo;s just you working on the project, and this means you don&rsquo;t need to perform branch-gymnastics just to add some basic code.</p>
+<p>In the terminal, type (or copy/paste) each of these lines, and review their output.</p>
+<p>Add all <em>changed</em> files to <strong>staging</strong>. Staging contains files under consideration for the next <strong>commit</strong>:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>git add .
+</span></span></code></pre></div><p>Create a new <strong>commit</strong>, with a commit message, composed from all the changes in <strong>staging</strong> right now:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>git commit -m <span style="color:#e6db74">&#34;Add a simple Streamlit data prototype&#34;</span>
+</span></span></code></pre></div><p>Push all new commits from your local repository to the remote:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>git push
+</span></span></code></pre></div><blockquote>
+<p>NB. If this is the first time you&rsquo;ve pushed to a remote repository, git may ask you to set up tracking between your local branch and the remote equivalent. You&rsquo;ll see a prompt inviting you to use a variant of the <code>push</code> command. Because we&rsquo;re working with the <code>main</code> branch, it might look like this:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>git push --set-upstream origin main
+</span></span></code></pre></div></blockquote>
+<p>Reload the page for your repository on GitHub, and you should see <code>app.py</code> and <code>.gitignore</code> have been added. (By default, GitHub will show you the <code>main</code> branch of your repository.)</p>
+<h2 id="what-no-ai">What, no AI?</h2>
+<p>You&rsquo;re right - we&rsquo;ve gone 2 whole tutorials without using the AI coding assistant you set up in the first tutorial. That&rsquo;s intentional. Once you&rsquo;re familiar with the core tools you&rsquo;ll be using, it&rsquo;ll be much easier to give an AI assistant clear directions, and to review the code it creates.</p>
+<h3 id="this-is-your-code-and-you-are-responsible-for-it">This is your code, and you are responsible for it</h3>
+<p>AI coding assistants are great but, just like people, they can make mistakes. They may not understand your intent, or they may write code that seems to work but fails in unexpected ways. It&rsquo;s important to be sure that new code really does what it&rsquo;s supposed to do before it goes into the project.</p>
+<p>In future tutorials we&rsquo;ll look at how to write automated tests that prove your code does what it&rsquo;s supposed to do.</p>
+<h3 id="learning-python">Learning Python</h3>
+<p>There are plenty of <a href="https://www.google.com/search?q=python&#43;tutorial">Python tutorials</a> available, and I recommend that as a part of continuing with this tutorial series, you find one that works for you.</p>
+<h2 id="some-helpful-commands">Some helpful commands</h2>
+<div class="table-scroll">
+<table>
+<thead>
+<tr>
+  <th>Step</th>
+  <th>Command</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>Create virtual environment</td>
+  <td><code>python3 -m venv .venv</code></td>
+</tr>
+<tr>
+  <td>Activate it</td>
+  <td><code>source .venv/bin/activate</code></td>
+</tr>
+<tr>
+  <td>Install Streamlit</td>
+  <td><code>pip install streamlit</code></td>
+</tr>
+<tr>
+  <td>Run the app</td>
+  <td><code>streamlit run app.py</code> (stop with <code>Ctrl</code>+<code>C</code>)</td>
+</tr>
+<tr>
+  <td>Add, commit, and push</td>
+  <td><code>git add .</code>, <code>git commit -m &quot;...&quot;</code>, <code>git push</code></td>
+</tr>
+</tbody>
+</table>
+</div>
+<h2 id="summary">Summary</h2>
+<p>You now have a running, version-controlled prototype.</p>
+<h3 id="coming-up">Coming up&hellip;</h3>
+<p>In future tutorials, we&rsquo;ll start working with an AI assistant to:</p>
+<ul>
+<li>add some simple logic, and automated tests to prove that your code does the right thing</li>
+<li>add the exciting features: data processing logic, visualisations, and interactivity</li>
+</ul>
+<p>We&rsquo;ll also be:</p>
+<ul>
+<li>documenting your code, as you go, to help others</li>
+<li>thinking about how to break your work into manageable tasks</li>
+<li>thinking about how to protect user data</li>
+</ul>
+<h3 id="my-biggest-recommendation">My biggest recommendation</h3>
+<p><strong>Don&rsquo;t start working with real data about <em>people</em> until you&rsquo;re sure you&rsquo;ve got a good handle on what your responsibilities are, and how you&rsquo;ll keep that data safe.</strong> We&rsquo;ll explore those topics together in future tutorials.</p>
+
+            </div>
+        </div>
+
+        <div class="post-footer">
+            <div class="info">
+                
+                  <p>
+                    See also:
+                    <ul><li><a href="https://instantiator.dev/post/prototyping-opencode-tutorial-002-git/">Free AI-assisted coding tools 2: Managing your code</a></li><li><a href="https://instantiator.dev/post/prototyping-opencode-tutorial-001-dev-environment/">Free AI-assisted coding tools 1: Getting started</a></li>
+                    </ul>
+                  </p>
+                
+
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+        </div><script src="/js/bootstrap.min.js"></script>
+<script src="/js/feather.min.js"></script>
+<script src="/js/mastodon-timeline.umd.js"></script>
+<script>
+  feather.replace();
+</script></body>
+</html>

@@ -41,9 +41,10 @@
 		<meta property="article:modified_time" content="2026-07-27T00:00:00+00:00">
 		<meta property="article:tag" content="Tutorial">
 		<meta property="article:tag" content="Git">
-		<meta property="article:tag" content="GitHub">
+		<meta property="article:tag" content="Github">
 		<meta property="article:tag" content="Version-Control">
 		<meta property="og:image" content="https://instantiator.dev/post/prototyping-opencode-tutorial-002-git/staged-files.png">
+			<meta property="og:see_also" content="https://instantiator.dev/post/prototyping-opencode-tutorial-003-scaffolding/">
 			<meta property="og:see_also" content="https://instantiator.dev/post/prototyping-opencode-tutorial-001-dev-environment/">
 
 
@@ -481,9 +482,16 @@
 <h3 id="check-it-works">Check it works</h3>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>git --version
 </span></span></code></pre></div><p>You should see something like <code>git version 2.x.x</code>.</p>
-<h2 id="creating-a-repository-on-github">Creating a repository on GitHub</h2>
-<ol>
-<li>Go to <a href="https://github.com">https://github.com</a> and sign in (create a free account if you don&rsquo;t have one)</li>
+<h2 id="first-time-setup">First-time setup</h2>
+<p>There are few more things to do. Once you have git installed, you&rsquo;ll need to make sure it knows who you are, so that your changes can be attributed to you.</p>
+<h3 id="create-an-account-on-github">Create an account on GitHub</h3>
+<p>If you don&rsquo;t already have an account, create one now: Visit <a href="https://github.com">github.com</a> and create a free account if you don&rsquo;t have one.</p>
+<h3 id="set-up-git">Set up git</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>git config --global user.name <span style="color:#e6db74">&#34;your name&#34;</span>
+</span></span><span style="display:flex;"><span>git config --global user.email <span style="color:#e6db74">&#34;your email address&#34;</span>
+</span></span></code></pre></div><h2 id="creating-a-repository-on-github">Creating a repository on GitHub</h2>
+<ol start="0">
+<li>Sign in to <a href="https://github.com">github.com</a></li>
 <li>Click the <strong><code>+</code></strong> icon in the top right corner and select <strong>New repository</strong></li>
 <li>Give your repository a name (e.g. <code>my-data-prototype</code>)</li>
 <li>Leave it <strong>Public</strong> if you don&rsquo;t mind that it&rsquo;s free and shareable, or choose <strong>Private</strong> (you can change this later if you need)</li>
@@ -589,40 +597,14 @@
 <blockquote>
 <p>💡 Of course, you could ask an AI coding assistant to do all of these things for you. I don&rsquo;t recommend that until you&rsquo;ve used it so much you&rsquo;re over-familiar with it. Although an assistant can take away these minutiae, you must understand what it is doing if you want to be responsible for the code that&rsquo;s committed. That comes from hands-on experience.</p>
 </blockquote>
-<h2 id="summary-1">Summary</h2>
-<div class="table-scroll">
-<table>
-<thead>
-<tr>
-  <th>Concept</th>
-  <th>What it is</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-  <td>Git</td>
-  <td>Local version control — tracks changes on your machine</td>
-</tr>
-<tr>
-  <td>GitHub</td>
-  <td>Online hosting — stores your repository in the cloud</td>
-</tr>
-<tr>
-  <td>Clone</td>
-  <td>Downloading a repository from GitHub to your computer</td>
-</tr>
-<tr>
-  <td>Commit</td>
-  <td>Saving a snapshot of your changes</td>
-</tr>
-<tr>
-  <td>Push</td>
-  <td>Uploading commits to GitHub</td>
-</tr>
-</tbody>
-</table>
-</div>
-<p>You now have a repository on GitHub, a local copy on your machine, and the tools to track every change. In the next tutorial, we&rsquo;ll create a data science project scaffold and make our first commit.</p>
+<h2 id="resources">Resources</h2>
+<p>If you&rsquo;d like to get more familiar with git, here are some further resources.</p>
+<ul>
+<li><a href="https://docs.github.com/en/get-started/git-basics/set-up-git">Set up git</a> (GitHub tutorial)</li>
+<li><a href="https://think-like-a-git.net/">Think like (a) git</a> (advanced git tutorial &ldquo;Git shouldn&rsquo;t be so hard to learn&rdquo;)</li>
+</ul>
+<h2 id="great">Great!</h2>
+<p>You now have a repository on GitHub, a local copy on your machine, and the tools to track your changes. In the next tutorial, we&rsquo;ll scaffold a prototype project, and make our first commit.</p>
 <div class="footnotes" role="doc-endnotes">
 <hr>
 <ol>
@@ -640,7 +622,7 @@
                 
                   <p>
                     See also:
-                    <ul><li><a href="https://instantiator.dev/post/prototyping-opencode-tutorial-001-dev-environment/">Free AI-assisted coding tools 1: Getting started</a></li>
+                    <ul><li><a href="https://instantiator.dev/post/prototyping-opencode-tutorial-003-scaffolding/">Free AI-assisted coding tools 3: A basic prototype with Streamlit</a></li><li><a href="https://instantiator.dev/post/prototyping-opencode-tutorial-001-dev-environment/">Free AI-assisted coding tools 1: Getting started</a></li>
                     </ul>
                   </p>
                 
