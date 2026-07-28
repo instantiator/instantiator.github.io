@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>Book-Review on instantiator.dev</title>
+		<link>https://instantiator.dev/tags/book-review/</link>
+		<description>Recent content in Book-Review on instantiator.dev</description>
+		<generator>Hugo</generator>
+		<language>en</language>
+		
+		
+		
+		
+			<lastBuildDate>Tue, 28 Jul 2026 00:00:00 +0000</lastBuildDate>
+		
+			<atom:link href="https://instantiator.dev/tags/book-review/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>Review: Dungeon Crawler Carl</title>
+				<link>https://instantiator.dev/post/dcc/</link>
+				<pubDate>Tue, 28 Jul 2026 00:00:00 +0000</pubDate>
+				<guid>https://instantiator.dev/post/dcc/</guid>
+				<description>&lt;p&gt;&lt;em&gt;TLDR: I&amp;rsquo;m enjoying Dungeon Crawler Carl. It&amp;rsquo;s amusing and poignant. It has several themes, they&amp;rsquo;re layered, and it takes a while for them all to warm up.&lt;/em&gt;&lt;/p&gt;</description>
+			</item>
+	</channel>
+</rss>

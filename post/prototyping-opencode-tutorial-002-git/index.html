@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
+    <link rel="stylesheet" type="text/css" href="/css/mastodon-timeline.min.css">
+    
+    
+    <title>instantiator.dev | Free AI-assisted coding tools 2: Managing your code</title>
+    
+    
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-SHE42ZWKEN"></script>
+      <script>
+        var doNotTrack = false;
+        if ( true ) {
+          var dnt = (navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack);
+          var doNotTrack = (dnt == "1" || dnt == "yes");
+        }
+        if (!doNotTrack) {
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-SHE42ZWKEN');
+        }
+      </script>
+    
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:image" content="https://instantiator.dev/post/prototyping-opencode-tutorial-002-git/staged-files.png">
+	<meta name="twitter:title" content="Free AI-assisted coding tools 2: Managing your code">
+	<meta name="twitter:description" content="Use git to keep a full history of your coding project and track changes. It’s a commonly used tool to help manage your work.">
+
+    <meta property="og:url" content="https://instantiator.dev/post/prototyping-opencode-tutorial-002-git/">
+	<meta property="og:site_name" content="instantiator.dev">
+	<meta property="og:title" content="Free AI-assisted coding tools 2: Managing your code">
+	<meta property="og:description" content="Use git to keep a full history of your coding project and track changes. It’s a commonly used tool to help manage your work.">
+	<meta property="og:locale" content="en">
+	<meta property="og:type" content="article">
+		<meta property="article:section" content="post">
+		<meta property="article:published_time" content="2026-07-27T00:00:00+00:00">
+		<meta property="article:modified_time" content="2026-07-27T00:00:00+00:00">
+		<meta property="article:tag" content="Tutorial">
+		<meta property="article:tag" content="Git">
+		<meta property="article:tag" content="Github">
+		<meta property="article:tag" content="Version-Control">
+		<meta property="og:image" content="https://instantiator.dev/post/prototyping-opencode-tutorial-002-git/staged-files.png">
+			<meta property="og:see_also" content="https://instantiator.dev/post/prototyping-opencode-tutorial-001-dev-environment/">
+
+
+    
+    <link rel="stylesheet"
+        href="/css/markupHighlight.min.b065fb7a8dabca50671d98ea7e8a42aed4027206ee1cf5a12e53d781afa4b03c.css"
+        integrity="sha256-sGX7eo2rylBnHZjqfopCrtQCcgbuHPWhLlPXga&#43;ksDw="
+        crossorigin="anonymous"
+        type="text/css">
+
+    </head><body><nav id="nav" class="navbar sticky-top justify-content-start navbar-expand-md frosted-white shadow mb-4">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="/">instantiator.dev</a>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav">
+        
+        
+        <li class="nav-item">
+          <a class="nav-link " href="/">
+            
+             Home
+          </a>
+        </li>
+        
+        <li class="nav-item">
+          <a class="nav-link " href="/post/">
+            
+             All posts
+          </a>
+        </li>
+        
+        <li class="nav-item">
+          <a class="nav-link " href="/categories/tool/">
+            
+             Tools
+          </a>
+        </li>
+        
+        <li class="nav-item">
+          <a class="nav-link " href="/categories/tutorial/">
+            
+             Tutorials
+          </a>
+        </li>
+        
+        <li class="nav-item">
+          <a class="nav-link " href="/categories/article/">
+            
+             Articles
+          </a>
+        </li>
+        
+        <li class="nav-item">
+          <a class="nav-link " href="/referrals/">
+            
+             Referrals
+          </a>
+        </li>
+        
+        <li class="nav-item">
+          <a class="nav-link " href="/about/">
+            
+             About
+          </a>
+        </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+<div class="container-fluid">
+
+<div class="row align-items-start">
+    <div class="col col-lg-3 d-none d-lg-block">
+      <div class="row mb-2">
+    <div class="col-3 col-lg-12 d-flex flex-column align-items-center">
+        <img 
+            src="/lewis/profile.jpg" alt="profile picture" 
+            class="mb-4 mt-4 img-thumbnail" 
+            style="border-radius: 50%; max-width: 200px; width: 100%;" />
+    </div>
+    <div class="col d-flex flex-column align-items-center">
+        <h3 class="mb-4"><a href="/">instantiator.dev</a></h3>
+        
+        <div style="text-align: center;" class="mb-4">
+            <p style="font-size: 0.8rem;">I'm a senior tech lead, writing about tech, volunteers, public safety, and collective intelligence. This blog contains articles, tools, code and ideas.</p>
+        </div>
+
+        <div class="d-flex flex-row justify-content-evenly align-self-stretch mb-4">
+            
+            <a href="https://bsky.app/profile/instantiator.bsky.social" rel="me" aria-label="BlueSky account" alt="BlueSky account" target="_blank">
+                
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 600 530" fill="currentColor" stroke="currentColor" version="1.1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="m135.72 44.03c66.496 49.921 138.02 151.14 164.28 205.46 26.262-54.316 97.782-155.54 164.28-205.46 47.98-36.021 125.72-63.892 125.72 24.795 0 17.712-10.155 148.79-16.111 170.07-20.703 73.984-96.144 92.854-163.25 81.433 117.3 19.964 147.14 86.092 82.697 152.22-122.39 125.59-175.91-31.511-189.63-71.766-2.514-7.3797-3.6904-10.832-3.7077-7.8964-0.0174-2.9357-1.1937 0.51669-3.7077 7.8964-13.714 40.255-67.233 197.36-189.63 71.766-64.444-66.128-34.605-132.26 82.697-152.22-67.108 11.421-142.55-7.4491-163.25-81.433-5.9562-21.282-16.111-152.36-16.111-170.07 0-88.687 77.742-60.816 125.72-24.795z"/>
+                </svg>
+                
+            </a>
+            
+            <a href="https://mastodon.social/@instantiator" rel="me" aria-label="Mastodon account" alt="Mastodon account" target="_blank">
+                
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 418 512" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M433 179.11c0-97.2-63.71-125.7-63.71-125.7-62.52-28.7-228.56-28.4-290.48 0 0 0-63.72 28.5-63.72 125.7 0 115.7-6.6 259.4 105.63 289.1 40.51 10.7 75.32 13 103.33 11.4 50.81-2.8 79.32-18.1 79.32-18.1l-1.7-36.9s-36.31 11.4-77.12 10.1c-40.41-1.4-83-4.4-89.63-54a102.54 102.54 0 0 1-.9-13.9c85.63 20.9 158.65 9.1 178.75 6.7 56.12-6.7 105-41.3 111.23-72.9 9.8-49.8 9-121.5 9-121.5zm-75.12 125.2h-46.63v-114.2c0-49.7-64-51.6-64 6.9v62.5h-46.33V197c0-58.5-64-56.6-64-6.9v114.2H90.19c0-122.1-5.2-147.9 18.41-175 25.9-28.9 79.82-30.8 103.83 6.1l11.6 19.5 11.6-19.5c24.11-37.1 78.12-34.8 103.83-6.1 23.71 27.3 18.4 53 18.4 175z"></path></svg> 
+                
+            </a>
+            
+            <a href="https://github.com/instantiator" rel="me" aria-label="GitHub account" alt="GitHub account" target="_blank">
+                
+                <i data-feather="github" aria-hidden="true"></i>
+                
+            </a>
+            
+            <a href="https://www.linkedin.com/in/lewiswestbury" rel="me" aria-label="LinkedIn account" alt="LinkedIn account" target="_blank">
+                
+                <i data-feather="linkedin" aria-hidden="true"></i>
+                
+            </a>
+            
+            <a href="https://calendar.google.com/calendar/embed?src=ad7606dfb0580dc089629dff9be0d9fc0db19d296a7d72864c1b338f4dd896a4%40group.calendar.google.com&amp;ctz=Europe%2FLondon" rel="me" aria-label="Celebrations calendar" alt="Celebrations calendar" target="_blank">
+                
+                <i data-feather="calendar" aria-hidden="true"></i>
+                
+            </a>
+            
+            <a href="https://instantiator.dev/index.xml" rel="me" aria-label="RSS" alt="RSS" target="_blank">
+                
+                <i data-feather="rss" aria-hidden="true"></i>
+                
+            </a>
+            
+        </div>
+
+        <div class="d-flex flex-row justify-content-evenly align-self-stretch mb-4" style="font-size: 0.8rem;">
+            <ul style="padding-inline-start: 0;">
+            
+                <li><a href="https://instantiator.dev/presence" rel="me" aria-label="Presence" target="_blank">Presence</a> (tool) (in dev)</li>
+            
+                <li><a href="https://instantiator.dev/listsky/" rel="me" aria-label="ListSky" target="_blank">ListSky</a> (tool) (in dev)</li>
+            
+                <li><a href="https://epistolorean.club" rel="me" aria-label="The Epistolorean" target="_blank">The Epistolorean</a> (service)</li>
+            
+                <li><a href="https://icgames.net" rel="me" aria-label="Consensus Games" target="_blank">Consensus Games</a> (service) (in dev)</li>
+            
+                <li><a href="https://instantiator.dev/json-to-smart-csv/" rel="me" aria-label="JSON to Smart CSV" target="_blank">JSON to Smart CSV</a> (tool)</li>
+            
+                <li><a href="https://www.escapethereview.co.uk/profile/?user_id=11" rel="me" aria-label="Escape the Review" target="_blank">Escape the Review</a> (profile)</li>
+            
+                <li><a href="https://calendar.google.com/calendar/embed?src=ad7606dfb0580dc089629dff9be0d9fc0db19d296a7d72864c1b338f4dd896a4%40group.calendar.google.com&amp;ctz=Europe%2FLondon" rel="me" aria-label="In this house..." target="_blank">In this house...</a> (calendar)</li>
+            
+                <li><a href="https://calendar.app.google/9wYSR1cjEEdcS2zo7" rel="me" aria-label="A chat with Lewis" target="_blank">A chat with Lewis</a> (call)</li>
+            
+            </ul>
+        </div>
+
+        <div>
+            <span class="text-body-secondary fw-lighter" style="font-size: 0.8rem;">
+                &copy; Lewis Westbury  2026 
+            </span>
+        </div>
+    </div>
+</div>    
+
+
+
+    </div>
+    <div class="col-lg" style="overflow-x: hidden;">
+        <div id="post-content">
+            <h2 style="display: inline-block;">Free AI-assisted coding tools 2: Managing your code</h2>
+                
+                    
+                        
+                        <a class="badge bg-primary" href="https://instantiator.dev/categories/tutorial">tutorial</a>
+                    
+                
+            <div class="mt-2">
+                 
+
+<div class="mb-2">
+    <i data-feather="calendar"></i>
+    <time datetime="2026-07-27">2026-07-27</time>
+</div>
+
+<div>
+    <i data-feather="tag"></i>
+    
+        
+        <a class="badge bg-secondary" href="https://instantiator.dev/tags/tutorial">#tutorial</a>
+    
+        
+        <a class="badge bg-secondary" href="https://instantiator.dev/tags/git">#git</a>
+    
+        
+        <a class="badge bg-secondary" href="https://instantiator.dev/tags/github">#github</a>
+    
+        
+        <a class="badge bg-secondary" href="https://instantiator.dev/tags/version-control">#version-control</a>
+    
+</div>
+
+
+            </div>
+            <div class="mt-4">
+                <p><em>Use <code>git</code> to keep a full history of your coding project and track changes. It&rsquo;s a commonly used tool to help manage your work.</em></p>
+<h2 id="what-is-git">What is Git?</h2>
+<p>Git is a very popular <em>version control</em> tool. It has been a very popular tool to manage software projects for a good while, and remains reasonably unchallenged as the industry standard (for now).</p>
+<p><strong>If you&rsquo;re working in software development, or you want to be in future, you&rsquo;ll need to be familiar with <code>git</code> and how it works.</strong></p>
+<blockquote>
+<p>⏩ If you&rsquo;re already familiar with <code>git</code> you can skip this tutorial. It&rsquo;s focussed on getting you started if you&rsquo;ve never used it before.</p>
+</blockquote>
+<p>Version control systems keep a history of every change you make to your files.</p>
+<blockquote>
+<p>NB. There are other version control systems: <a href="https://en.wikipedia.org/wiki/Concurrent_Versions_System">cvs</a> (uses <a href="https://en.wikipedia.org/wiki/Revision_Control_System">rcs</a>), <a href="https://www.mercurial-scm.org/">mercurial</a>, and others. I won&rsquo;t be discussing them here. Each has their advantages and disadvantages - but git is a clear front-runner for flexibility, and has wide adoption.</p>
+</blockquote>
+<p>Using version control means you can safely make changes to your software, and roll the whole project (or any part of it) back to any previous point, if you need, without losing your work.</p>
+<p>Git also supports a variety of ways to work with other developers without accidentally interfering with each others work. By creating branches, you can work in parallel with other developers, manage the history of those changes separately, and merge those changes together when you need.</p>
+<p><strong>Each git project is called a repository.</strong> It&rsquo;s a place to keep the source code of your application and its documentation, and the history of all the changes you&rsquo;ve made. Typically you&rsquo;d create a repository for each piece of software you&rsquo;re working on.</p>
+<blockquote>
+<p>You may decide to build a collection of applications. Opinions vary about whether you should place them all in the <em>same repository</em> (this is called the <strong>mono-repo</strong> pattern), or into <em>separate repositories</em>. Often, a change to one application should be delivered together with changes to other applications that depend on them. In that case, the mono-repo pattern becomes more attractive - because you can make a single change that affects everything at once. Coordinating separate repositories with separate histories would make that more complex.</p>
+</blockquote>
+<h2 id="github-and-other-providers">GitHub and other providers</h2>
+<p>Git is often confused with repository providers, like GitHub, GitLab, BitBucket, Gitea, etc. By using a repository providers, you can keep a centralised authoritative version of your repository.</p>
+<p>Like a shared drive, these services support collaboration with features that improve how you can use git. They keep your code safely backed up, and allow you to publish open source projects in a commonly understood way.</p>
+<p>Most providers have a similar set of features these days - meaning you can expect to see common collaborative methods, and automations for your repository.</p>
+<p>There&rsquo;s often a small fee to use a provider&rsquo;s features - although this can be almost-free if you&rsquo;re only using a small amount of automation, and if you open source your code.</p>
+<details>
+<summary> <b>Using a service or self-hosting...</b> </summary>
+<p>You don&rsquo;t <em>need</em> to use a third party provider, but it&rsquo;s commonly done because:</p>
+<ul>
+<li>providers are accessible through the internet, which makes publishing your open source code and working with others easy</li>
+<li>providers manage their service and keep it up to date - they are responsible for managing authentication of your contributors and some aspects of security around your respositories</li>
+</ul>
+<p>The disadvantages are:</p>
+<ul>
+<li>loss of control and privacy - you&rsquo;ll be storing your code with a third-party service</li>
+<li>costs - as noted, these services have fees (albeit often with generous free tiers)</li>
+</ul>
+<p>The alternative is to self-host git. These offer a higher degree of privacy as your code remains stored inside your own network, but you will have to install, run, and maintain the provider yourself. This places the responsibility of securing the service on your shoulders.</p>
+<p>You may also find that you are missing automation and collaboration features that you need if working in a team.</p>
+</details>
+<h2 id="why-is-this-important">Why is this important?</h2>
+<p>You could write software without version control, but you&rsquo;re missing out on important protections, and a mature way to collaborate. Software is made up many complex and interdependent components, and without a series of safeguards it can very quickly spiral out of control. Version control is one of those safeguards.</p>
+<p>That said, you can get started without knowing everything&hellip;</p>
+<h2 id="terminology">Terminology</h2>
+<p>Below are a number of features you may wish to learn about. Open any section to learn more, or refer back to here when something comes up.</p>
+<details>
+<summary> <b>CI/CD...</b> </summary>
+<p>Repository hosts also offer other features, such as security audits, test runners, and automated deployments. Many projects have CI/CD pipelines.</p>
+<ul>
+<li>Continuous Integration (CI): The practice of automatically validating code changes by running tests against them before allowing them to merge.</li>
+<li>Continuous Deployment (CD): The practice of automatically deploying code that has been merged.</li>
+</ul>
+</details>
+<details>
+<summary> <b>Commits, branches, merges, pull requests...</b> </summary>
+<p>As you make changes to your project, you&rsquo;ll modify different files. A <strong>commit</strong> is a group of these changes, bundled together, that represent a single conceptual change (eg. &ldquo;Add the login screen&rdquo;, &ldquo;Update the logo&rdquo;, etc.)</p>
+<p>Whenever you make a commit, it is added to the <strong>branch</strong> you are on. When you get started, your repository will have one branch - the <code>main</code> branch. It&rsquo;s common to let that branch represent the authoritative version of the project.</p>
+<p>At any time, you can create a new branch from the commit you are currently at (or any other). When on another branch, your commits will be added to the new branch - not the <code>main</code> branch. This means you can create as many commits as you need to develop a new feature, or fix, or improvement, and work on it in isolation from the rest of the project.</p>
+<p>When you switch between branches, the files you see are changed by git to reflect the last commit on the branch you move to. You can work on many different things in this way, alternating between them by moving between branches.</p>
+<p>This is great for working on multiple features, and great for working in collaboration. Developers can work on separate branches, meaning that they won&rsquo;t interfere with each other. But what happens when a branch is ready?</p>
+<p>It&rsquo;s possible to <strong>merge</strong> from one branch to another directly in git. This is a very simple approach to combining two streams of work, and it&rsquo;s worth understanding why most development teams do it in a more round-about way&hellip;</p>
+<p>Developers create <strong>pull requests</strong> to represent changes they wish to merge.</p>
+<p>A pull request is a bundle of different pieces of information, and they&rsquo;re handled by the repository host, rather than git. GitHub&rsquo;s pull request is one example, but all services have a lot in common:</p>
+<ul>
+<li>the branch that the changes are coming from</li>
+<li>the branch that they&rsquo;re targeting</li>
+<li>a description of the change</li>
+<li>lots of code review, testing, and approval features to help you manage a publishing workflow</li>
+</ul>
+<p>Working this way means that developers can carefully manage changes, review them, catch mistakes, and catch bugs before they enter the code base.</p>
+<p>Pull requests are one of the benefits of working with hosted repository providers like GitHub.</p>
+</details>
+<details>
+<summary> <b>Push and pull...</b> </summary>
+<p>Working with GitHub or another repository host means that your local copy of the repository <em>isn&rsquo;t the authoritative copy.</em> That means you&rsquo;re going to need a way to pull what&rsquo;s there into your own copy, and push your own branches changes up to the remote copy.</p>
+<p>Git is built for this - and it&rsquo;s normal for each branch to have an origin - an equivalent branch found on the repository provider&rsquo;s version of the repository.</p>
+<p>The easiest way to think about it:</p>
+<ul>
+<li><strong>pull</strong> - get the latest commits from a remote branch</li>
+<li><strong>push</strong> - send your commits to a remote branch</li>
+</ul>
+</details>
+<details>
+<summary> <b>Staging...</b> </summary>
+<p>Before you create a commit, git helps you to decide what will go into that commit. By adding files to a <em>staging</em> list, you can prepare a group of changes that will then become a single commit.</p>
+</details>
+<details>
+<summary> <b>Environments...</b> </summary>
+<blockquote>
+<p>This is more of a software development term than specific to git. However, it&rsquo;s helpful to think about, especially if you&rsquo;re developing software that you want to be able to test before changes go into production&hellip;</p>
+</blockquote>
+<p>Software projects often have multiple deployment environments. Examples are: <code>testing</code>, <code>demo</code>, <code>production</code></p>
+<p>These are often entirely isolated instances of the application, each for a different purpose. This allows data to be separated, and for changes to be carefully managed. It&rsquo;s likely that the most recent changes will be deployed to a testing environment first, where tests can be run against the application.</p>
+<p>If it passes those tests, it may then be deployed (&lsquo;promoted&rsquo;) to the demo and production environments.</p>
+<p>Each project will have its own policies surrounding these deployments. Some projects will run automated checks, and automatically promote code changes from one environment to the next if the tests pass. The main advantage of this is the speed at which changes can be safely tested and deployed to production. Others may rely on manual gating, so that changes can be managed. This may be because significant changes to the project  could be disruptive, or because the automated testing suite isn&rsquo;t mature enough yet to give sufficient assurances - and so changes must be grouped and manually tested first.</p>
+</details>
+<h3 id="summary">Summary</h3>
+<div class="table-scroll">
+<table>
+<thead>
+<tr>
+  <th>Term</th>
+  <th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>git</td>
+  <td>An application to help you track and manage changes in code repositories.</td>
+</tr>
+<tr>
+  <td>staging</td>
+  <td>A collection of files that are <em>under consideration</em> for inclusion in a commit.</td>
+</tr>
+<tr>
+  <td>commit</td>
+  <td>A single change to a repository. (Can represent changes to any number of files.)</td>
+</tr>
+<tr>
+  <td>branch</td>
+  <td>A sequence of commits.</td>
+</tr>
+<tr>
+  <td>pull, push</td>
+  <td>Get all commits from a remote branch, or push local commits to a remote branch.</td>
+</tr>
+<tr>
+  <td>pull request</td>
+  <td>A request to merge the commits from one branch to another.</td>
+</tr>
+<tr>
+  <td>environment</td>
+  <td>An isolated instance of your application, for a specific purpose.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h2 id="a-common-workflow">A common workflow</h2>
+<ol>
+<li>
+<p><strong>Switch to <code>main</code></strong> and <strong>pull</strong> the latest - ie. get back to the most recent authoritative version of the project</p>
+</li>
+<li>
+<p><strong>Create a new branch</strong> for your current piece of work (and switch to it)</p>
+</li>
+<li>
+<p>Make some changes</p>
+<ul>
+<li><strong>Add those changes</strong> to staging</li>
+<li><strong>Create a commit</strong> from staging (give it a helpful description)</li>
+<li>Make some more changes&hellip;
+<ul>
+<li><strong>Add those changes</strong> to staging</li>
+<li><strong>Create a commit</strong> from staging (give it a helpful description)
+<ul>
+<li>Keep going until your change is ready for review&hellip;</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>When ready, <strong>push</strong> to a remote branch</p>
+</li>
+<li>
+<p><strong>Create a pull request</strong> from that branch to main</p>
+</li>
+<li>
+<p>Kick off your publication workflow&hellip;</p>
+<ul>
+<li>A colleague reviews your pull request and approves or suggests changes</li>
+<li>Iterate by adding more commits with improvements until ready</li>
+<li>After final approval, <strong>merge your pull request to <code>main</code></strong></li>
+</ul>
+</li>
+</ol>
+<h2 id="installing-git">Installing Git</h2>
+<p>These installation instructions are for the terminal. Working with shell commands in a terminal is an essential tool to help you understand and manage software development.</p>
+<blockquote>
+<p>💡 If you&rsquo;re struggling, your coding assistant can explain most things.</p>
+</blockquote>
+<blockquote>
+<p>💡 If you just want a quick reference for a command, use the <code>man</code> command (manual), or the <code>--help</code> option for your command (which is commonly implemented for most commands). eg.</p>
+<pre tabindex="0"><code>man git
+</code></pre><p>or:</p>
+<pre tabindex="0"><code>git --help
+</code></pre></blockquote>
+<details>
+<summary> <b>macOS...</b> </summary>
+<p>Type:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>git --version
+</span></span></code></pre></div><p>If Git is not installed, macOS will prompt you to install the Xcode Command Line Tools. Follow the dialog and it will install Git for you.</p>
+</details>
+<details>
+<summary> <b>Windows...</b> </summary>
+<p>Download and install git from: <a href="https://git-scm.com/download/win">https://git-scm.com/download/win</a></p>
+</details>
+<details>
+<summary> <b>Linux...</b> </summary>
+<p>Use one of these commands, depending on your system:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo apt install git    <span style="color:#75715e"># Debian / Ubuntu</span>
+</span></span><span style="display:flex;"><span>sudo dnf install git    <span style="color:#75715e"># Fedora</span>
+</span></span></code></pre></div></details>
+<h3 id="check-it-works">Check it works</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>git --version
+</span></span></code></pre></div><p>You should see something like <code>git version 2.x.x</code>.</p>
+<h2 id="creating-a-repository-on-github">Creating a repository on GitHub</h2>
+<ol>
+<li>Go to <a href="https://github.com">https://github.com</a> and sign in (create a free account if you don&rsquo;t have one)</li>
+<li>Click the <strong>+</strong> icon in the top right corner and select <strong>New repository</strong></li>
+<li>Give your repository a name (e.g. <code>my-data-prototype</code>)</li>
+<li>Leave it <strong>Public</strong> if you don&rsquo;t mind that it&rsquo;s free and shareable, or choose <strong>Private</strong> (you can change this later if you need)</li>
+<li>Consider the templating options<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup>, or the option to create a <code>README.md</code> file when creating the repository</li>
+<li>Click <strong>Create repository</strong></li>
+</ol>
+<p>GitHub will create the repository. If you didn&rsquo;t allow it to template anything, it will show you a page with setup instructions. If there&rsquo;s already code there from a template, GitHub will show you what&rsquo;s in the repository.</p>
+<h2 id="cloning-the-repository-locally">Cloning the repository locally</h2>
+<p>&ldquo;Cloning&rdquo; means making a copy of a GitHub repository to your computer.</p>
+<p>For this tutorial, I&rsquo;ve assumed you&rsquo;re starting with a fresh repository (ie. you&rsquo;ve done no work on it).</p>
+<h3 id="create-your-src-folder">Create your <code>src</code> folder</h3>
+<p>This is something you&rsquo;ll only need to do once.</p>
+<p>Most developers keep all their code repositories inside a folder called <code>src</code>. It&rsquo;s not a strong requirement, but it&rsquo;s a common convention and it helps to find things. You can name it anything else and it won&rsquo;t matter&hellip;</p>
+<ol>
+<li>
+<p>Create a <code>src</code> folder:</p>
+<p>Navigate to your home folder:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>cd ~
+</span></span></code></pre></div><p>Create the new folder there:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>mkdir src
+</span></span></code></pre></div></li>
+<li>
+<p>Enter the <code>src</code> folder:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>cd ~/src
+</span></span></code></pre></div></li>
+</ol>
+<h3 id="clone-the-repository">Clone the repository</h3>
+<ol>
+<li>
+<p>On your new repository page on GitHub, click the green <strong>Code</strong> button</p>
+</li>
+<li>
+<p>Copy the URL under <strong>HTTPS</strong> (it looks like <code>https://github.com/your-username/your-repository-name.git</code>)</p>
+</li>
+<li>
+<p>Open a terminal in VS Code (<code>Ctrl+backtick</code> / <code>Cmd+backtick</code>, or use the <strong>Terminal</strong> menu)</p>
+</li>
+<li>
+<p>Clone the repository:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>git clone https://github.com/your-username/your-repository-name.git
+</span></span></code></pre></div></li>
+</ol>
+<h2 id="opening-the-repository-in-vs-code">Opening the repository in VS Code</h2>
+<ol>
+<li>In VS Code, go to <strong>File</strong> &gt; <strong>Open Folder</strong> (or <strong>File</strong> &gt; <strong>Open</strong>)</li>
+<li>Navigate to the new repository folder, and select it</li>
+<li>Click <strong>Open</strong></li>
+</ol>
+<p>VS Code knows this is a Git repository, and you&rsquo;ll see a Source Control icon in the sidebar (it looks like a branching line) where you can view changes, stage files, and commit.</p>
+<blockquote>
+<p>💡 The next time you open a terminal, it&rsquo;ll start in the folder that VS Code is currently working in.</p>
+</blockquote>
+<h2 id="how-git-fits-into-your-workflow">How Git fits into your workflow</h2>
+<p>The basic cycle when working with Git is:</p>
+<ol>
+<li><strong>Edit files</strong> — make changes to your code</li>
+<li><strong>Stage</strong> — tell Git which changes you want to save (<code>git add</code>)</li>
+<li><strong>Commit</strong> — save a snapshot with a message (<code>git commit</code>)</li>
+<li><strong>Push</strong> — upload your commits to GitHub (<code>git push</code>)</li>
+</ol>
+<p>This means your work is always backed up and versioned. If something breaks, you can look through your commit history and get back to a working state - and git offers plenty of commands to help you do that.</p>
+<h2 id="useful-commands">Useful commands</h2>
+<p>Here are some simple commands to help you get started using <code>git</code> with your new repository:</p>
+<div class="table-scroll">
+<table>
+<thead>
+<tr>
+  <th>Command</th>
+  <th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td><code>git status</code></td>
+  <td>Shows which files have changed</td>
+</tr>
+<tr>
+  <td><code>git add .</code></td>
+  <td><strong>Adds</strong> all changed files to <strong>staging</strong></td>
+</tr>
+<tr>
+  <td><code>git commit -m &quot;description&quot;</code></td>
+  <td>Creates a <strong>commit</strong> with a message</td>
+</tr>
+<tr>
+  <td><code>git push</code></td>
+  <td><strong>Pushes</strong> new <strong>commits</strong> to the branch on GitHub</td>
+</tr>
+<tr>
+  <td><code>git pull</code></td>
+  <td>Retrives the latest <strong>commits</strong> from the branch on GitHub</td>
+</tr>
+<tr>
+  <td><code>git log --oneline</code></td>
+  <td>Shows a short list of recent commits</td>
+</tr>
+</tbody>
+</table>
+</div>
+<blockquote>
+<p>💡 Of course, you could ask an AI coding assistant to do all of these things for you. I don&rsquo;t recommend that until you&rsquo;ve used it so much you&rsquo;re over-familiar with it. Although an assistant can take away these minutiae, you must understand what it is doing if you want to be responsible for the code that&rsquo;s committed. That comes from hands-on experience.</p>
+</blockquote>
+<h2 id="summary-1">Summary</h2>
+<div class="table-scroll">
+<table>
+<thead>
+<tr>
+  <th>Concept</th>
+  <th>What it is</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>Git</td>
+  <td>Local version control — tracks changes on your machine</td>
+</tr>
+<tr>
+  <td>GitHub</td>
+  <td>Online hosting — stores your repository in the cloud</td>
+</tr>
+<tr>
+  <td>Clone</td>
+  <td>Downloading a repository from GitHub to your computer</td>
+</tr>
+<tr>
+  <td>Commit</td>
+  <td>Saving a snapshot of your changes</td>
+</tr>
+<tr>
+  <td>Push</td>
+  <td>Uploading commits to GitHub</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>You now have a repository on GitHub, a local copy on your machine, and the tools to track every change. In the next tutorial, we&rsquo;ll create a data science project scaffold and make our first commit.</p>
+<div class="footnotes" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn:1">
+<p>If you <em>aleady have</em> a local repository that you want to link to the repository on GitHub, create a blank repository with no templating. Otherwise, you&rsquo;re starting fresh - so explore the options, as there may be something to help you get going.&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+</ol>
+</div>
+
+            </div>
+        </div>
+
+        <div class="post-footer">
+            <div class="info">
+                
+                  <p>
+                    See also:
+                    <ul><li><a href="https://instantiator.dev/post/prototyping-opencode-tutorial-001-dev-environment/">Free AI-assisted coding tools 1: Getting started</a></li>
+                    </ul>
+                  </p>
+                
+
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+        </div><script src="/js/bootstrap.min.js"></script>
+<script src="/js/feather.min.js"></script>
+<script src="/js/mastodon-timeline.umd.js"></script>
+<script>
+  feather.replace();
+</script></body>
+</html>
