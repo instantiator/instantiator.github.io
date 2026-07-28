@@ -10,16 +10,9 @@
 		
 		
 		
-			<lastBuildDate>Tue, 28 Jul 2026 12:00:00 +0000</lastBuildDate>
+			<lastBuildDate>Fri, 17 Jul 2026 00:00:00 +0000</lastBuildDate>
 		
 			<atom:link href="https://instantiator.dev/tags/data-science/index.xml" rel="self" type="application/rss+xml" />
-			<item>
-				<title>Free AI-assisted coding tools 3: A basic prototype with Streamlit</title>
-				<link>https://instantiator.dev/post/prototyping-opencode-tutorial-003-scaffolding/</link>
-				<pubDate>Tue, 28 Jul 2026 12:00:00 +0000</pubDate>
-				<guid>https://instantiator.dev/post/prototyping-opencode-tutorial-003-scaffolding/</guid>
-				<description>&lt;p&gt;In earlier posts we set up a dev environment and a Git repository. Now we&amp;rsquo;ll create a small prototype from scratch using &lt;a href=&#34;https://streamlit.io&#34;&gt;Streamlit&lt;/a&gt;.&lt;/p&gt;</description>
-			</item>
 			<item>
 				<title>Free AI-assisted coding tools 1: Getting started</title>
 				<link>https://instantiator.dev/post/prototyping-opencode-tutorial-001-dev-environment/</link>

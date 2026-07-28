@@ -3,52 +3,7 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://instantiator.dev/</loc>
-    <lastmod>2026-07-28T12:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://instantiator.dev/categories/</loc>
-    <lastmod>2026-07-28T12:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://instantiator.dev/tags/data-science/</loc>
-    <lastmod>2026-07-28T12:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://instantiator.dev/post/prototyping-opencode-tutorial-003-scaffolding/</loc>
-    <lastmod>2026-07-28T12:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://instantiator.dev/post/</loc>
-    <lastmod>2026-07-28T12:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://instantiator.dev/tags/prototype/</loc>
-    <lastmod>2026-07-28T12:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://instantiator.dev/tags/prototyping/</loc>
-    <lastmod>2026-07-28T12:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://instantiator.dev/series/prototyping-opencode-tutorial/</loc>
-    <lastmod>2026-07-28T12:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://instantiator.dev/tags/python/</loc>
-    <lastmod>2026-07-28T12:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://instantiator.dev/tags/scaffolding/</loc>
-    <lastmod>2026-07-28T12:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://instantiator.dev/series/</loc>
-    <lastmod>2026-07-28T12:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://instantiator.dev/tags/streamlit/</loc>
-    <lastmod>2026-07-28T12:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://instantiator.dev/tags/</loc>
-    <lastmod>2026-07-28T12:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://instantiator.dev/categories/tutorial/</loc>
-    <lastmod>2026-07-28T12:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://instantiator.dev/tags/tutorial/</loc>
-    <lastmod>2026-07-28T12:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://instantiator.dev/tags/ui/</loc>
-    <lastmod>2026-07-28T12:00:00+00:00</lastmod>
+    <lastmod>2026-07-28T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://instantiator.dev/categories/article/</loc>
     <lastmod>2026-07-28T00:00:00+00:00</lastmod>
@@ -57,6 +12,9 @@
     <lastmod>2026-07-28T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://instantiator.dev/tags/books/</loc>
+    <lastmod>2026-07-28T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://instantiator.dev/categories/</loc>
     <lastmod>2026-07-28T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://instantiator.dev/tags/dcc/</loc>
@@ -71,10 +29,16 @@
     <loc>https://instantiator.dev/tags/matt-dinniman/</loc>
     <lastmod>2026-07-28T00:00:00+00:00</lastmod>
   </url><url>
+    <loc>https://instantiator.dev/post/</loc>
+    <lastmod>2026-07-28T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://instantiator.dev/tags/review/</loc>
     <lastmod>2026-07-28T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://instantiator.dev/post/dcc/</loc>
+    <lastmod>2026-07-28T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://instantiator.dev/tags/</loc>
     <lastmod>2026-07-28T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://instantiator.dev/post/prototyping-opencode-tutorial-002-git/</loc>
@@ -84,6 +48,18 @@
     <lastmod>2026-07-27T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://instantiator.dev/tags/github/</loc>
+    <lastmod>2026-07-27T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://instantiator.dev/series/prototyping-opencode-tutorial/</loc>
+    <lastmod>2026-07-27T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://instantiator.dev/series/</loc>
+    <lastmod>2026-07-27T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://instantiator.dev/categories/tutorial/</loc>
+    <lastmod>2026-07-27T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://instantiator.dev/tags/tutorial/</loc>
     <lastmod>2026-07-27T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://instantiator.dev/tags/version-control/</loc>
@@ -102,6 +78,9 @@
     <lastmod>2026-07-17T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://instantiator.dev/tags/coding-tools/</loc>
+    <lastmod>2026-07-17T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://instantiator.dev/tags/data-science/</loc>
     <lastmod>2026-07-17T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://instantiator.dev/post/prototyping-opencode-tutorial-001-dev-environment/</loc>
@@ -521,6 +500,9 @@
     <loc>https://instantiator.dev/tags/template/</loc>
     <lastmod>2023-09-12T00:00:00+00:00</lastmod>
   </url><url>
+    <loc>https://instantiator.dev/tags/ui/</loc>
+    <lastmod>2023-09-12T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://instantiator.dev/tags/ux/</loc>
     <lastmod>2023-09-12T00:00:00+00:00</lastmod>
   </url><url>
@@ -684,6 +666,9 @@
     <lastmod>2023-04-20T17:30:00+00:00</lastmod>
   </url><url>
     <loc>https://instantiator.dev/tags/pandas/</loc>
+    <lastmod>2023-04-20T17:30:00+00:00</lastmod>
+  </url><url>
+    <loc>https://instantiator.dev/tags/python/</loc>
     <lastmod>2023-04-20T17:30:00+00:00</lastmod>
   </url><url>
     <loc>https://instantiator.dev/tags/tv/</loc>
