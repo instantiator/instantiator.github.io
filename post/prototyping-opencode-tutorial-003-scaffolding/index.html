@@ -26,7 +26,7 @@
       </script>
     
 	<meta name="twitter:card" content="summary_large_image">
-	<meta name="twitter:image" content="https://instantiator.dev/lewis/default-image.png">
+	<meta name="twitter:image" content="https://instantiator.dev/post/prototyping-opencode-tutorial-003-scaffolding/new-app-vs-code.png">
 	<meta name="twitter:title" content="Free AI-assisted coding tools 3: A basic prototype with Streamlit">
 	<meta name="twitter:description" content="In earlier posts we set up a dev environment and a Git repository. Now we’ll create a small prototype from scratch using Streamlit.">
 
@@ -45,7 +45,8 @@
 		<meta property="article:tag" content="Data-Science">
 		<meta property="article:tag" content="Scaffolding">
 		<meta property="article:tag" content="Prototyping">
-		<meta property="og:image" content="https://instantiator.dev/lewis/default-image.png">
+		<meta property="og:image" content="https://instantiator.dev/post/prototyping-opencode-tutorial-003-scaffolding/new-app-vs-code.png">
+		<meta property="og:image" content="https://instantiator.dev/post/prototyping-opencode-tutorial-003-scaffolding/new-app-browser.png">
 			<meta property="og:see_also" content="https://instantiator.dev/post/prototyping-opencode-tutorial-002-git/">
 			<meta property="og:see_also" content="https://instantiator.dev/post/prototyping-opencode-tutorial-001-dev-environment/">
 
@@ -338,7 +339,10 @@
 </span></span></code></pre></div><p>You&rsquo;ll know it&rsquo;s active because your terminal prompt will show <code>(.venv)</code> at the start.</p>
 <h3 id="2-install-streamlit">2. Install Streamlit</h3>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>pip install streamlit
-</span></span></code></pre></div><p>This installs Streamlit and its dependencies into your virtual environment.</p>
+</span></span></code></pre></div><blockquote>
+<p><a href="https://en.wikipedia.org/wiki/Pip_%28package_manager%29">pip</a> is the Python package manager, and the word <code>pip</code> itself stands for &ldquo;pip installs packages&rdquo;. That&rsquo;s a recursive acronym, and&hellip; you&rsquo;re going to have to get used to them! They&rsquo;re everywhere in software development.</p>
+</blockquote>
+<p>This installs Streamlit and its dependencies into your virtual environment.</p>
 <div class="table-scroll">
 <table>
 <thead>
@@ -391,7 +395,8 @@
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> streamlit <span style="color:#66d9ef">as</span> st
 </span></span></code></pre></div></td>
 <td>
-  This tells the application to use streamlit from the virtual environment, and to refer to it as `st` (making your code a little more concise!)
+  This tells the application to use the `streamlit` package from the virtual environment, and to refer to it as `st` (making your code a little more concise!)
+<p>Everywhere you write <code>st.function_name</code> in later lines, you&rsquo;re referring to functions provided by the <code>streamlit</code> package.</p>
 </td>
 </tr>
 <tr>
@@ -399,7 +404,7 @@
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>st<span style="color:#f92672">.</span>title(<span style="color:#e6db74">&#34;My Data Prototype&#34;</span>)
 </span></span></code></pre></div></td>
 <td>
-  Sets the title of the page to "My Data Prototype".
+  Sets the title of the page to "My Data Prototype" by calling the `streamlit.title` function with a single argument: the new title of the page.
 </td>
 </tr>
 <tr>
@@ -407,9 +412,9 @@
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>st<span style="color:#f92672">.</span>write(<span style="color:#e6db74">&#34;Hello! This is a blank starter app.&#34;</span>)
 </span></span></code></pre></div></td>
 <td>
-  This prints some wording to the page for the user to read:
+  Prints some wording to the page for the user to read, by calling the `streamlit.write` function with a single argument: the wording to display.
 <blockquote>
-<p>&ldquo;Hello! This is a blank starter app.</p>
+<p>Hello! This is a blank starter app.</p>
 </blockquote>
 </td>
 </tr>
@@ -418,11 +423,12 @@
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>name <span style="color:#f92672">=</span> st<span style="color:#f92672">.</span>text_input(<span style="color:#e6db74">&#34;Enter your name&#34;</span>)
 </span></span></code></pre></div></td>
 <td>
-  Streamlit shows a simple prompt for the user to fill in with text:
+  Calls the `streamlit.text_input` function to shows a simple prompt for the user to fill in with text. Here the single argument is the text to show the user, relating to the prompt:
 <blockquote>
 <p>Enter your name</p>
 </blockquote>
 <p>When the user enters a value, this is put into the <code>name</code> variable, which is used in subsequent lines.</p>
+<p>On first run, the <code>name</code> variable is empty.</p>
 </td>
 </tr>
 <tr>
@@ -431,17 +437,23 @@
 </span></span><span style="display:flex;"><span>    st<span style="color:#f92672">.</span>write(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;Welcome, </span><span style="color:#e6db74">{</span>name<span style="color:#e6db74">}</span><span style="color:#e6db74">!&#34;</span>)
 </span></span></code></pre></div></td>
 <td>
-  This is a call to the `write` function (just as we saw above), but it's wrapped in an `if` statement, and it uses the `name` variable.
+  This is a call to the `streamlit.write` function again, but it's in a block that's governed by an `if` statement, which tests the  `name` variable.
 <p>Here&rsquo;s why:</p>
 <ul>
 <li>
-<p>Before the user has provided a value for <code>name</code>, there&rsquo;s nothing in it - so showing <code>&quot;Welcome, {name}!&quot;</code> on the page would actually show:</p>
+<p>Before the user has provided a value for <code>name</code>, there&rsquo;s nothing in it (Python calls this <code>None</code>) - so showing <code>&quot;Welcome, {name}!&quot;</code> on the page would actually show:</p>
 <blockquote>
 <p>Welcome, !</p>
 </blockquote>
 </li>
 <li>
-<p>To avoid this, we use an if-statement. The call to <code>st.write</code> only happens if there&rsquo;s a value for <code>name</code> - so if the user has provided anything, <em>then</em> the <code>write</code> function will be called.</p>
+<p>To avoid this, we&rsquo;ve used an <code>if</code>-statement. - The call to <code>st.write</code> only happens if there&rsquo;s a value for <code>name</code>.</p>
+</li>
+<li>
+<p>For a block in an <code>if</code>-statement to run, the test must evaluate to <code>True</code>. Because an empty variable does not evaluate to <code>True</code>, the block doesn&rsquo;t run - and <code>st.write</code> is not called.</p>
+</li>
+<li>
+<p>If the user has provided anything in the <code>name</code> variable, <em>then</em> the test will evaluate to <code>True</code>, the block will be run, and the <code>write</code> function will be called.</p>
 <p>eg. with <code>Lewis</code> in <code>name</code>:</p>
 <blockquote>
 <p>Welcome, Lewis!</p>
@@ -452,20 +464,35 @@
 </tr>
 </table>
 <p>There&rsquo;s plenty more to learn about Streamlit, but for now, it&rsquo;s helpful to understand what it&rsquo;s doing at a basic level.</p>
-<details>
-<summary> <b>What if the user changes the name they provide?</b> </summary>
-<p>When a value changes, Streamlit re-runs the application from the start. This means that the new value for <code>name</code> is picked up and used to update what&rsquo;s shown to the user in the UI.</p>
-<p>It&rsquo;s worth understanding this as there may be times when you don&rsquo;t wish to fully re-run everything (ie. if you have a complex calculation to perform).</p>
-</details>
+<h3 id="what-if-the-user-changes-the-name-they-provide">What if the user changes the name they provide?</h3>
+<p>When an input changes, Streamlit re-runs the application from the start. This means that the new value for <code>name</code> is picked up on the line that assigns it:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>name <span style="color:#f92672">=</span> st<span style="color:#f92672">.</span>text_input(<span style="color:#e6db74">&#34;Enter your name&#34;</span>)
+</span></span></code></pre></div><p>That new value then evalutes to <code>True</code> in the <code>if</code>-statement, the block runs, and the UI shows the welcome message.</p>
 <h3 id="4-run-the-application">4. Run the application</h3>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>streamlit run app.py
 </span></span></code></pre></div><p>A new tab will open in your browser showing your app at <code>http://localhost:8501</code>. (Streamlit will use port <code>8501</code> by default, but you can change that if you need.) Any changes you save to <code>app.py</code> will automatically be refreshed in the browser.</p>
+<div class="table-scroll">
+<table>
+<thead>
+<tr>
+  <th>VS Code</th>
+  <th>Your application</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td><img src="/post/prototyping-opencode-tutorial-003-scaffolding/new-app-vs-code.png" alt="New app in VS Code" title="The new application, after you&#39;ve launched it in a VS Code terminal."></td>
+  <td><img src="/post/prototyping-opencode-tutorial-003-scaffolding/new-app-browser.png" alt="New app in browser" title="The new application, running in a Firefox browser. It shows &#39;My Data Prototype&#39; followed by &#39;Hello! This is a blank starter app.&#39;, and &#39;Enter your name&#39;. Below that is an input box where I&#39;ve filled out: &#39;Lewis&#39;, and below that are the words &#39;Welcome, Lewis!&#39;"></td>
+</tr>
+</tbody>
+</table>
+</div>
 <h3 id="5-stop-the-application">5. Stop the application</h3>
 <p>Go back to the terminal where the app is running and press <code>Ctrl+C</code>. The app will stop.</p>
-<h2 id="saving-the-virtual-environment-from-git">Saving the virtual environment from Git</h2>
+<h2 id="excluding-the-virtual-environment-from-git">Excluding the virtual environment from Git</h2>
 <p>Your <code>.venv</code> folder contains thousands of files that Git shouldn&rsquo;t track. Whenever anybody else uses your project, they can initialise their own virtual environment, and this means you won&rsquo;t end up paying to store volumes of open source code in your git repository that anybody could retrieve for themselves.</p>
 <p>Create a <code>.gitignore</code> file to exclude it.</p>
-<p>You could create the file youeself, with a single line in it:</p>
+<p>You could create the file yourself, with a single line in it:</p>
 <pre tabindex="0"><code>.venv/
 </code></pre><p>or you could use a simple command in the terminal to create it:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>echo <span style="color:#e6db74">&#34;.venv/&#34;</span> &gt; .gitignore
@@ -484,7 +511,8 @@
 </span></span></code></pre></div></blockquote>
 <p>Reload the page for your repository on GitHub, and you should see <code>app.py</code> and <code>.gitignore</code> have been added. (By default, GitHub will show you the <code>main</code> branch of your repository.)</p>
 <h2 id="what-no-ai">What, no AI?</h2>
-<p>You&rsquo;re right - we&rsquo;ve gone 2 whole tutorials without using the AI coding assistant you set up in the first tutorial. That&rsquo;s intentional. Once you&rsquo;re familiar with the core tools you&rsquo;ll be using, it&rsquo;ll be much easier to give an AI assistant clear directions, and to review the code it creates.</p>
+<p>You&rsquo;re absolutely right, buddy! We&rsquo;ve gone 2 whole tutorials without using the AI coding assistant you set up in the first tutorial. That&rsquo;s intentional.</p>
+<p>Once you&rsquo;re familiar with the core tools, it&rsquo;ll be much easier to give an AI assistant clear directions, and to review the code it creates. It&rsquo;s important to have an idea about what you&rsquo;re making so you can be responsible for it.</p>
 <h3 id="this-is-your-code-and-you-are-responsible-for-it">This is your code, and you are responsible for it</h3>
 <p>AI coding assistants are great but, just like people, they can make mistakes. They may not understand your intent, or they may write code that seems to work but fails in unexpected ways. It&rsquo;s important to be sure that new code really does what it&rsquo;s supposed to do before it goes into the project.</p>
 <p>In future tutorials we&rsquo;ll look at how to write automated tests that prove your code does what it&rsquo;s supposed to do.</p>
