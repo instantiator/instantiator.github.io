@@ -41,7 +41,7 @@
 		<meta property="article:modified_time" content="2026-07-27T00:00:00+00:00">
 		<meta property="article:tag" content="Tutorial">
 		<meta property="article:tag" content="Git">
-		<meta property="article:tag" content="GitHub">
+		<meta property="article:tag" content="Github">
 		<meta property="article:tag" content="Version-Control">
 		<meta property="og:image" content="https://instantiator.dev/post/prototyping-opencode-tutorial-002-git/staged-files.png">
 			<meta property="og:see_also" content="https://instantiator.dev/post/prototyping-opencode-tutorial-001-dev-environment/">
@@ -274,6 +274,28 @@
 </blockquote>
 <h2 id="github-and-other-providers">GitHub and other providers</h2>
 <p>Git is often confused with repository providers, like GitHub, GitLab, BitBucket, Gitea, etc. By using a repository providers, you can keep a centralised authoritative version of your repository.</p>
+<div class="table-scroll">
+<table>
+<thead>
+<tr>
+  <th>Git icon</th>
+  <th>GitHub icon</th>
+  <th>GitLab icon</th>
+  <th>BitBucket icon</th>
+  <th>Gitea icon</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td><img src="./git-icon.webp" alt="The git icon. It's a diamond shape, with a line entering on the top left edge, travelling down and right. The line forks inside the diamond at a little round node. One path continues diagonally down-and-right, the other goes directly downwards. Both terminate with a small round node. It's suggestive of a path that splits, with one continuing straight, and the other being an alternative path." style="height: 10vh; width: auto; background: #ffffffdd; padding: 2vw; border-radius: 5px;" /></td>
+  <td><img src="./github-icon.svg" alt="The gitub icon is a round disc, containing a cutout of Octocus, their mascot. It's a cat with (supposedly) 8 tentacles, although most are bunched together in the picture, with really only 1 waving to the side, suggestive of an alternate branching path." style="height: 10vh; width: auto; background: #ffffffdd; padding: 2vw; border-radius: 5px;" /></td>
+  <td><img src="./gitlab-icon.svg" alt="The gitlab icon is an angular representation of a fox head. It has 2 pointy ears and a pointy nose. Looking at the points, it might be suggestive of a single node (the nose) that forks to two paths (the two ears)." style="height: 10vh; width: auto; background: #ffffffdd; padding: 2vw; border-radius: 5px;" /></td>
+  <td><img src="./bitbucket-icon.webp" alt="The BitBucket icon is a bucket shape drawn as hollow, with a thick outline. It has a small segment missing top right, which forces it into the shape of a 'G' - perhaps representing git." style="height: 10vh; width: auto; background: #ffffffdd; padding: 2vw; border-radius: 5px;" /></td>
+  <td><img src="./gitea-icon.webp" alt="The Gitea icon is a cub of tea with a teabag label draped over the side, which has a representation of a git branch on it. It's a square tag that contains a line entering from one side that forks. It splits at a small round node, and each new line terminates with a small round node. One line continues straight, the other leaves perpendicular to the first, and curves 90 degrees to become parallel with the first." style="height: 10vh; width: auto; background: #ffffffdd; padding: 2vw; border-radius: 5px;" /></td>
+</tr>
+</tbody>
+</table>
+</div>
 <p>Like a shared drive, these services support collaboration with features that improve how you can use git. They keep your code safely backed up, and allow you to publish open source projects in a commonly understood way.</p>
 <p>Most providers have a similar set of features these days - meaning you can expect to see common collaborative methods, and automations for your repository.</p>
 <p>There&rsquo;s often a small fee to use a provider&rsquo;s features - although this can be almost-free if you&rsquo;re only using a small amount of automation, and if you open source your code.</p>
@@ -462,7 +484,7 @@
 <h2 id="creating-a-repository-on-github">Creating a repository on GitHub</h2>
 <ol>
 <li>Go to <a href="https://github.com">https://github.com</a> and sign in (create a free account if you don&rsquo;t have one)</li>
-<li>Click the <strong>+</strong> icon in the top right corner and select <strong>New repository</strong></li>
+<li>Click the <strong><code>+</code></strong> icon in the top right corner and select <strong>New repository</strong></li>
 <li>Give your repository a name (e.g. <code>my-data-prototype</code>)</li>
 <li>Leave it <strong>Public</strong> if you don&rsquo;t mind that it&rsquo;s free and shareable, or choose <strong>Private</strong> (you can change this later if you need)</li>
 <li>Consider the templating options<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup>, or the option to create a <code>README.md</code> file when creating the repository</li>
@@ -510,10 +532,12 @@
 <li>Navigate to the new repository folder, and select it</li>
 <li>Click <strong>Open</strong></li>
 </ol>
-<p>VS Code knows this is a Git repository, and you&rsquo;ll see a Source Control icon in the sidebar (it looks like a branching line) where you can view changes, stage files, and commit.</p>
+<img src="./git-branch.svg" alt="The branch icon: It looks like two lines that join at a node, one leaves vertically upwards, the other curves to the right suggesting an alternate path." style="width: auto; height: 10vh; background: #ffffffdd; padding: 2vw; border-radius: 5px; float: left; margin-right: 10px; margin-bottom: 10px;" />
+<p>VS Code knows this is a Git repository, and you&rsquo;ll see a Source Control icon in the sidebar (it looks like a branching line) where you can view changes, stage files, and commit through the UI, as an alternative to working in the terminal.</p>
 <blockquote>
 <p>💡 The next time you open a terminal, it&rsquo;ll start in the folder that VS Code is currently working in.</p>
 </blockquote>
+<div style="clear: both;" />
 <h2 id="how-git-fits-into-your-workflow">How Git fits into your workflow</h2>
 <p>The basic cycle when working with Git is:</p>
 <ol>
