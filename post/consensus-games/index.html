@@ -26,7 +26,7 @@
       </script>
     
 	<meta name="twitter:card" content="summary_large_image">
-	<meta name="twitter:image" content="https://instantiator.dev/consensus/pieces_dream.png">
+	<meta name="twitter:image" content="https://instantiator.dev/post/consensus-games/pieces_dream.png">
 	<meta name="twitter:title" content="International Consensus Games (WIP)">
 	<meta name="twitter:description" content="I’ve been working on a pet project recently: Consensus games are a fun new way to play together through social media…">
 
@@ -45,7 +45,7 @@
 		<meta property="article:tag" content="Voting">
 		<meta property="article:tag" content="Social">
 		<meta property="article:tag" content="Twitter">
-		<meta property="og:image" content="https://instantiator.dev/consensus/pieces_dream.png">
+		<meta property="og:image" content="https://instantiator.dev/post/consensus-games/pieces_dream.png">
 
 
     
@@ -109,9 +109,9 @@
         </li>
         
         <li class="nav-item">
-          <a class="nav-link " href="/discounts/">
+          <a class="nav-link " href="/referrals/">
             
-             Discounts
+             Referrals
           </a>
         </li>
         
@@ -141,7 +141,7 @@
         <h3 class="mb-4"><a href="/">instantiator.dev</a></h3>
         
         <div style="text-align: center;" class="mb-4">
-            <p style="font-size: 0.8rem;">tech, volunteers, public safety, collective intelligence, articles, tools, code and ideas</p>
+            <p style="font-size: 0.8rem;">I'm a senior tech lead, writing about tech, volunteers, public safety, and collective intelligence. This blog contains articles, tools, code and ideas.</p>
         </div>
 
         <div class="d-flex flex-row justify-content-evenly align-self-stretch mb-4">
@@ -311,7 +311,7 @@
 <li>After a day or so, tally the votes, and the most popular move is made</li>
 <li>Post the new board, encourage people to reply&hellip;</li>
 </ul>
-<img style="width:100%;" src="/consensus/pieces_dream.png" alt="many chess pieces in front of starry sky, realistic" />
+<img style="width:100%;" src="pieces_dream.png" alt="many chess pieces in front of starry sky, realistic" />
 <p>There are a number of different variants I&rsquo;m experimenting with - to help specify the way people can join a team, and what they can do:</p>
 <ul>
 <li><strong>Free for all games</strong> - anyone can contribute a vote to a move on either side</li>
@@ -336,7 +336,7 @@
 <li><a href="https://trello.com/b/r0OX2iCq/consensus-chess-2022">Consensus Chess 2022</a> (Trello board)</li>
 <li><a href="https://github.com/instantiator/consensus-chess-engine">instantiator/consensus-chess-engine</a> (GitHub repository)</li>
 </ul>
-<img style="width:100%;" src="/consensus/consensus-chess-2022-trello-snapshot.png" alt="a snapshot of the Consensus Chess 2022 trello board from 2022-11-10" />
+<img style="width:100%;" src="consensus-chess-2022-trello-snapshot.png" alt="a snapshot of the Consensus Chess 2022 trello board from 2022-11-10" />
 <h1 id="chess-and-stuff">Chess and stuff</h1>
 <p>I can&rsquo;t pretend to be much of a chess expert. I&rsquo;ve a couple of games on the go at chess.com at any one time, and if you&rsquo;d like to <a href="https://friend.chess.com/e3U1">play me</a>, that&rsquo;d be really fun.</p>
 <p>Chess isn&rsquo;t trivial to implement, and I&rsquo;m exploring existing libraries out there to help resolve moves (ie. determine if your vote was valid according to the rules). If nothing quite fits the need, I suppose I can get into the nitty gritty of it and implement the rules myself. (And if I do, I&rsquo;ll endeavour to build a library that I can share.)</p>
@@ -367,7 +367,7 @@
 white to play, both sides can castle to both sides
 </code></pre><p>This definitely needs some research before I commit to a format. (Can assistive tech recite the names and colours of pieces correctly? How do blind or partially sighted users prefer to have boards described to them?) I&rsquo;ve plans to figure that out soon - and I&rsquo;d love to hear from you if you know something about this.</p>
 <p>In the meantime, if you fancy a game, you can <a href="https://friend.chess.com/e3U1">befriend me on chess.com</a>. I&rsquo;m far from a good player, but I&rsquo;m learning and it&rsquo;s fun!</p>
-<img style="max-width:480px;" src="/consensus/instantiator-chess-com.png" alt="a QR code for instantiator at chess.com - you could scan it to play me" />
+<img style="max-width:480px;" src="instantiator-chess-com.png" alt="a QR code for instantiator at chess.com - you could scan it to play me" />
 <h1 id="the-build">The build</h1>
 <p>For the techies here&rsquo;s a little rundown of how I&rsquo;m building this&hellip;</p>
 <p>I&rsquo;m working to a microservice-esque architecture. There are two types of service in the application: engine and node.</p>
@@ -379,7 +379,7 @@ white to play, both sides can castle to both sides
 <p>All services currently share a single database - a handy shortcut for managing shared games (for now).</p>
 <p>When ready, I expect to be able to run the whole thing on a <a href="https://www.raspberrypi.com/">Raspberry Pi</a> from home.</p>
 <p>This is Colossus, my Raspberry Pi stack&hellip; <a href="https://en.wikipedia.org/wiki/Colossus_computer">Its namesake</a> was a World War II computer designed for cryptanalysis of German ciphers. It was the size of your living room, and weighed 5 tonnes.</p>
-<p><img src="/consensus/colossus.jpg" alt="This is colossus" title="This is colossus - 4 Raspberry Pi computers, stacked one atop the other."></p>
+<p><img src="/post/consensus-games/colossus.jpg" alt="This is colossus" title="This is colossus - 4 Raspberry Pi computers, stacked one atop the other."></p>
 <h2 id="performance">Performance</h2>
 <p>After MVP I may consider giving each node its own database instance. There aren&rsquo;t too many benefits to that for now - but should we find that the database is the bottleneck, it could help to break things up.</p>
 <p>Similarly, a fully serverless architecture could remove all performance concerns, although that would require a 3rd party host and right now I&rsquo;m motivated to save on costs by constraining myself to technologies I can operate from my pi stack. (I thought about using localstack - I&rsquo;m not sure if it&rsquo;s really production ready.)</p>

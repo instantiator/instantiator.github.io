@@ -26,7 +26,7 @@
       </script>
     
 	<meta name="twitter:card" content="summary_large_image">
-	<meta name="twitter:image" content="https://instantiator.dev/dps/key-splitting.png">
+	<meta name="twitter:image" content="https://instantiator.dev/post/secrets-with-friends/key-splitting.png">
 	<meta name="twitter:title" content="Secrets With Friends">
 	<meta name="twitter:description" content="It’s possible to share a secret amongst a group of people so that only some of them are needed to reconstruct it…">
 
@@ -45,7 +45,7 @@
 		<meta property="article:tag" content="Sharing">
 		<meta property="article:tag" content="Trust">
 		<meta property="article:tag" content="SSSS">
-		<meta property="og:image" content="https://instantiator.dev/dps/key-splitting.png">
+		<meta property="og:image" content="https://instantiator.dev/post/secrets-with-friends/key-splitting.png">
 
 
     
@@ -109,9 +109,9 @@
         </li>
         
         <li class="nav-item">
-          <a class="nav-link " href="/discounts/">
+          <a class="nav-link " href="/referrals/">
             
-             Discounts
+             Referrals
           </a>
         </li>
         
@@ -141,7 +141,7 @@
         <h3 class="mb-4"><a href="/">instantiator.dev</a></h3>
         
         <div style="text-align: center;" class="mb-4">
-            <p style="font-size: 0.8rem;">tech, volunteers, public safety, collective intelligence, articles, tools, code and ideas</p>
+            <p style="font-size: 0.8rem;">I'm a senior tech lead, writing about tech, volunteers, public safety, and collective intelligence. This blog contains articles, tools, code and ideas.</p>
         </div>
 
         <div class="d-flex flex-row justify-content-evenly align-self-stretch mb-4">
@@ -277,7 +277,7 @@
 <li>Distribution of wealth after death</li>
 </ul>
 <p>More generally, it&rsquo;s desirable to be able to distribute fragments of a secret to an arbitrary number of people, and require that a subset of them be present to reconstruct it. This is known as a <code>K</code> of <code>N</code> distribution scheme.</p>
-<p><img src="/dps/key-splitting.png" alt="A key split amongst 3 people" title="A key split amongst 3 people"></p>
+<p><img src="/post/secrets-with-friends/key-splitting.png" alt="A key split amongst 3 people" title="A key split amongst 3 people"></p>
 <p>Using a <code>K</code> of <code>N</code> scheme allows us to prevent an individual from reconstructing the secret alone, but provides some resilience against a number of people being unable or unwilling to cooperate when it is time to uncover the secret.</p>
 <h2 id="shamirs-secret-sharing-scheme">Shamir&rsquo;s Secret Sharing Scheme</h2>
 <p>Shamir&rsquo;s Secret Sharing Scheme (SSSS) is a commonly used <code>K</code> of <code>N</code> threshold scheme. A secret can be divided into <code>N</code> fragments, of which only <code>K</code> are required to reconstruct it.</p>
@@ -337,7 +337,7 @@
 </div>
 <p><strong>If a specific polynomial curve is the secret,</strong> then a minimum of <code>K</code> points are required to reconstruct the original curve, and the degree of the polynomial defines <code>K</code>.</p>
 <p>For instance, here there are 2 parabolas (polynomials of degree 2), and given only 2 points it is not possible to distinguish them (or any other number of parabolas that pass through these points). However, by providing a third point, they can be disambiguated - and only 1 parabola will match a given set of 3 points.</p>
-<p><img src="/dps/ssss-parabolas.png" alt="Parabolas" title="Parabolas"></p>
+<p><img src="/post/secrets-with-friends/ssss-parabolas.png" alt="Parabolas" title="Parabolas"></p>
 <p>A subject can select <code>N</code> points from the curve, and give those to <code>N</code> trusted contacts. <code>N</code> can be arbitrarily large, provided it is larger than <code>K</code>, and so <code>K</code> of the <code>N</code> distributed points can be used to reconstruct the curve.</p>
 
             </div>

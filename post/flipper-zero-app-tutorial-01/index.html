@@ -110,9 +110,9 @@
         </li>
         
         <li class="nav-item">
-          <a class="nav-link " href="/discounts/">
+          <a class="nav-link " href="/referrals/">
             
-             Discounts
+             Referrals
           </a>
         </li>
         
@@ -142,7 +142,7 @@
         <h3 class="mb-4"><a href="/">instantiator.dev</a></h3>
         
         <div style="text-align: center;" class="mb-4">
-            <p style="font-size: 0.8rem;">tech, volunteers, public safety, collective intelligence, articles, tools, code and ideas</p>
+            <p style="font-size: 0.8rem;">I'm a senior tech lead, writing about tech, volunteers, public safety, and collective intelligence. This blog contains articles, tools, code and ideas.</p>
         </div>
 
         <div class="d-flex flex-row justify-content-evenly align-self-stretch mb-4">
@@ -406,7 +406,7 @@
 </span></span></code></pre></div><p><code>ufbt</code> will also flash through an ST-link if you have that available:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>ufbt flash
 </span></span></code></pre></div><p>The <strong>qFlipper</strong> application also supports this:</p>
-<p><img src="/f0-tutorial/qflipper-update.png" alt="the qFlipper app showing the firmware view and the big green update button"></p>
+<p><img src="/post/flipper-zero-app-tutorial-01/qflipper-update.png" alt="the qFlipper app showing the firmware view and the big green update button"></p>
 <h3 id="create-a-skeleton-app">Create a skeleton app</h3>
 <p><code>ufbt create</code> will create a nice working environment for your app. Give your app a simple id, eg. <code>test_app</code> - you&rsquo;ll be able to change this later. Provide an id for the application, with the <code>APPID=</code> option.</p>
 <p><em>NB. I recommend using characters from the simple set of <code>a-zA-Z0-9_</code>. Restrict yourself to characters that can appear in a C function name, or you may end up having to rename the main function, and the entrypoint in your application manifest before you can build.</em></p>
@@ -428,7 +428,7 @@
 <li><code>ufbt-test.png</code> - a 10x10 1-bit png icon for the app</li>
 <li><code>images/</code> - a directory where you can place 1-bit png icons</li>
 </ul>
-<p><img src="/f0-tutorial/ufbt-create.png" alt="A screenshot of visual studio code showing a terminal with ufbt create, and the application manifest it has created"></p>
+<p><img src="/post/flipper-zero-app-tutorial-01/ufbt-create.png" alt="A screenshot of visual studio code showing a terminal with ufbt create, and the application manifest it has created"></p>
 <h3 id="test-a-build">Test a build</h3>
 <p>With no other options, <code>ufbt</code> will build your app.</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ ufbt 

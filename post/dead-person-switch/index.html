@@ -26,7 +26,7 @@
       </script>
     
 	<meta name="twitter:card" content="summary_large_image">
-	<meta name="twitter:image" content="https://instantiator.dev/dps/stone.jpg">
+	<meta name="twitter:image" content="https://instantiator.dev/post/dead-person-switch/stone.jpg">
 	<meta name="twitter:title" content="Dead Person Switches - secrets from beyond the grave">
 	<meta name="twitter:description" content="More commonly known as a Dead Man’s Switch, a Dead Person Switch (DPS) is a system that can hold a secret on behalf of a person, and govern its release should they become unavailable.">
 
@@ -45,7 +45,7 @@
 		<meta property="article:tag" content="Journalism">
 		<meta property="article:tag" content="Academia">
 		<meta property="article:tag" content="Investigative Journalism">
-		<meta property="og:image" content="https://instantiator.dev/dps/stone.jpg">
+		<meta property="og:image" content="https://instantiator.dev/post/dead-person-switch/stone.jpg">
 
 
     
@@ -109,9 +109,9 @@
         </li>
         
         <li class="nav-item">
-          <a class="nav-link " href="/discounts/">
+          <a class="nav-link " href="/referrals/">
             
-             Discounts
+             Referrals
           </a>
         </li>
         
@@ -141,7 +141,7 @@
         <h3 class="mb-4"><a href="/">instantiator.dev</a></h3>
         
         <div style="text-align: center;" class="mb-4">
-            <p style="font-size: 0.8rem;">tech, volunteers, public safety, collective intelligence, articles, tools, code and ideas</p>
+            <p style="font-size: 0.8rem;">I'm a senior tech lead, writing about tech, volunteers, public safety, and collective intelligence. This blog contains articles, tools, code and ideas.</p>
         </div>
 
         <div class="d-flex flex-row justify-content-evenly align-self-stretch mb-4">
@@ -303,12 +303,12 @@
 <p>Use cases for a DPS system include final messages to loved ones, the distribution of assets after death, and the controlled release of a damaging secret to disincentivise an attack on the owner of a DPS (the <em>subject</em>).</p>
 <p>This was the subject of my MSc dissertation in Software &amp; Systems Security, which focuses on the needs of an investigative journalist. It&rsquo;s available to download here:</p>
 <ul>
-<li><a href="/dps/DPS-thesis-LGW.2021-09-01.with-appendices.pdf">Dead Person Switches - with or without trust</a></li>
+<li><a href="/post/dead-person-switch/DPS-thesis-LGW.2021-09-01.with-appendices.pdf">Dead Person Switches - with or without trust</a></li>
 </ul>
 <p>Little formal work exists on the topic, although time-release cryptography (related) is an active field of research.</p>
 <h2 id="how-do-you-build-a-dps">How do you build a DPS?</h2>
 <p>A simple, very high level representation for a Dead Person Switch might look like this:</p>
-<p><img src="/dps/dps-threat-model-scoping.png" alt="High level diagram representing a DPS" title="High level diagram representing a DPS"></p>
+<p><img src="/post/dead-person-switch/dps-threat-model-scoping.png" alt="High level diagram representing a DPS" title="High level diagram representing a DPS"></p>
 <p>This seems simple enough, but hides a number of underlying questions - particularly around how such a system can hope to keep the subject&rsquo;s secret safe&hellip;</p>
 <h3 id="a-cryptographic-conundrum">A cryptographic conundrum</h3>
 <p><em>Could you use encryption to protect the secret inside a DPS?</em></p>
@@ -351,13 +351,13 @@
 </ol>
 <h3 id="classic-design">Classic design</h3>
 <p>Designing a DPS using the principles of secure design gave me a strong baseline which I could then compare with existing systems, and the more exotic proposed designs. I presented a (fairly) simple microservice architecture design - clearly illustrating the various components, and easy to reason with.</p>
-<p><img src="/dps/microservices.png" alt="A classic microservice architecture design for a DPS" title="A classic microservice architecture design"></p>
+<p><img src="/post/dead-person-switch/microservices.png" alt="A classic microservice architecture design for a DPS" title="A classic microservice architecture design"></p>
 <p>This has all the strengths and weaknesses of current cloud services. It can be protected from outsiders through access control mechanisms, but has strong vulnerabilities to insiders (including staff at the cloud service provider), legal constraints, and denial of service attacks.</p>
 <h3 id="dapps">dApps</h3>
 <p>dApps show a lot of promise. Networks that can execute smart contracts (such as Ethereum) offer a number of guarantees around availability and reliability that are very important to a DPS. However, smart contracts alone are not enough - it&rsquo;s important to be able to store, protect, and retrieve secrets. Smart contracts cannot keep secrets, as they are execute in a VM that runs on any participating node in their network.</p>
 <p>Some solutions hide the subject&rsquo;s secret key in another service. This transfers the risk with the key, and relies on strong controls to protect the new service.</p>
 <p>A number of networks, such as the <a href="https://scrt.network/">SECRET</a> network, have formed in recent years that can support <em>secret contracts</em> - smart contracts that are able to protect their state and inputs from observation by the nodes that execute them. At current time, this is achievable through <a href="https://en.wikipedia.org/wiki/Trusted_execution_environment">Trusted Execution Environments</a> (TEE). Enclaves inside a CPU (such as Intel&rsquo;s <a href="https://en.wikipedia.org/wiki/Software_Guard_Extensions">SGX</a>) can protect the confidentiality of secrets, and prove the integrity of their results. Networks such as SECRET execute secret contracts in TEE enclaves on their nodes.</p>
-<p><img src="/dps/smart-and-secret-contract-flow.png" alt="Activation flow for a DPS composed of a smart contract and secret contract" title="Activation flow for a DPS composed of a smart contract and secret contract"></p>
+<p><img src="/post/dead-person-switch/smart-and-secret-contract-flow.png" alt="Activation flow for a DPS composed of a smart contract and secret contract" title="Activation flow for a DPS composed of a smart contract and secret contract"></p>
 <p>A design that incorporates a smart contract and secret contract could prove a very promising solution.</p>
 <h3 id="witness-encryption">Witness encryption</h3>
 <p><a href="https://eprint.iacr.org/2013/258.pdf">Witness encryption</a> is a particularly interesting area of research - offering encryption schemes that do not rely on a given key to decrypt a secret. The provision of a <em>witness</em>, something that conforms to a set of rules (described by a mapping in an NP language), can be used in place of a key.</p>
@@ -376,13 +376,13 @@
 <p><strong>This is a very exciting idea!</strong> A passive blob of data that can be distributed publicly protects your secret while you are alive, but becomes easy to decrypt after death. The caveat, of course, is that this is predicated on assumption and speculation. It may prove possible, but there may also be good reasons why such conditions do not lend themselves to witness encryption schemes.</p>
 <h2 id="conclusions">Conclusions</h2>
 <p>I was able to evaluate the existing systems and proposed designs against the requirements for a DPS, giving each a score per requirement. Here&rsquo;s a matrix of it for reference:</p>
-<p><img src="/dps/matrix.png" alt="A matrix showing 12 existing DPS solutions, and 3 proposed designs - each with their scores per requirement" title="Scores for all designs"></p>
+<p><img src="/post/dead-person-switch/matrix.png" alt="A matrix showing 12 existing DPS solutions, and 3 proposed designs - each with their scores per requirement" title="Scores for all designs"></p>
 <p><strong>It&rsquo;s pretty clear that the existing systems each have strengths and weaknesses, and that none were consistently strong across the board.</strong></p>
 <p><strong>The proposed designs represent distinct approaches to the implementation of a DPS, and certainly seem to meet more of the requirements.</strong></p>
 <p>Of the proposed designs, I concluded that the <em>dApp</em> design is the strongest that can currently be implemented.</p>
 <p>The <em>witness encryption</em> design presents a strong hypothetical alternative, but does need some further research.</p>
 <p>The project opened up some rather interesting questions which might make good avenues for further research, and it&rsquo;s a topic I&rsquo;d be glad to stay connected with in future.</p>
-<p><strong>If you&rsquo;d like to know more, feel free to <a href="/dps/DPS-thesis-LGW.2021-09-01.with-appendices.pdf">give it a read</a> and reach out - I&rsquo;d be glad to chat about it.</strong></p>
+<p><strong>If you&rsquo;d like to know more, feel free to <a href="/post/dead-person-switch/DPS-thesis-LGW.2021-09-01.with-appendices.pdf">give it a read</a> and reach out - I&rsquo;d be glad to chat about it.</strong></p>
 
             </div>
         </div>

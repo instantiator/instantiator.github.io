@@ -26,7 +26,7 @@
       </script>
     
 	<meta name="twitter:card" content="summary_large_image">
-	<meta name="twitter:image" content="https://instantiator.dev/advent-2022/deep-thought.png">
+	<meta name="twitter:image" content="https://instantiator.dev/post/8-bit-supercomputer/deep-thought.png">
 	<meta name="twitter:title" content="8-bit Supercomputer">
 	<meta name="twitter:description" content="It took me 3 weeks to complete the day 11 puzzle for Advent of Code on a BBC Micro this year, and you’d be hard pressed to describe my solution as “proportionate” or “necessary”…">
 
@@ -45,7 +45,7 @@
 		<meta property="article:tag" content="RetroComputing">
 		<meta property="article:tag" content="AdventOfCode">
 		<meta property="article:tag" content="Arithemetic">
-		<meta property="og:image" content="https://instantiator.dev/advent-2022/deep-thought.png">
+		<meta property="og:image" content="https://instantiator.dev/post/8-bit-supercomputer/deep-thought.png">
 
 
     
@@ -109,9 +109,9 @@
         </li>
         
         <li class="nav-item">
-          <a class="nav-link " href="/discounts/">
+          <a class="nav-link " href="/referrals/">
             
-             Discounts
+             Referrals
           </a>
         </li>
         
@@ -141,7 +141,7 @@
         <h3 class="mb-4"><a href="/">instantiator.dev</a></h3>
         
         <div style="text-align: center;" class="mb-4">
-            <p style="font-size: 0.8rem;">tech, volunteers, public safety, collective intelligence, articles, tools, code and ideas</p>
+            <p style="font-size: 0.8rem;">I'm a senior tech lead, writing about tech, volunteers, public safety, and collective intelligence. This blog contains articles, tools, code and ideas.</p>
         </div>
 
         <div class="d-flex flex-row justify-content-evenly align-self-stretch mb-4">
@@ -287,9 +287,8 @@
 <p><em><strong>TLDR:</strong> I wrote an arithmetic library in BBC BASIC to work on arbitrary sized numbers, and containerised beebjit to run it at modern speeds. You&rsquo;re welcome to plunder my solutions and use them in your own projects.</em></p>
 <h1 id="8-bit-supercomputer">8-bit Supercomputer</h1>
 <p>The <a href="https://en.wikipedia.org/wiki/BBC_Micro">BBC Micro</a> is an iconic little computer from 1981, firmly printed into the minds of school-children in the UK who grew up in the 80s. (I feel a close kinship with it - as I&rsquo;m from 1981, too.)</p>
-<p><img 
-style="max-width: 480px;"
-src="/advent-2022/bbc-micro.jpg"
+<p><img style="max-width: 480px;"
+src="bbc-micro.jpg"
 alt="A BBC Micro computer - black keys built into a light beige plastic casing, with a row of red function keys above the keyboard."
 title="A BBC Micro computer - black keys built into a light beige plastic casing, with a row of red function keys above the keyboard."></p>
 <p><a href="https://adventofcode.com/">Advent of Code</a> is a series of coding puzzles, published in December of each year, of (approximately) increasing difficulty. There are 2 puzzles per day for each day until Christmas.</p>
@@ -326,16 +325,15 @@ title="A BBC Micro computer - black keys built into a light beige plastic casing
 <p>I kept searching&hellip; and I did come across a couple of interesting hits:</p>
 <ol>
 <li>The <code>bigint.bbc</code> library that&rsquo;s bundled with R. T. Russell&rsquo;s <a href="https://www.bbcbasic.co.uk/bbcsdl/index.html">BBC BASIC for SDL 2.0</a></li>
-<li>An article by David Tall, found in MICROMATH, Autumn 1985 edition: <a href="/advent-2022/dot1985e-large-numbers.pdf">Arithmetic with large numbers</a></li>
+<li>An article by David Tall, found in MICROMATH, Autumn 1985 edition: <a href="/post/8-bit-supercomputer/dot1985e-large-numbers.pdf">Arithmetic with large numbers</a></li>
 </ol>
 <p>Unfortunately, the <code>bigint.bbc</code> library doesn&rsquo;t really fit my need here: It assumes the availability of 64-bit integers - and this means it&rsquo;s only really going to work for the more recent/modern editions of BBC BASIC, rather than the original from the 80s.</p>
 <p>David Tall&rsquo;s article, on the other hand, was very promising! It describes how to use some procedures and functions he&rsquo;d developed to work on arbitrary numbers stored as strings. The code itself was almost certainly provided on a tape or disk that came with the magazine - but sadly that was not available.</p>
 <p><a href="https://en.wikipedia.org/wiki/David_Tall">David Tall</a> is a Professor of Mathematical Thinking at Warwick University, and maintains a professional and personal website. I reached out to him to ask if he still had any of the missing code. In response, he was very encouraging - but invited me to develop my own solution, rather than handing over his 1985 work.</p>
 <p>I&rsquo;m pleased to say that I did! It took a while, it&rsquo;s not my finest work, and I had to learn some basic pencil-and-paper arithmetic again to do it - but it works.</p>
 <p>You can see the library here: <a href="https://github.com/instantiator/advent-of-code-2022/blob/main/bignums/bignum.v1.basic">bignum.v1.basic</a> (and you&rsquo;re more than welcome to plunder it for your own project, or improve on it!)</p>
-<p><img 
-style="max-width: 640px;"
-src="/advent-2022/bignum.png"
+<p><img style="max-width: 640px;"
+src="bignum.png"
 alt="A BBC Micro screen - coloured text on a black background. It's showing a number of tests in progress that exercise a variety of big number arithmetic functions."
 title="A BBC Micro screen - coloured text on a black background. It's showing a number of tests in progress that exercise a variety of big number arithmetic functions."></p>
 <p>So I now had functions to parse numbers of indefinite size! (Well, limited by strings in BBC BASIC - which gives an upper limit of <code>255</code> characters. Still, that&rsquo;s much bigger than before, and easily big enough for my purposes&hellip;)</p>
@@ -361,14 +359,12 @@ title="A BBC Micro screen - coloured text on a black background. It's showing a 
 <li><a href="https://hitchhikers.fandom.com/wiki/Earth#Destruction">Earth</a> was destroyed 5 minutes before it was due to finish calculating the original question, destroying <strong>10 million years</strong> worth of work.</li>
 <li>beebjit running my solution took <strong>13 minutes</strong> to determine that the level of monkey business on day 11 of Advent of Code 2022 was <code>30616425600</code>.</li>
 </ul>
-<p><img 
-style="width: 640px;"
-src="/advent-2022/deep-thought.png"
+<p><img style="width: 640px;"
+src="deep-thought.png"
 alt="Deep Thought, a giant green supercomputer pouring with steam or smoke from dry ice, towers above 2 philosophers who are asking it a complicated question."
 title="Deep Thought, a giant green supercomputer pouring with steam or smoke from dry ice, towers above 2 philosophers who are asking it a complicated question."></p>
-<p><img 
-style="width: 640px;"
-src="/advent-2022/11B-screenshot.png"
+<p><img style="width: 640px;"
+src="11B-screenshot.png"
 alt="A terminal shows a BBC Micro prompt with RUN. Below is a row of dots. Below that are 8 entries - one for each money, indicating how many inspections each monkey made."
 title="A terminal shows a BBC Micro prompt with RUN. Below is a row of dots. Below that are 8 entries - one for each money, indicating how many inspections each monkey made."></p>
 <p>A BBC Micro conducting arithmetic on arbitrary size numbers, at modern speeds, is an 8-bit super-computer in my books!</p>

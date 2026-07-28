@@ -26,7 +26,7 @@
       </script>
     
 	<meta name="twitter:card" content="summary_large_image">
-	<meta name="twitter:image" content="https://instantiator.dev/reveal/multiplexing-slides-1-and-2.gif">
+	<meta name="twitter:image" content="https://instantiator.dev/post/reveal-in-react/multiplexing-slides-1-and-2.gif">
 	<meta name="twitter:title" content="Reveal in React">
 	<meta name="twitter:description" content="What if your UI was a slide show?
 Reveal in React TLDR: Here’s a template repository for a NextJS app with a Reveal slide show UI: instantiator/reveal-on-next">
@@ -47,7 +47,7 @@ Reveal in React TLDR: Here’s a template repository for a NextJS app with a Rev
 		<meta property="article:tag" content="NextJS">
 		<meta property="article:tag" content="Presentation">
 		<meta property="article:tag" content="SlideShow">
-		<meta property="og:image" content="https://instantiator.dev/reveal/multiplexing-slides-1-and-2.gif">
+		<meta property="og:image" content="https://instantiator.dev/post/reveal-in-react/multiplexing-slides-1-and-2.gif">
 
 
     
@@ -111,9 +111,9 @@ Reveal in React TLDR: Here’s a template repository for a NextJS app with a Rev
         </li>
         
         <li class="nav-item">
-          <a class="nav-link " href="/discounts/">
+          <a class="nav-link " href="/referrals/">
             
-             Discounts
+             Referrals
           </a>
         </li>
         
@@ -143,7 +143,7 @@ Reveal in React TLDR: Here’s a template repository for a NextJS app with a Rev
         <h3 class="mb-4"><a href="/">instantiator.dev</a></h3>
         
         <div style="text-align: center;" class="mb-4">
-            <p style="font-size: 0.8rem;">tech, volunteers, public safety, collective intelligence, articles, tools, code and ideas</p>
+            <p style="font-size: 0.8rem;">I'm a senior tech lead, writing about tech, volunteers, public safety, and collective intelligence. This blog contains articles, tools, code and ideas.</p>
         </div>
 
         <div class="d-flex flex-row justify-content-evenly align-self-stretch mb-4">
@@ -298,7 +298,7 @@ Reveal in React TLDR: Here’s a template repository for a NextJS app with a Rev
 <p>I&rsquo;ve been exploring ways to embed slide shows into React applications, and allowing them to interact with the rest of the web app as React elements or components in their own right.</p>
 <p><a href="https://revealjs.com/">RevealJS</a> is described as &ldquo;an HTML presentation framework&rdquo;. It&rsquo;s nice looking, simple to create content for, and very flexible. It embeds into regular vanilla javascript websites easily, and with a little tweaking it can be made compatible with React apps, too.</p>
 <h2 id="multiplexing">Multiplexing</h2>
-<p>RevealJS has another feature: Multiplexing. This allows one (or more) client slide shows to follow the progress of one (or more) <del>master</del> controller slide show. This capability is available as the <a href="https://github.com/reveal/multiplex">Multiplex plugin</a>. It can be easily enabled, provided you have access to its socket.io server.</p>
+<p>RevealJS has another feature: Multiplexing. This allows one (or more) client slide shows to follow the progress of one (or more) <del>master</del> controller slide show. This capability is available as the <a href="https://github.com/shared/reveal/multiplex">Multiplex plugin</a>. It can be easily enabled, provided you have access to its socket.io server.</p>
 <p>You can stand up your own server, or for non-production work there&rsquo;s also one hosted at <a href="https://reveal-multiplex.glitch.me/">reveal-multiplex.glitch.me</a>.</p>
 <p>This experiment also explores multiplexing capability.</p>
 <h2 id="dynamic-content">Dynamic content</h2>
@@ -453,7 +453,7 @@ Reveal in React TLDR: Here’s a template repository for a NextJS app with a Rev
 </span></span></code></pre></div><ul>
 <li>To test locally, you could also run your own server.</li>
 <li>A production system should host its own server.</li>
-<li>See: <a href="https://github.com/reveal/multiplex">reveal/multiplex</a></li>
+<li>See: <a href="https://github.com/shared/reveal/multiplex">reveal/multiplex</a></li>
 </ul>
 <h3 id="client-and-controller">Client and controller</h3>
 <p>Install the multiplex plugin:</p>

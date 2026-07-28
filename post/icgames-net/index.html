@@ -26,7 +26,7 @@
       </script>
     
 	<meta name="twitter:card" content="summary_large_image">
-	<meta name="twitter:image" content="https://instantiator.dev/consensus/neon-king.png">
+	<meta name="twitter:image" content="https://instantiator.dev/post/icgames-net/neon-king.png">
 	<meta name="twitter:title" content="International Consensus Chess is in public beta!">
 	<meta name="twitter:description" content="Consensus Chess is going through some beta testing on Mastodon, and you can play today!">
 
@@ -45,7 +45,7 @@
 		<meta property="article:tag" content="Voting">
 		<meta property="article:tag" content="Social">
 		<meta property="article:tag" content="Mastodon">
-		<meta property="og:image" content="https://instantiator.dev/consensus/neon-king.png">
+		<meta property="og:image" content="https://instantiator.dev/post/icgames-net/neon-king.png">
 
 
     
@@ -109,9 +109,9 @@
         </li>
         
         <li class="nav-item">
-          <a class="nav-link " href="/discounts/">
+          <a class="nav-link " href="/referrals/">
             
-             Discounts
+             Referrals
           </a>
         </li>
         
@@ -141,7 +141,7 @@
         <h3 class="mb-4"><a href="/">instantiator.dev</a></h3>
         
         <div style="text-align: center;" class="mb-4">
-            <p style="font-size: 0.8rem;">tech, volunteers, public safety, collective intelligence, articles, tools, code and ideas</p>
+            <p style="font-size: 0.8rem;">I'm a senior tech lead, writing about tech, volunteers, public safety, and collective intelligence. This blog contains articles, tools, code and ideas.</p>
         </div>
 
         <div class="d-flex flex-row justify-content-evenly align-self-stretch mb-4">
@@ -297,15 +297,14 @@
             <div class="mt-4">
                 <p>Consensus Chess is going through some beta testing on Mastodon, and you can play today!</p>
 <h1 id="what-are-consensus-games">What are Consensus Games?</h1>
-<p>I dug a little into the idea <a href="../consensus-games">last time</a>, and here&rsquo;s a short summary: Consensus Games are a way to play a turn-based game (in this example, chess) by polling each team to figure out the move each side will make.</p>
+<p>I dug a little into the idea <a href="../consensus-games/">last time</a>, and here&rsquo;s a short summary: Consensus Games are a way to play a turn-based game (in this example, chess) by polling each team to figure out the move each side will make.</p>
 <h2 id="can-i-play-it-now">Can I play it now?</h2>
 <p>Yes! There&rsquo;s a test game up and running over at <a href="https://botsin.space/@icgames">icgames@botsin.space</a> - you can join a side by voting on a move. Just reply to a board post with the move you think your side should make, providing the square to move <em>from</em> and the square to move <em>to</em> - separated by a hyphen.</p>
 <p>eg. <code>e2 - e4</code></p>
 <p>It&rsquo;s that simple! Consensus Games will respond, indicating that it accepted your move, and when all the votes will be tallied. Good luck!</p>
 <h2 id="where-can-i-find-out-more">Where can I find out more?</h2>
 <p>There&rsquo;s a new website - <a href="https://icgames.net">icgames.net</a>, or you can reach out to me on social media. I&rsquo;ll happily talk your ears off!</p>
-<p><img 
-src="/consensus/colossus-2.jpg" 
+<p><img src="colossus-2.jpg" 
 style="width: 40%; float: right; margin: 20px;"
 alt="Colossus, a tiny stack of 4 Raspberry Pi computers. 2 of them have little red lights on to indicate that they are powered."
 title="Colossus, a tiny stack of 4 Raspberry Pi computers. 2 of them have little red lights on to indicate that they are powered."></p>
@@ -326,8 +325,7 @@ title="Colossus, a tiny stack of 4 Raspberry Pi computers. 2 of them have little
 </ul>
 <p>Each node subscribes to a stream of notifications from its network, and polls the shared database for information about games.</p>
 <p>When there&rsquo;s a new move or a new game, each node posts a new board. When a user interacts with that board post, the node updates the shared database to keep track of all the votes.</p>
-<p style="text-align: center;"><img 
-    src="/consensus/consensus-diagram.png" 
+<p style="text-align: center;"><img src="consensus-diagram.png" 
     style="width: 80%;"
     alt="A network diagram showing how each node and engine runs in a docker container, and connects to a mastodon account. They each share a single database."
     title="A network diagram showing how each node and engine runs in a docker container, and connects to a mastodon account. They each share a single database."></p>
@@ -341,8 +339,7 @@ title="Colossus, a tiny stack of 4 Raspberry Pi computers. 2 of them have little
 <h2 id="who-created-the-graphics">Who created the graphics?</h2>
 <p>The art for the chess board comes from the <a href="https://dani-maccari.itch.io/pixel-chess">Pixel Chess</a> asset pack by <a href="https://dani-maccari.itch.io/">Dani Maccari</a>. It&rsquo;s listed as a free asset pack, but you can pay what you think is fair. (That&rsquo;s a nice feature of <a href="https://itch.io/">itch.io</a> - and as I&rsquo;m using it, I contributed.)</p>
 <p>The Neon King (icon) was generated in <a href="https://beta.dreamstudio.ai/dream">DreamStudio</a> using <a href="https://en.wikipedia.org/wiki/Stable_Diffusion">Stable Diffusion</a>. I spent some time experimenting with prompts to find something I liked, and I&rsquo;m pretty pleased with the way it came out.</p>
-<p style="text-align: center;"><img 
-    src="/consensus/challenge-image.png" 
+<p style="text-align: center;"><img src="challenge-image.png" 
     alt="A dinky, pixellated chess board, with the ICGames logo on it. The logo shows a black chess king with a bright green neon streak on a dark concrete-like background."
     title="A dinky, pixellated chess board, with the ICGames logo on it. The logo shows a black chess king with a bright green neon streak on a dark concrete-like background."></p>
 <h2 id="who-wrote-your-copy">Who wrote your copy?</h2>

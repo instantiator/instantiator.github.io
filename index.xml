@@ -10,15 +10,29 @@
 		
 		
 		
-			<lastBuildDate>Fri, 17 Jul 2026 00:00:00 +0000</lastBuildDate>
+			<lastBuildDate>Tue, 28 Jul 2026 00:00:00 +0000</lastBuildDate>
 		
 			<atom:link href="https://instantiator.dev/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>Review: Dungeon Crawler Carl</title>
+				<link>https://instantiator.dev/post/dcc/</link>
+				<pubDate>Tue, 28 Jul 2026 00:00:00 +0000</pubDate>
+				<guid>https://instantiator.dev/post/dcc/</guid>
+				<description>&lt;p&gt;&lt;em&gt;TLDR: I&amp;rsquo;m enjoying Dungeon Crawler Carl. It&amp;rsquo;s amusing and poignant. It has several themes, they&amp;rsquo;re layered, and it takes a while for them all to warm up.&lt;/em&gt;&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>Free AI-assisted coding tools 2: Managing your code</title>
+				<link>https://instantiator.dev/post/prototyping-opencode-tutorial-002-git/</link>
+				<pubDate>Mon, 27 Jul 2026 00:00:00 +0000</pubDate>
+				<guid>https://instantiator.dev/post/prototyping-opencode-tutorial-002-git/</guid>
+				<description>&lt;p&gt;&lt;em&gt;Use &lt;code&gt;git&lt;/code&gt; to keep a full history of your coding project and track changes. It&amp;rsquo;s a commonly used tool to help manage your work.&lt;/em&gt;&lt;/p&gt;</description>
+			</item>
 			<item>
 				<title>Free AI-assisted coding tools 1: Getting started</title>
 				<link>https://instantiator.dev/post/prototyping-opencode-tutorial-001-dev-environment/</link>
 				<pubDate>Fri, 17 Jul 2026 00:00:00 +0000</pubDate>
 				<guid>https://instantiator.dev/post/prototyping-opencode-tutorial-001-dev-environment/</guid>
-				<description>&lt;p&gt;&lt;em&gt;A short tutorial to help you set up a lightweight AI assisted coding environment, with free tools. It&amp;rsquo;s a modest solution but, if you have a computer, you can get started for nothing.&lt;/em&gt;&lt;/p&gt;</description>
+				<description>&lt;p&gt;&lt;em&gt;A short tutorial to help you set up a lightweight AI assisted-coding environment, with free tools. It&amp;rsquo;s a modest solution but, if you have a computer, you can get started for nothing.&lt;/em&gt;&lt;/p&gt;</description>
 			</item>
 			<item>
 				<title>Say hello world and nothing else</title>
@@ -56,11 +70,11 @@
 				<description>&lt;p&gt;I am a tech lead and senior software developer. My career reflects my passion for public service and volunteerism.&lt;/p&gt;</description>
 			</item>
 			<item>
-				<title>Discounts</title>
-				<link>https://instantiator.dev/discount-codes/</link>
+				<title>Referrals</title>
+				<link>https://instantiator.dev/referrals/</link>
 				<pubDate>Tue, 21 Apr 2026 00:00:00 +0000</pubDate>
-				<guid>https://instantiator.dev/discount-codes/</guid>
-				<description>&lt;h2 id=&#34;referrals&#34;&gt;Referrals&lt;/h2&gt;&#xA;&lt;style&gt;&#xA;div.offer {&#xA;  background: #f0fff0;&#xA;  border: dashed 2px #c0dfc0;&#xA;  border-radius: 1em;&#xA;  padding: 1em;&#xA;  height: 100%;&#xA;  transition: transform 150ms ease, box-shadow 150ms ease;&#xA;  will-change: transform, box-shadow;&#xA;}&#xA;&#xA;div.offer:hover {&#xA;  box-shadow: 0 8px 20px rgba(0,0,0,0.12);&#xA;  transform: translateY(-4px);&#xA;}&#xA;&#xA;div.offer span.headline {&#xA;  font-weight: bold;&#xA;}&#xA;&lt;/style&gt;&#xA;&lt;div style=&#34;display: flex; flex-direction: row; gap: 1em; align-items: stretch; flex-wrap: wrap; margin-bottom: 2rem;&#34;&gt;&#xA;  &lt;a href=&#34;https://uk.huel.com/?huelraf=REF-LEWISW4944&#34; target=&#34;_blank&#34;&gt;&#xA;    &lt;div class=&#34;offer&#34;&gt;&#xA;      &lt;span class=&#34;headline&#34;&gt;£20 off your next order of Huel&lt;/span&gt;&lt;br/&gt;&#xA;      Code: &lt;code&gt;REF-LEWISW4944&lt;/code&gt;&#xA;    &lt;/div&gt;&#xA;  &lt;/a&gt;&#xA;  &lt;a href=&#34;http://rwrd.io/2z6jzcl?c&#34; target=&#34;_blank&#34;&gt;&#xA;    &lt;div class=&#34;offer&#34;&gt;&#xA;      &lt;span class=&#34;headline&#34;&gt;€50 off your first Fairphone&lt;/span&gt;&lt;br/&gt;&#xA;      or Fairbuds XL&#xA;    &lt;/div&gt;&#xA;  &lt;/a&gt;&#xA;  &lt;a href=&#34;https://share.octopus.energy/fun-dove-691&#34; target=&#34;_blank&#34;&gt;&#xA;    &lt;div class=&#34;offer&#34;&gt;&#xA;      &lt;span class=&#34;headline&#34;&gt;Share £100 with me&lt;/span&gt;&lt;br/&gt;&#xA;      and join Octopus Energy&#xA;    &lt;/div&gt;&#xA;  &lt;/a&gt;&#xA;  &lt;a href=&#34;https://test-snapmaker.myshopify.com?ref=instantiator&#34; target=&#34;_blank&#34;&gt;&#xA;    &lt;div class=&#34;offer&#34;&gt;&#xA;      &lt;span class=&#34;headline&#34;&gt;5% off 3D printing products&lt;/span&gt;&lt;br/&gt;&#xA;      at the Snapmaker store&lt;br/&gt;&#xA;      Code: &lt;code&gt;instantiator&lt;/code&gt;&#xA;    &lt;/div&gt;&#xA;  &lt;/a&gt;&#xA;&lt;/div&gt;&#xA;&lt;h2 id=&#34;do-something-wholesome&#34;&gt;Do something wholesome&lt;/h2&gt;&#xA;&lt;div style=&#34;display: flex; flex-direction: row; gap: 1em; align-items: stretch; flex-wrap: wrap; margin-bottom: 2rem;&#34;&gt;&#xA;  &lt;a href=&#34;https://libro.fm/referral?rf_code=lfm802175&#34; target=&#34;_blank&#34;&gt;&#xA;    &lt;div class=&#34;offer&#34;&gt;&#xA;      &lt;span class=&#34;headline&#34;&gt;Get your audio books from libro.fm&lt;/span&gt;&lt;br/&gt;&#xA;      and support local bookshops*&#xA;      &lt;div style=&#34;font-size: small; margin-top: 1rem;&#34;&gt;&lt;i&gt;*Also, I get an audiobook credit&lt;/i&gt;&lt;/div&gt;&#xA;    &lt;/div&gt;&#xA;  &lt;/a&gt;&#xA;&lt;/div&gt;&#xA;&lt;h2 id=&#34;looking-for-work&#34;&gt;Looking for work?&lt;/h2&gt;&#xA;&lt;p&gt;This is a personal recommendation&lt;sup id=&#34;fnref:1&#34;&gt;&lt;a href=&#34;#fn:1&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;.&lt;/p&gt;</description>
+				<guid>https://instantiator.dev/referrals/</guid>
+				<description>&lt;h2 id=&#34;discounts&#34;&gt;Discounts&lt;/h2&gt;&#xA;&lt;style&gt;&#xA;div.offer {&#xA;  background: #f0fff0;&#xA;  border: dashed 2px #c0dfc0;&#xA;  border-radius: 1em;&#xA;  padding: 1em;&#xA;  height: 100%;&#xA;  transition: transform 150ms ease, box-shadow 150ms ease;&#xA;  will-change: transform, box-shadow;&#xA;}&#xA;&#xA;div.offer:hover {&#xA;  box-shadow: 0 8px 20px rgba(0,0,0,0.12);&#xA;  transform: translateY(-4px);&#xA;}&#xA;&#xA;div.offer span.headline {&#xA;  font-weight: bold;&#xA;}&#xA;&lt;/style&gt;&#xA;&lt;div style=&#34;display: flex; flex-direction: row; gap: 1em; align-items: stretch; flex-wrap: wrap; margin-bottom: 2rem;&#34;&gt;&#xA;  &lt;a href=&#34;https://uk.huel.com/?huelraf=REF-LEWISW4944&#34; target=&#34;_blank&#34;&gt;&#xA;    &lt;div class=&#34;offer&#34;&gt;&#xA;      &lt;span class=&#34;headline&#34;&gt;£20 off your next order of Huel&lt;/span&gt;&lt;br/&gt;&#xA;      Code: &lt;code&gt;REF-LEWISW4944&lt;/code&gt;&#xA;    &lt;/div&gt;&#xA;  &lt;/a&gt;&#xA;  &lt;a href=&#34;http://rwrd.io/2z6jzcl?c&#34; target=&#34;_blank&#34;&gt;&#xA;    &lt;div class=&#34;offer&#34;&gt;&#xA;      &lt;span class=&#34;headline&#34;&gt;€50 off your first Fairphone&lt;/span&gt;&lt;br/&gt;&#xA;      or Fairbuds XL&#xA;    &lt;/div&gt;&#xA;  &lt;/a&gt;&#xA;  &lt;a href=&#34;https://share.octopus.energy/fun-dove-691&#34; target=&#34;_blank&#34;&gt;&#xA;    &lt;div class=&#34;offer&#34;&gt;&#xA;      &lt;span class=&#34;headline&#34;&gt;Share £100 with me&lt;/span&gt;&lt;br/&gt;&#xA;      and join Octopus Energy&#xA;    &lt;/div&gt;&#xA;  &lt;/a&gt;&#xA;  &lt;a href=&#34;https://test-snapmaker.myshopify.com?ref=instantiator&#34; target=&#34;_blank&#34;&gt;&#xA;    &lt;div class=&#34;offer&#34;&gt;&#xA;      &lt;span class=&#34;headline&#34;&gt;5% off 3D printing products&lt;/span&gt;&lt;br/&gt;&#xA;      at the Snapmaker store&lt;br/&gt;&#xA;      Code: &lt;code&gt;instantiator&lt;/code&gt;&#xA;    &lt;/div&gt;&#xA;  &lt;/a&gt;&#xA;&lt;/div&gt;&#xA;&lt;h2 id=&#34;do-something-wholesome&#34;&gt;Do something wholesome&lt;/h2&gt;&#xA;&lt;div style=&#34;display: flex; flex-direction: row; gap: 1em; align-items: stretch; flex-wrap: wrap; margin-bottom: 2rem;&#34;&gt;&#xA;  &lt;a href=&#34;https://libro.fm/referral?rf_code=lfm802175&#34; target=&#34;_blank&#34;&gt;&#xA;    &lt;div class=&#34;offer&#34;&gt;&#xA;      &lt;span class=&#34;headline&#34;&gt;Get your audio books from libro.fm&lt;/span&gt;&lt;br/&gt;&#xA;      and support local bookshops*&#xA;      &lt;div style=&#34;font-size: small; margin-top: 1rem;&#34;&gt;&lt;i&gt;*Also, I get an audiobook credit&lt;/i&gt;&lt;/div&gt;&#xA;    &lt;/div&gt;&#xA;  &lt;/a&gt;&#xA;&lt;/div&gt;&#xA;&lt;h2 id=&#34;looking-for-work&#34;&gt;Looking for work?&lt;/h2&gt;&#xA;&lt;p&gt;This is a personal recommendation&lt;sup id=&#34;fnref:1&#34;&gt;&lt;a href=&#34;#fn:1&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;.&lt;/p&gt;</description>
 			</item>
 			<item>
 				<title>Conversational deliberation, at scale</title>
@@ -88,7 +102,7 @@
 				<link>https://instantiator.dev/post/in-this-house-we-celebrate/</link>
 				<pubDate>Sat, 24 Aug 2024 12:00:00 +0000</pubDate>
 				<guid>https://instantiator.dev/post/in-this-house-we-celebrate/</guid>
-				<description>&lt;p&gt;&lt;em&gt;An alternative calendar for the geek in your heart&amp;hellip;&lt;/em&gt;&lt;/p&gt;&#xA;&lt;h1 id=&#34;in-this-house-we-celebrate&#34;&gt;In this house we celebrate&amp;hellip;&lt;/h1&gt;&#xA;&lt;p&gt;Here&amp;rsquo;s a fun alternative celebration calendar. It&amp;rsquo;s a collaboration between friends, and we&amp;rsquo;ll keep improving it. It&amp;rsquo;s for you, for the geek in your life, or the nerd in your heart.  You can &lt;a href=&#34;https://calendar.google.com/calendar/u/0?cid=YWQ3NjA2ZGZiMDU4MGRjMDg5NjI5ZGZmOWJlMGQ5ZmMwZGIxOWQyOTZhN2Q3Mjg2NGMxYjMzOGY0ZGQ4OTZhNEBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&#34;&gt;add it to Google Calendar&lt;/a&gt; for the full experience, or &lt;a href=&#34;https://calendar.google.com/calendar/embed?src=ad7606dfb0580dc089629dff9be0d9fc0db19d296a7d72864c1b338f4dd896a4%40group.calendar.google.com&amp;amp;ctz=Europe%2FLondon&#34;&gt;visit it on its own page&lt;/a&gt;.&lt;/p&gt;</description>
+				<description>&lt;p&gt;&lt;em&gt;An alternative calendar for the geek in your heart&amp;hellip;&lt;/em&gt;&lt;/p&gt;&#xA;&lt;h1 id=&#34;in-this-house-we-celebrate&#34;&gt;In this house we celebrate&amp;hellip;&lt;/h1&gt;&#xA;&lt;p&gt;Here&amp;rsquo;s a fun alternative celebration calendar. It&amp;rsquo;s a collaboration between friends, and we&amp;rsquo;ll keep improving it. It&amp;rsquo;s for you, for the geek in your life, or the nerd in your heart.  You can &lt;a href=&#34;https://calendar.google.com/shared/calendar/u/0?cid=YWQ3NjA2ZGZiMDU4MGRjMDg5NjI5ZGZmOWJlMGQ5ZmMwZGIxOWQyOTZhN2Q3Mjg2NGMxYjMzOGY0ZGQ4OTZhNEBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&#34;&gt;add it to Google Calendar&lt;/a&gt; for the full experience, or &lt;a href=&#34;https://calendar.google.com/shared/calendar/embed?src=ad7606dfb0580dc089629dff9be0d9fc0db19d296a7d72864c1b338f4dd896a4%40group.calendar.google.com&amp;amp;ctz=Europe%2FLondon&#34;&gt;visit it on its own page&lt;/a&gt;.&lt;/p&gt;</description>
 			</item>
 			<item>
 				<title>Dracula and the Epistolorean</title>
@@ -161,32 +175,11 @@
 				<description>&lt;p&gt;This is a quick guide to some of the features of the Semantic Kernel, a Software Development Kit that simplifies integration of language models into your own applications.&lt;/p&gt;</description>
 			</item>
 			<item>
-				<title>Post 3</title>
-				<link>https://instantiator.dev/posts/post-3/</link>
-				<pubDate>Wed, 15 Mar 2023 11:00:00 -0700</pubDate>
-				<guid>https://instantiator.dev/posts/post-3/</guid>
-				<description>&lt;p&gt;Occaecat aliqua consequat laborum ut ex aute aliqua culpa quis irure esse magna dolore quis. Proident fugiat labore eu laboris officia Lorem enim. Ipsum occaecat cillum ut tempor id sint aliqua incididunt nisi incididunt reprehenderit. Voluptate ad minim sint est aute aliquip esse occaecat tempor officia qui sunt. Aute ex ipsum id ut in est velit est laborum incididunt. Aliqua qui id do esse sunt eiusmod id deserunt eu nostrud aute sit ipsum. Deserunt esse cillum Lorem non magna adipisicing mollit amet consequat.&lt;/p&gt;</description>
-			</item>
-			<item>
-				<title>Post 2</title>
-				<link>https://instantiator.dev/posts/post-2/</link>
-				<pubDate>Wed, 15 Feb 2023 10:00:00 -0700</pubDate>
-				<guid>https://instantiator.dev/posts/post-2/</guid>
-				<description>&lt;p&gt;Anim eiusmod irure incididunt sint cupidatat. Incididunt irure irure irure nisi ipsum do ut quis fugiat consectetur proident cupidatat incididunt cillum. Dolore voluptate occaecat qui mollit laborum ullamco et. Ipsum laboris officia anim laboris culpa eiusmod ex magna ex cupidatat anim ipsum aute. Mollit aliquip occaecat qui sunt velit ut cupidatat reprehenderit enim sunt laborum. Velit veniam in officia nulla adipisicing ut duis officia.&lt;/p&gt;</description>
-			</item>
-			<item>
 				<title>3D puzzle print: a crossword generation tool</title>
 				<link>https://instantiator.dev/post/printing-3d-crosswords/</link>
 				<pubDate>Wed, 18 Jan 2023 00:00:00 +0000</pubDate>
 				<guid>https://instantiator.dev/post/printing-3d-crosswords/</guid>
 				<description>&lt;p&gt;A tool to design 3D printed crossword puzzles.&lt;/p&gt;&#xA;&lt;h1 id=&#34;generating-3d-crossword-models&#34;&gt;Generating 3D crossword models&lt;/h1&gt;&#xA;&lt;p&gt;I&amp;rsquo;ve been working on a tool to generate crossword designs using OpenSCAD. The output is an STL file that you can use with your favourite slicer and send to a 3D printer. It&amp;rsquo;s open source, and you&amp;rsquo;re free to plunder it for tips, techniques, or to generate your own&amp;hellip;&lt;/p&gt;</description>
-			</item>
-			<item>
-				<title>Post 1</title>
-				<link>https://instantiator.dev/posts/post-1/</link>
-				<pubDate>Sun, 15 Jan 2023 09:00:00 -0700</pubDate>
-				<guid>https://instantiator.dev/posts/post-1/</guid>
-				<description>&lt;p&gt;Tempor proident minim aliquip reprehenderit dolor et ad anim Lorem duis sint eiusmod. Labore ut ea duis dolor. Incididunt consectetur proident qui occaecat incididunt do nisi Lorem. Tempor do laborum elit laboris excepteur eiusmod do. Eiusmod nisi excepteur ut amet pariatur adipisicing Lorem.&lt;/p&gt;</description>
 			</item>
 			<item>
 				<title>The rocketship template 🚀</title>

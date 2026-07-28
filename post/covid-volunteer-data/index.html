@@ -26,7 +26,7 @@
       </script>
     
 	<meta name="twitter:card" content="summary_large_image">
-	<meta name="twitter:image" content="https://instantiator.dev/covid-19/covid-groups-map.png">
+	<meta name="twitter:image" content="https://instantiator.dev/shared/covid-19/covid-groups-map.png">
 	<meta name="twitter:title" content="We&#39;re only human">
 	<meta name="twitter:description" content="Cleaning up data from volunteer groups across the UK.
 We’re only human In the previous post, we took a tour of the open data available that tells the story of volunteerism across the UK since the coronavirus crisis began.">
@@ -47,7 +47,7 @@ We’re only human In the previous post, we took a tour of the open data availab
 		<meta property="article:tag" content="Aid">
 		<meta property="article:tag" content="Mutual Aid">
 		<meta property="article:tag" content="Open Data">
-		<meta property="og:image" content="https://instantiator.dev/covid-19/covid-groups-map.png">
+		<meta property="og:image" content="https://instantiator.dev/shared/covid-19/covid-groups-map.png">
 			<meta property="og:see_also" content="https://instantiator.dev/post/look-for-the-helpers/">
 
 
@@ -112,9 +112,9 @@ We’re only human In the previous post, we took a tour of the open data availab
         </li>
         
         <li class="nav-item">
-          <a class="nav-link " href="/discounts/">
+          <a class="nav-link " href="/referrals/">
             
-             Discounts
+             Referrals
           </a>
         </li>
         
@@ -144,7 +144,7 @@ We’re only human In the previous post, we took a tour of the open data availab
         <h3 class="mb-4"><a href="/">instantiator.dev</a></h3>
         
         <div style="text-align: center;" class="mb-4">
-            <p style="font-size: 0.8rem;">tech, volunteers, public safety, collective intelligence, articles, tools, code and ideas</p>
+            <p style="font-size: 0.8rem;">I'm a senior tech lead, writing about tech, volunteers, public safety, and collective intelligence. This blog contains articles, tools, code and ideas.</p>
         </div>
 
         <div class="d-flex flex-row justify-content-evenly align-self-stretch mb-4">
@@ -272,19 +272,19 @@ We’re only human In the previous post, we took a tour of the open data availab
 <h1 id="were-only-human">We&rsquo;re only human</h1>
 <p>In the previous post, we took a tour of the open data available that tells the story of volunteerism across the UK since the coronavirus crisis began.</p>
 <p>Since the beginning of the year, thousands of groups have registered, and an order of magnitude more individual volunteers have carried out acts of kindness for people in self-isolation.</p>
-<p><img src="/covid-19/covid-groups-map.png" alt="Covid groups map"></p>
+<p><img src="/shared/covid-19/covid-groups-map.png" alt="Covid groups map"></p>
 <p>Volunteers and organisers are, quite frankly, inspirational. Driven by any number of different value systems, they are helping people for little or no recognition or reward.</p>
 <p>Volunteers have provided all the data we’ve seen in the previous article and this, of course, comes with a degree of human error. Cleaning up the registered group information has been challenging for a number of reasons&hellip;</p>
 <p>The data we are looking at for this article is the combined and cleaned data set collated and shared through <a href="https://policerewired.org">Police Rewired</a>:</p>
 <ul>
-<li>🌐 <a href="https://www.policecoders.org/home/covid-19/communities">COVID-19 volunteers</a> (data set, available as GSheet or CSV)</li>
+<li>🌐 <a href="https://www.policecoders.org/home/shared/covid-19/communities">COVID-19 volunteers</a> (data set, available as GSheet or CSV)</li>
 </ul>
 <p>Interested folks have started creating new tools with the data already…</p>
 <ul>
 <li>📌 A map of the support groups was available through helpisavailable.org.uk (maintained by Police Rewired volunteers).</li>
 <li>📌 A map <a href="https://fryford.github.io/coronasupport/index.html">merging this source with data showing areas of deprivation</a> was created by <a href="https://twitter.com/fryford">Rob Fryford</a> (<a href="https://www.ons.gov.uk/">ONS</a>), to help guide volunteer and relief efforts.</li>
 <li>📌 <a href="https://localhelpers.org/">LocalHelpers</a> offered links to nearby volunteer groups when handling requests or offers of help.</li>
-<li>📌 The <a href="https://www.policerewired.org/home/covid-19/community-policing">Community Policing Dashboard</a> was a collaboration between staff and volunteers from ESRI UK and Police Rewired.</li>
+<li>📌 The <a href="https://www.policerewired.org/home/shared/covid-19/community-policing">Community Policing Dashboard</a> was a collaboration between staff and volunteers from ESRI UK and Police Rewired.</li>
 <li>📌 The COVID-19 combined volunteer groups data set was shared through ESRI’s <a href="https://www.esriuk.com/en-gb/content/living-atlas">Living Atlas</a>, making the information available for other services to build on.</li>
 </ul>
 <p>Let’s get started&hellip;</p>
@@ -307,9 +307,9 @@ We’re only human In the previous post, we took a tour of the open data availab
 <li>Dates are recorded one way before a certain date and another way afterwards. The registration system isn’t generating a mix of both.</li>
 </ul>
 <p>The process applied (and shown below) would not have been anywhere near as simple without the kind help of a good friend called Sam. The <em>no future dates</em> constraint is far more helpful than I had assumed!</p>
-<p><img src="/covid-19/date-reasoning.png" alt="Reasoning about dates"></p>
+<p><img src="/shared/covid-19/date-reasoning.png" alt="Reasoning about dates"></p>
 <p>Having completed our initial round of interpretation, only a few hundred dates remain ambiguous. Good enough! We can now plot the unambiguous data we have…</p>
-<p><img src="/covid-19/unambiguous-date-formats.png" alt="Unambiguous date formats"></p>
+<p><img src="/post/covid-volunteer-data/unambiguous-date-formats.png" alt="Unambiguous date formats"></p>
 <p>NB. the spike in UK format dates on the right comes from local council hubs data imported on 10th April. Remove that, and it’s pretty clear that the switch-over to US date format happens around 28th March.</p>
 <p>This means we can interpret every date after the 28th as a US date, including the 4 days of ambiguous dates found in the first pass (1st to 4th April), giving us a near-complete set of unambiguous dates.</p>
 <h3 id="updates-and-duplicates-look-like-registrations">Updates and duplicates look like registrations</h3>
@@ -354,7 +354,7 @@ We’re only human In the previous post, we took a tour of the open data availab
 <h3 id="are-all-the-links-really-for-volunteer-groups">Are all the links really for volunteer groups?</h3>
 <p>Having run these processes what we are left with is almost a clean data set. There are just a few other wrinkles to iron out, and for this we need to understand a little bit more about the data itself.</p>
 <p>In the previous post, we explored the URLs provided for each volunteer group — matching on aspects of them to determine which tools they represented.</p>
-<p><img src="/covid-19/group-organisation-tools.png" alt="Groups by tool"></p>
+<p><img src="/shared/covid-19/group-organisation-tools.png" alt="Groups by tool"></p>
 <p>A group of links worth filtering through manually are the organisations that appear on facebook (perhaps churches, schools, community centres, etc.) — many of which will be legitimately taking part in local volunteering efforts.</p>
 <p>Some facebook links, however, may have been miscategorised or listed by opportunists hoping to raise the profile of their personal or business accounts.</p>
 <p>Facebook links have some clues that help us to identify whether they point to a group, and by and large the groups are likely to be appropriately listed.</p>
@@ -370,12 +370,12 @@ We’re only human In the previous post, we took a tour of the open data availab
 <p>I hope it’s been useful and helpful for you too. 👍</p>
 <p>The data is available for you to play with, and I’d love to know if you build anything with it. I’m reachable on Twitter as <a href="https://twitter.com/instantiator">instantiator</a>.</p>
 <ul>
-<li>🌐 <a href="https://www.policecoders.org/home/covid-19/communities">COVID-19 volunteers</a> (data set, available as GSheet or CSV)</li>
+<li>🌐 <a href="https://www.policecoders.org/home/shared/covid-19/communities">COVID-19 volunteers</a> (data set, available as GSheet or CSV)</li>
 </ul>
 <h2 id="police-rewired">Police Rewired</h2>
 <p><a href="https://policerewired.org">Police Rewired</a> is a group for volunteer professionals, students, academics, developers, designers, and creative problem-solvers who want to develop tools and work on projects in public safety and crime.</p>
 <p>If you’d like to take part, or you’re already working on a voluntary project in public safety, we’d love to hear from you!</p>
-<p><img src="/police-rewired/police-rewired-poster.png" alt="Police Rewired poster"></p>
+<p><img src="/post/covid-volunteer-data/police-rewired-poster.png" alt="Police Rewired poster"></p>
 
             </div>
         </div>
