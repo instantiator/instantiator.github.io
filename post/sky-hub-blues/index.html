@@ -277,6 +277,8 @@
                 <p><em>There&rsquo;s a bug in the Sky Hub that stops you from changing a whole bunch of settings. It&rsquo;s a genuine mistake that Sky won&rsquo;t fix. Here are some workarounds to help you control your home network&hellip;</em></p>
 <h2 id="sky-hub-blues">Sky Hub blues</h2>
 <p>The <code>SR203</code> Sky Hub has a problem. On the latest firmware<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup>, a bug prevents you from from changing several key parts of the configuration&hellip;</p>
+<p>I&rsquo;m using DDNS (dynamic DNS) to remotely communicate with some services that I host at home. To do that, I need to be able to forward internet traffic that arrives at certain ports, and to give some of the devices on my home network (a couple of Raspberry Pis) fixed IP addresses. This is all <em>possible</em> but the Sky Hub&rsquo;s poor interface has bugs that get in the way.</p>
+<p><strong>💀 It seems like this is a long-standing known issue, and that Sky aren&rsquo;t likely to fix it any time soon.</strong></p>
 <div class="table-scroll">
 <table>
 <thead>
@@ -287,14 +289,35 @@
 </thead>
 <tbody>
 <tr>
-  <td><img src="./sr203-evil.png" alt="The Sky Hub SR203. It's a black box with 4 LEDs on the front, that can light up as green or red." style="height: 40vh;" /></td>
-  <td><img src="./sr203.jpg" alt="The Sky Hub SR203. It's a black box with 4 LEDs on the front, that can light up as green or red." style="height: 40vh;" /></td>
+  <td><img src="./sr203-evil.png" alt="The Sky Hub SR203. It's a black box with 4 LEDs on the front, that can light up as green or red." style="max-height: 50vh;" /></td>
+  <td><img src="./sr203.jpg" alt="The Sky Hub SR203. It's a black box with 4 LEDs on the front, that can light up as green or red." style="max-height: 50vh;" /></td>
 </tr>
 </tbody>
 </table>
 </div>
-<p>I&rsquo;m using DDNS (dynamic DNS) to remotely communicate with some services that I host at home. To do that, I need to be able to forward internet traffic that arrives at certain ports, and to give some of the devices on my home network (a couple of Raspberry Pis) fixed IP addresses. This is all <em>possible</em> but the Sky Hub&rsquo;s poor interface has bugs that get in the way.</p>
-<p><strong>💀 It seems like this is a long-standing known issue, and that Sky aren&rsquo;t likely to fix it any time soon.</strong></p>
+<div style="max-width: 50vw; float: right; margin-left: 10px;">
+<blockquote class="bluesky-embed" data-bluesky-uri="at://did:plc:pbsny2ayg4hiqrbj74j652du/app.bsky.feed.post/3mqolzsr24k2z" data-bluesky-cid="bafyreicwyici7mbwfs5vctmtpbxfr4eb4maqdo4nnud4azgtcd33427p7m"><p lang="en">Work hard enough to defeat the Level 1 bot, and get through to a human, slightly less helpful than a Google search. Their special moves:
+💥 conflicting advice!
+💥 ask you to disconnect and tell them when you have done it!
+💥 unnecessary upsell!
+💥 escalate to a team who will tell you nothing is wrong!</p>&mdash; <a href="https://bsky.app/profile/did:plc:pbsny2ayg4hiqrbj74j652du?ref_src=embed">Lewis Westbury 💛💙🌱 (@instantiator.bsky.social)</a> <a href="https://bsky.app/profile/did:plc:pbsny2ayg4hiqrbj74j652du/post/3mqolzsr24k2z?ref_src=embed">2026-07-15T11:19:34.733Z</a></blockquote><script async src="https://embed.bsky.app/static/embed.js" charset="utf-8"></script>
+<div class="bluesky-embed">
+  <div class="bluesky-post" data-bluesky-uri="" style="text-align: center;">
+    <a href="" target="_blank">View post on Bluesky</a>
+  </div>
+</div>
+<script async src="https://bsky.app" charset="utf-8"></script>
+
+<br/>
+<blockquote class="bluesky-embed" data-bluesky-uri="at://did:plc:pbsny2ayg4hiqrbj74j652du/app.bsky.feed.post/3mrnynrvlbk2h" data-bluesky-cid="bafyreif4h3t2dit2ohmyv6jjxhjqx2escvjgos3q6l2pppdtobccamqjoq"><p lang="en">Can&#39;t quite believe this 20 year old piece of kit from the bottom of my cables box saved the day! USB-C to USB-A to Belkin gigabit USB 2.0 ethernet adapter (released in 2006), to ethernet to shonky Sky Hub. Magic! ✨</p>&mdash; <a href="https://bsky.app/profile/did:plc:pbsny2ayg4hiqrbj74j652du?ref_src=embed">Lewis Westbury 💛💙🌱 (@instantiator.bsky.social)</a> <a href="https://bsky.app/profile/did:plc:pbsny2ayg4hiqrbj74j652du/post/3mrnynrvlbk2h?ref_src=embed">2026-07-27T22:58:01.690Z</a></blockquote><script async src="https://embed.bsky.app/static/embed.js" charset="utf-8"></script>
+<div class="bluesky-embed">
+  <div class="bluesky-post" data-bluesky-uri="" style="text-align: center;">
+    <a href="" target="_blank">View post on Bluesky</a>
+  </div>
+</div>
+<script async src="https://bsky.app" charset="utf-8"></script>
+
+</div>
 <h3 id="the-symptoms">The symptoms</h3>
 <p>It&rsquo;s worth noting that this really only occurs over wifi.</p>
 <p>Instead of allowing yoy to change a configuration value, the Hub reloads the page and shows an warning that says &ldquo;your session has expired&rdquo;. (The session hasn&rsquo;t <em>actually</em> expired, and this always occurs.)</p>
@@ -305,16 +328,6 @@
 <li>Reserving IP addresses</li>
 </ul>
 <p>I&rsquo;m sure there are other issues. It seems to relate to creating or modifying objects in the configuration.</p>
-<div style="max-width: 50vw; float: right; margin-left: 10px;">
-<blockquote class="bluesky-embed" data-bluesky-uri="at://did:plc:pbsny2ayg4hiqrbj74j652du/app.bsky.feed.post/3mrnynrvlbk2h" data-bluesky-cid="bafyreif4h3t2dit2ohmyv6jjxhjqx2escvjgos3q6l2pppdtobccamqjoq"><p lang="en">Can&#39;t quite believe this 20 year old piece of kit from the bottom of my cables box saved the day! USB-C to USB-A to Belkin gigabit USB 2.0 ethernet adapter (released in 2006), to ethernet to shonky Sky Hub. Magic! ✨</p>&mdash; <a href="https://bsky.app/profile/did:plc:pbsny2ayg4hiqrbj74j652du?ref_src=embed">Lewis Westbury 💛💙🌱 (@instantiator.bsky.social)</a> <a href="https://bsky.app/profile/did:plc:pbsny2ayg4hiqrbj74j652du/post/3mrnynrvlbk2h?ref_src=embed">2026-07-27T22:58:01.690Z</a></blockquote><script async src="https://embed.bsky.app/static/embed.js" charset="utf-8"></script>
-<div class="bluesky-embed">
-  <div class="bluesky-post" data-bluesky-uri="" style="text-align: center;">
-    <a href="" target="_blank">View post on Bluesky</a>
-  </div>
-</div>
-<script async src="https://bsky.app" charset="utf-8"></script>
-
-</div>
 <h2 id="workarounds">Workarounds</h2>
 <p>So what can we do about it?</p>
 <h3 id="a-use-an-ethernet-cable">A. Use an ethernet cable</h3>
