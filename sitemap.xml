@@ -3,18 +3,57 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://instantiator.dev/</loc>
-    <lastmod>2026-07-28T12:00:00+00:00</lastmod>
+    <lastmod>2026-07-29T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://instantiator.dev/categories/article/</loc>
+    <lastmod>2026-07-29T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://instantiator.dev/categories/</loc>
-    <lastmod>2026-07-28T12:00:00+00:00</lastmod>
+    <lastmod>2026-07-29T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://instantiator.dev/tags/config/</loc>
+    <lastmod>2026-07-29T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://instantiator.dev/tags/fix/</loc>
+    <lastmod>2026-07-29T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://instantiator.dev/tags/hack/</loc>
+    <lastmod>2026-07-29T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://instantiator.dev/tags/hub/</loc>
+    <lastmod>2026-07-29T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://instantiator.dev/tags/internet/</loc>
+    <lastmod>2026-07-29T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://instantiator.dev/post/</loc>
+    <lastmod>2026-07-29T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://instantiator.dev/tags/router/</loc>
+    <lastmod>2026-07-29T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://instantiator.dev/tags/settings/</loc>
+    <lastmod>2026-07-29T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://instantiator.dev/tags/sky/</loc>
+    <lastmod>2026-07-29T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://instantiator.dev/post/sky-hub-blues/</loc>
+    <lastmod>2026-07-29T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://instantiator.dev/tags/sr203/</loc>
+    <lastmod>2026-07-29T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://instantiator.dev/tags/</loc>
+    <lastmod>2026-07-29T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://instantiator.dev/tags/workaround/</loc>
+    <lastmod>2026-07-29T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://instantiator.dev/tags/data-science/</loc>
     <lastmod>2026-07-28T12:00:00+00:00</lastmod>
   </url><url>
     <loc>https://instantiator.dev/post/prototyping-opencode-tutorial-003-scaffolding/</loc>
-    <lastmod>2026-07-28T12:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://instantiator.dev/post/</loc>
     <lastmod>2026-07-28T12:00:00+00:00</lastmod>
   </url><url>
     <loc>https://instantiator.dev/tags/prototype/</loc>
@@ -38,9 +77,6 @@
     <loc>https://instantiator.dev/tags/streamlit/</loc>
     <lastmod>2026-07-28T12:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://instantiator.dev/tags/</loc>
-    <lastmod>2026-07-28T12:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://instantiator.dev/categories/tutorial/</loc>
     <lastmod>2026-07-28T12:00:00+00:00</lastmod>
   </url><url>
@@ -49,9 +85,6 @@
   </url><url>
     <loc>https://instantiator.dev/tags/ui/</loc>
     <lastmod>2026-07-28T12:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://instantiator.dev/categories/article/</loc>
-    <lastmod>2026-07-28T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://instantiator.dev/tags/book-review/</loc>
     <lastmod>2026-07-28T00:00:00+00:00</lastmod>
@@ -1488,9 +1521,6 @@
     <lastmod>2013-05-29T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://instantiator.dev/tags/dispatch/</loc>
-    <lastmod>2013-05-29T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://instantiator.dev/tags/hack/</loc>
     <lastmod>2013-05-29T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://instantiator.dev/post/htp1-highlight-2-terminal-2/</loc>

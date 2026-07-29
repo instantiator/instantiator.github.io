@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>Sky on instantiator.dev</title>
+		<link>https://instantiator.dev/tags/sky/</link>
+		<description>Recent content in Sky on instantiator.dev</description>
+		<generator>Hugo</generator>
+		<language>en</language>
+		
+		
+		
+		
+			<lastBuildDate>Wed, 29 Jul 2026 00:00:00 +0000</lastBuildDate>
+		
+			<atom:link href="https://instantiator.dev/tags/sky/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>Sky hub blues</title>
+				<link>https://instantiator.dev/post/sky-hub-blues/</link>
+				<pubDate>Wed, 29 Jul 2026 00:00:00 +0000</pubDate>
+				<guid>https://instantiator.dev/post/sky-hub-blues/</guid>
+				<description>&lt;p&gt;&lt;em&gt;There&amp;rsquo;s a bug in the Sky Hub that stops you from changing a whole bunch of settings. It&amp;rsquo;s a genuine mistake that Sky won&amp;rsquo;t fix. Here are some workarounds to help you control your home network&amp;hellip;&lt;/em&gt;&lt;/p&gt;</description>
+			</item>
+	</channel>
+</rss>

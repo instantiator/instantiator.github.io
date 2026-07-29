@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
+    <link rel="stylesheet" type="text/css" href="/css/mastodon-timeline.min.css">
+    
+    
+    <title>instantiator.dev | Sky hub blues</title>
+    
+    
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-SHE42ZWKEN"></script>
+      <script>
+        var doNotTrack = false;
+        if ( true ) {
+          var dnt = (navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack);
+          var doNotTrack = (dnt == "1" || dnt == "yes");
+        }
+        if (!doNotTrack) {
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-SHE42ZWKEN');
+        }
+      </script>
+    
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:image" content="https://instantiator.dev/post/sky-hub-blues/sr203-evil.png">
+	<meta name="twitter:title" content="Sky hub blues">
+	<meta name="twitter:description" content="There’s a bug in the Sky Hub that stops you from changing a whole bunch of settings. It’s a genuine mistake that Sky won’t fix. Here are some workarounds to help you control your home network…">
+
+    <meta property="og:url" content="https://instantiator.dev/post/sky-hub-blues/">
+	<meta property="og:site_name" content="instantiator.dev">
+	<meta property="og:title" content="Sky hub blues">
+	<meta property="og:description" content="There’s a bug in the Sky Hub that stops you from changing a whole bunch of settings. It’s a genuine mistake that Sky won’t fix. Here are some workarounds to help you control your home network…">
+	<meta property="og:locale" content="en">
+	<meta property="og:type" content="article">
+		<meta property="article:section" content="post">
+		<meta property="article:published_time" content="2026-07-29T00:00:00+00:00">
+		<meta property="article:modified_time" content="2026-07-29T00:00:00+00:00">
+		<meta property="article:tag" content="Fix">
+		<meta property="article:tag" content="Hack">
+		<meta property="article:tag" content="Hub">
+		<meta property="article:tag" content="Router">
+		<meta property="article:tag" content="Settings">
+		<meta property="article:tag" content="Config">
+		<meta property="og:image" content="https://instantiator.dev/post/sky-hub-blues/sr203-evil.png">
+
+
+    
+    <link rel="stylesheet"
+        href="/css/markupHighlight.min.b065fb7a8dabca50671d98ea7e8a42aed4027206ee1cf5a12e53d781afa4b03c.css"
+        integrity="sha256-sGX7eo2rylBnHZjqfopCrtQCcgbuHPWhLlPXga&#43;ksDw="
+        crossorigin="anonymous"
+        type="text/css">
+
+    </head><body><nav id="nav" class="navbar sticky-top justify-content-start navbar-expand-md frosted-white shadow mb-4">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="/">instantiator.dev</a>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav">
+        
+        
+        <li class="nav-item">
+          <a class="nav-link " href="/">
+            
+             Home
+          </a>
+        </li>
+        
+        <li class="nav-item">
+          <a class="nav-link " href="/post/">
+            
+             All posts
+          </a>
+        </li>
+        
+        <li class="nav-item">
+          <a class="nav-link " href="/categories/tool/">
+            
+             Tools
+          </a>
+        </li>
+        
+        <li class="nav-item">
+          <a class="nav-link " href="/categories/tutorial/">
+            
+             Tutorials
+          </a>
+        </li>
+        
+        <li class="nav-item">
+          <a class="nav-link " href="/categories/article/">
+            
+             Articles
+          </a>
+        </li>
+        
+        <li class="nav-item">
+          <a class="nav-link " href="/referrals/">
+            
+             Referrals
+          </a>
+        </li>
+        
+        <li class="nav-item">
+          <a class="nav-link " href="/about/">
+            
+             About
+          </a>
+        </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+<div class="container-fluid">
+
+<div class="row align-items-start">
+    <div class="col col-lg-3 d-none d-lg-block">
+      <div class="row mb-2">
+    <div class="col-3 col-lg-12 d-flex flex-column align-items-center">
+        <img 
+            src="/lewis/profile.jpg" alt="profile picture" 
+            class="mb-4 mt-4 img-thumbnail" 
+            style="border-radius: 50%; max-width: 200px; width: 100%;" />
+    </div>
+    <div class="col d-flex flex-column align-items-center">
+        <h3 class="mb-4"><a href="/">instantiator.dev</a></h3>
+        
+        <div style="text-align: center;" class="mb-4">
+            <p style="font-size: 0.8rem;">I'm a senior tech lead, writing about tech, volunteers, public safety, and collective intelligence. This blog contains articles, tools, code and ideas.</p>
+        </div>
+
+        <div class="d-flex flex-row justify-content-evenly align-self-stretch mb-4">
+            
+            <a href="https://bsky.app/profile/instantiator.bsky.social" rel="me" aria-label="BlueSky account" alt="BlueSky account" target="_blank">
+                
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 600 530" fill="currentColor" stroke="currentColor" version="1.1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="m135.72 44.03c66.496 49.921 138.02 151.14 164.28 205.46 26.262-54.316 97.782-155.54 164.28-205.46 47.98-36.021 125.72-63.892 125.72 24.795 0 17.712-10.155 148.79-16.111 170.07-20.703 73.984-96.144 92.854-163.25 81.433 117.3 19.964 147.14 86.092 82.697 152.22-122.39 125.59-175.91-31.511-189.63-71.766-2.514-7.3797-3.6904-10.832-3.7077-7.8964-0.0174-2.9357-1.1937 0.51669-3.7077 7.8964-13.714 40.255-67.233 197.36-189.63 71.766-64.444-66.128-34.605-132.26 82.697-152.22-67.108 11.421-142.55-7.4491-163.25-81.433-5.9562-21.282-16.111-152.36-16.111-170.07 0-88.687 77.742-60.816 125.72-24.795z"/>
+                </svg>
+                
+            </a>
+            
+            <a href="https://mastodon.social/@instantiator" rel="me" aria-label="Mastodon account" alt="Mastodon account" target="_blank">
+                
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 418 512" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M433 179.11c0-97.2-63.71-125.7-63.71-125.7-62.52-28.7-228.56-28.4-290.48 0 0 0-63.72 28.5-63.72 125.7 0 115.7-6.6 259.4 105.63 289.1 40.51 10.7 75.32 13 103.33 11.4 50.81-2.8 79.32-18.1 79.32-18.1l-1.7-36.9s-36.31 11.4-77.12 10.1c-40.41-1.4-83-4.4-89.63-54a102.54 102.54 0 0 1-.9-13.9c85.63 20.9 158.65 9.1 178.75 6.7 56.12-6.7 105-41.3 111.23-72.9 9.8-49.8 9-121.5 9-121.5zm-75.12 125.2h-46.63v-114.2c0-49.7-64-51.6-64 6.9v62.5h-46.33V197c0-58.5-64-56.6-64-6.9v114.2H90.19c0-122.1-5.2-147.9 18.41-175 25.9-28.9 79.82-30.8 103.83 6.1l11.6 19.5 11.6-19.5c24.11-37.1 78.12-34.8 103.83-6.1 23.71 27.3 18.4 53 18.4 175z"></path></svg> 
+                
+            </a>
+            
+            <a href="https://github.com/instantiator" rel="me" aria-label="GitHub account" alt="GitHub account" target="_blank">
+                
+                <i data-feather="github" aria-hidden="true"></i>
+                
+            </a>
+            
+            <a href="https://www.linkedin.com/in/lewiswestbury" rel="me" aria-label="LinkedIn account" alt="LinkedIn account" target="_blank">
+                
+                <i data-feather="linkedin" aria-hidden="true"></i>
+                
+            </a>
+            
+            <a href="https://calendar.google.com/calendar/embed?src=ad7606dfb0580dc089629dff9be0d9fc0db19d296a7d72864c1b338f4dd896a4%40group.calendar.google.com&amp;ctz=Europe%2FLondon" rel="me" aria-label="Celebrations calendar" alt="Celebrations calendar" target="_blank">
+                
+                <i data-feather="calendar" aria-hidden="true"></i>
+                
+            </a>
+            
+            <a href="https://instantiator.dev/index.xml" rel="me" aria-label="RSS" alt="RSS" target="_blank">
+                
+                <i data-feather="rss" aria-hidden="true"></i>
+                
+            </a>
+            
+        </div>
+
+        <div class="d-flex flex-row justify-content-evenly align-self-stretch mb-4" style="font-size: 0.8rem;">
+            <ul style="padding-inline-start: 0;">
+            
+                <li><a href="https://instantiator.dev/presence" rel="me" aria-label="Presence" target="_blank">Presence</a> (tool) (in dev)</li>
+            
+                <li><a href="https://instantiator.dev/listsky/" rel="me" aria-label="ListSky" target="_blank">ListSky</a> (tool) (in dev)</li>
+            
+                <li><a href="https://epistolorean.club" rel="me" aria-label="The Epistolorean" target="_blank">The Epistolorean</a> (service)</li>
+            
+                <li><a href="https://icgames.net" rel="me" aria-label="Consensus Games" target="_blank">Consensus Games</a> (service) (in dev)</li>
+            
+                <li><a href="https://instantiator.dev/json-to-smart-csv/" rel="me" aria-label="JSON to Smart CSV" target="_blank">JSON to Smart CSV</a> (tool)</li>
+            
+                <li><a href="https://www.escapethereview.co.uk/profile/?user_id=11" rel="me" aria-label="Escape the Review" target="_blank">Escape the Review</a> (profile)</li>
+            
+                <li><a href="https://calendar.google.com/calendar/embed?src=ad7606dfb0580dc089629dff9be0d9fc0db19d296a7d72864c1b338f4dd896a4%40group.calendar.google.com&amp;ctz=Europe%2FLondon" rel="me" aria-label="In this house..." target="_blank">In this house...</a> (calendar)</li>
+            
+                <li><a href="https://calendar.app.google/9wYSR1cjEEdcS2zo7" rel="me" aria-label="A chat with Lewis" target="_blank">A chat with Lewis</a> (call)</li>
+            
+            </ul>
+        </div>
+
+        <div>
+            <span class="text-body-secondary fw-lighter" style="font-size: 0.8rem;">
+                &copy; Lewis Westbury  2026 
+            </span>
+        </div>
+    </div>
+</div>    
+
+
+
+    </div>
+    <div class="col-lg" style="overflow-x: hidden;">
+        <div id="post-content">
+            <h2 style="display: inline-block;">Sky hub blues</h2>
+                
+                    
+                        
+                        <a class="badge bg-primary" href="https://instantiator.dev/categories/article">article</a>
+                    
+                
+            <div class="mt-2">
+                 
+
+<div class="mb-2">
+    <i data-feather="calendar"></i>
+    <time datetime="2026-07-29">2026-07-29</time>
+</div>
+
+<div>
+    <i data-feather="tag"></i>
+    
+        
+        <a class="badge bg-secondary" href="https://instantiator.dev/tags/fix">#fix</a>
+    
+        
+        <a class="badge bg-secondary" href="https://instantiator.dev/tags/hack">#hack</a>
+    
+        
+        <a class="badge bg-secondary" href="https://instantiator.dev/tags/hub">#hub</a>
+    
+        
+        <a class="badge bg-secondary" href="https://instantiator.dev/tags/router">#router</a>
+    
+        
+        <a class="badge bg-secondary" href="https://instantiator.dev/tags/settings">#settings</a>
+    
+        
+        <a class="badge bg-secondary" href="https://instantiator.dev/tags/config">#config</a>
+    
+        
+        <a class="badge bg-secondary" href="https://instantiator.dev/tags/workaround">#workaround</a>
+    
+        
+        <a class="badge bg-secondary" href="https://instantiator.dev/tags/sky">#sky</a>
+    
+        
+        <a class="badge bg-secondary" href="https://instantiator.dev/tags/internet">#internet</a>
+    
+        
+        <a class="badge bg-secondary" href="https://instantiator.dev/tags/sr203">#sr203</a>
+    
+</div>
+
+
+            </div>
+            <div class="mt-4">
+                <p><em>There&rsquo;s a bug in the Sky Hub that stops you from changing a whole bunch of settings. It&rsquo;s a genuine mistake that Sky won&rsquo;t fix. Here are some workarounds to help you control your home network&hellip;</em></p>
+<h2 id="sky-hub-blues">Sky Hub blues</h2>
+<p>The <code>SR203</code> Sky Hub has a problem. On the latest firmware<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup>, a bug prevents you from from changing several key parts of the configuration&hellip;</p>
+<div class="table-scroll">
+<table>
+<thead>
+<tr>
+  <th>Sky&rsquo;s <code>SR203</code> Hub</th>
+  <th>Some cartoon Gemini cooked up</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td><img src="./sr203-evil.png" alt="The Sky Hub SR203. It's a black box with 4 LEDs on the front, that can light up as green or red." style="height: 40vh;" /></td>
+  <td><img src="./sr203.jpg" alt="The Sky Hub SR203. It's a black box with 4 LEDs on the front, that can light up as green or red." style="height: 40vh;" /></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>I&rsquo;m using DDNS (dynamic DNS) to remotely communicate with some services that I host at home. To do that, I need to be able to forward internet traffic that arrives at certain ports, and to give some of the devices on my home network (a couple of Raspberry Pis) fixed IP addresses. This is all <em>possible</em> but the Sky Hub&rsquo;s poor interface has bugs that get in the way.</p>
+<p><strong>💀 It seems like this is a long-standing known issue, and that Sky aren&rsquo;t likely to fix it any time soon.</strong></p>
+<h3 id="the-symptoms">The symptoms</h3>
+<p>It&rsquo;s worth noting that this really only occurs over wifi.</p>
+<p>Instead of allowing yoy to change a configuration value, the Hub reloads the page and shows an warning that says &ldquo;your session has expired&rdquo;. (The session hasn&rsquo;t <em>actually</em> expired, and this always occurs.)</p>
+<p>Experimentally I&rsquo;ve spotted problems with:</p>
+<ul>
+<li>Managing the wifi networks (changing SSID, splitting 2.4 and 5 GHz bands)</li>
+<li>Setting up port forwarding</li>
+<li>Reserving IP addresses</li>
+</ul>
+<p>I&rsquo;m sure there are other issues. It seems to relate to creating or modifying objects in the configuration.</p>
+<div style="width: 50vw; float: right; margin-left: 10px;">
+<blockquote class="bluesky-embed" data-bluesky-uri="at://did:plc:pbsny2ayg4hiqrbj74j652du/app.bsky.feed.post/3mrnynrvlbk2h" data-bluesky-cid="bafyreif4h3t2dit2ohmyv6jjxhjqx2escvjgos3q6l2pppdtobccamqjoq"><p lang="en">Can&#39;t quite believe this 20 year old piece of kit from the bottom of my cables box saved the day! USB-C to USB-A to Belkin gigabit USB 2.0 ethernet adapter (released in 2006), to ethernet to shonky Sky Hub. Magic! ✨</p>&mdash; <a href="https://bsky.app/profile/did:plc:pbsny2ayg4hiqrbj74j652du?ref_src=embed">Lewis Westbury 💛💙🌱 (@instantiator.bsky.social)</a> <a href="https://bsky.app/profile/did:plc:pbsny2ayg4hiqrbj74j652du/post/3mrnynrvlbk2h?ref_src=embed">2026-07-27T22:58:01.690Z</a></blockquote><script async src="https://embed.bsky.app/static/embed.js" charset="utf-8"></script>
+<div class="bluesky-embed">
+  <div class="bluesky-post" data-bluesky-uri="" style="text-align: center;">
+    <a href="" target="_blank">View post on Bluesky</a>
+  </div>
+</div>
+<script async src="https://bsky.app" charset="utf-8"></script>
+
+</div>
+<h2 id="workarounds">Workarounds</h2>
+<p>So what can we do about it?</p>
+<h3 id="a-use-an-ethernet-cable">A. Use an ethernet cable</h3>
+<p>This was, surprisingly, the simplest solution (and the one that took me the longest to discover). A degree of searching led to the suggestion that <em>perhaps</em> this was something worth trying - but it felt like a last resort&hellip;</p>
+<p>In the end, I dug out a USB-C to USB-A adapter, the old Belkin gigabit USB 2.0 ethernet adapter, and an old ethernet cable. Amazingly, it worked! Over a wired connection, the hub&rsquo;s web interface stops giving false session timeouts, and allows you to modify the configuration.</p>
+<ul>
+<li>Turn off your wifi</li>
+<li>Connect an ethernet cable between your laptop and the hub</li>
+<li>Visit the hub at: <a href="http://192.168.0.1">http://192.168.0.1</a></li>
+</ul>
+<p>Read on if you don&rsquo;t have a laptop with an ethernet port you can use, or if you don&rsquo;t have access to the fiddly little ancient adapters I keep in a box &lsquo;for a rainy day&rsquo;&hellip;</p>
+<h3 id="b-backup-and-restore">B. Backup and restore</h3>
+<p>This is the software solution. It&rsquo;s a bit more fiddly, but it&rsquo;ll work over wifi. Here&rsquo;s the workaround:</p>
+<p>You can backup your hub configuration through the web UI, and you can restore it from a backup. This solution involes editing the configuration and then re-uploading it.</p>
+<p>This also works - and it&rsquo;s less risky than it sounds. If your hub doesn&rsquo;t recognise something in the configuration file it&rsquo;ll either reject your upload (because it doesn&rsquo;t think it&rsquo;s valid), or it&rsquo;ll simply ignore the change.</p>
+<h2 id="sky-hub-configuration-files">Sky Hub configuration files</h2>
+<p>Sky&rsquo;s <code>SR203</code> hub&rsquo;s configuration files are in XML format, but they&rsquo;re not well documented.</p>
+<p>Although it has areas of compatiblity with the (<a href="https://www.broadband-forum.org/pdfs/tr-098-1-2-1.pdf">Broadband Forum TR-098</a>) standard, the hub only loosely follows it. There&rsquo;s no other publicly available documentation around the format of the configuration file, and it&rsquo;s a proprietary product - so there&rsquo;s not much incentive to do so.</p>
+<p>There are XML elements in the TR-098 standard that look as if they might be usable to configure the hub - but they aren&rsquo;t actually used<sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup>.</p>
+<h3 id="inferred-schema">Inferred schema</h3>
+<p>In the absence of reliable documentation, I&rsquo;ve inferred<sup id="fnref:3"><a href="#fn:3" class="footnote-ref" role="doc-noteref">3</a></sup> an XML schema using variations of my own configuration, which you can use to validate changes before you apply them.</p>
+<ul>
+<li><strong><a href="/post/sky-hub-blues/sky-sr203-inferred.xsd"><code>sky-sr203-inferred.xsd</code></a></strong></li>
+</ul>
+<h2 id="changing-the-hub-configuration">Changing the hub configuration</h2>
+<p>Here&rsquo;s the proecss to making an edit:</p>
+<ol>
+<li>Download the current config from the hub</li>
+<li>Edit it to add what you want (a reservation, a port forward)</li>
+<li>Validate your modified XML before you upload</li>
+<li>Upload it back into the hub</li>
+<li>Download it again afterwards and check your change was accepted</li>
+</ol>
+<blockquote>
+<p>💡 That last step is important: If the hub doesn&rsquo;t recognise a part of the configuration, it can silently ignore it. When it does that, it won&rsquo;t appear in the download so you can spot things that didn&rsquo;t work.</p>
+</blockquote>
+<p>Some things to know:</p>
+<ul>
+<li><strong>You can&rsquo;t include XML comments.</strong> (eg. <code>&lt;!-- comment --&gt;</code>) These will fail the upload.</li>
+<li><strong>The order of siblings matters.</strong> You must put elements in the same order that the hub expects to find them.</li>
+</ul>
+<h3 id="1-download-the-current-config">1. Download the current config</h3>
+<p>Your hub&rsquo;s web interface has a way to download (backup) the current configuration:</p>
+<table>
+<tr><th>Steps</th><th>Screenshot</th></tr>
+<tr>
+<td>
+<p>Visit your hub&rsquo;s <strong>Maintenance</strong> - <strong>Backup Settings</strong> section.</p>
+<p>This is usually at: <a href="http://192.168.0.1/sky_backup_settings.html">http://192.168.0.1/sky_backup_settings.html</a></p>
+<p>You should see buttons to allow you to save a copy of the current settings, restore settings from a saved copy, and reset back to factory settings.</p>
+<p>Click the <strong>Backup</strong> button to download a copy of your configuration.</p>
+</td>
+<td>
+<p><img src="/post/sky-hub-blues/maintenance-backup-settings.png" alt=""></p>
+</td>
+</tr>
+</table>
+<h3 id="2-setting-up-port-forwarding">2. Setting up port forwarding</h3>
+<p>Port forwards live in a flat, proprietary object called <code>SKY_GENERIC_WAN_FIREWALL_EXCEPTION</code>.</p>
+<ul>
+<li>It must be a direct child of <code>InternetGatewayDevice</code><sup id="fnref:4"><a href="#fn:4" class="footnote-ref" role="doc-noteref">4</a></sup> in the XML.</li>
+</ul>
+<p>Find the existing list (which could be empty). It should end with a self-closing <code>nextInstance</code> placeholder:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-xml" data-lang="xml"><span style="display:flex;"><span><span style="color:#f92672">&lt;SKY_GENERIC_WAN_FIREWALL_EXCEPTION</span> <span style="color:#a6e22e">nextInstance=</span><span style="color:#e6db74">&#34;1&#34;</span><span style="color:#f92672">&gt;&lt;/SKY_GENERIC_WAN_FIREWALL_EXCEPTION&gt;</span>
+</span></span></code></pre></div><p>Replace anything there with your new rule(s), followed by an updated placeholder:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-xml" data-lang="xml"><span style="display:flex;"><span><span style="color:#f92672">&lt;SKY_GENERIC_WAN_FIREWALL_EXCEPTION</span> <span style="color:#a6e22e">instance=</span><span style="color:#e6db74">&#34;1&#34;</span><span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&lt;Enable&gt;</span>TRUE<span style="color:#f92672">&lt;/Enable&gt;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&lt;FilterName&gt;</span>my-web-server<span style="color:#f92672">&lt;/FilterName&gt;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&lt;Protocol&gt;</span>TCP<span style="color:#f92672">&lt;/Protocol&gt;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&lt;SourcePortStart&gt;</span>1<span style="color:#f92672">&lt;/SourcePortStart&gt;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&lt;SourcePortEnd&gt;</span>65535<span style="color:#f92672">&lt;/SourcePortEnd&gt;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&lt;DestinationPortStart&gt;</span>443<span style="color:#f92672">&lt;/DestinationPortStart&gt;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&lt;DestinationIPAddress&gt;</span>192.168.0.50<span style="color:#f92672">&lt;/DestinationIPAddress&gt;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&lt;BlockAction&gt;</span>allow_always<span style="color:#f92672">&lt;/BlockAction&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&lt;/SKY_GENERIC_WAN_FIREWALL_EXCEPTION&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&lt;SKY_GENERIC_WAN_FIREWALL_EXCEPTION</span> <span style="color:#a6e22e">nextInstance=</span><span style="color:#e6db74">&#34;2&#34;</span><span style="color:#f92672">&gt;&lt;/SKY_GENERIC_WAN_FIREWALL_EXCEPTION&gt;</span>
+</span></span></code></pre></div><div class="table-scroll">
+<table>
+<thead>
+<tr>
+  <th>Element</th>
+  <th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td><code>FilterName</code></td>
+  <td>This is just a label (shown in the web interface).</td>
+</tr>
+<tr>
+  <td><code>SourcePortStart</code> / <code>SourcePortEnd</code></td>
+  <td>These indicate the range of ports on the <em>remote</em> machine that are allowed to <em>initiate</em> a connection. (Leave as <code>1</code>-<code>65535</code>, meaning: it doesn&rsquo;t matter which port is used by the remote machine. This is normal.)</td>
+</tr>
+<tr>
+  <td><code>DestinationPortStart</code></td>
+  <td>This is the port being opened on your hub.</td>
+</tr>
+<tr>
+  <td><code>DestinationIPAddress</code></td>
+  <td>This is the IP address of the internal device the traffic gets sent to.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<blockquote>
+<p>Unlike most lists in this config format, there&rsquo;s no <code>...NumberOfEntries</code> counter for this object — just the numbered <code>instance=&quot;N&quot;</code> entries and the trailing <code>nextInstance</code> placeholder.</p>
+</blockquote>
+<ul>
+<li>Add one block per service.</li>
+<li>Increment <code>instance</code> for each block.</li>
+<li>Bump the final element&rsquo;s <code>nextInstance</code> to the next unused <code>instance</code> number.</li>
+</ul>
+<blockquote>
+<p>NB. There&rsquo;s no separate field for the internal port, and there&rsquo;s no support for translating one external port to a different internal port. External and internal ports are always the same number. The hub is effectively &rsquo;exposing&rsquo; an internal port on its external interface.</p>
+</blockquote>
+<h3 id="2-reserving-ip-addresses">2. Reserving IP addresses</h3>
+<p>Port forwarding relies on being able to send internet traffic on to a known IP address, so it&rsquo;s a good idea to give the device you&rsquo;re forwarding to a fixed address.</p>
+<p>Reservations live in an element called <code>DHCPConditionalServingPool</code>, which must be nested inside <code>LANHostConfigManagement</code> (itself inside <code>LANDevice</code>), and placed after the
+existing <code>IPInterface</code> entries:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-xml" data-lang="xml"><span style="display:flex;"><span><span style="color:#f92672">&lt;LANHostConfigManagement&gt;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&lt;DHCPServerEnable&gt;</span>TRUE<span style="color:#f92672">&lt;/DHCPServerEnable&gt;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&lt;IPInterfaceNumberOfEntries&gt;</span>1<span style="color:#f92672">&lt;/IPInterfaceNumberOfEntries&gt;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&lt;IPInterface</span> <span style="color:#a6e22e">instance=</span><span style="color:#e6db74">&#34;1&#34;</span><span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span>    ...
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&lt;/IPInterface&gt;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&lt;IPInterface</span> <span style="color:#a6e22e">nextInstance=</span><span style="color:#e6db74">&#34;2&#34;</span><span style="color:#f92672">&gt;&lt;/IPInterface&gt;</span>
+</span></span></code></pre></div><p>Reservations go here:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-xml" data-lang="xml"><span style="display:flex;"><span>  <span style="color:#f92672">&lt;DHCPConditionalServingPool</span> <span style="color:#a6e22e">instance=</span><span style="color:#e6db74">&#34;1&#34;</span><span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&lt;Enable&gt;</span>TRUE<span style="color:#f92672">&lt;/Enable&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&lt;Chaddr&gt;</span>aa:bb:cc:dd:ee:ff<span style="color:#f92672">&lt;/Chaddr&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&lt;ReservedAddresses&gt;</span>192.168.0.50<span style="color:#f92672">&lt;/ReservedAddresses&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&lt;DomainName&gt;</span>my-web-server<span style="color:#f92672">&lt;/DomainName&gt;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&lt;/DHCPConditionalServingPool&gt;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&lt;DHCPConditionalServingPool</span> <span style="color:#a6e22e">nextInstance=</span><span style="color:#e6db74">&#34;2&#34;</span><span style="color:#f92672">&gt;&lt;/DHCPConditionalServingPool&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&lt;/LANHostConfigManagement&gt;</span>
+</span></span></code></pre></div><div class="table-scroll">
+<table>
+<thead>
+<tr>
+  <th>Element</th>
+  <th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td><code>Chaddr</code></td>
+  <td>This is the device&rsquo;s MAC address, lowercase, colon-separated.</td>
+</tr>
+<tr>
+  <td><code>ReservedAddresses</code><sup id="fnref:5"><a href="#fn:5" class="footnote-ref" role="doc-noteref">5</a></sup></td>
+  <td>This is the IP to assign.</td>
+</tr>
+<tr>
+  <td><code>DomainName</code></td>
+  <td>This is just a label (shows as the device&rsquo;s name in the UI). It doesn&rsquo;t need to match the device&rsquo;s real hostname.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<blockquote>
+<p>As with port forwards, there&rsquo;s no <code>NumberOfEntries</code> counter. Each entry has an <code>instance=&quot;N&quot;</code> property, and a trailing <code>nextInstance</code> placeholder.</p>
+</blockquote>
+<ul>
+<li>Add one block per service.</li>
+<li>Increment <code>instance</code> for each block.</li>
+<li>Bump the final element&rsquo;s <code>nextInstance</code> to the next unused <code>instance</code> number.</li>
+</ul>
+<h3 id="3-validate-your-xml">3. Validate your XML</h3>
+<p>First, download the schema to the same folder as the config file you&rsquo;re working on. I inferred a schema using <code>trang</code>, a mature tool, by James Clark, that can infer a schema from XML samples.</p>
+<ul>
+<li><strong><a href="/post/sky-hub-blues/sky-sr203-inferred.xsd"><code>sky-sr203-inferred.xsd</code></a></strong></li>
+</ul>
+<p><code>xmllint</code> ships with Mac OS. (It&rsquo;s a part of <code>libxml2</code>, and you don&rsquo;t need to install anything.)</p>
+<p>To check a config file against the donwloaded schema:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>cd path/to/your/working/folder
+</span></span><span style="display:flex;"><span>xmllint --noout --schema sky-sr203-inferred.xsd your-config-file.conf
+</span></span></code></pre></div><p><strong>No output means your config file has validated against the schema.</strong> Any error printed by the tool will point to the line, and element, that doesn&rsquo;t match<sup id="fnref:6"><a href="#fn:6" class="footnote-ref" role="doc-noteref">6</a></sup>.</p>
+<blockquote>
+<p>There&rsquo;s also a Visual Studio Code extension you can use to see schema warnings while you edit a file:</p>
+<ul>
+<li><a href="https://marketplace.visualstudio.com/items?itemName=redhat.vscode-xml">XML extension by Red Hat</a></li>
+</ul>
+<p>Add a file association in your <em>workspace</em> <code>.vscode/settings.json</code> to force it to use the schema for <code>.conf</code> files:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-json" data-lang="json"><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;xml.fileAssociations&#34;</span>: [
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">&#34;systemId&#34;</span>: <span style="color:#e6db74">&#34;./sky-sr203-inferred.xsd&#34;</span>,
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">&#34;pattern&#34;</span>: <span style="color:#e6db74">&#34;**/*.conf&#34;</span>
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>  ]
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>(Restart Visual Studio Code after modifying the settings.)</p>
+</blockquote>
+<h3 id="4-upload-your-new-configuration">4. Upload your new configuration</h3>
+<table>
+<tr><th>Steps</th><th>Screenshot</th></tr>
+<tr>
+<td>
+<p>Visit your hub&rsquo;s <strong>Maintenance</strong> - <strong>Backup Settings</strong> section again.</p>
+<ul>
+<li>
+<p><a href="http://192.168.0.1/sky_backup_settings.html">http://192.168.0.1/sky_backup_settings.html</a></p>
+</li>
+<li>
+<p>Use the file picker to select your new configuration file.</p>
+</li>
+<li>
+<p>Click the <strong>Restore</strong> button to download a copy of your configuration.</p>
+</li>
+</ul>
+</td>
+<td>
+<p><img src="/post/sky-hub-blues/maintenance-backup-settings.png" alt=""></p>
+</td>
+</tr>
+</table>
+<p>The hub will reboot, and you&rsquo;ll spend a few minutes waiting while it loads the new configuration and your laptop reconnects.</p>
+<p>Once reconnected, either the new configuration will have been accepted, or it will have been silently dropped.</p>
+<h3 id="5-download-and-check-the-latest-config">5. Download and check the latest config</h3>
+<p>Visit your hub&rsquo;s <strong>Maintenance</strong> - <strong>Backup Settings</strong> section one last time, and download one more copy of the configuration.</p>
+<p>If all&rsquo;s well, your new changes will be visible in the file. You should also be able to see those changes in the hub&rsquo;s web interface (even if you still can&rsquo;t edit them there).</p>
+<p>If something wasn&rsquo;t recognised (perhaps you made a typo or missed an instruction above), they&rsquo;ll have been removed.</p>
+<p>If that&rsquo;s the case, check the XML you first prepared, fix any issues, and try again. If it&rsquo;s still not working then, I&rsquo;m afraid, we&rsquo;ve reached the end of the road. I suggest asking a friend or colleague if they can help you connect to your hub by ethernet cable.</p>
+<p><strong>Good luck!</strong></p>
+<h2 id="references">References</h2>
+<ul>
+<li><a href="https://helpforum.sky.com/t5/Broadband/Cannot-change-any-setting-on-sky-router/td-p/3837186">Cannot change any setting on sky router</a></li>
+<li><a href="https://helpforum.sky.com/t5/Broadband/Setting-up-Port-Forward-on-Sky-SR203-router/td-p/4643786">Setting up Port Forward on Sky SR203 router</a></li>
+<li><a href="https://helpforum.sky.com/t5/Broadband/Fixed-IP-Address-or-sometimes-called-Reserve-IP-Address/td-p/4747344">Fixed IP Address (or sometimes called Reserve IP Address)</a></li>
+</ul>
+<div class="footnotes" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn:1">
+<p>2026-07-29: The latest firmware version at time of writing is: <code>7.04.0207.R</code>&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:2">
+<p>Examples of unused XML elements: <code>WANIPConnection.PortMapping</code>, <code>LANHostConfigManagement.DHCPStaticAddress</code> - both of which would have been very handy if they were in use!&#160;<a href="#fnref:2" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:3">
+<p>I used <code>trang</code>, a tool by James Clark that can infer a schema from XML samples. It&rsquo;s part of the <code>jing-trang</code> package (<code>brew install jing-trang</code>).&#160;<a href="#fnref:3" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:4">
+<p>Don&rsquo;t nest it inside <code>WANDevice</code> or <code>WANIPConnection</code> (the as the TR-098 standard would imply).&#160;<a href="#fnref:4" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:5">
+<p>NB. This is <em>not</em> called <code>Yiaddr</code>, even though that&rsquo;s what the TR-098/TR-181 standard suggests. This object is specific to Sky.&#160;<a href="#fnref:5" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:6">
+<p>This doesn&rsquo;t actually the config is <em>necessarily</em> wrong, but it&rsquo;s a strong hint. Remember, the schema is only <em>inferred</em> and to do that I used a few variants of my own config. It <em>should</em> be correct, but mistakes might slip in.&#160;<a href="#fnref:6" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+</ol>
+</div>
+
+            </div>
+        </div>
+
+        <div class="post-footer">
+            <div class="info">
+                
+
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+        </div><script src="/js/bootstrap.min.js"></script>
+<script src="/js/feather.min.js"></script>
+<script src="/js/mastodon-timeline.umd.js"></script>
+<script>
+  feather.replace();
+</script></body>
+</html>

@@ -1,0 +1,1082 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+  <xs:element name="DslCpeConfig">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="InternetGatewayDevice"/>
+      </xs:sequence>
+      <xs:attribute name="version" use="required" type="xs:decimal"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InternetGatewayDevice">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="LANDeviceNumberOfEntries"/>
+        <xs:element ref="WANDeviceNumberOfEntries"/>
+        <xs:element ref="DeviceInfo"/>
+        <xs:element ref="X_BROADCOM_COM_AppCfg"/>
+        <xs:element ref="X_BROADCOM_COM_EthernetSwitch"/>
+        <xs:element ref="X_BROADCOM_COM_BMU"/>
+        <xs:element ref="Time"/>
+        <xs:element ref="Layer2Bridging"/>
+        <xs:element ref="QueueManagement"/>
+        <xs:element maxOccurs="unbounded" ref="LANDevice"/>
+        <xs:element maxOccurs="unbounded" ref="WANDevice"/>
+        <xs:element ref="Layer3Forwarding"/>
+        <xs:element ref="X_BROADCOM_COM_IPv6Layer3Forwarding"/>
+        <xs:element maxOccurs="unbounded" ref="X_BROADCOM_COM_AccessTimeRestriction"/>
+        <xs:element maxOccurs="unbounded" ref="X_BROADCOM_COM_DDnsCfg"/>
+        <xs:element ref="X_BROADCOM_COM_IGMPCfg"/>
+        <xs:element ref="X_BROADCOM_COM_MLDCfg"/>
+        <xs:element ref="PeriodicStatistics"/>
+        <xs:element ref="Device"/>
+        <xs:element ref="X_SKY_COM_Factory"/>
+        <xs:element ref="X_SKY_SELF_HEAL"/>
+        <xs:element minOccurs="0" maxOccurs="unbounded" ref="SKY_GENERIC_WAN_FIREWALL_EXCEPTION"/>
+        <xs:element ref="X_SKY_COM_FUS"/>
+        <xs:element ref="X_SKY_DHCPV6_CONF"/>
+        <xs:element ref="X_BROADCOM_COM_ServiceruleCfg"/>
+        <xs:element maxOccurs="unbounded" ref="X_SKY_WlanAdapter"/>
+        <xs:element ref="X_SKY_MESH"/>
+        <xs:element ref="X_SKY_REBOOT_CAUSE"/>
+        <xs:element ref="X_SKY_COM_DEVICE_DOCTOR"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LANDeviceNumberOfEntries" type="xs:integer"/>
+  <xs:element name="WANDeviceNumberOfEntries" type="xs:integer"/>
+  <xs:element name="DeviceInfo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="FirstUseDate"/>
+        <xs:element ref="VendorConfigFileNumberOfEntries"/>
+        <xs:element ref="X_SKY_COM_ConfigSoftwareVersion"/>
+        <xs:element ref="X_SKY_COM_ConfigHardwareVersion"/>
+        <xs:element ref="X_SKY_COM_ConfigUniqueSoftwareVersion"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FirstUseDate" type="xs:dateTime"/>
+  <xs:element name="VendorConfigFileNumberOfEntries" type="xs:integer"/>
+  <xs:element name="X_SKY_COM_ConfigSoftwareVersion" type="xs:NMTOKEN"/>
+  <xs:element name="X_SKY_COM_ConfigHardwareVersion" type="xs:NCName"/>
+  <xs:element name="X_SKY_COM_ConfigUniqueSoftwareVersion" type="xs:string"/>
+  <xs:element name="X_BROADCOM_COM_AppCfg">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="SkydhcpcCfg"/>
+        <xs:element ref="SkyBfdCfg"/>
+        <xs:element ref="SkyxconfCfg"/>
+        <xs:element ref="HttpdCfg"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SkydhcpcCfg">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="NetworkCtrlPCPCfg"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="NetworkCtrlPCPCfg" type="xs:integer"/>
+  <xs:element name="SkyBfdCfg">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="Enable"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SkyxconfCfg">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="Enable"/>
+        <xs:element ref="DailyChecksCount"/>
+        <xs:element ref="CurrentDate"/>
+        <xs:element ref="VoIPDownloadDelayEnabled"/>
+        <xs:element ref="VoIPActivityGracePeriod"/>
+        <xs:element ref="VoIPActivityCheckPollingInterval"/>
+        <xs:element ref="LastStatus"/>
+        <xs:element ref="StartupDelayForTesting"/>
+        <xs:element ref="FirmwareUpgradeStartTime"/>
+        <xs:element ref="FirmwareUpgradeEndTime"/>
+        <xs:element ref="LoggingLevel"/>
+        <xs:element ref="SkipDailyCheckForTesting"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LastStatus" type="xs:integer"/>
+  <xs:element name="FirmwareUpgradeStartTime" type="xs:integer"/>
+  <xs:element name="FirmwareUpgradeEndTime" type="xs:integer"/>
+  <xs:element name="LoggingLevel" type="xs:NCName"/>
+  <xs:element name="SkipDailyCheckForTesting" type="xs:NCName"/>
+  <xs:element name="HttpdCfg">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="QuickSetupEnabled"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="QuickSetupEnabled" type="xs:NCName"/>
+  <xs:element name="X_BROADCOM_COM_EthernetSwitch">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="NumberOfVirtualPorts"/>
+        <xs:element ref="EnableVirtualPorts"/>
+        <xs:element ref="IfName"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="NumberOfVirtualPorts" type="xs:integer"/>
+  <xs:element name="EnableVirtualPorts" type="xs:NCName"/>
+  <xs:element name="X_BROADCOM_COM_BMU">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="unbounded" ref="BatteryNonVol"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="BatteryNonVol">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" ref="Index"/>
+      </xs:sequence>
+      <xs:attribute name="instance" use="required" type="xs:integer"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Index" type="xs:integer"/>
+  <xs:element name="Time">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="LocalTimeZone"/>
+        <xs:element ref="DaylightSavingsUsed"/>
+        <xs:element ref="DaylightSavingsStart"/>
+        <xs:element ref="DaylightSavingsEnd"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LocalTimeZone" type="xs:NCName"/>
+  <xs:element name="DaylightSavingsUsed" type="xs:NCName"/>
+  <xs:element name="DaylightSavingsStart" type="xs:string"/>
+  <xs:element name="DaylightSavingsEnd" type="xs:string"/>
+  <xs:element name="Layer2Bridging">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="BridgeNumberOfEntries"/>
+        <xs:element ref="FilterNumberOfEntries"/>
+        <xs:element ref="MarkingNumberOfEntries"/>
+        <xs:element ref="AvailableInterfaceNumberOfEntries"/>
+        <xs:element maxOccurs="unbounded" ref="Bridge"/>
+        <xs:element maxOccurs="unbounded" ref="Filter"/>
+        <xs:element maxOccurs="unbounded" ref="AvailableInterface"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="BridgeNumberOfEntries" type="xs:integer"/>
+  <xs:element name="FilterNumberOfEntries" type="xs:integer"/>
+  <xs:element name="MarkingNumberOfEntries" type="xs:integer"/>
+  <xs:element name="AvailableInterfaceNumberOfEntries" type="xs:integer"/>
+  <xs:element name="Bridge">
+    <xs:complexType>
+      <xs:sequence minOccurs="0">
+        <xs:element ref="BridgeKey"/>
+        <xs:element ref="BridgeEnable"/>
+        <xs:element ref="BridgeName"/>
+      </xs:sequence>
+      <xs:attribute name="instance" type="xs:integer"/>
+      <xs:attribute name="nextInstance" type="xs:integer"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="BridgeKey" type="xs:integer"/>
+  <xs:element name="BridgeEnable" type="xs:NCName"/>
+  <xs:element name="BridgeName" type="xs:NCName"/>
+  <xs:element name="Filter">
+    <xs:complexType>
+      <xs:sequence minOccurs="0">
+        <xs:element ref="FilterKey"/>
+        <xs:element ref="FilterEnable"/>
+        <xs:element ref="FilterBridgeReference"/>
+        <xs:element ref="FilterInterface"/>
+      </xs:sequence>
+      <xs:attribute name="instance" type="xs:integer"/>
+      <xs:attribute name="nextInstance" type="xs:integer"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FilterKey" type="xs:integer"/>
+  <xs:element name="FilterEnable" type="xs:NCName"/>
+  <xs:element name="FilterBridgeReference" type="xs:integer"/>
+  <xs:element name="FilterInterface" type="xs:integer"/>
+  <xs:element name="AvailableInterface">
+    <xs:complexType>
+      <xs:sequence minOccurs="0">
+        <xs:element ref="AvailableInterfaceKey"/>
+        <xs:element ref="InterfaceType"/>
+        <xs:element ref="InterfaceReference"/>
+      </xs:sequence>
+      <xs:attribute name="instance" type="xs:integer"/>
+      <xs:attribute name="nextInstance" type="xs:integer"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AvailableInterfaceKey" type="xs:integer"/>
+  <xs:element name="InterfaceType" type="xs:NCName"/>
+  <xs:element name="InterfaceReference" type="xs:string"/>
+  <xs:element name="QueueManagement">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="ClassificationNumberOfEntries"/>
+        <xs:element ref="AppNumberOfEntries"/>
+        <xs:element ref="FlowNumberOfEntries"/>
+        <xs:element ref="PolicerNumberOfEntries"/>
+        <xs:element ref="QueueNumberOfEntries"/>
+        <xs:element maxOccurs="unbounded" ref="Queue"/>
+        <xs:element ref="QueueStats"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ClassificationNumberOfEntries" type="xs:integer"/>
+  <xs:element name="AppNumberOfEntries" type="xs:integer"/>
+  <xs:element name="FlowNumberOfEntries" type="xs:integer"/>
+  <xs:element name="PolicerNumberOfEntries" type="xs:integer"/>
+  <xs:element name="QueueNumberOfEntries" type="xs:integer"/>
+  <xs:element name="Queue">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:sequence minOccurs="0">
+          <xs:element ref="QueueEnable"/>
+          <xs:element ref="QueueInterface"/>
+        </xs:sequence>
+        <xs:element minOccurs="0" ref="QueueWeight"/>
+        <xs:element minOccurs="0" ref="QueuePrecedence"/>
+        <xs:element minOccurs="0" ref="SchedulerAlgorithm"/>
+        <xs:element minOccurs="0" ref="X_BROADCOM_COM_QueueName"/>
+        <xs:sequence minOccurs="0">
+          <xs:element ref="X_BROADCOM_COM_DslLatency"/>
+          <xs:element ref="X_BROADCOM_COM_PtmPriority"/>
+        </xs:sequence>
+        <xs:element minOccurs="0" ref="X_BROADCOM_COM_QueueId"/>
+      </xs:sequence>
+      <xs:attribute name="instance" type="xs:integer"/>
+      <xs:attribute name="nextInstance" type="xs:integer"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="QueueEnable" type="xs:NCName"/>
+  <xs:element name="QueueInterface" type="xs:string"/>
+  <xs:element name="QueueWeight" type="xs:integer"/>
+  <xs:element name="QueuePrecedence" type="xs:integer"/>
+  <xs:element name="SchedulerAlgorithm" type="xs:NCName"/>
+  <xs:element name="X_BROADCOM_COM_QueueName" type="xs:string"/>
+  <xs:element name="X_BROADCOM_COM_DslLatency" type="xs:integer"/>
+  <xs:element name="X_BROADCOM_COM_PtmPriority" type="xs:integer"/>
+  <xs:element name="X_BROADCOM_COM_QueueId" type="xs:integer"/>
+  <xs:element name="QueueStats">
+    <xs:complexType>
+      <xs:attribute name="nextInstance" use="required" type="xs:integer"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LANDevice">
+    <xs:complexType>
+      <xs:sequence minOccurs="0">
+        <xs:element ref="LANEthernetInterfaceNumberOfEntries"/>
+        <xs:element ref="LANUSBInterfaceNumberOfEntries"/>
+        <xs:element ref="LANWLANConfigurationNumberOfEntries"/>
+        <xs:element ref="X_BROADCOM_COM_LANMocaInterfaceNumberOfEntries"/>
+        <xs:element ref="LANHostConfigManagement"/>
+        <xs:element ref="X_BROADCOM_COM_IPv6LANHostConfigManagement"/>
+        <xs:element maxOccurs="unbounded" ref="LANEthernetInterfaceConfig"/>
+        <xs:element maxOccurs="unbounded" ref="WLANConfiguration"/>
+        <xs:element ref="Hosts"/>
+      </xs:sequence>
+      <xs:attribute name="instance" type="xs:integer"/>
+      <xs:attribute name="nextInstance" type="xs:integer"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LANEthernetInterfaceNumberOfEntries" type="xs:integer"/>
+  <xs:element name="LANUSBInterfaceNumberOfEntries" type="xs:integer"/>
+  <xs:element name="LANWLANConfigurationNumberOfEntries" type="xs:integer"/>
+  <xs:element name="X_BROADCOM_COM_LANMocaInterfaceNumberOfEntries" type="xs:integer"/>
+  <xs:element name="LANHostConfigManagement">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="DHCPServerEnable"/>
+        <xs:element ref="IPInterfaceNumberOfEntries"/>
+        <xs:element maxOccurs="unbounded" ref="IPInterface"/>
+        <xs:element minOccurs="0" maxOccurs="unbounded" ref="DHCPConditionalServingPool"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DHCPServerEnable" type="xs:NCName"/>
+  <xs:element name="IPInterfaceNumberOfEntries" type="xs:integer"/>
+  <xs:element name="IPInterface">
+    <xs:complexType>
+      <xs:sequence minOccurs="0">
+        <xs:element ref="Enable"/>
+        <xs:element ref="X_BROADCOM_COM_IfName"/>
+        <xs:element ref="X_BROADCOM_COM_IPv6LanIntfAddress"/>
+      </xs:sequence>
+      <xs:attribute name="instance" type="xs:integer"/>
+      <xs:attribute name="nextInstance" type="xs:integer"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="X_BROADCOM_COM_IPv6LanIntfAddress">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="UniqueLocalAddress"/>
+        <xs:element ref="DelegatedAddress"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UniqueLocalAddress" type="xs:anyURI"/>
+  <xs:element name="DelegatedAddress">
+    <xs:complexType>
+      <xs:attribute name="nextInstance" use="required" type="xs:integer"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DHCPConditionalServingPool">
+    <xs:complexType>
+      <xs:sequence minOccurs="0">
+        <xs:element ref="Enable"/>
+        <xs:element ref="Chaddr"/>
+        <xs:element ref="ReservedAddresses"/>
+        <xs:element ref="DomainName"/>
+      </xs:sequence>
+      <xs:attribute name="instance" type="xs:integer"/>
+      <xs:attribute name="nextInstance" type="xs:integer"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Chaddr" type="xs:NMTOKEN"/>
+  <xs:element name="ReservedAddresses" type="xs:NMTOKEN"/>
+  <xs:element name="DomainName" type="xs:NCName"/>
+  <xs:element name="X_BROADCOM_COM_IPv6LANHostConfigManagement">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="IPv6DNSServers"/>
+        <xs:element ref="IPv6InterfaceNumberOfEntries"/>
+        <xs:element ref="RadvdConfigManagement"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="IPv6DNSServers" type="xs:anyURI"/>
+  <xs:element name="IPv6InterfaceNumberOfEntries" type="xs:integer"/>
+  <xs:element name="RadvdConfigManagement">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="ULAPrefixInfo"/>
+        <xs:element ref="PrefixInformation"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ULAPrefixInfo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="Prefix"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Prefix" type="xs:anyURI"/>
+  <xs:element name="PrefixInformation">
+    <xs:complexType>
+      <xs:attribute name="nextInstance" use="required" type="xs:integer"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LANEthernetInterfaceConfig">
+    <xs:complexType>
+      <xs:sequence minOccurs="0">
+        <xs:element ref="Enable"/>
+        <xs:element ref="MaxBitRate"/>
+        <xs:element ref="DuplexMode"/>
+        <xs:element ref="X_BROADCOM_COM_IfName"/>
+        <xs:element ref="X_BROADCOM_COM_WanLan_Attribute"/>
+      </xs:sequence>
+      <xs:attribute name="instance" type="xs:integer"/>
+      <xs:attribute name="nextInstance" type="xs:integer"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="MaxBitRate" type="xs:integer"/>
+  <xs:element name="DuplexMode" type="xs:NCName"/>
+  <xs:element name="X_BROADCOM_COM_WanLan_Attribute" type="xs:NCName"/>
+  <xs:element name="WLANConfiguration">
+    <xs:complexType>
+      <xs:sequence minOccurs="0">
+        <xs:element ref="Channel"/>
+        <xs:element ref="SSID"/>
+        <xs:element ref="BeaconType"/>
+        <xs:element ref="BasicEncryptionModes"/>
+        <xs:element ref="WPAEncryptionModes"/>
+        <xs:element ref="WPAAuthenticationMode"/>
+        <xs:element ref="IEEE11iEncryptionModes"/>
+        <xs:element ref="IEEE11iAuthenticationMode"/>
+        <xs:element ref="BasicDataTransmitRates"/>
+        <xs:element ref="RadioEnabled"/>
+        <xs:element ref="X_BROADCOM_COM_IfName"/>
+        <xs:element maxOccurs="unbounded" ref="AssociatedDevice"/>
+        <xs:element maxOccurs="unbounded" ref="WEPKey"/>
+        <xs:element maxOccurs="unbounded" ref="PreSharedKey"/>
+      </xs:sequence>
+      <xs:attribute name="instance" type="xs:integer"/>
+      <xs:attribute name="nextInstance" type="xs:integer"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Channel" type="xs:integer"/>
+  <xs:element name="SSID" type="xs:NCName"/>
+  <xs:element name="BeaconType" type="xs:NMTOKEN"/>
+  <xs:element name="BasicEncryptionModes" type="xs:NCName"/>
+  <xs:element name="WPAEncryptionModes" type="xs:NCName"/>
+  <xs:element name="WPAAuthenticationMode" type="xs:NCName"/>
+  <xs:element name="IEEE11iEncryptionModes" type="xs:NCName"/>
+  <xs:element name="IEEE11iAuthenticationMode" type="xs:NCName"/>
+  <xs:element name="BasicDataTransmitRates" type="xs:string"/>
+  <xs:element name="RadioEnabled" type="xs:NCName"/>
+  <xs:element name="AssociatedDevice">
+    <xs:complexType>
+      <xs:sequence minOccurs="0">
+        <xs:element ref="X_BROADCOM_COM_Ssid"/>
+        <xs:element ref="X_BROADCOM_COM_Ifcname"/>
+      </xs:sequence>
+      <xs:attribute name="instance" type="xs:integer"/>
+      <xs:attribute name="nextInstance" type="xs:integer"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="X_BROADCOM_COM_Ssid" type="xs:NCName"/>
+  <xs:element name="X_BROADCOM_COM_Ifcname" type="xs:NCName"/>
+  <xs:element name="WEPKey">
+    <xs:complexType mixed="true">
+      <xs:attribute name="instance" type="xs:integer"/>
+      <xs:attribute name="nextInstance" type="xs:integer"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="PreSharedKey">
+    <xs:complexType mixed="true">
+      <xs:attribute name="instance" type="xs:integer"/>
+      <xs:attribute name="nextInstance" type="xs:integer"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Hosts">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="Host"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Host">
+    <xs:complexType>
+      <xs:attribute name="nextInstance" use="required" type="xs:integer"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="WANDevice">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="WANConnectionNumberOfEntries"/>
+        <xs:element ref="WANCommonInterfaceConfig"/>
+        <xs:sequence minOccurs="0">
+          <xs:element maxOccurs="unbounded" ref="X_BROADCOM_COM_XTM_Interface_Stats"/>
+          <xs:element ref="WANDSLInterfaceConfig"/>
+        </xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="unbounded" ref="WANConnectionDevice"/>
+      </xs:sequence>
+      <xs:attribute name="instance" use="required" type="xs:integer"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="WANConnectionNumberOfEntries" type="xs:integer"/>
+  <xs:element name="WANCommonInterfaceConfig">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="WANAccessType"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="WANAccessType" type="xs:NCName"/>
+  <xs:element name="X_BROADCOM_COM_XTM_Interface_Stats">
+    <xs:complexType mixed="true">
+      <xs:attribute name="instance" type="xs:integer"/>
+      <xs:attribute name="nextInstance" type="xs:integer"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="WANDSLInterfaceConfig">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="Enable"/>
+        <xs:choice>
+          <xs:element ref="LinkEncapsulationUsed"/>
+          <xs:element ref="X_BROADCOM_COM_DslPhyMiscCfgParam"/>
+        </xs:choice>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LinkEncapsulationUsed" type="xs:NCName"/>
+  <xs:element name="X_BROADCOM_COM_DslPhyMiscCfgParam" type="xs:integer"/>
+  <xs:element name="WANConnectionDevice">
+    <xs:complexType>
+      <xs:sequence minOccurs="0">
+        <xs:element ref="WANIPConnectionNumberOfEntries"/>
+        <xs:element ref="WANPPPConnectionNumberOfEntries"/>
+        <xs:element ref="WANPTMLinkConfig"/>
+        <xs:element maxOccurs="unbounded" ref="WANIPConnection"/>
+      </xs:sequence>
+      <xs:attribute name="instance" type="xs:integer"/>
+      <xs:attribute name="nextInstance" type="xs:integer"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="WANIPConnectionNumberOfEntries" type="xs:integer"/>
+  <xs:element name="WANPPPConnectionNumberOfEntries" type="xs:integer"/>
+  <xs:element name="WANPTMLinkConfig">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="Enable"/>
+        <xs:element ref="X_BROADCOM_COM_PTMPriorityHigh"/>
+        <xs:element ref="X_BROADCOM_COM_PTMEnbQos"/>
+        <xs:element ref="X_BROADCOM_COM_GrpPrecedence"/>
+        <xs:element ref="X_BROADCOM_COM_QueuePrecedence"/>
+        <xs:element ref="X_BROADCOM_COM_ConnectionMode"/>
+        <xs:element ref="X_BROADCOM_COM_IfName"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="X_BROADCOM_COM_PTMPriorityHigh" type="xs:NCName"/>
+  <xs:element name="X_BROADCOM_COM_PTMEnbQos" type="xs:NCName"/>
+  <xs:element name="X_BROADCOM_COM_GrpPrecedence" type="xs:integer"/>
+  <xs:element name="X_BROADCOM_COM_QueuePrecedence" type="xs:integer"/>
+  <xs:element name="X_BROADCOM_COM_ConnectionMode" type="xs:NCName"/>
+  <xs:element name="WANIPConnection">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:sequence minOccurs="0">
+          <xs:element ref="Enable"/>
+          <xs:element ref="ConnectionType"/>
+          <xs:element ref="Name"/>
+          <xs:element ref="X_BROADCOM_COM_IfName"/>
+          <xs:element ref="X_BROADCOM_COM_ConnectionId"/>
+          <xs:element ref="X_BROADCOM_COM_VlanMux8021p"/>
+          <xs:element ref="X_BROADCOM_COM_VlanMuxID"/>
+          <xs:element ref="X_BROADCOM_COM_VlanTpid"/>
+          <xs:element ref="PortMappingNumberOfEntries"/>
+          <xs:element ref="X_BROADCOM_COM_Op50IpAddress"/>
+          <xs:element ref="X_BROADCOM_COM_Op51LeasedTime"/>
+          <xs:element ref="X_BROADCOM_COM_Op54ServerIpAddress"/>
+          <xs:element ref="X_BROADCOM_COM_IPv6Enabled"/>
+          <xs:element ref="X_BROADCOM_COM_PCPMode"/>
+          <xs:element ref="X_BROADCOM_COM_DefaultIPv6Gateway"/>
+          <xs:element ref="X_BROADCOM_COM_IPv6SitePrefix"/>
+          <xs:element ref="X_BROADCOM_COM_IPv6SitePrefixPltime"/>
+          <xs:element ref="X_BROADCOM_COM_IPv6SitePrefixVltime"/>
+          <xs:element ref="X_BROADCOM_COM_Dhcp6cPid"/>
+        </xs:sequence>
+        <xs:element minOccurs="0" ref="PortMapping"/>
+        <xs:element minOccurs="0" ref="X_BROADCOM_COM_FirewallException"/>
+      </xs:sequence>
+      <xs:attribute name="instance" type="xs:integer"/>
+      <xs:attribute name="nextInstance" type="xs:integer"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="X_BROADCOM_COM_ConnectionId" type="xs:integer"/>
+  <xs:element name="X_BROADCOM_COM_VlanMux8021p" type="xs:integer"/>
+  <xs:element name="X_BROADCOM_COM_VlanMuxID" type="xs:integer"/>
+  <xs:element name="X_BROADCOM_COM_VlanTpid" type="xs:integer"/>
+  <xs:element name="PortMappingNumberOfEntries" type="xs:integer"/>
+  <xs:element name="X_BROADCOM_COM_Op50IpAddress" type="xs:string"/>
+  <xs:element name="X_BROADCOM_COM_Op51LeasedTime" type="xs:integer"/>
+  <xs:element name="X_BROADCOM_COM_Op54ServerIpAddress" type="xs:string"/>
+  <xs:element name="X_BROADCOM_COM_IPv6Enabled" type="xs:NCName"/>
+  <xs:element name="X_BROADCOM_COM_PCPMode" type="xs:integer"/>
+  <xs:element name="X_BROADCOM_COM_DefaultIPv6Gateway" type="xs:NMTOKEN"/>
+  <xs:element name="X_BROADCOM_COM_IPv6SitePrefix" type="xs:string"/>
+  <xs:element name="X_BROADCOM_COM_IPv6SitePrefixPltime" type="xs:integer"/>
+  <xs:element name="X_BROADCOM_COM_IPv6SitePrefixVltime" type="xs:integer"/>
+  <xs:element name="X_BROADCOM_COM_Dhcp6cPid" type="xs:integer"/>
+  <xs:element name="PortMapping">
+    <xs:complexType>
+      <xs:attribute name="nextInstance" use="required" type="xs:integer"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="X_BROADCOM_COM_FirewallException">
+    <xs:complexType>
+      <xs:attribute name="nextInstance" use="required" type="xs:integer"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Layer3Forwarding">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="DefaultConnectionService"/>
+        <xs:element ref="ForwardNumberOfEntries"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="X_BROADCOM_COM_IPv6Layer3Forwarding">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="DefaultConnectionService"/>
+        <xs:element ref="ForwardNumberOfEntries"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="X_BROADCOM_COM_AccessTimeRestriction">
+    <xs:complexType>
+      <xs:sequence minOccurs="0">
+        <xs:element ref="Enable"/>
+        <xs:element ref="Username"/>
+        <xs:element ref="StartTime"/>
+        <xs:element ref="EndTime"/>
+        <xs:element ref="Days"/>
+      </xs:sequence>
+      <xs:attribute name="instance" type="xs:integer"/>
+      <xs:attribute name="nextInstance" type="xs:integer"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Username" type="xs:NCName"/>
+  <xs:element name="StartTime" type="xs:NMTOKEN"/>
+  <xs:element name="EndTime" type="xs:NMTOKEN"/>
+  <xs:element name="Days" type="xs:string"/>
+  <xs:element name="X_BROADCOM_COM_DDnsCfg">
+    <xs:complexType>
+      <xs:sequence minOccurs="0">
+        <xs:element ref="ObjVersion"/>
+        <xs:element ref="Enable"/>
+        <xs:element ref="FullyQualifiedDomainName"/>
+        <xs:element ref="UserName"/>
+        <xs:element ref="Password"/>
+        <xs:element ref="IfName"/>
+        <xs:element ref="ProviderName"/>
+        <xs:element ref="Wildcard"/>
+      </xs:sequence>
+      <xs:attribute name="instance" type="xs:integer"/>
+      <xs:attribute name="nextInstance" type="xs:integer"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObjVersion" type="xs:integer"/>
+  <xs:element name="FullyQualifiedDomainName" type="xs:NMTOKEN"/>
+  <xs:element name="UserName" type="xs:NCName"/>
+  <xs:element name="Password" type="xs:string"/>
+  <xs:element name="ProviderName" type="xs:NCName"/>
+  <xs:element name="Wildcard" type="xs:NCName"/>
+  <xs:element name="X_BROADCOM_COM_IGMPCfg">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="IgmpBridgeIfNames"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="IgmpBridgeIfNames" type="xs:NCName"/>
+  <xs:element name="X_BROADCOM_COM_MLDCfg">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="MldBridgeIfNames"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="MldBridgeIfNames" type="xs:NCName"/>
+  <xs:element name="PeriodicStatistics">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="MinSampleInterval"/>
+        <xs:element ref="MaxReportSamples"/>
+        <xs:element ref="SampleSetNumberOfEntries"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="MinSampleInterval" type="xs:integer"/>
+  <xs:element name="MaxReportSamples" type="xs:integer"/>
+  <xs:element name="SampleSetNumberOfEntries" type="xs:integer"/>
+  <xs:element name="Device">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="InterfaceStackNumberOfEntries"/>
+        <xs:element ref="Services"/>
+        <xs:element maxOccurs="unbounded" ref="InterfaceStack"/>
+        <xs:element ref="Ethernet"/>
+        <xs:element ref="PPP"/>
+        <xs:element ref="IP"/>
+        <xs:element ref="Routing"/>
+        <xs:element ref="NeighborDiscovery"/>
+        <xs:element ref="RouterAdvertisement"/>
+        <xs:element ref="IPv6rd"/>
+        <xs:element ref="DSLite"/>
+        <xs:element ref="DNS"/>
+        <xs:element ref="DHCPv6"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InterfaceStackNumberOfEntries" type="xs:integer"/>
+  <xs:element name="Services">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="StorageServiceNumberOfEntries"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="StorageServiceNumberOfEntries" type="xs:integer"/>
+  <xs:element name="InterfaceStack">
+    <xs:complexType>
+      <xs:sequence minOccurs="0">
+        <xs:element ref="Alias"/>
+        <xs:element ref="HigherLayer"/>
+        <xs:element ref="LowerLayer"/>
+        <xs:element ref="HigherAlias"/>
+        <xs:element ref="LowerAlias"/>
+      </xs:sequence>
+      <xs:attribute name="instance" type="xs:integer"/>
+      <xs:attribute name="nextInstance" type="xs:integer"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="HigherLayer" type="xs:string"/>
+  <xs:element name="LowerLayer" type="xs:string"/>
+  <xs:element name="HigherAlias" type="xs:NCName"/>
+  <xs:element name="LowerAlias" type="xs:string"/>
+  <xs:element name="Ethernet">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="InterfaceNumberOfEntries"/>
+        <xs:element ref="LinkNumberOfEntries"/>
+        <xs:element ref="VLANTerminationNumberOfEntries"/>
+        <xs:element maxOccurs="unbounded" ref="Link"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LinkNumberOfEntries" type="xs:integer"/>
+  <xs:element name="VLANTerminationNumberOfEntries" type="xs:integer"/>
+  <xs:element name="Link">
+    <xs:complexType>
+      <xs:sequence minOccurs="0">
+        <xs:element ref="Enable"/>
+        <xs:element ref="Alias"/>
+        <xs:element ref="Name"/>
+        <xs:element ref="LowerLayers"/>
+      </xs:sequence>
+      <xs:attribute name="instance" type="xs:integer"/>
+      <xs:attribute name="nextInstance" type="xs:integer"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="PPP">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="InterfaceNumberOfEntries"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="IP">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="IPv6Enable"/>
+        <xs:element ref="InterfaceNumberOfEntries"/>
+        <xs:element maxOccurs="unbounded" ref="Interface"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Routing">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="RouterNumberOfEntries"/>
+        <xs:element maxOccurs="unbounded" ref="Router"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RouterNumberOfEntries" type="xs:integer"/>
+  <xs:element name="Router">
+    <xs:complexType>
+      <xs:sequence minOccurs="0">
+        <xs:element ref="Enable"/>
+        <xs:element ref="Alias"/>
+        <xs:element ref="IPv4ForwardingNumberOfEntries"/>
+        <xs:element ref="IPv6ForwardingNumberOfEntries"/>
+      </xs:sequence>
+      <xs:attribute name="instance" type="xs:integer"/>
+      <xs:attribute name="nextInstance" type="xs:integer"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="IPv4ForwardingNumberOfEntries" type="xs:integer"/>
+  <xs:element name="IPv6ForwardingNumberOfEntries" type="xs:integer"/>
+  <xs:element name="NeighborDiscovery">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="InterfaceSettingNumberOfEntries"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RouterAdvertisement">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="Enable"/>
+        <xs:element ref="InterfaceSettingNumberOfEntries"/>
+        <xs:element maxOccurs="unbounded" ref="InterfaceSetting"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InterfaceSetting">
+    <xs:complexType>
+      <xs:sequence minOccurs="0">
+        <xs:element ref="Enable"/>
+        <xs:element ref="Interface"/>
+        <xs:element ref="OptionNumberOfEntries"/>
+      </xs:sequence>
+      <xs:attribute name="instance" type="xs:integer"/>
+      <xs:attribute name="nextInstance" type="xs:integer"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="IPv6rd">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="InterfaceSettingNumberOfEntries"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DSLite">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="InterfaceSettingNumberOfEntries"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DNS">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="Client"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Client">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="ServerNumberOfEntries"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ServerNumberOfEntries" type="xs:integer"/>
+  <xs:element name="DHCPv6">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="ClientNumberOfEntries"/>
+        <xs:element ref="Server"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ClientNumberOfEntries" type="xs:integer"/>
+  <xs:element name="Server">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="Enable"/>
+        <xs:element ref="PoolNumberOfEntries"/>
+        <xs:element maxOccurs="unbounded" ref="Pool"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="PoolNumberOfEntries" type="xs:integer"/>
+  <xs:element name="Pool">
+    <xs:complexType>
+      <xs:sequence minOccurs="0">
+        <xs:element ref="Enable"/>
+        <xs:element ref="Order"/>
+        <xs:element ref="Interface"/>
+        <xs:element ref="OptionNumberOfEntries"/>
+        <xs:element maxOccurs="unbounded" ref="Option"/>
+      </xs:sequence>
+      <xs:attribute name="instance" type="xs:integer"/>
+      <xs:attribute name="nextInstance" type="xs:integer"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Order" type="xs:integer"/>
+  <xs:element name="Option">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" ref="Enable"/>
+      </xs:sequence>
+      <xs:attribute name="instance" type="xs:integer"/>
+      <xs:attribute name="nextInstance" type="xs:integer"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="X_SKY_COM_Factory">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="BuildString"/>
+        <xs:element ref="BaseMac"/>
+        <xs:element ref="factorySsId"/>
+        <xs:element ref="factoryPublicKey"/>
+        <xs:element ref="WifiPassword"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="BuildString" type="xs:NCName"/>
+  <xs:element name="BaseMac" type="xs:NMTOKEN"/>
+  <xs:element name="factorySsId" type="xs:NCName"/>
+  <xs:element name="factoryPublicKey" type="xs:NCName"/>
+  <xs:element name="WifiPassword" type="xs:NCName"/>
+  <xs:element name="X_SKY_SELF_HEAL">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="FirstConnection"/>
+        <xs:element ref="ConnectionType"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FirstConnection" type="xs:integer"/>
+  <xs:element name="SKY_GENERIC_WAN_FIREWALL_EXCEPTION">
+    <xs:complexType>
+      <xs:sequence minOccurs="0">
+        <xs:element ref="Enable"/>
+        <xs:element ref="FilterName"/>
+        <xs:element ref="Protocol"/>
+        <xs:element ref="SourcePortStart"/>
+        <xs:element ref="SourcePortEnd"/>
+        <xs:element ref="DestinationPortStart"/>
+        <xs:element ref="DestinationIPAddress"/>
+        <xs:element ref="BlockAction"/>
+      </xs:sequence>
+      <xs:attribute name="instance" type="xs:integer"/>
+      <xs:attribute name="nextInstance" type="xs:integer"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FilterName" type="xs:NCName"/>
+  <xs:element name="Protocol" type="xs:NCName"/>
+  <xs:element name="SourcePortStart" type="xs:integer"/>
+  <xs:element name="SourcePortEnd" type="xs:integer"/>
+  <xs:element name="DestinationPortStart" type="xs:integer"/>
+  <xs:element name="DestinationIPAddress" type="xs:NMTOKEN"/>
+  <xs:element name="BlockAction" type="xs:NCName"/>
+  <xs:element name="X_SKY_COM_FUS">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="Enable"/>
+        <xs:element ref="DailyChecksCount"/>
+        <xs:element ref="StatusHost"/>
+        <xs:element ref="StatusPath"/>
+        <xs:element ref="CurrentDate"/>
+        <xs:element ref="UpgradePerformed"/>
+        <xs:element ref="AllowDevBuildsViaFUS"/>
+        <xs:element ref="VoIPDownloadDelayEnabled"/>
+        <xs:element ref="VoIPActivityGracePeriod"/>
+        <xs:element ref="VoIPDownloadDelayCounter"/>
+        <xs:element ref="VoIPActivityCheckPollingInterval"/>
+        <xs:element ref="FUSLastPostStatus"/>
+        <xs:element ref="StartupDelayForTesting"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="StatusHost">
+    <xs:complexType mixed="true"/>
+  </xs:element>
+  <xs:element name="StatusPath">
+    <xs:complexType mixed="true"/>
+  </xs:element>
+  <xs:element name="UpgradePerformed" type="xs:NCName"/>
+  <xs:element name="AllowDevBuildsViaFUS" type="xs:integer"/>
+  <xs:element name="VoIPDownloadDelayCounter" type="xs:integer"/>
+  <xs:element name="FUSLastPostStatus" type="xs:integer"/>
+  <xs:element name="X_SKY_DHCPV6_CONF">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="prefix"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="prefix" type="xs:string"/>
+  <xs:element name="X_BROADCOM_COM_ServiceruleCfg">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="ForwardNumberOfEntries"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="X_SKY_WlanAdapter">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:sequence minOccurs="0">
+          <xs:element ref="WlIndex"/>
+          <xs:element ref="WlSsid"/>
+        </xs:sequence>
+        <xs:element minOccurs="0" ref="WlChannel"/>
+        <xs:sequence minOccurs="0">
+          <xs:element ref="WlTxMode"/>
+          <xs:element ref="WlSecMode"/>
+          <xs:element ref="WlNetworkKey"/>
+          <xs:element ref="WlChannelBandwidth"/>
+        </xs:sequence>
+      </xs:sequence>
+      <xs:attribute name="instance" type="xs:integer"/>
+      <xs:attribute name="nextInstance" type="xs:integer"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="WlIndex" type="xs:integer"/>
+  <xs:element name="WlSsid" type="xs:NCName"/>
+  <xs:element name="WlChannel" type="xs:integer"/>
+  <xs:element name="WlTxMode" type="xs:integer"/>
+  <xs:element name="WlSecMode" type="xs:integer"/>
+  <xs:element name="WlNetworkKey" type="xs:NCName"/>
+  <xs:element name="WlChannelBandwidth" type="xs:integer"/>
+  <xs:element name="X_SKY_MESH">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="SkyDefaultMesh"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SkyDefaultMesh" type="xs:integer"/>
+  <xs:element name="X_SKY_REBOOT_CAUSE">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="RebootTime"/>
+        <xs:element ref="RebootReasonType"/>
+        <xs:element ref="RebootReasonCode"/>
+        <xs:element minOccurs="0" ref="RebootReasonSubcode"/>
+        <xs:element ref="RebootInfo"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RebootTime" type="xs:integer"/>
+  <xs:element name="RebootReasonType" type="xs:NCName"/>
+  <xs:element name="RebootReasonCode" type="xs:integer"/>
+  <xs:element name="RebootReasonSubcode" type="xs:integer"/>
+  <xs:element name="RebootInfo" type="xs:string"/>
+  <xs:element name="X_SKY_COM_DEVICE_DOCTOR">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="Enable"/>
+        <xs:element ref="CmsLockDuration"/>
+        <xs:element ref="CpuPercentageThreshold"/>
+        <xs:element ref="CpuReportingThreshold"/>
+        <xs:element ref="MemoryThreshold"/>
+        <xs:element ref="SharedMemoryThreshold"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CmsLockDuration" type="xs:integer"/>
+  <xs:element name="CpuPercentageThreshold" type="xs:integer"/>
+  <xs:element name="CpuReportingThreshold" type="xs:integer"/>
+  <xs:element name="MemoryThreshold" type="xs:integer"/>
+  <xs:element name="SharedMemoryThreshold" type="xs:integer"/>
+  <xs:element name="Enable" type="xs:NCName"/>
+  <xs:element name="DailyChecksCount" type="xs:integer"/>
+  <xs:element name="CurrentDate" type="xs:string"/>
+  <xs:element name="VoIPDownloadDelayEnabled" type="xs:NCName"/>
+  <xs:element name="VoIPActivityGracePeriod" type="xs:integer"/>
+  <xs:element name="VoIPActivityCheckPollingInterval" type="xs:integer"/>
+  <xs:element name="StartupDelayForTesting" type="xs:integer"/>
+  <xs:element name="IfName" type="xs:string"/>
+  <xs:element name="X_BROADCOM_COM_IfName" type="xs:NCName"/>
+  <xs:element name="ConnectionType" type="xs:NMTOKEN"/>
+  <xs:element name="Name" type="xs:NCName"/>
+  <xs:element name="DefaultConnectionService" type="xs:NCName"/>
+  <xs:element name="ForwardNumberOfEntries" type="xs:integer"/>
+  <xs:element name="Alias" type="xs:NCName"/>
+  <xs:element name="InterfaceNumberOfEntries" type="xs:integer"/>
+  <xs:element name="LowerLayers" type="xs:string"/>
+  <xs:element name="IPv6Enable" type="xs:NCName"/>
+  <xs:element name="Interface">
+    <xs:complexType mixed="true">
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element ref="Alias"/>
+        <xs:element ref="Enable"/>
+        <xs:element ref="IPv6Enable"/>
+        <xs:element ref="LowerLayers"/>
+        <xs:element ref="Name"/>
+        <xs:element ref="IPv4AddressNumberOfEntries"/>
+        <xs:element ref="IPv6AddressNumberOfEntries"/>
+        <xs:element ref="IPv6PrefixNumberOfEntries"/>
+        <xs:element ref="X_BROADCOM_COM_GroupName"/>
+      </xs:choice>
+      <xs:attribute name="instance" type="xs:integer"/>
+      <xs:attribute name="nextInstance" type="xs:integer"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="IPv4AddressNumberOfEntries" type="xs:integer"/>
+  <xs:element name="IPv6AddressNumberOfEntries" type="xs:integer"/>
+  <xs:element name="IPv6PrefixNumberOfEntries" type="xs:integer"/>
+  <xs:element name="X_BROADCOM_COM_GroupName" type="xs:NCName"/>
+  <xs:element name="InterfaceSettingNumberOfEntries" type="xs:integer"/>
+  <xs:element name="OptionNumberOfEntries" type="xs:integer"/>
+</xs:schema>

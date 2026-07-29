@@ -10,9 +10,16 @@
 		
 		
 		
-			<lastBuildDate>Tue, 28 Jul 2026 12:00:00 +0000</lastBuildDate>
+			<lastBuildDate>Wed, 29 Jul 2026 00:00:00 +0000</lastBuildDate>
 		
 			<atom:link href="https://instantiator.dev/post/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>Sky hub blues</title>
+				<link>https://instantiator.dev/post/sky-hub-blues/</link>
+				<pubDate>Wed, 29 Jul 2026 00:00:00 +0000</pubDate>
+				<guid>https://instantiator.dev/post/sky-hub-blues/</guid>
+				<description>&lt;p&gt;&lt;em&gt;There&amp;rsquo;s a bug in the Sky Hub that stops you from changing a whole bunch of settings. It&amp;rsquo;s a genuine mistake that Sky won&amp;rsquo;t fix. Here are some workarounds to help you control your home network&amp;hellip;&lt;/em&gt;&lt;/p&gt;</description>
+			</item>
 			<item>
 				<title>Free AI-assisted coding tools 3: A basic prototype with Streamlit</title>
 				<link>https://instantiator.dev/post/prototyping-opencode-tutorial-003-scaffolding/</link>
@@ -46,7 +53,7 @@
 				<link>https://instantiator.dev/post/say-hello-world-and-nothing-else/</link>
 				<pubDate>Fri, 26 Jun 2026 00:00:00 +0000</pubDate>
 				<guid>https://instantiator.dev/post/say-hello-world-and-nothing-else/</guid>
-				<description>&lt;p&gt;&lt;em&gt;An unintentionally hilarious one-act play by Google&amp;rsquo;s Gemma 4.&lt;/em&gt;&lt;/p&gt;&#xA;&lt;h1 id=&#34;say-hello-world-and-nothing-else&#34;&gt;Say Hello World and Nothing Else&lt;/h1&gt;&#xA;&lt;p&gt;Honestly, it&amp;rsquo;s a marvel that technology and statistical methods have come so far. It&amp;rsquo;s still quite amusing to see their internal monologues&amp;hellip;&lt;/p&gt;</description>
+				<description>&lt;p&gt;&lt;em&gt;Google&amp;rsquo;s Gemma 4 wrote an unintentionally hilarious one-act play, given a very simple prompt. It would have been wrong not to publish it here&amp;hellip;&lt;/em&gt;&lt;/p&gt;</description>
 			</item>
 			<item>
 				<title>Free art should be free</title>
@@ -74,7 +81,7 @@
 				<link>https://instantiator.dev/post/cci-zg-deliberation-at-scale/</link>
 				<pubDate>Tue, 28 Oct 2025 00:00:00 +0000</pubDate>
 				<guid>https://instantiator.dev/post/cci-zg-deliberation-at-scale/</guid>
-				<description>&lt;p&gt;&lt;em&gt;Reproduced from a recently published &lt;a href=&#34;https://www.linkedin.com/pulse/conversational-deliberation-scale-lewis-westbury-4uk6e/?trackingId=lQdZf5QJS42DfdPBKXhJaQ%3D%3D&#34;&gt;LinkedIn article&lt;/a&gt;.&lt;/em&gt;&lt;/p&gt;&#xA;&lt;h1 id=&#34;conversational-deliberation-at-scale&#34;&gt;Conversational deliberation, at scale&lt;/h1&gt;&#xA;&lt;p&gt;I&amp;rsquo;ve been leading a software development team at the &lt;a href=&#34;https://www.nesta.org.uk/project/centre-collective-intelligence/&#34;&gt;Centre for Collective Intelligence&lt;/a&gt; at &lt;a href=&#34;https://www.nesta.org.uk&#34;&gt;Nesta&lt;/a&gt; for a couple of years now, and I&amp;rsquo;m lucky enough to work with, and have worked with, some brilliant people. Amongst the things we&amp;rsquo;re good at is the process of designing and running deliberative workshops.&lt;/p&gt;</description>
+				<description>&lt;p&gt;&lt;em&gt;Conversational deliberation is hard to get right, and even harder to scale. Here&amp;rsquo;s how we&amp;rsquo;ve been lowering the barriers to both&amp;hellip;&lt;/em&gt;&lt;/p&gt;</description>
 			</item>
 			<item>
 				<title>Bucket List - the bucket that wouldn&#39;t die</title>
