@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
 	<channel>
-		<title>GitHub on instantiator.dev</title>
+		<title>Github on instantiator.dev</title>
 		<link>https://instantiator.dev/tags/github/</link>
-		<description>Recent content in GitHub on instantiator.dev</description>
+		<description>Recent content in Github on instantiator.dev</description>
 		<generator>Hugo</generator>
 		<language>en</language>
 		
@@ -14,7 +14,7 @@
 		
 			<atom:link href="https://instantiator.dev/tags/github/index.xml" rel="self" type="application/rss+xml" />
 			<item>
-				<title>🆓 AI-assisted coding 2: Managing your code</title>
+				<title>Free AI-assisted coding 2: Managing your code</title>
 				<link>https://instantiator.dev/post/prototyping-opencode-tutorial-002-git/</link>
 				<pubDate>Mon, 27 Jul 2026 00:00:00 +0000</pubDate>
 				<guid>https://instantiator.dev/post/prototyping-opencode-tutorial-002-git/</guid>
