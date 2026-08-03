@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en"><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
+    <link rel="stylesheet" type="text/css" href="/css/mastodon-timeline.min.css">
+    
+    
+    <title>instantiator.dev | </title>
+    
+    
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-SHE42ZWKEN"></script>
+      <script>
+        var doNotTrack = false;
+        if ( true ) {
+          var dnt = (navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack);
+          var doNotTrack = (dnt == "1" || dnt == "yes");
+        }
+        if (!doNotTrack) {
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-SHE42ZWKEN');
+        }
+      </script>
+    
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:image" content="http://localhost:1313/lewis/default-image.png">
+	<meta name="twitter:title" content="instantiator.dev">
+	<meta name="twitter:description" content="Good practices For anything bigger than a little project like this, it’s worth getting some structure into your code. It’ll help to avoid common pitfalls and save you time and resources.">
+
+    <meta property="og:url" content="http://localhost:1313/post/prototyping-opencode-tutorial-005-good-practices/">
+	<meta property="og:site_name" content="instantiator.dev">
+	<meta property="og:title" content="instantiator.dev">
+	<meta property="og:description" content="Good practices For anything bigger than a little project like this, it’s worth getting some structure into your code. It’ll help to avoid common pitfalls and save you time and resources.">
+	<meta property="og:locale" content="en">
+	<meta property="og:type" content="article">
+		<meta property="article:section" content="post">
+		<meta property="og:image" content="http://localhost:1313/lewis/default-image.png">
+
+
+    
+    <link rel="stylesheet"
+        href="/css/markupHighlight.min.b065fb7a8dabca50671d98ea7e8a42aed4027206ee1cf5a12e53d781afa4b03c.css"
+        integrity="sha256-sGX7eo2rylBnHZjqfopCrtQCcgbuHPWhLlPXga&#43;ksDw="
+        crossorigin="anonymous"
+        type="text/css">
+
+    </head><body><nav id="nav" class="navbar sticky-top justify-content-start navbar-expand-md frosted-white shadow mb-4">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="/">instantiator.dev</a>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav">
+        
+        
+        <li class="nav-item">
+          <a class="nav-link " href="/">
+            
+             Home
+          </a>
+        </li>
+        
+        <li class="nav-item">
+          <a class="nav-link " href="/post/">
+            
+             All posts
+          </a>
+        </li>
+        
+        <li class="nav-item">
+          <a class="nav-link " href="/categories/tool/">
+            
+             Tools
+          </a>
+        </li>
+        
+        <li class="nav-item">
+          <a class="nav-link " href="/categories/tutorial/">
+            
+             Tutorials
+          </a>
+        </li>
+        
+        <li class="nav-item">
+          <a class="nav-link " href="/categories/article/">
+            
+             Articles
+          </a>
+        </li>
+        
+        <li class="nav-item">
+          <a class="nav-link " href="/referrals/">
+            
+             Referrals
+          </a>
+        </li>
+        
+        <li class="nav-item">
+          <a class="nav-link " href="/about/">
+            
+             About
+          </a>
+        </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+<div class="container-fluid">
+
+<div class="row align-items-start">
+    <div class="col col-lg-3 d-none d-lg-block">
+      <div class="row mb-2">
+    <div class="col-3 col-lg-12 d-flex flex-column align-items-center">
+        <img 
+            src="/lewis/profile.jpg" alt="profile picture" 
+            class="mb-4 mt-4 img-thumbnail" 
+            style="border-radius: 50%; max-width: 200px; width: 100%;" />
+    </div>
+    <div class="col d-flex flex-column align-items-center">
+        <h3 class="mb-4"><a href="/">instantiator.dev</a></h3>
+        
+        <div style="text-align: center;" class="mb-4">
+            <p style="font-size: 0.8rem;">I'm a senior tech lead, writing about tech, volunteers, public safety, and collective intelligence. This blog contains articles, tools, code and ideas.</p>
+        </div>
+
+        <div class="d-flex flex-row justify-content-evenly align-self-stretch mb-4">
+            
+            <a href="https://bsky.app/profile/instantiator.bsky.social" rel="me" aria-label="BlueSky account" alt="BlueSky account" target="_blank">
+                
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 600 530" fill="currentColor" stroke="currentColor" version="1.1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="m135.72 44.03c66.496 49.921 138.02 151.14 164.28 205.46 26.262-54.316 97.782-155.54 164.28-205.46 47.98-36.021 125.72-63.892 125.72 24.795 0 17.712-10.155 148.79-16.111 170.07-20.703 73.984-96.144 92.854-163.25 81.433 117.3 19.964 147.14 86.092 82.697 152.22-122.39 125.59-175.91-31.511-189.63-71.766-2.514-7.3797-3.6904-10.832-3.7077-7.8964-0.0174-2.9357-1.1937 0.51669-3.7077 7.8964-13.714 40.255-67.233 197.36-189.63 71.766-64.444-66.128-34.605-132.26 82.697-152.22-67.108 11.421-142.55-7.4491-163.25-81.433-5.9562-21.282-16.111-152.36-16.111-170.07 0-88.687 77.742-60.816 125.72-24.795z"/>
+                </svg>
+                
+            </a>
+            
+            <a href="https://mastodon.social/@instantiator" rel="me" aria-label="Mastodon account" alt="Mastodon account" target="_blank">
+                
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 418 512" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M433 179.11c0-97.2-63.71-125.7-63.71-125.7-62.52-28.7-228.56-28.4-290.48 0 0 0-63.72 28.5-63.72 125.7 0 115.7-6.6 259.4 105.63 289.1 40.51 10.7 75.32 13 103.33 11.4 50.81-2.8 79.32-18.1 79.32-18.1l-1.7-36.9s-36.31 11.4-77.12 10.1c-40.41-1.4-83-4.4-89.63-54a102.54 102.54 0 0 1-.9-13.9c85.63 20.9 158.65 9.1 178.75 6.7 56.12-6.7 105-41.3 111.23-72.9 9.8-49.8 9-121.5 9-121.5zm-75.12 125.2h-46.63v-114.2c0-49.7-64-51.6-64 6.9v62.5h-46.33V197c0-58.5-64-56.6-64-6.9v114.2H90.19c0-122.1-5.2-147.9 18.41-175 25.9-28.9 79.82-30.8 103.83 6.1l11.6 19.5 11.6-19.5c24.11-37.1 78.12-34.8 103.83-6.1 23.71 27.3 18.4 53 18.4 175z"></path></svg> 
+                
+            </a>
+            
+            <a href="https://github.com/instantiator" rel="me" aria-label="GitHub account" alt="GitHub account" target="_blank">
+                
+                <i data-feather="github" aria-hidden="true"></i>
+                
+            </a>
+            
+            <a href="https://www.linkedin.com/in/lewiswestbury" rel="me" aria-label="LinkedIn account" alt="LinkedIn account" target="_blank">
+                
+                <i data-feather="linkedin" aria-hidden="true"></i>
+                
+            </a>
+            
+            <a href="https://calendar.google.com/calendar/embed?src=ad7606dfb0580dc089629dff9be0d9fc0db19d296a7d72864c1b338f4dd896a4%40group.calendar.google.com&amp;ctz=Europe%2FLondon" rel="me" aria-label="Celebrations calendar" alt="Celebrations calendar" target="_blank">
+                
+                <i data-feather="calendar" aria-hidden="true"></i>
+                
+            </a>
+            
+            <a href="https://instantiator.dev/index.xml" rel="me" aria-label="RSS" alt="RSS" target="_blank">
+                
+                <i data-feather="rss" aria-hidden="true"></i>
+                
+            </a>
+            
+        </div>
+
+        <div class="d-flex flex-row justify-content-evenly align-self-stretch mb-4" style="font-size: 0.8rem;">
+            <ul style="padding-inline-start: 0;">
+            
+                <li><a href="https://instantiator.dev/presence" rel="me" aria-label="Presence" target="_blank">Presence</a> (tool) (in dev)</li>
+            
+                <li><a href="https://instantiator.dev/listsky/" rel="me" aria-label="ListSky" target="_blank">ListSky</a> (tool) (in dev)</li>
+            
+                <li><a href="https://epistolorean.club" rel="me" aria-label="The Epistolorean" target="_blank">The Epistolorean</a> (service)</li>
+            
+                <li><a href="https://icgames.net" rel="me" aria-label="Consensus Games" target="_blank">Consensus Games</a> (service) (in dev)</li>
+            
+                <li><a href="https://instantiator.dev/json-to-smart-csv/" rel="me" aria-label="JSON to Smart CSV" target="_blank">JSON to Smart CSV</a> (tool)</li>
+            
+                <li><a href="https://www.escapethereview.co.uk/profile/?user_id=11" rel="me" aria-label="Escape the Review" target="_blank">Escape the Review</a> (profile)</li>
+            
+                <li><a href="https://calendar.google.com/calendar/embed?src=ad7606dfb0580dc089629dff9be0d9fc0db19d296a7d72864c1b338f4dd896a4%40group.calendar.google.com&amp;ctz=Europe%2FLondon" rel="me" aria-label="In this house..." target="_blank">In this house...</a> (calendar)</li>
+            
+                <li><a href="https://calendar.app.google/9wYSR1cjEEdcS2zo7" rel="me" aria-label="A chat with Lewis" target="_blank">A chat with Lewis</a> (call)</li>
+            
+            </ul>
+        </div>
+
+        <div>
+            <span class="text-body-secondary fw-lighter" style="font-size: 0.8rem;">
+                &copy; Lewis Westbury  2026 
+            </span>
+        </div>
+    </div>
+</div>    
+
+
+
+    </div>
+    <div class="col-lg" style="overflow-x: hidden;">
+        <div id="post-content">
+            <h2 style="display: inline-block;"></h2>
+                
+            <div class="mt-2">
+                 
+
+<div class="mb-2">
+    <i data-feather="calendar"></i>
+    <time datetime="0001-01-01">0001-01-01</time>
+</div>
+
+
+            </div>
+            <div class="mt-4">
+                <h2 id="good-practices">Good practices</h2>
+<p>For anything bigger than a little project like this, it&rsquo;s worth getting some structure into your code. It&rsquo;ll help to avoid common pitfalls and save you time and resources.</p>
+<p>Some questions to ask yourself:</p>
+<ol>
+<li>How should we arrange the code inside the project so it&rsquo;s easiest to work with?</li>
+<li>Once it&rsquo;s written, how do we know it will work?</li>
+</ol>
+<h3 id="common-conventions">Common conventions</h3>
+<p>When your AI assistant is working for you, it builds itself a context - which contains all the information it has learned (your prompts, its responses, all the code files it has read, the things it has done, etc.) As your conversation grows, so does the context. The larger it is, the more work (and tokens) it needs to work through to get anything done.</p>
+<p>You&rsquo;re either paying for tokens, or you have a free tier budget. Either way, let&rsquo;s take a look at some practices that will help you keep your context small&hellip;</p>
+<p>NB. opencode can make its context smaller by compacting it. This is often done by figure out what it can safely lose, and still be useful. It will very likely replace what it dropped from the context with a shorter summary, so that it doesn&rsquo;t forget everything entirely. This is helpful, but there&rsquo;s plenty you can do to achieve more.</p>
+<p>Software development is a discipline - and has developed some common ways of working that make it easier to work collaboratively.</p>
+<ul>
+<li>
+<p><strong>Documentation:</strong> By documenting the project, you and your assistant will have access to a useful summary of the code it has created.</p>
+</li>
+<li>
+<p><strong>Conventions:</strong> By following common patterns and conventions, you and your assistant can share a common language. You won&rsquo;t need to clarify so many things, and it&rsquo;ll have a much better clue about where to find the parts of the project it needs, and how to use them.</p>
+</li>
+</ul>
+<p>Documentation often lives in a folder called <code>docs/</code> in the repository. Keeping it <em>close</em> to the code by keeping it in the repository is good. It&rsquo;s quick and easy for a developer to find, and your coding assistant can also use it.</p>
+<p>Some conventions are built into frameworks, which act like bumpers - forcing development into a structure. This often means that the code you write will be reusable and easy to debug or fix.</p>
+<p>Streamlit is one such framework, and it helps to build complex projects with user interfaces that are much easier to maintain than other ways of acheving the same thing.</p>
+<p>Other conventions are code quality constraints. These are often rules to help developers write code that&rsquo;s easy to follow, easy to change, and easy to reuse. There are some common guidlines known to developers to help with this&hellip;</p>
+<p><strong>TODO</strong> In a future post, we&rsquo;ll explore how to encode these into rules for your agents. Coding assistants can discover information about your project including rules that specify how you want it to tackle coding, through an <code>AGENTS.md</code><sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup> file and skills you can write for your agents.</p>
+<h3 id="dry-dont-repeat-yourself">DRY (Don&rsquo;t Repeat Yourself)</h3>
+<p><strong>If you find that you&rsquo;ve written the same function more than once, it&rsquo;s a candidate for deduplication.</strong></p>
+<p>In the ideal case, you&rsquo;d only write it once, and call it from everywhere it&rsquo;s needed.</p>
+<p>This is important because most of our assumptions, when we write code, will be challenged. It&rsquo;s very likely you&rsquo;ll need to change those functions. For every duplicate, that&rsquo;s an extra step - and another point in the code base you could forget about.</p>
+<p>Some developers are more relaxed about this, and there&rsquo;s a case to say that if something <em>only</em> appears twice, it <em>might</em> be <em>more effort</em> to combine those instances than it&rsquo;s worth.</p>
+<p>This is very much a judgement call - and something you&rsquo;ll want to tell your coding assistant about upfront as a part of the coding standards you lay down.</p>
+<p>I instinctively err on the side of deduplication. As code bases get bigger and more complex, you may not be able to remember where all the instances are, and it becomes harder to maintain. Better to nip it in the bud.</p>
+<h3 id="kiss-keep-it-simple-stupid">KISS (Keep It Simple Stupid)</h3>
+<h3 id="yagni-you-aint-gonna-need-it">YAGNI (You Ain&rsquo;t Gonna Need It)</h3>
+<p>It&rsquo;s tempting to write a lot more code than you need to achieve your immediate goal.</p>
+<h3 id="separation-of-concerns">Separation of concerns</h3>
+<p><strong>Each distinct piece of code should have a single responsibility.</strong></p>
+<h3 id="testing">Testing</h3>
+<p>When you alter code in a software project, it&rsquo;s very likely you&rsquo;ll also alter something you didn&rsquo;t mean to, too. That&rsquo;s the nature of complex tasks like coding. After a few surprises, you&rsquo;ll come to the conclusion that there ought to be a way to catch mistakes.</p>
+<ul>
+<li><strong>Automated tests:</strong> There are testing frameworks for every language and framework.</li>
+</ul>
+<p>This is essential for every project, and it&rsquo;ll get a whole post. Without it, you&rsquo;ll be reduced to manually testing every feature every time you make a change.</p>
+<p>We&rsquo;ll talk about automated testing very soon.</p>
+<div class="footnotes" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn:1">
+<p>Use <code>CLAUDE.md</code> if you&rsquo;re using Claude Code (instead of opencode). Anthropic are pretty much the only org that haven&rsquo;t settled on <code>AGENTS.md</code> - everyone else has found a way to collaborate on this, as it&rsquo;s a simple standard.&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+</ol>
+</div>
+
+            </div>
+        </div>
+
+        <div class="post-footer">
+            <div class="info">
+                
+
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+        </div><script src="/js/bootstrap.min.js"></script>
+<script src="/js/feather.min.js"></script>
+<script src="/js/mastodon-timeline.umd.js"></script>
+<script>
+  feather.replace();
+</script></body>
+</html>

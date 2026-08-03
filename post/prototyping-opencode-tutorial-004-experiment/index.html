@@ -1,0 +1,637 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
+    <link rel="stylesheet" type="text/css" href="/css/mastodon-timeline.min.css">
+    
+    
+    <title>instantiator.dev | Free AI-assisted coding 4: Let&#39;s experiment</title>
+    
+    
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-SHE42ZWKEN"></script>
+      <script>
+        var doNotTrack = false;
+        if ( true ) {
+          var dnt = (navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack);
+          var doNotTrack = (dnt == "1" || dnt == "yes");
+        }
+        if (!doNotTrack) {
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-SHE42ZWKEN');
+        }
+      </script>
+    
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:image" content="https://instantiator.dev/post/prototyping-opencode-tutorial-004-experiment/004-upload-button.png">
+	<meta name="twitter:title" content="Free AI-assisted coding 4: Let&#39;s experiment">
+	<meta name="twitter:description" content="Most people learn by doing. In earlier posts we set up a dev environment and and a small Streamlit prototype. Now let’s use opencode to add a new feature.">
+
+    <meta property="og:url" content="https://instantiator.dev/post/prototyping-opencode-tutorial-004-experiment/">
+	<meta property="og:site_name" content="instantiator.dev">
+	<meta property="og:title" content="Free AI-assisted coding 4: Let&#39;s experiment">
+	<meta property="og:description" content="Most people learn by doing. In earlier posts we set up a dev environment and and a small Streamlit prototype. Now let’s use opencode to add a new feature.">
+	<meta property="og:locale" content="en">
+	<meta property="og:type" content="article">
+		<meta property="article:section" content="post">
+		<meta property="article:published_time" content="2026-08-03T00:00:00+00:00">
+		<meta property="article:modified_time" content="2026-08-03T00:00:00+00:00">
+		<meta property="article:tag" content="Tutorial">
+		<meta property="article:tag" content="Streamlit">
+		<meta property="article:tag" content="Python">
+		<meta property="article:tag" content="Data-Science">
+		<meta property="article:tag" content="Scaffolding">
+		<meta property="article:tag" content="Prototyping">
+		<meta property="og:image" content="https://instantiator.dev/post/prototyping-opencode-tutorial-004-experiment/004-upload-button.png">
+			<meta property="og:see_also" content="https://instantiator.dev/post/prototyping-opencode-tutorial-003-scaffolding/">
+			<meta property="og:see_also" content="https://instantiator.dev/post/prototyping-opencode-tutorial-002-git/">
+			<meta property="og:see_also" content="https://instantiator.dev/post/prototyping-opencode-tutorial-001-dev-environment/">
+
+
+    
+    <link rel="stylesheet"
+        href="/css/markupHighlight.min.b065fb7a8dabca50671d98ea7e8a42aed4027206ee1cf5a12e53d781afa4b03c.css"
+        integrity="sha256-sGX7eo2rylBnHZjqfopCrtQCcgbuHPWhLlPXga&#43;ksDw="
+        crossorigin="anonymous"
+        type="text/css">
+
+    </head><body><nav id="nav" class="navbar sticky-top justify-content-start navbar-expand-md frosted-white shadow mb-4">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="/">instantiator.dev</a>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav">
+        
+        
+        <li class="nav-item">
+          <a class="nav-link " href="/">
+            
+             Home
+          </a>
+        </li>
+        
+        <li class="nav-item">
+          <a class="nav-link " href="/post/">
+            
+             All posts
+          </a>
+        </li>
+        
+        <li class="nav-item">
+          <a class="nav-link " href="/categories/tool/">
+            
+             Tools
+          </a>
+        </li>
+        
+        <li class="nav-item">
+          <a class="nav-link " href="/categories/tutorial/">
+            
+             Tutorials
+          </a>
+        </li>
+        
+        <li class="nav-item">
+          <a class="nav-link " href="/categories/article/">
+            
+             Articles
+          </a>
+        </li>
+        
+        <li class="nav-item">
+          <a class="nav-link " href="/referrals/">
+            
+             Referrals
+          </a>
+        </li>
+        
+        <li class="nav-item">
+          <a class="nav-link " href="/about/">
+            
+             About
+          </a>
+        </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+<div class="container-fluid">
+
+<div class="row align-items-start">
+    <div class="col col-lg-3 d-none d-lg-block">
+      <div class="row mb-2">
+    <div class="col-3 col-lg-12 d-flex flex-column align-items-center">
+        <img 
+            src="/lewis/profile.jpg" alt="profile picture" 
+            class="mb-4 mt-4 img-thumbnail" 
+            style="border-radius: 50%; max-width: 200px; width: 100%;" />
+    </div>
+    <div class="col d-flex flex-column align-items-center">
+        <h3 class="mb-4"><a href="/">instantiator.dev</a></h3>
+        
+        <div style="text-align: center;" class="mb-4">
+            <p style="font-size: 0.8rem;">I'm a senior tech lead, writing about tech, volunteers, public safety, and collective intelligence. This blog contains articles, tools, code and ideas.</p>
+        </div>
+
+        <div class="d-flex flex-row justify-content-evenly align-self-stretch mb-4">
+            
+            <a href="https://bsky.app/profile/instantiator.bsky.social" rel="me" aria-label="BlueSky account" alt="BlueSky account" target="_blank">
+                
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 600 530" fill="currentColor" stroke="currentColor" version="1.1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="m135.72 44.03c66.496 49.921 138.02 151.14 164.28 205.46 26.262-54.316 97.782-155.54 164.28-205.46 47.98-36.021 125.72-63.892 125.72 24.795 0 17.712-10.155 148.79-16.111 170.07-20.703 73.984-96.144 92.854-163.25 81.433 117.3 19.964 147.14 86.092 82.697 152.22-122.39 125.59-175.91-31.511-189.63-71.766-2.514-7.3797-3.6904-10.832-3.7077-7.8964-0.0174-2.9357-1.1937 0.51669-3.7077 7.8964-13.714 40.255-67.233 197.36-189.63 71.766-64.444-66.128-34.605-132.26 82.697-152.22-67.108 11.421-142.55-7.4491-163.25-81.433-5.9562-21.282-16.111-152.36-16.111-170.07 0-88.687 77.742-60.816 125.72-24.795z"/>
+                </svg>
+                
+            </a>
+            
+            <a href="https://mastodon.social/@instantiator" rel="me" aria-label="Mastodon account" alt="Mastodon account" target="_blank">
+                
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 418 512" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M433 179.11c0-97.2-63.71-125.7-63.71-125.7-62.52-28.7-228.56-28.4-290.48 0 0 0-63.72 28.5-63.72 125.7 0 115.7-6.6 259.4 105.63 289.1 40.51 10.7 75.32 13 103.33 11.4 50.81-2.8 79.32-18.1 79.32-18.1l-1.7-36.9s-36.31 11.4-77.12 10.1c-40.41-1.4-83-4.4-89.63-54a102.54 102.54 0 0 1-.9-13.9c85.63 20.9 158.65 9.1 178.75 6.7 56.12-6.7 105-41.3 111.23-72.9 9.8-49.8 9-121.5 9-121.5zm-75.12 125.2h-46.63v-114.2c0-49.7-64-51.6-64 6.9v62.5h-46.33V197c0-58.5-64-56.6-64-6.9v114.2H90.19c0-122.1-5.2-147.9 18.41-175 25.9-28.9 79.82-30.8 103.83 6.1l11.6 19.5 11.6-19.5c24.11-37.1 78.12-34.8 103.83-6.1 23.71 27.3 18.4 53 18.4 175z"></path></svg> 
+                
+            </a>
+            
+            <a href="https://github.com/instantiator" rel="me" aria-label="GitHub account" alt="GitHub account" target="_blank">
+                
+                <i data-feather="github" aria-hidden="true"></i>
+                
+            </a>
+            
+            <a href="https://www.linkedin.com/in/lewiswestbury" rel="me" aria-label="LinkedIn account" alt="LinkedIn account" target="_blank">
+                
+                <i data-feather="linkedin" aria-hidden="true"></i>
+                
+            </a>
+            
+            <a href="https://calendar.google.com/calendar/embed?src=ad7606dfb0580dc089629dff9be0d9fc0db19d296a7d72864c1b338f4dd896a4%40group.calendar.google.com&amp;ctz=Europe%2FLondon" rel="me" aria-label="Celebrations calendar" alt="Celebrations calendar" target="_blank">
+                
+                <i data-feather="calendar" aria-hidden="true"></i>
+                
+            </a>
+            
+            <a href="https://instantiator.dev/index.xml" rel="me" aria-label="RSS" alt="RSS" target="_blank">
+                
+                <i data-feather="rss" aria-hidden="true"></i>
+                
+            </a>
+            
+        </div>
+
+        <div class="d-flex flex-row justify-content-evenly align-self-stretch mb-4" style="font-size: 0.8rem;">
+            <ul style="padding-inline-start: 0;">
+            
+                <li><a href="https://instantiator.dev/presence" rel="me" aria-label="Presence" target="_blank">Presence</a> (tool) (in dev)</li>
+            
+                <li><a href="https://instantiator.dev/listsky/" rel="me" aria-label="ListSky" target="_blank">ListSky</a> (tool) (in dev)</li>
+            
+                <li><a href="https://epistolorean.club" rel="me" aria-label="The Epistolorean" target="_blank">The Epistolorean</a> (service)</li>
+            
+                <li><a href="https://icgames.net" rel="me" aria-label="Consensus Games" target="_blank">Consensus Games</a> (service) (in dev)</li>
+            
+                <li><a href="https://instantiator.dev/json-to-smart-csv/" rel="me" aria-label="JSON to Smart CSV" target="_blank">JSON to Smart CSV</a> (tool)</li>
+            
+                <li><a href="https://www.escapethereview.co.uk/profile/?user_id=11" rel="me" aria-label="Escape the Review" target="_blank">Escape the Review</a> (profile)</li>
+            
+                <li><a href="https://calendar.google.com/calendar/embed?src=ad7606dfb0580dc089629dff9be0d9fc0db19d296a7d72864c1b338f4dd896a4%40group.calendar.google.com&amp;ctz=Europe%2FLondon" rel="me" aria-label="In this house..." target="_blank">In this house...</a> (calendar)</li>
+            
+                <li><a href="https://calendar.app.google/9wYSR1cjEEdcS2zo7" rel="me" aria-label="A chat with Lewis" target="_blank">A chat with Lewis</a> (call)</li>
+            
+            </ul>
+        </div>
+
+        <div>
+            <span class="text-body-secondary fw-lighter" style="font-size: 0.8rem;">
+                &copy; Lewis Westbury  2026 
+            </span>
+        </div>
+    </div>
+</div>    
+
+
+
+    </div>
+    <div class="col-lg" style="overflow-x: hidden;">
+        <div id="post-content">
+            <h2 style="display: inline-block;">Free AI-assisted coding 4: Let&#39;s experiment</h2>
+                
+                    
+                        
+                        <a class="badge bg-primary" href="https://instantiator.dev/categories/tutorial">tutorial</a>
+                    
+                
+            <div class="mt-2">
+                 
+
+<div class="mb-2">
+    <i data-feather="calendar"></i>
+    <time datetime="2026-08-03">2026-08-03</time>
+</div>
+
+<div>
+    <i data-feather="tag"></i>
+    
+        
+        <a class="badge bg-secondary" href="https://instantiator.dev/tags/tutorial">#tutorial</a>
+    
+        
+        <a class="badge bg-secondary" href="https://instantiator.dev/tags/streamlit">#streamlit</a>
+    
+        
+        <a class="badge bg-secondary" href="https://instantiator.dev/tags/python">#python</a>
+    
+        
+        <a class="badge bg-secondary" href="https://instantiator.dev/tags/data-science">#data-science</a>
+    
+        
+        <a class="badge bg-secondary" href="https://instantiator.dev/tags/scaffolding">#scaffolding</a>
+    
+        
+        <a class="badge bg-secondary" href="https://instantiator.dev/tags/prototyping">#prototyping</a>
+    
+        
+        <a class="badge bg-secondary" href="https://instantiator.dev/tags/prototype">#prototype</a>
+    
+        
+        <a class="badge bg-secondary" href="https://instantiator.dev/tags/ui">#ui</a>
+    
+        
+        <a class="badge bg-secondary" href="https://instantiator.dev/tags/opencode">#opencode</a>
+    
+        
+        <a class="badge bg-secondary" href="https://instantiator.dev/tags/experiment">#experiment</a>
+    
+        
+        <a class="badge bg-secondary" href="https://instantiator.dev/tags/explore">#explore</a>
+    
+        
+        <a class="badge bg-secondary" href="https://instantiator.dev/tags/test">#test</a>
+    
+</div>
+
+
+            </div>
+            <div class="mt-4">
+                <p>Most people learn by doing. In earlier posts we set up a dev environment and and a small <a href="https://streamlit.io">Streamlit</a> prototype. Now let&rsquo;s use <a href="https://opencode.ai/">opencode</a> to add a new feature.</p>
+<h2 id="a-simple-data-processing-experiment">A simple data processing experiment</h2>
+<p>This is our fourth tutorial and, so far, we haven&rsquo;t used opencode at all! Let&rsquo;s put that right.</p>
+<p>We&rsquo;re going to alter our prototype to implement a very simple data processing pipeline.</p>
+<ul>
+<li>It will accept as input:
+<ul>
+<li>A CSV<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup> file, expected to have 2 columns: A, B</li>
+</ul>
+</li>
+<li>On upload it will:
+<ul>
+<li>Validate the sheet, meaning it will check that:
+<ul>
+<li>The first row is the header row, and has columns A and B</li>
+<li>Each row after the heading row is either fully blank, or has a numeric value for both A and B</li>
+</ul>
+</li>
+<li>Calculate and create column C as the sum of columns A and B</li>
+<li>Print the number of rows it found, and a status report (either success, or an error)</li>
+<li>If successful, it will show a download button</li>
+<li>Clicking the download button will:
+<ul>
+<li>Download the new dataset in CSV format in your browser</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>That&rsquo;s a pretty simple application &lsquo;specification&rsquo;. Its nice and easy to understand, and we can break it down into smaller tasks for a coding assistant<sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup>.</p>
+<h2 id="lets-get-started">Let&rsquo;s get started</h2>
+<p>We&rsquo;re going to ask opencode to implement this.</p>
+<p>Every time an AI agent does anything, you&rsquo;ll get a different result - so it&rsquo;s important to understand what you&rsquo;re asking for. That way, you can give clear guidelines and</p>
+<blockquote>
+<p>💡 I&rsquo;m in the habit of preparing my prompts beforehand, and copy/pasting them for the AI assistant. That way I can think them through and craft them carefully before setting it to task.</p>
+</blockquote>
+<h3 id="using-opencode">Using opencode</h3>
+<p>If you don&rsquo;t already have it open from our previous work, open Visual Studio Code and open your project folder.</p>
+<p>There should be a little opencode icon button that automatically starts it for you: <img src="./opencode.png" style="background: #FFFFFFAA; height: 1rem;" /></p>
+<p>If you&rsquo;ve not spotted the button, you can:</p>
+<ul>
+<li>press <code>cmd</code> + <code>shift</code> + <code>esc</code>, or</li>
+<li>press <code>cmd</code> + <code>shift</code> + <code>p</code> (opens the palette), type and select &ldquo;Open opencode&rdquo;</li>
+</ul>
+<blockquote>
+<p>💡 The <strong>palette</strong> in VS Code is a very useful menu, making it easy to find a lot of tools that just won&rsquo;t fit anywhere else.</p>
+</blockquote>
+<h3 id="switching-between-modes">Switching between modes</h3>
+<p>At the opencode prompt, you can press <code>tab</code> to switch between <strong>Build</strong> and <strong>Plan</strong> modes.</p>
+<ul>
+<li>In <strong>plan</strong> mode, opencode won&rsquo;t write to any files. It&rsquo;ll accept your prompt, read through the code base, understand what it has to do and present that back to you.</li>
+<li>In <strong>build</strong> mode, opencode is allowed to modify files.</li>
+</ul>
+<h3 id="open-a-terminal">Open a terminal</h3>
+<p>We&rsquo;re also going to do a tiny bit of work on the terminal. Again, you could ask opencode to do it for you - but it&rsquo;s really helpful to get some muscle memory for the basics.</p>
+<ul>
+<li>
+<p>Open a terminal with: <code>ctrl</code> + <code>`</code> (or the <strong>Terminal</strong> menu).</p>
+</li>
+<li>
+<p>Enter your project folder</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>cd src/your-project-folder
+</span></span></code></pre></div><blockquote>
+<p>💡 Start typing the name of a folder or file and press <code>tab</code>. If you&rsquo;ve typed enough of it, your terminal&rsquo;s shell may be able to autoc-complete it for you.</p>
+</blockquote>
+</li>
+<li>
+<p>Check the status of the repository</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>git status
+</span></span></code></pre></div></li>
+<li>
+<p>If you&rsquo;re not on the <code>main</code> branch, switch to <code>main</code></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>git switch main
+</span></span></code></pre></div></li>
+<li>
+<p>Pull the latest on <code>main</code></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>git pull
+</span></span></code></pre></div></li>
+<li>
+<p>Now create a new branch from there</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>git switch -c sum-of-two-columns
+</span></span></code></pre></div><blockquote>
+<p>Branches are often named as a short reference so you know what you&rsquo;re supposed to be working on, while on that branch.</p>
+</blockquote>
+</li>
+</ul>
+<p>Great - you&rsquo;re on a fresh branch. Anything you do here won&rsquo;t affect main until you&rsquo;ve added it, commited it, pushed it, make a PR and merged it back to <code>main</code>.</p>
+<p>That may sound like a lot of bureaucracy, but it means <code>main</code> is safe from anything we do to experiment - and we can always abandon this branch if we don&rsquo;t like it. By the time we&rsquo;re done, this will all be second nature.</p>
+<h3 id="lets-write-some-code">Let&rsquo;s write some code!</h3>
+<p><strong>I strongly recommend writing your own prompts.</strong></p>
+<p>We&rsquo;re going to start the application, so you can see changes as opencode implements them with you.</p>
+<h4 id="start-the-application">Start the application</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>streamlit run app.py
+</span></span></code></pre></div><div class="table-scroll">
+<table>
+<thead>
+<tr>
+  <th>Description</th>
+  <th>Screenshot</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>After launching the application, I used the <em>internal browser</em> in VS Code to display the app.</td>
+  <td><img src="/post/prototyping-opencode-tutorial-004-experiment/001-running.png" alt="Application running" title="Screenshot of the application running in Visual Studio Code, alongside the app.py code file and an OpenCode prompt."></td>
+</tr>
+</tbody>
+</table>
+</div>
+<h4 id="0-test-a-little-change">0. Test a little change</h4>
+<p>First, confirm that you can see changes as they&rsquo;re applied. Change the title line yourself to:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>st<span style="color:#f92672">.</span>title(<span style="color:#e6db74">&#34;My Little Data Prototype&#34;</span>)
+</span></span></code></pre></div><div class="table-scroll">
+<table>
+<thead>
+<tr>
+  <th>Description</th>
+  <th>Screenshot</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>Streamlit will indicate that it spotted the change, and ask if you want to change every time.</td>
+  <td><img src="/post/prototyping-opencode-tutorial-004-experiment/002-file-change.png" alt="File change" title="A prompt from StreamLit. It says &#39;File change&#39;, with 2 options: &#39;Rerun&#39; and &#39;Always rerun&#39;"></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>Choose &ldquo;Always rerun&rdquo;. This is easiest for us, as we&rsquo;ll be able to see changes as they&rsquo;re made.</p>
+<blockquote>
+<p>If opencode breaks the application (even temporarily) you may need to refresh the page after it has finished working to see the new version of the application.</p>
+</blockquote>
+<p>Great! If you can see the new title &ldquo;My Little Data Prototype&rdquo;, we&rsquo;re ready to move on&hellip;</p>
+<h4 id="1-add-the-upload-button">1. Add the upload button</h4>
+<p>Let&rsquo;s write a prompt to add an upload input and button to the application.</p>
+<p>Use <code>tab</code> in the opencode tab to switch to <strong>Build</strong> mode, and give it a prompt. Hit <code>enter</code> when ready.</p>
+<p>Here&rsquo;s the prompt I&rsquo;m using, but I recommend<sup id="fnref:3"><a href="#fn:3" class="footnote-ref" role="doc-noteref">3</a></sup> getting used to writing them, so think about what you&rsquo;d like to achieve in the first step and prepare one in your own words:</p>
+<blockquote>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>Modify the app so that the user can upload a CSV file.
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>There should be an upload input, where the user can add a CSV file, and a button labelled Upload.
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>When the user clicks upload, the file should be read and validated. Here&#39;s what we expect:
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>- The file will contain a column with heading &#34;A&#34;, and a column with heading &#34;B&#34;
+</span></span><span style="display:flex;"><span>- Each row will either be blank, or contain a number in both columns A and B
+</span></span><span style="display:flex;"><span>- There may be other columns. These can be ignored.
+</span></span></code></pre></div></blockquote>
+<div class="table-scroll">
+<table>
+<thead>
+<tr>
+  <th>Working&hellip;</th>
+  <th>Complete</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td><img src="/post/prototyping-opencode-tutorial-004-experiment/003-working.png" alt="Working…" title="A screenshot showing opencode starting to work on the prompt."></td>
+  <td><img src="/post/prototyping-opencode-tutorial-004-experiment/004-upload-button.png" alt="Upload button" title="A screenshot showing the code and web application after opencode has finished working."></td>
+</tr>
+</tbody>
+</table>
+</div>
+<blockquote>
+<p><strong>⚠️ Your coding assistant may attempt to run its own copy of the application to test it, as a part of the exercise.</strong> If you already have a running copy, yours will be stopped. Don&rsquo;t worry, you can start it again afterwards with the same command as before:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>streamlit run app.py
+</span></span></code></pre></div></blockquote>
+<p>It&rsquo;s very likely that your coding assistant will make mistakes as it goes. It may also spend some time reasoning about whether the code it has written does what it&rsquo;s supposed to do. This is normal. Some providers (eg. Claude Code) may do a better job of hiding a lot of this &rsquo;thinking&rsquo; from you - but don&rsquo;t worry: Making mistakes and correcting them is a part of the process.</p>
+<p>You&rsquo;ll be able to see as it attempts to run the code it has written, read the error messages, interpret them, make corrections, and repeat - until it has delivered something that runs.</p>
+<p>It&rsquo;s also important to understand that it&rsquo;s very normal for a change in a complex application to have an unexpected impact on other components and other parts of the app. Software developers have some established ways to manage this (including code quality guidelines, automated tests, linters, house coding styles, and more&hellip;) We&rsquo;ll explore those in future tutorials.</p>
+<h5 id="test-the-upload-button">Test the upload button</h5>
+<p>The new control should be able to validate a simple CSV table. Here are two samples you can use to test:</p>
+<ol>
+<li><a href="/post/prototyping-opencode-tutorial-004-experiment/invalid-columns.csv">invalid-columns.csv</a></li>
+<li><a href="/post/prototyping-opencode-tutorial-004-experiment/valid-columns.csv">valid-columns.csv</a></li>
+</ol>
+<p>After uploading <a href="/post/prototyping-opencode-tutorial-004-experiment/invalid-columns.csv">invalid-columns.csv</a>, you should expect to see a warning about the incorrect columns.</p>
+<div class="table-scroll">
+<table>
+<thead>
+<tr>
+  <th>Invalid columns</th>
+  <th>Valid columns</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td><img src="/post/prototyping-opencode-tutorial-004-experiment/005-invalid-columns.png" alt="Invalid columns" title="A screenshot of VS Code showing the application. It shows an unsuccesful verification, with a message indicating that columns A and B were not found in the CSV file."></td>
+  <td><img src="/post/prototyping-opencode-tutorial-004-experiment/006-valid-columns.png" alt="Valid columns" title="A screenshot of VS Code showing the application. It shows a successful upload notification and a small grid containing numbers from the valid-columns CSV file."></td>
+</tr>
+</tbody>
+</table>
+</div>
+<h4 id="2-calculating-column-c">2. Calculating column C</h4>
+<p>Once satisfied with the first part, press on with the calculation and download part of this implementation.</p>
+<blockquote>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>After the user has uploaded their file, if it is valid, show a button labelled &#34;Calculate sums&#34;. When this is pressed:
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>- Read the CSV file into a a DataFrame
+</span></span><span style="display:flex;"><span>- Add a column with heading &#34;C&#34; to the DataFrame
+</span></span><span style="display:flex;"><span>- The value of column C in each row should be the sum of the values in columns A and B in that row (unless the row is empty)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>If the calculation is not successful, show an error message indicating what went wrong.
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>If the calculation is successful:
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>- Show a summary with:
+</span></span><span style="display:flex;"><span>  - &#34;Calculations:&#34; - the number of rows with a value for column C
+</span></span><span style="display:flex;"><span>  - The first 10 rows (or fewer if fewer are available), shown in a table
+</span></span><span style="display:flex;"><span>- Show a button the user can click to download the new DataFrame
+</span></span></code></pre></div></blockquote>
+<div class="table-scroll">
+<table>
+<thead>
+<tr>
+  <th>Calculated</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td><img src="/post/prototyping-opencode-tutorial-004-experiment/007-calculated.png" alt="Calculated" title="The application in VS Code. It shows the calculated column, and a download button."></td>
+</tr>
+</tbody>
+</table>
+</div>
+<h4 id="3-add-commit-push-pull-request-and-merge">3. Add, commit, push, pull request, and merge</h4>
+<p>Ok - you&rsquo;re satisfied with this piece of work. You&rsquo;ve tested it and it does what you expected. It&rsquo;s time to complete the task.</p>
+<p>First, make a commit.</p>
+<ol>
+<li>
+<p>Add all new files to your commit</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>git add --all
+</span></span></code></pre></div></li>
+<li>
+<p>Create a commit with a simple message explaining the change</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>git commit -m <span style="color:#e6db74">&#34;Tutorial: Add a feature to upload a CSV and sum columns A, B&#34;</span>
+</span></span></code></pre></div></li>
+<li>
+<p>Push your <code>sum-of-two-columns</code> branch to its equivalent on the remote repository</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>git push --set-upstream origin sum-of-two-columns
+</span></span></code></pre></div><blockquote>
+<p>💡 If you&rsquo;d typed <code>git push</code>, and it was the first push you&rsquo;d done from this branch, it would have prompted you to use the full form with the <code>--set-upstream</code> option.</p>
+</blockquote>
+</li>
+<li>
+<p>Create a pull request</p>
+<p>Your repository on GitHub has the <code>sum-of-two-columns</code> branch, but you haven&rsquo;t created a pull request yet. We&rsquo;ll create one now.</p>
+<ul>
+<li>Visit: <a href="https://github.com/your-github-id/your-repository/compare">https://github.com/your-github-id/your-repository/compare</a></li>
+<li>Pick the name of your branch to merge into <code>main</code></li>
+<li>Click <strong>Create pull request</strong></li>
+</ul>
+</li>
+</ol>
+<p>GitHub gives you a page for each pull request, and you can add a description there. When ready, press <strong>Create pull request</strong></p>
+<blockquote>
+<p>NB. Coding assistants can use commands from the terminal, just like you can. There are commands to add files to staging, create commits, push to a remote branch, and even to create a pull request. You could have asked it to do that for you - but, again, if you&rsquo;re not familiar with git, it&rsquo;s good to go through the motions until it&rsquo;s second nature.</p>
+</blockquote>
+<ol start="5">
+<li>Review the code</li>
+</ol>
+<p>This is where, in a team, another developer would review your code. You&rsquo;d be expected to understand everything you&rsquo;re delivering, and be able to justify the decisions you&rsquo;ve made.</p>
+<p>Code should be reviewed with kindness. It&rsquo;s an opportunity for others to learn, and also for the reviewer to learn.</p>
+<p>GitHub allows reviewers to leave notes, and for developers to make modifications based on those notes. You might push several times to a pull request branch before it&rsquo;s finally approved. That&rsquo;s normal, and it&rsquo;s a healthy part of team work that leads to higher code quality.</p>
+<p>We&rsquo;re skipping all of that for now.</p>
+<ol start="6">
+<li>Merge directly</li>
+</ol>
+<p>Near the bottom of your pull request, there&rsquo;s a button that will allow you to merge the changes.</p>
+<blockquote>
+<p><strong>⚠️ At the moment, there are no branch protections</strong> - so you can go right a head and merge those changes without a review. In a team environment, the repository&rsquo;s main branches would be protected - and that would ensure that &lsquo;rogue&rsquo; changes can&rsquo;t be accidentally merged into the product.</p>
+</blockquote>
+<p>Congratulations! That&rsquo;s your first application and pull request 🎉</p>
+<h2 id="review">Review</h2>
+<p>Today we created new functionality for an app, and used industry standard tools to merge it into our code repository.</p>
+<p>We broke up the prompt into two parts, so that you could see the changes as they were implemented. Most coding models can handle work that&rsquo;s bigger than this - but if you want someone to review your code, it&rsquo;s helpful to try and keep the changes small and focussed.</p>
+<p><strong>Small, tightly focussed, changes give your colleagues the best chance at reviewing it well,</strong> and that gives you the best chance of producing <em>good code</em>.</p>
+<p>There&rsquo;s lots more to talk about, including ways to keep your code safe, manage code quality, and reduce the risk of errors and regressions as you continue to work on the code. As a developer, you are ultimately responsible for the code that&rsquo;s created. If you&rsquo;re working with user data, you have a responsibility to your users to keep their data safe, too.</p>
+<p>We&rsquo;ll talk about ways to do that in the next tutorial.</p>
+<p><em>In the meantime, go wild!</em> Experiment, and get to know how your coding assistant works. It&rsquo;s low risk on a free tier.</p>
+<h2 id="references">References</h2>
+<details>
+<summary> <b>The full prompt...</b> </summary>
+<p>Modify the app so that the user can upload a CSV file.</p>
+<p>There should be an upload input, where the user can add a CSV file, and a button labelled Upload.</p>
+<p>When the user clicks upload, the file should be read and validated. Here&rsquo;s what we expect:</p>
+<ul>
+<li>The file will contain a column with heading &ldquo;A&rdquo;, and a column with heading &ldquo;B&rdquo;</li>
+<li>Each row will either be blank, or contain a number in both columns A and B</li>
+<li>There may be other columns. These can be ignored.</li>
+</ul>
+<p>After the user has uploaded their file, if it is valid, show a button labelled &ldquo;Calculate sums&rdquo;. When this is pressed:</p>
+<ul>
+<li>Read the CSV file into a a DataFrame</li>
+<li>Add a column with heading &ldquo;C&rdquo; to the DataFrame</li>
+<li>The value of column C in each row should be the sum of the values in columns A and B in that row (unless the row is empty)</li>
+</ul>
+<p>If the calculation is not successful, show an error message indicating what went wrong.</p>
+<p>If the calculation is successful:</p>
+<ul>
+<li>Show a summary with:
+<ul>
+<li>&ldquo;Calculations:&rdquo; - the number of rows with a value for column C</li>
+<li>The first 10 rows (or fewer if fewer are available), shown in a table</li>
+</ul>
+</li>
+<li>Show a button the user can click to download the new DataFrame</li>
+</ul>
+</details>
+<div class="footnotes" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn:1">
+<p>Comma Separated Value: It&rsquo;s a file format that represents a spreadsheet table. Internally, it&rsquo;s a text file - and you can open a CSV file in VS Code to take a look. Each row in the file represents a row in the table, and each value in the file has cells, separated by commas. (If you need to represent text that <em>contains</em> a comma, in a cell, wrap the whole cell&rsquo;s text in &ldquo;inverted commas&rdquo;.)&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:2">
+<p>Although this is a small task, breaking it up is good practice for working on more complex requirements.&#160;<a href="#fnref:2" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:3">
+<p>You&rsquo;re welcome to copy/paste these prompts into your own opencode session. I recommend getting used to thinking about the problem, and what you&rsquo;re asking for, so that you can be as specific as you need to get the result you want.&#160;<a href="#fnref:3" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+</ol>
+</div>
+
+            </div>
+        </div>
+
+        <div class="post-footer">
+            <div class="info">
+                
+                  <p>
+                    See also:
+                    <ul><li><a href="https://instantiator.dev/post/prototyping-opencode-tutorial-003-scaffolding/">Free AI-assisted coding 3: A basic prototype with Streamlit</a></li><li><a href="https://instantiator.dev/post/prototyping-opencode-tutorial-002-git/">Free AI-assisted coding 2: Managing your code</a></li><li><a href="https://instantiator.dev/post/prototyping-opencode-tutorial-001-dev-environment/">Free AI-assisted coding 1: Getting started</a></li>
+                    </ul>
+                  </p>
+                
+
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+        </div><script src="/js/bootstrap.min.js"></script>
+<script src="/js/feather.min.js"></script>
+<script src="/js/mastodon-timeline.umd.js"></script>
+<script>
+  feather.replace();
+</script></body>
+</html>

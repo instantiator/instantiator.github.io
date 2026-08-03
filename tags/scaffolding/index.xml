@@ -10,9 +10,16 @@
 		
 		
 		
-			<lastBuildDate>Tue, 28 Jul 2026 12:00:00 +0000</lastBuildDate>
+			<lastBuildDate>Mon, 03 Aug 2026 00:00:00 +0000</lastBuildDate>
 		
 			<atom:link href="https://instantiator.dev/tags/scaffolding/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>Free AI-assisted coding 4: Let&#39;s experiment</title>
+				<link>https://instantiator.dev/post/prototyping-opencode-tutorial-004-experiment/</link>
+				<pubDate>Mon, 03 Aug 2026 00:00:00 +0000</pubDate>
+				<guid>https://instantiator.dev/post/prototyping-opencode-tutorial-004-experiment/</guid>
+				<description>&lt;p&gt;Most people learn by doing. In earlier posts we set up a dev environment and and a small &lt;a href=&#34;https://streamlit.io&#34;&gt;Streamlit&lt;/a&gt; prototype. Now let&amp;rsquo;s use &lt;a href=&#34;https://opencode.ai/&#34;&gt;opencode&lt;/a&gt; to add a new feature.&lt;/p&gt;</description>
+			</item>
 			<item>
 				<title>Free AI-assisted coding 3: A basic prototype with Streamlit</title>
 				<link>https://instantiator.dev/post/prototyping-opencode-tutorial-003-scaffolding/</link>
