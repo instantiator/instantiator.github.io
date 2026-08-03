@@ -276,9 +276,9 @@
             <div class="mt-4">
                 <p><em>There&rsquo;s a bug in the Sky Hub that stops you from changing a whole bunch of settings. It&rsquo;s a genuine mistake that Sky won&rsquo;t fix. Here are some workarounds to help you control your home network&hellip;</em></p>
 <h2 id="sky-hub-blues">Sky Hub blues</h2>
-<p>The <code>SR203</code> Sky Hub has a problem. On the latest firmware<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup>, a bug prevents you from from changing several key parts of the configuration&hellip;</p>
-<p>I&rsquo;m using DDNS (dynamic DNS) to remotely communicate with some services that I host at home. To do that, I need to be able to forward internet traffic that arrives at certain ports, and to give some of the devices on my home network (a couple of Raspberry Pis) fixed IP addresses. This is all <em>possible</em> but the Sky Hub&rsquo;s poor interface has bugs that get in the way.</p>
-<p><strong>💀 It seems like this is a long-standing known issue, and that Sky aren&rsquo;t likely to fix it any time soon.</strong></p>
+<p>The <code>SR203</code> Sky Hub has a problem. On the latest firmware<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup>, a bug prevents you from from changing several key parts of the configuration.</p>
+<p>I&rsquo;m using DDNS (dynamic DNS) to remotely communicate with some services that I host at home. To do that, I need to be able to forward internet traffic that arrives at certain ports, and to give some of the devices on my home network (a couple of Raspberry Pis) fixed IP addresses. This is all <em>possible</em> but the Sky Hub&rsquo;s interface has bugs that get in the way.</p>
+<p><strong>💀 It seems like this is a long-standing known issue, and Sky aren&rsquo;t likely to fix it any time soon.</strong></p>
 <div class="table-scroll">
 <table>
 <thead>
@@ -289,7 +289,7 @@
 </thead>
 <tbody>
 <tr>
-  <td><img src="./sr203-evil.png" alt="The Sky Hub SR203. It's a black box with 4 LEDs on the front, that can light up as green or red." style="max-height: 50vh;" /></td>
+  <td><img src="./sr203-evil.png" alt="A comic-style render of the sky hub, complete with rust, spikes, and an energy weapon on an arm. In the background, green clouds and an evil castle." style="max-height: 50vh;" /></td>
   <td><img src="./sr203.jpg" alt="The Sky Hub SR203. It's a black box with 4 LEDs on the front, that can light up as green or red." style="max-height: 50vh;" /></td>
 </tr>
 </tbody>
@@ -319,8 +319,10 @@
 
 </div>
 <h3 id="the-symptoms">The symptoms</h3>
-<p>It&rsquo;s worth noting that this really only occurs over wifi.</p>
-<p>Instead of allowing yoy to change a configuration value, the Hub reloads the page and shows an warning that says &ldquo;your session has expired&rdquo;. (The session hasn&rsquo;t <em>actually</em> expired, and this always occurs.)</p>
+<p>When making changes to your network configuration in the hub: Instead of allowing you to alter and save certain values, the Hub reloads the page and shows a warning that says &ldquo;your session has expired&rdquo;. (The session hasn&rsquo;t <em>actually</em> expired, and this always occurs.)</p>
+<blockquote>
+<p>It&rsquo;s worth noting that this issue really only occurs over wifi. It took a while to discover that, as it didn&rsquo;t occur to me that the experience over an ethernet connection would be different. (I still can&rsquo;t imagine why.)</p>
+</blockquote>
 <p>Experimentally I&rsquo;ve spotted problems with:</p>
 <ul>
 <li>Managing the wifi networks (changing SSID, splitting 2.4 and 5 GHz bands)</li>
@@ -331,21 +333,22 @@
 <h2 id="workarounds">Workarounds</h2>
 <p>So what can we do about it?</p>
 <h3 id="a-use-an-ethernet-cable">A. Use an ethernet cable</h3>
-<p>This was, surprisingly, the simplest solution (and the one that took me the longest to discover). A degree of searching led to the suggestion that <em>perhaps</em> this was something worth trying - but it felt like a last resort&hellip;</p>
-<p>In the end, I dug out a USB-C to USB-A adapter, the old Belkin gigabit USB 2.0 ethernet adapter, and an old ethernet cable. Amazingly, it worked! Over a wired connection, the hub&rsquo;s web interface stops giving false session timeouts, and allows you to modify the configuration.</p>
+<p>This was, surprisingly, the simplest solution (and the one that took me the longest to discover). A degree of searching led to the suggestion that <em>perhaps</em> this was something worth trying - but it felt like a last resort.</p>
+<p>In the end, I dug out a USB-C to USB-A adapter, an old Belkin gigabit USB 2.0 ethernet adapter, and an old ethernet cable. Amazingly, it worked! Over a wired connection, the hub&rsquo;s web interface stops giving false session timeouts, and allows you to modify the configuration.</p>
 <ul>
 <li>Turn off your wifi</li>
-<li>Connect an ethernet cable between your laptop and the hub</li>
+<li>Connect an ethernet cable between your laptop and the hub (some devices have a port for it, others will need an adapter, as mine did)</li>
+<li>Allow a few seconds for your new connection to be established (on most modern operating systems, this will be automatic)</li>
 <li>Visit the hub at: <a href="http://192.168.0.1">http://192.168.0.1</a></li>
 </ul>
-<p>Read on if you don&rsquo;t have a laptop with an ethernet port you can use, or if you don&rsquo;t have access to the fiddly little ancient adapters I keep in a box &lsquo;for a rainy day&rsquo;&hellip;</p>
+<p>Read on if you don&rsquo;t have a laptop with an ethernet port, or if you don&rsquo;t have access to the fiddly little ancient adapters I keep in a box &lsquo;for a rainy day&rsquo;&hellip;</p>
 <h3 id="b-backup-and-restore">B. Backup and restore</h3>
-<p>This is the software solution. It&rsquo;s a bit more fiddly, but it&rsquo;ll work over wifi. Here&rsquo;s the workaround:</p>
+<p>This is the software solution. It&rsquo;s a bit more fiddly, but it&rsquo;ll work over wifi. Here&rsquo;s the detail:</p>
 <p>You can backup your hub configuration through the web UI, and you can restore it from a backup. This solution involes editing the configuration and then re-uploading it.</p>
 <p>This also works - and it&rsquo;s less risky than it sounds. If your hub doesn&rsquo;t recognise something in the configuration file it&rsquo;ll either reject your upload (because it doesn&rsquo;t think it&rsquo;s valid), or it&rsquo;ll simply ignore the change.</p>
 <h2 id="sky-hub-configuration-files">Sky Hub configuration files</h2>
 <p>Sky&rsquo;s <code>SR203</code> hub&rsquo;s configuration files are in XML format, but they&rsquo;re not well documented.</p>
-<p>Although it has areas of compatiblity with the (<a href="https://www.broadband-forum.org/pdfs/tr-098-1-2-1.pdf">Broadband Forum TR-098</a>) standard, the hub only loosely follows it. There&rsquo;s no other publicly available documentation around the format of the configuration file, and it&rsquo;s a proprietary product - so there&rsquo;s not much incentive to do so.</p>
+<p>Although it has areas of compatiblity with the <a href="https://www.broadband-forum.org/pdfs/tr-098-1-2-1.pdf">Broadband Forum TR-098</a> standard, the hub only loosely follows it. There&rsquo;s no other publicly available documentation for the format of the configuration file, and it&rsquo;s a proprietary product - so there&rsquo;s not much incentive to do so.</p>
 <p>There are XML elements in the TR-098 standard that look as if they might be usable to configure the hub - but they aren&rsquo;t actually used<sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup>.</p>
 <h3 id="inferred-schema">Inferred schema</h3>
 <p>In the absence of reliable documentation, I&rsquo;ve inferred<sup id="fnref:3"><a href="#fn:3" class="footnote-ref" role="doc-noteref">3</a></sup> an XML schema using variations of my own configuration, which you can use to validate changes before you apply them.</p>
@@ -353,13 +356,16 @@
 <li><strong><a href="/post/sky-hub-blues/sky-sr203-inferred.xsd"><code>sky-sr203-inferred.xsd</code></a></strong></li>
 </ul>
 <h2 id="changing-the-hub-configuration">Changing the hub configuration</h2>
-<p>Here&rsquo;s the proecss to making an edit:</p>
+<p>Here&rsquo;s the proecss for making an edit:</p>
 <ol>
-<li>Download the current config from the hub</li>
-<li>Edit it to add what you want (a reservation, a port forward)</li>
+<li>Download the current configuration from the hub</li>
+<li>Make a copy, and work on the copy (so you always have a backup of the original)</li>
+<li>Edit the new working copy, to add what you want (a reservation, a port forward, etc.)</li>
 <li>Validate your modified XML before you upload</li>
 <li>Upload it back into the hub</li>
-<li>Download it again afterwards and check your change was accepted</li>
+<li>Allow several minutes for the hub to reboot and read the new configuration</li>
+<li>Review the hub&rsquo;s web UI, look for your changes</li>
+<li>Download the configuration again, to see if your change was accepted</li>
 </ol>
 <blockquote>
 <p>💡 That last step is important: If the hub doesn&rsquo;t recognise a part of the configuration, it can silently ignore it. When it does that, it won&rsquo;t appear in the download so you can spot things that didn&rsquo;t work.</p>
@@ -385,7 +391,7 @@
 </td>
 </tr>
 </table>
-<h3 id="2-setting-up-port-forwarding">2. Setting up port forwarding</h3>
+<h3 id="31-setting-up-port-forwarding">3.1. Setting up port forwarding</h3>
 <p>Port forwards live in a flat, proprietary object called <code>SKY_GENERIC_WAN_FIREWALL_EXCEPTION</code>.</p>
 <ul>
 <li>It must be a direct child of <code>InternetGatewayDevice</code><sup id="fnref:4"><a href="#fn:4" class="footnote-ref" role="doc-noteref">4</a></sup> in the XML.</li>
@@ -443,7 +449,7 @@
 <blockquote>
 <p>NB. There&rsquo;s no separate field for the internal port, and there&rsquo;s no support for translating one external port to a different internal port. External and internal ports are always the same number. The hub is effectively &rsquo;exposing&rsquo; an internal port on its external interface.</p>
 </blockquote>
-<h3 id="2-reserving-ip-addresses">2. Reserving IP addresses</h3>
+<h3 id="32-reserving-ip-addresses">3.2. Reserving IP addresses</h3>
 <p>Port forwarding relies on being able to send internet traffic on to a known IP address, so it&rsquo;s a good idea to give the device you&rsquo;re forwarding to a fixed address.</p>
 <p>Reservations live in an element called <code>DHCPConditionalServingPool</code>, which must be nested inside <code>LANHostConfigManagement</code> (itself inside <code>LANDevice</code>), and placed after the
 existing <code>IPInterface</code> entries:</p>
@@ -495,7 +501,7 @@ existing <code>IPInterface</code> entries:</p>
 <li>Increment <code>instance</code> for each block.</li>
 <li>Bump the final element&rsquo;s <code>nextInstance</code> to the next unused <code>instance</code> number.</li>
 </ul>
-<h3 id="3-validate-your-xml">3. Validate your XML</h3>
+<h3 id="4-validate-your-xml">4. Validate your XML</h3>
 <p>First, download the schema to the same folder as the config file you&rsquo;re working on. I inferred a schema using <code>trang</code>, a mature tool, by James Clark, that can infer a schema from XML samples.</p>
 <ul>
 <li><strong><a href="/post/sky-hub-blues/sky-sr203-inferred.xsd"><code>sky-sr203-inferred.xsd</code></a></strong></li>
@@ -521,7 +527,7 @@ existing <code>IPInterface</code> entries:</p>
 </span></span><span style="display:flex;"><span>}
 </span></span></code></pre></div><p>(Restart Visual Studio Code after modifying the settings.)</p>
 </blockquote>
-<h3 id="4-upload-your-new-configuration">4. Upload your new configuration</h3>
+<h3 id="5-upload-your-new-configuration">5. Upload your new configuration</h3>
 <table>
 <tr><th>Steps</th><th>Screenshot</th></tr>
 <tr>
@@ -546,7 +552,7 @@ existing <code>IPInterface</code> entries:</p>
 </table>
 <p>The hub will reboot, and you&rsquo;ll spend a few minutes waiting while it loads the new configuration and your laptop reconnects.</p>
 <p>Once reconnected, either the new configuration will have been accepted, or it will have been silently dropped.</p>
-<h3 id="5-download-and-check-the-latest-config">5. Download and check the latest config</h3>
+<h3 id="8-download-and-check-the-latest-config">8. Download and check the latest config</h3>
 <p>Visit your hub&rsquo;s <strong>Maintenance</strong> - <strong>Backup Settings</strong> section one last time, and download one more copy of the configuration.</p>
 <p>If all&rsquo;s well, your new changes will be visible in the file. You should also be able to see those changes in the hub&rsquo;s web interface (even if you still can&rsquo;t edit them there).</p>
 <p>If something wasn&rsquo;t recognised (perhaps you made a typo or missed an instruction above), they&rsquo;ll have been removed.</p>
@@ -571,7 +577,7 @@ existing <code>IPInterface</code> entries:</p>
 <p>I used <code>trang</code>, a tool by James Clark that can infer a schema from XML samples. It&rsquo;s part of the <code>jing-trang</code> package (<code>brew install jing-trang</code>).&#160;<a href="#fnref:3" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
 </li>
 <li id="fn:4">
-<p>Don&rsquo;t nest it inside <code>WANDevice</code> or <code>WANIPConnection</code> (the as the TR-098 standard would imply).&#160;<a href="#fnref:4" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+<p>Don&rsquo;t nest it inside <code>WANDevice</code> or <code>WANIPConnection</code> (as the TR-098 standard would imply).&#160;<a href="#fnref:4" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
 </li>
 <li id="fn:5">
 <p>NB. This is <em>not</em> called <code>Yiaddr</code>, even though that&rsquo;s what the TR-098/TR-181 standard suggests. This object is specific to Sky.&#160;<a href="#fnref:5" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
