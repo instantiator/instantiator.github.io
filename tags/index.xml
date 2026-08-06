@@ -10,119 +10,21 @@
 		
 		
 		
-			<lastBuildDate>Thu, 06 Aug 2026 00:00:00 +0000</lastBuildDate>
+			<lastBuildDate>Mon, 03 Aug 2026 00:00:00 +0000</lastBuildDate>
 		
 			<atom:link href="https://instantiator.dev/tags/index.xml" rel="self" type="application/rss+xml" />
-			<item>
-				<title>Ai</title>
-				<link>https://instantiator.dev/tags/ai/</link>
-				<pubDate>Thu, 06 Aug 2026 00:00:00 +0000</pubDate>
-				<guid>https://instantiator.dev/tags/ai/</guid>
-				<description></description>
-			</item>
-			<item>
-				<title>Claude</title>
-				<link>https://instantiator.dev/tags/claude/</link>
-				<pubDate>Thu, 06 Aug 2026 00:00:00 +0000</pubDate>
-				<guid>https://instantiator.dev/tags/claude/</guid>
-				<description></description>
-			</item>
-			<item>
-				<title>Coding</title>
-				<link>https://instantiator.dev/tags/coding/</link>
-				<pubDate>Thu, 06 Aug 2026 00:00:00 +0000</pubDate>
-				<guid>https://instantiator.dev/tags/coding/</guid>
-				<description></description>
-			</item>
-			<item>
-				<title>Coding Assistant</title>
-				<link>https://instantiator.dev/tags/coding-assistant/</link>
-				<pubDate>Thu, 06 Aug 2026 00:00:00 +0000</pubDate>
-				<guid>https://instantiator.dev/tags/coding-assistant/</guid>
-				<description></description>
-			</item>
-			<item>
-				<title>Coding Conventions</title>
-				<link>https://instantiator.dev/tags/coding-conventions/</link>
-				<pubDate>Thu, 06 Aug 2026 00:00:00 +0000</pubDate>
-				<guid>https://instantiator.dev/tags/coding-conventions/</guid>
-				<description></description>
-			</item>
-			<item>
-				<title>Development</title>
-				<link>https://instantiator.dev/tags/development/</link>
-				<pubDate>Thu, 06 Aug 2026 00:00:00 +0000</pubDate>
-				<guid>https://instantiator.dev/tags/development/</guid>
-				<description></description>
-			</item>
-			<item>
-				<title>Experiment</title>
-				<link>https://instantiator.dev/tags/experiment/</link>
-				<pubDate>Thu, 06 Aug 2026 00:00:00 +0000</pubDate>
-				<guid>https://instantiator.dev/tags/experiment/</guid>
-				<description></description>
-			</item>
-			<item>
-				<title>Good Practice</title>
-				<link>https://instantiator.dev/tags/good-practice/</link>
-				<pubDate>Thu, 06 Aug 2026 00:00:00 +0000</pubDate>
-				<guid>https://instantiator.dev/tags/good-practice/</guid>
-				<description></description>
-			</item>
-			<item>
-				<title>Opencode</title>
-				<link>https://instantiator.dev/tags/opencode/</link>
-				<pubDate>Thu, 06 Aug 2026 00:00:00 +0000</pubDate>
-				<guid>https://instantiator.dev/tags/opencode/</guid>
-				<description></description>
-			</item>
-			<item>
-				<title>Prototyping</title>
-				<link>https://instantiator.dev/tags/prototyping/</link>
-				<pubDate>Thu, 06 Aug 2026 00:00:00 +0000</pubDate>
-				<guid>https://instantiator.dev/tags/prototyping/</guid>
-				<description></description>
-			</item>
-			<item>
-				<title>Quality</title>
-				<link>https://instantiator.dev/tags/quality/</link>
-				<pubDate>Thu, 06 Aug 2026 00:00:00 +0000</pubDate>
-				<guid>https://instantiator.dev/tags/quality/</guid>
-				<description></description>
-			</item>
-			<item>
-				<title>Readability</title>
-				<link>https://instantiator.dev/tags/readability/</link>
-				<pubDate>Thu, 06 Aug 2026 00:00:00 +0000</pubDate>
-				<guid>https://instantiator.dev/tags/readability/</guid>
-				<description></description>
-			</item>
-			<item>
-				<title>Safety</title>
-				<link>https://instantiator.dev/tags/safety/</link>
-				<pubDate>Thu, 06 Aug 2026 00:00:00 +0000</pubDate>
-				<guid>https://instantiator.dev/tags/safety/</guid>
-				<description></description>
-			</item>
-			<item>
-				<title>Standards</title>
-				<link>https://instantiator.dev/tags/standards/</link>
-				<pubDate>Thu, 06 Aug 2026 00:00:00 +0000</pubDate>
-				<guid>https://instantiator.dev/tags/standards/</guid>
-				<description></description>
-			</item>
-			<item>
-				<title>Tutorial</title>
-				<link>https://instantiator.dev/tags/tutorial/</link>
-				<pubDate>Thu, 06 Aug 2026 00:00:00 +0000</pubDate>
-				<guid>https://instantiator.dev/tags/tutorial/</guid>
-				<description></description>
-			</item>
 			<item>
 				<title>Data-Science</title>
 				<link>https://instantiator.dev/tags/data-science/</link>
 				<pubDate>Mon, 03 Aug 2026 00:00:00 +0000</pubDate>
 				<guid>https://instantiator.dev/tags/data-science/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Experiment</title>
+				<link>https://instantiator.dev/tags/experiment/</link>
+				<pubDate>Mon, 03 Aug 2026 00:00:00 +0000</pubDate>
+				<guid>https://instantiator.dev/tags/experiment/</guid>
 				<description></description>
 			</item>
 			<item>
@@ -133,10 +35,24 @@
 				<description></description>
 			</item>
 			<item>
+				<title>Opencode</title>
+				<link>https://instantiator.dev/tags/opencode/</link>
+				<pubDate>Mon, 03 Aug 2026 00:00:00 +0000</pubDate>
+				<guid>https://instantiator.dev/tags/opencode/</guid>
+				<description></description>
+			</item>
+			<item>
 				<title>Prototype</title>
 				<link>https://instantiator.dev/tags/prototype/</link>
 				<pubDate>Mon, 03 Aug 2026 00:00:00 +0000</pubDate>
 				<guid>https://instantiator.dev/tags/prototype/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Prototyping</title>
+				<link>https://instantiator.dev/tags/prototyping/</link>
+				<pubDate>Mon, 03 Aug 2026 00:00:00 +0000</pubDate>
+				<guid>https://instantiator.dev/tags/prototyping/</guid>
 				<description></description>
 			</item>
 			<item>
@@ -168,7 +84,14 @@
 				<description></description>
 			</item>
 			<item>
-				<title>Ui</title>
+				<title>Tutorial</title>
+				<link>https://instantiator.dev/tags/tutorial/</link>
+				<pubDate>Mon, 03 Aug 2026 00:00:00 +0000</pubDate>
+				<guid>https://instantiator.dev/tags/tutorial/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>UI</title>
 				<link>https://instantiator.dev/tags/ui/</link>
 				<pubDate>Mon, 03 Aug 2026 00:00:00 +0000</pubDate>
 				<guid>https://instantiator.dev/tags/ui/</guid>
@@ -315,6 +238,13 @@
 				<description></description>
 			</item>
 			<item>
+				<title>Ai</title>
+				<link>https://instantiator.dev/tags/ai/</link>
+				<pubDate>Fri, 17 Jul 2026 00:00:00 +0000</pubDate>
+				<guid>https://instantiator.dev/tags/ai/</guid>
+				<description></description>
+			</item>
+			<item>
 				<title>Ai-Assisted</title>
 				<link>https://instantiator.dev/tags/ai-assisted/</link>
 				<pubDate>Fri, 17 Jul 2026 00:00:00 +0000</pubDate>
@@ -326,6 +256,13 @@
 				<link>https://instantiator.dev/tags/ai-assisted-coding/</link>
 				<pubDate>Fri, 17 Jul 2026 00:00:00 +0000</pubDate>
 				<guid>https://instantiator.dev/tags/ai-assisted-coding/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Coding</title>
+				<link>https://instantiator.dev/tags/coding/</link>
+				<pubDate>Fri, 17 Jul 2026 00:00:00 +0000</pubDate>
+				<guid>https://instantiator.dev/tags/coding/</guid>
 				<description></description>
 			</item>
 			<item>
@@ -539,14 +476,14 @@
 				<description></description>
 			</item>
 			<item>
-				<title>Cci</title>
+				<title>CCI</title>
 				<link>https://instantiator.dev/tags/cci/</link>
 				<pubDate>Tue, 21 Apr 2026 19:00:00 +0000</pubDate>
 				<guid>https://instantiator.dev/tags/cci/</guid>
 				<description></description>
 			</item>
 			<item>
-				<title>Ci</title>
+				<title>CI</title>
 				<link>https://instantiator.dev/tags/ci/</link>
 				<pubDate>Tue, 21 Apr 2026 19:00:00 +0000</pubDate>
 				<guid>https://instantiator.dev/tags/ci/</guid>
@@ -952,7 +889,7 @@
 				<description></description>
 			</item>
 			<item>
-				<title>DotNet</title>
+				<title>Dotnet</title>
 				<link>https://instantiator.dev/tags/dotnet/</link>
 				<pubDate>Sun, 14 Jul 2024 12:00:00 +0000</pubDate>
 				<guid>https://instantiator.dev/tags/dotnet/</guid>
@@ -2219,7 +2156,7 @@
 				<description></description>
 			</item>
 			<item>
-				<title>Os X</title>
+				<title>OS X</title>
 				<link>https://instantiator.dev/tags/os-x/</link>
 				<pubDate>Fri, 12 Nov 2021 00:00:00 +0000</pubDate>
 				<guid>https://instantiator.dev/tags/os-x/</guid>
