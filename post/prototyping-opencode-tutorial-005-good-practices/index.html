@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en"><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+<html lang="en"><head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css">
@@ -7,7 +7,7 @@
     <link rel="stylesheet" type="text/css" href="/css/mastodon-timeline.min.css">
     
     
-    <title>instantiator.dev | </title>
+    <title>instantiator.dev | Free AI-assisted coding 5: Defeating slop with good practice</title>
     
     
       <script async src="https://www.googletagmanager.com/gtag/js?id=G-SHE42ZWKEN"></script>
@@ -26,18 +26,30 @@
       </script>
     
 	<meta name="twitter:card" content="summary_large_image">
-	<meta name="twitter:image" content="http://localhost:1313/lewis/default-image.png">
-	<meta name="twitter:title" content="instantiator.dev">
-	<meta name="twitter:description" content="Good practices For anything bigger than a little project like this, it’s worth getting some structure into your code. It’ll help to avoid common pitfalls and save you time and resources.">
+	<meta name="twitter:image" content="https://instantiator.dev/lewis/default-image.png">
+	<meta name="twitter:title" content="Free AI-assisted coding 5: Defeating slop with good practice">
+	<meta name="twitter:description" content="In previous tutorials you’ve set up an AI assisted development environment, and created your first project. Now it’s time to think about how to ensure you produce good code that’s reliable. The good news is that the software development industry has done a lot of thinking about this…">
 
-    <meta property="og:url" content="http://localhost:1313/post/prototyping-opencode-tutorial-005-good-practices/">
+    <meta property="og:url" content="https://instantiator.dev/post/prototyping-opencode-tutorial-005-good-practices/">
 	<meta property="og:site_name" content="instantiator.dev">
-	<meta property="og:title" content="instantiator.dev">
-	<meta property="og:description" content="Good practices For anything bigger than a little project like this, it’s worth getting some structure into your code. It’ll help to avoid common pitfalls and save you time and resources.">
+	<meta property="og:title" content="Free AI-assisted coding 5: Defeating slop with good practice">
+	<meta property="og:description" content="In previous tutorials you’ve set up an AI assisted development environment, and created your first project. Now it’s time to think about how to ensure you produce good code that’s reliable. The good news is that the software development industry has done a lot of thinking about this…">
 	<meta property="og:locale" content="en">
 	<meta property="og:type" content="article">
 		<meta property="article:section" content="post">
-		<meta property="og:image" content="http://localhost:1313/lewis/default-image.png">
+		<meta property="article:published_time" content="2026-08-06T00:00:00+00:00">
+		<meta property="article:modified_time" content="2026-08-06T00:00:00+00:00">
+		<meta property="article:tag" content="Tutorial">
+		<meta property="article:tag" content="Prototyping">
+		<meta property="article:tag" content="Experiment">
+		<meta property="article:tag" content="Ai">
+		<meta property="article:tag" content="Coding Assistant">
+		<meta property="article:tag" content="Opencode">
+		<meta property="og:image" content="https://instantiator.dev/lewis/default-image.png">
+			<meta property="og:see_also" content="https://instantiator.dev/post/prototyping-opencode-tutorial-004-experiment/">
+			<meta property="og:see_also" content="https://instantiator.dev/post/prototyping-opencode-tutorial-003-scaffolding/">
+			<meta property="og:see_also" content="https://instantiator.dev/post/prototyping-opencode-tutorial-002-git/">
+			<meta property="og:see_also" content="https://instantiator.dev/post/prototyping-opencode-tutorial-001-dev-environment/">
 
 
     
@@ -213,68 +225,421 @@
     </div>
     <div class="col-lg" style="overflow-x: hidden;">
         <div id="post-content">
-            <h2 style="display: inline-block;"></h2>
+            <h2 style="display: inline-block;">Free AI-assisted coding 5: Defeating slop with good practice</h2>
+                
+                    
+                        
+                        <a class="badge bg-primary" href="https://instantiator.dev/categories/tutorial">tutorial</a>
+                    
                 
             <div class="mt-2">
                  
 
 <div class="mb-2">
     <i data-feather="calendar"></i>
-    <time datetime="0001-01-01">0001-01-01</time>
+    <time datetime="2026-08-06">2026-08-06</time>
+</div>
+
+<div>
+    <i data-feather="tag"></i>
+    
+        
+        <a class="badge bg-secondary" href="https://instantiator.dev/tags/tutorial">#tutorial</a>
+    
+        
+        <a class="badge bg-secondary" href="https://instantiator.dev/tags/prototyping">#prototyping</a>
+    
+        
+        <a class="badge bg-secondary" href="https://instantiator.dev/tags/experiment">#experiment</a>
+    
+        
+        <a class="badge bg-secondary" href="https://instantiator.dev/tags/ai">#ai</a>
+    
+        
+        <a class="badge bg-secondary" href="https://instantiator.dev/tags/coding-assistant">#coding assistant</a>
+    
+        
+        <a class="badge bg-secondary" href="https://instantiator.dev/tags/opencode">#opencode</a>
+    
+        
+        <a class="badge bg-secondary" href="https://instantiator.dev/tags/claude">#claude</a>
+    
+        
+        <a class="badge bg-secondary" href="https://instantiator.dev/tags/quality">#quality</a>
+    
+        
+        <a class="badge bg-secondary" href="https://instantiator.dev/tags/good-practice">#good practice</a>
+    
+        
+        <a class="badge bg-secondary" href="https://instantiator.dev/tags/coding">#coding</a>
+    
+        
+        <a class="badge bg-secondary" href="https://instantiator.dev/tags/development">#development</a>
+    
+        
+        <a class="badge bg-secondary" href="https://instantiator.dev/tags/standards">#standards</a>
+    
+        
+        <a class="badge bg-secondary" href="https://instantiator.dev/tags/safety">#safety</a>
+    
+        
+        <a class="badge bg-secondary" href="https://instantiator.dev/tags/readability">#readability</a>
+    
+        
+        <a class="badge bg-secondary" href="https://instantiator.dev/tags/coding-conventions">#coding conventions</a>
+    
 </div>
 
 
             </div>
             <div class="mt-4">
-                <h2 id="good-practices">Good practices</h2>
-<p>For anything bigger than a little project like this, it&rsquo;s worth getting some structure into your code. It&rsquo;ll help to avoid common pitfalls and save you time and resources.</p>
-<p>Some questions to ask yourself:</p>
-<ol>
-<li>How should we arrange the code inside the project so it&rsquo;s easiest to work with?</li>
-<li>Once it&rsquo;s written, how do we know it will work?</li>
-</ol>
+                <p><em>In previous tutorials you&rsquo;ve set up an AI assisted development environment, and created your first project. Now it&rsquo;s time to think about how to ensure you produce good code that&rsquo;s reliable. The good news is that the software development industry has done a lot of thinking about this&hellip;</em></p>
+<h2 id="good-practice">Good practice</h2>
+<p><strong>You have responsibilities.</strong> When you write code for others to use, and before you commit to holding or processing data that&rsquo;s important to anyone else, you should be able to show that it will run correctly and handle data sensitively.</p>
+<p><strong>Writing code that&rsquo;s easy to understand is an important step towards this.</strong></p>
+<p>Unfortunately coding agents, following their vanilla behaviours alone, will often produce a lot more code than necessary, arranged in a jumble. When developers do this, it might be refered to as <em>messy</em> or <em>spaghetti</em> code. When AI produces it, we sometimes refer to it as <em>slop</em>.</p>
+<blockquote>
+<p><strong>⚠️ These terms can be used to bully others:</strong> Calling someone&rsquo;s code messy, or accusing them of churning out slop, is a cheap way to deride and discourage someone<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup>.</p>
+<p><strong>I feel strongly about this:</strong> Everybody is learning, and everybody has different levels of experience. Do better. Elevate others by offering kind advice. Make pull requests to help improve and describe why your changes will help. If you want people to do better, you should support them.</p>
+<p>It&rsquo;s also fair to say that long before AI entered the scene, developers took a view of how much effort to put into software development, and produced code of varying quality. Many factors affect this: deadlines, resources, experience, end user needs, other priorities&hellip;</p>
+</blockquote>
+<p>This is problematic because:</p>
+<ul>
+<li>Code that&rsquo;s difficult to read is difficult to maintain and improve</li>
+<li>When it&rsquo;s difficult to do work, it costs many more tokens each time your coding assistant has to do anything</li>
+<li>Code that&rsquo;s difficult to understand is difficult to assure
+<ul>
+<li>How do you know it will protect your users&rsquo; data?</li>
+<li>How do you know it won&rsquo;t make mistakes?</li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<p>💡 I&rsquo;ve assembled a suite of guidelines, skills, and scripts that you can apply to any project. It&rsquo;ll support your coding assistant to make good decisions about the code it writes. It&rsquo;s deliberately built to complement small, inexpensive, agents with limited context (as well as larger, more capable agents).</p>
+<p>I&rsquo;ve deliberately placed information about it towards the bottom of this post. I want you to read about, and understand, the problems it targets before making use of it.</p>
+<p><strong>I recommend you use a code quality tool, with every AI-assisted coding project.</strong> You&rsquo;ll probably want to customise it to your needs once you&rsquo;re familiar with some of the premises in this post.</p>
+</blockquote>
+<p>There are some key aspects to writing good code and, as a solo developer, a project lead, or working with an AI coding assistant, you can shape what&rsquo;s produced to be the best it can be:</p>
+<ul>
+<li><strong>Manage complexity</strong> to make your code easy to understand and modify</li>
+<li><strong>Ensure reliability</strong> to give assurances that your code does what you intended it to do</li>
+<li><strong>Follow good secure coding practices</strong> to be compliant with data protection laws, and protect your users data</li>
+</ul>
+<p>This post discusses complexity, and we&rsquo;ll cover reliability, testing, and security in subsequent posts.</p>
+<h3 id="a-quick-word-on-security">A quick word on security</h3>
+<p>Having said that, before we go any further, an important security guideline to protect yourself:</p>
+<blockquote>
+<p><strong>Never store live secrets, passwords, or keys in a public repository.</strong> It may seem like the easiest way to get started, but you are putting those secrets at risk. There are attackers who regularly scan public repositories looking for keys they can use to spend your money, or access your services.</p>
+</blockquote>
+<p>And while we&rsquo;re here - if you use a password to sign in to your repository provider, or your email, make sure it&rsquo;s a good password. If you can, turn on 2 factor authentication (2FA). This will help protect anything you store in private repositories, too.</p>
+<blockquote>
+<p>⚠️ <strong>Remember that your email address can often be used to reset a password.</strong> An attacker with access to your inbox could respond to verification checks, copy authentication codes, approve password changes or hide them from you.</p>
+</blockquote>
+<p><a href="https://xkcd.com/936/">This xkcd comic</a> explains how to pick a good password. There are plenty of good password generators available, including <a href="https://www.correcthorsebatterystaple.net/index.html">correct horse battery staple</a>, inspired by the comic. The NCSC (the UK&rsquo;s National Cyber Security Centre) also offers similar advice: <a href="https://www.ncsc.gov.uk/blog-post/the-logic-behind-three-random-words">The logic behind three random words</a></p>
+<p><img src="/post/prototyping-opencode-tutorial-005-good-practices/correct-horse-battery-staple.png" alt="Correct Horse Battery Staple xkcd" title="An xkcd comic explaining how to pick a good password. Conclusion: 4 random words like &#39;correct horse battery staple&#39; are easy to remember, but very hard for a hacker to guess."></p>
+<h2 id="managing-complexity">Managing complexity</h2>
+<h3 id="the-risk">The risk</h3>
+<blockquote>
+<p><strong>Even if you&rsquo;re an experienced developer, and even if you&rsquo;re working on a small personal project, your code base is <em>probably</em> going to grow past the point where a single person can know or remember everything about it.</strong></p>
+</blockquote>
+<p>Developers and coding assistants must read and understand existing code to be able to write more code. A lot of this advice applies to code written by, and written for, people and machines alike.</p>
+<p>Agents have limited context windows, even if they&rsquo;re running (expensive and) large models.</p>
+<p>Everything a coding assistant needs to consider is a part of its context. As it reasons about your project, to understand what it needs to do next, this fills with data - which means each action it takes consumes more tokens and takes longer.</p>
+<p>As the context grows near its limit, some assistants compact it - and each time they do, it degrades a little (reducing what they&rsquo;ve learned to a summary).</p>
+<p>It&rsquo;s important to make sure that code is sufficiently structured and clear to be able to work as efficiently as possible. Good documentation, following conventions, and structuring your project can help with the discovery of different parts of the code - reducing the reasoning needed to understand it.</p>
+<blockquote>
+<p><strong>For example:</strong> In the previous tutorial, we added new functionality to the Streamlit application. It&rsquo;s <em>very likely</em> that your coding assistant has placed all the code for that in the same file.</p>
+<p><strong>Look at it now:</strong> It&rsquo;s probably <em>okay</em> to read, because it&rsquo;s a simple project, so you can follow what it does with a little thought. There&rsquo;s plenty we can do to make it more readable, and more easily understood, though&hellip;</p>
+<details>
+<summary> <b>What my coding assistant produced...</b> </summary>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> io
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> pandas <span style="color:#66d9ef">as</span> pd
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> streamlit <span style="color:#66d9ef">as</span> st
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>st<span style="color:#f92672">.</span>title(<span style="color:#e6db74">&#34;My Little Data Prototype&#34;</span>)
+</span></span><span style="display:flex;"><span>st<span style="color:#f92672">.</span>write(<span style="color:#e6db74">&#34;Hello! This is a blank starter app.&#34;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>name <span style="color:#f92672">=</span> st<span style="color:#f92672">.</span>text_input(<span style="color:#e6db74">&#34;Enter your name&#34;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">if</span> name:
+</span></span><span style="display:flex;"><span>    st<span style="color:#f92672">.</span>write(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;Welcome, </span><span style="color:#e6db74">{</span>name<span style="color:#e6db74">}</span><span style="color:#e6db74">!&#34;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>st<span style="color:#f92672">.</span>divider()
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>uploaded_file <span style="color:#f92672">=</span> st<span style="color:#f92672">.</span>file_uploader(<span style="color:#e6db74">&#34;Choose a CSV file&#34;</span>, type<span style="color:#f92672">=</span>[<span style="color:#e6db74">&#34;csv&#34;</span>])
+</span></span><span style="display:flex;"><span>upload <span style="color:#f92672">=</span> st<span style="color:#f92672">.</span>button(<span style="color:#e6db74">&#34;Upload&#34;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">if</span> upload:
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> uploaded_file <span style="color:#f92672">is</span> <span style="color:#66d9ef">None</span>:
+</span></span><span style="display:flex;"><span>        st<span style="color:#f92672">.</span>error(<span style="color:#e6db74">&#34;No file selected. Please choose a CSV file first.&#34;</span>)
+</span></span><span style="display:flex;"><span>        st<span style="color:#f92672">.</span>session_state<span style="color:#f92672">.</span>pop(<span style="color:#e6db74">&#34;valid_df&#34;</span>, <span style="color:#66d9ef">None</span>)
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">else</span>:
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">try</span>:
+</span></span><span style="display:flex;"><span>            df <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>read_csv(io<span style="color:#f92672">.</span>BytesIO(uploaded_file<span style="color:#f92672">.</span>getvalue()))
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">except</span> <span style="color:#a6e22e">Exception</span>:
+</span></span><span style="display:flex;"><span>            st<span style="color:#f92672">.</span>error(<span style="color:#e6db74">&#34;Could not read the file as CSV. Please check the file format.&#34;</span>)
+</span></span><span style="display:flex;"><span>            st<span style="color:#f92672">.</span>session_state<span style="color:#f92672">.</span>pop(<span style="color:#e6db74">&#34;valid_df&#34;</span>, <span style="color:#66d9ef">None</span>)
+</span></span><span style="display:flex;"><span>            st<span style="color:#f92672">.</span>stop()
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> <span style="color:#f92672">not</span> {<span style="color:#e6db74">&#34;A&#34;</span>, <span style="color:#e6db74">&#34;B&#34;</span>}<span style="color:#f92672">.</span>issubset(df<span style="color:#f92672">.</span>columns):
+</span></span><span style="display:flex;"><span>            missing <span style="color:#f92672">=</span> {<span style="color:#e6db74">&#34;A&#34;</span>, <span style="color:#e6db74">&#34;B&#34;</span>} <span style="color:#f92672">-</span> set(df<span style="color:#f92672">.</span>columns)
+</span></span><span style="display:flex;"><span>            st<span style="color:#f92672">.</span>error(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;The CSV file must contain columns A and B. Missing: </span><span style="color:#e6db74">{</span><span style="color:#e6db74">&#39;, &#39;</span><span style="color:#f92672">.</span>join(sorted(missing))<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>)
+</span></span><span style="display:flex;"><span>            st<span style="color:#f92672">.</span>session_state<span style="color:#f92672">.</span>pop(<span style="color:#e6db74">&#34;valid_df&#34;</span>, <span style="color:#66d9ef">None</span>)
+</span></span><span style="display:flex;"><span>            st<span style="color:#f92672">.</span>stop()
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        rows <span style="color:#f92672">=</span> df[[<span style="color:#e6db74">&#34;A&#34;</span>, <span style="color:#e6db74">&#34;B&#34;</span>]]
+</span></span><span style="display:flex;"><span>        errors <span style="color:#f92672">=</span> []
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">for</span> index, (a, b) <span style="color:#f92672">in</span> rows<span style="color:#f92672">.</span>iterrows():
+</span></span><span style="display:flex;"><span>            a_blank <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>isna(a)
+</span></span><span style="display:flex;"><span>            b_blank <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>isna(b)
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">if</span> a_blank <span style="color:#f92672">and</span> b_blank:
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">continue</span>
+</span></span><span style="display:flex;"><span>            a_num <span style="color:#f92672">=</span> isinstance(a, (int, float)) <span style="color:#f92672">and</span> <span style="color:#f92672">not</span> isinstance(a, bool)
+</span></span><span style="display:flex;"><span>            b_num <span style="color:#f92672">=</span> isinstance(b, (int, float)) <span style="color:#f92672">and</span> <span style="color:#f92672">not</span> isinstance(b, bool)
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">if</span> <span style="color:#f92672">not</span> (a_num <span style="color:#f92672">and</span> b_num):
+</span></span><span style="display:flex;"><span>                errors<span style="color:#f92672">.</span>append(
+</span></span><span style="display:flex;"><span>                    <span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;Row </span><span style="color:#e6db74">{</span>index <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span><span style="color:#e6db74">}</span><span style="color:#e6db74">: invalid value(s) A=</span><span style="color:#e6db74">{</span>a<span style="color:#e6db74">!r}</span><span style="color:#e6db74">, B=</span><span style="color:#e6db74">{</span>b<span style="color:#e6db74">!r}</span><span style="color:#e6db74">. &#34;</span>
+</span></span><span style="display:flex;"><span>                    <span style="color:#e6db74">&#34;Each row must be blank or contain a number in both columns.&#34;</span>
+</span></span><span style="display:flex;"><span>                )
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">if</span> len(errors) <span style="color:#f92672">&gt;=</span> <span style="color:#ae81ff">10</span>:
+</span></span><span style="display:flex;"><span>                    errors<span style="color:#f92672">.</span>append(<span style="color:#e6db74">&#34;...and more&#34;</span>)
+</span></span><span style="display:flex;"><span>                    <span style="color:#66d9ef">break</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> errors:
+</span></span><span style="display:flex;"><span>            st<span style="color:#f92672">.</span>error(<span style="color:#e6db74">&#34;The file failed validation:&#34;</span>)
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">for</span> error <span style="color:#f92672">in</span> errors:
+</span></span><span style="display:flex;"><span>                st<span style="color:#f92672">.</span>error(error)
+</span></span><span style="display:flex;"><span>            st<span style="color:#f92672">.</span>session_state<span style="color:#f92672">.</span>pop(<span style="color:#e6db74">&#34;valid_df&#34;</span>, <span style="color:#66d9ef">None</span>)
+</span></span><span style="display:flex;"><span>            st<span style="color:#f92672">.</span>stop()
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        st<span style="color:#f92672">.</span>session_state[<span style="color:#e6db74">&#34;valid_df&#34;</span>] <span style="color:#f92672">=</span> df
+</span></span><span style="display:flex;"><span>        st<span style="color:#f92672">.</span>success(<span style="color:#e6db74">&#34;File uploaded and validated successfully.&#34;</span>)
+</span></span><span style="display:flex;"><span>        st<span style="color:#f92672">.</span>dataframe(df)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">if</span> <span style="color:#e6db74">&#34;valid_df&#34;</span> <span style="color:#f92672">in</span> st<span style="color:#f92672">.</span>session_state:
+</span></span><span style="display:flex;"><span>    calculate <span style="color:#f92672">=</span> st<span style="color:#f92672">.</span>button(<span style="color:#e6db74">&#34;Calculate sums&#34;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> calculate:
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">try</span>:
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">if</span> uploaded_file <span style="color:#f92672">is</span> <span style="color:#66d9ef">None</span>:
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">raise</span> <span style="color:#a6e22e">ValueError</span>(<span style="color:#e6db74">&#34;The uploaded file is no longer available. Please upload it again.&#34;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>            df <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>read_csv(io<span style="color:#f92672">.</span>BytesIO(uploaded_file<span style="color:#f92672">.</span>getvalue()))
+</span></span><span style="display:flex;"><span>            c_values <span style="color:#f92672">=</span> []
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">for</span> a, b <span style="color:#f92672">in</span> df[[<span style="color:#e6db74">&#34;A&#34;</span>, <span style="color:#e6db74">&#34;B&#34;</span>]]<span style="color:#f92672">.</span>itertuples(index<span style="color:#f92672">=</span><span style="color:#66d9ef">False</span>, name<span style="color:#f92672">=</span><span style="color:#66d9ef">None</span>):
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">if</span> pd<span style="color:#f92672">.</span>isna(a) <span style="color:#f92672">and</span> pd<span style="color:#f92672">.</span>isna(b):
+</span></span><span style="display:flex;"><span>                    c_values<span style="color:#f92672">.</span>append(pd<span style="color:#f92672">.</span>NA)
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">else</span>:
+</span></span><span style="display:flex;"><span>                    c_values<span style="color:#f92672">.</span>append(a <span style="color:#f92672">+</span> b)
+</span></span><span style="display:flex;"><span>            df[<span style="color:#e6db74">&#34;C&#34;</span>] <span style="color:#f92672">=</span> c_values
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">except</span> <span style="color:#a6e22e">Exception</span> <span style="color:#66d9ef">as</span> exc:
+</span></span><span style="display:flex;"><span>            st<span style="color:#f92672">.</span>error(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;The calculation failed: </span><span style="color:#e6db74">{</span>exc<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>)
+</span></span><span style="display:flex;"><span>            st<span style="color:#f92672">.</span>stop()
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        count <span style="color:#f92672">=</span> int(df[<span style="color:#e6db74">&#34;C&#34;</span>]<span style="color:#f92672">.</span>notna()<span style="color:#f92672">.</span>sum())
+</span></span><span style="display:flex;"><span>        st<span style="color:#f92672">.</span>write(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;Calculations: </span><span style="color:#e6db74">{</span>count<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>)
+</span></span><span style="display:flex;"><span>        st<span style="color:#f92672">.</span>table(df<span style="color:#f92672">.</span>head(<span style="color:#ae81ff">10</span>))
+</span></span><span style="display:flex;"><span>        st<span style="color:#f92672">.</span>download_button(
+</span></span><span style="display:flex;"><span>            <span style="color:#e6db74">&#34;Download CSV&#34;</span>,
+</span></span><span style="display:flex;"><span>            df<span style="color:#f92672">.</span>to_csv(index<span style="color:#f92672">=</span><span style="color:#66d9ef">False</span>)<span style="color:#f92672">.</span>encode(<span style="color:#e6db74">&#34;utf-8&#34;</span>),
+</span></span><span style="display:flex;"><span>            file_name<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;calculated.csv&#34;</span>,
+</span></span><span style="display:flex;"><span>            mime<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;text/csv&#34;</span>,
+</span></span><span style="display:flex;"><span>        )
+</span></span></code></pre></div></details>
+</blockquote>
+<p>To make things easier, we can follow conventions, use standards, employ frameworks, and document our code.</p>
+<p><strong>For anything larger than the small experiments in this tutorial, so far, it&rsquo;s a strong recommendation.</strong></p>
+<h3 id="breaking-up-your-code">Breaking up your code</h3>
+<p><strong>Code is often broken up into functions that do one thing each.</strong>  Function names are important to make it clear what they do. Functions can be kept in separate files, or grouped together in a single file, to make them easier to find.</p>
+<p>When a function is used by another function, that makes it much clearer and easier to see what the code does. In turn, that makes it easier to maintain (with less time, effort, and tokens).</p>
+<p><strong>Functions can be grouped, too.</strong> Coding languages each offer their own ways to achieve this: classes, modules, and namespaces govern how code is arranged. Code files can be grouped into folders, often because they are interrelated, or are all a part of a single aspect of the project.</p>
+<p>This is the beginning of thinking about the structure of your code base, and will help to make it accessible to others.</p>
+<blockquote>
+<p>There&rsquo;s a nice tool, called <a href="https://github.com/scanaislop/aislop">aislop</a> that can measure and report on the signals that indicate spaghetti or sloppy code. It&rsquo;s a good way to spot disorganised code, or files and functions that are far too long for comfort.</p>
+<p>I&rsquo;ve built aislop into my assembly of tools, which I&rsquo;ll discuss towards the end of this post.</p>
+</blockquote>
 <h3 id="common-conventions">Common conventions</h3>
-<p>When your AI assistant is working for you, it builds itself a context - which contains all the information it has learned (your prompts, its responses, all the code files it has read, the things it has done, etc.) As your conversation grows, so does the context. The larger it is, the more work (and tokens) it needs to work through to get anything done.</p>
-<p>You&rsquo;re either paying for tokens, or you have a free tier budget. Either way, let&rsquo;s take a look at some practices that will help you keep your context small&hellip;</p>
-<p>NB. opencode can make its context smaller by compacting it. This is often done by figure out what it can safely lose, and still be useful. It will very likely replace what it dropped from the context with a shorter summary, so that it doesn&rsquo;t forget everything entirely. This is helpful, but there&rsquo;s plenty you can do to achieve more.</p>
+<p>Let&rsquo;s take a look at some practices that help to make code easier to understand at a glance.</p>
 <p>Software development is a discipline - and has developed some common ways of working that make it easier to work collaboratively.</p>
 <ul>
 <li>
 <p><strong>Documentation:</strong> By documenting the project, you and your assistant will have access to a useful summary of the code it has created.</p>
+<p>Documentation often lives in a folder called <code>docs/</code> in a repository. Keeping it <em>close</em> to the code by keeping it in the repository makes it easy to discover.</p>
 </li>
 <li>
-<p><strong>Conventions:</strong> By following common patterns and conventions, you and your assistant can share a common language. You won&rsquo;t need to clarify so many things, and it&rsquo;ll have a much better clue about where to find the parts of the project it needs, and how to use them.</p>
+<p><strong>Coding patterns:</strong> By following common patterns and conventions you and other developers, including your coding assistant, can share a common language. You won&rsquo;t need to clarify so many things, and it&rsquo;ll have a much better clue about where to find the parts of the project it needs, and how to use them.</p>
+<p>See also: <a href="https://en.wikipedia.org/wiki/Design_Patterns">Design Patterns</a></p>
+</li>
+<li>
+<p><strong>Frameworks:</strong> Some conventions and coding patterns are built into frameworks, which come with code you&rsquo;re bound to need, and can act like bumpers - helping your code follow an easily recognisable structure. This makes it easier to reuse, extend, or fix the things you create.</p>
+<p>Streamlit is one such framework, and it helps to build complex projects with user interfaces that are easy to maintain. (Other frameworks also offer this, in different ways. What&rsquo;s important is to have a logical, internally-consistent, approach so that the meaning of your code is predictable.)</p>
+</li>
+<li>
+<p><strong>Code quality constraints:</strong> These are often rules to help developers write code that&rsquo;s easy to understand, or less likely to contain mistakes.</p>
 </li>
 </ul>
-<p>Documentation often lives in a folder called <code>docs/</code> in the repository. Keeping it <em>close</em> to the code by keeping it in the repository is good. It&rsquo;s quick and easy for a developer to find, and your coding assistant can also use it.</p>
-<p>Some conventions are built into frameworks, which act like bumpers - forcing development into a structure. This often means that the code you write will be reusable and easy to debug or fix.</p>
-<p>Streamlit is one such framework, and it helps to build complex projects with user interfaces that are much easier to maintain than other ways of acheving the same thing.</p>
-<p>Other conventions are code quality constraints. These are often rules to help developers write code that&rsquo;s easy to follow, easy to change, and easy to reuse. There are some common guidlines known to developers to help with this&hellip;</p>
-<p><strong>TODO</strong> In a future post, we&rsquo;ll explore how to encode these into rules for your agents. Coding assistants can discover information about your project including rules that specify how you want it to tackle coding, through an <code>AGENTS.md</code><sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup> file and skills you can write for your agents.</p>
-<h3 id="dry-dont-repeat-yourself">DRY (Don&rsquo;t Repeat Yourself)</h3>
-<p><strong>If you find that you&rsquo;ve written the same function more than once, it&rsquo;s a candidate for deduplication.</strong></p>
-<p>In the ideal case, you&rsquo;d only write it once, and call it from everywhere it&rsquo;s needed.</p>
+<blockquote>
+<p>These standards can be encoded as rules for your agents. Coding assistants can discover information about your project, including rules that specify how you want it to approach coding tasks, through an <code>AGENTS.md</code><sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup> file and skills you write for your agents.</p>
+</blockquote>
+<p>Here are a helpful subset of these guidelines:</p>
+<ol>
+<li>DRY (Don&rsquo;t Repeat Yourself)</li>
+<li>KISS (Keep It Simple Stupid)</li>
+<li>YAGNI (You Ain&rsquo;t Gonna Need It)</li>
+<li>SOLID (principles for object oriented development)</li>
+<li>Separation of concerns (a precursor to the Single Responsibility Principle)</li>
+</ol>
+<h4 id="dry-dont-repeat-yourself">DRY (Don&rsquo;t Repeat Yourself)</h4>
+<p><strong>If you find that you&rsquo;ve written the same function more than once, it&rsquo;s a candidate for deduplication.</strong> In the ideal case, you&rsquo;d only write it once, and call it from everywhere it&rsquo;s needed.</p>
 <p>This is important because most of our assumptions, when we write code, will be challenged. It&rsquo;s very likely you&rsquo;ll need to change those functions. For every duplicate, that&rsquo;s an extra step - and another point in the code base you could forget about.</p>
-<p>Some developers are more relaxed about this, and there&rsquo;s a case to say that if something <em>only</em> appears twice, it <em>might</em> be <em>more effort</em> to combine those instances than it&rsquo;s worth.</p>
-<p>This is very much a judgement call - and something you&rsquo;ll want to tell your coding assistant about upfront as a part of the coding standards you lay down.</p>
-<p>I instinctively err on the side of deduplication. As code bases get bigger and more complex, you may not be able to remember where all the instances are, and it becomes harder to maintain. Better to nip it in the bud.</p>
-<h3 id="kiss-keep-it-simple-stupid">KISS (Keep It Simple Stupid)</h3>
-<h3 id="yagni-you-aint-gonna-need-it">YAGNI (You Ain&rsquo;t Gonna Need It)</h3>
-<p>It&rsquo;s tempting to write a lot more code than you need to achieve your immediate goal.</p>
-<h3 id="separation-of-concerns">Separation of concerns</h3>
-<p><strong>Each distinct piece of code should have a single responsibility.</strong></p>
-<h3 id="testing">Testing</h3>
-<p>When you alter code in a software project, it&rsquo;s very likely you&rsquo;ll also alter something you didn&rsquo;t mean to, too. That&rsquo;s the nature of complex tasks like coding. After a few surprises, you&rsquo;ll come to the conclusion that there ought to be a way to catch mistakes.</p>
+<p>Some developers are more relaxed about this, and there&rsquo;s a case to say that if something <em>only</em> appears <em>twice</em>, it <em>might</em> be more effort to combine those instances than it&rsquo;s worth.</p>
+<p>This is very much a judgement call - and something you&rsquo;ll want to tell your coding assistant about upfront, as you lay down coding standards.</p>
+<blockquote>
+<p>My personal approach is to err towards deduplication, even at two occurrences.</p>
+<p>As projects get bigger and more complex, you may not be able to remember where all the instances are, and so it becomes harder to keep every copy of every function consistent. To me, it feels better to nip it in the bud and combine them as soon as possible.</p>
+<p>Where it really would take too much time to reorganise or combine two instances of similar functions, I leave a comment at both locations, reminding me of the link between them.</p>
+</blockquote>
+<h4 id="kiss-keep-it-short-and-simple">KISS (Keep It Short and Simple)</h4>
+<p>KISS<sup id="fnref:3"><a href="#fn:3" class="footnote-ref" role="doc-noteref">3</a></sup> is nicely explained <a href="https://www.geeksforgeeks.org/software-engineering/kiss-principle-in-software-development/">here, at Geeks for Geeks</a>. It&rsquo;s a nice approach, and helps you to focus in on your core goals, avoiding distractions and helping to limit <a href="https://en.wikipedia.org/wiki/Feature_creep">feature creep</a>.</p>
+<p>Product managers and delivery managers in larger teams will often do a lot of this thinking together with a lead developer.</p>
+<p>I recommend spending time noting down what you need from each aspect of the project up-front. Make bullet points on what you want to achieve, and break the work down into individual features or individual cross-cutting aspects of the project.</p>
+<p>This doesn&rsquo;t mean you need to assemble a full specification before you start, and <em>I definitely don&rsquo;t recommend a waterfall<sup id="fnref:4"><a href="#fn:4" class="footnote-ref" role="doc-noteref">4</a></sup> approach</em>, but if you understand and acknowledge each part of the problem you want to solve, you can identify what&rsquo;s essential and what&rsquo;s nice-to-have in future.</p>
+<p>So long as you track all the things you <em>intend</em> to do, you&rsquo;ll be able to sift out, prioritise, and order the work to help keep control of the feature set. If you&rsquo;re working solo, this becomes even more essential to help you keep on track, and prevent the project from growing too large to maintain or complete.</p>
+<p>There are plenty of ways to track units of work so you don&rsquo;t lose them. Examples include:</p>
 <ul>
-<li><strong>Automated tests:</strong> There are testing frameworks for every language and framework.</li>
+<li><a href="https://www.atlassian.com/software/jira">Jira</a> (Atlassian) - a popular, sophisticated, tool</li>
+<li><a href="https://trello.com/">Trello</a> (Atlassian) - a popular, simpler, tool</li>
+<li><a href="https://docs.github.com/en/issues/planning-and-tracking-with-projects/learning-about-projects/about-projects">GitHub Projects</a> (GitHub / Microsoft) - a nice tool, with the advantage that it&rsquo;s built into GitHub</li>
+<li><a href="https://asana.com/">Asana</a> (Asana) - a friendlier tool</li>
 </ul>
-<p>This is essential for every project, and it&rsquo;ll get a whole post. Without it, you&rsquo;ll be reduced to manually testing every feature every time you make a change.</p>
-<p>We&rsquo;ll talk about automated testing very soon.</p>
+<p>There are plenty of others.</p>
+<p>For simple projects, keeping a small spreadsheet or list of tasks could be sufficient to get started. Be prepared to migrate between tools if things get complex or difficult to follow. I don&rsquo;t advise leaving full control of the project to your coding assistant. It&rsquo;s your project and you&rsquo;re responsible for the outcomes, so keep hold of the reins.</p>
+<h4 id="yagni-you-aint-gonna-need-it">YAGNI (You Ain&rsquo;t Gonna Need It)</h4>
+<p>It&rsquo;s tempting to write a lot more code than you need to achieve your immediate goal. Many developers think ahead to how they will accommodate future needs, which is good - but requirements frequently change.</p>
+<blockquote>
+<p><strong>We tend to think of requirements as unchanging.</strong> We&rsquo;re wrong about that, <em>surprisingly often.</em></p>
+</blockquote>
+<p>Building features you don&rsquo;t need is expensive: You&rsquo;ll spend time building it, sure, but you may also need to spend time unpicking it if it turns out to conflict with a new requirement.</p>
+<p>That doesn&rsquo;t mean build the bare minimum (although that would be efficient) - because you&rsquo;ll end up paying extra time if you&rsquo;re not forward compatible.</p>
+<p>Find a balance between <em>what&rsquo;s needed now</em> and <em>what would make it easier to extend the project in future</em>.</p>
+<blockquote>
+<p>There&rsquo;s a nice tool, called <a href="https://ponytail.dev/">ponytail</a><sup id="fnref:5"><a href="#fn:5" class="footnote-ref" role="doc-noteref">5</a></sup>, which can help your coding assistant rationalise the code it writes. It&rsquo;s a good step towards this - although you may need to intervene at times to ensure it does retain future compatibility.</p>
+<p>I&rsquo;ve built ponytail into my toolset, which I&rsquo;ll discuss towards the end of this post.</p>
+</blockquote>
+<h4 id="solid">SOLID</h4>
+<p><strong>SOLID is a set of principles for object oriented software development.</strong> It&rsquo;s particularly targeted at languages that support OOP<sup id="fnref:6"><a href="#fn:6" class="footnote-ref" role="doc-noteref">6</a></sup> but there are aspects of these principles that apply to all styles of coding.</p>
+<p>We won&rsquo;t go into this in depth, but I&rsquo;ve summarised it below. It&rsquo;s worth knowing about should you find yourself working on a larger, or more complex, object oriented project.</p>
+<details>
+<summary> <b>SOLID principles...</b> </summary>
+<p>These principles help keep code flexible and more easily maintainable:</p>
+<ol>
+<li><strong>Single responsibility principle</strong> - each class should have one responsibility</li>
+<li><strong>Open–closed principle</strong> - build a class so that new features can be added by extending it, without modifying it</li>
+<li><strong>Liskov substitution principle</strong> - if you extend a class, anything that uses the base class should be able to use the extension</li>
+<li><strong>Interface segregation principle</strong> - code should not be forced to depend on an interface it doesn&rsquo;t use</li>
+<li><strong>Dependency inversion principle</strong> - code should depend on abstractions (like interfaces) rather than concrete classes</li>
+</ol>
+<p>NB. These principles can lead to a lot of code that takes a long time to write. Once it&rsquo;s written, the benefits are manifest but, in some cases, small projects with limited resources and limited scope may pick and choose what&rsquo;s best to achieve their goals.</p>
+<p>See also: <a href="https://en.wikipedia.org/wiki/SOLID">https://en.wikipedia.org/wiki/SOLID</a></p>
+</details>
+<h4 id="separation-of-concerns">Separation of concerns</h4>
+<p>Well-established long before the SOLID principles above, this is a good guideline for working in any language - and it covers a lot of what we talked about in the <strong>Managing complexity</strong> section near the beginning of this post.</p>
+<p><strong>Whether it&rsquo;s a function, class, or module, each distinct unit of code should have a single, clear, responsibility.</strong></p>
+<p>This makes sense intuitively - it means you can more easily understand the purpose of what you&rsquo;re looking at and, it should quickly become clear where you need to make a change when you&rsquo;re modifying a feature. This helps developers and coding agents alike.</p>
+<h2 id="how-to-apply-coding-standards">How to apply coding standards</h2>
+<p>These principles, once internalised, will help you to become a great coder. They play a part in the consideration of quality for every software development project - and can often make the difference between accepting code or asking for revisions.</p>
+<h3 id="agentsmd"><code>AGENTS.md</code></h3>
+<p>You can embed those principles in the work your coding assistant does by giving it directives in a file called <code>AGENTS.md</code> (or, for Claude Code, <code>CLAUDE.md</code>).</p>
+<p>You could, for instance, lay down a series of rules that guide it towards making good decisions, based on the commentary above. I&rsquo;d suggest that you summarise the rules you want into clear, bullet-point, rules that agents can easily follow.</p>
+<h3 id="skills">Skills</h3>
+<p>Coding assistants also support skills, which are a set of steps (and supporting resources) you can provide.</p>
+<p>These can be stored in the repository (for skills relating to the project) or elsewhere on your system (for more universal skills). They often take the form of a markdown document (suffix <code>.md</code>) that contains a list of steps for the agent.</p>
+<p>Most coding assistants also have a skill creation skill that you can invoke by asking to create a new skill (and describing what it should do). That skill creation skill should walk yoy through the process of designing the skill, clarifying anything ambiguous, and writing it into the right place so it&rsquo;s easy for the agent to discover.</p>
+<h3 id="dev-qual"><code>dev-qual</code></h3>
+<p>I have assembled these rules, along with a number of additional skills and tools that agents can use when developing code to keep quality high, and to assess quality throughout the process.</p>
+<p>It&rsquo;s called <code>dev-qual</code>, and it&rsquo;s available at:</p>
+<ul>
+<li><a href="https://github.com/instantiator/dev-qual">https://github.com/instantiator/dev-qual</a></li>
+</ul>
+<p><code>dev-qual</code> includes a lot of advice for your agent, including coding standards for several common programming languages and frameworks. It also offers common conventions, and makes requirements around quality assurance gates. It also builds several skills and tools into your repository that your agent can use.</p>
+<h4 id="installing-dev-qual">Installing <code>dev-qual</code></h4>
+<ol>
+<li>
+<p>Add <code>dev-qual</code> as a git sub-module<sup id="fnref:7"><a href="#fn:7" class="footnote-ref" role="doc-noteref">7</a></sup> in your repository.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>git submodule add https://github.com/instantiator/dev-qual.git
+</span></span></code></pre></div></li>
+<li>
+<p>Run the installation script, which will guide you through the process of building these quality controls into your repository.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>dev-qual/install.sh
+</span></span></code></pre></div></li>
+</ol>
+<blockquote>
+<p>NB. The standards in <code>dev-qual</code> include requirements around testing that we&rsquo;ll discuss in an upcoming post.</p>
+</blockquote>
+<p>Two third-party tools that <code>dev-qual</code> installs, that are worth a mention:</p>
+<div class="table-scroll">
+<table>
+<thead>
+<tr>
+  <th>Tool</th>
+  <th>Description</th>
+  <th>License</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td><a href="https://github.com/scanaislop/aislop">aislop</a></td>
+  <td>Catch the slop AI coding agents leave in your code: narrative comments, swallowed exceptions, as-any casts, dead code, oversized functions. 50+ rules across 8 languages.</td>
+  <td><a href="https://github.com/scanaislop/aislop?tab=MIT-1-ov-file">MIT</a></td>
+</tr>
+<tr>
+  <td><a href="https://github.com/DietrichGebert/ponytail">ponytail</a></td>
+  <td>Makes your AI agent think like the laziest senior dev in the room. The best code is the code you never wrote.</td>
+  <td><a href="https://github.com/DietrichGebert/ponytail?tab=MIT-1-ov-file">MIT</a></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>Both offer excellent and complementary quality assurances.</p>
+<h2 id="summary">Summary</h2>
+<blockquote>
+<p>ℹ️ I let <strong>Big Pickle</strong> summarise this post. I tweaked it a little&hellip;</p>
+</blockquote>
+<p>This post has been about producing code that&rsquo;s reliable, readable, and easy to maintain — even when a coding assistant is doing the writing.</p>
+<p>We covered the key guidelines for managing complexity:</p>
+<ul>
+<li><strong>Break your code up</strong> into small functions that do one thing each, grouped sensibly across files and folders.</li>
+<li><strong>Follow common conventions</strong> — document your project, use established patterns, lean on frameworks, and set quality constraints.</li>
+<li><strong>Apply principles</strong> - DRY, KISS, YAGNI, and separation of concerns.</li>
+</ul>
+<p>We also covered security essentials worth doing now: <strong>never store secrets in a public repository</strong>, and <strong>use strong passwords with 2FA.</strong></p>
+<p>Finally, we saw how to put this into practice automatically — encoding your standards in <code>AGENTS.md</code> and skills, or adopting a ready-made assembly like <code>dev-qual</code> (with aislop and ponytail included).</p>
+<p><strong>The bottom line:</strong> as your projects grow, no one can hold the whole thing in their head. Making your code easy to understand is the cheapest investment you can make — and it pays off every time you or your assistant change something.</p>
+<p>Next, we&rsquo;ll look at <strong>reliability and testing</strong> — how to give real assurances that your code does what you intended.</p>
 <div class="footnotes" role="doc-endnotes">
 <hr>
 <ol>
 <li id="fn:1">
-<p>Use <code>CLAUDE.md</code> if you&rsquo;re using Claude Code (instead of opencode). Anthropic are pretty much the only org that haven&rsquo;t settled on <code>AGENTS.md</code> - everyone else has found a way to collaborate on this, as it&rsquo;s a simple standard.&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+<p>I&rsquo;ve used <em>slop</em> in the title of this post - mainly to draw attention to it. It&rsquo;s a common term, and reasonable for us to talk about it - but I&rsquo;d still rather not turn it on someone as a criticism of their work.&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:2">
+<p>Use <code>CLAUDE.md</code> if you&rsquo;re using Claude Code (instead of opencode). Anthropic are the notable holdout on <code>AGENTS.md</code> - everyone else has found a way to collaborate on this, as it&rsquo;s a simple standard.&#160;<a href="#fnref:2" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:3">
+<p>KISS is also known as &ldquo;Keep it simple, stupid!&rdquo;, but I think that&rsquo;s rude.&#160;<a href="#fnref:3" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:4">
+<p>The <a href="https://en.wikipedia.org/wiki/Waterfall_model">waterfall</a> model of software development is an approach developed before modern techniques (such as agile or lean) were devised. It mandates a full specification of the project to be delivered first, which is then developed (in full), and tested (in full). The aim was to ensure quality through adherence to a specification. It falls down because this is a misunderstanding of quality. Requirements change constantly during software development, and specifications documents are unable to capture the nuance of real user needs. Without continuous customer and user involvement during software development, the finished product is rarely what the user expected, wanted, or needs. It offers no intervention points where effort can be redirected, or the outputs improved - which ultimately creates an unsatisfactory product (and potentially some expensive rewrites).&#160;<a href="#fnref:4" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:5">
+<p>The (amusing) description of ponytail does seem to put slightly too much focus on the physical appearance and gender of an experienced senior developer. I&rsquo;ve taken that with a pinch of salt. The tool itself is good.&#160;<a href="#fnref:5" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:6">
+<p><a href="https://en.wikipedia.org/wiki/Object-oriented_programming">Object Oriented Programming</a> (OOP) is a programming approach built around objects. An object is a collection of functions and variables that can be thought of as a separate entity inside the program. These are often made from classes (which serve as templates), but each programming language has its own variants and approaches to this. Most programming languages support this to some degree, and many are built with this concept at their core. It&rsquo;s a great way to manage resources, especially when building complex software.&#160;<a href="#fnref:6" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:7">
+<p>Git sub-modules exist in your repository as a directory, but they&rsquo;re treated as their own repository, and all that&rsquo;s tracked is the <em>version</em> they&rsquo;re at.&#160;<a href="#fnref:7" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
 </li>
 </ol>
 </div>
@@ -284,6 +649,12 @@
 
         <div class="post-footer">
             <div class="info">
+                
+                  <p>
+                    See also:
+                    <ul><li><a href="https://instantiator.dev/post/prototyping-opencode-tutorial-004-experiment/">Free AI-assisted coding 4: Let&#39;s experiment</a></li><li><a href="https://instantiator.dev/post/prototyping-opencode-tutorial-003-scaffolding/">Free AI-assisted coding 3: A basic prototype with Streamlit</a></li><li><a href="https://instantiator.dev/post/prototyping-opencode-tutorial-002-git/">Free AI-assisted coding 2: Managing your code</a></li><li><a href="https://instantiator.dev/post/prototyping-opencode-tutorial-001-dev-environment/">Free AI-assisted coding 1: Getting started</a></li>
+                    </ul>
+                  </p>
                 
 
             </div>
