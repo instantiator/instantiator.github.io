@@ -495,13 +495,28 @@
 <p>These standards can be encoded as rules for your agents. Coding assistants can discover information about your project, including rules that specify how you want it to approach coding tasks, through an <code>AGENTS.md</code><sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup> file and skills you write for your agents.</p>
 </blockquote>
 <p>Here are a helpful subset of these guidelines:</p>
-<ol>
+<ol start="0">
+<li>Code comments and clarity</li>
 <li>DRY (Don&rsquo;t Repeat Yourself)</li>
 <li>KISS (Keep It Simple Stupid)</li>
 <li>YAGNI (You Ain&rsquo;t Gonna Need It)</li>
 <li>SOLID (principles for object oriented development)</li>
 <li>Separation of concerns (a precursor to the Single Responsibility Principle)</li>
 </ol>
+<h4 id="code-comments-and-clarity">Code comments and clarity</h4>
+<p>A lot of code quality is about making code easier to understand. Nearly all programming languages offer <em>some</em> way to leave notes (comments) in the code for others to read. The best approach to this is the subject of some debate - and you&rsquo;ll find each organisation has its own approach.</p>
+<p>Keep at the forefront of your mind that when you write code, you aren&rsquo;t just writing it for a computer to run, you are writing for other developers and agents to read, and for yourself in the future. You <em>will</em> forget what you wrote even a week or so ago. Leave yourself the best clues you can.</p>
+<p><strong>Commenting code divides developer communities.</strong> Everyone agrees that code that <strong>must</strong> remain complex (difficult to interpret, and that <strong>cannot</strong> be simplified or further broken down), should have some comments in the code file to help developers understand it.</p>
+<p>Some schools of thought take this further, and comment a lot more of the code. This can increase accessibility - by making it clearer what functions, classes, and modules are for. It can certainly help in specialist domains or were the reader is not familiar with <strong>every</strong> concept required to understand the code.</p>
+<p><strong>Structured comments</strong> can be picked up by auto-completion and tool-tip tools in IDEs (eg. so that you can hover your cursor/mouse over a function and the comment explaining what it does and how to use it will be shown). This is especially useful if you are using third party libraries with code you didn&rsquo;t write and (usually) don&rsquo;t want to read in depth, just to learn how it works. It&rsquo;s also useful for developers who aren&rsquo;t familiar with your code base for similar reasons. Most developers won&rsquo;t read the full code of every function before making use of it. Understanding the contract, or interface, the function presents, and what it&rsquo;s for, is usually enough.</p>
+<p><strong>The counter-position to this is drawn from <em>clean code</em> ideals:</strong> Code should be easy to read, and if it&rsquo;s not then it should be refined and simplified until it is. Variable names, function names, class names, and module names should make it clear what things do. <strong>Ponytail</strong> takes this position.</p>
+<p>It can also be argued that writing comments is a way to express what the code should do, but that the best way to express what code should do is to write the code itself. Doing the same exercise twice (but first, not as well, because English is never as precise as code) can be interpreted as wasteful.</p>
+<p>An interesting way to think about writing comments is as a step between the initial idea, requirements, and specification, and the code itself. Each step on the way gets <strong>closer</strong> to code, which is the final form - so writing comments can help the process of translating specification to code. It&rsquo;s an opportunity to refine the concept, catch mistakes and misconceptions, and ensure that the code to write is well understood. It&rsquo;s a nice idea, but I&rsquo;ve not fully explored it yet. As LLMs and qualitative methods become more prominent in software development it may become an important consideration.</p>
+<p>There&rsquo;s no absolute truth here. When evaluating other peoples&rsquo; work, some developers prefer to look at comments, others prefer to read the code. Nobody&rsquo;s wrong and you may feel differently, or have your own take on what&rsquo;s useful.</p>
+<blockquote>
+<p><strong>My personal take: Code comments should represent intent</strong>. If you write your intent for a function as that function&rsquo;s comment. A comparison between the code and the intent can then help to make some bugs visible by inspection and testing. This is the approach taken by <code>dev-qual</code>, my aggregation of code quality tooling, which mandates commenting of intent on everything except the most trivial of entities.</p>
+<p>I also <strong>believe</strong> (but haven&rsquo;t confirmed) that writing intent before writing code helps<sup id="fnref:3"><a href="#fn:3" class="footnote-ref" role="doc-noteref">3</a></sup> an LLM or developer to write code that does what it should (and no more).</p>
+</blockquote>
 <h4 id="dry-dont-repeat-yourself">DRY (Don&rsquo;t Repeat Yourself)</h4>
 <p><strong>If you find that you&rsquo;ve written the same function more than once, it&rsquo;s a candidate for deduplication.</strong> In the ideal case, you&rsquo;d only write it once, and call it from everywhere it&rsquo;s needed.</p>
 <p>This is important because most of our assumptions, when we write code, will be challenged. It&rsquo;s very likely you&rsquo;ll need to change those functions. For every duplicate, that&rsquo;s an extra step - and another point in the code base you could forget about.</p>
@@ -513,10 +528,10 @@
 <p>Where it really would take too much time to reorganise or combine two instances of similar functions, I leave a comment at both locations, reminding me of the link between them.</p>
 </blockquote>
 <h4 id="kiss-keep-it-short-and-simple">KISS (Keep It Short and Simple)</h4>
-<p>KISS<sup id="fnref:3"><a href="#fn:3" class="footnote-ref" role="doc-noteref">3</a></sup> is nicely explained <a href="https://www.geeksforgeeks.org/software-engineering/kiss-principle-in-software-development/">here, at Geeks for Geeks</a>. It&rsquo;s a nice approach, and helps you to focus in on your core goals, avoiding distractions and helping to limit <a href="https://en.wikipedia.org/wiki/Feature_creep">feature creep</a>.</p>
+<p>KISS<sup id="fnref:4"><a href="#fn:4" class="footnote-ref" role="doc-noteref">4</a></sup> is nicely explained <a href="https://www.geeksforgeeks.org/software-engineering/kiss-principle-in-software-development/">here, at Geeks for Geeks</a>. It&rsquo;s a nice approach, and helps you to focus in on your core goals, avoiding distractions and helping to limit <a href="https://en.wikipedia.org/wiki/Feature_creep">feature creep</a>.</p>
 <p>Product managers and delivery managers in larger teams will often do a lot of this thinking together with a lead developer.</p>
 <p>I recommend spending time noting down what you need from each aspect of the project up-front. Make bullet points on what you want to achieve, and break the work down into individual features or individual cross-cutting aspects of the project.</p>
-<p>This doesn&rsquo;t mean you need to assemble a full specification before you start, and <em>I definitely don&rsquo;t recommend a waterfall<sup id="fnref:4"><a href="#fn:4" class="footnote-ref" role="doc-noteref">4</a></sup> approach</em>, but if you understand and acknowledge each part of the problem you want to solve, you can identify what&rsquo;s essential and what&rsquo;s nice-to-have in future.</p>
+<p>This doesn&rsquo;t mean you need to assemble a full specification before you start, and <em>I definitely don&rsquo;t recommend a waterfall<sup id="fnref:5"><a href="#fn:5" class="footnote-ref" role="doc-noteref">5</a></sup> approach</em>, but if you understand and acknowledge each part of the problem you want to solve, you can identify what&rsquo;s essential and what&rsquo;s nice-to-have in future.</p>
 <p>So long as you track all the things you <em>intend</em> to do, you&rsquo;ll be able to sift out, prioritise, and order the work to help keep control of the feature set. If you&rsquo;re working solo, this becomes even more essential to help you keep on track, and prevent the project from growing too large to maintain or complete.</p>
 <p>There are plenty of ways to track units of work so you don&rsquo;t lose them. Examples include:</p>
 <ul>
@@ -536,11 +551,11 @@
 <p>That doesn&rsquo;t mean build the bare minimum (although that would be efficient) - because you&rsquo;ll end up paying extra time if you&rsquo;re not forward compatible.</p>
 <p>Find a balance between <em>what&rsquo;s needed now</em> and <em>what would make it easier to extend the project in future</em>.</p>
 <blockquote>
-<p>There&rsquo;s a nice tool, called <a href="https://ponytail.dev/">ponytail</a><sup id="fnref:5"><a href="#fn:5" class="footnote-ref" role="doc-noteref">5</a></sup>, which can help your coding assistant rationalise the code it writes. It&rsquo;s a good step towards this - although you may need to intervene at times to ensure it does retain future compatibility.</p>
+<p>There&rsquo;s a nice tool, called <a href="https://ponytail.dev/">ponytail</a><sup id="fnref:6"><a href="#fn:6" class="footnote-ref" role="doc-noteref">6</a></sup>, which can help your coding assistant rationalise the code it writes. It&rsquo;s a good step towards this - although you may need to intervene at times to ensure it does retain future compatibility.</p>
 <p>I&rsquo;ve built ponytail into my toolset, which I&rsquo;ll discuss towards the end of this post.</p>
 </blockquote>
 <h4 id="solid">SOLID</h4>
-<p><strong>SOLID is a set of principles for object oriented software development.</strong> It&rsquo;s particularly targeted at languages that support OOP<sup id="fnref:6"><a href="#fn:6" class="footnote-ref" role="doc-noteref">6</a></sup> but there are aspects of these principles that apply to all styles of coding.</p>
+<p><strong>SOLID is a set of principles for object oriented software development.</strong> It&rsquo;s particularly targeted at languages that support OOP<sup id="fnref:7"><a href="#fn:7" class="footnote-ref" role="doc-noteref">7</a></sup> but there are aspects of these principles that apply to all styles of coding.</p>
 <p>We won&rsquo;t go into this in depth, but I&rsquo;ve summarised it below. It&rsquo;s worth knowing about should you find yourself working on a larger, or more complex, object oriented project.</p>
 <details>
 <summary> <b>SOLID principles...</b> </summary>
@@ -576,9 +591,13 @@
 </ul>
 <p><code>dev-qual</code> includes a lot of advice for your agent, including coding standards for several common programming languages and frameworks. It also offers common conventions, and makes requirements around quality assurance gates. It also builds several skills and tools into your repository that your agent can use.</p>
 <h4 id="installing-dev-qual">Installing <code>dev-qual</code></h4>
+<blockquote>
+<p>NB. Make sure you have activated your virtual environment before beginning:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>source .venv/bin/activate
+</span></span></code></pre></div></blockquote>
 <ol>
 <li>
-<p>Add <code>dev-qual</code> as a git sub-module<sup id="fnref:7"><a href="#fn:7" class="footnote-ref" role="doc-noteref">7</a></sup> in your repository.</p>
+<p>Add <code>dev-qual</code> as a git sub-module<sup id="fnref:8"><a href="#fn:8" class="footnote-ref" role="doc-noteref">8</a></sup> in your repository.</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>git submodule add https://github.com/instantiator/dev-qual.git
 </span></span></code></pre></div></li>
 <li>
@@ -614,6 +633,136 @@
 </table>
 </div>
 <p>Both offer excellent and complementary quality assurances.</p>
+<h3 id="lets-try-it">Let&rsquo;s try it</h3>
+<p>The sample above shows the rather long <code>app.py</code> created by our first experiment in the previous tutorial.</p>
+<p>Let&rsquo;s tidy it up now. Some things we might like to do:</p>
+<ul>
+<li>break out a couple of functions that manage the CSV files, eg. one to read the file, one to write the new file</li>
+<li>add comments to code and functions to explain the intent behind them</li>
+<li></li>
+</ul>
+<p>Open up your project in VS Code, and install <code>dev-qual</code> as described above.</p>
+<ol start="0">
+<li>
+<p>First, activate your virtual environment</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>source .venv/bin/activate
+</span></span></code></pre></div></li>
+<li>
+<p>Add <code>dev-qual</code> as a git sub-module<sup id="fnref1:8"><a href="#fn:8" class="footnote-ref" role="doc-noteref">8</a></sup> in your repository.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>git submodule add https://github.com/instantiator/dev-qual.git
+</span></span></code></pre></div></li>
+<li>
+<p>Run the installation script, which will guide you through the process of building these quality controls into your repository.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>dev-qual/install.sh
+</span></span></code></pre></div></li>
+<li>
+<p>Follow the guidance after the install - ie. to install any other required tools.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>dev-qual/scripts/check-prereqs.sh --project . --install
+</span></span></code></pre></div></li>
+<li>
+<p>Run the <code>check.sh</code> script once, to see the output.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>dev-qual/scripts/check.sh --project . 
+</span></span></code></pre></div><p>This will probably look like a success because there are no tests yet.</p>
+</li>
+<li>
+<p>Armed with <code>dev-qual</code>, ask opencode to improve the code quality. Try a prompt like this:</p>
+<blockquote>
+<p>Using the code quality guidelines discoverable through <code>AGENTS.md</code>, and any common standards for Python, update the code for this application. When done, give a summary of everything you changed. Please focus on: readability and simplicity of the code. Please break out functions as needed. Please ensure there are tests for as much of the code as possible.</p>
+</blockquote>
+</li>
+</ol>
+<div class="table-scroll">
+<table>
+<thead>
+<tr>
+  <th>Working on code quality&hellip;</th>
+  <th>Code quality changes complete</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td><img src="/post/prototyping-opencode-tutorial-005-good-practices/working-on-code-quality.png" alt="Working on code quality" title="A screenshot of Visual Studio code. app.py is open, and the OpenCode agent is asking for some guidance around how it should approach the problem of improving the code quality in response to the request."></td>
+  <td><img src="/post/prototyping-opencode-tutorial-005-good-practices/code-quality-complete.png" alt="Changes complete" title="Another screenshot of Visual Studio code. The changes are complete. Several functions are defined at the top of app.py and the application also imports functions from a new file: csv_processor.py"></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>Your agent will start by reading through what&rsquo;s already there - guidelines, tools, and the code itself. It may ask to install some tools, and it will create new files including some shared functions, and some tests.</p>
+<p>NB. For this first run, the agent asks to install a number of tools that will support code quality management (linting, and testing). It should then work through the code, break out what&rsquo;s needed, and improve code quality.</p>
+<p>Tools like ponytail and aislop will be invoked to constrain the code further, and the <code>check.sh</code> code script will be used to evaluate everything.</p>
+<p>Once complete, you can run <code>check.sh</code> yourself to confirm that the code is compliant with your new standards:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>dev-qual/scripts/check.sh
+</span></span></code></pre></div><details>
+<summary> <b>Detail...</b> </summary>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>check.sh — stacks: python (full mode)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>-- format: ruff format --check .
+</span></span><span style="display:flex;"><span>76 files already formatted
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>-- lint: ruff check .
+</span></span><span style="display:flex;"><span>All checks passed!
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>-- typecheck: mypy .
+</span></span><span style="display:flex;"><span>Success: no issues found in 4 source files
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>-- unit-tests: pytest
+</span></span><span style="display:flex;"><span>================================================================================================== test session starts ===================================================================================================
+</span></span><span style="display:flex;"><span>platform darwin -- Python 3.14.6, pytest-9.1.1, pluggy-1.6.0
+</span></span><span style="display:flex;"><span>rootdir: /Users/lewiswestbury/src/streamlit-test
+</span></span><span style="display:flex;"><span>configfile: pyproject.toml
+</span></span><span style="display:flex;"><span>testpaths: tests
+</span></span><span style="display:flex;"><span>plugins: anyio-4.14.2
+</span></span><span style="display:flex;"><span>collected 23 items                                                                                                                                                                                                       
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>tests/test_app.py ......                                                                                                                                                                                           [ 26%]
+</span></span><span style="display:flex;"><span>tests/test_csv_processor.py .................                                                                                                                                                                      [100%]
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>=================================================================================================== 23 passed in 1.53s ===================================================================================================
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>-- shellcheck: shellcheck ./scripts/run-all-tests.sh ./scripts/run-integration-tests.sh ./scripts/run-unit-tests.sh ./dev-qual/install.sh ./dev-qual/adapters/claude-code/install.sh ./dev-qual/adapters/opencode/install.sh ./dev-qual/scripts/check-prereqs.sh ./dev-qual/scripts/run-tests.sh ./dev-qual/scripts/setup-hooks.sh ./dev-qual/scripts/lint-docs.sh ./dev-qual/scripts/lib/common.sh ./dev-qual/scripts/check.sh ./dev-qual/scripts/check-install.sh ./dev-qual/skills/adr/scripts/adr-new.sh ./dev-qual/skills/testing-setup/scripts/run-suite-template.sh
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>-- markdownlint: markdownlint --config /Users/lewiswestbury/src/streamlit-test/dev-qual/scripts/../configs/markdownlint.json ./.pytest_cache/README.md ./docs/outstanding-issues.md ./docs/index.md ./AGENTS.md ./dev-qual/guidance/infra/aws-sam-cloudformation.md ./dev-qual/guidance/infra/gcp.md ./dev-qual/guidance/infra/terraform.md ./dev-qual/guidance/infra/verification.md ./dev-qual/guidance/infra/index.md ./dev-qual/guidance/infra/choosing-components.md ./dev-qual/guidance/infra/aws-cdk.md ./dev-qual/guidance/infra/azure.md ./dev-qual/guidance/ci/gitea.md ./dev-qual/guidance/ci/index.md ./dev-qual/guidance/ci/gitlab-ci.md ./dev-qual/guidance/ci/github-actions.md ./dev-qual/guidance/languages/markdown.md ./dev-qual/guidance/languages/python.md ./dev-qual/guidance/languages/csharp.md ./dev-qual/guidance/languages/node-scripting.md ./dev-qual/guidance/languages/index.md ./dev-qual/guidance/languages/cli-tools.md ./dev-qual/guidance/languages/typescript.md ./dev-qual/guidance/languages/shell.md ./dev-qual/guidance/index.md ./dev-qual/guidance/frameworks/express.md ./dev-qual/guidance/frameworks/aspnet-core.md ./dev-qual/guidance/frameworks/index.md ./dev-qual/guidance/frameworks/react.md ./dev-qual/guidance/frameworks/docker-compose.md ./dev-qual/guidance/frameworks/docker.md ./dev-qual/guidance/frameworks/nestjs.md ./dev-qual/guidance/process/fixing-issues.md ./dev-qual/guidance/process/outstanding-work.md ./dev-qual/guidance/process/model-allocation.md ./dev-qual/guidance/process/before-coding.md ./dev-qual/guidance/process/index.md ./dev-qual/guidance/process/testing-loop.md ./dev-qual/guidance/process/after-coding.md ./dev-qual/guidance/standards/principles.md ./dev-qual/guidance/standards/pitfalls.md ./dev-qual/guidance/standards/common.md ./dev-qual/guidance/standards/dependencies.md ./dev-qual/guidance/standards/testing.md ./dev-qual/guidance/standards/readability.md ./dev-qual/guidance/standards/index.md ./dev-qual/guidance/standards/databases.md ./dev-qual/guidance/standards/documentation.md ./dev-qual/agents-files/local/AGENTS.md ./dev-qual/agents-files/remote/AGENTS.md ./dev-qual/agents-files/remote/CLAUDE.md ./dev-qual/docs/outstanding-issues.md ./dev-qual/docs/index.md ./dev-qual/README.md ./dev-qual/all-requests.md ./dev-qual/prompts/002.1 - usage review improvements.md ./dev-qual/prompts/002.2 - usage improvement plan.md ./dev-qual/prompts/001.2 - quality and reliability enhancements plan.md ./dev-qual/prompts/001.1 - quality and reliability enhancements.md ./dev-qual/skills/adr/SKILL.md ./dev-qual/skills/deploy/SKILL.md ./dev-qual/skills/update-latest/SKILL.md ./dev-qual/skills/prereqs/SKILL.md ./dev-qual/skills/essential-behaviours/SKILL.md ./dev-qual/skills/project-setup/SKILL.md ./dev-qual/skills/docs-review/SKILL.md ./dev-qual/skills/toolchain-setup/SKILL.md ./dev-qual/skills/index.md ./dev-qual/skills/quality-review/SKILL.md ./dev-qual/skills/testing-setup/SKILL.md ./dev-qual/skills/deps-audit/SKILL.md ./dev-qual/skills/ci-setup/SKILL.md ./dev-qual/AGENTS.md
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>-- aislop: npx --yes aislop@latest scan
+</span></span><span style="display:flex;"><span> aislop 0.14.0  ·  the quality gate for agentic coding
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span> Scan result  ·  streamlit-test  ·  python  ·  4 files
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span> Scope  4 file(s) after exclusions
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span> ✓ Clean run  ·  100 / 100  ·  Healthy  ·  no issues  ·  70ms
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span> ★ Found this useful? Star us at https://github.com/scanaislop/aislop
+</span></span></code></pre></div></details>
+<p><strong>Final result:</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>== Results ==
+</span></span><span style="display:flex;"><span>PASS format
+</span></span><span style="display:flex;"><span>PASS lint
+</span></span><span style="display:flex;"><span>PASS typecheck
+</span></span><span style="display:flex;"><span>PASS unit-tests
+</span></span><span style="display:flex;"><span>PASS shellcheck
+</span></span><span style="display:flex;"><span>PASS markdownlint
+</span></span><span style="display:flex;"><span>PASS aislop
+</span></span></code></pre></div><p>Great! Take a look around. You&rsquo;ll find that your <code>app.py</code> is significantly simpler and, hopefully, easier to read.</p>
+<p>You&rsquo;ll also find supporting files with shared functions and tests (and those should be pretty easy to read, too). In my case:</p>
+<ul>
+<li><code>csv_processor.py</code> now contains all the code that handles CSV files</li>
+<li>the <code>tests/</code> folder contains several test files
+<ul>
+<li><code>test_app.py</code> - puts <code>app.py</code> through its paces</li>
+<li><code>test_csv_processor.py</code> - similarly, tests <code>csv_processor.py</code></li>
+</ul>
+</li>
+</ul>
+<p>There are also new scripts in a <code>scripts/</code> folder, including:</p>
+<ul>
+<li><code>scripts/run-all-tests.sh</code> - runs all tests in the system</li>
+<li><code>scripts/run-unit-tests.sh</code> - runs all unit tests</li>
+<li><code>scripts/run-integration-tests.sh</code> - runs all integration tests</li>
+</ul>
+<blockquote>
+<p>We&rsquo;ll talk more about different types of tests, and how you&rsquo;d use them to exercise your application at different levels of detail in the next tutorial.</p>
+</blockquote>
 <h2 id="summary">Summary</h2>
 <blockquote>
 <p>ℹ️ I let <strong>Big Pickle</strong> summarise this post. I tweaked it a little&hellip;</p>
@@ -639,19 +788,22 @@
 <p>Use <code>CLAUDE.md</code> if you&rsquo;re using Claude Code (instead of opencode). Anthropic are the notable holdout on <code>AGENTS.md</code> - everyone else has found a way to collaborate on this, as it&rsquo;s a simple standard.&#160;<a href="#fnref:2" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
 </li>
 <li id="fn:3">
-<p>KISS is also known as &ldquo;Keep it simple, stupid!&rdquo;, but I think that&rsquo;s rude.&#160;<a href="#fnref:3" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+<p>If code quality was easy to measure, we could experiment with the effect of writing comments before writing code.&#160;<a href="#fnref:3" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
 </li>
 <li id="fn:4">
-<p>The <a href="https://en.wikipedia.org/wiki/Waterfall_model">waterfall</a> model of software development is an approach developed before modern techniques (such as agile or lean) were devised. It mandates a full specification of the project to be delivered first, which is then developed (in full), and tested (in full). The aim was to ensure quality through adherence to a specification. It falls down because this is a misunderstanding of quality. Requirements change constantly during software development, and specifications documents are unable to capture the nuance of real user needs. Without continuous customer and user involvement during software development, the finished product is rarely what the user expected, wanted, or needs. It offers no intervention points where effort can be redirected, or the outputs improved - which ultimately creates an unsatisfactory product (and potentially some expensive rewrites).&#160;<a href="#fnref:4" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+<p>KISS is also known as &ldquo;Keep it simple, stupid!&rdquo;, but I think that&rsquo;s rude.&#160;<a href="#fnref:4" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
 </li>
 <li id="fn:5">
-<p>The (amusing) description of ponytail does seem to put slightly too much focus on the physical appearance and gender of an experienced senior developer. I&rsquo;ve taken that with a pinch of salt. The tool itself is good.&#160;<a href="#fnref:5" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+<p>The <a href="https://en.wikipedia.org/wiki/Waterfall_model">waterfall</a> model of software development is an approach developed before modern techniques (such as agile or lean) were devised. It mandates a full specification of the project to be delivered first, which is then developed (in full), and tested (in full). The aim was to ensure quality through adherence to a specification. It falls down because this is a misunderstanding of quality. Requirements change constantly during software development, and specifications documents are unable to capture the nuance of real user needs. Without continuous customer and user involvement during software development, the finished product is rarely what the user expected, wanted, or needs. It offers no intervention points where effort can be redirected, or the outputs improved - which ultimately creates an unsatisfactory product (and potentially some expensive rewrites).&#160;<a href="#fnref:5" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
 </li>
 <li id="fn:6">
-<p><a href="https://en.wikipedia.org/wiki/Object-oriented_programming">Object Oriented Programming</a> (OOP) is a programming approach built around objects. An object is a collection of functions and variables that can be thought of as a separate entity inside the program. These are often made from classes (which serve as templates), but each programming language has its own variants and approaches to this. Most programming languages support this to some degree, and many are built with this concept at their core. It&rsquo;s a great way to manage resources, especially when building complex software.&#160;<a href="#fnref:6" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+<p>The (amusing) description of ponytail does seem to put slightly too much focus on the physical appearance and gender of an experienced senior developer. I&rsquo;ve taken that with a pinch of salt. The tool itself is good.&#160;<a href="#fnref:6" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
 </li>
 <li id="fn:7">
-<p>Git sub-modules exist in your repository as a directory, but they&rsquo;re treated as their own repository, and all that&rsquo;s tracked is the <em>version</em> they&rsquo;re at.&#160;<a href="#fnref:7" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+<p><a href="https://en.wikipedia.org/wiki/Object-oriented_programming">Object Oriented Programming</a> (OOP) is a programming approach built around objects. An object is a collection of functions and variables that can be thought of as a separate entity inside the program. These are often made from classes (which serve as templates), but each programming language has its own variants and approaches to this. Most programming languages support this to some degree, and many are built with this concept at their core. It&rsquo;s a great way to manage resources, especially when building complex software.&#160;<a href="#fnref:7" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:8">
+<p>Git sub-modules exist in your repository as a directory, but they&rsquo;re treated as their own repository, and all that&rsquo;s tracked is the <em>version</em> they&rsquo;re at.&#160;<a href="#fnref:8" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a>&#160;<a href="#fnref1:8" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
 </li>
 </ol>
 </div>
