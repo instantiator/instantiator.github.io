@@ -46,7 +46,7 @@
         type="text/css">
 
     <link rel="alternate" type="application/rss+xml" href="/index.xml" title="instantiator.dev" />
-    </head><body><nav id="nav" class="navbar sticky-top justify-content-start navbar-expand-md frosted-white shadow mb-4">
+    </head><body><nav id="nav" class="navbar fixed-top justify-content-start navbar-expand-md frosted-white shadow mb-4">
   <div class="container-fluid">
     <a class="navbar-brand" href="/">instantiator.dev</a>
     <button
@@ -118,8 +118,8 @@
   </div>
 </nav>
 <div class="container-fluid">
-<div class="row align-items-start gx-2">
-  <div class="col-xl-2 col-lg-4">
+<div class="row home-dashboard align-items-start gx-2">
+  <div class="col-12 col-lg-4 col-xl-2 home-dashboard-col">
     <div class="row mb-2">
     <div class="col-3 col-lg-12 d-flex flex-column align-items-center">
         <img 
@@ -209,12 +209,14 @@
 
 
   </div>
-  <div class="col-xl-4 col-lg-8">
-    <div class="d-flex flex-column gap-2">
-      
-      
-      <div>
-         
+  <div class="col-12 col-lg-8 col-xl-10 home-dashboard-col home-main-col">
+    <div class="row gx-2 home-dashboard-inner align-items-start">
+      <div class="col-12 col-lg-12 col-xl-4 home-dashboard-col-inner home-posts">
+        <div class="d-flex flex-column gap-2">
+          
+          
+          <div>
+             
 
 <div class="card">
     <div class="card-header p-2">
@@ -301,10 +303,10 @@
     </div>
 </div>
 
-      </div>
-      
-      <div>
-         
+          </div>
+          
+          <div>
+             
 
 <div class="card">
     <div class="card-header p-2">
@@ -382,10 +384,10 @@
     </div>
 </div>
 
-      </div>
-      
-      <div>
-         
+          </div>
+          
+          <div>
+             
 
 <div class="card">
     <div class="card-header p-2">
@@ -451,10 +453,10 @@
     </div>
 </div>
 
-      </div>
-      
-      <div>
-         
+          </div>
+          
+          <div>
+             
 
 <div class="card">
     <div class="card-header p-2">
@@ -520,10 +522,10 @@
     </div>
 </div>
 
-      </div>
-      
-      <div>
-         
+          </div>
+          
+          <div>
+             
 
 <div class="card">
     <div class="card-header p-2">
@@ -580,10 +582,10 @@
     </div>
 </div>
 
-      </div>
-      
-      <div>
-         
+          </div>
+          
+          <div>
+             
 
 <div class="card">
     <div class="card-header p-2">
@@ -637,10 +639,10 @@
     </div>
 </div>
 
-      </div>
-      
-      <div>
-         
+          </div>
+          
+          <div>
+             
 
 <div class="card">
     <div class="card-header p-2">
@@ -712,10 +714,10 @@
     </div>
 </div>
 
-      </div>
-      
-      <div>
-         
+          </div>
+          
+          <div>
+             
 
 <div class="card">
     <div class="card-header p-2">
@@ -766,10 +768,10 @@
     </div>
 </div>
 
-      </div>
-      
-      <div>
-         
+          </div>
+          
+          <div>
+             
 
 <div class="card">
     <div class="card-header p-2">
@@ -832,10 +834,10 @@
     </div>
 </div>
 
-      </div>
-      
-      <div>
-         
+          </div>
+          
+          <div>
+             
 
 <div class="card">
     <div class="card-header p-2">
@@ -916,9 +918,9 @@
     </div>
 </div>
 
-      </div>
-      
-      <div class="container-fluid sticky-bottom">
+          </div>
+          
+          <div class="container-fluid sticky-bottom">
     <div style="display: flex; flex-direction: row; justify-content: center;" class="p-2">
         
 		<ul class="pagination pagination-default">
@@ -953,10 +955,12 @@
     </div>
 </div>
 
-    </div>
-  </div>
-  <div class="col-xl-3 col-lg-6 col-sm-12">
-    
+        </div>
+      </div>
+      <div class="col-12 col-lg-12 col-xl-6 home-dashboard-col-inner home-socials-wrap">
+        <div class="row gx-2 home-dashboard-socials align-items-start">
+          <div class="col-12 col-lg-6 home-dashboard-col-inner">
+            
 <div class="card mb-2">
   <div class="card-header p-2">
     <a href="https://bsky.app/profile/instantiator.bsky.social" target="_blank">instantiator.bsky.social</a>
@@ -977,9 +981,9 @@
 <script type="module" src="https://cdn.jsdelivr.net/npm/bsky-embed/dist/bsky-embed.es.js" async></script>
 
 
-  </div>
-  <div class="col-xl-3 col-lg-6 col-sm-12">
-      
+          </div>
+          <div class="col-12 col-lg-6 home-dashboard-col-inner">
+            
 <div class="card mb-2">
     <div class="card-header p-2">
             <a href="https://mastodon.social/@instantiator" target="_blank">instantiator@mastodon.social</a>
@@ -1010,6 +1014,10 @@ window.addEventListener("load", () => {
 });
 </script>
 
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </div>
 

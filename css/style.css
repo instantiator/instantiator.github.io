@@ -7,6 +7,7 @@
     --bg-dark: rgb(30,33,40);
     --anchor-color: rgb(95, 158, 160) !important;
     --anchor-color-disabled: rgba(95, 158, 160, 0.25) !important;
+    --header-offset: 80px; /* fixed navbar height (56px) + its bottom margin (24px) */
 }
   
 body {
@@ -141,4 +142,68 @@ blockquote {
 
 details {
     margin-bottom: 1rem;
+}
+
+/* Home page dashboard: full-height, scrollable columns.
+   The header is fixed on the home page, so columns span the full viewport
+   and use top padding to clear it, then scroll internally.
+
+   xl  (>=1200px): 4 columns  | persona | posts | bluesky | mastodon |
+   lg  (992-1199): 2 columns  | persona | posts + socials (50/50)    |
+   <lg (<=991):    single scrolling column                           */
+.home-dashboard {
+    height: 100vh;
+    height: 100dvh;
+    overflow: hidden;
+}
+
+.home-dashboard > .home-dashboard-col {
+    height: 100%;
+    overflow-y: auto;
+    padding-top: var(--header-offset);
+}
+
+@media (min-width: 1200px) {
+    .home-dashboard-inner {
+        height: 100%;
+    }
+    .home-dashboard-inner > .home-dashboard-col-inner {
+        height: 100%;
+        overflow-y: auto;
+    }
+    .home-dashboard-inner > .home-posts {
+        width: 40%;
+    }
+    .home-dashboard-inner > .home-socials-wrap {
+        width: 60%;
+    }
+    .home-main-col {
+        overflow: hidden;
+    }
+    .home-dashboard-socials {
+        height: 100%;
+    }
+    .home-dashboard-socials > .home-dashboard-col-inner {
+        height: 100%;
+        overflow-y: auto;
+    }
+}
+
+@media (max-width: 1199.98px) {
+    .home-posts {
+        margin-bottom: 0.5rem;
+    }
+}
+
+@media (max-width: 991.98px) {
+    .home-dashboard {
+        height: auto;
+        overflow: visible;
+        padding-top: var(--header-offset);
+    }
+    .home-dashboard > .home-dashboard-col {
+        height: auto;
+        overflow: visible;
+        padding-top: 0;
+    }
 }
